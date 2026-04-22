@@ -11,6 +11,11 @@ import deleteIcon from './assets/icon-delete.png';
 import editIcon from './assets/icon-edit.png';
 import moveItemIcon from './assets/icon-move-item.png';
 import pageIcon from './assets/icon-page.png';
+import searchIcon from './assets/icon-search.svg';
+import warningIcon from './assets/warning.png';
+import instructorIcon from './assets/instructor.png';
+import radiationMaterialsImage from './assets/radiation_materials.jpg';
+import electrolysisImage from './assets/electrolysis.jpg';
 import kittenImage from './assets/kitten.png';
 
 type Material = {
@@ -18,6 +23,7 @@ type Material = {
   title: string;
   type: 'bank' | 'activity';
   hidden?: boolean;
+  attemptsStarted?: boolean;
 };
 
 type BreadcrumbItem = string | { label: string; to?: string };
@@ -58,9 +64,10 @@ const materials: Material[] = [
   { id: 'm3', title: 'Other Applications of Electrochemistry', type: 'bank' },
   { id: 'm4', title: 'Other Applications of Electrochemistry', type: 'activity', hidden: true },
   { id: 'm5', title: 'Electrochemistry Unit Checkpoint', type: 'activity' },
+  { id: 'm6', title: 'Nuclear Chemistry Unit Checkpoint', type: 'activity', attemptsStarted: true },
 ];
 
-const assessmentSelections: AssessmentSelection[] = [
+const electrochemistrySelections: AssessmentSelection[] = [
   {
     id: 'ab-1',
     availableQuestions: 24,
@@ -112,20 +119,40 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-3',
     availableQuestions: 12,
     numberToSelect: 2,
-    criteriaTag: 'Concept set: battery chemistry and fuel-cell fundamentals',
+    criteriaTag: 'Electrolysis focus: predict products at electrodes and justify ion movement.',
     exampleQuestions: [
       {
+        kind: 'mcq',
+        points: 6,
+        title: 'Electrolysis Setup Check',
+        prompt: 'In aqueous NaCl electrolysis, which statement best matches the expected electrode processes under standard classroom conditions?',
+        learningObjective: 'LO 2.2 Predict oxidation and reduction products in electrolytic cells.',
+        choices: [
+          'Na+ is reduced to sodium metal at the cathode in water before hydrogen evolves.',
+          'Chloride oxidation at the anode and hydrogen evolution at the cathode are both plausible outcomes.',
+          'No redox occurs because the reaction is nonspontaneous.',
+          'Electrons flow from cathode to anode through the external circuit.',
+        ],
+      },
+      {
+        kind: 'short-answer',
+        points: 6,
+        title: 'Electrolysis Product Reasoning',
+        prompt: 'Describe how concentration, electrode material, and overpotential can shift product formation during electrolysis.',
+        learningObjective: 'LO 2.2 Predict oxidation and reduction products in electrolytic cells.',
+      },
+      {
         kind: 'cata',
-        points: 5,
-        title: 'Battery Concepts',
-        prompt: 'Which of the following statements are true?',
-        learningObjective: 'LO 2.1 Evaluate electrochemical cell statements for accuracy.',
+        points: 6,
+        title: 'Electrolytic Cell Truths',
+        prompt: 'Select all statements that are accurate for an electrolytic cell.',
+        learningObjective: 'LO 2.2 Predict oxidation and reduction products in electrolytic cells.',
         cataStatements: [
-          'Alkaline batteries generally have worse performance than dry cells.',
-          'The lead acid battery is a type of secondary battery.',
-          'Fuel cells are galvanic cells that convert chemical energy into electrical energy.',
-          'Fuel cells produce electricity continuously as long as fuel is available.',
-          'Primary and secondary batteries may or may not be rechargeable, depending on battery materials.',
+          'An external power source drives a nonspontaneous redox reaction.',
+          'Oxidation occurs at the anode.',
+          'Reduction occurs at the cathode.',
+          'The anode is always positive in every electrochemical context.',
+          'Electrolyte composition influences which species discharge at each electrode.',
         ],
       },
     ],
@@ -134,14 +161,14 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-4',
     availableQuestions: 16,
     numberToSelect: 2,
-    criteriaTag: 'Reasoning: compare endpoint and equivalence behavior',
+    criteriaTag: 'Application focus: corrosion, prevention methods, and material choices',
     exampleQuestions: [
       {
         kind: 'short-answer',
         points: 7,
-        title: 'Acid-Base Equivalence Reasoning',
-        prompt: 'Explain why the equivalence point does not always occur at pH 7 for weak acid-strong base titrations.',
-        learningObjective: 'LO 1.3 Distinguish pre-equivalence, equivalence, and post-equivalence stages.',
+        title: 'Corrosion Cell Reasoning',
+        prompt: 'Explain why galvanic corrosion accelerates when dissimilar metals are electrically connected in an electrolyte.',
+        learningObjective: 'LO 3.2 Explain electrochemical causes of corrosion and mitigation strategies.',
       },
     ],
   },
@@ -149,14 +176,14 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-5',
     availableQuestions: 22,
     numberToSelect: 4,
-    criteriaTag: 'Procedural: complete balanced ionic equation terms',
+    criteriaTag: 'Industry context: electroplating setup, anode/cathode roles, and ion transfer',
     exampleQuestions: [
       {
         kind: 'multi-input',
         points: 8,
-        title: 'Reaction Coefficients',
-        prompt: 'Complete the coefficient and species dropdowns for the balanced equation.',
-        learningObjective: 'LO 2.2 Select correct coefficients for balanced ionic reactions.',
+        title: 'Electroplating Process Setup',
+        prompt: 'Choose each dropdown to correctly configure an electroplating cell for copper coating.',
+        learningObjective: 'LO 3.3 Describe electrode reactions in electroplating systems.',
       },
     ],
   },
@@ -164,20 +191,20 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-6',
     availableQuestions: 14,
     numberToSelect: 2,
-    criteriaTag: 'Concept check: spontaneity and entropy claims',
+    criteriaTag: 'Energy applications: compare primary, secondary, and fuel-cell trade-offs',
     exampleQuestions: [
       {
         kind: 'cata',
         points: 5,
-        title: 'Thermodynamics Claims',
-        prompt: 'Select every statement that aligns with the second law of thermodynamics.',
-        learningObjective: 'LO 3.1 Connect entropy trends to spontaneity decisions.',
+        title: 'Energy Storage Claims',
+        prompt: 'Select every statement that correctly compares battery and fuel-cell behavior.',
+        learningObjective: 'LO 3.4 Compare electrochemical energy technologies by function and limits.',
         cataStatements: [
-          'A process can be spontaneous even if its rate is very slow.',
-          'A positive total entropy change favors spontaneity.',
-          'Spontaneous reactions always release heat.',
-          'A reaction may be nonspontaneous under one temperature and spontaneous at another.',
-          'Thermodynamic favorability guarantees completion in practical time.',
+          'Primary batteries are generally not designed for recharge cycles.',
+          'Secondary batteries are intended for repeated charge-discharge use.',
+          'Fuel cells require continuous fuel input to keep producing electricity.',
+          'Fuel cells store all of their reactants internally like a battery.',
+          'Energy density and recharge rate are key design trade-offs across technologies.',
         ],
       },
     ],
@@ -186,14 +213,14 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-7',
     availableQuestions: 11,
     numberToSelect: 1,
-    criteriaTag: 'Data interpretation: identify buffering transitions',
+    criteriaTag: 'Performance interpretation: read discharge curves and voltage behavior',
     exampleQuestions: [
       {
         kind: 'mcq',
         points: 10,
-        title: 'Graph Reading',
-        prompt: 'Which option best identifies where the slope indicates the strongest buffering transition?',
-        learningObjective: 'LO 1.4 Interpret slope behavior and buffering regions on pH curves.',
+        title: 'Battery Discharge Curve Reading',
+        prompt: 'Which region of the discharge curve best indicates rapid voltage drop near end-of-life?',
+        learningObjective: 'LO 3.5 Interpret electrochemical performance plots.',
         choices: ['Region A', 'Region B', 'Region C', 'Region D'],
       },
     ],
@@ -202,7 +229,7 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-8',
     availableQuestions: 19,
     numberToSelect: 3,
-    criteriaTag: 'Mechanics: construct oxidation half-reactions',
+    criteriaTag: 'Cell design mechanics: oxidation/reduction half-reactions in applied devices',
     exampleQuestions: [
       {
         kind: 'multi-input',
@@ -217,7 +244,7 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-9',
     availableQuestions: 15,
     numberToSelect: 2,
-    criteriaTag: 'Core principles: galvanic cell directionality and sign',
+    criteriaTag: 'Real-world systems: identify galvanic cell directionality and component purpose',
     exampleQuestions: [
       {
         kind: 'cata',
@@ -239,18 +266,92 @@ const assessmentSelections: AssessmentSelection[] = [
     id: 'ab-10',
     availableQuestions: 13,
     numberToSelect: 1,
-    criteriaTag: 'Experimental interpretation: endpoint vs equivalence',
+    criteriaTag: 'Emerging applications: evaluate electrochemistry in environmental and industrial contexts',
     exampleQuestions: [
       {
         kind: 'short-answer',
         points: 7,
-        title: 'Endpoint Identification',
-        prompt: 'Describe one experimental reason an indicator endpoint can differ from the true equivalence point.',
-        learningObjective: 'LO 1.5 Differentiate indicator endpoints from equivalence points.',
+        title: 'Electrochemistry in Water Treatment',
+        prompt: 'Describe one way electrochemical processes are used in water treatment and explain the core reaction principle.',
+        learningObjective: 'LO 3.6 Explain modern applications of electrochemistry beyond batteries.',
       },
     ],
   },
 ];
+
+const nuclearSelections: AssessmentSelection[] = [
+  {
+    id: 'n-ab-1',
+    availableQuestions: 20,
+    numberToSelect: 2,
+    criteriaTag: 'Core idea: identify ionizing radiation types and compare their penetration.',
+    exampleQuestions: [
+      {
+        kind: 'mcq',
+        points: 8,
+        title: 'Radiation Type Classification',
+        prompt: 'Which sequence ranks alpha, beta, and gamma radiation from lowest to highest penetration in matter?',
+        learningObjective: 'LO 4.1 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
+        choices: ['gamma < beta < alpha', 'alpha < beta < gamma', 'beta < alpha < gamma', 'alpha = beta = gamma'],
+      },
+    ],
+  },
+  {
+    id: 'n-ab-2',
+    availableQuestions: 16,
+    numberToSelect: 2,
+    criteriaTag: 'Biological effects: connect dose, pathway, and tissue radiosensitivity.',
+    exampleQuestions: [
+      {
+        kind: 'short-answer',
+        points: 7,
+        title: 'Dose Pathway Reasoning',
+        prompt: 'Explain why internal exposure to alpha-emitting particles can pose high biological risk even though alpha has low external penetration.',
+        learningObjective: 'LO 4.2 Explain how pathway and tissue sensitivity influence biological effect.',
+      },
+    ],
+  },
+  {
+    id: 'n-ab-3',
+    availableQuestions: 14,
+    numberToSelect: 1,
+    criteriaTag: 'Radiation safety: apply time, distance, shielding, and monitoring controls.',
+    exampleQuestions: [
+      {
+        kind: 'cata',
+        points: 6,
+        title: 'ALARA Controls Check',
+        prompt: 'Select all practices that align with ALARA in an instructional lab.',
+        learningObjective: 'LO 4.3 Apply practical radiation safety controls in lab scenarios.',
+        cataStatements: [
+          'Reduce time spent near active sources.',
+          'Increase distance using tools instead of direct handling.',
+          'Use lead shielding for high-energy gamma sources.',
+          'Remove shielding to make source labels easier to read.',
+          'Track dose with personal dosimeters.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'n-ab-4',
+    availableQuestions: 12,
+    numberToSelect: 1,
+    criteriaTag: 'Risk-benefit analysis: evaluate radiation use in medicine and industry.',
+    exampleQuestions: [
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'Medical Radiation Decision',
+        prompt: 'Choose the most appropriate imaging approach, isotope behavior, and shielding practice for a patient case.',
+        learningObjective: 'LO 4.4 Evaluate benefit-risk trade-offs in radiation applications.',
+      },
+    ],
+  },
+];
+
+const getAssessmentSelections = (assessmentTitle?: string) =>
+  assessmentTitle?.toLowerCase().includes('nuclear') ? nuclearSelections : electrochemistrySelections;
 
 function App() {
   return (
@@ -437,14 +538,15 @@ function CustomizeScreen() {
             <MaterialRow
               key={material.id}
               material={material}
-              onEdit={(assessmentTitle) =>
+              onEdit={(assessment) =>
                 navigate('/assessment-default', {
                   state: {
-                    assessmentTitle,
+                    assessmentTitle: assessment.title,
+                    attemptsStarted: assessment.attemptsStarted ?? false,
                     breadcrumbTrail: [
                       { label: 'Manage', to: '/' },
                       { label: 'Customize Content', to: '/customize' },
-                      { label: assessmentTitle },
+                      { label: assessment.title },
                     ],
                   },
                 })
@@ -462,38 +564,93 @@ function CustomizeScreen() {
 
 function AssessmentScreen() {
   const location = useLocation();
-  const state = location.state as { removeBankId?: string; bulkToast?: string } | null;
+  const state = location.state as {
+    removeBankId?: string;
+    bulkToast?: string;
+    attemptsStarted?: boolean;
+    assessmentTitle?: string;
+    breadcrumbTrail?: BreadcrumbItem[];
+  } | null;
   const [removedBanks, setRemovedBanks] = useState<string[]>([]);
-  const [showBankShortcuts, setShowBankShortcuts] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [showJumpLinks, setShowJumpLinks] = useState(false);
+  const [bankToasts, setBankToasts] = useState<Record<string, string>>({});
+  const [pendingBankRemoveId, setPendingBankRemoveId] = useState<string | null>(null);
+  const [removedEmbeddedQuestions, setRemovedEmbeddedQuestions] = useState<Record<string, boolean>>({});
+  const [embeddedToasts, setEmbeddedToasts] = useState<Record<string, string>>({});
+  const [pendingEmbeddedRemoveId, setPendingEmbeddedRemoveId] = useState<string | null>(null);
+  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
+  const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
+  const assessmentSelections = getAssessmentSelections(assessmentTitle);
+  const attemptsStarted = state?.attemptsStarted ?? false;
 
-  useEffect(() => {
-    if (!toastMessage) return;
-    const timer = setTimeout(() => setToastMessage(null), 2200);
-    return () => clearTimeout(timer);
-  }, [toastMessage]);
+  const showBankToast = (bankId: string, message: string) => {
+    setBankToasts((current) => ({ ...current, [bankId]: message }));
+    window.setTimeout(() => {
+      setBankToasts((current) => {
+        const next = { ...current };
+        delete next[bankId];
+        return next;
+      });
+    }, 2200);
+  };
 
   useEffect(() => {
     if (state?.removeBankId) {
       setRemovedBanks((current) => (current.includes(state.removeBankId as string) ? current : [...current, state.removeBankId as string]));
-      setToastMessage(state.bulkToast ?? 'Activity bank removed.');
+      showBankToast(state.removeBankId, state.bulkToast ?? 'Activity bank removed.');
     }
   }, [state?.removeBankId, state?.bulkToast]);
 
   const toggleRemoved = (id: string, label: string) => {
     setRemovedBanks((current) => {
       const willRestore = current.includes(id);
-      setToastMessage(willRestore ? `${label} restored.` : `${label} removed.`);
+      showBankToast(id, willRestore ? `${label} restored.` : `${label} removed.`);
       return willRestore ? current.filter((bankId) => bankId !== id) : [...current, id];
     });
+  };
+
+  const requestToggleBank = (id: string) => {
+    const alreadyRemoved = removedBanks.includes(id);
+    if (!attemptsStarted || alreadyRemoved) {
+      toggleRemoved(id, 'Activity bank');
+      return;
+    }
+    setPendingBankRemoveId(id);
   };
 
   const jumpTo = (targetId: string) => {
     const node = document.getElementById(targetId);
     if (node) {
       node.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setShowBankShortcuts(false);
     }
+  };
+
+  const showEmbeddedToast = (questionId: string, message: string) => {
+    setEmbeddedToasts((current) => ({ ...current, [questionId]: message }));
+    window.setTimeout(() => {
+      setEmbeddedToasts((current) => {
+        const next = { ...current };
+        delete next[questionId];
+        return next;
+      });
+    }, 2200);
+  };
+
+  const toggleEmbeddedRemoved = (questionId: string) => {
+    setRemovedEmbeddedQuestions((current) => {
+      const willRestore = Boolean(current[questionId]);
+      showEmbeddedToast(questionId, willRestore ? 'Question restored.' : 'Question removed.');
+      return { ...current, [questionId]: !willRestore };
+    });
+  };
+
+  const requestToggleEmbedded = (questionId: string) => {
+    const alreadyRemoved = Boolean(removedEmbeddedQuestions[questionId]);
+    if (!attemptsStarted || alreadyRemoved) {
+      toggleEmbeddedRemoved(questionId);
+      return;
+    }
+    setPendingEmbeddedRemoveId(questionId);
   };
 
   return (
@@ -501,58 +658,138 @@ function AssessmentScreen() {
       <div className="assessment-layout">
         <AssessmentHeader />
         <div className="assessment-content">
+          {attemptsStarted ? (
+            <div className="attempts-banner" role="status" aria-live="polite">
+              <img src={warningIcon} alt="" aria-hidden="true" />
+              Students have already started this assessment. Removing or changing questions will only impact future attempts.
+            </div>
+          ) : null}
           <div className="assessment-main">
-            <div className="assessment-shortcuts-sticky">
-              <div className="assessment-counts">
-                <button className="assessment-counts__trigger" onClick={() => setShowBankShortcuts((current) => !current)}>
-                  Jump to section
-                  <img
-                    src={chevronDownIcon}
-                    alt=""
-                    aria-hidden="true"
-                    className={showBankShortcuts ? 'assessment-counts__chevron is-open' : 'assessment-counts__chevron'}
-                  />
-                </button>
-                <span className="assessment-counts__meta">{assessmentSelections.length} Activity Banks · 1 Embedded Question</span>
-              </div>
-              {showBankShortcuts ? (
+            <div className="assessment-shortcuts-card">
+              <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
+                <span className="jump-section-header__label">Jump to section</span>
+                <span className="jump-section-header__meta">{assessmentSelections.length} Activity Banks · 1 Embedded Question</span>
+                <img src={chevronDownIcon} alt="" aria-hidden="true" className={showJumpLinks ? 'jump-section-header__chevron is-open' : 'jump-section-header__chevron'} />
+              </button>
+              {showJumpLinks ? (
                 <div className="assessment-shortcuts-wrap">
-                  <p className="assessment-shortcuts__label">Jump to section</p>
-                  <div className="assessment-shortcuts" role="navigation" aria-label="Activity bank shortcuts">
+                  <div className="assessment-shortcuts" role="navigation" aria-label="Jump to section links">
                     {assessmentSelections.map((selection, index) => (
-                      <button key={selection.id} className="shortcut-chip" onClick={() => jumpTo(`bank-${selection.id}`)}>
-                        Bank {index + 1}
+                      <button key={selection.id} type="button" className="shortcut-chip" onClick={() => jumpTo(`bank-${selection.id}`)}>
+                        Activity Bank {index + 1}
                       </button>
                     ))}
-                    <button className="shortcut-chip shortcut-chip--embedded" onClick={() => jumpTo('embedded-question')}>
+                    <button type="button" className="shortcut-chip shortcut-chip--embedded" onClick={() => jumpTo('embedded-question')}>
                       Embedded Question
                     </button>
                   </div>
                 </div>
               ) : null}
             </div>
+            <div className="assessment-intro">
+              {isNuclearAssessment ? (
+                <>
+                  <p>
+                    Nuclear chemistry explores unstable nuclei, radioactive decay pathways, and how emitted radiation interacts with matter. Students in this checkpoint should distinguish alpha, beta, and gamma behavior in both shielding and biological contexts.
+                  </p>
+                  <p>
+                    Biological effects are not determined by radiation label alone: exposure pathway, absorbed dose, dose rate, and tissue radiosensitivity all change risk. These ideas are essential when interpreting why identical source strengths can produce different outcomes in real scenarios.
+                  </p>
+                  <p>
+                    The activity banks below focus on evidence-based reasoning about safety controls, clinical or industrial uses, and risk-benefit decisions tied to radiation applications.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    Electrochemistry links electron transfer to chemical change: oxidation is loss of electrons, reduction is gain. In a galvanic cell, a spontaneous reaction drives current through an external circuit; in electrolysis, electrical work drives a nonspontaneous process. Standard reduction potentials help you compare tendencies and predict cell direction under standard conditions.
+                  </p>
+                  <p>
+                    Beyond lecture-scale cells, electrochemistry shapes everyday technology-alkaline and lithium-ion batteries store portable energy, lead-acid systems support vehicles, and fuel cells convert fuel continuously while reactants are supplied. Corrosion is the same chemistry working against structures: dissimilar metals in contact with an electrolyte can accelerate material loss unless design or coatings interrupt the cell.
+                  </p>
+                  <p>
+                    This checkpoint draws on those ideas so students connect definitions to graphs, half-reactions, and applications. As you review activity banks below, you are choosing which items best reinforce the learning objectives for this unit on electrochemistry and its real-world uses.
+                  </p>
+                </>
+              )}
+            </div>
             {assessmentSelections.map((selection) => (
               <ActivityBankSelectionCard
                 key={selection.id}
                 selection={selection}
                 removed={removedBanks.includes(selection.id)}
-                onToggleRemove={() => toggleRemoved(selection.id, 'Activity bank')}
+                toastMessage={bankToasts[selection.id]}
+                onToggleRemove={() => requestToggleBank(selection.id)}
+                attemptsStarted={attemptsStarted}
+                assessmentTitle={state?.assessmentTitle}
+                breadcrumbTrail={state?.breadcrumbTrail}
               />
             ))}
+            {!isNuclearAssessment ? (
+              <section className="assessment-mid-media" aria-label="Electrolysis cell diagram">
+                <img src={electrolysisImage} alt="Electrolysis setup with electrodes and ion movement" />
+              </section>
+            ) : null}
+            {isNuclearAssessment ? (
+              <>
+                <section className="assessment-mid-media" aria-label="Nuclear chemistry materials">
+                  <img src={radiationMaterialsImage} alt="Nuclear chemistry lab and radiation safety materials" />
+                </section>
+                <section className="embedded-question">
+                  {embeddedToasts.nuclearSafety ? <SuccessToast message={embeddedToasts.nuclearSafety} inline /> : null}
+                  <QuestionTypeCard
+                    kind="mcq"
+                    points={6}
+                    title="Radiation Materials Safety Check"
+                    prompt="A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?"
+                    learningObjective="LO 4.3 Compare shielding and handling strategies for common radiation types."
+                    choices={[
+                      'Use paper shielding for all sources and keep all containers open for easier viewing.',
+                      'Use thick lead shielding for alpha sources only and remove barriers for beta and gamma sources.',
+                      'Keep sealed containers, use acrylic shielding for beta sources, and place gamma sources behind lead shielding at distance.',
+                      'Store all emitters together in one tray to simplify transport between lab benches.',
+                    ]}
+                    embedded
+                    removed={Boolean(removedEmbeddedQuestions.nuclearSafety)}
+                    onToggleRemove={() => requestToggleEmbedded('nuclearSafety')}
+                  />
+                </section>
+              </>
+            ) : null}
             <section className="embedded-question" id="embedded-question">
+              {embeddedToasts.exitQuestion ? <SuccessToast message={embeddedToasts.exitQuestion} inline /> : null}
               <QuestionTypeCard
                 kind="mcq"
                 points={6}
-                title="Electrochemistry Exit Question"
-                prompt="Which statement best explains why a galvanic cell potential decreases as reactants are consumed?"
-                learningObjective="LO 2.5 Explain how concentration changes affect cell potential."
-                choices={[
-                  'The anode starts reducing instead of oxidizing.',
-                  'Reaction quotient shifts and lowers the driving force toward equilibrium.',
-                  'Electrons are no longer transferred through the external circuit.',
-                  'The salt bridge blocks ion movement once products form.',
-                ]}
+                title={isNuclearAssessment ? 'Biological Effects Exit Question' : 'Electrochemistry Exit Question'}
+                prompt={
+                  isNuclearAssessment
+                    ? 'Which factor most directly explains why equal absorbed doses can lead to different biological outcomes?'
+                    : 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?'
+                }
+                learningObjective={
+                  isNuclearAssessment
+                    ? 'LO 4.2 Explain why biological impact varies by pathway and tissue sensitivity.'
+                    : 'LO 2.5 Explain how concentration changes affect cell potential.'
+                }
+                choices={
+                  isNuclearAssessment
+                    ? [
+                        'All tissues respond identically to ionizing radiation.',
+                        'Biological effect varies with tissue radiosensitivity, dose rate, and exposure pathway.',
+                        'Only external exposure affects biological outcome.',
+                        'Shielding type has no impact once exposure begins.',
+                      ]
+                    : [
+                        'The anode starts reducing instead of oxidizing.',
+                        'Reaction quotient shifts and lowers the driving force toward equilibrium.',
+                        'Electrons are no longer transferred through the external circuit.',
+                        'The salt bridge blocks ion movement once products form.',
+                      ]
+                }
                 embedded
+                removed={Boolean(removedEmbeddedQuestions.exitQuestion)}
+                onToggleRemove={() => requestToggleEmbedded('exitQuestion')}
               />
             </section>
           </div>
@@ -564,7 +801,26 @@ function AssessmentScreen() {
           </div>
         </div>
       </div>
-      {toastMessage ? <SuccessToast message={toastMessage} /> : null}
+      {pendingBankRemoveId ? (
+        <AttemptsStartedChangeModal
+          targetLabel="bank"
+          onKeep={() => setPendingBankRemoveId(null)}
+          onRemove={() => {
+            toggleRemoved(pendingBankRemoveId, 'Activity bank');
+            setPendingBankRemoveId(null);
+          }}
+        />
+      ) : null}
+      {pendingEmbeddedRemoveId ? (
+        <AttemptsStartedChangeModal
+          targetLabel="question"
+          onKeep={() => setPendingEmbeddedRemoveId(null)}
+          onRemove={() => {
+            toggleEmbeddedRemoved(pendingEmbeddedRemoveId);
+            setPendingEmbeddedRemoveId(null);
+          }}
+        />
+      ) : null}
     </InstructorShell>
   );
 }
@@ -572,8 +828,15 @@ function AssessmentScreen() {
 function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const state = location.state as { bankId?: string } | null;
+  const state = location.state as {
+    bankId?: string;
+    attemptsStarted?: boolean;
+    assessmentTitle?: string;
+    breadcrumbTrail?: BreadcrumbItem[];
+  } | null;
+  const assessmentSelections = getAssessmentSelections(state?.assessmentTitle);
   const selectedBank = assessmentSelections.find((bank) => bank.id === state?.bankId) ?? assessmentSelections[0];
+  const attemptsStarted = state?.attemptsStarted ?? false;
   const generatedQuestionCount = selectedBank.availableQuestions;
   const variantSuffix = [
     'with a conceptual check',
@@ -602,7 +865,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
       choices: rotatedChoices,
       cataStatements: rotatedStatements,
       difficulty,
-      removed: index % 7 === 0,
+      removed: false,
     };
   });
   const [questionRows, setQuestionRows] = useState<BankQuestionRow[]>(baseQuestions);
@@ -613,6 +876,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [limitModalContext, setLimitModalContext] = useState<{ remaining: number } | null>(null);
+  const [pendingRemoval, setPendingRemoval] = useState<{ type: 'question'; ids: string[] } | null>(null);
   const availableQuestionCount = questionRows.filter((question) => !question.removed).length;
   const normalizedSearch = searchText.trim().toLowerCase();
   const filteredQuestions = questionRows.filter((question) => {
@@ -721,6 +985,13 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     );
   };
 
+  const removeQuestions = (ids: string[]) => {
+    if (ids.length === 0) return;
+    setQuestionRows((current) => current.map((question) => (ids.includes(question.id) ? { ...question, removed: true } : question)));
+    setToastMessage(ids.length === 1 ? 'Question removed.' : `Removed ${ids.length} questions.`);
+    setSelected((current) => current.filter((item) => !ids.includes(item)));
+  };
+
   const applyBulkAction = (force = false) => {
     if (!selectionType || selected.length === 0) return;
     if (selectionType === 'included') {
@@ -744,10 +1015,32 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     setSelected([]);
   };
 
+  const requestBulkRemove = () => {
+    const selectedIncludedCount = selectedRows.filter((row) => !row.removed).length;
+    const remainingIncluded = availableQuestionCount - selectedIncludedCount;
+    if (remainingIncluded < selectedBank.numberToSelect) {
+      setLimitModalContext({ remaining: remainingIncluded });
+      return;
+    }
+    if (attemptsStarted) {
+      setPendingRemoval({ type: 'question', ids: [...selected] });
+      return;
+    }
+    applyBulkAction(false);
+  };
+
   return (
     <InstructorShell>
       <div className="bank-screen">
-        <button className="back-link" type="button" onClick={() => navigate('/assessment-default')}>
+        <button
+          className="back-link"
+          type="button"
+          onClick={() =>
+            navigate('/assessment-default', {
+              state: { attemptsStarted, assessmentTitle: state?.assessmentTitle, breadcrumbTrail: state?.breadcrumbTrail },
+            })
+          }
+        >
           ← Back
         </button>
         <div className="bank-screen__summary">
@@ -778,7 +1071,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           </div>
           <div className="toolbar__filters toolbar__filters--search">
             <div className="search-field">
-              <span aria-hidden="true" className="search-field__icon">🔍</span>
+              <img src={searchIcon} alt="" aria-hidden="true" className="search-field__icon" />
               <input aria-label="Search questions" className="input input--search" placeholder="Search" value={searchText} onChange={(event) => setSearchText(event.target.value)} />
             </div>
             <select className="select filter-select" aria-label="Learning objectives" value={learningObjectiveFilter} onChange={(event) => setLearningObjectiveFilter(event.target.value)}>
@@ -807,7 +1100,10 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           </div>
         </div>
         {selected.length > 0 && selectionType === 'included' ? (
-          <button className="button button--danger button--small bulk-action-button" onClick={() => applyBulkAction(false)}>
+          <button
+            className="button button--danger button--small bulk-action-button"
+            onClick={requestBulkRemove}
+          >
             Remove Selected ({selected.length})
           </button>
         ) : null}
@@ -880,6 +1176,10 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                   className={currentQuestion?.removed ? 'button button--secondary button--small' : 'button button--danger button--small'}
                   onClick={() => {
                     if (!currentQuestion) return;
+                    if (attemptsStarted && !currentQuestion.removed) {
+                      setPendingRemoval({ type: 'question', ids: [currentQuestion.id] });
+                      return;
+                    }
                     toggleQuestionRemoved(currentQuestion.id);
                   }}
                 >
@@ -903,8 +1203,21 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
               state: {
                 removeBankId: selectedBank.id,
                 bulkToast: 'Activity bank removed.',
+                attemptsStarted,
+                assessmentTitle: state?.assessmentTitle,
+                breadcrumbTrail: state?.breadcrumbTrail,
               },
             });
+          }}
+        />
+      ) : null}
+      {pendingRemoval ? (
+        <AttemptsStartedChangeModal
+          targetLabel={pendingRemoval.type}
+          onKeep={() => setPendingRemoval(null)}
+          onRemove={() => {
+            removeQuestions(pendingRemoval.ids);
+            setPendingRemoval(null);
           }}
         />
       ) : null}
@@ -1177,14 +1490,13 @@ function AssessmentHeader() {
     { label: 'Assessment' },
   ];
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
+  const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
 
   return (
     <>
       <div className="instructor-bar">
         <div className="instructor-pill">
-          <span className="instructor-pill__icon" aria-hidden="true">
-            ▥
-          </span>
+          <img className="instructor-pill__icon" src={instructorIcon} alt="" aria-hidden="true" />
           <span>Instructor view</span>
         </div>
       </div>
@@ -1205,11 +1517,11 @@ function AssessmentHeader() {
           <div className="learning-objectives__label">Learning Objectives</div>
           <div className="learning-objective-item">
             <img src={checkIcon} alt="" aria-hidden="true" />
-            <span>LO 1.1 Calculate the concentration of ions in solution.</span>
+            <span>{isNuclearAssessment ? 'LO 4.1 Distinguish alpha, beta, and gamma radiation by interaction with matter.' : 'LO 1.1 Calculate the concentration of ions in solution.'}</span>
           </div>
           <div className="learning-objective-item">
             <img src={checkIcon} alt="" aria-hidden="true" />
-            <span>LO 1.2 Distinguish between oxidation and reduction processes.</span>
+            <span>{isNuclearAssessment ? 'LO 4.2 Explain how dose, pathway, and tissue sensitivity influence biological effects.' : 'LO 1.2 Distinguish between oxidation and reduction processes.'}</span>
           </div>
         </div>
       </div>
@@ -1220,18 +1532,28 @@ function AssessmentHeader() {
 function ActivityBankSelectionCard({
   selection,
   removed,
+  toastMessage,
   onToggleRemove,
+  attemptsStarted,
+  assessmentTitle,
+  breadcrumbTrail,
 }: {
   selection: AssessmentSelection;
   removed: boolean;
+  toastMessage?: string;
   onToggleRemove: () => void;
+  attemptsStarted: boolean;
+  assessmentTitle?: string;
+  breadcrumbTrail?: BreadcrumbItem[];
 }) {
   const navigate = useNavigate();
   const [exampleIndex, setExampleIndex] = useState(0);
   const exampleQuestion = selection.exampleQuestions[exampleIndex] ?? selection.exampleQuestions[0];
 
   return (
-    <section id={`bank-${selection.id}`} className={removed ? 'bank-card bank-card--removed' : 'bank-card'}>
+    <section id={`bank-${selection.id}`} className={removed ? 'bank-card-wrapper bank-card-wrapper--removed' : 'bank-card-wrapper'}>
+      {toastMessage ? <SuccessToast message={toastMessage} inline /> : null}
+      <div className={removed ? 'bank-card bank-card--removed' : 'bank-card'}>
       <div className="bank-card__header">
         <div>
           <div className="muted-caption">{selection.availableQuestions} questions available</div>
@@ -1256,7 +1578,7 @@ function ActivityBankSelectionCard({
         className="button button--primary button--small bank-card__action"
         onClick={() =>
           navigate('/inside-bank', {
-            state: { bankId: selection.id },
+            state: { bankId: selection.id, attemptsStarted, assessmentTitle, breadcrumbTrail },
           })
         }
       >
@@ -1307,7 +1629,31 @@ function ActivityBankSelectionCard({
           showGraph={exampleQuestion.showGraph}
         />
       </div>
+      </div>
     </section>
+  );
+}
+
+function AttemptsStartedChangeModal({
+  targetLabel,
+  onKeep,
+  onRemove,
+}: {
+  targetLabel: 'question' | 'bank';
+  onKeep: () => void;
+  onRemove: () => void;
+}) {
+  return (
+    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Change may affect student scores">
+      <div className="modal-card">
+        <h3>Change may affect student scores</h3>
+        <p>Students have already started this assessment. Removing this {targetLabel} will only impact future attempts.</p>
+        <div className="modal-actions">
+          <button className="button button--secondary" onClick={onRemove}>Remove {targetLabel}</button>
+          <button className="button button--primary" onClick={onKeep}>Keep {targetLabel}</button>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -1321,6 +1667,8 @@ function QuestionTypeCard({
   cataStatements,
   showGraph = false,
   embedded = false,
+  removed = false,
+  onToggleRemove,
 }: {
   kind: QuestionKind;
   points: number;
@@ -1331,6 +1679,8 @@ function QuestionTypeCard({
   cataStatements?: string[];
   showGraph?: boolean;
   embedded?: boolean;
+  removed?: boolean;
+  onToggleRemove?: () => void;
 }) {
   const [expanded, setExpanded] = useState(false);
   const [activeTab, setActiveTab] = useState<'answer' | 'hints' | 'explanation'>('answer');
@@ -1531,11 +1881,20 @@ function QuestionTypeCard({
   );
 
   return (
-    <div className={embedded ? 'question-type-card question-type-card--embedded' : 'question-type-card'}>
+    <div className={[embedded ? 'question-type-card question-type-card--embedded' : 'question-type-card', removed ? 'question-type-card--removed' : ''].filter(Boolean).join(' ')}>
       <div className="question-type-card__head">
         <div className="eyebrow">
           {questionTypeLabel} · {points} points
         </div>
+        {onToggleRemove ? (
+          <div className="question-type-card__actions">
+            {removed ? <span className="status-pill">Removed</span> : null}
+            <button className={removed ? 'button button--secondary button--small' : 'button button--danger button--small'} onClick={onToggleRemove}>
+              {removed ? <img src={resetIcon} alt="" aria-hidden="true" /> : null}
+              {removed ? 'Restore' : 'Remove'}
+            </button>
+          </div>
+        ) : null}
       </div>
       <h3>{title}</h3>
       {kind === 'mcq' ? (
@@ -1632,7 +1991,7 @@ function QuestionTypeCard({
   );
 }
 
-function MaterialRow({ material, onEdit }: { material: Material; onEdit: (assessmentTitle: string) => void }) {
+function MaterialRow({ material, onEdit }: { material: Material; onEdit: (assessment: Material) => void }) {
   const titleIsLink = material.type === 'bank';
   const rowIcon = material.type === 'bank' ? containerIcon : pageIcon;
 
@@ -1651,7 +2010,7 @@ function MaterialRow({ material, onEdit }: { material: Material; onEdit: (assess
       <div className="button-row">
         {material.type === 'activity' ? (
           <>
-            <button className="button button--secondary button--small" onClick={() => onEdit(material.title)}>
+            <button className="button button--secondary button--small" onClick={() => onEdit(material)}>
               <img src={editIcon} alt="" aria-hidden="true" />
               Edit
             </button>
