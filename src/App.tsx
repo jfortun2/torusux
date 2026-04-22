@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { loadAssessmentDraft, persistAssessmentSurface, persistBankRemovedQuestionIds } from './assessmentDraftStorage';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
 import hideIcon from './assets/icon-hide.png';
@@ -571,14 +572,16 @@ function AssessmentScreen() {
     assessmentTitle?: string;
     breadcrumbTrail?: BreadcrumbItem[];
   } | null;
-  const [removedBanks, setRemovedBanks] = useState<string[]>([]);
+  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
+  const [removedBanks, setRemovedBanks] = useState<string[]>(() => loadAssessmentDraft(assessmentTitle).removedBanks);
   const [showJumpLinks, setShowJumpLinks] = useState(false);
   const [bankToasts, setBankToasts] = useState<Record<string, string>>({});
   const [pendingBankRemoveId, setPendingBankRemoveId] = useState<string | null>(null);
-  const [removedEmbeddedQuestions, setRemovedEmbeddedQuestions] = useState<Record<string, boolean>>({});
+  const [removedEmbeddedQuestions, setRemovedEmbeddedQuestions] = useState<Record<string, boolean>>(
+    () => loadAssessmentDraft(assessmentTitle).removedEmbedded,
+  );
   const [embeddedToasts, setEmbeddedToasts] = useState<Record<string, string>>({});
   const [pendingEmbeddedRemoveId, setPendingEmbeddedRemoveId] = useState<string | null>(null);
-  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
   const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
   const attemptsStarted = state?.attemptsStarted ?? false;
@@ -594,12 +597,24 @@ function AssessmentScreen() {
     }, 2200);
   };
 
+  useLayoutEffect(() => {
+    const draft = loadAssessmentDraft(assessmentTitle);
+    setRemovedBanks(draft.removedBanks);
+    setRemovedEmbeddedQuestions(draft.removedEmbedded);
+  }, [assessmentTitle]);
+
   useEffect(() => {
-    if (state?.removeBankId) {
-      setRemovedBanks((current) => (current.includes(state.removeBankId as string) ? current : [...current, state.removeBankId as string]));
-      showBankToast(state.removeBankId, state.bulkToast ?? 'Activity bank removed.');
-    }
+    if (!state?.removeBankId) return;
+    setRemovedBanks((current) => {
+      if (current.includes(state.removeBankId as string)) return current;
+      return [...current, state.removeBankId as string];
+    });
+    showBankToast(state.removeBankId, state.bulkToast ?? 'Activity bank removed.');
   }, [state?.removeBankId, state?.bulkToast]);
+
+  useEffect(() => {
+    persistAssessmentSurface(assessmentTitle, { removedBanks, removedEmbedded: removedEmbeddedQuestions });
+  }, [assessmentTitle, removedBanks, removedEmbeddedQuestions]);
 
   const toggleRemoved = (id: string, label: string) => {
     setRemovedBanks((current) => {
@@ -834,6 +849,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     assessmentTitle?: string;
     breadcrumbTrail?: BreadcrumbItem[];
   } | null;
+  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
   const assessmentSelections = getAssessmentSelections(state?.assessmentTitle);
   const selectedBank = assessmentSelections.find((bank) => bank.id === state?.bankId) ?? assessmentSelections[0];
   const attemptsStarted = state?.attemptsStarted ?? false;
@@ -849,25 +865,30 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     const offset = amount % items.length;
     return [...items.slice(offset), ...items.slice(0, offset)];
   };
-  const baseQuestions: BankQuestionRow[] = Array.from({ length: generatedQuestionCount }).map((_, index) => {
-    const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
-    const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
-    const promptVariant = index < selectedBank.exampleQuestions.length ? seeded.prompt : `${seeded.prompt} (${variantSuffix[index % variantSuffix.length]})`;
-    const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined;
-    const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length) : undefined;
-    return {
-      id: `${selectedBank.id}-q-${index + 1}`,
-      title: index < selectedBank.exampleQuestions.length ? seeded.title : `${seeded.title} Variant ${index + 1}`,
-      prompt: promptVariant,
-      kind: seeded.kind,
-      points: seeded.points,
-      learningObjective: seeded.learningObjective,
-      choices: rotatedChoices,
-      cataStatements: rotatedStatements,
-      difficulty,
-      removed: false,
-    };
-  });
+  const baseQuestions: BankQuestionRow[] = useMemo(() => {
+    const draft = loadAssessmentDraft(assessmentTitle);
+    const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBank.id] ?? []);
+    return Array.from({ length: generatedQuestionCount }).map((_, index) => {
+      const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
+      const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
+      const promptVariant = index < selectedBank.exampleQuestions.length ? seeded.prompt : `${seeded.prompt} (${variantSuffix[index % variantSuffix.length]})`;
+      const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined;
+      const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length) : undefined;
+      const id = `${selectedBank.id}-q-${index + 1}`;
+      return {
+        id,
+        title: index < selectedBank.exampleQuestions.length ? seeded.title : `${seeded.title} Variant ${index + 1}`,
+        prompt: promptVariant,
+        kind: seeded.kind,
+        points: seeded.points,
+        learningObjective: seeded.learningObjective,
+        choices: rotatedChoices,
+        cataStatements: rotatedStatements,
+        difficulty,
+        removed: removedIdSet.has(id),
+      };
+    });
+  }, [assessmentTitle, generatedQuestionCount, selectedBank]);
   const [questionRows, setQuestionRows] = useState<BankQuestionRow[]>(baseQuestions);
   const [filterMode, setFilterMode] = useState<'all' | 'included' | 'removed'>('all');
   const [searchText, setSearchText] = useState('');
@@ -966,7 +987,15 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     setDifficultyFilter('all');
     setSelected(bulkEdit ? baseQuestions.filter((question) => !question.removed).slice(0, 6).map((question) => question.id) : []);
     setActiveQuestionId(baseQuestions[0]?.id ?? '');
-  }, [selectedBank.id, bulkEdit]);
+  }, [baseQuestions, bulkEdit]);
+
+  useEffect(() => {
+    persistBankRemovedQuestionIds(
+      assessmentTitle,
+      selectedBank.id,
+      questionRows.filter((question) => question.removed).map((question) => question.id),
+    );
+  }, [assessmentTitle, selectedBank.id, questionRows]);
 
   useEffect(() => {
     if (!toastMessage) return;
