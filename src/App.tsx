@@ -1,13 +1,15 @@
 import { useMemo, useState } from 'react';
-import { Link, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-
-type ScreenKey =
-  | 'manage'
-  | 'customize'
-  | 'assessment-default'
-  | 'removed-bank'
-  | 'inside-bank'
-  | 'bulk-edit';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import contentImage from './assets/content-image.png';
+import formulaImage from './assets/formula.png';
+import graphImage from './assets/graph.png';
+import hideIcon from './assets/icon-hide.png';
+import containerIcon from './assets/icon-container.png';
+import deleteIcon from './assets/icon-delete.png';
+import editIcon from './assets/icon-edit.png';
+import moveItemIcon from './assets/icon-move-item.png';
+import pageIcon from './assets/icon-page.png';
+import kittenImage from './assets/kitten.png';
 
 type Material = {
   id: string;
@@ -47,22 +49,12 @@ const questionBank: Question[] = [
   { id: 'q14', title: 'How Do Acids and Bases Neutralize Each Other?' },
 ];
 
-const routes: { path: string; label: string; key: ScreenKey }[] = [
-  { path: '/', label: 'Manage (start)', key: 'manage' },
-  { path: '/customize', label: 'Customize Content', key: 'customize' },
-  { path: '/assessment-default', label: 'Assessment Default', key: 'assessment-default' },
-  { path: '/removed-bank', label: 'Removed Bank State', key: 'removed-bank' },
-  { path: '/inside-bank', label: 'Inside Activity Bank', key: 'inside-bank' },
-  { path: '/bulk-edit', label: 'Inside Activity Bank - bulk edit', key: 'bulk-edit' },
-];
-
 function App() {
   return (
     <Routes>
       <Route path="/" element={<ManageScreen />} />
       <Route path="/customize" element={<CustomizeScreen />} />
-      <Route path="/assessment-default" element={<AssessmentScreen removed={false} />} />
-      <Route path="/removed-bank" element={<AssessmentScreen removed />} />
+      <Route path="/assessment-default" element={<AssessmentScreen />} />
       <Route path="/inside-bank" element={<ActivityBankScreen bulkEdit={false} />} />
       <Route path="/bulk-edit" element={<ActivityBankScreen bulkEdit />} />
     </Routes>
@@ -70,11 +62,9 @@ function App() {
 }
 
 function AppShell({
-  screen,
   children,
   compact = false,
 }: {
-  screen: ScreenKey;
   children: React.ReactNode;
   compact?: boolean;
 }) {
@@ -102,28 +92,17 @@ function AppShell({
       </header>
       <div className="hero">Chemistry 101</div>
       <main className={compact ? 'page page--compact' : 'page'}>
-        <PrototypeRail active={screen} />
         {children}
       </main>
     </div>
   );
 }
 
-function PrototypeRail({ active }: { active: ScreenKey }) {
+function InstructorShell({ children }: { children: React.ReactNode }) {
   return (
-    <aside className="prototype-rail" aria-label="Prototype screens">
-      <div className="prototype-rail__label">Prototype Screens</div>
-      {routes.map((route) => (
-        <NavLink
-          key={route.path}
-          to={route.path}
-          end={route.path === '/'}
-          className={active === route.key ? 'prototype-link is-active' : 'prototype-link'}
-        >
-          {route.label}
-        </NavLink>
-      ))}
-    </aside>
+    <div className="instructor-shell">
+      <main className="instructor-page">{children}</main>
+    </div>
   );
 }
 
@@ -134,7 +113,7 @@ function ManageScreen() {
       description: 'Overview of course section details',
       content: (
         <div className="form-grid">
-          <Field label="Course Section ID" value="heather_course_section_real_ch" />
+          <Field label="Course Section ID" value="chem_101_section_a" />
           <Field label="Title" value="Course Section" />
           <Field label="Course Section Type" value="Direct Delivery" />
           <Field label="URL" value="https://tokamak.oli.cmu.edu/sections/heather_course_section_real_ch" action="Copy" />
@@ -208,17 +187,16 @@ function ManageScreen() {
         <div className="cover-upload">
           <button className="button button--primary">Browse</button>
           <span className="muted-caption">or drag and drop here</span>
-          <div className="cat-card" aria-hidden="true" />
+          <img className="course-image-preview" src={kittenImage} alt="Course page cover image" />
         </div>
       ),
     },
   ];
 
   return (
-    <AppShell screen="manage">
+    <AppShell>
       <div className="content-column">
-        <Breadcrumbs items={['Admin', 'All Course Sections', 'Manage']} />
-        <div className="section-list">
+        <div className="section-list manage-section-list">
           {sections.map((section) => (
             <SectionRow key={section.title} title={section.title} description={section.description}>
               {section.content}
@@ -234,8 +212,8 @@ function CustomizeScreen() {
   const navigate = useNavigate();
 
   return (
-    <AppShell screen="customize">
-      <div className="content-column content-column--wide">
+    <AppShell>
+      <div className="content-column content-column--wide customize-content">
         <Breadcrumbs items={['Manage', 'Customize Content']} />
         <div className="page-header">
           <div>
@@ -253,7 +231,7 @@ function CustomizeScreen() {
         </div>
         <div className="stack-md">
           {materials.map((material) => (
-            <MaterialRow key={material.id} material={material} onOpen={() => navigate('/assessment-default')} />
+            <MaterialRow key={material.id} material={material} onEdit={() => navigate('/assessment-default')} />
           ))}
         </div>
         <div className="footer-actions">
@@ -264,17 +242,32 @@ function CustomizeScreen() {
   );
 }
 
-function AssessmentScreen({ removed }: { removed: boolean }) {
+function AssessmentScreen() {
+  const [bankRemoved, setBankRemoved] = useState(false);
+
   return (
-    <AppShell screen={removed ? 'removed-bank' : 'assessment-default'} compact>
+    <InstructorShell>
       <div className="assessment-layout">
         <AssessmentHeader />
         <div className="assessment-content">
           <div className="assessment-main">
             <WarningBanner />
-            <ActivityBankCard removed={removed} />
+            <ActivityBankCard
+              removed={bankRemoved}
+              onRemove={() => setBankRemoved(true)}
+              image={contentImage}
+              imageAlt="Content image"
+              imageCaption="A short context paragraph accompanies this content image to help students answer the question."
+              showCriteriaSelector
+            />
             <QuestionCard variant="essay" title="Short Response" />
-            <ActivityBankCard />
+            <ActivityBankCard
+              image={graphImage}
+              imageAlt="Titration graph"
+              imageCaption="A titration curve is shown. Select the point where equivalence is best represented."
+              inlineImage={formulaImage}
+              inlineImageAlt="Formula reference"
+            />
           </div>
           <div className="assessment-footer">
             <button className="button button--subtle">Previous</button>
@@ -284,11 +277,12 @@ function AssessmentScreen({ removed }: { removed: boolean }) {
           </div>
         </div>
       </div>
-    </AppShell>
+    </InstructorShell>
   );
 }
 
 function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
+  const navigate = useNavigate();
   const [selected, setSelected] = useState<string[]>(
     bulkEdit ? questionBank.filter((question) => !question.removed).slice(1, 13).map((question) => question.id) : [],
   );
@@ -302,9 +296,9 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   };
 
   return (
-    <AppShell screen={bulkEdit ? 'bulk-edit' : 'inside-bank'} compact>
+    <InstructorShell>
       <div className="bank-screen">
-        <button className="back-link" type="button">
+        <button className="back-link" type="button" onClick={() => navigate('/assessment-default')}>
           ← Back
         </button>
         <div className="bank-header">
@@ -403,13 +397,11 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           </div>
         </div>
       </div>
-    </AppShell>
+    </InstructorShell>
   );
 }
 
 function AssessmentHeader() {
-  const location = useLocation();
-
   return (
     <>
       <div className="instructor-bar">
@@ -423,7 +415,7 @@ function AssessmentHeader() {
         </button>
       </div>
       <div className="assessment-nav">
-        <div className="breadcrumbs-line">Unit 2 / Electrochemistry / Activity Bank Selection / {location.pathname === '/removed-bank' ? 'Removed state' : 'Assessment'}</div>
+        <div className="breadcrumbs-line">Unit 2 / Electrochemistry / Activity Bank Selection / Assessment</div>
         <h1>12. Electrochemistry Unit Checkpoint</h1>
         <p className="muted-body">Customize your assessment by selecting example questions and providing guidance.</p>
       </div>
@@ -431,7 +423,25 @@ function AssessmentHeader() {
   );
 }
 
-function ActivityBankCard({ removed = false }: { removed?: boolean }) {
+function ActivityBankCard({
+  removed = false,
+  onRemove,
+  image,
+  imageAlt,
+  imageCaption,
+  showCriteriaSelector = false,
+  inlineImage,
+  inlineImageAlt,
+}: {
+  removed?: boolean;
+  onRemove?: () => void;
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+  showCriteriaSelector?: boolean;
+  inlineImage?: string;
+  inlineImageAlt?: string;
+}) {
   const navigate = useNavigate();
 
   return (
@@ -444,7 +454,9 @@ function ActivityBankCard({ removed = false }: { removed?: boolean }) {
             {removed ? <span className="status-pill">Removed</span> : null}
           </div>
         </div>
-        <button className="button button--danger button--small">Remove</button>
+        <button className="button button--danger button--small" onClick={onRemove}>
+          Remove
+        </button>
       </div>
       <div className="bank-card__stats">
         <TagStat label="Number to select" value="1" />
@@ -454,6 +466,14 @@ function ActivityBankCard({ removed = false }: { removed?: boolean }) {
         <div className="criteria-label">Criteria for selection:</div>
         <div className="criteria-tag">Legacy Pool: po1_frequency_wavelength_energy_pool</div>
       </div>
+      {showCriteriaSelector ? (
+        <label className="criteria-select-wrap">
+          <span className="criteria-select-label">Criteria to select</span>
+          <select className="select criteria-select" aria-label="Criteria to select">
+            <option>No options available</option>
+          </select>
+        </label>
+      ) : null}
       <div className="example-block">
         <div className="example-header">
           <div>
@@ -470,14 +490,18 @@ function ActivityBankCard({ removed = false }: { removed?: boolean }) {
           <li>Silver</li>
         </ul>
       </div>
-      <div className="question-illustration" aria-hidden="true">
-        <div className="question-illustration__chart">
-          <span className="point point--a">A</span>
-          <span className="point point--b">B</span>
-          <span className="point point--c">C</span>
-          <span className="point point--d">D</span>
+      {image ? <img className="question-media" src={image} alt={imageAlt ?? 'Question media'} /> : null}
+      {imageCaption ? <p className="question-media-caption">{imageCaption}</p> : null}
+      {showCriteriaSelector ? (
+        <div className="question-inline-shot-wrap">
+          <img className="question-media question-media--small" src={formulaImage} alt="Inline formula reference" />
         </div>
-      </div>
+      ) : null}
+      {inlineImage ? (
+        <div className="question-inline-shot-wrap">
+          <img className="question-media question-media--small" src={inlineImage} alt={inlineImageAlt ?? 'Inline reference'} />
+        </div>
+      ) : null}
       <button className="button button--primary" onClick={() => navigate('/inside-bank')}>
         View more questions
       </button>
@@ -513,26 +537,43 @@ function WarningBanner() {
   );
 }
 
-function MaterialRow({ material, onOpen }: { material: Material; onOpen: () => void }) {
+function MaterialRow({ material, onEdit }: { material: Material; onEdit: () => void }) {
+  const titleIsLink = material.type === 'bank';
+  const rowIcon = material.type === 'bank' ? containerIcon : pageIcon;
+
   return (
     <div className="material-row">
       <div className="material-row__title">
-        <span className="material-icon" aria-hidden="true">
-          {material.type === 'bank' ? '▣' : '▤'}
-        </span>
-        <button className="material-link" onClick={material.type === 'bank' ? onOpen : undefined}>
-          {material.title}
-        </button>
+        <img className="material-icon" src={rowIcon} alt="" aria-hidden="true" />
+        {titleIsLink ? (
+          <button className="material-link" type="button">
+            {material.title}
+          </button>
+        ) : (
+          <span className="material-title">{material.title}</span>
+        )}
       </div>
       <div className="button-row">
         {material.type === 'activity' ? (
           <>
-            <button className="button button--secondary button--small">Edit</button>
-            <button className="button button--secondary button--small">{material.hidden ? 'Hide' : 'Show'}</button>
+            <button className="button button--secondary button--small" onClick={onEdit}>
+              <img src={editIcon} alt="" aria-hidden="true" />
+              Edit
+            </button>
+            <button className="button button--secondary button--small">
+              <img src={hideIcon} alt="" aria-hidden="true" />
+              Hide
+            </button>
           </>
         ) : null}
-        <button className="button button--secondary button--small">Move</button>
-        <button className="button button--danger button--small">Remove</button>
+        <button className="button button--secondary button--small">
+          <img src={moveItemIcon} alt="" aria-hidden="true" />
+          Move
+        </button>
+        <button className="button button--danger button--small">
+          <img src={deleteIcon} alt="" aria-hidden="true" />
+          Remove
+        </button>
       </div>
     </div>
   );
@@ -598,9 +639,15 @@ function LinkSet({ label, items, danger }: { label?: string; items: string[]; da
     <div className="link-set">
       {label ? <div className="field-label">{label}</div> : null}
       {items.map((item) => (
-        <a href="/" key={item}>
-          {item}
-        </a>
+        item === 'Customize Content' ? (
+          <Link to="/customize" key={item}>
+            {item}
+          </Link>
+        ) : (
+          <a href="/" key={item}>
+            {item}
+          </a>
+        )
       ))}
       {danger ? <button className="text-button">{danger}</button> : null}
     </div>
