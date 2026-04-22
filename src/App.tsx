@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
-import contentImage from './assets/content-image.png';
+import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
 import hideIcon from './assets/icon-hide.png';
+import checkIcon from './assets/icon-check.png';
 import containerIcon from './assets/icon-container.png';
 import deleteIcon from './assets/icon-delete.png';
 import editIcon from './assets/icon-edit.png';
@@ -23,6 +23,9 @@ type Question = {
   title: string;
   removed?: boolean;
 };
+
+type BreadcrumbItem = string | { label: string; to?: string };
+type QuestionKind = 'mcq' | 'multi-input' | 'cata';
 
 const materials: Material[] = [
   { id: 'm1', title: 'Foundational Concepts of Electrochemistry', type: 'bank' },
@@ -47,6 +50,19 @@ const questionBank: Question[] = [
   { id: 'q12', title: 'What is the Ideal Gas Law and Its Applications?' , removed: true },
   { id: 'q13', title: 'How Do Acids and Bases Neutralize Each Other?' },
   { id: 'q14', title: 'How Do Acids and Bases Neutralize Each Other?' },
+];
+
+const assessmentSelections: Array<{ id: string; kind: QuestionKind; points: number; title: string }> = [
+  { id: 'ab-1', kind: 'multi-input', points: 8, title: 'Redox Balancing Practice' },
+  { id: 'ab-2', kind: 'mcq', points: 10, title: 'Titration Interpretation' },
+  { id: 'ab-3', kind: 'cata', points: 5, title: 'Battery Concepts' },
+  { id: 'ab-4', kind: 'mcq', points: 10, title: 'Acid-Base Equivalence' },
+  { id: 'ab-5', kind: 'multi-input', points: 8, title: 'Reaction Coefficients' },
+  { id: 'ab-6', kind: 'cata', points: 5, title: 'Thermodynamics Claims' },
+  { id: 'ab-7', kind: 'mcq', points: 10, title: 'Graph Reading' },
+  { id: 'ab-8', kind: 'multi-input', points: 8, title: 'Half-Reaction Setup' },
+  { id: 'ab-9', kind: 'cata', points: 5, title: 'Electrochemistry Checks' },
+  { id: 'ab-10', kind: 'mcq', points: 10, title: 'Endpoint Identification' },
 ];
 
 function App() {
@@ -231,7 +247,22 @@ function CustomizeScreen() {
         </div>
         <div className="stack-md">
           {materials.map((material) => (
-            <MaterialRow key={material.id} material={material} onEdit={() => navigate('/assessment-default')} />
+            <MaterialRow
+              key={material.id}
+              material={material}
+              onEdit={(assessmentTitle) =>
+                navigate('/assessment-default', {
+                  state: {
+                    assessmentTitle,
+                    breadcrumbTrail: [
+                      { label: 'Manage', to: '/' },
+                      { label: 'Customize Content', to: '/customize' },
+                      { label: assessmentTitle },
+                    ],
+                  },
+                })
+              }
+            />
           ))}
         </div>
         <div className="footer-actions">
@@ -243,7 +274,11 @@ function CustomizeScreen() {
 }
 
 function AssessmentScreen() {
-  const [bankRemoved, setBankRemoved] = useState(false);
+  const [removedBanks, setRemovedBanks] = useState<string[]>([]);
+
+  const toggleRemoved = (id: string) => {
+    setRemovedBanks((current) => (current.includes(id) ? current.filter((bankId) => bankId !== id) : [...current, id]));
+  };
 
   return (
     <InstructorShell>
@@ -251,26 +286,21 @@ function AssessmentScreen() {
         <AssessmentHeader />
         <div className="assessment-content">
           <div className="assessment-main">
-            <WarningBanner />
-            <ActivityBankCard
-              removed={bankRemoved}
-              onRemove={() => setBankRemoved(true)}
-              image={contentImage}
-              imageAlt="Content image"
-              imageCaption="A short context paragraph accompanies this content image to help students answer the question."
-              showCriteriaSelector
-            />
-            <QuestionCard variant="essay" title="Short Response" />
-            <ActivityBankCard
-              image={graphImage}
-              imageAlt="Titration graph"
-              imageCaption="A titration curve is shown. Select the point where equivalence is best represented."
-              inlineImage={formulaImage}
-              inlineImageAlt="Formula reference"
-            />
+            {assessmentSelections.map((selection) => (
+              <ActivityBankSelectionCard
+                key={selection.id}
+                selection={selection}
+                removed={removedBanks.includes(selection.id)}
+                onToggleRemove={() => toggleRemoved(selection.id)}
+              />
+            ))}
+            <section className="embedded-question">
+              <h3>Embedded Question</h3>
+              <QuestionTypeCard kind="mcq" points={6} title="Electrochemistry Exit Question" embedded />
+            </section>
           </div>
           <div className="assessment-footer">
-            <button className="button button--subtle">Previous</button>
+            <button className="button button--secondary">Previous</button>
             <span>All pages auto-saving now.</span>
             <span>Lasts Media edit at 4:48 PM</span>
             <button className="button button--primary">Next</button>
@@ -402,45 +432,61 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
 }
 
 function AssessmentHeader() {
+  const location = useLocation();
+  const state = location.state as { breadcrumbTrail?: BreadcrumbItem[]; assessmentTitle?: string } | null;
+  const breadcrumbTrail = state?.breadcrumbTrail ?? [
+    { label: 'Customize Content', to: '/customize' },
+    { label: 'Assessment' },
+  ];
+  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
+
   return (
     <>
       <div className="instructor-bar">
-        <span>Instructor view</span>
+        <div className="instructor-pill">
+          <span className="instructor-pill__icon" aria-hidden="true">
+            ▥
+          </span>
+          <span>Instructor view</span>
+        </div>
       </div>
       <div className="assessment-topbar">
-        <div className="brand-mark brand-mark--small" aria-hidden="true" />
+        <div className="assessment-topbar__logo">
+          <div className="brand-mark brand-mark--small" aria-hidden="true" />
+          <span>OLI Torus</span>
+        </div>
         <div className="course-name">THE REALIZATION OF REAL CHEM</div>
-        <button className="avatar-badge" aria-label="Profile">
+        <button className="assessment-profile" aria-label="Profile">
           J
         </button>
       </div>
       <div className="assessment-nav">
-        <div className="breadcrumbs-line">Unit 2 / Electrochemistry / Activity Bank Selection / Assessment</div>
-        <h1>12. Electrochemistry Unit Checkpoint</h1>
-        <p className="muted-body">Customize your assessment by selecting example questions and providing guidance.</p>
+        <Breadcrumbs items={breadcrumbTrail} />
+        <h1 className="assessment-title">{assessmentTitle}</h1>
+        <div className="learning-objectives">
+          <div className="learning-objectives__label">Learning Objectives</div>
+          <div className="learning-objective-item">
+            <img src={checkIcon} alt="" aria-hidden="true" />
+            <span>LO 1.1 Calculate the concentration of ions in solution.</span>
+          </div>
+          <div className="learning-objective-item">
+            <img src={checkIcon} alt="" aria-hidden="true" />
+            <span>LO 1.2 Distinguish between oxidation and reduction processes.</span>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-function ActivityBankCard({
-  removed = false,
-  onRemove,
-  image,
-  imageAlt,
-  imageCaption,
-  showCriteriaSelector = false,
-  inlineImage,
-  inlineImageAlt,
+function ActivityBankSelectionCard({
+  selection,
+  removed,
+  onToggleRemove,
 }: {
-  removed?: boolean;
-  onRemove?: () => void;
-  image?: string;
-  imageAlt?: string;
-  imageCaption?: string;
-  showCriteriaSelector?: boolean;
-  inlineImage?: string;
-  inlineImageAlt?: string;
+  selection: { id: string; kind: QuestionKind; points: number; title: string };
+  removed: boolean;
+  onToggleRemove: () => void;
 }) {
   const navigate = useNavigate();
 
@@ -454,90 +500,132 @@ function ActivityBankCard({
             {removed ? <span className="status-pill">Removed</span> : null}
           </div>
         </div>
-        <button className="button button--danger button--small" onClick={onRemove}>
-          Remove
+        <button className={removed ? 'button button--secondary button--small' : 'button button--danger button--small'} onClick={onToggleRemove}>
+          {removed ? 'Restore' : 'Remove'}
         </button>
       </div>
       <div className="bank-card__stats">
         <TagStat label="Number to select" value="1" />
-        <TagStat label="Points per question" value="1" />
+        <TagStat label="Points per question" value={String(selection.points)} />
       </div>
       <div className="criteria-block">
         <div className="criteria-label">Criteria for selection:</div>
         <div className="criteria-tag">Legacy Pool: po1_frequency_wavelength_energy_pool</div>
       </div>
-      {showCriteriaSelector ? (
-        <label className="criteria-select-wrap">
-          <span className="criteria-select-label">Criteria to select</span>
-          <select className="select criteria-select" aria-label="Criteria to select">
-            <option>No options available</option>
-          </select>
-        </label>
-      ) : null}
-      <div className="example-block">
-        <div className="example-header">
-          <div>
-            <div className="eyebrow">Example question</div>
-            <h3>Title of Questions</h3>
-          </div>
-          <div className="eyebrow">Multiple Choice · 1 point</div>
-        </div>
-        <p>Below the following metals react with acid solutions:</p>
-        <ul className="answer-preview">
-          <li>Aluminum</li>
-          <li>Magnesium</li>
-          <li>Calcium</li>
-          <li>Silver</li>
-        </ul>
-      </div>
-      {image ? <img className="question-media" src={image} alt={imageAlt ?? 'Question media'} /> : null}
-      {imageCaption ? <p className="question-media-caption">{imageCaption}</p> : null}
-      {showCriteriaSelector ? (
-        <div className="question-inline-shot-wrap">
-          <img className="question-media question-media--small" src={formulaImage} alt="Inline formula reference" />
-        </div>
-      ) : null}
-      {inlineImage ? (
-        <div className="question-inline-shot-wrap">
-          <img className="question-media question-media--small" src={inlineImage} alt={inlineImageAlt ?? 'Inline reference'} />
-        </div>
-      ) : null}
-      <button className="button button--primary" onClick={() => navigate('/inside-bank')}>
+      <button className="button button--primary button--small" onClick={() => navigate('/inside-bank')}>
         View more questions
       </button>
-    </section>
-  );
-}
-
-function QuestionCard({ variant, title }: { variant: 'essay'; title: string }) {
-  return (
-    <section className="question-card">
-      <div className="question-card__header">
-        <div>
-          <div className="eyebrow">Example question</div>
-          <h2>{title}</h2>
-        </div>
-        <div className="button-row">
-          <button className="button button--secondary button--small">Edit</button>
-          <button className="button button--secondary button--small">Hide</button>
-          <button className="button button--danger button--small">Remove</button>
-        </div>
+      <div className="example-block">
+        <p className="example-label">Example selection:</p>
+        <QuestionTypeCard kind={selection.kind} points={selection.points} title={selection.title} />
       </div>
-      <p>A short verbal response. Answers can include text and formula snippets.</p>
-      {variant === 'essay' ? <div className="essay-box">Student answer area</div> : null}
     </section>
   );
 }
 
-function WarningBanner() {
+function QuestionTypeCard({
+  kind,
+  points,
+  title = 'Title of Question',
+  embedded = false,
+}: {
+  kind: QuestionKind;
+  points: number;
+  title?: string;
+  embedded?: boolean;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const [activeTab, setActiveTab] = useState<'answer' | 'hints' | 'explanation'>('answer');
+
+  const questionTypeLabel = kind === 'mcq' ? 'Multiple Choice' : kind === 'multi-input' ? 'Multi Input' : 'Check All That Apply';
+
   return (
-    <div className="warning-banner" role="status">
-      <strong>Warning:</strong> assessment attempts already exist for this activity. Changes to included questions will only affect future attempts.
+    <div className={embedded ? 'question-type-card question-type-card--embedded' : 'question-type-card'}>
+      <div className="question-type-card__head">
+        <div className="eyebrow">
+          {questionTypeLabel} · {points} points
+        </div>
+        <button className="button button--danger button--small">Remove</button>
+      </div>
+      <h3>{title}</h3>
+      {kind === 'mcq' ? (
+        <>
+          <p>At which point in the titration is the number of moles of analyte and titrant the same?</p>
+          <img className="question-media" src={graphImage} alt="Titration graph" />
+          <div className="question-answer-list">
+            {['Point A', 'Point B', 'Point C', 'Point D'].map((option) => (
+              <div key={option} className="answer-chip">
+                {option}
+              </div>
+            ))}
+          </div>
+        </>
+      ) : null}
+      {kind === 'multi-input' ? (
+        <>
+          <p>Balance the following reaction in acidic solution.</p>
+          <img className="question-media question-media--small" src={formulaImage} alt="Formula prompt" />
+          <p>Fill in the coefficients and substances for the balanced overall equation.</p>
+          <div className="multi-input-row">
+            <span className="answer-chip">Dropdown</span>
+            <span>Cu +</span>
+            <span className="answer-chip">Dropdown</span>
+            <span>NO₃ +</span>
+            <span className="answer-chip">Dropdown</span>
+            <span className="answer-chip">Dropdown</span>
+          </div>
+        </>
+      ) : null}
+      {kind === 'cata' ? (
+        <>
+          <p>Which of the following statements are true?</p>
+          <div className="question-answer-list">
+            {[
+              'Alkaline batteries generally have worse performance than dry cells.',
+              'The lead acid battery is a type of secondary battery.',
+              'Fuel cells convert chemical energy into electrical energy.',
+              'Fuel cells produce electricity continuously when fuel is available.',
+              'Primary and secondary batteries may or may not be rechargeable.',
+            ].map((statement) => (
+              <label key={statement} className="cata-option">
+                <input type="checkbox" readOnly />
+                <span>{statement}</span>
+              </label>
+            ))}
+          </div>
+        </>
+      ) : null}
+      <button className="detail-toggle" onClick={() => setExpanded((current) => !current)}>
+        {expanded ? 'Hide Details' : 'View Details'}
+      </button>
+      {expanded ? (
+        <div className="question-details">
+          <div className="tab-strip">
+            <button className={activeTab === 'answer' ? 'tab-strip__tab is-active' : 'tab-strip__tab'} onClick={() => setActiveTab('answer')}>
+              Answer Key
+            </button>
+            <button className={activeTab === 'hints' ? 'tab-strip__tab is-active' : 'tab-strip__tab'} onClick={() => setActiveTab('hints')}>
+              Hints
+            </button>
+            <button className={activeTab === 'explanation' ? 'tab-strip__tab is-active' : 'tab-strip__tab'} onClick={() => setActiveTab('explanation')}>
+              Explanation
+            </button>
+          </div>
+          <div className="tab-panel">
+            {activeTab === 'answer' ? <p>Correct response configuration and scoring settings appear here.</p> : null}
+            {activeTab === 'hints' ? <p>Hint content appears here to guide learners toward the solution.</p> : null}
+            {activeTab === 'explanation' ? <p>Explanation content appears here with rationale and feedback details.</p> : null}
+          </div>
+        </div>
+      ) : null}
+      <div className="learning-objective-footnote">
+        <strong>LO</strong> Explain how the second law of thermodynamics can be used to determine spontaneity
+      </div>
     </div>
   );
 }
 
-function MaterialRow({ material, onEdit }: { material: Material; onEdit: () => void }) {
+function MaterialRow({ material, onEdit }: { material: Material; onEdit: (assessmentTitle: string) => void }) {
   const titleIsLink = material.type === 'bank';
   const rowIcon = material.type === 'bank' ? containerIcon : pageIcon;
 
@@ -556,7 +644,7 @@ function MaterialRow({ material, onEdit }: { material: Material; onEdit: () => v
       <div className="button-row">
         {material.type === 'activity' ? (
           <>
-            <button className="button button--secondary button--small" onClick={onEdit}>
+            <button className="button button--secondary button--small" onClick={() => onEdit(material.title)}>
               <img src={editIcon} alt="" aria-hidden="true" />
               Edit
             </button>
@@ -579,15 +667,18 @@ function MaterialRow({ material, onEdit }: { material: Material; onEdit: () => v
   );
 }
 
-function Breadcrumbs({ items }: { items: string[] }) {
+function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
     <nav className="breadcrumbs" aria-label="Breadcrumb">
-      {items.map((item, index) => (
-        <span key={item}>
-          {index < items.length - 1 ? <Link to={index === 0 ? '/' : '#'}>{item}</Link> : <span>{item}</span>}
+      {items.map((item, index) => {
+        const resolved = typeof item === 'string' ? { label: item, to: index < items.length - 1 ? (index === 0 ? '/' : '#') : undefined } : item;
+
+        return (
+        <span key={`${resolved.label}-${index}`}>
+          {index < items.length - 1 && resolved.to ? <Link to={resolved.to}>{resolved.label}</Link> : <span>{resolved.label}</span>}
           {index < items.length - 1 ? <span className="breadcrumbs__sep">›</span> : null}
         </span>
-      ))}
+      )})}
     </nav>
   );
 }

@@ -328,8 +328,7 @@ button {
 .bank-card,
 .question-card,
 .question-detail,
-.question-list-panel,
-.warning-banner {
+.question-list-panel {
   box-shadow: var(--shadow);
 }
 
@@ -391,6 +390,7 @@ button {
   justify-content: center;
   min-height: 40px;
   padding: 8px 14px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
 }
 
 .button--small {
@@ -406,9 +406,16 @@ button {
 }
 
 .button--primary {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: #0062f2;
+  border-color: #0062f2;
   color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 52, 99, 0.1);
+}
+
+.button--primary:hover {
+  background: #0d70ff;
+  border-color: #0d70ff;
+  box-shadow: 0 2px 6px rgba(0, 52, 99, 0.15);
 }
 
 .button--primary.button--small {
@@ -421,6 +428,13 @@ button {
 .button--secondary,
 .button--tab {
   border-color: #9bc7fb;
+  color: #0d63c5;
+}
+
+.button--secondary:hover {
+  background: #f3f4f8;
+  border-color: #8ab8e5;
+  box-shadow: 0 2px 4px rgba(0, 52, 99, 0.1);
   color: #0d63c5;
 }
 
@@ -631,34 +645,86 @@ button {
 }
 
 .instructor-bar {
-  background: #c3f2e3;
-  border-radius: 0 0 8px 8px;
+  background: #ffffff;
+  border-bottom: 1px solid #a8eed8;
+  box-shadow: 0 7px 7.6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2px;
+  min-height: 82px;
+  padding: 22px 0 0 60px;
+}
+
+.instructor-pill {
+  align-items: center;
+  background: #a8eed8;
+  border-radius: 8px;
+  color: #353740;
   display: inline-flex;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
-  padding: 10px 18px;
+  gap: 8px;
+  line-height: 24px;
+  padding: 8px 18px;
+}
+
+.instructor-pill__icon {
+  font-size: 15px;
+  line-height: 1;
 }
 
 .assessment-topbar {
   align-items: center;
   background: #fff;
-  border-top: 3px solid #9af1da;
+  border-top: 3px solid #a8eed8;
+  box-shadow: 0 2px 10px rgba(0, 50, 99, 0.1);
   display: grid;
-  gap: 12px;
-  grid-template-columns: 28px 1fr 28px;
+  grid-template-columns: 190px 1fr auto;
   min-height: 48px;
-  padding: 0 14px;
+  padding: 0 16px 0 0;
+}
+
+.assessment-topbar__logo {
+  align-items: center;
+  border-right: 1px solid #f3f4f8;
+  display: inline-flex;
+  gap: 8px;
+  height: 48px;
+  padding-left: 10px;
+}
+
+.assessment-topbar__logo span {
+  color: #555a66;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .course-name {
-  color: #78716c;
+  color: #757682;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding-left: 32px;
+}
+
+.assessment-profile {
+  align-items: center;
+  background: #fff;
+  border: 2px solid #ced1d9;
+  border-radius: 999px;
+  color: #6b7280;
+  display: inline-flex;
   font-size: 13px;
-  justify-self: center;
+  height: 32px;
+  justify-content: center;
+  margin-right: 16px;
+  width: 32px;
 }
 
 .assessment-nav {
-  padding: 22px 0 16px;
+  margin: 0 auto;
+  max-width: 715px;
+  padding: 22px 0 20px;
 }
 
 .breadcrumbs-line,
@@ -668,19 +734,51 @@ button {
   font-size: 12px;
 }
 
-.warning-banner {
-  background: var(--warning-bg);
-  border: 1px solid var(--warning-border);
-  border-radius: 8px;
-  margin-bottom: 16px;
-  padding: 12px 14px;
-}
-
 .assessment-main {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 820px;
+  margin: 0 auto;
+  max-width: 715px;
+}
+
+.assessment-title {
+  color: #1b1d23;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 8px 0 12px;
+}
+
+.learning-objectives {
+  border-bottom: 1px solid #dde2ea;
+  display: grid;
+  gap: 8px;
+  padding-bottom: 14px;
+}
+
+.learning-objectives__label {
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.learning-objective-item {
+  align-items: flex-start;
+  color: #374151;
+  display: flex;
+  font-size: 13px;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.learning-objective-item img {
+  height: 16px;
+  margin-top: 1px;
+  width: 16px;
 }
 
 .bank-card,
@@ -823,6 +921,7 @@ button {
   color: var(--muted);
   font-size: 12px;
   gap: 16px;
+  justify-content: center;
   margin-top: 24px;
 }
 
