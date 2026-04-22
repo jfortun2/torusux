@@ -1,6 +1,12 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { loadAssessmentDraft, persistAssessmentSurface, persistBankRemovedQuestionIds } from './assessmentDraftStorage';
+import {
+  getIncludedQuestionCountForBank,
+  loadAssessmentDraft,
+  persistAllQuestionsRemovedForBank,
+  persistAssessmentSurface,
+  persistBankRemovedQuestionIds,
+} from './assessmentDraftStorage';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
 import hideIcon from './assets/icon-hide.png';
@@ -605,12 +611,16 @@ function AssessmentScreen() {
 
   useEffect(() => {
     if (!state?.removeBankId) return;
+    const bankMeta = getAssessmentSelections(assessmentTitle).find((selection) => selection.id === state.removeBankId);
+    if (bankMeta) {
+      persistAllQuestionsRemovedForBank(assessmentTitle, state.removeBankId, bankMeta.availableQuestions);
+    }
     setRemovedBanks((current) => {
       if (current.includes(state.removeBankId as string)) return current;
       return [...current, state.removeBankId as string];
     });
     showBankToast(state.removeBankId, state.bulkToast ?? 'Activity bank removed.');
-  }, [state?.removeBankId, state?.bulkToast]);
+  }, [state?.removeBankId, state?.bulkToast, assessmentTitle]);
 
   useEffect(() => {
     persistAssessmentSurface(assessmentTitle, { removedBanks, removedEmbedded: removedEmbeddedQuestions });
@@ -619,6 +629,14 @@ function AssessmentScreen() {
   const toggleRemoved = (id: string, label: string) => {
     setRemovedBanks((current) => {
       const willRestore = current.includes(id);
+      const bankMeta = assessmentSelections.find((selection) => selection.id === id);
+      if (bankMeta) {
+        if (willRestore) {
+          persistBankRemovedQuestionIds(assessmentTitle, id, []);
+        } else {
+          persistAllQuestionsRemovedForBank(assessmentTitle, id, bankMeta.availableQuestions);
+        }
+      }
       showBankToast(id, willRestore ? `${label} restored.` : `${label} removed.`);
       return willRestore ? current.filter((bankId) => bankId !== id) : [...current, id];
     });
@@ -732,6 +750,11 @@ function AssessmentScreen() {
               <ActivityBankSelectionCard
                 key={selection.id}
                 selection={selection}
+                questionsAvailableCount={
+                  removedBanks.includes(selection.id)
+                    ? 0
+                    : getIncludedQuestionCountForBank(assessmentTitle, selection.id, selection.availableQuestions)
+                }
                 removed={removedBanks.includes(selection.id)}
                 toastMessage={bankToasts[selection.id]}
                 onToggleRemove={() => requestToggleBank(selection.id)}
@@ -1560,6 +1583,7 @@ function AssessmentHeader() {
 
 function ActivityBankSelectionCard({
   selection,
+  questionsAvailableCount,
   removed,
   toastMessage,
   onToggleRemove,
@@ -1568,6 +1592,7 @@ function ActivityBankSelectionCard({
   breadcrumbTrail,
 }: {
   selection: AssessmentSelection;
+  questionsAvailableCount: number;
   removed: boolean;
   toastMessage?: string;
   onToggleRemove: () => void;
@@ -1585,7 +1610,7 @@ function ActivityBankSelectionCard({
       <div className={removed ? 'bank-card bank-card--removed' : 'bank-card'}>
       <div className="bank-card__header">
         <div>
-          <div className="muted-caption">{selection.availableQuestions} questions available</div>
+          <div className="muted-caption">{questionsAvailableCount} questions available</div>
           <div className="bank-card__title-row">
             <h2>Activity Bank Selection</h2>
             {removed ? <span className="status-pill">Removed</span> : null}
@@ -1673,9 +1698,9 @@ function AttemptsStartedChangeModal({
   onRemove: () => void;
 }) {
   return (
-    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Change may affect student scores">
+    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Change will affect future attempts">
       <div className="modal-card">
-        <h3>Change may affect student scores</h3>
+        <h3>Change will affect future attempts</h3>
         <p>Students have already started this assessment. Removing this {targetLabel} will only impact future attempts.</p>
         <div className="modal-actions">
           <button className="button button--secondary" onClick={onRemove}>Remove {targetLabel}</button>

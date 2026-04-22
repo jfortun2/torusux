@@ -63,3 +63,17 @@ export function persistBankRemovedQuestionIds(assessmentTitle: string, bankId: s
     bankRemovedQuestionIds: { ...cur.bankRemovedQuestionIds, [bankId]: removedQuestionIds },
   });
 }
+
+/** Mark every generated question id in the bank as removed (matches ActivityBankScreen id pattern). */
+export function persistAllQuestionsRemovedForBank(assessmentTitle: string, bankId: string, totalQuestions: number) {
+  const ids = Array.from({ length: totalQuestions }, (_, index) => `${bankId}-q-${index + 1}`);
+  persistBankRemovedQuestionIds(assessmentTitle, bankId, ids);
+}
+
+/** Included (not individually removed) questions still in the bank pool. */
+export function getIncludedQuestionCountForBank(assessmentTitle: string, bankId: string, totalQuestions: number): number {
+  const draft = loadAssessmentDraft(assessmentTitle);
+  const removed = draft.bankRemovedQuestionIds[bankId] ?? [];
+  const uniqueRemoved = new Set(removed);
+  return Math.max(0, totalQuestions - uniqueRemoved.size);
+}
