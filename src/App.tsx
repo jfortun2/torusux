@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
@@ -461,6 +461,8 @@ function CustomizeScreen() {
 }
 
 function AssessmentScreen() {
+  const location = useLocation();
+  const state = location.state as { removeBankId?: string; bulkToast?: string } | null;
   const [removedBanks, setRemovedBanks] = useState<string[]>([]);
   const [showBankShortcuts, setShowBankShortcuts] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -470,6 +472,13 @@ function AssessmentScreen() {
     const timer = setTimeout(() => setToastMessage(null), 2200);
     return () => clearTimeout(timer);
   }, [toastMessage]);
+
+  useEffect(() => {
+    if (state?.removeBankId) {
+      setRemovedBanks((current) => (current.includes(state.removeBankId as string) ? current : [...current, state.removeBankId as string]));
+      setToastMessage(state.bulkToast ?? 'Activity bank removed.');
+    }
+  }, [state?.removeBankId, state?.bulkToast]);
 
   const toggleRemoved = (id: string, label: string) => {
     setRemovedBanks((current) => {
@@ -566,18 +575,32 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const state = location.state as { bankId?: string } | null;
   const selectedBank = assessmentSelections.find((bank) => bank.id === state?.bankId) ?? assessmentSelections[0];
   const generatedQuestionCount = selectedBank.availableQuestions;
+  const variantSuffix = [
+    'with a conceptual check',
+    'with a quantitative emphasis',
+    'with an error-analysis angle',
+    'with a real-world application',
+  ];
+  const rotateArray = (items: string[], amount: number) => {
+    if (items.length === 0) return items;
+    const offset = amount % items.length;
+    return [...items.slice(offset), ...items.slice(0, offset)];
+  };
   const baseQuestions: BankQuestionRow[] = Array.from({ length: generatedQuestionCount }).map((_, index) => {
     const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
     const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
+    const promptVariant = index < selectedBank.exampleQuestions.length ? seeded.prompt : `${seeded.prompt} (${variantSuffix[index % variantSuffix.length]})`;
+    const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined;
+    const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length) : undefined;
     return {
       id: `${selectedBank.id}-q-${index + 1}`,
       title: index < selectedBank.exampleQuestions.length ? seeded.title : `${seeded.title} Variant ${index + 1}`,
-      prompt: seeded.prompt,
+      prompt: promptVariant,
       kind: seeded.kind,
       points: seeded.points,
       learningObjective: seeded.learningObjective,
-      choices: seeded.choices,
-      cataStatements: seeded.cataStatements,
+      choices: rotatedChoices,
+      cataStatements: rotatedStatements,
       difficulty,
       removed: index % 7 === 0,
     };
@@ -589,14 +612,23 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const [questionTypeFilter, setQuestionTypeFilter] = useState('all');
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [limitModalContext, setLimitModalContext] = useState<{ remaining: number } | null>(null);
   const availableQuestionCount = questionRows.filter((question) => !question.removed).length;
+  const normalizedSearch = searchText.trim().toLowerCase();
   const filteredQuestions = questionRows.filter((question) => {
     if (filterMode === 'included' && question.removed) return false;
     if (filterMode === 'removed' && !question.removed) return false;
     if (learningObjectiveFilter !== 'all' && question.learningObjective !== learningObjectiveFilter) return false;
     if (questionTypeFilter !== 'all' && question.kind !== questionTypeFilter) return false;
     if (difficultyFilter !== 'all' && question.difficulty !== difficultyFilter) return false;
-    if (searchText && !`${question.title} ${question.prompt}`.toLowerCase().includes(searchText.toLowerCase())) return false;
+    if (
+      normalizedSearch &&
+      !`${question.id} ${question.title} ${question.prompt} ${question.learningObjective} ${(question.choices ?? []).join(' ')} ${(question.cataStatements ?? []).join(' ')}`
+        .toLowerCase()
+        .includes(normalizedSearch)
+    ) {
+      return false;
+    }
     return true;
   });
   const [selected, setSelected] = useState<string[]>(
@@ -605,18 +637,47 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const [activeQuestionId, setActiveQuestionId] = useState(filteredQuestions[0]?.id ?? baseQuestions[0]?.id ?? '');
   const currentQuestion = filteredQuestions.find((question) => question.id === activeQuestionId) ?? filteredQuestions[0] ?? baseQuestions[0];
   const allVisibleSelected = filteredQuestions.length > 0 && filteredQuestions.every((question) => selected.includes(question.id));
+  const selectedRows = questionRows.filter((question) => selected.includes(question.id));
+  const selectionType = selectedRows.length === 0 ? null : selectedRows.every((row) => row.removed) ? 'removed' : 'included';
+  const masterCheckboxRef = useRef<HTMLInputElement>(null);
+  const visibleSelectedCount = filteredQuestions.filter((question) => selected.includes(question.id)).length;
 
   const toggleSelected = (id: string) => {
-    setSelected((current) => (current.includes(id) ? current.filter((item) => item !== id) : [...current, id]));
+    setSelected((current) => {
+      if (current.includes(id)) return current.filter((item) => item !== id);
+      const incoming = questionRows.find((question) => question.id === id);
+      if (!incoming) return current;
+      const currentRows = questionRows.filter((question) => current.includes(question.id));
+      if (currentRows.length > 0) {
+        const currentTypeIsRemoved = currentRows.every((row) => row.removed);
+        if (incoming.removed !== currentTypeIsRemoved) {
+          return current;
+        }
+      }
+      return [...current, id];
+    });
   };
 
   const toggleSelectAllVisible = () => {
-    if (allVisibleSelected) {
-      setSelected((current) => current.filter((id) => !filteredQuestions.some((question) => question.id === id)));
+    if (selected.length > 0) {
+      setSelected([]);
       return;
     }
-    setSelected((current) => Array.from(new Set([...current, ...filteredQuestions.map((question) => question.id)])));
+    setSelected((current) => {
+      const currentRows = questionRows.filter((question) => current.includes(question.id));
+      const currentType = currentRows.length === 0 ? null : currentRows.every((row) => row.removed);
+      const targetRows =
+        currentType === null
+          ? filteredQuestions
+          : filteredQuestions.filter((question) => question.removed === currentType);
+      return Array.from(new Set([...current, ...targetRows.map((question) => question.id)]));
+    });
   };
+
+  useEffect(() => {
+    if (!masterCheckboxRef.current) return;
+    masterCheckboxRef.current.indeterminate = selected.length === 0 ? false : visibleSelectedCount > 0 && !allVisibleSelected;
+  }, [selected.length, visibleSelectedCount, allVisibleSelected]);
 
   const clearFilters = () => {
     setFilterMode('all');
@@ -660,6 +721,29 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     );
   };
 
+  const applyBulkAction = (force = false) => {
+    if (!selectionType || selected.length === 0) return;
+    if (selectionType === 'included') {
+      const selectedIncludedCount = selectedRows.filter((row) => !row.removed).length;
+      const remainingIncluded = availableQuestionCount - selectedIncludedCount;
+      if (!force && remainingIncluded < selectedBank.numberToSelect) {
+        setLimitModalContext({ remaining: remainingIncluded });
+        return;
+      }
+      setQuestionRows((current) =>
+        current.map((question) => (selected.includes(question.id) ? { ...question, removed: true } : question)),
+      );
+      setToastMessage(`Removed ${selected.length} questions.`);
+      setSelected([]);
+      return;
+    }
+    setQuestionRows((current) =>
+      current.map((question) => (selected.includes(question.id) ? { ...question, removed: false } : question)),
+    );
+    setToastMessage(`Restored ${selected.length} questions.`);
+    setSelected([]);
+  };
+
   return (
     <InstructorShell>
       <div className="bank-screen">
@@ -694,7 +778,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           </div>
           <div className="toolbar__filters toolbar__filters--search">
             <div className="search-field">
-              <span aria-hidden="true" className="search-field__icon">⌕</span>
+              <span aria-hidden="true" className="search-field__icon">🔍</span>
               <input aria-label="Search questions" className="input input--search" placeholder="Search" value={searchText} onChange={(event) => setSearchText(event.target.value)} />
             </div>
             <select className="select filter-select" aria-label="Learning objectives" value={learningObjectiveFilter} onChange={(event) => setLearningObjectiveFilter(event.target.value)}>
@@ -719,22 +803,26 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
               <option value="Medium">Medium</option>
               <option value="Hard">Hard</option>
             </select>
-            <button className="clear-link clear-link--toolbar" onClick={clearFilters}>
-              <img src={deleteIcon} alt="" aria-hidden="true" />
-              Clear All Filters
-            </button>
+            <button className="clear-link clear-link--toolbar" onClick={clearFilters}>Clear All Filters</button>
           </div>
         </div>
-        {bulkEdit ? (
-          <button className="button button--danger-light">Remove Selected ({selected.length})</button>
+        {selected.length > 0 && selectionType === 'included' ? (
+          <button className="button button--danger button--small bulk-action-button" onClick={() => applyBulkAction(false)}>
+            Remove Selected ({selected.length})
+          </button>
+        ) : null}
+        {selected.length > 0 && selectionType === 'removed' ? (
+          <button className="button button--secondary button--small bulk-action-button" onClick={() => applyBulkAction(false)}>
+            Restore Selected ({selected.length})
+          </button>
         ) : null}
         {toastMessage ? <SuccessToast message={toastMessage} inline /> : null}
         <div className="split-pane">
           <div className="question-list-panel">
             <div className="question-list-header">
-              <div className="muted-caption">Showing {filteredQuestions.length} of {availableQuestionCount} available questions</div>
+              <div className="muted-caption">Showing {filteredQuestions.length} questions</div>
               <label className="check-row">
-                <input type="checkbox" checked={allVisibleSelected} onChange={toggleSelectAllVisible} />
+                <input ref={masterCheckboxRef} type="checkbox" checked={selected.length > 0} onChange={toggleSelectAllVisible} />
                 <span>Question</span>
               </label>
             </div>
@@ -755,6 +843,11 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                     setActiveQuestionId(question.id);
                   }}
                 >
+                  {selectionType && ((selectionType === 'included' && question.removed) || (selectionType === 'removed' && !question.removed)) ? (
+                    <span className="checkbox-wrap is-disabled" title="You can only bulk-select included questions OR removed questions, not both.">
+                      <input type="checkbox" checked={selected.includes(question.id)} disabled aria-label={`Select ${question.title}`} />
+                    </span>
+                  ) : (
                   <input
                     type="checkbox"
                     checked={selected.includes(question.id)}
@@ -762,6 +855,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                     onClick={(event) => event.stopPropagation()}
                     aria-label={`Select ${question.title}`}
                   />
+                  )}
                   <div className="question-row__title">
                     <span>{question.title}</span>
                     {question.removed ? <span className="removed-pill">Removed</span> : null}
@@ -779,6 +873,8 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
               </div>
               {bulkEdit ? (
                 <button className="button button--disabled button--small">Remove</button>
+              ) : selected.length > 1 ? (
+                <button className="button button--disabled button--small">{currentQuestion?.removed ? 'Restore' : 'Remove'}</button>
               ) : (
                 <button
                   className={currentQuestion?.removed ? 'button button--secondary button--small' : 'button button--danger button--small'}
@@ -796,6 +892,22 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           </div>
         </div>
       </div>
+      {limitModalContext ? (
+        <BulkWarningModal
+          numberToSelect={selectedBank.numberToSelect}
+          remaining={limitModalContext.remaining}
+          onKeepQuestion={() => setLimitModalContext(null)}
+          onRemoveBank={() => {
+            setLimitModalContext(null);
+            navigate('/assessment-default', {
+              state: {
+                removeBankId: selectedBank.id,
+                bulkToast: 'Activity bank removed.',
+              },
+            });
+          }}
+        />
+      ) : null}
     </InstructorShell>
   );
 }
@@ -1027,6 +1139,31 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
       ) : null}
       <div className="bank-question-preview__objective">
         <strong>LO</strong> {question.learningObjective}
+      </div>
+    </div>
+  );
+}
+
+function BulkWarningModal({
+  numberToSelect,
+  remaining,
+  onKeepQuestion,
+  onRemoveBank,
+}: {
+  numberToSelect: number;
+  remaining: number;
+  onKeepQuestion: () => void;
+  onRemoveBank: () => void;
+}) {
+  return (
+    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Bulk action warning">
+      <div className="modal-card">
+        <h3>Cannot remove this question</h3>
+        <p>This activity bank requires {numberToSelect} questions, and removing this would leave only {remaining}. To make changes, you can remove the entire activity bank.</p>
+        <div className="modal-actions">
+          <button className="button button--primary" onClick={onKeepQuestion}>Keep question</button>
+          <button className="button button--secondary" onClick={onRemoveBank}>Remove bank</button>
+        </div>
       </div>
     </div>
   );
