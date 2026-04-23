@@ -810,6 +810,63 @@ button {
   width: 16px;
 }
 
+.learning-objective-checker__meta {
+  align-items: center;
+  color: #6b7280;
+  display: inline-flex;
+  font-size: 12px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.learning-objective-checker__meta-warning {
+  color: #64748b;
+  display: inline-flex;
+}
+
+.learning-objective-item__main {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.learning-objective-item--with-coverage {
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.learning-objective-item__coverage {
+  align-items: flex-end;
+  display: grid;
+  justify-items: end;
+  min-width: 136px;
+}
+
+.learning-objective-checker__range {
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.learning-objective-checker__range.is-warning {
+  color: #b91c1c;
+}
+
+.learning-objective-checker__state {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.learning-objective-checker__footnote {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .bank-card,
 .question-card,
 .question-detail,
