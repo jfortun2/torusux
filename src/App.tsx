@@ -65,6 +65,18 @@ type BankQuestionRow = {
   removed?: boolean;
 };
 
+type PageObjective = {
+  code: string;
+  label: string;
+};
+
+type ObjectiveCoverage = {
+  objective: PageObjective;
+  min: number;
+  max: number;
+  state: 'healthy' | 'at-risk' | 'not-covered';
+};
+
 const materials: Material[] = [
   { id: 'm1', title: 'Foundational Concepts of Electrochemistry', type: 'bank' },
   { id: 'm2', title: 'Galvanic Cells', type: 'bank' },
@@ -133,7 +145,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 6,
         title: 'Electrolysis Setup Check',
         prompt: 'In aqueous NaCl electrolysis, which statement best matches the expected electrode processes under standard classroom conditions?',
-        learningObjective: 'LO 2.2 Predict oxidation and reduction products in electrolytic cells.',
+        learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
         choices: [
           'Na+ is reduced to sodium metal at the cathode in water before hydrogen evolves.',
           'Chloride oxidation at the anode and hydrogen evolution at the cathode are both plausible outcomes.',
@@ -146,14 +158,14 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 6,
         title: 'Electrolysis Product Reasoning',
         prompt: 'Describe how concentration, electrode material, and overpotential can shift product formation during electrolysis.',
-        learningObjective: 'LO 2.2 Predict oxidation and reduction products in electrolytic cells.',
+        learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
       },
       {
         kind: 'cata',
         points: 6,
         title: 'Electrolytic Cell Truths',
         prompt: 'Select all statements that are accurate for an electrolytic cell.',
-        learningObjective: 'LO 2.2 Predict oxidation and reduction products in electrolytic cells.',
+        learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
         cataStatements: [
           'An external power source drives a nonspontaneous redox reaction.',
           'Oxidation occurs at the anode.',
@@ -175,7 +187,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 7,
         title: 'Corrosion Cell Reasoning',
         prompt: 'Explain why galvanic corrosion accelerates when dissimilar metals are electrically connected in an electrolyte.',
-        learningObjective: 'LO 3.2 Explain electrochemical causes of corrosion and mitigation strategies.',
+        learningObjective: 'LO 1.3 Explain electrochemical causes of corrosion and mitigation strategies.',
       },
     ],
   },
@@ -190,7 +202,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 8,
         title: 'Electroplating Process Setup',
         prompt: 'Choose each dropdown to correctly configure an electroplating cell for copper coating.',
-        learningObjective: 'LO 3.3 Describe electrode reactions in electroplating systems.',
+        learningObjective: 'LO 1.3 Describe electrode reactions in electroplating systems.',
       },
     ],
   },
@@ -205,7 +217,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 5,
         title: 'Energy Storage Claims',
         prompt: 'Select every statement that correctly compares battery and fuel-cell behavior.',
-        learningObjective: 'LO 3.4 Compare electrochemical energy technologies by function and limits.',
+        learningObjective: 'Untagged objective',
         cataStatements: [
           'Primary batteries are generally not designed for recharge cycles.',
           'Secondary batteries are intended for repeated charge-discharge use.',
@@ -227,7 +239,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 10,
         title: 'Battery Discharge Curve Reading',
         prompt: 'Which region of the discharge curve best indicates rapid voltage drop near end-of-life?',
-        learningObjective: 'LO 3.5 Interpret electrochemical performance plots.',
+        learningObjective: 'LO 1.3 Interpret electrochemical performance plots.',
         choices: ['Region A', 'Region B', 'Region C', 'Region D'],
       },
     ],
@@ -243,7 +255,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 8,
         title: 'Half-Reaction Setup',
         prompt: 'Choose each dropdown to complete the oxidation half-reaction in acidic medium.',
-        learningObjective: 'LO 2.3 Construct oxidation and reduction half-reactions.',
+        learningObjective: 'LO 1.1 Construct oxidation and reduction half-reactions.',
       },
     ],
   },
@@ -258,7 +270,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 5,
         title: 'Electrochemistry Checks',
         prompt: 'Mark all statements that are consistent with galvanic cell behavior.',
-        learningObjective: 'LO 2.4 Compare galvanic and electrolytic cell properties.',
+        learningObjective: 'LO 1.2 Compare galvanic and electrolytic cell properties.',
         cataStatements: [
           'Electrons flow from anode to cathode through the external circuit.',
           'Salt bridges help maintain charge neutrality in each half-cell.',
@@ -280,7 +292,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 7,
         title: 'Electrochemistry in Water Treatment',
         prompt: 'Describe one way electrochemical processes are used in water treatment and explain the core reaction principle.',
-        learningObjective: 'LO 3.6 Explain modern applications of electrochemistry beyond batteries.',
+        learningObjective: 'Untagged objective',
       },
     ],
   },
@@ -298,7 +310,7 @@ const nuclearSelections: AssessmentSelection[] = [
         points: 8,
         title: 'Radiation Type Classification',
         prompt: 'Which sequence ranks alpha, beta, and gamma radiation from lowest to highest penetration in matter?',
-        learningObjective: 'LO 4.1 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
+        learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
         choices: ['gamma < beta < alpha', 'alpha < beta < gamma', 'beta < alpha < gamma', 'alpha = beta = gamma'],
       },
     ],
@@ -314,7 +326,7 @@ const nuclearSelections: AssessmentSelection[] = [
         points: 7,
         title: 'Dose Pathway Reasoning',
         prompt: 'Explain why internal exposure to alpha-emitting particles can pose high biological risk even though alpha has low external penetration.',
-        learningObjective: 'LO 4.2 Explain how pathway and tissue sensitivity influence biological effect.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effect.',
       },
     ],
   },
@@ -329,7 +341,7 @@ const nuclearSelections: AssessmentSelection[] = [
         points: 6,
         title: 'ALARA Controls Check',
         prompt: 'Select all practices that align with ALARA in an instructional lab.',
-        learningObjective: 'LO 4.3 Apply practical radiation safety controls in lab scenarios.',
+        learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
         cataStatements: [
           'Reduce time spent near active sources.',
           'Increase distance using tools instead of direct handling.',
@@ -351,7 +363,7 @@ const nuclearSelections: AssessmentSelection[] = [
         points: 8,
         title: 'Medical Radiation Decision',
         prompt: 'Choose the most appropriate imaging approach, isotope behavior, and shielding practice for a patient case.',
-        learningObjective: 'LO 4.4 Evaluate benefit-risk trade-offs in radiation applications.',
+        learningObjective: 'LO 1.5 Evaluate benefit-risk trade-offs in radiation applications.',
       },
     ],
   },
@@ -359,6 +371,26 @@ const nuclearSelections: AssessmentSelection[] = [
 
 const getAssessmentSelections = (assessmentTitle?: string) =>
   assessmentTitle?.toLowerCase().includes('nuclear') ? nuclearSelections : electrochemistrySelections;
+
+const getPageObjectives = (assessmentTitle?: string): PageObjective[] => {
+  const isNuclear = assessmentTitle?.toLowerCase().includes('nuclear');
+  return isNuclear
+    ? [
+        { code: 'LO 1.4', label: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
+        { code: 'LO 1.5', label: 'LO 1.5 Explain how dose, pathway, and tissue sensitivity influence biological effects.' },
+      ]
+    : [
+        { code: 'LO 1.1', label: 'LO 1.1 Balance redox equations and construct half-reactions.' },
+        { code: 'LO 1.2', label: 'LO 1.2 Predict electrochemical behavior and cell trends.' },
+        { code: 'LO 1.3', label: 'LO 1.3 Evaluate electrochemistry applications in real systems.' },
+      ];
+};
+
+const extractObjectiveCode = (objectiveText?: string) => {
+  if (!objectiveText) return null;
+  const match = objectiveText.match(/LO\s*\d+(?:\.\d+)?/i);
+  return match ? match[0].replace(/\s+/g, ' ').toUpperCase() : null;
+};
 
 function App() {
   return (
@@ -370,6 +402,108 @@ function App() {
       <Route path="/bulk-edit" element={<ActivityBankScreen bulkEdit />} />
     </Routes>
   );
+}
+
+function computeObjectiveCoverage({
+  assessmentTitle,
+  selections,
+  removedBanks,
+  removedEmbedded,
+}: {
+  assessmentTitle: string;
+  selections: AssessmentSelection[];
+  removedBanks: string[];
+  removedEmbedded: Record<string, boolean>;
+}) {
+  const objectives = getPageObjectives(assessmentTitle);
+  const objectiveByCode = new Map(objectives.map((objective) => [objective.code.toUpperCase(), objective]));
+  const totals = new Map<string, { min: number; max: number }>();
+  objectiveByCode.forEach((_, code) => totals.set(code, { min: 0, max: 0 }));
+  const draft = loadAssessmentDraft(assessmentTitle);
+  let untaggedIncluded = 0;
+  let taggedIncluded = 0;
+
+  selections.forEach((selection) => {
+    if (removedBanks.includes(selection.id)) return;
+    const removedIdSet = new Set(draft.bankRemovedQuestionIds[selection.id] ?? []);
+    const generated = Array.from({ length: selection.availableQuestions }).map((_, index) => {
+      const seeded = selection.exampleQuestions[index % selection.exampleQuestions.length];
+      const id = `${selection.id}-q-${index + 1}`;
+      return {
+        id,
+        learningObjective: seeded.learningObjective,
+      };
+    });
+    const included = generated.filter((question) => !removedIdSet.has(question.id));
+    const n = included.length;
+    const k = Math.min(selection.numberToSelect, n);
+
+    included.forEach((question) => {
+      const code = extractObjectiveCode(question.learningObjective);
+      if (!code || !objectiveByCode.has(code)) {
+        untaggedIncluded += 1;
+      } else {
+        taggedIncluded += 1;
+      }
+    });
+
+    objectiveByCode.forEach((_, objectiveCode) => {
+      const c = included.filter((question) => extractObjectiveCode(question.learningObjective) === objectiveCode).length;
+      const contributionMin = Math.max(0, k - (n - c));
+      const contributionMax = Math.min(k, c);
+      const current = totals.get(objectiveCode);
+      if (!current) return;
+      current.min += contributionMin;
+      current.max += contributionMax;
+    });
+  });
+
+  const embeddedQuestions = [
+    {
+      id: 'exitQuestion',
+      removed: Boolean(removedEmbedded.exitQuestion),
+      learningObjective: assessmentTitle.toLowerCase().includes('nuclear')
+        ? 'LO 1.5 Explain why biological impact varies by pathway and tissue sensitivity.'
+        : 'LO 1.2 Explain how concentration changes affect cell potential.',
+    },
+    ...(assessmentTitle.toLowerCase().includes('nuclear')
+      ? [
+          {
+            id: 'nuclearSafety',
+            removed: Boolean(removedEmbedded.nuclearSafety),
+            learningObjective: 'LO 1.4 Compare shielding and handling strategies for common radiation types.',
+          },
+        ]
+      : []),
+  ];
+
+  embeddedQuestions.forEach((question) => {
+    if (question.removed) return;
+    const code = extractObjectiveCode(question.learningObjective);
+    if (!code || !objectiveByCode.has(code)) {
+      untaggedIncluded += 1;
+      return;
+    }
+    taggedIncluded += 1;
+    const current = totals.get(code);
+    if (!current) return;
+    current.min += 1;
+    current.max += 1;
+  });
+
+  const coverage: ObjectiveCoverage[] = objectives.map((objective) => {
+    const totalsForObjective = totals.get(objective.code.toUpperCase()) ?? { min: 0, max: 0 };
+    const state: ObjectiveCoverage['state'] =
+      totalsForObjective.max === 0 ? 'not-covered' : totalsForObjective.min === 0 ? 'at-risk' : 'healthy';
+    return {
+      objective,
+      min: totalsForObjective.min,
+      max: totalsForObjective.max,
+      state,
+    };
+  });
+
+  return { coverage, taggedIncluded, untaggedIncluded };
 }
 
 function AppShell({
@@ -591,6 +725,16 @@ function AssessmentScreen() {
   const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
   const attemptsStarted = state?.attemptsStarted ?? false;
+  const coverageSummary = useMemo(
+    () =>
+      computeObjectiveCoverage({
+        assessmentTitle,
+        selections: assessmentSelections,
+        removedBanks,
+        removedEmbedded: removedEmbeddedQuestions,
+      }),
+    [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions],
+  );
 
   const showBankToast = (bankId: string, message: string) => {
     setBankToasts((current) => ({ ...current, [bankId]: message }));
@@ -645,11 +789,37 @@ function AssessmentScreen() {
   const requestToggleBank = (id: string) => {
     const alreadyRemoved = removedBanks.includes(id);
     if (!attemptsStarted || alreadyRemoved) {
+      if (!alreadyRemoved) {
+        const warning = getBankCoverageWarning(id);
+        if (warning) {
+          showBankToast(id, warning);
+        }
+      }
       toggleRemoved(id, 'Activity bank');
       return;
     }
+    const warning = getBankCoverageWarning(id);
+    if (warning) {
+      showBankToast(id, warning);
+    }
     setPendingBankRemoveId(id);
   };
+
+  function getBankCoverageWarning(bankId: string) {
+    const before = coverageSummary.coverage;
+    const after = computeObjectiveCoverage({
+      assessmentTitle,
+      selections: assessmentSelections,
+      removedBanks: removedBanks.includes(bankId) ? removedBanks : [...removedBanks, bankId],
+      removedEmbedded: removedEmbeddedQuestions,
+    }).coverage;
+    const impacted = before
+      .filter((item) => item.max > 0)
+      .filter((item) => (after.find((a) => a.objective.code === item.objective.code)?.max ?? 0) === 0)
+      .map((item) => item.objective.code);
+    if (impacted.length === 0) return null;
+    return `Warning: removing this bank leaves ${impacted.join(', ')} without coverage.`;
+  }
 
   const jumpTo = (targetId: string) => {
     const node = document.getElementById(targetId);
@@ -680,6 +850,22 @@ function AssessmentScreen() {
   const requestToggleEmbedded = (questionId: string) => {
     const alreadyRemoved = Boolean(removedEmbeddedQuestions[questionId]);
     if (!attemptsStarted || alreadyRemoved) {
+      if (!alreadyRemoved) {
+        const nextRemoved = { ...removedEmbeddedQuestions, [questionId]: true };
+        const after = computeObjectiveCoverage({
+          assessmentTitle,
+          selections: assessmentSelections,
+          removedBanks,
+          removedEmbedded: nextRemoved,
+        }).coverage;
+        const impacted = coverageSummary.coverage
+          .filter((item) => item.max > 0)
+          .filter((item) => (after.find((a) => a.objective.code === item.objective.code)?.max ?? 0) === 0)
+          .map((item) => item.objective.code);
+        if (impacted.length > 0) {
+          showEmbeddedToast(questionId, `Warning: removing this question leaves ${impacted.join(', ')} without coverage.`);
+        }
+      }
       toggleEmbeddedRemoved(questionId);
       return;
     }
@@ -689,7 +875,7 @@ function AssessmentScreen() {
   return (
     <InstructorShell>
       <div className="assessment-layout">
-        <AssessmentHeader />
+        <AssessmentHeader coverageSummary={coverageSummary} />
         <div className="assessment-content">
           {attemptsStarted ? (
             <div className="attempts-banner" role="status" aria-live="polite">
@@ -780,7 +966,7 @@ function AssessmentScreen() {
                     points={6}
                     title="Radiation Materials Safety Check"
                     prompt="A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?"
-                    learningObjective="LO 4.3 Compare shielding and handling strategies for common radiation types."
+                    learningObjective="LO 1.4 Compare shielding and handling strategies for common radiation types."
                     choices={[
                       'Use paper shielding for all sources and keep all containers open for easier viewing.',
                       'Use thick lead shielding for alpha sources only and remove barriers for beta and gamma sources.',
@@ -807,8 +993,8 @@ function AssessmentScreen() {
                 }
                 learningObjective={
                   isNuclearAssessment
-                    ? 'LO 4.2 Explain why biological impact varies by pathway and tissue sensitivity.'
-                    : 'LO 2.5 Explain how concentration changes affect cell potential.'
+                    ? 'LO 1.5 Explain why biological impact varies by pathway and tissue sensitivity.'
+                    : 'LO 1.2 Explain how concentration changes affect cell potential.'
                 }
                 choices={
                   isNuclearAssessment
@@ -1534,7 +1720,11 @@ function BulkWarningModal({
   );
 }
 
-function AssessmentHeader() {
+function AssessmentHeader({
+  coverageSummary,
+}: {
+  coverageSummary: { coverage: ObjectiveCoverage[]; taggedIncluded: number; untaggedIncluded: number };
+}) {
   const location = useLocation();
   const state = location.state as { breadcrumbTrail?: BreadcrumbItem[]; assessmentTitle?: string } | null;
   const breadcrumbTrail = state?.breadcrumbTrail ?? [
@@ -1542,7 +1732,7 @@ function AssessmentHeader() {
     { label: 'Assessment' },
   ];
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
-  const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
+  const objectives = getPageObjectives(assessmentTitle);
 
   return (
     <>
@@ -1567,14 +1757,34 @@ function AssessmentHeader() {
         <h1 className="assessment-title">{assessmentTitle}</h1>
         <div className="learning-objectives">
           <div className="learning-objectives__label">Learning Objectives</div>
-          <div className="learning-objective-item">
-            <img src={checkIcon} alt="" aria-hidden="true" />
-            <span>{isNuclearAssessment ? 'LO 4.1 Distinguish alpha, beta, and gamma radiation by interaction with matter.' : 'LO 1.1 Calculate the concentration of ions in solution.'}</span>
+          <div className="learning-objective-checker__meta">
+            Tagged: {coverageSummary.taggedIncluded} · Untagged: {coverageSummary.untaggedIncluded}
+            {coverageSummary.untaggedIncluded > 0 ? (
+              <span className="learning-objective-checker__meta-warning">
+                Coverage may be understated due to untagged questions.
+              </span>
+            ) : null}
           </div>
-          <div className="learning-objective-item">
-            <img src={checkIcon} alt="" aria-hidden="true" />
-            <span>{isNuclearAssessment ? 'LO 4.2 Explain how dose, pathway, and tissue sensitivity influence biological effects.' : 'LO 1.2 Distinguish between oxidation and reduction processes.'}</span>
-          </div>
+          {objectives.map((objective) => {
+            const item = coverageSummary.coverage.find((coverage) => coverage.objective.code === objective.code);
+            const state = item?.state ?? 'not-covered';
+            return (
+              <div key={objective.code} className="learning-objective-item learning-objective-item--with-coverage">
+                <div className="learning-objective-item__main">
+                  {state !== 'healthy' ? <img src={warningIcon} alt="" aria-hidden="true" /> : <img src={checkIcon} alt="" aria-hidden="true" />}
+                  <span>{objective.label}</span>
+                </div>
+                <div className="learning-objective-item__coverage">
+                  <div className={state === 'healthy' ? 'learning-objective-checker__range' : 'learning-objective-checker__range is-warning'}>
+                    {(item?.min ?? 0) === (item?.max ?? 0) ? `${item?.min ?? 0} questions` : `${item?.min ?? 0}–${item?.max ?? 0} questions`}
+                  </div>
+                  <div className="learning-objective-checker__state">
+                    {state === 'not-covered' ? 'No coverage' : state === 'at-risk' ? 'At risk' : 'Guaranteed'}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
