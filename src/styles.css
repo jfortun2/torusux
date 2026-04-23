@@ -660,11 +660,20 @@ button {
   padding: 22px 0 0 60px;
 }
 
+.instructor-bar--student {
+  border-bottom-color: #bfdbfe;
+}
+
+.instructor-bar--student + .assessment-topbar {
+  border-top-color: #93c5fd;
+}
+
 .instructor-pill {
   align-items: center;
   background: #a8eed8;
+  border: none;
   border-radius: 8px;
-  color: #353740;
+  color: #000000;
   display: inline-flex;
   font-size: 16px;
   font-weight: 600;
@@ -673,9 +682,70 @@ button {
   padding: 8px 18px;
 }
 
+.instructor-bar--student .instructor-pill {
+  background: #dbeafe;
+  color: #000000;
+}
+
 .instructor-pill__icon {
+  filter: grayscale(1) brightness(0);
   height: 16px;
   width: 16px;
+}
+
+.instructor-pill--dropdown {
+  cursor: pointer;
+}
+
+.instructor-pill__chevron {
+  filter: grayscale(1) brightness(0);
+  height: 12px;
+  transition: transform 0.15s ease;
+  width: 12px;
+}
+
+.instructor-pill__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.view-switcher {
+  display: inline-grid;
+  position: relative;
+}
+
+.view-switcher__menu {
+  background: #fff;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  display: grid;
+  margin-top: 6px;
+  min-width: 190px;
+  padding: 4px;
+  position: absolute;
+  top: 100%;
+  z-index: 40;
+}
+
+.view-switcher__item {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #1f2937;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.view-switcher__item:hover {
+  background: #f8fafc;
+}
+
+.view-switcher__item.is-active {
+  background: #eef5ff;
+  color: #0d63c5;
 }
 
 .assessment-topbar {
@@ -823,6 +893,101 @@ button {
 .learning-objective-checker__meta-warning {
   color: #64748b;
   display: inline-flex;
+}
+
+.student-preview-badge {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  color: #1e40af;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 6px 10px;
+}
+
+.student-preview-sheet {
+  display: grid;
+  gap: 14px;
+}
+
+.student-preview-sheet__header {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.student-preview-sheet__header h2 {
+  font-size: 22px;
+  margin: 0 0 4px;
+}
+
+.student-preview-sheet__header p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.student-preview-bank-meta {
+  color: #475569;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 12px;
+}
+
+.student-question-card {
+  background: #fff;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.student-question-card__meta {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.student-question-card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.student-question-card p {
+  margin: 0;
+}
+
+.student-choice-list {
+  display: grid;
+  gap: 8px;
+}
+
+.student-choice-row {
+  align-items: flex-start;
+  color: #1f2937;
+  display: flex;
+  gap: 8px;
+}
+
+.student-input-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.student-short-answer {
+  background: #f8fafc;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  min-height: 84px;
+  padding: 10px;
+  resize: vertical;
 }
 
 .learning-objective-item__main {
