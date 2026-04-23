@@ -21,6 +21,7 @@ import pageIcon from './assets/icon-page.png';
 import searchIcon from './assets/icon-search.svg';
 import warningIcon from './assets/warning.png';
 import instructorIcon from './assets/instructor.png';
+import studentIcon from './assets/student.png';
 import radiationMaterialsImage from './assets/radiation_materials.jpg';
 import electrolysisImage from './assets/electrolysis.jpg';
 import kittenImage from './assets/kitten.png';
@@ -75,6 +76,27 @@ type ObjectiveCoverage = {
   min: number;
   max: number;
   state: 'healthy' | 'at-risk' | 'not-covered';
+};
+
+type ViewMode = 'instructor' | 'student';
+
+type StudentPreviewQuestion = {
+  id: string;
+  title: string;
+  prompt: string;
+  kind: QuestionKind;
+  points: number;
+  choices?: string[];
+  cataStatements?: string[];
+  showGraph?: boolean;
+};
+
+type StudentPreviewBank = {
+  id: string;
+  label: string;
+  numberToSelect: number;
+  candidateQuestions: StudentPreviewQuestion[];
+  scenarioQuestions: StudentPreviewQuestion[];
 };
 
 const materials: Material[] = [
@@ -722,9 +744,80 @@ function AssessmentScreen() {
   );
   const [embeddedToasts, setEmbeddedToasts] = useState<Record<string, string>>({});
   const [pendingEmbeddedRemoveId, setPendingEmbeddedRemoveId] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<ViewMode>('instructor');
   const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
+  const isStudentPreview = viewMode === 'student';
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
   const attemptsStarted = state?.attemptsStarted ?? false;
+  const studentPreviewData = useMemo(() => {
+    const banks: StudentPreviewBank[] = assessmentSelections
+      .filter((selection) => !removedBanks.includes(selection.id))
+      .map((selection, index) => {
+        const candidateCount = Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
+        const candidateQuestions: StudentPreviewQuestion[] = Array.from({ length: candidateCount }).map((_, questionIndex) => {
+          const seeded = selection.exampleQuestions[questionIndex % selection.exampleQuestions.length];
+          const needsVariantTitle = questionIndex >= selection.exampleQuestions.length;
+          return {
+            id: `${selection.id}-candidate-${questionIndex + 1}`,
+            title: needsVariantTitle ? `${seeded.title} Variant ${questionIndex + 1}` : seeded.title,
+            prompt: seeded.prompt,
+            kind: seeded.kind,
+            points: seeded.points,
+            choices: seeded.choices,
+            cataStatements: seeded.cataStatements,
+            showGraph: seeded.showGraph,
+          };
+        });
+        return {
+          id: selection.id,
+          label: `Activity Bank ${index + 1}`,
+          numberToSelect: selection.numberToSelect,
+          candidateQuestions,
+          scenarioQuestions: candidateQuestions.slice(0, selection.numberToSelect),
+        };
+      });
+    const embeddedQuestions: StudentPreviewQuestion[] = [];
+    if (isNuclearAssessment && !removedEmbeddedQuestions.nuclearSafety) {
+      embeddedQuestions.push({
+        id: 'embedded-nuclear-safety-preview',
+        title: 'Radiation Materials Safety Check',
+        prompt: 'A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?',
+        kind: 'mcq',
+        points: 6,
+        choices: [
+          'Use paper shielding for all sources and keep all containers open for easier viewing.',
+          'Use thick lead shielding for alpha sources only and remove barriers for beta and gamma sources.',
+          'Keep sealed containers, use acrylic shielding for beta sources, and place gamma sources behind lead shielding at distance.',
+          'Store all emitters together in one tray to simplify transport between lab benches.',
+        ],
+      });
+    }
+    if (!removedEmbeddedQuestions.exitQuestion) {
+      embeddedQuestions.push({
+        id: 'embedded-exit-preview',
+        title: isNuclearAssessment ? 'Biological Effects Exit Question' : 'Electrochemistry Exit Question',
+        prompt: isNuclearAssessment
+          ? 'Which factor most directly explains why equal absorbed doses can lead to different biological outcomes?'
+          : 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?',
+        kind: 'mcq',
+        points: 6,
+        choices: isNuclearAssessment
+          ? [
+              'All tissues respond identically to ionizing radiation.',
+              'Biological effect varies with tissue radiosensitivity, dose rate, and exposure pathway.',
+              'Only external exposure affects biological outcome.',
+              'Shielding type has no impact once exposure begins.',
+            ]
+          : [
+              'The anode starts reducing instead of oxidizing.',
+              'Reaction quotient shifts and lowers the driving force toward equilibrium.',
+              'Electrons are no longer transferred through the external circuit.',
+              'The salt bridge blocks ion movement once products form.',
+            ],
+      });
+    }
+    return { banks, embeddedQuestions };
+  }, [assessmentSelections, removedBanks, removedEmbeddedQuestions, isNuclearAssessment]);
   const coverageSummary = useMemo(
     () =>
       computeObjectiveCoverage({
@@ -875,16 +968,16 @@ function AssessmentScreen() {
   return (
     <InstructorShell>
       <div className="assessment-layout">
-        <AssessmentHeader coverageSummary={coverageSummary} />
+        <AssessmentHeader coverageSummary={coverageSummary} viewMode={viewMode} onViewModeChange={setViewMode} />
         <div className="assessment-content">
-          {attemptsStarted ? (
+          {attemptsStarted && !isStudentPreview ? (
             <div className="attempts-banner" role="status" aria-live="polite">
               <img src={warningIcon} alt="" aria-hidden="true" />
               Students have already started this assessment. Removing or changing questions will only impact future attempts.
             </div>
           ) : null}
           <div className="assessment-main">
-            <div className="assessment-shortcuts-card">
+            {!isStudentPreview ? <div className="assessment-shortcuts-card">
               <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
                 <span className="jump-section-header__label">Jump to section</span>
                 <span className="jump-section-header__meta">{assessmentSelections.length} Activity Banks · 1 Embedded Question</span>
@@ -904,8 +997,8 @@ function AssessmentScreen() {
                   </div>
                 </div>
               ) : null}
-            </div>
-            <div className="assessment-intro">
+            </div> : null}
+            {!isStudentPreview ? <div className="assessment-intro">
               {isNuclearAssessment ? (
                 <>
                   <p>
@@ -931,8 +1024,8 @@ function AssessmentScreen() {
                   </p>
                 </>
               )}
-            </div>
-            {assessmentSelections.map((selection) => (
+            </div> : <StudentAssessmentPreview banks={studentPreviewData.banks} embeddedQuestions={studentPreviewData.embeddedQuestions} />}
+            {!isStudentPreview ? assessmentSelections.map((selection) => (
               <ActivityBankSelectionCard
                 key={selection.id}
                 selection={selection}
@@ -947,14 +1040,15 @@ function AssessmentScreen() {
                 attemptsStarted={attemptsStarted}
                 assessmentTitle={state?.assessmentTitle}
                 breadcrumbTrail={state?.breadcrumbTrail}
+                canManage={!isStudentPreview}
               />
-            ))}
-            {!isNuclearAssessment ? (
+            )) : null}
+            {!isStudentPreview && !isNuclearAssessment ? (
               <section className="assessment-mid-media" aria-label="Electrolysis cell diagram">
                 <img src={electrolysisImage} alt="Electrolysis setup with electrodes and ion movement" />
               </section>
             ) : null}
-            {isNuclearAssessment ? (
+            {!isStudentPreview && isNuclearAssessment ? (
               <>
                 <section className="assessment-mid-media" aria-label="Nuclear chemistry materials">
                   <img src={radiationMaterialsImage} alt="Nuclear chemistry lab and radiation safety materials" />
@@ -975,12 +1069,13 @@ function AssessmentScreen() {
                     ]}
                     embedded
                     removed={Boolean(removedEmbeddedQuestions.nuclearSafety)}
-                    onToggleRemove={() => requestToggleEmbedded('nuclearSafety')}
+                    onToggleRemove={!isStudentPreview ? () => requestToggleEmbedded('nuclearSafety') : undefined}
+                    studentPreview={isStudentPreview}
                   />
                 </section>
               </>
             ) : null}
-            <section className="embedded-question" id="embedded-question">
+            {!isStudentPreview ? <section className="embedded-question" id="embedded-question">
               {embeddedToasts.exitQuestion ? <SuccessToast message={embeddedToasts.exitQuestion} inline /> : null}
               <QuestionTypeCard
                 kind="mcq"
@@ -1013,9 +1108,10 @@ function AssessmentScreen() {
                 }
                 embedded
                 removed={Boolean(removedEmbeddedQuestions.exitQuestion)}
-                onToggleRemove={() => requestToggleEmbedded('exitQuestion')}
+                onToggleRemove={!isStudentPreview ? () => requestToggleEmbedded('exitQuestion') : undefined}
+                studentPreview={isStudentPreview}
               />
-            </section>
+            </section> : null}
           </div>
           <div className="assessment-footer">
             <button className="button button--secondary">Previous</button>
@@ -1025,7 +1121,7 @@ function AssessmentScreen() {
           </div>
         </div>
       </div>
-      {pendingBankRemoveId ? (
+      {!isStudentPreview && pendingBankRemoveId ? (
         <AttemptsStartedChangeModal
           targetLabel="bank"
           onKeep={() => setPendingBankRemoveId(null)}
@@ -1035,7 +1131,7 @@ function AssessmentScreen() {
           }}
         />
       ) : null}
-      {pendingEmbeddedRemoveId ? (
+      {!isStudentPreview && pendingEmbeddedRemoveId ? (
         <AttemptsStartedChangeModal
           targetLabel="question"
           onKeep={() => setPendingEmbeddedRemoveId(null)}
@@ -1722,10 +1818,15 @@ function BulkWarningModal({
 
 function AssessmentHeader({
   coverageSummary,
+  viewMode,
+  onViewModeChange,
 }: {
   coverageSummary: { coverage: ObjectiveCoverage[]; taggedIncluded: number; untaggedIncluded: number };
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }) {
   const location = useLocation();
+  const [viewMenuOpen, setViewMenuOpen] = useState(false);
   const state = location.state as { breadcrumbTrail?: BreadcrumbItem[]; assessmentTitle?: string } | null;
   const breadcrumbTrail = state?.breadcrumbTrail ?? [
     { label: 'Customize Content', to: '/customize' },
@@ -1736,10 +1837,47 @@ function AssessmentHeader({
 
   return (
     <>
-      <div className="instructor-bar">
-        <div className="instructor-pill">
-          <img className="instructor-pill__icon" src={instructorIcon} alt="" aria-hidden="true" />
-          <span>Instructor view</span>
+      <div className={viewMode === 'student' ? 'instructor-bar instructor-bar--student' : 'instructor-bar'}>
+        <div className="view-switcher">
+          <button
+            type="button"
+            className="instructor-pill instructor-pill--dropdown"
+            onClick={() => setViewMenuOpen((open) => !open)}
+            aria-haspopup="menu"
+            aria-expanded={viewMenuOpen}
+          >
+            <img className="instructor-pill__icon" src={viewMode === 'student' ? studentIcon : instructorIcon} alt="" aria-hidden="true" />
+            <span>{viewMode === 'instructor' ? 'Instructor view' : 'Student preview'}</span>
+            <img src={chevronDownIcon} alt="" aria-hidden="true" className={viewMenuOpen ? 'instructor-pill__chevron is-open' : 'instructor-pill__chevron'} />
+          </button>
+          {viewMenuOpen ? (
+            <div className="view-switcher__menu" role="menu" aria-label="View mode">
+              <button
+                type="button"
+                role="menuitemradio"
+                aria-checked={viewMode === 'instructor'}
+                className={viewMode === 'instructor' ? 'view-switcher__item is-active' : 'view-switcher__item'}
+                onClick={() => {
+                  onViewModeChange('instructor');
+                  setViewMenuOpen(false);
+                }}
+              >
+                Instructor view
+              </button>
+              <button
+                type="button"
+                role="menuitemradio"
+                aria-checked={viewMode === 'student'}
+                className={viewMode === 'student' ? 'view-switcher__item is-active' : 'view-switcher__item'}
+                onClick={() => {
+                  onViewModeChange('student');
+                  setViewMenuOpen(false);
+                }}
+              >
+                Student preview
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="assessment-topbar">
@@ -1755,37 +1893,41 @@ function AssessmentHeader({
       <div className="assessment-nav">
         <Breadcrumbs items={breadcrumbTrail} />
         <h1 className="assessment-title">{assessmentTitle}</h1>
-        <div className="learning-objectives">
-          <div className="learning-objectives__label">Learning Objectives</div>
-          <div className="learning-objective-checker__meta">
-            Tagged: {coverageSummary.taggedIncluded} · Untagged: {coverageSummary.untaggedIncluded}
-            {coverageSummary.untaggedIncluded > 0 ? (
-              <span className="learning-objective-checker__meta-warning">
-                Coverage may be understated due to untagged questions.
-              </span>
-            ) : null}
+        {viewMode === 'student' ? (
+          <div className="student-preview-badge">Preview only - students will not see instructor controls.</div>
+        ) : (
+          <div className="learning-objectives">
+            <div className="learning-objectives__label">Learning Objectives</div>
+            <div className="learning-objective-checker__meta">
+              Tagged: {coverageSummary.taggedIncluded} · Untagged: {coverageSummary.untaggedIncluded}
+              {coverageSummary.untaggedIncluded > 0 ? (
+                <span className="learning-objective-checker__meta-warning">
+                  Coverage may be understated due to untagged questions.
+                </span>
+              ) : null}
+            </div>
+            {objectives.map((objective) => {
+              const item = coverageSummary.coverage.find((coverage) => coverage.objective.code === objective.code);
+              const state = item?.state ?? 'not-covered';
+              return (
+                <div key={objective.code} className="learning-objective-item learning-objective-item--with-coverage">
+                  <div className="learning-objective-item__main">
+                    {state !== 'healthy' ? <img src={warningIcon} alt="" aria-hidden="true" /> : <img src={checkIcon} alt="" aria-hidden="true" />}
+                    <span>{objective.label}</span>
+                  </div>
+                  <div className="learning-objective-item__coverage">
+                    <div className={state === 'healthy' ? 'learning-objective-checker__range' : 'learning-objective-checker__range is-warning'}>
+                      {(item?.min ?? 0) === (item?.max ?? 0) ? `${item?.min ?? 0} questions` : `${item?.min ?? 0}-${item?.max ?? 0} questions`}
+                    </div>
+                    <div className="learning-objective-checker__state">
+                      {state === 'not-covered' ? 'No coverage' : state === 'at-risk' ? 'At risk' : 'Guaranteed'}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          {objectives.map((objective) => {
-            const item = coverageSummary.coverage.find((coverage) => coverage.objective.code === objective.code);
-            const state = item?.state ?? 'not-covered';
-            return (
-              <div key={objective.code} className="learning-objective-item learning-objective-item--with-coverage">
-                <div className="learning-objective-item__main">
-                  {state !== 'healthy' ? <img src={warningIcon} alt="" aria-hidden="true" /> : <img src={checkIcon} alt="" aria-hidden="true" />}
-                  <span>{objective.label}</span>
-                </div>
-                <div className="learning-objective-item__coverage">
-                  <div className={state === 'healthy' ? 'learning-objective-checker__range' : 'learning-objective-checker__range is-warning'}>
-                    {(item?.min ?? 0) === (item?.max ?? 0) ? `${item?.min ?? 0} questions` : `${item?.min ?? 0}–${item?.max ?? 0} questions`}
-                  </div>
-                  <div className="learning-objective-checker__state">
-                    {state === 'not-covered' ? 'No coverage' : state === 'at-risk' ? 'At risk' : 'Guaranteed'}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        )}
       </div>
     </>
   );
@@ -1800,6 +1942,7 @@ function ActivityBankSelectionCard({
   attemptsStarted,
   assessmentTitle,
   breadcrumbTrail,
+  canManage,
 }: {
   selection: AssessmentSelection;
   questionsAvailableCount: number;
@@ -1809,6 +1952,7 @@ function ActivityBankSelectionCard({
   attemptsStarted: boolean;
   assessmentTitle?: string;
   breadcrumbTrail?: BreadcrumbItem[];
+  canManage: boolean;
 }) {
   const navigate = useNavigate();
   const [exampleIndex, setExampleIndex] = useState(0);
@@ -1826,9 +1970,11 @@ function ActivityBankSelectionCard({
             {removed ? <span className="status-pill">Removed</span> : null}
           </div>
         </div>
-        <button className={removed ? 'button button--secondary button--small' : 'button button--danger button--small'} onClick={onToggleRemove}>
-          {removed ? 'Restore' : 'Remove'}
-        </button>
+        {canManage ? (
+          <button className={removed ? 'button button--secondary button--small' : 'button button--danger button--small'} onClick={onToggleRemove}>
+            {removed ? 'Restore' : 'Remove'}
+          </button>
+        ) : null}
       </div>
       <div className="bank-card__stats">
         <TagStat label="Number to select" value={String(selection.numberToSelect)} />
@@ -1933,6 +2079,7 @@ function QuestionTypeCard({
   embedded = false,
   removed = false,
   onToggleRemove,
+  studentPreview = false,
 }: {
   kind: QuestionKind;
   points: number;
@@ -1945,6 +2092,7 @@ function QuestionTypeCard({
   embedded?: boolean;
   removed?: boolean;
   onToggleRemove?: () => void;
+  studentPreview?: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
   const [activeTab, setActiveTab] = useState<'answer' | 'hints' | 'explanation'>('answer');
@@ -2224,11 +2372,11 @@ function QuestionTypeCard({
           <div className="short-answer-box">Student response area</div>
         </>
       ) : null}
-      <button className="detail-toggle" onClick={() => setExpanded((current) => !current)}>
+      {!studentPreview ? <button className="detail-toggle" onClick={() => setExpanded((current) => !current)}>
         {expanded ? 'Hide Details' : 'View Details'}
         <img src={chevronDownIcon} alt="" aria-hidden="true" className={expanded ? 'chevron-icon is-open' : 'chevron-icon'} />
-      </button>
-      {expanded ? (
+      </button> : null}
+      {!studentPreview && expanded ? (
         <div className="question-details">
           <div className="tab-strip">
             <button className={activeTab === 'answer' ? 'tab-strip__tab is-active' : 'tab-strip__tab'} onClick={() => setActiveTab('answer')}>
@@ -2248,10 +2396,68 @@ function QuestionTypeCard({
           </div>
         </div>
       ) : null}
-      <div className="learning-objective-footnote">
+      {!studentPreview ? <div className="learning-objective-footnote">
         <strong>LO</strong> {learningObjective}
-      </div>
+      </div> : null}
     </div>
+  );
+}
+
+function StudentAssessmentPreview({
+  banks,
+  embeddedQuestions,
+}: {
+  banks: StudentPreviewBank[];
+  embeddedQuestions: StudentPreviewQuestion[];
+}) {
+  const questions = [...banks.flatMap((bank) => bank.scenarioQuestions), ...embeddedQuestions];
+  return (
+    <section className="student-preview-sheet" aria-label="Student assessment preview">
+      <div className="student-preview-sheet__header">
+        <div>
+          <h2>Student Assessment Preview</h2>
+          <p>Showing one sampled student scenario per bank.</p>
+        </div>
+      </div>
+      {questions.map((question, index) => (
+        <article key={question.id} className="student-question-card">
+          <div className="student-question-card__meta">
+            Question {index + 1} · {question.points} point{question.points === 1 ? '' : 's'}
+          </div>
+          <h3>{question.title}</h3>
+          <p>{question.prompt}</p>
+          {question.showGraph ? <img className="question-media" src={graphImage} alt="Question graph" /> : null}
+          {question.kind === 'mcq' ? (
+            <div className="student-choice-list">
+              {(question.choices ?? ['Option A', 'Option B', 'Option C', 'Option D']).map((choice) => (
+                <label key={choice} className="student-choice-row">
+                  <input type="radio" name={question.id} disabled />
+                  <span>{choice}</span>
+                </label>
+              ))}
+            </div>
+          ) : null}
+          {question.kind === 'cata' ? (
+            <div className="student-choice-list">
+              {(question.cataStatements ?? ['Statement A', 'Statement B', 'Statement C']).map((statement) => (
+                <label key={statement} className="student-choice-row">
+                  <input type="checkbox" disabled />
+                  <span>{statement}</span>
+                </label>
+              ))}
+            </div>
+          ) : null}
+          {question.kind === 'multi-input' ? (
+            <div className="student-input-row">
+              <input className="input" disabled value="" placeholder="Coefficient" readOnly />
+              <input className="input" disabled value="" placeholder="Species" readOnly />
+              <input className="input" disabled value="" placeholder="Coefficient" readOnly />
+            </div>
+          ) : null}
+          {question.kind === 'short-answer' ? <textarea className="student-short-answer" disabled placeholder="Type your response here…" /> : null}
+        </article>
+      ))}
+    </section>
   );
 }
 
