@@ -63,6 +63,7 @@ type BankQuestionRow = {
   difficulty: 'Easy' | 'Medium' | 'Hard';
   choices?: string[];
   cataStatements?: string[];
+  showGraph?: boolean;
   removed?: boolean;
 };
 
@@ -99,6 +100,18 @@ type StudentPreviewBank = {
   scenarioQuestions: StudentPreviewQuestion[];
 };
 
+const rotateArray = <T,>(items: T[], amount: number): T[] => {
+  if (items.length === 0) return items;
+  const offset = ((amount % items.length) + items.length) % items.length;
+  return [...items.slice(offset), ...items.slice(0, offset)];
+};
+
+const isElectrochemistryUnitCheckpoint = (assessmentTitle?: string) =>
+  (assessmentTitle ?? '').toLowerCase().includes('electrochemistry');
+const isNuclearUnitCheckpoint = (assessmentTitle?: string) => (assessmentTitle ?? '').toLowerCase().includes('nuclear');
+const usesTaggedVariantNaming = (assessmentTitle?: string) =>
+  isElectrochemistryUnitCheckpoint(assessmentTitle) || isNuclearUnitCheckpoint(assessmentTitle);
+
 const materials: Material[] = [
   { id: 'm1', title: 'Foundational Concepts of Electrochemistry', type: 'bank' },
   { id: 'm2', title: 'Galvanic Cells', type: 'bank' },
@@ -111,44 +124,54 @@ const materials: Material[] = [
 const electrochemistrySelections: AssessmentSelection[] = [
   {
     id: 'ab-1',
-    availableQuestions: 24,
+    availableQuestions: 4,
     numberToSelect: 3,
-    criteriaTag: 'LO focus: balancing redox reactions in acidic media',
+    criteriaTag: 'balancing_redox_acidic_media',
     exampleQuestions: [
       {
         kind: 'multi-input',
         points: 8,
-        title: 'Redox Balancing Practice',
-        prompt: 'Balance the following reaction in acidic solution.',
+        title: 'redox_balance_acidic_multi',
+        prompt:
+          '24.0 mL of 0.030 M acidified MnO4− is mixed with 30.0 mL of 0.090 M Fe2+. Use the dropdowns to complete the balanced line in acidic solution (coefficients and key species).',
         learningObjective: 'LO 1.1 Balance redox equations in acidic conditions.',
       },
       {
-        kind: 'short-answer',
-        points: 6,
-        title: 'Balancing Rationale',
-        prompt: 'In 2-3 sentences, explain how you verified atom and charge balance after assigning coefficients.',
-        learningObjective: 'LO 1.1 Balance redox equations in acidic conditions.',
-      },
-      {
-        kind: 'mcq',
+        kind: 'multi-input',
         points: 8,
-        title: 'Coefficient Checkpoint',
-        prompt: 'Which coefficient set correctly balances the reaction in acidic solution?',
+        title: 'redox_balance_acidic_multi',
+        prompt:
+          'A 0.040 M Cr2O7^2− solution in acid is paired with 0.15 M Fe2+. Complete the balanced redox expression using the dropdowns (watch the dichromate stoichiometry).',
         learningObjective: 'LO 1.1 Balance redox equations in acidic conditions.',
-        choices: ['Set A', 'Set B', 'Set C', 'Set D'],
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'redox_balance_acidic_multi',
+        prompt:
+          'Balance the oxidation of SO3^2− to SO4^2− by MnO4− in acidic medium for a 35.0 mL sulfite sample titrated with 16.2 mL of 0.020 M MnO4−. Use the dropdowns to finish the balanced form.',
+        learningObjective: 'LO 1.1 Balance redox equations in acidic conditions.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'redox_balance_acidic_multi',
+        prompt:
+          'Copper metal reacts with nitric acid producing Cu2+, NO, and water. With 0.50 M HNO3 contacting excess Cu, complete the balanced redox line in acidic solution via the dropdowns.',
+        learningObjective: 'LO 1.1 Balance redox equations in acidic conditions.',
       },
     ],
   },
   {
     id: 'ab-2',
-    availableQuestions: 18,
+    availableQuestions: 3,
     numberToSelect: 1,
-    criteriaTag: 'Skill target: interpret titration curve equivalence regions',
+    criteriaTag: 'titration_curve_equivalence',
     exampleQuestions: [
       {
         kind: 'mcq',
         points: 10,
-        title: 'Titration Interpretation',
+        title: 'titration_equivalence_mcq',
         prompt: 'At which point in the titration is the number of moles of analyte and titrant the same?',
         learningObjective: 'LO 1.2 Identify equivalence points from titration curves.',
         choices: ['Point A', 'Point B', 'Point C', 'Point D'],
@@ -158,86 +181,126 @@ const electrochemistrySelections: AssessmentSelection[] = [
   },
   {
     id: 'ab-3',
-    availableQuestions: 12,
+    availableQuestions: 4,
     numberToSelect: 2,
-    criteriaTag: 'Electrolysis focus: predict products at electrodes and justify ion movement.',
+    criteriaTag: 'electrolysis_electrode_products',
     exampleQuestions: [
       {
-        kind: 'mcq',
+        kind: 'multi-input',
         points: 6,
-        title: 'Electrolysis Setup Check',
-        prompt: 'In aqueous NaCl electrolysis, which statement best matches the expected electrode processes under standard classroom conditions?',
-        learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
-        choices: [
-          'Na+ is reduced to sodium metal at the cathode in water before hydrogen evolves.',
-          'Chloride oxidation at the anode and hydrogen evolution at the cathode are both plausible outcomes.',
-          'No redox occurs because the reaction is nonspontaneous.',
-          'Electrons flow from cathode to anode through the external circuit.',
-        ],
-      },
-      {
-        kind: 'short-answer',
-        points: 6,
-        title: 'Electrolysis Product Reasoning',
-        prompt: 'Describe how concentration, electrode material, and overpotential can shift product formation during electrolysis.',
+        title: 'electrolysis_cell_setup_multi',
+        prompt:
+          'Aqueous 1.0 M NaCl, inert electrodes, 6.0 V applied: choose the dominant anode process, dominant cathode process, and electron flow in the external circuit.',
         learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
       },
       {
-        kind: 'cata',
+        kind: 'multi-input',
         points: 6,
-        title: 'Electrolytic Cell Truths',
-        prompt: 'Select all statements that are accurate for an electrolytic cell.',
+        title: 'electrolysis_cell_setup_multi',
+        prompt:
+          'Aqueous 0.50 M CuSO4 with Cu cathode and inert anode: choose what happens at the anode, what happens at the cathode, and electron flow direction.',
         learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
-        cataStatements: [
-          'An external power source drives a nonspontaneous redox reaction.',
-          'Oxidation occurs at the anode.',
-          'Reduction occurs at the cathode.',
-          'The anode is always positive in every electrochemical context.',
-          'Electrolyte composition influences which species discharge at each electrode.',
-        ],
+      },
+      {
+        kind: 'multi-input',
+        points: 6,
+        title: 'electrolysis_cell_setup_multi',
+        prompt:
+          'Molten NaCl with inert electrodes: choose the species oxidized at the anode, the species reduced at the cathode, and electron flow direction.',
+        learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
+      },
+      {
+        kind: 'multi-input',
+        points: 6,
+        title: 'electrolysis_cell_setup_multi',
+        prompt:
+          'Dilute AgNO3 (0.10 M), inert electrodes, pH ~7: choose the primary anode process, the primary cathode process, and electron flow in the external circuit.',
+        learningObjective: 'LO 1.2 Predict oxidation and reduction products in electrolytic cells.',
       },
     ],
   },
   {
     id: 'ab-4',
-    availableQuestions: 16,
+    availableQuestions: 3,
     numberToSelect: 2,
-    criteriaTag: 'Application focus: corrosion, prevention methods, and material choices',
+    criteriaTag: 'corrosion_and_prevention',
     exampleQuestions: [
       {
-        kind: 'short-answer',
+        kind: 'multi-input',
         points: 7,
-        title: 'Corrosion Cell Reasoning',
-        prompt: 'Explain why galvanic corrosion accelerates when dissimilar metals are electrically connected in an electrolyte.',
+        title: 'corrosion_mitigation_multi',
+        prompt:
+          'A Zn washer is in contact with mild steel in aerated seawater (3.5% NaCl). Choose the metal that tends to corrode fastest, the best first mitigation, and what to monitor weekly.',
+        learningObjective: 'LO 1.3 Explain electrochemical causes of corrosion and mitigation strategies.',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'corrosion_mitigation_multi',
+        prompt:
+          'A Cu fitting is coupled to galvanized (Zn-coated) steel in freshwater at pH 7.2. Choose the likely cathode region, the primary corrosion risk, and a mitigation that breaks the galvanic path.',
+        learningObjective: 'LO 1.3 Explain electrochemical causes of corrosion and mitigation strategies.',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'corrosion_mitigation_multi',
+        prompt:
+          '304 stainless is bolted to aluminum in salt spray with chloride films present. Choose the main driving force for attack, a coating or isolation step, and a field inspection signal to track.',
         learningObjective: 'LO 1.3 Explain electrochemical causes of corrosion and mitigation strategies.',
       },
     ],
   },
   {
     id: 'ab-5',
-    availableQuestions: 22,
+    availableQuestions: 4,
     numberToSelect: 4,
-    criteriaTag: 'Industry context: electroplating setup, anode/cathode roles, and ion transfer',
+    criteriaTag: 'electroplating_cell_roles',
     exampleQuestions: [
       {
         kind: 'multi-input',
         points: 8,
-        title: 'Electroplating Process Setup',
-        prompt: 'Choose each dropdown to correctly configure an electroplating cell for copper coating.',
+        title: 'copper_electroplating_setup_multi',
+        prompt:
+          'Acidic 0.80 M CuSO4, soluble Cu anode, steel jewelry as workpiece at 12 mA/cm^2: choose the workpiece electrode, where Cu2+ is reduced, and what happens at the anode.',
+        learningObjective: 'LO 1.3 Describe electrode reactions in electroplating systems.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'copper_electroplating_setup_multi',
+        prompt:
+          'Cyanide-copper bath (prototype), Pt anode, brass part: choose where metal deposits, which electrode oxidizes water or supporting ions at the anode, and electron flow direction.',
+        learningObjective: 'LO 1.3 Describe electrode reactions in electroplating systems.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'copper_electroplating_setup_multi',
+        prompt:
+          'Nickel strike then Cu plate from acid sulfate; current ramps from 2 A to 8 A over 5 min. Choose the cathode identity for Cu deposition, the role of the Ni layer, and the anode type if using soluble Cu.',
+        learningObjective: 'LO 1.3 Describe electrode reactions in electroplating systems.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'copper_electroplating_setup_multi',
+        prompt:
+          'Hull cell trial at 3.0 V with a Cu anode dissolving unevenly: choose where to place the test panel, where reduction of Cu2+ occurs, and the risk if the anode passivates.',
         learningObjective: 'LO 1.3 Describe electrode reactions in electroplating systems.',
       },
     ],
   },
   {
     id: 'ab-6',
-    availableQuestions: 14,
+    availableQuestions: 3,
     numberToSelect: 2,
-    criteriaTag: 'Energy applications: compare primary, secondary, and fuel-cell trade-offs',
+    criteriaTag: 'battery_fuel_cell_tradeoffs',
     exampleQuestions: [
       {
         kind: 'cata',
         points: 5,
-        title: 'Energy Storage Claims',
+        title: 'energy_storage_comparison_cata',
         prompt: 'Select every statement that correctly compares battery and fuel-cell behavior.',
         learningObjective: 'Untagged objective',
         cataStatements: [
@@ -252,45 +315,63 @@ const electrochemistrySelections: AssessmentSelection[] = [
   },
   {
     id: 'ab-7',
-    availableQuestions: 11,
+    availableQuestions: 4,
     numberToSelect: 1,
-    criteriaTag: 'Performance interpretation: read discharge curves and voltage behavior',
+    criteriaTag: 'discharge_curve_interpretation',
     exampleQuestions: [
       {
         kind: 'mcq',
         points: 10,
-        title: 'Battery Discharge Curve Reading',
+        title: 'battery_discharge_curve_mcq',
         prompt: 'Which region of the discharge curve best indicates rapid voltage drop near end-of-life?',
         learningObjective: 'LO 1.3 Interpret electrochemical performance plots.',
         choices: ['Region A', 'Region B', 'Region C', 'Region D'],
+        showGraph: true,
       },
     ],
   },
   {
     id: 'ab-8',
-    availableQuestions: 19,
+    availableQuestions: 3,
     numberToSelect: 3,
-    criteriaTag: 'Cell design mechanics: oxidation/reduction half-reactions in applied devices',
+    criteriaTag: 'half_reactions_devices',
     exampleQuestions: [
       {
         kind: 'multi-input',
         points: 8,
-        title: 'Half-Reaction Setup',
-        prompt: 'Choose each dropdown to complete the oxidation half-reaction in acidic medium.',
+        title: 'acidic_half_reaction_multi',
+        prompt:
+          'In acidic medium, write the balanced oxidation Fe2+ → Fe3+ using the dropdowns (electrons, Fe species, and H+/H2O as needed).',
+        learningObjective: 'LO 1.1 Construct oxidation and reduction half-reactions.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'acidic_half_reaction_multi',
+        prompt:
+          'In acidic medium, balance the reduction of MnO4− to Mn2+ using the dropdowns (e−, Mn species, H+, H2O).',
+        learningObjective: 'LO 1.1 Construct oxidation and reduction half-reactions.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'acidic_half_reaction_multi',
+        prompt:
+          'In acidic medium, balance the oxidation of Cr3+ to Cr2O7^2− using the dropdowns (e−, Cr-containing species, H2O/H+).',
         learningObjective: 'LO 1.1 Construct oxidation and reduction half-reactions.',
       },
     ],
   },
   {
     id: 'ab-9',
-    availableQuestions: 15,
+    availableQuestions: 4,
     numberToSelect: 2,
-    criteriaTag: 'Real-world systems: identify galvanic cell directionality and component purpose',
+    criteriaTag: 'galvanic_cell_behavior',
     exampleQuestions: [
       {
         kind: 'cata',
         points: 5,
-        title: 'Electrochemistry Checks',
+        title: 'galvanic_cell_behavior_cata',
         prompt: 'Mark all statements that are consistent with galvanic cell behavior.',
         learningObjective: 'LO 1.2 Compare galvanic and electrolytic cell properties.',
         cataStatements: [
@@ -305,15 +386,32 @@ const electrochemistrySelections: AssessmentSelection[] = [
   },
   {
     id: 'ab-10',
-    availableQuestions: 13,
+    availableQuestions: 3,
     numberToSelect: 1,
-    criteriaTag: 'Emerging applications: evaluate electrochemistry in environmental and industrial contexts',
+    criteriaTag: 'environmental_electrochemistry',
     exampleQuestions: [
       {
-        kind: 'short-answer',
+        kind: 'multi-input',
         points: 7,
-        title: 'Electrochemistry in Water Treatment',
-        prompt: 'Describe one way electrochemical processes are used in water treatment and explain the core reaction principle.',
+        title: 'water_treatment_electrolysis_multi',
+        prompt:
+          'Groundwater contains 2.1 mg/L Fe2+ and 18 mg/L NO3−. Choose the primary anodic oxidant pathway, the knob that most shifts current efficiency, and the online signal to log.',
+        learningObjective: 'Untagged objective',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'water_treatment_electrolysis_multi',
+        prompt:
+          'Industrial wastewater carries a phenolic trace at pH 6.5 with a BDD anode. Choose the dominant degradation route, the operating variable that raises mass-transfer limitation, and a surrogate measurement for removal.',
+        learningObjective: 'Untagged objective',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'water_treatment_electrolysis_multi',
+        prompt:
+          'As(III) is present at 120 μg/L in carbonate-buffered water. Choose the electrochemical step that targets valence change, the co-reactant often managed at the cathode, and the compliance sample point.',
         learningObjective: 'Untagged objective',
       },
     ],
@@ -323,45 +421,115 @@ const electrochemistrySelections: AssessmentSelection[] = [
 const nuclearSelections: AssessmentSelection[] = [
   {
     id: 'n-ab-1',
-    availableQuestions: 20,
+    availableQuestions: 8,
     numberToSelect: 2,
-    criteriaTag: 'Core idea: identify ionizing radiation types and compare their penetration.',
+    criteriaTag: 'radiation_types_and_penetration',
     exampleQuestions: [
       {
         kind: 'mcq',
         points: 8,
-        title: 'Radiation Type Classification',
+        title: 'radiation_type_classification',
         prompt: 'Which sequence ranks alpha, beta, and gamma radiation from lowest to highest penetration in matter?',
         learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
         choices: ['gamma < beta < alpha', 'alpha < beta < gamma', 'beta < alpha < gamma', 'alpha = beta = gamma'],
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'shielding_workflow_multi',
+        prompt:
+          'A Cs-137 source (662 keV gamma), 0.25 mCi stored behind a closed shield, is observed at 2.5 m. Choose primary shielding material, the handling practice that increases distance most reliably, and the first monitoring control you brief.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'shielding_workflow_multi',
+        prompt:
+          'Co-60 pair source (1.17 & 1.33 MeV), 1.8 mCi combined, wall-mounted behind interlocked door. Choose the shielding emphasis for room egress, the transfer practice between storage and use, and the dosimetry expectation for instructors.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'shielding_workflow_multi',
+        prompt:
+          'Low-energy gamma check source (≈35 keV), 5 μCi, used for detector lab at bench. Choose appropriate primary barrier type, the distance rule for unshielded line-of-sight, and the monitoring tool matched to energy.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'shielding_workflow_multi',
+        prompt:
+          'Beta emitter (Emax 0.5 MeV) in sealed plastic mount for absorption curve lab; no gamma significant. Choose surface shielding students should still use, the distance practice for hands, and the contamination check emphasis.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.',
       },
     ],
   },
   {
     id: 'n-ab-2',
-    availableQuestions: 16,
+    availableQuestions: 8,
     numberToSelect: 2,
-    criteriaTag: 'Biological effects: connect dose, pathway, and tissue radiosensitivity.',
+    criteriaTag: 'biological_effects_and_pathways',
     exampleQuestions: [
       {
-        kind: 'short-answer',
+        kind: 'multi-input',
         points: 7,
-        title: 'Dose Pathway Reasoning',
-        prompt: 'Explain why internal exposure to alpha-emitting particles can pose high biological risk even though alpha has low external penetration.',
+        title: 'internal_alpha_pathway_multi',
+        prompt:
+          'Inhaled insoluble alpha-bearing dust deposits in lung epithelium. Choose the dominant exposure pathway, why high-LET internally matters, and the first clinical follow-up emphasis.',
         learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effect.',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'internal_alpha_pathway_multi',
+        prompt:
+          'Am-241 in a sealed smoke detector: the seal integrity is compromised. For a small-ingestion concern, choose pathway of concern, the main risk amplifier versus external alpha, and the response training point.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effect.',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'internal_alpha_pathway_multi',
+        prompt:
+          'Equal committed effective dose is delivered either as whole-body gamma or as alpha to red marrow. Choose which exposure stresses deterministic limits first, why tissue weighting differs, and the communication takeaway.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effect.',
+      },
+      {
+        kind: 'multi-input',
+        points: 7,
+        title: 'internal_alpha_pathway_multi',
+        prompt:
+          'Compare radon progeny alpha dose to bronchial tissue with gamma from building materials. Choose the primary pathway for radon risk, the metric tied to mitigation, and why pathway changes the message.',
+        learningObjective: 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effect.',
+      },
+      {
+        kind: 'mcq',
+        points: 7,
+        title: 'dose_rate_biological_response',
+        prompt: 'Two exposures deliver equal absorbed dose, but one is spread over weeks and one occurs in minutes. Which is typically more harmful?',
+        learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
+        choices: [
+          'The rapid exposure in minutes',
+          'The prolonged exposure over weeks',
+          'Both are always identical in effect',
+          'Neither has biological effect',
+        ],
       },
     ],
   },
   {
     id: 'n-ab-3',
-    availableQuestions: 14,
+    availableQuestions: 8,
     numberToSelect: 1,
-    criteriaTag: 'Radiation safety: apply time, distance, shielding, and monitoring controls.',
+    criteriaTag: 'radiation_safety_controls',
     exampleQuestions: [
       {
         kind: 'cata',
         points: 6,
-        title: 'ALARA Controls Check',
+        title: 'alara_controls_check',
         prompt: 'Select all practices that align with ALARA in an instructional lab.',
         learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
         cataStatements: [
@@ -372,20 +540,90 @@ const nuclearSelections: AssessmentSelection[] = [
           'Track dose with personal dosimeters.',
         ],
       },
+      {
+        kind: 'multi-input',
+        points: 6,
+        title: 'alara_lab_sequence_multi',
+        prompt:
+          'A sealed Cs source is used for the first lab of the semester. Choose the first control before unshielding, the distance practice during cart transfer, and the log entry you require before class dismissal.',
+        learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
+      },
+      {
+        kind: 'multi-input',
+        points: 6,
+        title: 'alara_lab_sequence_multi',
+        prompt:
+          'A beta source with acrylic step wedges is used in a room shared with an optics lab. Choose the pre-lab barrier check, the tool-use rule to maximize distance, and the survey meter sweep pattern emphasis.',
+        learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
+      },
+      {
+        kind: 'multi-input',
+        points: 6,
+        title: 'alara_lab_sequence_multi',
+        prompt:
+          'A sealed capsule was dropped and its integrity is unknown. Choose the immediate cordon step, the first measurement objective, and the documentation trigger for EH&S.',
+        learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
+      },
+      {
+        kind: 'multi-input',
+        points: 6,
+        title: 'alara_lab_sequence_multi',
+        prompt:
+          'During a guest lecture, students borrow portable meters while sources remain locked. Choose the student practice that best reduces collective dose, the instructor positioning rule, and the return checklist for meters.',
+        learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
+      },
     ],
   },
   {
     id: 'n-ab-4',
-    availableQuestions: 12,
+    availableQuestions: 8,
     numberToSelect: 1,
-    criteriaTag: 'Risk-benefit analysis: evaluate radiation use in medicine and industry.',
+    criteriaTag: 'radiation_risk_benefit_analysis',
     exampleQuestions: [
       {
         kind: 'multi-input',
         points: 8,
-        title: 'Medical Radiation Decision',
-        prompt: 'Choose the most appropriate imaging approach, isotope behavior, and shielding practice for a patient case.',
+        title: 'pe_workup_tradeoffs_multi',
+        prompt:
+          '42-year-old with no renal failure, high Wells score, positive D-dimer. Choose the guiding imaging principle for first-line PE workup, the key message to radiology, and how you would approach shielding in pregnancy if applicable.',
         learningObjective: 'LO 1.5 Evaluate benefit-risk trade-offs in radiation applications.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'pe_workup_tradeoffs_multi',
+        prompt:
+          '68-year-old with eGFR 28 mL/min and suspected PE. Choose the modality bias balancing contrast load versus radiation, the team coordination step, and the documentation that supports justification.',
+        learningObjective: 'LO 1.5 Evaluate benefit-risk trade-offs in radiation applications.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'pe_workup_tradeoffs_multi',
+        prompt:
+          'Young adult with low pretest probability and stable vitals. Choose whether advanced imaging is justified yet, the alternative pathway emphasis, and how you document shared decision-making.',
+        learningObjective: 'LO 1.5 Evaluate benefit-risk trade-offs in radiation applications.',
+      },
+      {
+        kind: 'multi-input',
+        points: 8,
+        title: 'pe_workup_tradeoffs_multi',
+        prompt:
+          'After CTA, an incidental finding prompts debate about repeat imaging. Choose the principle for repeat imaging, how to reduce cumulative dose, and the communication priority with the patient.',
+        learningObjective: 'LO 1.5 Evaluate benefit-risk trade-offs in radiation applications.',
+      },
+      {
+        kind: 'mcq',
+        points: 8,
+        title: 'industrial_radiography_tradeoff',
+        prompt: 'In industrial radiography, what is the strongest justification for controlled source use despite exposure risk?',
+        learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
+        choices: [
+          'It can reveal structural defects non-destructively when controls are applied',
+          'It eliminates the need for any shielding procedures',
+          'It produces no ionizing radiation when enclosed',
+          'It guarantees zero occupational dose in all workflows',
+        ],
       },
     ],
   },
@@ -750,12 +988,28 @@ function AssessmentScreen() {
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
   const attemptsStarted = state?.attemptsStarted ?? false;
   const studentPreviewData = useMemo(() => {
+    const usesVariantNaming = usesTaggedVariantNaming(assessmentTitle);
+    const isElectrochemistry = isElectrochemistryUnitCheckpoint(assessmentTitle);
     const banks: StudentPreviewBank[] = assessmentSelections
       .filter((selection) => !removedBanks.includes(selection.id))
       .map((selection, index) => {
-        const candidateCount = Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
+        const candidateCount = isElectrochemistry
+          ? selection.availableQuestions
+          : Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
         const candidateQuestions: StudentPreviewQuestion[] = Array.from({ length: candidateCount }).map((_, questionIndex) => {
           const seeded = selection.exampleQuestions[questionIndex % selection.exampleQuestions.length];
+          if (usesVariantNaming) {
+            return {
+              id: `${selection.id}-candidate-${questionIndex + 1}`,
+              title: `${seeded.title}_v${questionIndex + 1}`,
+              prompt: seeded.prompt,
+              kind: seeded.kind,
+              points: seeded.points,
+              choices: seeded.choices ? rotateArray(seeded.choices, questionIndex) : undefined,
+              cataStatements: seeded.cataStatements ? rotateArray(seeded.cataStatements, questionIndex) : undefined,
+              showGraph: seeded.showGraph,
+            };
+          }
           const needsVariantTitle = questionIndex >= selection.exampleQuestions.length;
           return {
             id: `${selection.id}-candidate-${questionIndex + 1}`,
@@ -817,7 +1071,7 @@ function AssessmentScreen() {
       });
     }
     return { banks, embeddedQuestions };
-  }, [assessmentSelections, removedBanks, removedEmbeddedQuestions, isNuclearAssessment]);
+  }, [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions, isNuclearAssessment]);
   const coverageSummary = useMemo(
     () =>
       computeObjectiveCoverage({
@@ -1165,14 +1419,31 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     'with an error-analysis angle',
     'with a real-world application',
   ];
-  const rotateArray = (items: string[], amount: number) => {
-    if (items.length === 0) return items;
-    const offset = amount % items.length;
-    return [...items.slice(offset), ...items.slice(0, offset)];
-  };
   const baseQuestions: BankQuestionRow[] = useMemo(() => {
     const draft = loadAssessmentDraft(assessmentTitle);
     const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBank.id] ?? []);
+    if (usesTaggedVariantNaming(assessmentTitle)) {
+      return Array.from({ length: generatedQuestionCount }).map((_, index) => {
+        const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
+        const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
+        const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index) : undefined;
+        const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index) : undefined;
+        const id = `${selectedBank.id}-q-${index + 1}`;
+        return {
+          id,
+          title: `${seeded.title}_v${index + 1}`,
+          prompt: seeded.prompt,
+          kind: seeded.kind,
+          points: seeded.points,
+          learningObjective: seeded.learningObjective,
+          choices: rotatedChoices,
+          cataStatements: rotatedStatements,
+          showGraph: seeded.showGraph,
+          difficulty,
+          removed: removedIdSet.has(id),
+        };
+      });
+    }
     return Array.from({ length: generatedQuestionCount }).map((_, index) => {
       const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
       const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
@@ -1189,6 +1460,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
         learningObjective: seeded.learningObjective,
         choices: rotatedChoices,
         cataStatements: rotatedStatements,
+        showGraph: seeded.showGraph,
         difficulty,
         removed: removedIdSet.has(id),
       };
@@ -1573,7 +1845,7 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
 
   return (
     <div className="bank-question-preview">
-      {question.kind === 'mcq' ? <img className="question-media" src={graphImage} alt="Titration graph" /> : null}
+      {question.showGraph ? <img className="question-media" src={graphImage} alt="Question graph" /> : null}
       {question.kind === 'mcq' ? (
         <div className="question-answer-list">
           {(question.choices ?? ['Option A', 'Option B', 'Option C', 'Option D']).map((choice) => (
@@ -2448,11 +2720,32 @@ function StudentAssessmentPreview({
             </div>
           ) : null}
           {question.kind === 'multi-input' ? (
-            <div className="student-input-row">
-              <input className="input" disabled value="" placeholder="Coefficient" readOnly />
-              <input className="input" disabled value="" placeholder="Species" readOnly />
-              <input className="input" disabled value="" placeholder="Coefficient" readOnly />
-            </div>
+            <>
+              <img className="question-media question-media--small" src={formulaImage} alt="" />
+              <p className="student-preview-dropdown-hint">Students choose values from each dropdown to complete the item.</p>
+              <div className="multi-input-row multi-input-row--preview">
+                <button type="button" className="dropdown-chip is-selected" disabled>
+                  Dropdown
+                </button>
+                <span>Cu +</span>
+                <button type="button" className="dropdown-chip" disabled>
+                  Dropdown
+                </button>
+                <span>
+                  NO<sub>3</sub> +
+                </span>
+                <button type="button" className="dropdown-chip" disabled>
+                  Dropdown
+                </button>
+                <span>
+                  H<sub>2</sub>O +
+                </span>
+                <button type="button" className="dropdown-chip" disabled>
+                  Dropdown
+                </button>
+                <span>NO</span>
+              </div>
+            </>
           ) : null}
           {question.kind === 'short-answer' ? <textarea className="student-short-answer" disabled placeholder="Type your response here…" /> : null}
         </article>
