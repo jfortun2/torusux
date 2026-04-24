@@ -981,6 +981,17 @@ button {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.student-preview-dropdown-hint {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.multi-input-row--preview .dropdown-chip:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
 .student-short-answer {
   background: #f8fafc;
   border: 1px solid #dbe2ea;
