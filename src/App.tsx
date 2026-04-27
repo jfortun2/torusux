@@ -2228,7 +2228,10 @@ function ActivityBankSelectionCard({
 }) {
   const navigate = useNavigate();
   const [exampleIndex, setExampleIndex] = useState(0);
-  const exampleQuestion = selection.exampleQuestions[exampleIndex] ?? selection.exampleQuestions[0];
+  const previewQuestions = selection.exampleQuestions.slice(0, Math.max(1, selection.numberToSelect));
+  const previewCount = previewQuestions.length;
+  const safeExampleIndex = previewCount > 0 ? exampleIndex % previewCount : 0;
+  const exampleQuestion = previewQuestions[safeExampleIndex] ?? selection.exampleQuestions[0];
 
   return (
     <section id={`bank-${selection.id}`} className={removed ? 'bank-card-wrapper bank-card-wrapper--removed' : 'bank-card-wrapper'}>
@@ -2269,22 +2272,22 @@ function ActivityBankSelectionCard({
       <div className="example-block">
         <div className="example-header">
           <p className="example-label">Example selection:</p>
-          {selection.exampleQuestions.length > 1 ? (
+          {previewCount > 1 ? (
             <div className="example-pagination">
               <button
                 className="button button--secondary button--small pagination-nav-btn"
-                onClick={() => setExampleIndex((current) => (current === 0 ? selection.exampleQuestions.length - 1 : current - 1))}
+                onClick={() => setExampleIndex((current) => (current === 0 ? previewCount - 1 : current - 1))}
               >
                 Previous
               </button>
               <span>
-                {exampleIndex + 1} / {selection.exampleQuestions.length}
+                {safeExampleIndex + 1} / {previewCount}
               </span>
               <div className="example-shortcuts" role="tablist" aria-label="Example question shortcuts">
-                {selection.exampleQuestions.map((_, index) => (
+                {previewQuestions.map((_, index) => (
                   <button
                     key={index}
-                    className={exampleIndex === index ? 'example-shortcut is-active' : 'example-shortcut'}
+                    className={safeExampleIndex === index ? 'example-shortcut is-active' : 'example-shortcut'}
                     onClick={() => setExampleIndex(index)}
                   >
                     Q{index + 1}
@@ -2293,7 +2296,7 @@ function ActivityBankSelectionCard({
               </div>
               <button
                 className="button button--secondary button--small pagination-nav-btn"
-                onClick={() => setExampleIndex((current) => (current + 1) % selection.exampleQuestions.length)}
+                onClick={() => setExampleIndex((current) => (current + 1) % previewCount)}
               >
                 Next
               </button>
