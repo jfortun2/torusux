@@ -112,6 +112,9 @@ const isNuclearUnitCheckpoint = (assessmentTitle?: string) => (assessmentTitle ?
 const usesTaggedVariantNaming = (assessmentTitle?: string) =>
   isElectrochemistryUnitCheckpoint(assessmentTitle) || isNuclearUnitCheckpoint(assessmentTitle);
 
+/** Points per embedded item; must match bank totals so the header “Overall Page Score” is 30 for the default layout. */
+const ASSESSMENT_EMBEDDED_QUESTION_POINTS = 3;
+
 const materials: Material[] = [
   { id: 'm1', title: 'Foundational Concepts of Electrochemistry', type: 'bank' },
   { id: 'm2', title: 'Galvanic Cells', type: 'bank' },
@@ -130,7 +133,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'redox_balance_acidic_multi',
         prompt:
           '24.0 mL of 0.030 M acidified MnO4− is mixed with 30.0 mL of 0.090 M Fe2+. Use the dropdowns to complete the balanced line in acidic solution (coefficients and key species).',
@@ -138,7 +141,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'redox_balance_acidic_multi',
         prompt:
           'A 0.040 M Cr2O7^2− solution in acid is paired with 0.15 M Fe2+. Complete the balanced redox expression using the dropdowns (watch the dichromate stoichiometry).',
@@ -146,7 +149,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'redox_balance_acidic_multi',
         prompt:
           'Balance the oxidation of SO3^2− to SO4^2− by MnO4− in acidic medium for a 35.0 mL sulfite sample titrated with 16.2 mL of 0.020 M MnO4−. Use the dropdowns to finish the balanced form.',
@@ -154,7 +157,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'redox_balance_acidic_multi',
         prompt:
           'Copper metal reacts with nitric acid producing Cu2+, NO, and water. With 0.50 M HNO3 contacting excess Cu, complete the balanced redox line in acidic solution via the dropdowns.',
@@ -170,7 +173,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'mcq',
-        points: 10,
+        points: 3,
         title: 'titration_equivalence_mcq',
         prompt: 'At which point in the titration is the number of moles of analyte and titrant the same?',
         learningObjective: 'LO 1.2 Identify equivalence points from titration curves.',
@@ -187,7 +190,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 6,
+        points: 2,
         title: 'electrolysis_cell_setup_multi',
         prompt:
           'Aqueous 1.0 M NaCl, inert electrodes, 6.0 V applied: choose the dominant anode process, dominant cathode process, and electron flow in the external circuit.',
@@ -195,7 +198,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 2,
         title: 'electrolysis_cell_setup_multi',
         prompt:
           'Aqueous 0.50 M CuSO4 with Cu cathode and inert anode: choose what happens at the anode, what happens at the cathode, and electron flow direction.',
@@ -203,7 +206,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 2,
         title: 'electrolysis_cell_setup_multi',
         prompt:
           'Molten NaCl with inert electrodes: choose the species oxidized at the anode, the species reduced at the cathode, and electron flow direction.',
@@ -211,7 +214,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 2,
         title: 'electrolysis_cell_setup_multi',
         prompt:
           'Dilute AgNO3 (0.10 M), inert electrodes, pH ~7: choose the primary anode process, the primary cathode process, and electron flow in the external circuit.',
@@ -227,7 +230,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 7,
+        points: 1,
         title: 'corrosion_mitigation_multi',
         prompt:
           'A Zn washer is in contact with mild steel in aerated seawater (3.5% NaCl). Choose the metal that tends to corrode fastest, the best first mitigation, and what to monitor weekly.',
@@ -235,7 +238,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 1,
         title: 'corrosion_mitigation_multi',
         prompt:
           'A Cu fitting is coupled to galvanized (Zn-coated) steel in freshwater at pH 7.2. Choose the likely cathode region, the primary corrosion risk, and a mitigation that breaks the galvanic path.',
@@ -243,7 +246,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 1,
         title: 'corrosion_mitigation_multi',
         prompt:
           '304 stainless is bolted to aluminum in salt spray with chloride films present. Choose the main driving force for attack, a coating or isolation step, and a field inspection signal to track.',
@@ -254,12 +257,12 @@ const electrochemistrySelections: AssessmentSelection[] = [
   {
     id: 'ab-5',
     availableQuestions: 4,
-    numberToSelect: 4,
+    numberToSelect: 2,
     criteriaTag: 'electroplating_cell_roles',
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'copper_electroplating_setup_multi',
         prompt:
           'Acidic 0.80 M CuSO4, soluble Cu anode, steel jewelry as workpiece at 12 mA/cm^2: choose the workpiece electrode, where Cu2+ is reduced, and what happens at the anode.',
@@ -267,7 +270,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'copper_electroplating_setup_multi',
         prompt:
           'Cyanide-copper bath (prototype), Pt anode, brass part: choose where metal deposits, which electrode oxidizes water or supporting ions at the anode, and electron flow direction.',
@@ -275,7 +278,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'copper_electroplating_setup_multi',
         prompt:
           'Nickel strike then Cu plate from acid sulfate; current ramps from 2 A to 8 A over 5 min. Choose the cathode identity for Cu deposition, the role of the Ni layer, and the anode type if using soluble Cu.',
@@ -283,7 +286,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'copper_electroplating_setup_multi',
         prompt:
           'Hull cell trial at 3.0 V with a Cu anode dissolving unevenly: choose where to place the test panel, where reduction of Cu2+ occurs, and the risk if the anode passivates.',
@@ -299,7 +302,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'cata',
-        points: 5,
+        points: 1,
         title: 'energy_storage_comparison_cata',
         prompt: 'Select every statement that correctly compares battery and fuel-cell behavior.',
         learningObjective: 'Untagged objective',
@@ -321,7 +324,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'mcq',
-        points: 10,
+        points: 3,
         title: 'battery_discharge_curve_mcq',
         prompt: 'Which region of the discharge curve best indicates rapid voltage drop near end-of-life?',
         learningObjective: 'LO 1.3 Interpret electrochemical performance plots.',
@@ -338,7 +341,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'acidic_half_reaction_multi',
         prompt:
           'In acidic medium, write the balanced oxidation Fe2+ → Fe3+ using the dropdowns (electrons, Fe species, and H+/H2O as needed).',
@@ -346,7 +349,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'acidic_half_reaction_multi',
         prompt:
           'In acidic medium, balance the reduction of MnO4− to Mn2+ using the dropdowns (e−, Mn species, H+, H2O).',
@@ -354,7 +357,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 1,
         title: 'acidic_half_reaction_multi',
         prompt:
           'In acidic medium, balance the oxidation of Cr3+ to Cr2O7^2− using the dropdowns (e−, Cr-containing species, H2O/H+).',
@@ -370,7 +373,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'cata',
-        points: 5,
+        points: 1,
         title: 'galvanic_cell_behavior_cata',
         prompt: 'Mark all statements that are consistent with galvanic cell behavior.',
         learningObjective: 'LO 1.2 Compare galvanic and electrolytic cell properties.',
@@ -392,7 +395,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 7,
+        points: 3,
         title: 'water_treatment_electrolysis_multi',
         prompt:
           'Groundwater contains 2.1 mg/L Fe2+ and 18 mg/L NO3−. Choose the primary anodic oxidant pathway, the knob that most shifts current efficiency, and the online signal to log.',
@@ -400,7 +403,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 3,
         title: 'water_treatment_electrolysis_multi',
         prompt:
           'Industrial wastewater carries a phenolic trace at pH 6.5 with a BDD anode. Choose the dominant degradation route, the operating variable that raises mass-transfer limitation, and a surrogate measurement for removal.',
@@ -408,7 +411,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 3,
         title: 'water_treatment_electrolysis_multi',
         prompt:
           'As(III) is present at 120 μg/L in carbonate-buffered water. Choose the electrochemical step that targets valence change, the co-reactant often managed at the cathode, and the compliance sample point.',
@@ -427,7 +430,7 @@ const nuclearSelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'mcq',
-        points: 8,
+        points: 4,
         title: 'radiation_type_classification',
         prompt: 'Which sequence ranks alpha, beta, and gamma radiation from lowest to highest penetration in matter?',
         learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
@@ -435,7 +438,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'shielding_workflow_multi',
         prompt:
           'A Cs-137 source (662 keV gamma), 0.25 mCi stored behind a closed shield, is observed at 2.5 m. Choose primary shielding material, the handling practice that increases distance most reliably, and the first monitoring control you brief.',
@@ -443,7 +446,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'shielding_workflow_multi',
         prompt:
           'Co-60 pair source (1.17 & 1.33 MeV), 1.8 mCi combined, wall-mounted behind interlocked door. Choose the shielding emphasis for room egress, the transfer practice between storage and use, and the dosimetry expectation for instructors.',
@@ -451,7 +454,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'shielding_workflow_multi',
         prompt:
           'Low-energy gamma check source (≈35 keV), 5 μCi, used for detector lab at bench. Choose appropriate primary barrier type, the distance rule for unshielded line-of-sight, and the monitoring tool matched to energy.',
@@ -459,7 +462,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'shielding_workflow_multi',
         prompt:
           'Beta emitter (Emax 0.5 MeV) in sealed plastic mount for absorption curve lab; no gamma significant. Choose surface shielding students should still use, the distance practice for hands, and the contamination check emphasis.',
@@ -475,7 +478,7 @@ const nuclearSelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 7,
+        points: 4,
         title: 'internal_alpha_pathway_multi',
         prompt:
           'Inhaled insoluble alpha-bearing dust deposits in lung epithelium. Choose the dominant exposure pathway, why high-LET internally matters, and the first clinical follow-up emphasis.',
@@ -483,7 +486,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 4,
         title: 'internal_alpha_pathway_multi',
         prompt:
           'Am-241 in a sealed smoke detector: the seal integrity is compromised. For a small-ingestion concern, choose pathway of concern, the main risk amplifier versus external alpha, and the response training point.',
@@ -491,7 +494,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 4,
         title: 'internal_alpha_pathway_multi',
         prompt:
           'Equal committed effective dose is delivered either as whole-body gamma or as alpha to red marrow. Choose which exposure stresses deterministic limits first, why tissue weighting differs, and the communication takeaway.',
@@ -499,7 +502,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 7,
+        points: 4,
         title: 'internal_alpha_pathway_multi',
         prompt:
           'Compare radon progeny alpha dose to bronchial tissue with gamma from building materials. Choose the primary pathway for radon risk, the metric tied to mitigation, and why pathway changes the message.',
@@ -507,7 +510,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'mcq',
-        points: 7,
+        points: 4,
         title: 'dose_rate_biological_response',
         prompt: 'Two exposures deliver equal absorbed dose, but one is spread over weeks and one occurs in minutes. Which is typically more harmful?',
         learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
@@ -528,7 +531,7 @@ const nuclearSelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'cata',
-        points: 6,
+        points: 4,
         title: 'alara_controls_check',
         prompt: 'Select all practices that align with ALARA in an instructional lab.',
         learningObjective: 'LO 1.4 Apply practical radiation safety controls in lab scenarios.',
@@ -542,7 +545,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 4,
         title: 'alara_lab_sequence_multi',
         prompt:
           'A sealed Cs source is used for the first lab of the semester. Choose the first control before unshielding, the distance practice during cart transfer, and the log entry you require before class dismissal.',
@@ -550,7 +553,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 4,
         title: 'alara_lab_sequence_multi',
         prompt:
           'A beta source with acrylic step wedges is used in a room shared with an optics lab. Choose the pre-lab barrier check, the tool-use rule to maximize distance, and the survey meter sweep pattern emphasis.',
@@ -558,7 +561,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 4,
         title: 'alara_lab_sequence_multi',
         prompt:
           'A sealed capsule was dropped and its integrity is unknown. Choose the immediate cordon step, the first measurement objective, and the documentation trigger for EH&S.',
@@ -566,7 +569,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 6,
+        points: 4,
         title: 'alara_lab_sequence_multi',
         prompt:
           'During a guest lecture, students borrow portable meters while sources remain locked. Choose the student practice that best reduces collective dose, the instructor positioning rule, and the return checklist for meters.',
@@ -582,7 +585,7 @@ const nuclearSelections: AssessmentSelection[] = [
     exampleQuestions: [
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'pe_workup_tradeoffs_multi',
         prompt:
           '42-year-old with no renal failure, high Wells score, positive D-dimer. Choose the guiding imaging principle for first-line PE workup, the key message to radiology, and how you would approach shielding in pregnancy if applicable.',
@@ -590,7 +593,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'pe_workup_tradeoffs_multi',
         prompt:
           '68-year-old with eGFR 28 mL/min and suspected PE. Choose the modality bias balancing contrast load versus radiation, the team coordination step, and the documentation that supports justification.',
@@ -598,7 +601,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'pe_workup_tradeoffs_multi',
         prompt:
           'Young adult with low pretest probability and stable vitals. Choose whether advanced imaging is justified yet, the alternative pathway emphasis, and how you document shared decision-making.',
@@ -606,7 +609,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'multi-input',
-        points: 8,
+        points: 4,
         title: 'pe_workup_tradeoffs_multi',
         prompt:
           'After CTA, an incidental finding prompts debate about repeat imaging. Choose the principle for repeat imaging, how to reduce cumulative dose, and the communication priority with the patient.',
@@ -614,7 +617,7 @@ const nuclearSelections: AssessmentSelection[] = [
       },
       {
         kind: 'mcq',
-        points: 8,
+        points: 4,
         title: 'industrial_radiography_tradeoff',
         prompt: 'In industrial radiography, what is the strongest justification for controlled source use despite exposure risk?',
         learningObjective: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.',
@@ -636,13 +639,13 @@ const getPageObjectives = (assessmentTitle?: string): PageObjective[] => {
   const isNuclear = assessmentTitle?.toLowerCase().includes('nuclear');
   return isNuclear
     ? [
-        { code: 'LO 1.4', label: 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
-        { code: 'LO 1.5', label: 'LO 1.5 Explain how dose, pathway, and tissue sensitivity influence biological effects.' },
+        { code: 'LO 1.4', label: 'L1 Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
+        { code: 'LO 1.5', label: 'L2 Explain how dose, pathway, and tissue sensitivity influence biological effects.' },
       ]
     : [
-        { code: 'LO 1.1', label: 'LO 1.1 Balance redox equations and construct half-reactions.' },
-        { code: 'LO 1.2', label: 'LO 1.2 Predict electrochemical behavior and cell trends.' },
-        { code: 'LO 1.3', label: 'LO 1.3 Evaluate electrochemistry applications in real systems.' },
+        { code: 'LO 1.1', label: 'L1 Balance redox equations and construct half-reactions.' },
+        { code: 'LO 1.2', label: 'L2 Predict electrochemical behavior and cell trends.' },
+        { code: 'LO 1.3', label: 'L3 Evaluate electrochemistry applications in real systems.' },
       ];
 };
 
@@ -1037,7 +1040,7 @@ function AssessmentScreen() {
         title: 'Radiation Materials Safety Check',
         prompt: 'A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?',
         kind: 'mcq',
-        points: 6,
+        points: ASSESSMENT_EMBEDDED_QUESTION_POINTS,
         choices: [
           'Use paper shielding for all sources and keep all containers open for easier viewing.',
           'Use thick lead shielding for alpha sources only and remove barriers for beta and gamma sources.',
@@ -1054,7 +1057,7 @@ function AssessmentScreen() {
           ? 'Which factor most directly explains why equal absorbed doses can lead to different biological outcomes?'
           : 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?',
         kind: 'mcq',
-        points: 6,
+        points: ASSESSMENT_EMBEDDED_QUESTION_POINTS,
         choices: isNuclearAssessment
           ? [
               'All tissues respond identically to ionizing radiation.',
@@ -1082,6 +1085,22 @@ function AssessmentScreen() {
       }),
     [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions],
   );
+
+  const overallPageScore = useMemo(() => {
+    let total = 0;
+    assessmentSelections.forEach((selection) => {
+      if (removedBanks.includes(selection.id)) return;
+      const pointsPerQuestion = selection.exampleQuestions[0]?.points ?? 1;
+      total += selection.numberToSelect * pointsPerQuestion;
+    });
+    if (isNuclearAssessment && !removedEmbeddedQuestions.nuclearSafety) {
+      total += ASSESSMENT_EMBEDDED_QUESTION_POINTS;
+    }
+    if (!removedEmbeddedQuestions.exitQuestion) {
+      total += ASSESSMENT_EMBEDDED_QUESTION_POINTS;
+    }
+    return total;
+  }, [assessmentSelections, removedBanks, removedEmbeddedQuestions, isNuclearAssessment]);
 
   const showBankToast = (bankId: string, message: string) => {
     setBankToasts((current) => ({ ...current, [bankId]: message }));
@@ -1222,7 +1241,12 @@ function AssessmentScreen() {
   return (
     <InstructorShell>
       <div className="assessment-layout">
-        <AssessmentHeader coverageSummary={coverageSummary} viewMode={viewMode} onViewModeChange={setViewMode} />
+        <AssessmentHeader
+          coverageSummary={coverageSummary}
+          viewMode={viewMode}
+          onViewModeChange={setViewMode}
+          overallPageScore={overallPageScore}
+        />
         <div className="assessment-content">
           {attemptsStarted && !isStudentPreview ? (
             <div className="attempts-banner" role="status" aria-live="polite">
@@ -1311,7 +1335,7 @@ function AssessmentScreen() {
                   {embeddedToasts.nuclearSafety ? <SuccessToast message={embeddedToasts.nuclearSafety} inline /> : null}
                   <QuestionTypeCard
                     kind="mcq"
-                    points={6}
+                    points={ASSESSMENT_EMBEDDED_QUESTION_POINTS}
                     title="Radiation Materials Safety Check"
                     prompt="A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?"
                     learningObjective="LO 1.4 Compare shielding and handling strategies for common radiation types."
@@ -1333,7 +1357,7 @@ function AssessmentScreen() {
               {embeddedToasts.exitQuestion ? <SuccessToast message={embeddedToasts.exitQuestion} inline /> : null}
               <QuestionTypeCard
                 kind="mcq"
-                points={6}
+                points={ASSESSMENT_EMBEDDED_QUESTION_POINTS}
                 title={isNuclearAssessment ? 'Biological Effects Exit Question' : 'Electrochemistry Exit Question'}
                 prompt={
                   isNuclearAssessment
@@ -2088,14 +2112,38 @@ function BulkWarningModal({
   );
 }
 
+function IconScoredPageFlag() {
+  return (
+    <svg className="assessment-page-ribbon__flag-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+      <path
+        fill="#ea580c"
+        d="M2 1.5h1.25v12H2v-12zm1.25 2.2l3.25 1.45 5.5-2.05v5.4l-5.5 2.05-3.25-1.45V3.7z"
+      />
+    </svg>
+  );
+}
+
+function IconScoreStar() {
+  return (
+    <svg className="assessment-page-score-badge__star" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M12 17.3 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+      />
+    </svg>
+  );
+}
+
 function AssessmentHeader({
   coverageSummary,
   viewMode,
   onViewModeChange,
+  overallPageScore,
 }: {
   coverageSummary: { coverage: ObjectiveCoverage[]; taggedIncluded: number; untaggedIncluded: number };
   viewMode: ViewMode;
   onViewModeChange: (mode: ViewMode) => void;
+  overallPageScore: number;
 }) {
   const location = useLocation();
   const [viewMenuOpen, setViewMenuOpen] = useState(false);
@@ -2164,40 +2212,73 @@ function AssessmentHeader({
       </div>
       <div className="assessment-nav">
         <Breadcrumbs items={breadcrumbTrail} />
+        <div className="assessment-page-ribbon">
+          <div className="assessment-page-ribbon__left">
+            <span className="assessment-page-ribbon__eyebrow">UNIT 1</span>
+            <span className="assessment-page-ribbon__sep" aria-hidden="true" />
+            <span className="assessment-page-ribbon__flag" aria-hidden="true">
+              <IconScoredPageFlag />
+            </span>
+            <span className="assessment-page-ribbon__eyebrow">SCORED PAGE</span>
+          </div>
+          <div className="assessment-page-ribbon__right">
+            <span className="assessment-page-ribbon__score-label">Overall Page Score</span>
+            <span className="assessment-page-score-badge">
+              <IconScoreStar />
+              {overallPageScore}
+            </span>
+          </div>
+        </div>
         <h1 className="assessment-title">{assessmentTitle}</h1>
+        <p className="assessment-dates">
+          <span>Available by: Fri Sept 20, 2024</span>
+          <span className="assessment-dates__sep" aria-hidden="true">
+            ·
+          </span>
+          <span>Due by: Sat Sept 21, 2024</span>
+        </p>
         {viewMode === 'student' ? (
           <div className="student-preview-badge">Preview only - students will not see instructor controls.</div>
         ) : (
           <div className="learning-objectives">
-            <div className="learning-objectives__label">Learning Objectives</div>
-            <div className="learning-objective-checker__meta">
-              Tagged: {coverageSummary.taggedIncluded} · Untagged: {coverageSummary.untaggedIncluded}
-              {coverageSummary.untaggedIncluded > 0 ? (
-                <span className="learning-objective-checker__meta-warning">
-                  Coverage may be understated due to untagged questions.
-                </span>
-              ) : null}
+            <div className="learning-objectives__head">
+              <div className="learning-objectives__label">Learning Objectives &amp; Proficiency</div>
+              
             </div>
-            {objectives.map((objective) => {
-              const item = coverageSummary.coverage.find((coverage) => coverage.objective.code === objective.code);
-              const state = item?.state ?? 'not-covered';
-              return (
-                <div key={objective.code} className="learning-objective-item learning-objective-item--with-coverage">
-                  <div className="learning-objective-item__main">
-                    {state !== 'healthy' ? <img src={warningIcon} alt="" aria-hidden="true" /> : <img src={checkIcon} alt="" aria-hidden="true" />}
-                    <span>{objective.label}</span>
-                  </div>
-                  <div className="learning-objective-item__coverage">
-                    <div className={state === 'healthy' ? 'learning-objective-checker__range' : 'learning-objective-checker__range is-warning'}>
-                      {(item?.min ?? 0) === (item?.max ?? 0) ? `${item?.min ?? 0} questions` : `${item?.min ?? 0}-${item?.max ?? 0} questions`}
+            <p className="learning-objectives__caption">
+              Question counts update as questions are removed or restored and include questions tagged to objectives and their sub-objectives.
+              Counts may be lower if some questions are not tagged.
+            </p>
+            <ul className="learning-objectives__list" aria-label="Learning objectives coverage">
+              {objectives.map((objective) => {
+                const item = coverageSummary.coverage.find((coverage) => coverage.objective.code === objective.code);
+                const state = item?.state ?? 'not-covered';
+                return (
+                  <li key={objective.code} className="learning-objective-item learning-objective-item--with-coverage">
+                    <div className="learning-objective-item__main">
+                      {state !== 'healthy' ? <img src={warningIcon} alt="" aria-hidden="true" /> : <img src={checkIcon} alt="" aria-hidden="true" />}
+                      <span className="learning-objective-item__text">{objective.label}</span>
                     </div>
-                    <div className="learning-objective-checker__state">
-                      {state === 'not-covered' ? 'No coverage' : state === 'at-risk' ? 'At risk' : 'Guaranteed'}
+                    <div className="learning-objective-item__coverage">
+                      <div className={state === 'healthy' ? 'learning-objective-checker__range' : 'learning-objective-checker__range is-warning'}>
+                        {(item?.min ?? 0) === (item?.max ?? 0) ? (
+                          <>
+                            <strong>{item?.min ?? 0}</strong> questions
+                          </>
+                        ) : (
+                          <>
+                            <strong>
+                              {item?.min ?? 0}-{item?.max ?? 0}
+                            </strong>{' '}
+                            questions
+                          </>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         )}
       </div>
@@ -2227,93 +2308,89 @@ function ActivityBankSelectionCard({
   canManage: boolean;
 }) {
   const navigate = useNavigate();
-  const [exampleIndex, setExampleIndex] = useState(0);
-  const previewQuestions = selection.exampleQuestions.slice(0, Math.max(1, selection.numberToSelect));
-  const previewCount = previewQuestions.length;
-  const safeExampleIndex = previewCount > 0 ? exampleIndex % previewCount : 0;
-  const exampleQuestion = previewQuestions[safeExampleIndex] ?? selection.exampleQuestions[0];
+  const exampleQuestion = selection.exampleQuestions[0];
+
+  const selectsLabel =
+    selection.numberToSelect === 1 ? '1 question' : `${selection.numberToSelect} questions`;
 
   return (
     <section id={`bank-${selection.id}`} className={removed ? 'bank-card-wrapper bank-card-wrapper--removed' : 'bank-card-wrapper'}>
       {toastMessage ? <SuccessToast message={toastMessage} inline /> : null}
       <div className={removed ? 'bank-card bank-card--removed' : 'bank-card'}>
-      <div className="bank-card__header">
-        <div>
-          <div className="muted-caption">{questionsAvailableCount} questions available</div>
-          <div className="bank-card__title-row">
-            <h2>Activity Bank Selection</h2>
-            {removed ? <span className="status-pill">Removed</span> : null}
+        <div className="bank-card__header">
+          <div className="bank-card__header-main">
+            <h2 className="bank-card__title">Activity Bank Selection</h2>
+            {removed ? <span className="status-pill bank-card__status-pill">Removed</span> : null}
           </div>
-        </div>
-        {canManage ? (
-          <button className={removed ? 'button button--secondary button--small' : 'button button--danger button--small'} onClick={onToggleRemove}>
-            {removed ? 'Restore' : 'Remove'}
-          </button>
-        ) : null}
-      </div>
-      <div className="bank-card__stats">
-        <TagStat label="Number to select" value={String(selection.numberToSelect)} />
-        <TagStat label="Points per question" value={String(exampleQuestion.points)} />
-      </div>
-      <div className="criteria-block">
-        <div className="criteria-label">Criteria for selection:</div>
-        <div className="criteria-tag">{selection.criteriaTag}</div>
-      </div>
-      <button
-        className="button button--primary button--small bank-card__action"
-        onClick={() =>
-          navigate('/inside-bank', {
-            state: { bankId: selection.id, attemptsStarted, assessmentTitle, breadcrumbTrail },
-          })
-        }
-      >
-        View more questions
-      </button>
-      <div className="example-block">
-        <div className="example-header">
-          <p className="example-label">Example selection:</p>
-          {previewCount > 1 ? (
-            <div className="example-pagination">
-              <button
-                className="button button--secondary button--small pagination-nav-btn"
-                onClick={() => setExampleIndex((current) => (current === 0 ? previewCount - 1 : current - 1))}
-              >
-                Previous
-              </button>
-              <span>
-                {safeExampleIndex + 1} / {previewCount}
-              </span>
-              <div className="example-shortcuts" role="tablist" aria-label="Example question shortcuts">
-                {previewQuestions.map((_, index) => (
-                  <button
-                    key={index}
-                    className={safeExampleIndex === index ? 'example-shortcut is-active' : 'example-shortcut'}
-                    onClick={() => setExampleIndex(index)}
-                  >
-                    Q{index + 1}
-                  </button>
-                ))}
-              </div>
-              <button
-                className="button button--secondary button--small pagination-nav-btn"
-                onClick={() => setExampleIndex((current) => (current + 1) % previewCount)}
-              >
-                Next
-              </button>
-            </div>
+          {canManage ? (
+            <button
+              type="button"
+              className={
+                removed
+                  ? 'button button--secondary button--small bank-card__header-action'
+                  : 'button button--danger button--small bank-card__header-action bank-card__remove-action'
+              }
+              onClick={onToggleRemove}
+            >
+              {removed ? null : <img src={deleteIcon} alt="" aria-hidden="true" />}
+              {removed ? 'Restore' : 'Remove'}
+            </button>
           ) : null}
         </div>
-        <QuestionTypeCard
-          kind={exampleQuestion.kind}
-          points={exampleQuestion.points}
-          title={exampleQuestion.title}
-          prompt={exampleQuestion.prompt}
-          learningObjective={exampleQuestion.learningObjective}
-          choices={exampleQuestion.choices}
-          cataStatements={exampleQuestion.cataStatements}
-          showGraph={exampleQuestion.showGraph}
-        />
-      </div>
+
+        <div className="bank-card__meta">
+          <p className="bank-card__availability">
+            <strong>
+              {questionsAvailableCount} question{questionsAvailableCount === 1 ? '' : 's'} available
+            </strong>
+          </p>
+          <div className="bank-card__stats-row">
+            <span className="bank-card__stat-line">
+              <span className="bank-card__stat-label">Selects:</span>{' '}
+              <span className="bank-card__stat-value">{selectsLabel}</span>
+            </span>
+            <span className="bank-card__stat-line">
+              <span className="bank-card__stat-label">Points per question:</span>{' '}
+              <span className="bank-card__stat-value">{exampleQuestion.points}</span>
+            </span>
+          </div>
+        </div>
+
+        <div className="bank-card__criteria-figma">
+          <div className="bank-card__criteria-heading">Selection criteria:</div>
+          <div className="bank-card__criteria-tags-label">Tags:</div>
+          <div className="bank-card__criteria-tags-box">{selection.criteriaTag}</div>
+        </div>
+
+        <button
+          type="button"
+          className="button button--primary button--small bank-card__manage"
+          onClick={() =>
+            navigate('/inside-bank', {
+              state: { bankId: selection.id, attemptsStarted, assessmentTitle, breadcrumbTrail },
+            })
+          }
+        >
+          Manage questions →
+        </button>
+
+        <div className="bank-card__divider" aria-hidden="true" />
+
+        <div className="bank-card__sample">
+          <p className="bank-card__sample-label">Sample question from this bank:</p>
+          <div className="bank-card__sample-body">
+            <QuestionTypeCard
+              kind={exampleQuestion.kind}
+              points={exampleQuestion.points}
+              title={exampleQuestion.title}
+              prompt={exampleQuestion.prompt}
+              learningObjective={exampleQuestion.learningObjective}
+              choices={exampleQuestion.choices}
+              cataStatements={exampleQuestion.cataStatements}
+              showGraph={exampleQuestion.showGraph}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
