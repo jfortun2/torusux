@@ -656,7 +656,31 @@ button {
   box-shadow: 0 7px 7.6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2px;
   min-height: 82px;
-  padding: 22px 0 0 60px;
+  padding: 22px 60px 0;
+}
+
+.instructor-bar__row {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.instructor-bar__return {
+  color: var(--blue);
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 4px 0;
+  text-decoration: none;
+}
+
+.instructor-bar__return:hover {
+  color: #005fc0;
+  text-decoration: underline;
 }
 
 .instructor-bar--student {
