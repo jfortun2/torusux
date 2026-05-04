@@ -60,7 +60,6 @@ type BankQuestionRow = {
   kind: QuestionKind;
   points: number;
   learningObjective: string;
-  difficulty: 'Easy' | 'Medium' | 'Hard';
   choices?: string[];
   cataStatements?: string[];
   showGraph?: boolean;
@@ -424,7 +423,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
 const nuclearSelections: AssessmentSelection[] = [
   {
     id: 'n-ab-1',
-    availableQuestions: 8,
+    availableQuestions: 50,
     numberToSelect: 2,
     criteriaTag: 'radiation_types_and_penetration',
     exampleQuestions: [
@@ -974,6 +973,7 @@ function AssessmentScreen() {
     attemptsStarted?: boolean;
     assessmentTitle?: string;
     breadcrumbTrail?: BreadcrumbItem[];
+    scrollToBankId?: string;
   } | null;
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
   const [removedBanks, setRemovedBanks] = useState<string[]>(() => loadAssessmentDraft(assessmentTitle).removedBanks);
@@ -993,12 +993,14 @@ function AssessmentScreen() {
   const studentPreviewData = useMemo(() => {
     const usesVariantNaming = usesTaggedVariantNaming(assessmentTitle);
     const isElectrochemistry = isElectrochemistryUnitCheckpoint(assessmentTitle);
+    const isNuclearCheckpoint = isNuclearUnitCheckpoint(assessmentTitle);
     const banks: StudentPreviewBank[] = assessmentSelections
       .filter((selection) => !removedBanks.includes(selection.id))
       .map((selection, index) => {
-        const candidateCount = isElectrochemistry
-          ? selection.availableQuestions
-          : Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
+        const candidateCount =
+          isElectrochemistry || isNuclearCheckpoint
+            ? selection.availableQuestions
+            : Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
         const candidateQuestions: StudentPreviewQuestion[] = Array.from({ length: candidateCount }).map((_, questionIndex) => {
           const seeded = selection.exampleQuestions[questionIndex % selection.exampleQuestions.length];
           if (usesVariantNaming) {
@@ -1238,6 +1240,14 @@ function AssessmentScreen() {
     setPendingEmbeddedRemoveId(questionId);
   };
 
+  useLayoutEffect(() => {
+    const bankId = state?.scrollToBankId;
+    if (!bankId) return;
+    const el = document.getElementById(`bank-${bankId}`);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [state?.scrollToBankId, assessmentTitle]);
+
   return (
     <InstructorShell>
       <div className="assessment-layout">
@@ -1436,6 +1446,11 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const assessmentSelections = getAssessmentSelections(state?.assessmentTitle);
   const selectedBank = assessmentSelections.find((bank) => bank.id === state?.bankId) ?? assessmentSelections[0];
   const attemptsStarted = state?.attemptsStarted ?? false;
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname, location.key, state?.bankId, bulkEdit]);
+
   const generatedQuestionCount = selectedBank.availableQuestions;
   const variantSuffix = [
     'with a conceptual check',
@@ -1449,7 +1464,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     if (usesTaggedVariantNaming(assessmentTitle)) {
       return Array.from({ length: generatedQuestionCount }).map((_, index) => {
         const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
-        const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
         const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index) : undefined;
         const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index) : undefined;
         const id = `${selectedBank.id}-q-${index + 1}`;
@@ -1463,14 +1477,12 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           choices: rotatedChoices,
           cataStatements: rotatedStatements,
           showGraph: seeded.showGraph,
-          difficulty,
           removed: removedIdSet.has(id),
         };
       });
     }
     return Array.from({ length: generatedQuestionCount }).map((_, index) => {
       const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
-      const difficulty = index % 3 === 0 ? 'Easy' : index % 3 === 1 ? 'Medium' : 'Hard';
       const promptVariant = index < selectedBank.exampleQuestions.length ? seeded.prompt : `${seeded.prompt} (${variantSuffix[index % variantSuffix.length]})`;
       const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined;
       const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length) : undefined;
@@ -1485,7 +1497,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
         choices: rotatedChoices,
         cataStatements: rotatedStatements,
         showGraph: seeded.showGraph,
-        difficulty,
         removed: removedIdSet.has(id),
       };
     });
@@ -1495,7 +1506,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const [searchText, setSearchText] = useState('');
   const [learningObjectiveFilter, setLearningObjectiveFilter] = useState('all');
   const [questionTypeFilter, setQuestionTypeFilter] = useState('all');
-  const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [limitModalContext, setLimitModalContext] = useState<{ remaining: number } | null>(null);
   const [pendingRemoval, setPendingRemoval] = useState<{ type: 'question'; ids: string[] } | null>(null);
@@ -1506,7 +1516,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     if (filterMode === 'removed' && !question.removed) return false;
     if (learningObjectiveFilter !== 'all' && question.learningObjective !== learningObjectiveFilter) return false;
     if (questionTypeFilter !== 'all' && question.kind !== questionTypeFilter) return false;
-    if (difficultyFilter !== 'all' && question.difficulty !== difficultyFilter) return false;
     if (
       normalizedSearch &&
       !`${question.id} ${question.title} ${question.prompt} ${question.learningObjective} ${(question.choices ?? []).join(' ')} ${(question.cataStatements ?? []).join(' ')}`
@@ -1570,7 +1579,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     setSearchText('');
     setLearningObjectiveFilter('all');
     setQuestionTypeFilter('all');
-    setDifficultyFilter('all');
   };
 
   const questionTypeLabel = (kind: QuestionKind) =>
@@ -1585,7 +1593,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     setSearchText('');
     setLearningObjectiveFilter('all');
     setQuestionTypeFilter('all');
-    setDifficultyFilter('all');
     setSelected(bulkEdit ? baseQuestions.filter((question) => !question.removed).slice(0, 6).map((question) => question.id) : []);
     setActiveQuestionId(baseQuestions[0]?.id ?? '');
   }, [baseQuestions, bulkEdit]);
@@ -1667,7 +1674,12 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           type="button"
           onClick={() =>
             navigate('/assessment-default', {
-              state: { attemptsStarted, assessmentTitle: state?.assessmentTitle, breadcrumbTrail: state?.breadcrumbTrail },
+              state: {
+                attemptsStarted,
+                assessmentTitle: state?.assessmentTitle,
+                breadcrumbTrail: state?.breadcrumbTrail,
+                scrollToBankId: selectedBank.id,
+              },
             })
           }
         >
@@ -1719,12 +1731,6 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                   {questionTypeLabel(kind)}
                 </option>
               ))}
-            </select>
-            <select className="select filter-select" aria-label="Difficulty" value={difficultyFilter} onChange={(event) => setDifficultyFilter(event.target.value)}>
-              <option value="all">Difficulty</option>
-              <option value="Easy">Easy</option>
-              <option value="Medium">Medium</option>
-              <option value="Hard">Hard</option>
             </select>
             <button className="clear-link clear-link--toolbar" onClick={clearFilters}>Clear All Filters</button>
           </div>
@@ -1836,6 +1842,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                 attemptsStarted,
                 assessmentTitle: state?.assessmentTitle,
                 breadcrumbTrail: state?.breadcrumbTrail,
+                scrollToBankId: selectedBank.id,
               },
             });
           }}
