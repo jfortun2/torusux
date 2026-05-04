@@ -2155,56 +2155,57 @@ function AssessmentHeader({
   const location = useLocation();
   const [viewMenuOpen, setViewMenuOpen] = useState(false);
   const state = location.state as { breadcrumbTrail?: BreadcrumbItem[]; assessmentTitle?: string } | null;
-  const breadcrumbTrail = state?.breadcrumbTrail ?? [
-    { label: 'Customize Content', to: '/customize' },
-    { label: 'Assessment' },
-  ];
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
   const objectives = getPageObjectives(assessmentTitle);
 
   return (
     <>
       <div className={viewMode === 'student' ? 'instructor-bar instructor-bar--student' : 'instructor-bar'}>
-        <div className="view-switcher">
-          <button
-            type="button"
-            className="instructor-pill instructor-pill--dropdown"
-            onClick={() => setViewMenuOpen((open) => !open)}
-            aria-haspopup="menu"
-            aria-expanded={viewMenuOpen}
-          >
-            <img className="instructor-pill__icon" src={viewMode === 'student' ? studentIcon : instructorIcon} alt="" aria-hidden="true" />
-            <span>{viewMode === 'instructor' ? 'Instructor view' : 'Student preview'}</span>
-            <img src={chevronDownIcon} alt="" aria-hidden="true" className={viewMenuOpen ? 'instructor-pill__chevron is-open' : 'instructor-pill__chevron'} />
-          </button>
-          {viewMenuOpen ? (
-            <div className="view-switcher__menu" role="menu" aria-label="View mode">
-              <button
-                type="button"
-                role="menuitemradio"
-                aria-checked={viewMode === 'instructor'}
-                className={viewMode === 'instructor' ? 'view-switcher__item is-active' : 'view-switcher__item'}
-                onClick={() => {
-                  onViewModeChange('instructor');
-                  setViewMenuOpen(false);
-                }}
-              >
-                Instructor view
-              </button>
-              <button
-                type="button"
-                role="menuitemradio"
-                aria-checked={viewMode === 'student'}
-                className={viewMode === 'student' ? 'view-switcher__item is-active' : 'view-switcher__item'}
-                onClick={() => {
-                  onViewModeChange('student');
-                  setViewMenuOpen(false);
-                }}
-              >
-                Student preview
-              </button>
-            </div>
-          ) : null}
+        <div className="instructor-bar__row">
+          <div className="view-switcher">
+            <button
+              type="button"
+              className="instructor-pill instructor-pill--dropdown"
+              onClick={() => setViewMenuOpen((open) => !open)}
+              aria-haspopup="menu"
+              aria-expanded={viewMenuOpen}
+            >
+              <img className="instructor-pill__icon" src={viewMode === 'student' ? studentIcon : instructorIcon} alt="" aria-hidden="true" />
+              <span>{viewMode === 'instructor' ? 'Instructor view' : 'Student preview'}</span>
+              <img src={chevronDownIcon} alt="" aria-hidden="true" className={viewMenuOpen ? 'instructor-pill__chevron is-open' : 'instructor-pill__chevron'} />
+            </button>
+            {viewMenuOpen ? (
+              <div className="view-switcher__menu" role="menu" aria-label="View mode">
+                <button
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked={viewMode === 'instructor'}
+                  className={viewMode === 'instructor' ? 'view-switcher__item is-active' : 'view-switcher__item'}
+                  onClick={() => {
+                    onViewModeChange('instructor');
+                    setViewMenuOpen(false);
+                  }}
+                >
+                  Instructor view
+                </button>
+                <button
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked={viewMode === 'student'}
+                  className={viewMode === 'student' ? 'view-switcher__item is-active' : 'view-switcher__item'}
+                  onClick={() => {
+                    onViewModeChange('student');
+                    setViewMenuOpen(false);
+                  }}
+                >
+                  Student preview
+                </button>
+              </div>
+            ) : null}
+          </div>
+          <Link to="/customize" className="instructor-bar__return">
+            Return to Customize Content
+          </Link>
         </div>
       </div>
       <div className="assessment-topbar">
@@ -2218,7 +2219,6 @@ function AssessmentHeader({
         </button>
       </div>
       <div className="assessment-nav">
-        <Breadcrumbs items={breadcrumbTrail} />
         <div className="assessment-page-ribbon">
           <div className="assessment-page-ribbon__left">
             <span className="assessment-page-ribbon__eyebrow">UNIT 1</span>
