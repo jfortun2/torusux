@@ -1268,7 +1268,9 @@ function AssessmentScreen() {
             {!isStudentPreview ? <div className="assessment-shortcuts-card">
               <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
                 <span className="jump-section-header__label">Jump to section</span>
-                <span className="jump-section-header__meta">{assessmentSelections.length} Activity Banks · 1 Embedded Question</span>
+                <span className="jump-section-header__meta">
+                  {assessmentSelections.length} Activity Bank Selection{assessmentSelections.length === 1 ? '' : 's'} · 1 Embedded Question
+                </span>
                 <img src={chevronDownIcon} alt="" aria-hidden="true" className={showJumpLinks ? 'jump-section-header__chevron is-open' : 'jump-section-header__chevron'} />
               </button>
               {showJumpLinks ? (
@@ -1276,7 +1278,7 @@ function AssessmentScreen() {
                   <div className="assessment-shortcuts" role="navigation" aria-label="Jump to section links">
                     {assessmentSelections.map((selection, index) => (
                       <button key={selection.id} type="button" className="shortcut-chip" onClick={() => jumpTo(`bank-${selection.id}`)}>
-                        Activity Bank {index + 1}
+                        Selection {index + 1}
                       </button>
                     ))}
                     <button type="button" className="shortcut-chip shortcut-chip--embedded" onClick={() => jumpTo('embedded-question')}>
@@ -1948,22 +1950,6 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
                       <p>Feedback for incorrect answer:</p>
                       <div className="muted-input">Incorrect. Revisit the key relationship tested in this item and compare each option against that rule.</div>
                     </div>
-                    <div className="feedback-block">
-                      <p>Activity scoring method:</p>
-                      <label className="check-row">
-                        <input type="checkbox" />
-                        <span>Use default scoring</span>
-                      </label>
-                    </div>
-                    <div className="feedback-block">
-                      <p>Scoring:</p>
-                      <div className="scoring-grid">
-                        <span>Correct answer score:</span>
-                        <span className="score-pill">{question.points}</span>
-                        <span>Incorrect answer score:</span>
-                        <span className="score-pill">0</span>
-                      </div>
-                    </div>
                   </>
                 ) : null}
                 {question.kind === 'multi-input' ? (
@@ -1983,28 +1969,6 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
                       <p>Feedback for incorrect answer:</p>
                       <div className="muted-input">Incorrect for part {selectedDropdownPart}. Re-evaluate the balancing constraints for this position.</div>
                     </div>
-                    <div className="feedback-block">
-                      <p>Activity scoring method:</p>
-                      <label className="check-row">
-                        <input type="checkbox" />
-                        <span>Use default scoring</span>
-                      </label>
-                    </div>
-                    <div className="feedback-block">
-                      <div className="scoring-grid">
-                        <span>Scoring strategy</span>
-                        <span className="strategy-select">Total</span>
-                      </div>
-                    </div>
-                    <div className="feedback-block">
-                      <p>Scoring:</p>
-                      <div className="scoring-grid">
-                        <span>Correct answer score:</span>
-                        <span className="score-pill">2</span>
-                        <span>Incorrect answer score:</span>
-                        <span className="score-pill">0</span>
-                      </div>
-                    </div>
                   </>
                 ) : null}
                 {question.kind === 'cata' ? (
@@ -2023,28 +1987,6 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
                       <p>Feedback for incorrect answer:</p>
                       <div className="muted-input">Incorrect. One or more selected statements conflict with the core concept.</div>
                     </div>
-                    <div className="feedback-block">
-                      <p>Activity scoring method:</p>
-                      <label className="check-row">
-                        <input type="checkbox" />
-                        <span>Use default scoring</span>
-                      </label>
-                    </div>
-                    <div className="feedback-block">
-                      <div className="scoring-grid">
-                        <span>Scoring strategy</span>
-                        <span className="strategy-select">Total</span>
-                      </div>
-                    </div>
-                    <div className="feedback-block">
-                      <p>Scoring:</p>
-                      <div className="scoring-grid">
-                        <span>Correct answer score:</span>
-                        <span className="score-pill">{question.points}</span>
-                        <span>Incorrect answer score:</span>
-                        <span className="score-pill">0</span>
-                      </div>
-                    </div>
                   </>
                 ) : null}
                 {question.kind === 'short-answer' ? (
@@ -2052,22 +1994,6 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
                     <div className="feedback-block">
                       <p>Expected response:</p>
                       <div className="muted-input">A complete response should include the core concept, a justification step, and correct scientific terminology.</div>
-                    </div>
-                    <div className="feedback-block">
-                      <p>Activity scoring method:</p>
-                      <label className="check-row">
-                        <input type="checkbox" />
-                        <span>Use rubric scoring</span>
-                      </label>
-                    </div>
-                    <div className="feedback-block">
-                      <p>Scoring:</p>
-                      <div className="scoring-grid">
-                        <span>Maximum score:</span>
-                        <span className="score-pill">{question.points}</span>
-                        <span>Minimum score:</span>
-                        <span className="score-pill">0</span>
-                      </div>
                     </div>
                   </>
                 ) : null}
@@ -2478,22 +2404,6 @@ function QuestionTypeCard({
             <p>Feedback for incorrect answer:</p>
             <div className="muted-input">Incorrect. Consider the stage where moles of analyte equal moles of titrant and the pH curve changes most rapidly around the equivalence region.</div>
           </div>
-          <div className="feedback-block">
-            <p>Activity scoring method:</p>
-            <label className="check-row">
-              <input type="checkbox" />
-              <span>Use default scoring</span>
-            </label>
-          </div>
-          <div className="feedback-block">
-            <p>Scoring:</p>
-            <div className="scoring-grid">
-              <span>Correct answer score:</span>
-              <span className="score-pill">10</span>
-              <span>Incorrect answer score:</span>
-              <span className="score-pill">0</span>
-            </div>
-          </div>
         </div>
       );
     }
@@ -2516,28 +2426,6 @@ function QuestionTypeCard({
             <p>Feedback for incorrect answer:</p>
             <div className="muted-input">Incorrect for Part {selectedDropdownPart}.</div>
           </div>
-          <div className="feedback-block">
-            <p>Activity scoring method:</p>
-            <label className="check-row">
-              <input type="checkbox" />
-              <span>Use default scoring</span>
-            </label>
-          </div>
-          <div className="feedback-block">
-            <div className="scoring-grid">
-              <span>Scoring strategy</span>
-              <span className="strategy-select">Total</span>
-            </div>
-          </div>
-          <div className="feedback-block">
-            <p>Scoring:</p>
-            <div className="scoring-grid">
-              <span>Correct answer score:</span>
-              <span className="score-pill">2</span>
-              <span>Incorrect answer score:</span>
-              <span className="score-pill">0</span>
-            </div>
-          </div>
         </div>
       );
     }
@@ -2548,13 +2436,6 @@ function QuestionTypeCard({
           <div className="feedback-block">
             <p>Expected response:</p>
             <div className="muted-input">A complete explanation should reference atom balance, charge balance, and justification of species added in acidic conditions.</div>
-          </div>
-          <div className="feedback-block">
-            <p>Activity scoring method:</p>
-            <label className="check-row">
-              <input type="checkbox" />
-              <span>Use rubric scoring</span>
-            </label>
           </div>
         </div>
       );
@@ -2586,28 +2467,6 @@ function QuestionTypeCard({
         <div className="feedback-block">
           <p>Feedback for incorrect answer:</p>
           <div className="muted-input">Incorrect.</div>
-        </div>
-        <div className="feedback-block">
-          <p>Activity scoring method:</p>
-          <label className="check-row">
-            <input type="checkbox" />
-            <span>Use default scoring</span>
-          </label>
-        </div>
-        <div className="feedback-block">
-          <div className="scoring-grid">
-            <span>Scoring strategy</span>
-            <span className="strategy-select">Total</span>
-          </div>
-        </div>
-        <div className="feedback-block">
-          <p>Scoring:</p>
-          <div className="scoring-grid">
-            <span>Correct answer score:</span>
-            <span className="score-pill">5</span>
-            <span>Incorrect answer score:</span>
-            <span className="score-pill">0</span>
-          </div>
         </div>
       </div>
     );
