@@ -7,6 +7,7 @@ import {
   persistAssessmentSurface,
   persistBankRemovedQuestionIds,
 } from './assessmentDraftStorage';
+import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
 import hideIcon from './assets/icon-hide.png';
@@ -114,7 +115,7 @@ const usesTaggedVariantNaming = (assessmentTitle?: string) =>
 /** Points per embedded item; must match bank totals so the header “Overall Page Score” is 30 for the default layout. */
 const ASSESSMENT_EMBEDDED_QUESTION_POINTS = 3;
 
-const materials: Material[] = [
+export const materials: Material[] = [
   { id: 'm1', title: 'Foundational Concepts of Electrochemistry', type: 'bank' },
   { id: 'm2', title: 'Galvanic Cells', type: 'bank' },
   { id: 'm3', title: 'Other Applications of Electrochemistry', type: 'bank' },
@@ -916,51 +917,9 @@ function ManageScreen() {
 }
 
 function CustomizeScreen() {
-  const navigate = useNavigate();
-
   return (
     <AppShell>
-      <div className="content-column content-column--wide customize-content">
-        <Breadcrumbs items={['Manage', 'Customize Content']} />
-        <div className="page-header">
-          <div>
-            <h1>Chemistry 101</h1>
-            <p>Customize your curriculum by adding, removing and rearranging course materials.</p>
-          </div>
-          <div className="button-row">
-            <button className="button button--subtle">Cancel</button>
-            <button className="button button--disabled">Save</button>
-          </div>
-        </div>
-        <div className="pill-row">
-          <button className="pill pill--active">Curriculum</button>
-          <button className="pill">Electrochemistry</button>
-        </div>
-        <div className="stack-md">
-          {materials.map((material) => (
-            <MaterialRow
-              key={material.id}
-              material={material}
-              onEdit={(assessment) =>
-                navigate('/assessment-default', {
-                  state: {
-                    assessmentTitle: assessment.title,
-                    attemptsStarted: assessment.attemptsStarted ?? false,
-                    breadcrumbTrail: [
-                      { label: 'Manage', to: '/' },
-                      { label: 'Customize Content', to: '/customize' },
-                      { label: assessment.title },
-                    ],
-                  },
-                })
-              }
-            />
-          ))}
-        </div>
-        <div className="footer-actions">
-          <button className="button button--primary">Add Materials</button>
-        </div>
-      </div>
+      <ImportedCustomizeScreen breadcrumbs={<Breadcrumbs items={['Manage', 'Customize Content']} />} />
     </AppShell>
   );
 }
@@ -2700,7 +2659,7 @@ function StudentAssessmentPreview({
   );
 }
 
-function MaterialRow({ material, onEdit }: { material: Material; onEdit: (assessment: Material) => void }) {
+export function MaterialRow({ material, onEdit }: { material: Material; onEdit: (assessment: Material) => void }) {
   const titleIsLink = material.type === 'bank';
   const rowIcon = material.type === 'bank' ? containerIcon : pageIcon;
 
