@@ -4,6 +4,7 @@ import chevronDownIcon from './assets/icon-chevron-down.png';
 import containerIcon from './assets/icon-container.png';
 import editIcon from './assets/icon-edit.png';
 import pageIcon from './assets/icon-page.png';
+import { CoverageImpactPanel } from './PageCustomize';
 import {
   addChildNode,
   canMoveNode,
@@ -21,10 +22,18 @@ import {
   statusLabel,
   type CurriculumNode,
 } from './curriculumData';
+import {
+  ELSEWHERE_NOTE,
+  evaluateCurriculumRemoval,
+  friendlyObjectiveName,
+  type RemovalImpact,
+} from './learningDesign';
 
 const INITIAL_EXPANDED = [
   'unit-electrochemistry',
   'module-foundational',
+  'module-galvanic',
+  'module-applications',
   'module-e-chem-checkpoint',
 ];
 
@@ -33,6 +42,9 @@ type DialogState =
   | { type: 'rename'; id: string }
   | { type: 'view-original'; id: string }
   | { type: 'remove'; id: string }
+  | { type: 'remove-limited'; id: string; impact: RemovalImpact }
+  | { type: 'remove-orphaned'; id: string; impact: RemovalImpact }
+  | { type: 'review-objectives'; objectives: string[] }
   | null;
 
 
@@ -155,12 +167,35 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     }
   };
 
-  const confirmRemove = () => {
-    if (dialog?.type !== 'remove') return;
+  const confirmRemove = (reviewAffected = false) => {
+    if (
+      !dialog ||
+      (dialog.type !== 'remove' && dialog.type !== 'remove-limited' && dialog.type !== 'remove-orphaned')
+    ) {
+      return;
+    }
     const node = findNode(units, dialog.id);
+    const reviewObjectives =
+      reviewAffected && dialog.type === 'remove-orphaned'
+        ? dialog.impact.impacts.map((impact) => impact.objective)
+        : [];
     setUnits((current) => removeFromCourse(current, dialog.id));
     announce(`${node?.title ?? 'Item'} removed from this course.`);
-    setDialog(null);
+    setDialog(reviewObjectives.length > 0 ? { type: 'review-objectives', objectives: reviewObjectives } : null);
+  };
+
+  const openRemove = (id: string) => {
+    setOpenMenuId(null);
+    const impact = evaluateCurriculumRemoval(units, id);
+    if (impact.level === 'none-remaining') {
+      setDialog({ type: 'remove-orphaned', id, impact });
+      return;
+    }
+    if (impact.level === 'limited') {
+      setDialog({ type: 'remove-limited', id, impact });
+      return;
+    }
+    setDialog({ type: 'remove', id });
   };
 
   const handleRestore = (id: string) => {
@@ -231,10 +266,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           }}
           onRename={() => openRename(node.id)}
           onMove={(direction) => handleMove(node.id, direction)}
-          onRemove={() => {
-            setOpenMenuId(null);
-            setDialog({ type: 'remove', id: node.id });
-          }}
+          onRemove={() => openRemove(node.id)}
           onRestore={() => handleRestore(node.id)}
           onViewOriginal={() => {
             setOpenMenuId(null);
@@ -268,10 +300,14 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
         ? 'Rename'
         : dialog?.type === 'view-original'
           ? 'Original version'
-          : dialog?.type === 'remove'
-            ? 'Remove from this course'
-            : '';
-  const dialogNode = dialog && dialog.type !== 'add' ? findNode(units, dialog.id) : undefined;
+          : dialog?.type === 'review-objectives'
+            ? 'Review affected objectives'
+            : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
+              ? 'Remove from this course'
+              : '';
+  const dialogNode =
+    dialog && dialog.type !== 'add' && dialog.type !== 'review-objectives' ? findNode(units, dialog.id) : undefined;
+  const removeKindLabel = dialogNode ? NODE_TYPE_LABEL[dialogNode.type as 'unit' | 'module' | 'page'].toLowerCase() : 'item';
 
   return (
     <>
@@ -423,8 +459,67 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
                   <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
                     Cancel
                   </button>
-                  <button type="button" className="button button--danger" onClick={confirmRemove}>
+                  <button type="button" className="button button--danger" onClick={() => confirmRemove()}>
                     Remove from this course
+                  </button>
+                </div>
+              </>
+            ) : null}
+            {dialog.type === 'remove-limited' && dialogNode ? (
+              <>
+                <CoverageImpactPanel impacts={dialog.impact.impacts} scope="this course" />
+                <div className="modal-actions">
+                  <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
+                    Cancel
+                  </button>
+                  <button type="button" className="button button--danger" onClick={() => confirmRemove()}>
+                    Continue
+                  </button>
+                </div>
+              </>
+            ) : null}
+            {dialog.type === 'remove-orphaned' && dialogNode ? (
+              <>
+                <p>
+                  Removing “{dialogNode.title}” would leave{' '}
+                  {dialog.impact.impacts.length === 1
+                    ? `“${friendlyObjectiveName(dialog.impact.impacts[0].objective)}”`
+                    : 'these learning objectives'}{' '}
+                  with no supporting content in this course.
+                </p>
+                {dialog.impact.impacts.length > 1 ? (
+                  <ul className="guardrail-objective-list">
+                    {dialog.impact.impacts.map((impact) => (
+                      <li key={impact.objective}>{friendlyObjectiveName(impact.objective)}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                <p>{ELSEWHERE_NOTE}</p>
+                <div className="modal-actions modal-actions--stack">
+                  <button type="button" className="button button--primary" onClick={() => confirmRemove(true)}>
+                    Remove the {removeKindLabel} and review affected objectives
+                  </button>
+                  <button type="button" className="button button--secondary" onClick={() => confirmRemove()}>
+                    Remove only the {removeKindLabel}
+                  </button>
+                  <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
+                    Cancel
+                  </button>
+                </div>
+              </>
+            ) : null}
+            {dialog.type === 'review-objectives' ? (
+              <>
+                <p>These objectives no longer have supporting content in this course.</p>
+                <ul className="guardrail-objective-list">
+                  {dialog.objectives.map((objective) => (
+                    <li key={objective}>{friendlyObjectiveName(objective)}</li>
+                  ))}
+                </ul>
+                <p>{ELSEWHERE_NOTE}</p>
+                <div className="modal-actions">
+                  <button type="button" className="button button--primary" onClick={() => setDialog(null)}>
+                    Close
                   </button>
                 </div>
               </>

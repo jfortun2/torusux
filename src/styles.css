@@ -2353,6 +2353,76 @@ button {
   justify-content: flex-end;
 }
 
+.modal-actions--wrap {
+  flex-wrap: wrap;
+}
+
+.modal-actions--stack {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.modal-actions--stack .button {
+  justify-content: center;
+  width: 100%;
+}
+
+.guardrail-callout {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  border-radius: 8px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+}
+
+.guardrail-callout > p {
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.guardrail-callout > p:last-child {
+  margin-bottom: 0;
+}
+
+.guardrail-summary {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.guardrail-summary + .guardrail-summary {
+  border-top: 1px solid var(--warning-border);
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.guardrail-summary div {
+  display: grid;
+  gap: 2px;
+}
+
+.guardrail-summary dt {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.guardrail-summary dd {
+  color: #4b5563;
+  font-size: 13px;
+  margin: 0;
+}
+
+.guardrail-objective-list {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+
+.guardrail-objective-list li {
+  color: #4b5563;
+  margin: 0 0 6px;
+}
+
 .bulk-action-button {
   margin: 4px 0 0;
   width: fit-content;

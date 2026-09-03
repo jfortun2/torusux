@@ -14,7 +14,17 @@ export type CurriculumNode = {
   blockKind?: ContentBlockKind;
   assessmentTitle?: string;
   attemptsStarted?: boolean;
+  learningObjectives?: string[];
 };
+
+const LO_REDOX = 'LO 1.1 Balance redox equations and construct half-reactions.';
+const LO_CELL = 'LO 1.2 Predict electrochemical behavior and cell trends.';
+const LO_APPS = 'LO 1.3 Evaluate electrochemistry applications in real systems.';
+const LO_NOTATION = 'Write and interpret standard cell notation';
+const LO_EQUILIBRIUM = 'Explain equilibrium shifts';
+const LO_CORROSION = 'Explain electrochemical causes of corrosion';
+const LO_RAD = 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.';
+const LO_BIO = 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.';
 
 export const BLOCK_KIND_LABEL: Record<ContentBlockKind, string> = {
   explanation: 'Explanation',
@@ -63,24 +73,28 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'What is electrochemistry?',
+                  learningObjectives: [LO_REDOX],
                 }),
                 item({
                   id: 'block-foundational-example',
                   type: 'block',
                   blockKind: 'example',
                   title: 'Identifying oxidation and reduction',
+                  learningObjectives: [LO_REDOX],
                 }),
                 item({
                   id: 'block-foundational-q',
                   type: 'block',
                   blockKind: 'question',
                   title: 'Assign oxidation states',
+                  learningObjectives: [LO_REDOX],
                 }),
                 item({
                   id: 'block-foundational-bank',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Foundational Concepts of Electrochemistry',
+                  learningObjectives: [LO_REDOX],
                 }),
               ],
             }),
@@ -96,6 +110,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Review of oxidation states',
+                  learningObjectives: [LO_REDOX],
                 }),
                 item({
                   id: 'block-redox-q',
@@ -104,6 +119,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   title: 'Practice: balance a simple redox pair',
                   origin: 'instructor',
                   status: 'added',
+                  learningObjectives: [LO_REDOX],
                 }),
               ],
             }),
@@ -124,24 +140,28 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'How galvanic cells produce current',
+                  learningObjectives: [LO_CELL],
                 }),
                 item({
                   id: 'block-galvanic-example',
                   type: 'block',
                   blockKind: 'example',
                   title: 'Zinc–copper cell',
+                  learningObjectives: [LO_CELL],
                 }),
                 item({
                   id: 'block-galvanic-q',
                   type: 'block',
                   blockKind: 'question',
                   title: 'Predict cell potential',
+                  learningObjectives: [LO_CELL],
                 }),
                 item({
                   id: 'block-galvanic-bank',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Galvanic Cells',
+                  learningObjectives: [LO_CELL],
                 }),
               ],
             }),
@@ -149,18 +169,21 @@ export function createInitialCurriculum(): CurriculumNode[] {
               id: 'page-cell-notation',
               type: 'page',
               title: 'Cell notation',
+              learningObjectives: [LO_NOTATION],
               children: [
                 item({
                   id: 'block-notation-expl',
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Reading and writing cell diagrams',
+                  learningObjectives: [LO_NOTATION],
                 }),
                 item({
                   id: 'block-notation-example',
                   type: 'block',
                   blockKind: 'example',
                   title: 'Standard cell notation',
+                  learningObjectives: [LO_NOTATION],
                 }),
               ],
             }),
@@ -181,12 +204,14 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Batteries, corrosion, and electrolysis',
+                  learningObjectives: [LO_APPS, LO_CORROSION],
                 }),
                 item({
                   id: 'block-app-bank',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Other Applications of Electrochemistry',
+                  learningObjectives: [LO_APPS],
                 }),
               ],
             }),
@@ -204,6 +229,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   title: 'Local water-pipe example',
                   origin: 'instructor',
                   status: 'added',
+                  learningObjectives: [LO_CORROSION],
                 }),
               ],
             }),
@@ -239,30 +265,35 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Unit review',
+                  learningObjectives: [LO_REDOX, LO_CELL, LO_APPS, LO_EQUILIBRIUM],
                 }),
                 item({
                   id: 'block-e-check-bank-1',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Foundational Concepts of Electrochemistry',
+                  learningObjectives: [LO_REDOX],
                 }),
                 item({
                   id: 'block-e-check-bank-2',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Galvanic Cells',
+                  learningObjectives: [LO_CELL],
                 }),
                 item({
                   id: 'block-e-check-bank-3',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Other Applications of Electrochemistry',
+                  learningObjectives: [LO_APPS],
                 }),
                 item({
                   id: 'block-e-check-q',
                   type: 'block',
                   blockKind: 'question',
                   title: 'Embedded checkpoint question',
+                  learningObjectives: [LO_EQUILIBRIUM],
                 }),
               ],
             }),
@@ -290,12 +321,14 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Alpha, beta, and gamma radiation',
+                  learningObjectives: [LO_RAD],
                 }),
                 item({
                   id: 'block-rad-example',
                   type: 'block',
                   blockKind: 'example',
                   title: 'Choosing shielding materials',
+                  learningObjectives: [LO_RAD],
                 }),
                 item({
                   id: 'block-rad-q',
@@ -303,6 +336,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   blockKind: 'question',
                   title: 'Match radiation type to shielding',
                   status: 'removed',
+                  learningObjectives: [LO_RAD],
                 }),
               ],
             }),
@@ -325,18 +359,21 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Unit review',
+                  learningObjectives: [LO_RAD, LO_BIO],
                 }),
                 item({
                   id: 'block-n-check-bank',
                   type: 'block',
                   blockKind: 'bank',
                   title: 'Radiation applications',
+                  learningObjectives: [LO_RAD, LO_BIO],
                 }),
                 item({
                   id: 'block-n-check-q',
                   type: 'block',
                   blockKind: 'question',
                   title: 'Embedded checkpoint question',
+                  learningObjectives: [LO_BIO],
                 }),
               ],
             }),

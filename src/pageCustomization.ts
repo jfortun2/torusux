@@ -88,7 +88,7 @@ export const COURSE_RESOURCE_OPTIONS: CourseResourceContent[] = [
   { title: 'Oxidation and reduction review', sourceLabel: 'Page in this course' },
 ];
 
-const STORAGE_PREFIX = 'torusux:pageLayout:';
+const STORAGE_PREFIX = 'torusux:pageLayout:v2:';
 
 type StoredLayout = {
   v: 1;
@@ -187,13 +187,13 @@ export function exampleTextDraft(objectives: PageObjectiveOption[]): TextContent
   };
 }
 
-export function exampleMcqDraft(objectives: PageObjectiveOption[]): QuestionContent {
+export function exampleMcqDraft(_objectives: PageObjectiveOption[]): QuestionContent {
   return {
     kind: 'mcq',
     title: 'Identify the species oxidized',
     prompt: 'In the reaction Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s), which species is oxidized?',
     points: 3,
-    learningObjective: objectives[0]?.label ?? '',
+    learningObjective: '',
     choices: [
       { id: 'c1', text: 'Zn(s)', correct: true },
       { id: 'c2', text: 'Cu²⁺(aq)', correct: false },
@@ -206,13 +206,13 @@ export function exampleMcqDraft(objectives: PageObjectiveOption[]): QuestionCont
   };
 }
 
-export function exampleMultiInputDraft(objectives: PageObjectiveOption[]): QuestionContent {
+export function exampleMultiInputDraft(_objectives: PageObjectiveOption[]): QuestionContent {
   return {
     kind: 'multi-input',
     title: 'Oxidation numbers for manganese',
     prompt: 'Enter the oxidation number of manganese in each species.',
     points: 3,
-    learningObjective: objectives[1]?.label ?? objectives[0]?.label ?? '',
+    learningObjective: '',
     choices: [],
     inputs: [
       { id: 'i1', label: 'Mn in MnO₄⁻', answer: '+7' },
@@ -399,16 +399,17 @@ export function createDefaultPageBlocks({
   removedBanks,
   removedEmbedded,
   images,
-  objectives,
 }: {
   isNuclear: boolean;
   selectionIds: string[];
   removedBanks: string[];
   removedEmbedded: Record<string, boolean>;
   images: { electrolysis: string; radiation: string };
-  objectives: PageObjectiveOption[];
+  objectives?: PageObjectiveOption[];
 }): PageBlock[] {
-  const introObjective = objectives[0]?.label ?? '';
+  const introObjective = isNuclear
+    ? 'Connect exposure pathway to biological outcomes'
+    : 'Explain equilibrium shifts';
   const blocks: PageBlock[] = [
     {
       id: 'intro-text',
@@ -505,8 +506,8 @@ export function createDefaultPageBlocks({
         : 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?',
       points: 3,
       learningObjective: isNuclear
-        ? 'LO 1.5 Explain why biological impact varies by pathway and tissue sensitivity.'
-        : 'LO 1.2 Explain how concentration changes affect cell potential.',
+        ? 'Connect exposure pathway to biological outcomes'
+        : 'Explain equilibrium shifts',
       choices: isNuclear
         ? [
             choice('ex-1', 'All tissues respond identically to ionizing radiation.', false),
