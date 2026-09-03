@@ -317,7 +317,12 @@ export function setBlockRemoved(blocks: PageBlock[], id: string, removed: boolea
 }
 
 export function removedBankIds(blocks: PageBlock[]): string[] {
-  return blocks.filter((block) => block.kind === 'bank' && block.status === 'removed').map((block) => block.bank.selectionId);
+  return blocks
+    .filter(
+      (block): block is Extract<PageBlock, { kind: 'bank' }> =>
+        block.kind === 'bank' && block.status === 'removed'
+    )
+    .map((block) => block.bank.selectionId);
 }
 
 export function removedEmbeddedFromBlocks(blocks: PageBlock[]): Record<string, boolean> {

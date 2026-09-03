@@ -2752,7 +2752,7 @@ function QuestionTypeCard({
   );
 }
 
-function StudentAssessmentPreview({
+export function StudentAssessmentPreview({
   banks,
   embeddedQuestions,
 }: {
