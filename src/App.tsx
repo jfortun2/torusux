@@ -8,6 +8,35 @@ import {
   persistBankRemovedQuestionIds,
 } from './assessmentDraftStorage';
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
+import {
+  AddContentGap,
+  CourseResourceView,
+  ExampleBlockView,
+  PageBlockFrame,
+  PageCustomizeBar,
+  PageCustomizeDialogs,
+  StudentQuestionView,
+  TextBlockView,
+  type CustomizeDialog,
+} from './PageCustomize';
+import {
+  addedQuestionCoverage,
+  blocksEqual,
+  canMoveBlock,
+  cloneBlocks,
+  createDefaultPageBlocks,
+  insertBlock,
+  loadDraftPageLayout,
+  loadSavedPageLayout,
+  moveBlock,
+  persistDraftPageLayout,
+  persistSavedPageLayout,
+  removedBankIds,
+  removedEmbeddedFromBlocks,
+  setBlockRemoved,
+  summarizePageChanges,
+  type PageBlock,
+} from './pageCustomization';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
 import hideIcon from './assets/icon-hide.png';
@@ -672,11 +701,13 @@ function computeObjectiveCoverage({
   selections,
   removedBanks,
   removedEmbedded,
+  extraQuestions = [],
 }: {
   assessmentTitle: string;
   selections: AssessmentSelection[];
   removedBanks: string[];
   removedEmbedded: Record<string, boolean>;
+  extraQuestions?: { learningObjective: string }[];
 }) {
   const objectives = getPageObjectives(assessmentTitle);
   const objectiveByCode = new Map(objectives.map((objective) => [objective.code.toUpperCase(), objective]));
@@ -740,19 +771,21 @@ function computeObjectiveCoverage({
       : []),
   ];
 
-  embeddedQuestions.forEach((question) => {
-    if (question.removed) return;
-    const code = extractObjectiveCode(question.learningObjective);
-    if (!code || !objectiveByCode.has(code)) {
-      untaggedIncluded += 1;
-      return;
-    }
-    taggedIncluded += 1;
-    const current = totals.get(code);
-    if (!current) return;
-    current.min += 1;
-    current.max += 1;
-  });
+  [...embeddedQuestions, ...extraQuestions.map((question, index) => ({ ...question, id: `extra-${index}`, removed: false }))].forEach(
+    (question) => {
+      if (question.removed) return;
+      const code = extractObjectiveCode(question.learningObjective);
+      if (!code || !objectiveByCode.has(code)) {
+        untaggedIncluded += 1;
+        return;
+      }
+      taggedIncluded += 1;
+      const current = totals.get(code);
+      if (!current) return;
+      current.min += 1;
+      current.max += 1;
+    },
+  );
 
   const coverage: ObjectiveCoverage[] = objectives.map((objective) => {
     const totalsForObjective = totals.get(objective.code.toUpperCase()) ?? { min: 0, max: 0 };
@@ -935,20 +968,34 @@ function AssessmentScreen() {
     scrollToBankId?: string;
   } | null;
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
-  const [removedBanks, setRemovedBanks] = useState<string[]>(() => loadAssessmentDraft(assessmentTitle).removedBanks);
+  const pageObjectives = getPageObjectives(assessmentTitle);
+  const buildDefaultBlocks = () =>
+    createDefaultPageBlocks({
+      isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
+      selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
+      removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
+      removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
+      images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+      objectives: getPageObjectives(assessmentTitle),
+    });
+  const [blocks, setBlocks] = useState<PageBlock[]>(() => loadDraftPageLayout(assessmentTitle) ?? loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
+  const [savedBlocks, setSavedBlocks] = useState<PageBlock[]>(() => loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
+  const [selectedBlockId, setSelectedBlockId] = useState<string | null>(null);
+  const [customizeDialog, setCustomizeDialog] = useState<CustomizeDialog | null>(null);
   const [showJumpLinks, setShowJumpLinks] = useState(false);
-  const [bankToasts, setBankToasts] = useState<Record<string, string>>({});
-  const [pendingBankRemoveId, setPendingBankRemoveId] = useState<string | null>(null);
-  const [removedEmbeddedQuestions, setRemovedEmbeddedQuestions] = useState<Record<string, boolean>>(
-    () => loadAssessmentDraft(assessmentTitle).removedEmbedded,
-  );
-  const [embeddedToasts, setEmbeddedToasts] = useState<Record<string, string>>({});
-  const [pendingEmbeddedRemoveId, setPendingEmbeddedRemoveId] = useState<string | null>(null);
+  const [blockToasts, setBlockToasts] = useState<Record<string, string>>({});
+  const [pendingRemoveBlockId, setPendingRemoveBlockId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('instructor');
+  const [announcement, setAnnouncement] = useState('');
   const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
   const isStudentPreview = viewMode === 'student';
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
   const attemptsStarted = state?.attemptsStarted ?? false;
+  const removedBanks = removedBankIds(blocks);
+  const removedEmbeddedQuestions = removedEmbeddedFromBlocks(blocks);
+  const dirty = !blocksEqual(blocks, savedBlocks);
+  const changeSummary = useMemo(() => summarizePageChanges(savedBlocks, blocks), [savedBlocks, blocks]);
+  const extraQuestions = addedQuestionCoverage(blocks);
   const studentPreviewData = useMemo(() => {
     const usesVariantNaming = usesTaggedVariantNaming(assessmentTitle);
     const isElectrochemistry = isElectrochemistryUnitCheckpoint(assessmentTitle);
@@ -1043,8 +1090,9 @@ function AssessmentScreen() {
         selections: assessmentSelections,
         removedBanks,
         removedEmbedded: removedEmbeddedQuestions,
+        extraQuestions,
       }),
-    [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions],
+    [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions, extraQuestions],
   );
 
   const overallPageScore = useMemo(() => {
@@ -1054,31 +1102,44 @@ function AssessmentScreen() {
       const pointsPerQuestion = selection.exampleQuestions[0]?.points ?? 1;
       total += selection.numberToSelect * pointsPerQuestion;
     });
-    if (isNuclearAssessment && !removedEmbeddedQuestions.nuclearSafety) {
-      total += ASSESSMENT_EMBEDDED_QUESTION_POINTS;
-    }
-    if (!removedEmbeddedQuestions.exitQuestion) {
-      total += ASSESSMENT_EMBEDDED_QUESTION_POINTS;
-    }
+    blocks.forEach((block) => {
+      if (block.kind !== 'question' || block.status === 'removed') return;
+      total += block.question.points;
+    });
     return total;
-  }, [assessmentSelections, removedBanks, removedEmbeddedQuestions, isNuclearAssessment]);
+  }, [assessmentSelections, removedBanks, blocks]);
 
-  const showBankToast = (bankId: string, message: string) => {
-    setBankToasts((current) => ({ ...current, [bankId]: message }));
+  const showBlockToast = (blockId: string, message: string) => {
+    setBlockToasts((current) => ({ ...current, [blockId]: message }));
     window.setTimeout(() => {
-      setBankToasts((current) => {
+      setBlockToasts((current) => {
         const next = { ...current };
-        delete next[bankId];
+        delete next[blockId];
         return next;
       });
     }, 2200);
   };
 
   useLayoutEffect(() => {
-    const draft = loadAssessmentDraft(assessmentTitle);
-    setRemovedBanks(draft.removedBanks);
-    setRemovedEmbeddedQuestions(draft.removedEmbedded);
+    const defaults = createDefaultPageBlocks({
+      isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
+      selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
+      removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
+      removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
+      images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+      objectives: getPageObjectives(assessmentTitle),
+    });
+    const saved = loadSavedPageLayout(assessmentTitle) ?? defaults;
+    const draft = loadDraftPageLayout(assessmentTitle) ?? saved;
+    setSavedBlocks(saved);
+    setBlocks(draft);
+    setSelectedBlockId(null);
+    setCustomizeDialog(null);
   }, [assessmentTitle]);
+
+  useEffect(() => {
+    persistDraftPageLayout(assessmentTitle, blocks);
+  }, [assessmentTitle, blocks]);
 
   useEffect(() => {
     if (!state?.removeBankId) return;
@@ -1086,50 +1147,38 @@ function AssessmentScreen() {
     if (bankMeta) {
       persistAllQuestionsRemovedForBank(assessmentTitle, state.removeBankId, bankMeta.availableQuestions);
     }
-    setRemovedBanks((current) => {
-      if (current.includes(state.removeBankId as string)) return current;
-      return [...current, state.removeBankId as string];
-    });
-    showBankToast(state.removeBankId, state.bulkToast ?? 'Activity bank removed.');
+    const blockId = `bank-${state.removeBankId}`;
+    setBlocks((current) => setBlockRemoved(current, blockId, true));
+    setSavedBlocks((current) => setBlockRemoved(current, blockId, true));
+    showBlockToast(blockId, state.bulkToast ?? 'Activity bank removed.');
   }, [state?.removeBankId, state?.bulkToast, assessmentTitle]);
 
-  useEffect(() => {
-    persistAssessmentSurface(assessmentTitle, { removedBanks, removedEmbedded: removedEmbeddedQuestions });
-  }, [assessmentTitle, removedBanks, removedEmbeddedQuestions]);
-
-  const toggleRemoved = (id: string, label: string) => {
-    setRemovedBanks((current) => {
-      const willRestore = current.includes(id);
-      const bankMeta = assessmentSelections.find((selection) => selection.id === id);
-      if (bankMeta) {
-        if (willRestore) {
-          persistBankRemovedQuestionIds(assessmentTitle, id, []);
-        } else {
-          persistAllQuestionsRemovedForBank(assessmentTitle, id, bankMeta.availableQuestions);
-        }
-      }
-      showBankToast(id, willRestore ? `${label} restored.` : `${label} removed.`);
-      return willRestore ? current.filter((bankId) => bankId !== id) : [...current, id];
-    });
+  const toggleBlockRemoved = (id: string) => {
+    const block = blocks.find((item) => item.id === id);
+    if (!block) return;
+    const willRestore = block.status === 'removed';
+    setBlocks((current) => setBlockRemoved(current, id, !willRestore));
+    showBlockToast(id, willRestore ? `${block.title} restored.` : `${block.title} removed.`);
+    setAnnouncement(willRestore ? `${block.title} restored.` : `${block.title} removed.`);
   };
 
-  const requestToggleBank = (id: string) => {
-    const alreadyRemoved = removedBanks.includes(id);
-    if (!attemptsStarted || alreadyRemoved) {
-      if (!alreadyRemoved) {
-        const warning = getBankCoverageWarning(id);
-        if (warning) {
-          showBankToast(id, warning);
-        }
+  const requestToggleBlock = (id: string) => {
+    const block = blocks.find((item) => item.id === id);
+    if (!block) return;
+    const alreadyRemoved = block.status === 'removed';
+    if (!attemptsStarted || alreadyRemoved || (block.kind !== 'bank' && block.kind !== 'question')) {
+      if (!alreadyRemoved && block.kind === 'bank') {
+        const warning = getBankCoverageWarning(block.bank.selectionId);
+        if (warning) showBlockToast(id, warning);
       }
-      toggleRemoved(id, 'Activity bank');
+      toggleBlockRemoved(id);
       return;
     }
-    const warning = getBankCoverageWarning(id);
-    if (warning) {
-      showBankToast(id, warning);
+    if (block.kind === 'bank') {
+      const warning = getBankCoverageWarning(block.bank.selectionId);
+      if (warning) showBlockToast(id, warning);
     }
-    setPendingBankRemoveId(id);
+    setPendingRemoveBlockId(id);
   };
 
   function getBankCoverageWarning(bankId: string) {
@@ -1139,10 +1188,11 @@ function AssessmentScreen() {
       selections: assessmentSelections,
       removedBanks: removedBanks.includes(bankId) ? removedBanks : [...removedBanks, bankId],
       removedEmbedded: removedEmbeddedQuestions,
+      extraQuestions,
     }).coverage;
     const impacted = before
       .filter((item) => item.max > 0)
-      .filter((item) => (after.find((a) => a.objective.code === item.objective.code)?.max ?? 0) === 0)
+      .filter((item) => (after.find((coverage) => coverage.objective.code === item.objective.code)?.max ?? 0) === 0)
       .map((item) => item.objective.code);
     if (impacted.length === 0) return null;
     return `Warning: removing this bank leaves ${impacted.join(', ')} without coverage.`;
@@ -1155,48 +1205,36 @@ function AssessmentScreen() {
     }
   };
 
-  const showEmbeddedToast = (questionId: string, message: string) => {
-    setEmbeddedToasts((current) => ({ ...current, [questionId]: message }));
-    window.setTimeout(() => {
-      setEmbeddedToasts((current) => {
-        const next = { ...current };
-        delete next[questionId];
-        return next;
-      });
-    }, 2200);
-  };
-
-  const toggleEmbeddedRemoved = (questionId: string) => {
-    setRemovedEmbeddedQuestions((current) => {
-      const willRestore = Boolean(current[questionId]);
-      showEmbeddedToast(questionId, willRestore ? 'Question restored.' : 'Question removed.');
-      return { ...current, [questionId]: !willRestore };
-    });
-  };
-
-  const requestToggleEmbedded = (questionId: string) => {
-    const alreadyRemoved = Boolean(removedEmbeddedQuestions[questionId]);
-    if (!attemptsStarted || alreadyRemoved) {
-      if (!alreadyRemoved) {
-        const nextRemoved = { ...removedEmbeddedQuestions, [questionId]: true };
-        const after = computeObjectiveCoverage({
-          assessmentTitle,
-          selections: assessmentSelections,
-          removedBanks,
-          removedEmbedded: nextRemoved,
-        }).coverage;
-        const impacted = coverageSummary.coverage
-          .filter((item) => item.max > 0)
-          .filter((item) => (after.find((a) => a.objective.code === item.objective.code)?.max ?? 0) === 0)
-          .map((item) => item.objective.code);
-        if (impacted.length > 0) {
-          showEmbeddedToast(questionId, `Warning: removing this question leaves ${impacted.join(', ')} without coverage.`);
-        }
+  const handleSavePage = () => {
+    if (!dirty) return;
+    const nextRemovedBanks = removedBankIds(blocks);
+    const previousRemovedBanks = removedBankIds(savedBlocks);
+    assessmentSelections.forEach((selection) => {
+      const nowRemoved = nextRemovedBanks.includes(selection.id);
+      const wasRemoved = previousRemovedBanks.includes(selection.id);
+      if (nowRemoved && !wasRemoved) {
+        persistAllQuestionsRemovedForBank(assessmentTitle, selection.id, selection.availableQuestions);
       }
-      toggleEmbeddedRemoved(questionId);
-      return;
-    }
-    setPendingEmbeddedRemoveId(questionId);
+      if (!nowRemoved && wasRemoved) {
+        persistBankRemovedQuestionIds(assessmentTitle, selection.id, []);
+      }
+    });
+    persistAssessmentSurface(assessmentTitle, {
+      removedBanks: nextRemovedBanks,
+      removedEmbedded: removedEmbeddedFromBlocks(blocks),
+    });
+    persistSavedPageLayout(assessmentTitle, blocks);
+    setSavedBlocks(cloneBlocks(blocks));
+    setAnnouncement('Saved changes to this page.');
+    showBlockToast('page-save', 'Saved changes to this page.');
+  };
+
+  const handleCancelPage = () => {
+    setBlocks(cloneBlocks(savedBlocks));
+    persistDraftPageLayout(assessmentTitle, savedBlocks);
+    setSelectedBlockId(null);
+    setCustomizeDialog(null);
+    setAnnouncement(dirty ? 'Changes discarded.' : '');
   };
 
   useLayoutEffect(() => {
@@ -1206,6 +1244,98 @@ function AssessmentScreen() {
     if (!el) return;
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [state?.scrollToBankId, assessmentTitle]);
+
+  const jumpTargets = blocks.filter((block) => block.status !== 'removed' && (block.kind === 'bank' || block.kind === 'question'));
+  const pendingRemoveBlock = blocks.find((block) => block.id === pendingRemoveBlockId);
+
+  const renderBlockBody = (block: PageBlock) => {
+    if (block.kind === 'text') return <TextBlockView block={block} showObjective={!isStudentPreview} />;
+    if (block.kind === 'example') return <ExampleBlockView block={block} />;
+    if (block.kind === 'course-resource') return <CourseResourceView block={block} />;
+    if (block.kind === 'bank') {
+      const selection = assessmentSelections.find((item) => item.id === block.bank.selectionId);
+      if (!selection) return null;
+      return (
+        <ActivityBankSelectionCard
+          selection={selection}
+          questionsAvailableCount={
+            block.status === 'removed'
+              ? 0
+              : getIncludedQuestionCountForBank(assessmentTitle, selection.id, selection.availableQuestions)
+          }
+          removed={block.status === 'removed'}
+          onToggleRemove={() => requestToggleBlock(block.id)}
+          attemptsStarted={attemptsStarted}
+          assessmentTitle={state?.assessmentTitle}
+          breadcrumbTrail={state?.breadcrumbTrail}
+          canManage={!isStudentPreview}
+          hideRemove
+        />
+      );
+    }
+    const correctIndex = block.question.choices.findIndex((choice) => choice.correct);
+    return (
+      <QuestionTypeCard
+        kind={block.question.kind}
+        points={block.question.points}
+        title={block.question.title}
+        prompt={block.question.prompt}
+        learningObjective={block.question.learningObjective}
+        choices={block.question.choices.map((choice) => choice.text)}
+        correctChoiceIndex={correctIndex >= 0 ? correctIndex : 0}
+        correctFeedback={block.question.correctFeedback}
+        incorrectFeedback={block.question.incorrectFeedback}
+        inputs={block.question.kind === 'multi-input' ? block.question.inputs : undefined}
+        showGraph={block.question.showGraph}
+        embedded
+        removed={block.status === 'removed'}
+        studentPreview={isStudentPreview}
+      />
+    );
+  };
+
+  const renderStudentBank = (block: Extract<PageBlock, { kind: 'bank' }>) => {
+    const bank = studentPreviewData.banks.find((item) => item.id === block.bank.selectionId);
+    if (!bank) return null;
+    return (
+      <section key={block.id} className="student-bank-preview">
+        {bank.scenarioQuestions.map((question) => (
+          <article key={question.id} className="student-question-card">
+            <div className="student-question-card__meta">
+              {question.points} point{question.points === 1 ? '' : 's'}
+            </div>
+            <h3>{question.title}</h3>
+            <p>{question.prompt}</p>
+            {question.showGraph ? <img className="question-media" src={graphImage} alt="Question graph" /> : null}
+            {question.kind === 'mcq' ? (
+              <div className="student-choice-list">
+                {(question.choices ?? ['Option A', 'Option B', 'Option C', 'Option D']).map((choice) => (
+                  <label key={choice} className="student-choice-row">
+                    <input type="radio" name={question.id} disabled />
+                    <span>{choice}</span>
+                  </label>
+                ))}
+              </div>
+            ) : null}
+            {question.kind === 'cata' ? (
+              <div className="student-choice-list">
+                {(question.cataStatements ?? ['Statement A', 'Statement B', 'Statement C']).map((statement) => (
+                  <label key={statement} className="student-choice-row">
+                    <input type="checkbox" disabled />
+                    <span>{statement}</span>
+                  </label>
+                ))}
+              </div>
+            ) : null}
+            {question.kind === 'multi-input' ? (
+              <p className="student-preview-dropdown-hint">Students complete this item from the activity bank.</p>
+            ) : null}
+            {question.kind === 'short-answer' ? <textarea className="student-short-answer" disabled placeholder="Type your response here…" /> : null}
+          </article>
+        ))}
+      </section>
+    );
+  };
 
   return (
     <InstructorShell>
@@ -1223,170 +1353,126 @@ function AssessmentScreen() {
               Students have already started this assessment. Removing or changing questions will only impact future attempts.
             </div>
           ) : null}
+          {!isStudentPreview ? (
+            <PageCustomizeBar summary={changeSummary} dirty={dirty} onCancel={handleCancelPage} onSave={handleSavePage} />
+          ) : null}
+          {blockToasts['page-save'] ? <SuccessToast message={blockToasts['page-save']} /> : null}
           <div className="assessment-main">
-            {!isStudentPreview ? <div className="assessment-shortcuts-card">
-              <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
-                <span className="jump-section-header__label">Jump to section</span>
-                <span className="jump-section-header__meta">
-                  {assessmentSelections.length} Activity Bank Selection{assessmentSelections.length === 1 ? '' : 's'} · 1 Embedded Question
-                </span>
-                <img src={chevronDownIcon} alt="" aria-hidden="true" className={showJumpLinks ? 'jump-section-header__chevron is-open' : 'jump-section-header__chevron'} />
-              </button>
-              {showJumpLinks ? (
-                <div className="assessment-shortcuts-wrap">
-                  <div className="assessment-shortcuts" role="navigation" aria-label="Jump to section links">
-                    {assessmentSelections.map((selection, index) => (
-                      <button key={selection.id} type="button" className="shortcut-chip" onClick={() => jumpTo(`bank-${selection.id}`)}>
-                        Selection {index + 1}
-                      </button>
-                    ))}
-                    <button type="button" className="shortcut-chip shortcut-chip--embedded" onClick={() => jumpTo('embedded-question')}>
-                      Embedded Question
-                    </button>
+            {!isStudentPreview ? (
+              <div className="assessment-shortcuts-card">
+                <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
+                  <span className="jump-section-header__label">Jump to section</span>
+                  <span className="jump-section-header__meta">
+                    {jumpTargets.filter((block) => block.kind === 'bank').length} activity bank
+                    {jumpTargets.filter((block) => block.kind === 'bank').length === 1 ? '' : 's'} ·{' '}
+                    {jumpTargets.filter((block) => block.kind === 'question').length} question
+                    {jumpTargets.filter((block) => block.kind === 'question').length === 1 ? '' : 's'}
+                  </span>
+                  <img src={chevronDownIcon} alt="" aria-hidden="true" className={showJumpLinks ? 'jump-section-header__chevron is-open' : 'jump-section-header__chevron'} />
+                </button>
+                {showJumpLinks ? (
+                  <div className="assessment-shortcuts-wrap">
+                    <div className="assessment-shortcuts" role="navigation" aria-label="Jump to section links">
+                      {jumpTargets.map((block) => (
+                        <button
+                          key={block.id}
+                          type="button"
+                          className={block.kind === 'question' ? 'shortcut-chip shortcut-chip--embedded' : 'shortcut-chip'}
+                          onClick={() => jumpTo(block.kind === 'bank' ? `bank-${block.bank.selectionId}` : block.id)}
+                        >
+                          {block.kind === 'bank' ? block.title : block.title}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ) : null}
-            </div> : null}
-            {!isStudentPreview ? <div className="assessment-intro">
-              {isNuclearAssessment ? (
-                <>
-                  <p>
-                    Nuclear chemistry explores unstable nuclei, radioactive decay pathways, and how emitted radiation interacts with matter. Students in this checkpoint should distinguish alpha, beta, and gamma behavior in both shielding and biological contexts.
-                  </p>
-                  <p>
-                    Biological effects are not determined by radiation label alone: exposure pathway, absorbed dose, dose rate, and tissue radiosensitivity all change risk. These ideas are essential when interpreting why identical source strengths can produce different outcomes in real scenarios.
-                  </p>
-                  <p>
-                    The activity banks below focus on evidence-based reasoning about safety controls, clinical or industrial uses, and risk-benefit decisions tied to radiation applications.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    Electrochemistry links electron transfer to chemical change: oxidation is loss of electrons, reduction is gain. In a galvanic cell, a spontaneous reaction drives current through an external circuit; in electrolysis, electrical work drives a nonspontaneous process. Standard reduction potentials help you compare tendencies and predict cell direction under standard conditions.
-                  </p>
-                  <p>
-                    Beyond lecture-scale cells, electrochemistry shapes everyday technology-alkaline and lithium-ion batteries store portable energy, lead-acid systems support vehicles, and fuel cells convert fuel continuously while reactants are supplied. Corrosion is the same chemistry working against structures: dissimilar metals in contact with an electrolyte can accelerate material loss unless design or coatings interrupt the cell.
-                  </p>
-                  <p>
-                    This checkpoint draws on those ideas so students connect definitions to graphs, half-reactions, and applications. As you review activity banks below, you are choosing which items best reinforce the learning objectives for this unit on electrochemistry and its real-world uses.
-                  </p>
-                </>
-              )}
-            </div> : <StudentAssessmentPreview banks={studentPreviewData.banks} embeddedQuestions={studentPreviewData.embeddedQuestions} />}
-            {!isStudentPreview ? assessmentSelections.map((selection) => (
-              <ActivityBankSelectionCard
-                key={selection.id}
-                selection={selection}
-                questionsAvailableCount={
-                  removedBanks.includes(selection.id)
-                    ? 0
-                    : getIncludedQuestionCountForBank(assessmentTitle, selection.id, selection.availableQuestions)
-                }
-                removed={removedBanks.includes(selection.id)}
-                toastMessage={bankToasts[selection.id]}
-                onToggleRemove={() => requestToggleBank(selection.id)}
-                attemptsStarted={attemptsStarted}
-                assessmentTitle={state?.assessmentTitle}
-                breadcrumbTrail={state?.breadcrumbTrail}
-                canManage={!isStudentPreview}
-              />
-            )) : null}
-            {!isStudentPreview && !isNuclearAssessment ? (
-              <section className="assessment-mid-media" aria-label="Electrolysis cell diagram">
-                <img src={electrolysisImage} alt="Electrolysis setup with electrodes and ion movement" />
-              </section>
+                ) : null}
+              </div>
             ) : null}
-            {!isStudentPreview && isNuclearAssessment ? (
-              <>
-                <section className="assessment-mid-media" aria-label="Nuclear chemistry materials">
-                  <img src={radiationMaterialsImage} alt="Nuclear chemistry lab and radiation safety materials" />
-                </section>
-                <section className="embedded-question">
-                  {embeddedToasts.nuclearSafety ? <SuccessToast message={embeddedToasts.nuclearSafety} inline /> : null}
-                  <QuestionTypeCard
-                    kind="mcq"
-                    points={ASSESSMENT_EMBEDDED_QUESTION_POINTS}
-                    title="Radiation Materials Safety Check"
-                    prompt="A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?"
-                    learningObjective="LO 1.4 Compare shielding and handling strategies for common radiation types."
-                    choices={[
-                      'Use paper shielding for all sources and keep all containers open for easier viewing.',
-                      'Use thick lead shielding for alpha sources only and remove barriers for beta and gamma sources.',
-                      'Keep sealed containers, use acrylic shielding for beta sources, and place gamma sources behind lead shielding at distance.',
-                      'Store all emitters together in one tray to simplify transport between lab benches.',
-                    ]}
-                    embedded
-                    removed={Boolean(removedEmbeddedQuestions.nuclearSafety)}
-                    onToggleRemove={!isStudentPreview ? () => requestToggleEmbedded('nuclearSafety') : undefined}
-                    studentPreview={isStudentPreview}
-                  />
-                </section>
-              </>
-            ) : null}
-            {!isStudentPreview ? <section className="embedded-question" id="embedded-question">
-              {embeddedToasts.exitQuestion ? <SuccessToast message={embeddedToasts.exitQuestion} inline /> : null}
-              <QuestionTypeCard
-                kind="mcq"
-                points={ASSESSMENT_EMBEDDED_QUESTION_POINTS}
-                title={isNuclearAssessment ? 'Biological Effects Exit Question' : 'Electrochemistry Exit Question'}
-                prompt={
-                  isNuclearAssessment
-                    ? 'Which factor most directly explains why equal absorbed doses can lead to different biological outcomes?'
-                    : 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?'
-                }
-                learningObjective={
-                  isNuclearAssessment
-                    ? 'LO 1.5 Explain why biological impact varies by pathway and tissue sensitivity.'
-                    : 'LO 1.2 Explain how concentration changes affect cell potential.'
-                }
-                choices={
-                  isNuclearAssessment
-                    ? [
-                        'All tissues respond identically to ionizing radiation.',
-                        'Biological effect varies with tissue radiosensitivity, dose rate, and exposure pathway.',
-                        'Only external exposure affects biological outcome.',
-                        'Shielding type has no impact once exposure begins.',
-                      ]
-                    : [
-                        'The anode starts reducing instead of oxidizing.',
-                        'Reaction quotient shifts and lowers the driving force toward equilibrium.',
-                        'Electrons are no longer transferred through the external circuit.',
-                        'The salt bridge blocks ion movement once products form.',
-                      ]
-                }
-                embedded
-                removed={Boolean(removedEmbeddedQuestions.exitQuestion)}
-                onToggleRemove={!isStudentPreview ? () => requestToggleEmbedded('exitQuestion') : undefined}
-                studentPreview={isStudentPreview}
-              />
-            </section> : null}
+
+            {isStudentPreview
+              ? blocks
+                  .filter((block) => block.status !== 'removed')
+                  .map((block) => {
+                    if (block.kind === 'text') return <TextBlockView key={block.id} block={block} />;
+                    if (block.kind === 'example') return <ExampleBlockView key={block.id} block={block} />;
+                    if (block.kind === 'course-resource') return <CourseResourceView key={block.id} block={block} />;
+                    if (block.kind === 'bank') return renderStudentBank(block);
+                    return <StudentQuestionView key={block.id} block={block} name={block.id} />;
+                  })
+              : blocks.flatMap((block, index) => {
+                  const frame = (
+                    <div key={block.id} className="page-block-stack">
+                      {blockToasts[block.id] ? <SuccessToast message={blockToasts[block.id]} inline /> : null}
+                      <PageBlockFrame
+                        block={block}
+                        htmlId={block.kind === 'bank' ? undefined : block.id}
+                        selected={selectedBlockId === block.id}
+                        canMoveUp={canMoveBlock(blocks, block.id, 'up')}
+                        canMoveDown={canMoveBlock(blocks, block.id, 'down')}
+                        onSelect={() => setSelectedBlockId(block.id)}
+                        onMoveUp={() => {
+                          setBlocks((current) => moveBlock(current, block.id, 'up'));
+                          setAnnouncement(`Moved “${block.title}” up.`);
+                        }}
+                        onMoveDown={() => {
+                          setBlocks((current) => moveBlock(current, block.id, 'down'));
+                          setAnnouncement(`Moved “${block.title}” down.`);
+                        }}
+                        onRemove={() => requestToggleBlock(block.id)}
+                        onRestore={() => requestToggleBlock(block.id)}
+                      >
+                        {renderBlockBody(block)}
+                      </PageBlockFrame>
+                    </div>
+                  );
+                  return [
+                    <AddContentGap key={`add-${index}`} onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: index })} />,
+                    frame,
+                    index === blocks.length - 1 ? (
+                      <AddContentGap
+                        key="add-end"
+                        onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: blocks.length })}
+                      />
+                    ) : null,
+                  ];
+                })}
           </div>
           <div className="assessment-footer">
             <button className="button button--secondary">Previous</button>
-            <span>All pages auto-saving now.</span>
-            <span>Lasts Media edit at 4:48 PM</span>
+            <span>{isStudentPreview ? 'Preview only' : dirty ? 'Unsaved changes on this page' : 'All changes saved'}</span>
             <button className="button button--primary">Next</button>
           </div>
         </div>
       </div>
-      {!isStudentPreview && pendingBankRemoveId ? (
-        <AttemptsStartedChangeModal
-          targetLabel="bank"
-          onKeep={() => setPendingBankRemoveId(null)}
-          onRemove={() => {
-            toggleRemoved(pendingBankRemoveId, 'Activity bank');
-            setPendingBankRemoveId(null);
+      <div className="visually-hidden" role="status" aria-live="polite">
+        {announcement}
+      </div>
+      {!isStudentPreview ? (
+        <PageCustomizeDialogs
+          dialog={customizeDialog}
+          objectives={pageObjectives}
+          onClose={() => setCustomizeDialog(null)}
+          onChoose={setCustomizeDialog}
+          onAddBlocks={(insertAt, nextBlocks) => {
+            setBlocks((current) => {
+              let result = current;
+              nextBlocks.forEach((block, offset) => {
+                result = insertBlock(result, insertAt + offset, block);
+              });
+              return result;
+            });
+            setSelectedBlockId(nextBlocks[0]?.id ?? null);
+            setAnnouncement(`${nextBlocks.map((block) => block.title).join(', ')} added.`);
           }}
         />
       ) : null}
-      {!isStudentPreview && pendingEmbeddedRemoveId ? (
+      {!isStudentPreview && pendingRemoveBlock ? (
         <AttemptsStartedChangeModal
-          targetLabel="question"
-          onKeep={() => setPendingEmbeddedRemoveId(null)}
+          targetLabel={pendingRemoveBlock.kind === 'bank' ? 'bank' : 'question'}
+          onKeep={() => setPendingRemoveBlockId(null)}
           onRemove={() => {
-            toggleEmbeddedRemoved(pendingEmbeddedRemoveId);
-            setPendingEmbeddedRemoveId(null);
+            toggleBlockRemoved(pendingRemoveBlock.id);
+            setPendingRemoveBlockId(null);
           }}
         />
       ) : null}
@@ -2188,6 +2274,7 @@ function ActivityBankSelectionCard({
   assessmentTitle,
   breadcrumbTrail,
   canManage,
+  hideRemove = false,
 }: {
   selection: AssessmentSelection;
   questionsAvailableCount: number;
@@ -2198,6 +2285,7 @@ function ActivityBankSelectionCard({
   assessmentTitle?: string;
   breadcrumbTrail?: BreadcrumbItem[];
   canManage: boolean;
+  hideRemove?: boolean;
 }) {
   const navigate = useNavigate();
   const exampleQuestion = selection.exampleQuestions[0];
@@ -2214,7 +2302,7 @@ function ActivityBankSelectionCard({
             <h2 className="bank-card__title">Activity Bank Selection</h2>
             {removed ? <span className="status-pill bank-card__status-pill">Removed</span> : null}
           </div>
-          {canManage ? (
+          {canManage && !hideRemove ? (
             <button
               type="button"
               className={
@@ -2324,6 +2412,10 @@ function QuestionTypeCard({
   removed = false,
   onToggleRemove,
   studentPreview = false,
+  correctChoiceIndex,
+  correctFeedback,
+  incorrectFeedback,
+  inputs,
 }: {
   kind: QuestionKind;
   points: number;
@@ -2337,6 +2429,10 @@ function QuestionTypeCard({
   removed?: boolean;
   onToggleRemove?: () => void;
   studentPreview?: boolean;
+  correctChoiceIndex?: number;
+  correctFeedback?: string;
+  incorrectFeedback?: string;
+  inputs?: { id: string; label: string; answer: string }[];
 }) {
   const [expanded, setExpanded] = useState(false);
   const [activeTab, setActiveTab] = useState<'answer' | 'hints' | 'explanation'>('answer');
@@ -2351,23 +2447,53 @@ function QuestionTypeCard({
         <div className="answer-key-section">
           {(choices ?? ['Point A', 'Point B', 'Point C', 'Point D']).map((option, idx) => (
             <label key={option} className="mcq-choice-row">
-              <span className={idx === 2 ? 'fake-radio is-selected' : 'fake-radio'} />
+              <span className={idx === (correctChoiceIndex ?? 2) ? 'fake-radio is-selected' : 'fake-radio'} />
               <span>{option}</span>
             </label>
           ))}
           <div className="feedback-block">
             <p>Feedback for correct answer:</p>
-            <div className="muted-input">Correct. If there are equal moles of acid and base in a titration, then the solution is at the equivalence point, identified by a mid-range pH and extreme changes in pH around the equivalence point.</div>
+            <div className="muted-input">
+              {correctFeedback ||
+                'Correct. If there are equal moles of acid and base in a titration, then the solution is at the equivalence point, identified by a mid-range pH and extreme changes in pH around the equivalence point.'}
+            </div>
           </div>
           <div className="feedback-block">
             <p>Feedback for incorrect answer:</p>
-            <div className="muted-input">Incorrect. Consider the stage where moles of analyte equal moles of titrant and the pH curve changes most rapidly around the equivalence region.</div>
+            <div className="muted-input">
+              {incorrectFeedback ||
+                'Incorrect. Consider the stage where moles of analyte equal moles of titrant and the pH curve changes most rapidly around the equivalence region.'}
+            </div>
           </div>
         </div>
       );
     }
 
     if (kind === 'multi-input') {
+      if (inputs && inputs.length > 0) {
+        return (
+          <div className="answer-key-section">
+            {inputs.map((input) => (
+              <div key={input.id} className="feedback-block">
+                <p>{input.label}</p>
+                <div className="muted-input">{input.answer}</div>
+              </div>
+            ))}
+            {correctFeedback ? (
+              <div className="feedback-block">
+                <p>Feedback for correct answer:</p>
+                <div className="muted-input">{correctFeedback}</div>
+              </div>
+            ) : null}
+            {incorrectFeedback ? (
+              <div className="feedback-block">
+                <p>Feedback for incorrect answer:</p>
+                <div className="muted-input">{incorrectFeedback}</div>
+              </div>
+            ) : null}
+          </div>
+        );
+      }
       return (
         <div className="answer-key-section">
           <p className="part-heading">Part {selectedDropdownPart}: Dropdown</p>
@@ -2500,29 +2626,45 @@ function QuestionTypeCard({
         </>
       ) : null}
       {kind === 'multi-input' ? (
-        <>
-          <p>{prompt}</p>
-          <img className="question-media question-media--small" src={formulaImage} alt="Formula prompt" />
-          <p>Fill in the coefficients and substances for the balanced overall equation.</p>
-          <div className="multi-input-row">
-            <button className={selectedDropdownPart === 1 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(1)}>
-              Dropdown
-            </button>
-            <span>Cu +</span>
-            <button className={selectedDropdownPart === 2 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(2)}>
-              Dropdown
-            </button>
-            <span>NO₃ +</span>
-            <button className={selectedDropdownPart === 3 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(3)}>
-              Dropdown
-            </button>
-            <span>H<sub>2</sub>O +</span>
-            <button className={selectedDropdownPart === 4 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(4)}>
-              Dropdown
-            </button>
-            <span>NO</span>
-          </div>
-        </>
+        inputs && inputs.length > 0 ? (
+          <>
+            <p>{prompt}</p>
+            <div className="student-input-list">
+              {inputs.map((input) => (
+                <label key={input.id} className="student-input-row">
+                  <span>{input.label}</span>
+                  <input disabled placeholder="Student response" />
+                </label>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <p>{prompt}</p>
+            <img className="question-media question-media--small" src={formulaImage} alt="Formula prompt" />
+            <p>Fill in the coefficients and substances for the balanced overall equation.</p>
+            <div className="multi-input-row">
+              <button className={selectedDropdownPart === 1 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(1)}>
+                Dropdown
+              </button>
+              <span>Cu +</span>
+              <button className={selectedDropdownPart === 2 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(2)}>
+                Dropdown
+              </button>
+              <span>NO₃ +</span>
+              <button className={selectedDropdownPart === 3 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(3)}>
+                Dropdown
+              </button>
+              <span>
+                H<sub>2</sub>O +
+              </span>
+              <button className={selectedDropdownPart === 4 ? 'dropdown-chip is-selected' : 'dropdown-chip'} onClick={() => setSelectedDropdownPart(4)}>
+                Dropdown
+              </button>
+              <span>NO</span>
+            </div>
+          </>
+        )
       ) : null}
       {kind === 'cata' ? (
         <>
