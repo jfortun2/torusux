@@ -25,6 +25,8 @@ export type CustomizeDialog =
   | { type: 'text'; insertAt: number }
   | { type: 'question'; insertAt: number }
   | { type: 'course-resource'; insertAt: number }
+  | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
+  | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
   | { type: 'coming-later'; label: string };
 
 export function PageCustomizeBar({
@@ -89,11 +91,13 @@ export function PageBlockFrame({
   selected,
   canMoveUp,
   canMoveDown,
+  canEdit,
   onSelect,
   onMoveUp,
   onMoveDown,
   onRemove,
   onRestore,
+  onEdit,
   children,
 }: {
   block: PageBlock;
@@ -101,11 +105,13 @@ export function PageBlockFrame({
   selected: boolean;
   canMoveUp: boolean;
   canMoveDown: boolean;
+  canEdit?: boolean;
   onSelect: () => void;
   onMoveUp: () => void;
   onMoveDown: () => void;
   onRemove: () => void;
   onRestore: () => void;
+  onEdit?: () => void;
   children: ReactNode;
 }) {
   const removed = block.status === 'removed';
@@ -136,6 +142,11 @@ export function PageBlockFrame({
           <button type="button" className="button button--secondary button--small" onClick={onMoveDown} disabled={!canMoveDown}>
             Move down
           </button>
+          {canEdit && !removed ? (
+            <button type="button" className="button button--secondary button--small" onClick={onEdit} disabled={!onEdit}>
+              Edit
+            </button>
+          ) : null}
           {removed ? (
             <button type="button" className="button button--secondary button--small" onClick={onRestore}>
               Restore
@@ -199,14 +210,62 @@ export function PageCustomizeDialogs({
   onClose,
   onChoose,
   onAddBlocks,
+  onEditBlock,
 }: {
   dialog: CustomizeDialog | null;
   objectives: PageObjectiveOption[];
   onClose: () => void;
   onChoose: (next: CustomizeDialog) => void;
   onAddBlocks: (insertAt: number, blocks: PageBlock[]) => void;
+  onEditBlock: (blockId: string, nextBlock: PageBlock) => void;
 }) {
   if (!dialog) return null;
+
+  if (dialog.type === 'edit-text') {
+    return (
+      <TextBlockForm
+        objectives={objectives}
+        initialDraft={{
+          heading: dialog.block.text.heading,
+          bodyHtml: dialog.block.text.bodyHtml,
+          learningObjective: dialog.block.text.learningObjective,
+        }}
+        modalTitle="Edit text or explanation"
+        submitLabel="Save changes"
+        onCancel={onClose}
+        onAdd={(draft) => {
+          const updated = textBlockFromDraft(draft);
+          onEditBlock(dialog.block.id, {
+            ...dialog.block,
+            title: updated.title,
+            text: updated.text,
+          });
+          onClose();
+        }}
+      />
+    );
+  }
+
+  if (dialog.type === 'edit-question') {
+    return (
+      <QuestionBlockForm
+        objectives={objectives}
+        initialDraft={dialog.block.question}
+        modalTitle="Edit a question"
+        submitLabel="Save changes"
+        onCancel={onClose}
+        onAdd={(draft) => {
+          const updated = questionBlockFromDraft(draft);
+          onEditBlock(dialog.block.id, {
+            ...dialog.block,
+            title: updated.title,
+            question: updated.question,
+          });
+          onClose();
+        }}
+      />
+    );
+  }
 
   if (dialog.type === 'chooser') {
     return (
@@ -393,19 +452,25 @@ function TextBlockForm({
   objectives,
   onCancel,
   onAdd,
+  initialDraft,
+  modalTitle,
+  submitLabel,
 }: {
   objectives: PageObjectiveOption[];
   onCancel: () => void;
   onAdd: (draft: TextContent) => void;
+  initialDraft?: TextContent;
+  modalTitle?: string;
+  submitLabel?: string;
 }) {
   const headingId = useId();
   const objectiveId = useId();
-  const [draft, setDraft] = useState<TextContent>(() => exampleTextDraft(objectives));
+  const [draft, setDraft] = useState<TextContent>(() => initialDraft ?? exampleTextDraft(objectives));
   const [preview, setPreview] = useState(false);
   const canAdd = draft.heading.trim().length > 0 && draft.bodyHtml.replace(/<[^>]*>/g, '').trim().length > 0;
 
   return (
-    <ModalShell title="Add text or explanation" onClose={onCancel} wide>
+    <ModalShell title={modalTitle ?? 'Add text or explanation'} onClose={onCancel} wide>
       <form
         className="page-customize-form"
         onSubmit={(event) => {
@@ -489,7 +554,7 @@ function TextBlockForm({
             Cancel
           </button>
           <button type="submit" className="button button--primary" disabled={!canAdd}>
-            Add to page
+            {submitLabel ?? 'Add to page'}
           </button>
         </div>
       </form>
@@ -536,16 +601,22 @@ export function CoverageImpactPanel({
   );
 }
 
-function QuestionBlockForm({
+export function QuestionBlockForm({
   objectives,
   onCancel,
   onAdd,
+  initialDraft,
+  modalTitle,
+  submitLabel,
 }: {
   objectives: PageObjectiveOption[];
   onCancel: () => void;
   onAdd: (draft: QuestionContent) => void;
+  initialDraft?: QuestionContent;
+  modalTitle?: string;
+  submitLabel?: string;
 }) {
-  const [draft, setDraft] = useState<QuestionContent>(() => exampleMcqDraft(objectives));
+  const [draft, setDraft] = useState<QuestionContent>(() => initialDraft ?? exampleMcqDraft(objectives));
   const [confirmWithoutObjective, setConfirmWithoutObjective] = useState(false);
   const titleId = useId();
   const promptId = useId();
@@ -620,7 +691,7 @@ function QuestionBlockForm({
   }
 
   return (
-    <ModalShell title="Add a question" onClose={onCancel} wide>
+    <ModalShell title={modalTitle ?? 'Add a question'} onClose={onCancel} wide>
       <form
         className="page-customize-form"
         onSubmit={(event) => {
@@ -839,7 +910,7 @@ function QuestionBlockForm({
             Cancel
           </button>
           <button type="submit" className="button button--primary" disabled={!canSave}>
-            Save to page
+            {submitLabel ?? 'Save to page'}
           </button>
         </div>
       </form>

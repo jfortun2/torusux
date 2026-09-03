@@ -249,7 +249,7 @@ export function courseResourceBlock(resource: CourseResourceContent): PageBlock 
   };
 }
 
-export function textBlockFromDraft(draft: TextContent): PageBlock {
+export function textBlockFromDraft(draft: TextContent): Extract<PageBlock, { kind: 'text' }> {
   const heading = draft.heading.trim() || 'Untitled text';
   return {
     id: newPageBlockId(),
@@ -265,7 +265,7 @@ export function textBlockFromDraft(draft: TextContent): PageBlock {
   };
 }
 
-export function questionBlockFromDraft(draft: QuestionContent): PageBlock {
+export function questionBlockFromDraft(draft: QuestionContent): Extract<PageBlock, { kind: 'question' }> {
   return {
     id: newPageBlockId(),
     kind: 'question',
