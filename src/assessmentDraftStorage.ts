@@ -6,6 +6,18 @@ export type AssessmentDraftV1 = {
   removedEmbedded: Record<string, boolean>;
   /** bankId -> question ids currently marked removed */
   bankRemovedQuestionIds: Record<string, string[]>;
+  /** bankId -> question id -> per-question student-facing overrides */
+  bankEditedQuestions: Record<string, Record<string, BankQuestionEditDraft>>;
+};
+
+export type BankQuestionEditDraft = {
+  title?: string;
+  prompt?: string;
+  learningObjective?: string;
+  points?: number;
+  choices?: string[];
+  cataStatements?: string[];
+  showGraph?: boolean;
 };
 
 const emptyDraft = (): AssessmentDraftV1 => ({
@@ -13,6 +25,7 @@ const emptyDraft = (): AssessmentDraftV1 => ({
   removedBanks: [],
   removedEmbedded: {},
   bankRemovedQuestionIds: {},
+  bankEditedQuestions: {},
 });
 
 const storageKey = (assessmentTitle: string) => `${STORAGE_PREFIX}${encodeURIComponent(assessmentTitle)}`;
@@ -30,6 +43,8 @@ export function loadAssessmentDraft(assessmentTitle: string): AssessmentDraftV1 
       removedEmbedded: parsed.removedEmbedded && typeof parsed.removedEmbedded === 'object' ? parsed.removedEmbedded : {},
       bankRemovedQuestionIds:
         parsed.bankRemovedQuestionIds && typeof parsed.bankRemovedQuestionIds === 'object' ? parsed.bankRemovedQuestionIds : {},
+      bankEditedQuestions:
+        parsed.bankEditedQuestions && typeof parsed.bankEditedQuestions === 'object' ? parsed.bankEditedQuestions : {},
     };
   } catch {
     return emptyDraft();
@@ -61,6 +76,30 @@ export function persistBankRemovedQuestionIds(assessmentTitle: string, bankId: s
   saveDraft(assessmentTitle, {
     ...cur,
     bankRemovedQuestionIds: { ...cur.bankRemovedQuestionIds, [bankId]: removedQuestionIds },
+  });
+}
+
+/** Persist student-facing overrides for one generated bank question. */
+export function persistBankEditedQuestion(
+  assessmentTitle: string,
+  bankId: string,
+  questionId: string,
+  patch: BankQuestionEditDraft,
+) {
+  const cur = loadAssessmentDraft(assessmentTitle);
+  const existingByBank = cur.bankEditedQuestions ?? {};
+  const existingForBank = existingByBank[bankId] ?? {};
+  const existingPatch = existingForBank[questionId] ?? {};
+
+  saveDraft(assessmentTitle, {
+    ...cur,
+    bankEditedQuestions: {
+      ...existingByBank,
+      [bankId]: {
+        ...existingForBank,
+        [questionId]: { ...existingPatch, ...patch },
+      },
+    },
   });
 }
 

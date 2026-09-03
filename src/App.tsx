@@ -6,6 +6,7 @@ import {
   persistAllQuestionsRemovedForBank,
   persistAssessmentSurface,
   persistBankRemovedQuestionIds,
+  persistBankEditedQuestion,
 } from './assessmentDraftStorage';
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
 import {
@@ -16,6 +17,7 @@ import {
   PageBlockFrame,
   PageCustomizeBar,
   PageCustomizeDialogs,
+  QuestionBlockForm,
   StudentQuestionView,
   TextBlockView,
   type CustomizeDialog,
@@ -1417,6 +1419,16 @@ function AssessmentScreen() {
                         selected={selectedBlockId === block.id}
                         canMoveUp={canMoveBlock(blocks, block.id, 'up')}
                         canMoveDown={canMoveBlock(blocks, block.id, 'down')}
+                        canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
+                        onEdit={() => {
+                          if (block.kind === 'text') {
+                            setCustomizeDialog({ type: 'edit-text', block });
+                            return;
+                          }
+                          if (block.kind === 'question') {
+                            setCustomizeDialog({ type: 'edit-question', block });
+                          }
+                        }}
                         onSelect={() => setSelectedBlockId(block.id)}
                         onMoveUp={() => {
                           setBlocks((current) => moveBlock(current, block.id, 'up'));
@@ -1471,6 +1483,11 @@ function AssessmentScreen() {
             });
             setSelectedBlockId(nextBlocks[0]?.id ?? null);
             setAnnouncement(`${nextBlocks.map((block) => block.title).join(', ')} added.`);
+          }}
+          onEditBlock={(blockId, nextBlock) => {
+            setBlocks((current) => current.map((block) => (block.id === blockId ? nextBlock : block)));
+            setSelectedBlockId(blockId);
+            setAnnouncement(`Saved changes to “${nextBlock.title}”.`);
           }}
         />
       ) : null}
@@ -1538,12 +1555,14 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const baseQuestions: BankQuestionRow[] = useMemo(() => {
     const draft = loadAssessmentDraft(assessmentTitle);
     const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBank.id] ?? []);
+    const editedById = draft.bankEditedQuestions?.[selectedBank.id] ?? {};
     if (usesTaggedVariantNaming(assessmentTitle)) {
       return Array.from({ length: generatedQuestionCount }).map((_, index) => {
         const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
         const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index) : undefined;
         const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index) : undefined;
         const id = `${selectedBank.id}-q-${index + 1}`;
+        const edit = editedById[id] ?? {};
         return {
           id,
           title: `${seeded.title}_v${index + 1}`,
@@ -1554,6 +1573,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           choices: rotatedChoices,
           cataStatements: rotatedStatements,
           showGraph: seeded.showGraph,
+          ...(edit ?? {}),
           removed: removedIdSet.has(id),
         };
       });
@@ -1564,6 +1584,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
       const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined;
       const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length) : undefined;
       const id = `${selectedBank.id}-q-${index + 1}`;
+      const edit = editedById[id] ?? {};
       return {
         id,
         title: index < selectedBank.exampleQuestions.length ? seeded.title : `${seeded.title} Variant ${index + 1}`,
@@ -1574,6 +1595,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
         choices: rotatedChoices,
         cataStatements: rotatedStatements,
         showGraph: seeded.showGraph,
+        ...(edit ?? {}),
         removed: removedIdSet.has(id),
       };
     });
@@ -1586,6 +1608,8 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [limitModalContext, setLimitModalContext] = useState<{ remaining: number } | null>(null);
   const [pendingRemoval, setPendingRemoval] = useState<{ type: 'question'; ids: string[] } | null>(null);
+  const [editQuestionId, setEditQuestionId] = useState<string | null>(null);
+  const editQuestion = editQuestionId ? questionRows.find((q) => q.id === editQuestionId) ?? null : null;
   const availableQuestionCount = questionRows.filter((question) => !question.removed).length;
   const normalizedSearch = searchText.trim().toLowerCase();
   const filteredQuestions = questionRows.filter((question) => {
@@ -1672,6 +1696,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     setQuestionTypeFilter('all');
     setSelected(bulkEdit ? baseQuestions.filter((question) => !question.removed).slice(0, 6).map((question) => question.id) : []);
     setActiveQuestionId(baseQuestions[0]?.id ?? '');
+    setEditQuestionId(null);
   }, [baseQuestions, bulkEdit]);
 
   useEffect(() => {
@@ -1900,6 +1925,15 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                   {currentQuestion?.removed ? 'Restore' : 'Remove'}
                 </button>
               )}
+              {!bulkEdit && selected.length <= 1 && currentQuestion ? (
+                <button
+                  type="button"
+                  className="button button--secondary button--small"
+                  onClick={() => setEditQuestionId(currentQuestion.id)}
+                >
+                  Edit
+                </button>
+              ) : null}
             </div>
             {currentQuestion ? <BankQuestionPreview question={currentQuestion} /> : null}
           </div>
@@ -1932,6 +1966,41 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           onRemove={() => {
             removeQuestions(pendingRemoval.ids);
             setPendingRemoval(null);
+          }}
+        />
+      ) : null}
+      {editQuestion ? (
+        <QuestionBlockForm
+          key={editQuestion.id}
+          objectives={getPageObjectives(assessmentTitle)}
+          modalTitle="Edit question"
+          submitLabel="Save changes"
+          initialDraft={{
+            kind: editQuestion.kind === 'mcq' || editQuestion.kind === 'multi-input' ? editQuestion.kind : 'mcq',
+            title: editQuestion.title,
+            prompt: editQuestion.prompt,
+            points: editQuestion.points,
+            learningObjective: editQuestion.learningObjective,
+            choices: (editQuestion.choices ?? []).map((text, i) => ({ id: `c-${i}`, text, correct: i === 0 })),
+            inputs: [],
+            correctFeedback: '',
+            incorrectFeedback: '',
+            showGraph: editQuestion.showGraph,
+          }}
+          onCancel={() => setEditQuestionId(null)}
+          onAdd={(draft) => {
+            const patch = {
+              title: draft.title.trim(),
+              prompt: draft.prompt.trim(),
+              learningObjective: draft.learningObjective,
+              points: draft.points,
+              showGraph: draft.showGraph,
+              choices: draft.kind === 'mcq' ? draft.choices.map((c) => c.text.trim()).filter(Boolean) : editQuestion.choices,
+            };
+            persistBankEditedQuestion(assessmentTitle, selectedBank.id, editQuestion.id, patch);
+            setQuestionRows((current) => current.map((q) => (q.id === editQuestion.id ? { ...q, ...patch } : q)));
+            setEditQuestionId(null);
+            setToastMessage('Question updated.');
           }}
         />
       ) : null}
