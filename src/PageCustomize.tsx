@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+import { friendlyObjectiveName, impactHeadline, type ObjectiveImpact } from './learningDesign';
 import {
   BLOCK_KIND_LABEL,
   COURSE_RESOURCE_OPTIONS,
@@ -16,7 +17,6 @@ import {
   type PageObjectiveOption,
   type QuestionChoice,
   type QuestionContent,
-  type QuestionInput,
   type TextContent,
 } from './pageCustomization';
 
@@ -497,6 +497,45 @@ function TextBlockForm({
   );
 }
 
+export function CoverageImpactPanel({
+  impacts,
+  scope = 'this module',
+}: {
+  impacts: ObjectiveImpact[];
+  scope?: string;
+}) {
+  if (impacts.length === 0) return null;
+  return (
+    <div className="guardrail-callout">
+      <p>{impactHeadline(impacts[0], scope)}</p>
+      {impacts.map((impact) => (
+        <dl key={impact.objective} className="guardrail-summary">
+          <div>
+            <dt>Learning objective affected</dt>
+            <dd>{friendlyObjectiveName(impact.objective)}</dd>
+          </div>
+          <div>
+            <dt>Remaining explanations</dt>
+            <dd>{impact.remaining.explanations}</dd>
+          </div>
+          <div>
+            <dt>Remaining formative activities</dt>
+            <dd>{impact.remaining.formative}</dd>
+          </div>
+          <div>
+            <dt>Remaining summative activities</dt>
+            <dd>{impact.remaining.summative}</dd>
+          </div>
+          <div>
+            <dt>Proficiency evidence may be reduced</dt>
+            <dd>{impact.proficiencyEvidenceMayBeReduced ? 'Yes' : 'No'}</dd>
+          </div>
+        </dl>
+      ))}
+    </div>
+  );
+}
+
 function QuestionBlockForm({
   objectives,
   onCancel,
@@ -507,6 +546,7 @@ function QuestionBlockForm({
   onAdd: (draft: QuestionContent) => void;
 }) {
   const [draft, setDraft] = useState<QuestionContent>(() => exampleMcqDraft(objectives));
+  const [confirmWithoutObjective, setConfirmWithoutObjective] = useState(false);
   const titleId = useId();
   const promptId = useId();
   const objectiveId = useId();
@@ -558,6 +598,27 @@ function QuestionBlockForm({
     }));
   };
 
+  if (confirmWithoutObjective) {
+    return (
+      <ModalShell title="Learning objective not selected" onClose={onCancel} wide={false}>
+        <div className="guardrail-callout">
+          <p>
+            This question is not associated with a learning objective. It can still be added, but it will not
+            contribute to learning proficiency calculations or objective-level reporting.
+          </p>
+        </div>
+        <div className="modal-actions modal-actions--wrap">
+          <button type="button" className="button button--primary" onClick={() => setConfirmWithoutObjective(false)}>
+            Go back and select an objective
+          </button>
+          <button type="button" className="button button--secondary" onClick={() => onAdd(draft)}>
+            Add without an objective
+          </button>
+        </div>
+      </ModalShell>
+    );
+  }
+
   return (
     <ModalShell title="Add a question" onClose={onCancel} wide>
       <form
@@ -565,6 +626,10 @@ function QuestionBlockForm({
         onSubmit={(event) => {
           event.preventDefault();
           if (!canSave) return;
+          if (!draft.learningObjective.trim()) {
+            setConfirmWithoutObjective(true);
+            return;
+          }
           onAdd(draft);
         }}
       >
@@ -732,35 +797,42 @@ function QuestionBlockForm({
             onChange={(event) => setDraft((current) => ({ ...current, incorrectFeedback: event.target.value }))}
           />
         </label>
-        <div className="page-customize-form__split">
-          <label className="field" htmlFor={objectiveId}>
-            <span>Learning objective</span>
-            <select
-              id={objectiveId}
-              className="select"
-              value={draft.learningObjective}
-              onChange={(event) => setDraft((current) => ({ ...current, learningObjective: event.target.value }))}
-            >
-              {objectives.map((objective) => (
-                <option key={objective.code} value={objective.label}>
-                  {objective.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="field" htmlFor={pointsId}>
-            <span>Points</span>
-            <input
-              id={pointsId}
-              type="number"
-              min={1}
-              max={10}
-              value={draft.points}
-              onChange={(event) =>
-                setDraft((current) => ({ ...current, points: Math.max(1, Number(event.target.value) || 1) }))
-              }
-            />
-          </label>
+        <div>
+          <div className="page-customize-form__split">
+            <label className="field" htmlFor={objectiveId}>
+              <span>Learning objective</span>
+              <select
+                id={objectiveId}
+                className="select"
+                value={draft.learningObjective}
+                onChange={(event) => setDraft((current) => ({ ...current, learningObjective: event.target.value }))}
+              >
+                <option value="">Select a learning objective</option>
+                {objectives.map((objective) => (
+                  <option key={objective.code} value={objective.label}>
+                    {objective.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="field" htmlFor={pointsId}>
+              <span>Points</span>
+              <input
+                id={pointsId}
+                type="number"
+                min={1}
+                max={10}
+                value={draft.points}
+                onChange={(event) =>
+                  setDraft((current) => ({ ...current, points: Math.max(1, Number(event.target.value) || 1) }))
+                }
+              />
+            </label>
+          </div>
+          <p className="page-customize-hint">
+            Strongly recommended. Aligning this question with a learning objective helps Torus include the activity in
+            proficiency calculations and instructor reporting.
+          </p>
         </div>
         <div className="modal-actions">
           <button type="button" className="button button--subtle" onClick={onCancel}>

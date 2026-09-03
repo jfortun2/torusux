@@ -11,6 +11,7 @@ import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculu
 import {
   AddContentGap,
   CourseResourceView,
+  CoverageImpactPanel,
   ExampleBlockView,
   PageBlockFrame,
   PageCustomizeBar,
@@ -19,6 +20,7 @@ import {
   TextBlockView,
   type CustomizeDialog,
 } from './PageCustomize';
+import { bankObjectivesById, evaluatePageBlockRemoval, type RemovalImpact } from './learningDesign';
 import {
   addedQuestionCoverage,
   blocksEqual,
@@ -757,8 +759,8 @@ function computeObjectiveCoverage({
       id: 'exitQuestion',
       removed: Boolean(removedEmbedded.exitQuestion),
       learningObjective: assessmentTitle.toLowerCase().includes('nuclear')
-        ? 'LO 1.5 Explain why biological impact varies by pathway and tissue sensitivity.'
-        : 'LO 1.2 Explain how concentration changes affect cell potential.',
+        ? 'Connect exposure pathway to biological outcomes'
+        : 'Explain equilibrium shifts',
     },
     ...(assessmentTitle.toLowerCase().includes('nuclear')
       ? [
@@ -985,6 +987,9 @@ function AssessmentScreen() {
   const [showJumpLinks, setShowJumpLinks] = useState(false);
   const [blockToasts, setBlockToasts] = useState<Record<string, string>>({});
   const [pendingRemoveBlockId, setPendingRemoveBlockId] = useState<string | null>(null);
+  const [pendingCoverageImpact, setPendingCoverageImpact] = useState<{ blockId: string; impact: RemovalImpact } | null>(
+    null,
+  );
   const [viewMode, setViewMode] = useState<ViewMode>('instructor');
   const [announcement, setAnnouncement] = useState('');
   const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
@@ -1166,37 +1171,40 @@ function AssessmentScreen() {
     const block = blocks.find((item) => item.id === id);
     if (!block) return;
     const alreadyRemoved = block.status === 'removed';
-    if (!attemptsStarted || alreadyRemoved || (block.kind !== 'bank' && block.kind !== 'question')) {
-      if (!alreadyRemoved && block.kind === 'bank') {
-        const warning = getBankCoverageWarning(block.bank.selectionId);
-        if (warning) showBlockToast(id, warning);
-      }
+    if (alreadyRemoved) {
       toggleBlockRemoved(id);
       return;
     }
-    if (block.kind === 'bank') {
-      const warning = getBankCoverageWarning(block.bank.selectionId);
-      if (warning) showBlockToast(id, warning);
+
+    const impact = evaluatePageBlockRemoval({
+      blocks,
+      removeBlockId: id,
+      pageTitle: assessmentTitle,
+      bankObjectivesById: bankObjectivesById(assessmentSelections),
+    });
+    if (impact.level !== 'none') {
+      setPendingCoverageImpact({ blockId: id, impact });
+      return;
     }
-    setPendingRemoveBlockId(id);
+
+    if (attemptsStarted && (block.kind === 'bank' || block.kind === 'question')) {
+      setPendingRemoveBlockId(id);
+      return;
+    }
+    toggleBlockRemoved(id);
   };
 
-  function getBankCoverageWarning(bankId: string) {
-    const before = coverageSummary.coverage;
-    const after = computeObjectiveCoverage({
-      assessmentTitle,
-      selections: assessmentSelections,
-      removedBanks: removedBanks.includes(bankId) ? removedBanks : [...removedBanks, bankId],
-      removedEmbedded: removedEmbeddedQuestions,
-      extraQuestions,
-    }).coverage;
-    const impacted = before
-      .filter((item) => item.max > 0)
-      .filter((item) => (after.find((coverage) => coverage.objective.code === item.objective.code)?.max ?? 0) === 0)
-      .map((item) => item.objective.code);
-    if (impacted.length === 0) return null;
-    return `Warning: removing this bank leaves ${impacted.join(', ')} without coverage.`;
-  }
+  const continueAfterCoverageImpact = () => {
+    const pending = pendingCoverageImpact;
+    setPendingCoverageImpact(null);
+    if (!pending) return;
+    const block = blocks.find((item) => item.id === pending.blockId);
+    if (attemptsStarted && block && (block.kind === 'bank' || block.kind === 'question')) {
+      setPendingRemoveBlockId(pending.blockId);
+      return;
+    }
+    toggleBlockRemoved(pending.blockId);
+  };
 
   const jumpTo = (targetId: string) => {
     const node = document.getElementById(targetId);
@@ -1466,7 +1474,29 @@ function AssessmentScreen() {
           }}
         />
       ) : null}
-      {!isStudentPreview && pendingRemoveBlock ? (
+      {!isStudentPreview && pendingCoverageImpact ? (
+        <div className="modal-backdrop" role="presentation" onClick={() => setPendingCoverageImpact(null)}>
+          <div
+            className="modal-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="coverage-impact-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <h3 id="coverage-impact-title">Limited coverage after this change</h3>
+            <CoverageImpactPanel impacts={pendingCoverageImpact.impact.impacts} />
+            <div className="modal-actions">
+              <button type="button" className="button button--subtle" onClick={() => setPendingCoverageImpact(null)}>
+                Cancel
+              </button>
+              <button type="button" className="button button--primary" onClick={continueAfterCoverageImpact}>
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+      {!isStudentPreview && !pendingCoverageImpact && pendingRemoveBlock ? (
         <AttemptsStartedChangeModal
           targetLabel={pendingRemoveBlock.kind === 'bank' ? 'bank' : 'question'}
           onKeep={() => setPendingRemoveBlockId(null)}
