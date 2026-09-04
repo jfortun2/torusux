@@ -5,11 +5,13 @@ import {
   COURSE_RESOURCE_OPTIONS,
   cannedExampleBlock,
   courseResourceBlock,
+  describeBlockForCompare,
   exampleMcqDraft,
   exampleMultiInputDraft,
   exampleTextDraft,
   questionBlockFromDraft,
   sanitizeInstructorHtml,
+  summarizeAgainstCanonical,
   textBlockFromDraft,
   type ChangeSummary,
   type CourseResourceContent,
@@ -27,6 +29,7 @@ export type CustomizeDialog =
   | { type: 'course-resource'; insertAt: number }
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
   | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
+  | { type: 'community-resources'; insertAt: number }
   | { type: 'coming-later'; label: string };
 
 export function PageCustomizeBar({
@@ -72,6 +75,128 @@ export function PageCustomizeBar({
         </button>
       </div>
     </div>
+  );
+}
+
+export function CanonicalCourseNotice({ onCompare }: { onCompare: () => void }) {
+  return (
+    <div className="canonical-course-notice" role="status">
+      <p>
+        You customized this page for your course. Other unchanged course content can continue to receive updates from
+        the original course.
+      </p>
+      <button type="button" className="button button--secondary button--small" onClick={onCompare}>
+        Compare with original
+      </button>
+    </div>
+  );
+}
+
+export function CompareWithOriginalDialog({
+  originalBlocks,
+  currentBlocks,
+  onClose,
+  onRestore,
+}: {
+  originalBlocks: PageBlock[];
+  currentBlocks: PageBlock[];
+  onClose: () => void;
+  onRestore: () => void;
+}) {
+  const [confirmRestore, setConfirmRestore] = useState(false);
+  const changes = summarizeAgainstCanonical(originalBlocks, currentBlocks);
+  const originalVisible = originalBlocks.filter((block) => block.status !== 'removed');
+  const currentVisible = currentBlocks.filter((block) => block.status !== 'removed');
+  const removedCurrent = currentBlocks.filter((block) => block.status === 'removed');
+
+  if (confirmRestore) {
+    return (
+      <ModalShell title="Restore original version?" onClose={onClose} wide={false}>
+        <p>
+          This replaces your customized page with the original course version. Content you added for this course will be
+          removed, and removed original items will be restored.
+        </p>
+        <div className="modal-actions modal-actions--wrap">
+          <button type="button" className="button button--subtle" onClick={() => setConfirmRestore(false)}>
+            Keep my version
+          </button>
+          <button
+            type="button"
+            className="button button--danger"
+            onClick={() => {
+              onRestore();
+              onClose();
+            }}
+          >
+            Restore original
+          </button>
+        </div>
+      </ModalShell>
+    );
+  }
+
+  return (
+    <ModalShell title="Compare with original" onClose={onClose} wide>
+      <p className="canonical-compare__intro">
+        Local changes apply to your course section. Unchanged content stays connected to the original course.
+      </p>
+
+      <div className="canonical-compare__columns">
+        <section className="canonical-compare__column" aria-labelledby="canonical-original-heading">
+          <h4 id="canonical-original-heading">Original content</h4>
+          <ol className="canonical-compare__list">
+            {originalVisible.map((block) => (
+              <li key={block.id}>
+                <span className="canonical-compare__kind">{BLOCK_KIND_LABEL[block.kind]}</span>
+                <span>{describeBlockForCompare(block)}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+        <section className="canonical-compare__column" aria-labelledby="canonical-current-heading">
+          <h4 id="canonical-current-heading">Your customized content</h4>
+          <ol className="canonical-compare__list">
+            {currentVisible.map((block) => (
+              <li key={block.id}>
+                <span className="canonical-compare__kind">
+                  {BLOCK_KIND_LABEL[block.kind]}
+                  {block.origin === 'instructor' ? ' · added' : ''}
+                </span>
+                <span>{describeBlockForCompare(block)}</span>
+              </li>
+            ))}
+            {removedCurrent.map((block) => (
+              <li key={block.id} className="canonical-compare__removed">
+                <span className="canonical-compare__kind">{BLOCK_KIND_LABEL[block.kind]} · removed</span>
+                <span>{block.title}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      </div>
+
+      <section className="canonical-compare__changes" aria-labelledby="canonical-changes-heading">
+        <h4 id="canonical-changes-heading">Changes on this page</h4>
+        {changes.count === 0 ? (
+          <p className="canonical-compare__empty">This page matches the original course version.</p>
+        ) : (
+          <ul>
+            {changes.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      <div className="modal-actions modal-actions--wrap">
+        <button type="button" className="button button--secondary" onClick={() => setConfirmRestore(true)} disabled={changes.count === 0}>
+          Restore original version
+        </button>
+        <button type="button" className="button button--primary" onClick={onClose}>
+          Close
+        </button>
+      </div>
+    </ModalShell>
   );
 }
 
@@ -279,6 +404,7 @@ export function PageCustomizeDialogs({
             onAddBlocks(dialog.insertAt, [cannedExampleBlock()]);
             onClose();
           }
+          if (kind === 'community') onChoose({ type: 'community-resources', insertAt: dialog.insertAt });
           if (kind === 'external') onChoose({ type: 'coming-later', label: 'External resource' });
         }}
       />
@@ -314,6 +440,18 @@ export function PageCustomizeDialogs({
   if (dialog.type === 'course-resource') {
     return (
       <CourseResourceForm
+        onCancel={onClose}
+        onAdd={(resource) => {
+          onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
+          onClose();
+        }}
+      />
+    );
+  }
+
+  if (dialog.type === 'community-resources') {
+    return (
+      <CommunityResourcesPanel
         onCancel={onClose}
         onAdd={(resource) => {
           onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
@@ -384,7 +522,7 @@ function ChooserDialog({
   onSelect,
 }: {
   onClose: () => void;
-  onSelect: (kind: 'text' | 'example' | 'question' | 'course-resource' | 'external') => void;
+  onSelect: (kind: 'text' | 'example' | 'question' | 'course-resource' | 'community' | 'external') => void;
 }) {
   return (
     <ModalShell title="Add content" onClose={onClose} wide={false}>
@@ -409,6 +547,11 @@ function ChooserDialog({
           title="Existing course resource"
           description="Insert a page or bank already in this course."
           onClick={() => onSelect('course-resource')}
+        />
+        <ChooserOption
+          title="Community resources"
+          description="Browse content shared by other instructors and contributors."
+          onClick={() => onSelect('community')}
         />
         <ChooserOption
           title="External resource"
@@ -962,6 +1105,136 @@ function CourseResourceForm({
           </button>
         </div>
       </form>
+    </ModalShell>
+  );
+}
+
+type CommunityResource = {
+  title: string;
+  contributor: string;
+  type: string;
+  learningObjective: string;
+  sectionsUsing: number;
+  evidenceSignal: string | null;
+  oliReviewed: boolean;
+};
+
+const COMMUNITY_RESOURCES: CommunityResource[] = [
+  {
+    title: 'Shielding Material Selection Activity',
+    contributor: 'Dr. Maria Chen, Penn State',
+    type: 'Formative activity',
+    learningObjective: 'Evaluate shielding strategies for common gamma sources',
+    sectionsUsing: 14,
+    evidenceSignal: 'Promising student performance',
+    oliReviewed: true,
+  },
+  {
+    title: 'Inverse Square Law Worked Example',
+    contributor: 'James Kowalski, University of Michigan',
+    type: 'Worked example',
+    learningObjective: 'Apply the inverse square law to estimate dose at varying distances',
+    sectionsUsing: 8,
+    evidenceSignal: null,
+    oliReviewed: true,
+  },
+  {
+    title: 'Contamination vs. Exposure Explanation',
+    contributor: 'Dr. Anika Patel, Carnegie Mellon',
+    type: 'Text explanation',
+    learningObjective: 'Distinguish between contamination and exposure in incident response',
+    sectionsUsing: 3,
+    evidenceSignal: 'Promising student performance',
+    oliReviewed: false,
+  },
+];
+
+function CommunityResourcesPanel({
+  onCancel,
+  onAdd,
+}: {
+  onCancel: () => void;
+  onAdd: (resource: CourseResourceContent) => void;
+}) {
+  const [preview, setPreview] = useState<string | null>(null);
+
+  return (
+    <ModalShell title="Community resources" onClose={onCancel} wide>
+      <p className="community-resources__intro">
+        Content shared by other instructors and contributors. Preview before adding to your page.
+      </p>
+      <div className="community-resources__list">
+        {COMMUNITY_RESOURCES.map((resource) => (
+          <div key={resource.title} className="community-resource-card">
+            <div className="community-resource-card__header">
+              <span className="community-resource-card__type">{resource.type}</span>
+              {resource.oliReviewed ? (
+                <span className="community-resource-card__oli-badge">Reviewed by OLI learning engineering</span>
+              ) : null}
+            </div>
+            <h4 className="community-resource-card__title">{resource.title}</h4>
+            <p className="community-resource-card__contributor">Contributed by {resource.contributor}</p>
+            <dl className="community-resource-card__meta">
+              <div>
+                <dt>Learning objective</dt>
+                <dd>{resource.learningObjective}</dd>
+              </div>
+              <div>
+                <dt>Course sections using this</dt>
+                <dd>{resource.sectionsUsing}</dd>
+              </div>
+              {resource.evidenceSignal ? (
+                <div>
+                  <dt>Evidence</dt>
+                  <dd>{resource.evidenceSignal}</dd>
+                </div>
+              ) : null}
+            </dl>
+
+            {preview === resource.title ? (
+              <div className="community-resource-card__preview">
+                <p className="community-resource-card__preview-note">
+                  Preview: this is a simplified representation. Full content would load in context.
+                </p>
+                <button
+                  type="button"
+                  className="button button--subtle button--small"
+                  onClick={() => setPreview(null)}
+                >
+                  Close preview
+                </button>
+              </div>
+            ) : null}
+
+            <div className="community-resource-card__actions">
+              <button
+                type="button"
+                className="button button--secondary button--small"
+                onClick={() => setPreview(preview === resource.title ? null : resource.title)}
+              >
+                {preview === resource.title ? 'Close preview' : 'Preview'}
+              </button>
+              <button
+                type="button"
+                className="button button--primary button--small"
+                onClick={() =>
+                  onAdd({
+                    title: resource.title,
+                    sourceLabel: `Community · ${resource.contributor}`,
+                  })
+                }
+              >
+                Add to page
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="modal-actions">
+        <button type="button" className="button button--subtle" onClick={onCancel}>
+          Cancel
+        </button>
+      </div>
     </ModalShell>
   );
 }

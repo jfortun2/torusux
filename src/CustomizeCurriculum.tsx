@@ -20,6 +20,7 @@ import {
   restoreOriginal,
   statusDescription,
   statusLabel,
+  summarizeCurriculumCustomizations,
   type CurriculumNode,
 } from './curriculumData';
 import {
@@ -37,6 +38,17 @@ const INITIAL_EXPANDED = [
   'module-e-chem-checkpoint',
 ];
 
+type BlueprintVisibility = 'only-me' | 'department';
+
+type CourseBlueprint = {
+  id: string;
+  name: string;
+  description: string;
+  visibility: BlueprintVisibility;
+  customizationSummary: string[];
+  savedAt: string;
+};
+
 type DialogState =
   | { type: 'add'; parentId: string | null; childType: 'unit' | 'module' | 'page' }
   | { type: 'rename'; id: string }
@@ -45,7 +57,14 @@ type DialogState =
   | { type: 'remove-limited'; id: string; impact: RemovalImpact }
   | { type: 'remove-orphaned'; id: string; impact: RemovalImpact }
   | { type: 'review-objectives'; objectives: string[] }
+  | { type: 'save-blueprint' }
+  | { type: 'blueprint-saved'; blueprint: CourseBlueprint }
   | null;
+
+const VISIBILITY_LABEL: Record<BlueprintVisibility, string> = {
+  'only-me': 'Only me',
+  department: 'My department',
+};
 
 
 export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
@@ -58,6 +77,9 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [dialog, setDialog] = useState<DialogState>(null);
   const [draftName, setDraftName] = useState('');
+  const [blueprintDescription, setBlueprintDescription] = useState('');
+  const [blueprintVisibility, setBlueprintVisibility] = useState<BlueprintVisibility>('only-me');
+  const [blueprints, setBlueprints] = useState<CourseBlueprint[]>([]);
   const [toast, setToast] = useState<string | null>(null);
   const [announcement, setAnnouncement] = useState('');
   const nameInputRef = useRef<HTMLInputElement>(null);
@@ -65,6 +87,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   const lastMenuTriggerRef = useRef<HTMLButtonElement | null>(null);
 
   const dirty = useMemo(() => JSON.stringify(units) !== savedSnapshot, [units, savedSnapshot]);
+  const customizationSummary = useMemo(() => summarizeCurriculumCustomizations(units), [units]);
 
   useEffect(() => {
     if (!toast) return undefined;
@@ -74,7 +97,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
   useEffect(() => {
     if (!dialog) return undefined;
-    if (dialog.type === 'add' || dialog.type === 'rename') {
+    if (dialog.type === 'add' || dialog.type === 'rename' || dialog.type === 'save-blueprint') {
       nameInputRef.current?.focus();
     } else {
       dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
@@ -243,6 +266,30 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     announce('Saved to this course section.');
   };
 
+  const openSaveBlueprint = () => {
+    setOpenMenuId(null);
+    setDraftName('Chemistry 101 — customized structure');
+    setBlueprintDescription('');
+    setBlueprintVisibility('only-me');
+    setDialog({ type: 'save-blueprint' });
+  };
+
+  const saveBlueprint = () => {
+    const name = draftName.trim();
+    if (!name) return;
+    const blueprint: CourseBlueprint = {
+      id: `bp-${Date.now()}`,
+      name,
+      description: blueprintDescription.trim(),
+      visibility: blueprintVisibility,
+      customizationSummary: [...customizationSummary],
+      savedAt: new Date().toLocaleString(),
+    };
+    setBlueprints((current) => [blueprint, ...current]);
+    setDialog({ type: 'blueprint-saved', blueprint });
+    announce(`Blueprint “${name}” saved.`);
+  };
+
   const renderRows = (nodes: CurriculumNode[], depth: number): ReactNode[] =>
     nodes.flatMap((node) => {
       if (node.type === 'block' || !isNodeVisible(node, showRemoved)) return [];
@@ -302,11 +349,21 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           ? 'Original version'
           : dialog?.type === 'review-objectives'
             ? 'Review affected objectives'
-            : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
-              ? 'Remove from this course'
-              : '';
+            : dialog?.type === 'save-blueprint'
+              ? 'Save as reusable blueprint'
+              : dialog?.type === 'blueprint-saved'
+                ? 'Blueprint saved'
+                : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
+                  ? 'Remove from this course'
+                  : '';
   const dialogNode =
-    dialog && dialog.type !== 'add' && dialog.type !== 'review-objectives' ? findNode(units, dialog.id) : undefined;
+    dialog &&
+    dialog.type !== 'add' &&
+    dialog.type !== 'review-objectives' &&
+    dialog.type !== 'save-blueprint' &&
+    dialog.type !== 'blueprint-saved'
+      ? findNode(units, dialog.id)
+      : undefined;
   const removeKindLabel = dialogNode ? NODE_TYPE_LABEL[dialogNode.type as 'unit' | 'module' | 'page'].toLowerCase() : 'item';
 
   return (
@@ -321,6 +378,9 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
             <div className="button-row">
               <button type="button" className="button button--subtle" onClick={handleCancel}>
                 Cancel
+              </button>
+              <button type="button" className="button button--secondary" onClick={openSaveBlueprint}>
+                Save as reusable blueprint
               </button>
               <button
                 type="button"
@@ -358,6 +418,39 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
               Add unit
             </button>
           </div>
+
+          <section className="blueprint-list" aria-labelledby="my-blueprints-heading">
+            <div className="blueprint-list__header">
+              <h2 id="my-blueprints-heading">My blueprints</h2>
+              <p>
+                Saved course structures you can reuse as a starting point for future sections. This prototype keeps them
+                locally in this session.
+              </p>
+            </div>
+            {blueprints.length === 0 ? (
+              <p className="blueprint-list__empty">No blueprints yet. Save this customized course structure to create one.</p>
+            ) : (
+              <ul className="blueprint-list__items">
+                {blueprints.map((blueprint) => (
+                  <li key={blueprint.id} className="blueprint-card">
+                    <div className="blueprint-card__top">
+                      <h3>{blueprint.name}</h3>
+                      <span className="blueprint-card__visibility">{VISIBILITY_LABEL[blueprint.visibility]}</span>
+                    </div>
+                    {blueprint.description ? <p className="blueprint-card__description">{blueprint.description}</p> : null}
+                    <p className="blueprint-card__meta">
+                      Saved {blueprint.savedAt}
+                      {blueprint.customizationSummary.length > 0
+                        ? ` · ${blueprint.customizationSummary.length} customization${
+                            blueprint.customizationSummary.length === 1 ? '' : 's'
+                          }`
+                        : ' · Structure matches the original course'}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
         </div>
 
       <div className="visually-hidden" role="status" aria-live="polite">
@@ -372,7 +465,11 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
       {dialog ? (
         <div className="modal-backdrop" role="presentation" onClick={() => setDialog(null)}>
           <div
-            className="modal-card"
+            className={
+              dialog.type === 'save-blueprint' || dialog.type === 'blueprint-saved'
+                ? 'modal-card modal-card--wide'
+                : 'modal-card'
+            }
             role="dialog"
             aria-modal="true"
             aria-labelledby="curriculum-dialog-title"
@@ -520,6 +617,99 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
                 <div className="modal-actions">
                   <button type="button" className="button button--primary" onClick={() => setDialog(null)}>
                     Close
+                  </button>
+                </div>
+              </>
+            ) : null}
+            {dialog.type === 'save-blueprint' ? (
+              <form
+                className="blueprint-form"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  saveBlueprint();
+                }}
+              >
+                <p className="blueprint-form__intro">
+                  Save this customized course structure so you or your department can use it as a starting point for
+                  future course sections.
+                </p>
+                <label className="field">
+                  <span>Blueprint name</span>
+                  <input
+                    ref={nameInputRef}
+                    value={draftName}
+                    onChange={(event) => setDraftName(event.target.value)}
+                    aria-required="true"
+                  />
+                </label>
+                <label className="field">
+                  <span>Description</span>
+                  <textarea
+                    rows={3}
+                    value={blueprintDescription}
+                    onChange={(event) => setBlueprintDescription(event.target.value)}
+                    placeholder="Optional. Note who this is for or what was customized."
+                  />
+                </label>
+                <fieldset className="blueprint-form__visibility">
+                  <legend>Visibility</legend>
+                  <label>
+                    <input
+                      type="radio"
+                      name="blueprint-visibility"
+                      checked={blueprintVisibility === 'only-me'}
+                      onChange={() => setBlueprintVisibility('only-me')}
+                    />
+                    Only me
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="blueprint-visibility"
+                      checked={blueprintVisibility === 'department'}
+                      onChange={() => setBlueprintVisibility('department')}
+                    />
+                    My department
+                  </label>
+                </fieldset>
+                <div className="blueprint-form__summary">
+                  <h4>Customizations included</h4>
+                  {customizationSummary.length === 0 ? (
+                    <p className="blueprint-form__summary-empty">
+                      No structural customizations yet. The blueprint will still save the current course structure.
+                    </p>
+                  ) : (
+                    <ul>
+                      {customizationSummary.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <div className="modal-actions">
+                  <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
+                    Cancel
+                  </button>
+                  <button type="submit" className="button button--primary" disabled={!draftName.trim()}>
+                    Save blueprint
+                  </button>
+                </div>
+              </form>
+            ) : null}
+            {dialog.type === 'blueprint-saved' ? (
+              <>
+                <div className="blueprint-success" role="status">
+                  <p>
+                    <strong>“{dialog.blueprint.name}”</strong> is saved and available in My blueprints.
+                  </p>
+                  <p>
+                    Visibility: {VISIBILITY_LABEL[dialog.blueprint.visibility]}. You can use this structure as a starting
+                    point for future course sections.
+                  </p>
+                </div>
+                <div className="modal-actions">
+                  <button type="button" className="button button--primary" onClick={() => setDialog(null)}>
+                    Done
                   </button>
                 </div>
               </>

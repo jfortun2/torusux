@@ -593,6 +593,34 @@ export function statusDescription(node: CurriculumNode): string {
   return 'from the original course';
 }
 
+/** Concise list of structural customizations for blueprint / review summaries. */
+export function summarizeCurriculumCustomizations(nodes: CurriculumNode[]): string[] {
+  const items: string[] = [];
+  const walk = (list: CurriculumNode[]) => {
+    list.forEach((node) => {
+      if (node.type === 'block') {
+        walk(node.children);
+        return;
+      }
+      const kind = NODE_TYPE_LABEL[node.type as 'unit' | 'module' | 'page'];
+      if (node.status === 'added') {
+        items.push(`Added ${kind.toLowerCase()} “${node.title}”`);
+      } else if (node.status === 'modified') {
+        items.push(
+          node.title !== node.originalTitle
+            ? `Renamed ${kind.toLowerCase()} “${node.originalTitle}” to “${node.title}”`
+            : `Edited ${kind.toLowerCase()} “${node.title}”`,
+        );
+      } else if (node.status === 'removed') {
+        items.push(`Removed ${kind.toLowerCase()} “${node.title}”`);
+      }
+      walk(node.children);
+    });
+  };
+  walk(nodes);
+  return items;
+}
+
 export function childTypeFor(type: CurriculumNodeType): 'module' | 'page' | null {
   if (type === 'unit') return 'module';
   if (type === 'module') return 'page';

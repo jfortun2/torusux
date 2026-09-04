@@ -11,6 +11,8 @@ import {
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
 import {
   AddContentGap,
+  CanonicalCourseNotice,
+  CompareWithOriginalDialog,
   CourseResourceView,
   CoverageImpactPanel,
   ExampleBlockView,
@@ -33,6 +35,7 @@ import {
   loadDraftPageLayout,
   loadSavedPageLayout,
   moveBlock,
+  pageIsCustomized,
   persistDraftPageLayout,
   persistSavedPageLayout,
   removedBankIds,
@@ -986,6 +989,7 @@ function AssessmentScreen() {
   const [savedBlocks, setSavedBlocks] = useState<PageBlock[]>(() => loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [selectedBlockId, setSelectedBlockId] = useState<string | null>(null);
   const [customizeDialog, setCustomizeDialog] = useState<CustomizeDialog | null>(null);
+  const [showCompareOriginal, setShowCompareOriginal] = useState(false);
   const [showJumpLinks, setShowJumpLinks] = useState(false);
   const [blockToasts, setBlockToasts] = useState<Record<string, string>>({});
   const [pendingRemoveBlockId, setPendingRemoveBlockId] = useState<string | null>(null);
@@ -1002,6 +1006,19 @@ function AssessmentScreen() {
   const removedEmbeddedQuestions = removedEmbeddedFromBlocks(blocks);
   const dirty = !blocksEqual(blocks, savedBlocks);
   const changeSummary = useMemo(() => summarizePageChanges(savedBlocks, blocks), [savedBlocks, blocks]);
+  const canonicalBlocks = useMemo(
+    () =>
+      createDefaultPageBlocks({
+        isNuclear: isNuclearAssessment,
+        selectionIds: assessmentSelections.map((selection) => selection.id),
+        removedBanks: [],
+        removedEmbedded: {},
+        images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+        objectives: pageObjectives,
+      }),
+    [isNuclearAssessment, assessmentSelections, pageObjectives],
+  );
+  const isPageCustomized = useMemo(() => pageIsCustomized(canonicalBlocks, blocks), [canonicalBlocks, blocks]);
   const extraQuestions = addedQuestionCoverage(blocks);
   const studentPreviewData = useMemo(() => {
     const usesVariantNaming = usesTaggedVariantNaming(assessmentTitle);
@@ -1142,6 +1159,7 @@ function AssessmentScreen() {
     setBlocks(draft);
     setSelectedBlockId(null);
     setCustomizeDialog(null);
+    setShowCompareOriginal(false);
   }, [assessmentTitle]);
 
   useEffect(() => {
@@ -1244,7 +1262,25 @@ function AssessmentScreen() {
     persistDraftPageLayout(assessmentTitle, savedBlocks);
     setSelectedBlockId(null);
     setCustomizeDialog(null);
+    setShowCompareOriginal(false);
     setAnnouncement(dirty ? 'Changes discarded.' : '');
+  };
+
+  const handleRestoreOriginalPage = () => {
+    const original = cloneBlocks(canonicalBlocks);
+    assessmentSelections.forEach((selection) => {
+      persistBankRemovedQuestionIds(assessmentTitle, selection.id, []);
+    });
+    persistAssessmentSurface(assessmentTitle, {
+      removedBanks: [],
+      removedEmbedded: {},
+    });
+    persistSavedPageLayout(assessmentTitle, original);
+    setSavedBlocks(original);
+    setBlocks(original);
+    setSelectedBlockId(null);
+    setAnnouncement('Restored the original course version of this page.');
+    showBlockToast('page-save', 'Restored the original course version of this page.');
   };
 
   useLayoutEffect(() => {
@@ -1365,6 +1401,9 @@ function AssessmentScreen() {
           ) : null}
           {!isStudentPreview ? (
             <PageCustomizeBar summary={changeSummary} dirty={dirty} onCancel={handleCancelPage} onSave={handleSavePage} />
+          ) : null}
+          {!isStudentPreview && isPageCustomized ? (
+            <CanonicalCourseNotice onCompare={() => setShowCompareOriginal(true)} />
           ) : null}
           {blockToasts['page-save'] ? <SuccessToast message={blockToasts['page-save']} /> : null}
           <div className="assessment-main">
@@ -1489,6 +1528,14 @@ function AssessmentScreen() {
             setSelectedBlockId(blockId);
             setAnnouncement(`Saved changes to “${nextBlock.title}”.`);
           }}
+        />
+      ) : null}
+      {!isStudentPreview && showCompareOriginal ? (
+        <CompareWithOriginalDialog
+          originalBlocks={canonicalBlocks}
+          currentBlocks={blocks}
+          onClose={() => setShowCompareOriginal(false)}
+          onRestore={handleRestoreOriginalPage}
         />
       ) : null}
       {!isStudentPreview && pendingCoverageImpact ? (
