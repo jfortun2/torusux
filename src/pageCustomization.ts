@@ -382,6 +382,71 @@ export function summarizePageChanges(saved: PageBlock[], draft: PageBlock[]): Ch
   return { count: items.length, items };
 }
 
+function blockPayload(block: PageBlock): string {
+  const { id: _id, status: _status, ...rest } = block;
+  return JSON.stringify(rest);
+}
+
+/** Concise list of how this page differs from the original course version. */
+export function summarizeAgainstCanonical(canonical: PageBlock[], current: PageBlock[]): ChangeSummary {
+  const items: string[] = [];
+  const canonicalById = new Map(canonical.map((block) => [block.id, block]));
+  const currentById = new Map(current.map((block) => [block.id, block]));
+
+  current.forEach((block) => {
+    if (!canonicalById.has(block.id) && block.status !== 'removed') {
+      items.push(`Added “${block.title}” (${BLOCK_KIND_LABEL[block.kind]})`);
+    }
+  });
+
+  current.forEach((block) => {
+    const original = canonicalById.get(block.id);
+    if (!original) return;
+    if (block.status === 'removed') {
+      items.push(`Removed “${original.title}”`);
+      return;
+    }
+    if (blockPayload(block) !== blockPayload(original)) {
+      items.push(`Edited “${original.title}”`);
+    }
+  });
+
+  canonical.forEach((block) => {
+    if (!currentById.has(block.id)) {
+      items.push(`Removed “${block.title}”`);
+    }
+  });
+
+  const sharedCanonical = canonical.map((block) => block.id).filter((id) => {
+    const currentBlock = currentById.get(id);
+    return currentBlock && currentBlock.status !== 'removed';
+  });
+  const sharedCurrent = current
+    .filter((block) => block.status !== 'removed' && canonicalById.has(block.id))
+    .map((block) => block.id);
+  if (sharedCanonical.join('|') !== sharedCurrent.join('|')) {
+    items.push('Reordered content relative to the original page');
+  }
+
+  return { count: items.length, items };
+}
+
+export function pageIsCustomized(canonical: PageBlock[], current: PageBlock[]): boolean {
+  return summarizeAgainstCanonical(canonical, current).count > 0;
+}
+
+export function describeBlockForCompare(block: PageBlock): string {
+  if (block.status === 'removed') return `${block.title} (removed)`;
+  if (block.kind === 'text') {
+    const excerpt = block.text.bodyHtml.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+    return excerpt ? `${block.text.heading} — ${excerpt.slice(0, 120)}${excerpt.length > 120 ? '…' : ''}` : block.text.heading;
+  }
+  if (block.kind === 'example') return block.example.heading;
+  if (block.kind === 'question') return `${block.question.title}: ${block.question.prompt.slice(0, 100)}${block.question.prompt.length > 100 ? '…' : ''}`;
+  if (block.kind === 'bank') return block.title;
+  return `${block.courseResource.title} · ${block.courseResource.sourceLabel}`;
+}
+
 const electrochemistryIntroHtml = `
 <p>Electrochemistry links electron transfer to chemical change: oxidation is loss of electrons, reduction is gain. In a galvanic cell, a spontaneous reaction drives current through an external circuit; in electrolysis, electrical work drives a nonspontaneous process. Standard reduction potentials help you compare tendencies and predict cell direction under standard conditions.</p>
 <p>Beyond lecture-scale cells, electrochemistry shapes everyday technology-alkaline and lithium-ion batteries store portable energy, lead-acid systems support vehicles, and fuel cells convert fuel continuously while reactants are supplied. Corrosion is the same chemistry working against structures: dissimilar metals in contact with an electrolyte can accelerate material loss unless design or coatings interrupt the cell.</p>
