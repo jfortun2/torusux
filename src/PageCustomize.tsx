@@ -3,7 +3,6 @@ import { friendlyObjectiveName, impactHeadline, type ObjectiveImpact } from './l
 import {
   BLOCK_KIND_LABEL,
   COURSE_RESOURCE_OPTIONS,
-  cannedExampleBlock,
   courseResourceBlock,
   describeBlockForCompare,
   exampleMcqDraft,
@@ -500,7 +499,7 @@ export function PageCustomizeDialogs({
           bodyHtml: dialog.block.text.bodyHtml,
           learningObjective: dialog.block.text.learningObjective,
         }}
-        modalTitle="Edit text or explanation"
+        modalTitle="Edit text, explanation, or example"
         submitLabel="Save changes"
         onCancel={onClose}
         onAdd={(draft) => {
@@ -544,13 +543,7 @@ export function PageCustomizeDialogs({
         onSelect={(kind) => {
           if (kind === 'text') onChoose({ type: 'text', insertAt: dialog.insertAt });
           if (kind === 'question') onChoose({ type: 'question', insertAt: dialog.insertAt });
-          if (kind === 'course-resource') onChoose({ type: 'course-resource', insertAt: dialog.insertAt });
-          if (kind === 'example') {
-            onAddBlocks(dialog.insertAt, [cannedExampleBlock()]);
-            onClose();
-          }
           if (kind === 'community') onChoose({ type: 'community-resources', insertAt: dialog.insertAt });
-          if (kind === 'external') onChoose({ type: 'coming-later', label: 'External resource' });
         }}
       />
     );
@@ -618,6 +611,20 @@ export function PageCustomizeDialogs({
   );
 }
 
+let openModalCount = 0;
+
+function lockPageScroll() {
+  openModalCount += 1;
+  document.documentElement.classList.add('modal-open');
+}
+
+function unlockPageScroll() {
+  openModalCount = Math.max(0, openModalCount - 1);
+  if (openModalCount === 0) {
+    document.documentElement.classList.remove('modal-open');
+  }
+}
+
 function ModalShell({
   title,
   onClose,
@@ -630,6 +637,11 @@ function ModalShell({
   children: ReactNode;
 }) {
   const dialogRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    lockPageScroll();
+    return () => unlockPageScroll();
+  }, []);
 
   useEffect(() => {
     const root = dialogRef.current;
@@ -667,21 +679,16 @@ function ChooserDialog({
   onSelect,
 }: {
   onClose: () => void;
-  onSelect: (kind: 'text' | 'example' | 'question' | 'course-resource' | 'community' | 'external') => void;
+  onSelect: (kind: 'text' | 'question' | 'community') => void;
 }) {
   return (
     <ModalShell title="Add content" onClose={onClose} wide={false}>
       <p>Choose what to add to this page.</p>
-      <div className="content-chooser" role="list">
+      <div className="content-chooser">
         <ChooserOption
-          title="Text or explanation"
-          description="A heading and short explanation for students."
+          title="Text, explanation, or example"
+          description="A heading and short explanation or worked example for students."
           onClick={() => onSelect('text')}
-        />
-        <ChooserOption
-          title="Example"
-          description="Adds a short worked example with sample content."
-          onClick={() => onSelect('example')}
         />
         <ChooserOption
           title="Question"
@@ -689,20 +696,9 @@ function ChooserDialog({
           onClick={() => onSelect('question')}
         />
         <ChooserOption
-          title="Existing course resource"
-          description="Insert a page or bank already in this course."
-          onClick={() => onSelect('course-resource')}
-        />
-        <ChooserOption
           title="Community resources"
           description="Browse content shared by other instructors and contributors."
           onClick={() => onSelect('community')}
-        />
-        <ChooserOption
-          title="External resource"
-          description="Link to a source outside this course."
-          comingLater
-          onClick={() => onSelect('external')}
         />
       </div>
       <div className="modal-actions">
@@ -726,7 +722,7 @@ function ChooserOption({
   onClick: () => void;
 }) {
   return (
-    <button type="button" className="content-chooser__option" role="listitem" onClick={onClick}>
+    <button type="button" className="content-chooser__option" onClick={onClick}>
       <span className="content-chooser__option-title">
         {title}
         {comingLater ? <span className="content-chooser__later">Coming later</span> : null}
@@ -753,12 +749,29 @@ function TextBlockForm({
 }) {
   const headingId = useId();
   const objectiveId = useId();
+  const imageInputId = useId();
   const [draft, setDraft] = useState<TextContent>(() => initialDraft ?? exampleTextDraft(objectives));
   const [preview, setPreview] = useState(false);
+  const [imageName, setImageName] = useState('');
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const canAdd = draft.heading.trim().length > 0 && draft.bodyHtml.replace(/<[^>]*>/g, '').trim().length > 0;
 
+  useEffect(() => {
+    return () => {
+      if (imagePreview) URL.revokeObjectURL(imagePreview);
+    };
+  }, [imagePreview]);
+
+  const clearImage = () => {
+    setImagePreview((current) => {
+      if (current) URL.revokeObjectURL(current);
+      return null;
+    });
+    setImageName('');
+  };
+
   return (
-    <ModalShell title={modalTitle ?? 'Add text or explanation'} onClose={onCancel} wide>
+    <ModalShell title={modalTitle ?? 'Add text, explanation, or example'} onClose={onCancel} wide>
       <form
         className="page-customize-form"
         onSubmit={(event) => {
@@ -801,6 +814,9 @@ function TextBlockForm({
                 text: draft,
               }}
             />
+            {imagePreview ? (
+              <img className="page-text-block__image" src={imagePreview} alt={imageName || ''} />
+            ) : null}
           </div>
         ) : (
           <div className="page-customize-form__fields" role="tabpanel">
@@ -818,6 +834,39 @@ function TextBlockForm({
                 value={draft.bodyHtml}
                 onChange={(bodyHtml) => setDraft((current) => ({ ...current, bodyHtml }))}
               />
+            </div>
+            <div className="field">
+              <span>Image (optional)</span>
+              {imagePreview ? (
+                <div className="image-upload image-upload--selected">
+                  <img className="image-upload__preview" src={imagePreview} alt="" />
+                  <p className="image-upload__name">{imageName}</p>
+                  <button type="button" className="button button--subtle button--small" onClick={clearImage}>
+                    Remove image
+                  </button>
+                </div>
+              ) : (
+                <label className="image-upload" htmlFor={imageInputId}>
+                  <input
+                    id={imageInputId}
+                    className="visually-hidden"
+                    type="file"
+                    accept="image/*"
+                    onChange={(event) => {
+                      const file = event.target.files?.[0];
+                      event.target.value = '';
+                      if (!file) return;
+                      setImagePreview((current) => {
+                        if (current) URL.revokeObjectURL(current);
+                        return URL.createObjectURL(file);
+                      });
+                      setImageName(file.name);
+                    }}
+                  />
+                  <span className="image-upload__title">Upload an image</span>
+                  <span className="image-upload__hint">Choose a PNG, JPG, or GIF to include with this content.</span>
+                </label>
+              )}
             </div>
             <label className="field" htmlFor={objectiveId}>
               <span>Learning objective</span>
@@ -1384,8 +1433,42 @@ function CommunityResourcesPanel({
   );
 }
 
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function normalizeLinkUrl(raw: string): string | null {
+  const trimmed = raw.trim();
+  if (!trimmed) return null;
+  if (trimmed.startsWith('#') || /^mailto:/i.test(trimmed) || /^https?:\/\//i.test(trimmed)) return trimmed;
+  if (/^[\w.-]+\.[a-z]{2,}([/:?#].*)?$/i.test(trimmed)) return `https://${trimmed}`;
+  return null;
+}
+
+function saveEditorSelection(editor: HTMLElement | null): Range | null {
+  const selection = window.getSelection();
+  if (!selection || selection.rangeCount === 0) return null;
+  const range = selection.getRangeAt(0);
+  if (!editor || !editor.contains(range.commonAncestorContainer)) return null;
+  return range.cloneRange();
+}
+
+function restoreEditorSelection(range: Range | null) {
+  if (!range) return;
+  const selection = window.getSelection();
+  selection?.removeAllRanges();
+  selection?.addRange(range);
+}
+
 function RichTextEditor({ value, onChange }: { value: string; onChange: (html: string) => void }) {
   const editorRef = useRef<HTMLDivElement>(null);
+  const savedRange = useRef<Range | null>(null);
+  const [linkOpen, setLinkOpen] = useState(false);
+  const [linkUrl, setLinkUrl] = useState('https://');
 
   useEffect(() => {
     if (editorRef.current) editorRef.current.innerHTML = value;
@@ -1393,25 +1476,155 @@ function RichTextEditor({ value, onChange }: { value: string; onChange: (html: s
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const emitChange = () => onChange(editorRef.current?.innerHTML ?? '');
+
   const apply = (command: string) => {
     editorRef.current?.focus();
     document.execCommand(command, false);
-    onChange(editorRef.current?.innerHTML ?? '');
+    emitChange();
+  };
+
+  const rememberSelection = () => {
+    savedRange.current = saveEditorSelection(editorRef.current);
+  };
+
+  const applyLink = () => {
+    const url = normalizeLinkUrl(linkUrl);
+    if (!url) return;
+    editorRef.current?.focus();
+    restoreEditorSelection(savedRange.current);
+    const selection = window.getSelection();
+    if (!selection || selection.isCollapsed) {
+      document.execCommand('insertHTML', false, `<a href="${escapeHtml(url)}">${escapeHtml(url)}</a>`);
+    } else {
+      document.execCommand('createLink', false, url);
+    }
+    emitChange();
+    setLinkOpen(false);
+  };
+
+  const applyKeyword = () => {
+    editorRef.current?.focus();
+    restoreEditorSelection(savedRange.current);
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+    const range = selection.getRangeAt(0);
+    const ancestor = range.commonAncestorContainer;
+    const existing = (ancestor instanceof Element ? ancestor : ancestor.parentElement)?.closest('.page-keyword');
+    if (existing && editorRef.current?.contains(existing)) {
+      const parent = existing.parentNode;
+      while (existing.firstChild) parent?.insertBefore(existing.firstChild, existing);
+      parent?.removeChild(existing);
+      parent?.normalize();
+      emitChange();
+      return;
+    }
+    if (range.collapsed) return;
+    const span = document.createElement('span');
+    span.className = 'page-keyword';
+    try {
+      range.surroundContents(span);
+    } catch {
+      span.appendChild(range.extractContents());
+      range.insertNode(span);
+    }
+    selection.removeAllRanges();
+    const next = document.createRange();
+    next.selectNodeContents(span);
+    selection.addRange(next);
+    emitChange();
   };
 
   return (
     <div className="rich-text">
       <div className="rich-text__toolbar" role="toolbar" aria-label="Text formatting">
-        <button type="button" className="rich-text__btn" onClick={() => apply('bold')} aria-label="Bold">
+        <button
+          type="button"
+          className="rich-text__btn"
+          onMouseDown={(event) => event.preventDefault()}
+          onClick={() => apply('bold')}
+          aria-label="Bold"
+        >
           <strong>B</strong>
         </button>
-        <button type="button" className="rich-text__btn" onClick={() => apply('italic')} aria-label="Italic">
+        <button
+          type="button"
+          className="rich-text__btn"
+          onMouseDown={(event) => event.preventDefault()}
+          onClick={() => apply('italic')}
+          aria-label="Italic"
+        >
           <em>I</em>
         </button>
-        <button type="button" className="rich-text__btn" onClick={() => apply('insertUnorderedList')}>
+        <button
+          type="button"
+          className="rich-text__btn"
+          onMouseDown={(event) => event.preventDefault()}
+          onClick={() => apply('insertUnorderedList')}
+        >
           List
         </button>
+        <button
+          type="button"
+          className={linkOpen ? 'rich-text__btn is-active' : 'rich-text__btn'}
+          onMouseDown={(event) => {
+            event.preventDefault();
+            rememberSelection();
+          }}
+          onClick={() => {
+            rememberSelection();
+            if (linkOpen) {
+              setLinkOpen(false);
+              return;
+            }
+            const ancestor = savedRange.current?.commonAncestorContainer;
+            const existing = (ancestor instanceof Element ? ancestor : ancestor?.parentElement)?.closest('a');
+            setLinkUrl(existing?.getAttribute('href') || 'https://');
+            setLinkOpen(true);
+          }}
+          aria-expanded={linkOpen}
+          aria-label="Link selected text"
+        >
+          Link
+        </button>
+        <button
+          type="button"
+          className="rich-text__btn"
+          title="Select text, then mark it as a keyword"
+          onMouseDown={(event) => {
+            event.preventDefault();
+            rememberSelection();
+          }}
+          onClick={applyKeyword}
+        >
+          Keyword
+        </button>
       </div>
+      {linkOpen ? (
+        <div className="rich-text__link-row">
+          <label className="rich-text__link-label">
+            <span className="visually-hidden">Link URL</span>
+            <input
+              type="text"
+              value={linkUrl}
+              placeholder="https://"
+              onChange={(event) => setLinkUrl(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                  event.preventDefault();
+                  applyLink();
+                }
+              }}
+            />
+          </label>
+          <button type="button" className="button button--primary button--small" onClick={applyLink}>
+            Apply
+          </button>
+          <button type="button" className="button button--subtle button--small" onClick={() => setLinkOpen(false)}>
+            Cancel
+          </button>
+        </div>
+      ) : null}
       <div
         ref={editorRef}
         className="rich-text__editor"
@@ -1419,7 +1632,9 @@ function RichTextEditor({ value, onChange }: { value: string; onChange: (html: s
         role="textbox"
         aria-multiline="true"
         aria-label="Formatted body content"
-        onInput={() => onChange(editorRef.current?.innerHTML ?? '')}
+        onMouseUp={rememberSelection}
+        onKeyUp={rememberSelection}
+        onInput={() => emitChange()}
       />
     </div>
   );

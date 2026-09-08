@@ -188,9 +188,16 @@ export function persistPageMeta(assessmentTitle: string, meta: PageMeta) {
 
 export function sanitizeInstructorHtml(html: string): string {
   if (typeof window === 'undefined') return html;
-  const allowed = new Set(['P', 'BR', 'B', 'I', 'EM', 'STRONG', 'UL', 'OL', 'LI']);
+  const allowed = new Set(['P', 'BR', 'B', 'I', 'EM', 'STRONG', 'UL', 'OL', 'LI', 'A', 'SPAN']);
   const template = document.createElement('template');
   template.innerHTML = html;
+  const unwrap = (el: HTMLElement) => {
+    const parent = el.parentNode;
+    if (!parent) return;
+    while (el.firstChild) parent.insertBefore(el.firstChild, el);
+    parent.removeChild(el);
+    walk(parent);
+  };
   const walk = (node: Node) => {
     [...node.childNodes].forEach((child) => {
       if (child.nodeType === Node.COMMENT_NODE) {
@@ -200,14 +207,27 @@ export function sanitizeInstructorHtml(html: string): string {
       if (child.nodeType !== Node.ELEMENT_NODE) return;
       const el = child as HTMLElement;
       if (!allowed.has(el.tagName)) {
-        const parent = el.parentNode;
-        if (!parent) return;
-        while (el.firstChild) parent.insertBefore(el.firstChild, el);
-        parent.removeChild(el);
-        walk(parent);
+        unwrap(el);
         return;
       }
-      [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
+      if (el.tagName === 'A') {
+        const href = el.getAttribute('href') ?? '';
+        [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
+        if (/^(https?:|mailto:|#)/i.test(href)) {
+          el.setAttribute('href', href);
+        }
+      } else if (el.tagName === 'SPAN') {
+        const isKeyword = el.classList.contains('page-keyword');
+        [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
+        if (isKeyword) {
+          el.className = 'page-keyword';
+        } else {
+          unwrap(el);
+          return;
+        }
+      } else {
+        [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
+      }
       walk(el);
     });
   };
