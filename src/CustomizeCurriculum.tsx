@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useId, useRef, useState, type DragEvent, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import chevronDownIcon from './assets/icon-chevron-down.png';
 import containerIcon from './assets/icon-container.png';
@@ -9,26 +9,34 @@ import {
   addChildNode,
   canMoveNode,
   childTypeFor,
-  createInitialCurriculum,
   createInstructorNode,
+  dropNode,
   findNode,
   isNodeVisible,
+  isValidDrop,
+  loadCurriculum,
   moveNode,
   NODE_TYPE_LABEL,
+  objectiveCodesFromLabels,
+  pageScoringOf,
+  persistCurriculum,
   removeFromCourse,
   renameNode,
   restoreOriginal,
   statusDescription,
   statusLabel,
-  summarizeCurriculumCustomizations,
   type CurriculumNode,
+  type DropPlacement,
+  type PageScoring,
 } from './curriculumData';
+import { INSTRUCTOR_PROJECTS, type ExistingMaterial } from './existingMaterials';
 import {
   ELSEWHERE_NOTE,
   evaluateCurriculumRemoval,
   friendlyObjectiveName,
   type RemovalImpact,
 } from './learningDesign';
+import { persistPageMeta, persistSavedPageLayout } from './pageCustomization';
 
 const INITIAL_EXPANDED = [
   'unit-electrochemistry',
@@ -38,17 +46,6 @@ const INITIAL_EXPANDED = [
   'module-e-chem-checkpoint',
 ];
 
-type BlueprintVisibility = 'only-me' | 'department';
-
-type CourseBlueprint = {
-  id: string;
-  name: string;
-  description: string;
-  visibility: BlueprintVisibility;
-  customizationSummary: string[];
-  savedAt: string;
-};
-
 type DialogState =
   | { type: 'add'; parentId: string | null; childType: 'unit' | 'module' | 'page' }
   | { type: 'rename'; id: string }
@@ -57,37 +54,70 @@ type DialogState =
   | { type: 'remove-limited'; id: string; impact: RemovalImpact }
   | { type: 'remove-orphaned'; id: string; impact: RemovalImpact }
   | { type: 'review-objectives'; objectives: string[] }
-  | { type: 'save-blueprint' }
-  | { type: 'blueprint-saved'; blueprint: CourseBlueprint }
+  | { type: 'existing-materials' }
   | null;
 
-const VISIBILITY_LABEL: Record<BlueprintVisibility, string> = {
-  'only-me': 'Only me',
-  department: 'My department',
-};
+type DropHint = { id: string; placement: DropPlacement };
 
+function listModules(nodes: CurriculumNode[]): { id: string; title: string; unitTitle: string }[] {
+  const items: { id: string; title: string; unitTitle: string }[] = [];
+  nodes.forEach((unit) => {
+    if (unit.type !== 'unit' || unit.status === 'removed') return;
+    unit.children.forEach((module) => {
+      if (module.type === 'module' && module.status !== 'removed') {
+        items.push({ id: module.id, title: module.title, unitTitle: unit.title });
+      }
+    });
+  });
+  return items;
+}
+
+function seedImportedPage(title: string, scoring: PageScoring, projectName: string, summary: string) {
+  persistSavedPageLayout(title, [
+    {
+      id: `pb-import-${Date.now()}`,
+      origin: 'instructor',
+      status: 'added',
+      kind: 'text',
+      title,
+      text: {
+        heading: title,
+        bodyHtml: `<p>Imported from ${projectName}. ${summary}</p>`,
+        learningObjective: '',
+      },
+    },
+  ]);
+  persistPageMeta(title, {
+    scoring,
+    attachedObjectiveCodes: [],
+    isInstructorCreated: true,
+  });
+}
 
 export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   const navigate = useNavigate();
   const showRemovedId = useId();
-  const [units, setUnits] = useState<CurriculumNode[]>(() => createInitialCurriculum());
-  const [savedSnapshot, setSavedSnapshot] = useState(() => JSON.stringify(createInitialCurriculum()));
+  const [units, setUnits] = useState<CurriculumNode[]>(() => loadCurriculum());
+  const [savedSnapshot, setSavedSnapshot] = useState(() => JSON.stringify(loadCurriculum()));
   const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set(INITIAL_EXPANDED));
   const [showRemoved, setShowRemoved] = useState(false);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [dialog, setDialog] = useState<DialogState>(null);
   const [draftName, setDraftName] = useState('');
-  const [blueprintDescription, setBlueprintDescription] = useState('');
-  const [blueprintVisibility, setBlueprintVisibility] = useState<BlueprintVisibility>('only-me');
-  const [blueprints, setBlueprints] = useState<CourseBlueprint[]>([]);
+  const [draftScoring, setDraftScoring] = useState<PageScoring>('scored');
   const [toast, setToast] = useState<string | null>(null);
   const [announcement, setAnnouncement] = useState('');
+  const [draggingId, setDraggingId] = useState<string | null>(null);
+  const [dropHint, setDropHint] = useState<DropHint | null>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const lastMenuTriggerRef = useRef<HTMLButtonElement | null>(null);
 
-  const dirty = useMemo(() => JSON.stringify(units) !== savedSnapshot, [units, savedSnapshot]);
-  const customizationSummary = useMemo(() => summarizeCurriculumCustomizations(units), [units]);
+  const dirty = JSON.stringify(units) !== savedSnapshot;
+
+  useEffect(() => {
+    persistCurriculum(units);
+  }, [units]);
 
   useEffect(() => {
     if (!toast) return undefined;
@@ -97,7 +127,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
   useEffect(() => {
     if (!dialog) return undefined;
-    if (dialog.type === 'add' || dialog.type === 'rename' || dialog.type === 'save-blueprint') {
+    if (dialog.type === 'add' || dialog.type === 'rename') {
       nameInputRef.current?.focus();
     } else {
       dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
@@ -152,6 +182,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   const openAdd = (parentId: string | null, childType: 'unit' | 'module' | 'page') => {
     setOpenMenuId(null);
     setDraftName('');
+    setDraftScoring('scored');
     setDialog({ type: 'add', parentId, childType });
   };
 
@@ -168,7 +199,9 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     if (dialog.type === 'add') {
       const name = draftName.trim();
       if (!name) return;
-      const child = createInstructorNode(dialog.childType, name);
+      const child = createInstructorNode(dialog.childType, name, {
+        pageScoring: dialog.childType === 'page' ? draftScoring : undefined,
+      });
       setUnits((current) => addChildNode(current, dialog.parentId, child));
       setExpandedIds((current) => {
         const next = new Set(current);
@@ -176,7 +209,15 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
         next.add(child.id);
         return next;
       });
-      announce(`${NODE_TYPE_LABEL[dialog.childType]} “${name}” added.`);
+      if (dialog.childType === 'page') {
+        persistSavedPageLayout(name, []);
+        persistPageMeta(name, {
+          scoring: draftScoring,
+          attachedObjectiveCodes: [],
+          isInstructorCreated: true,
+        });
+      }
+      announce(`${NODE_TYPE_LABEL[dialog.childType]} “${name}” created.`);
       setDialog(null);
       return;
     }
@@ -240,10 +281,15 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   };
 
   const openPage = (node: CurriculumNode) => {
+    const scoring = pageScoringOf(node);
     navigate('/assessment-default', {
       state: {
+        pageId: node.id,
         assessmentTitle: node.assessmentTitle ?? node.title,
         attemptsStarted: node.attemptsStarted ?? false,
+        pageScoring: scoring,
+        isInstructorCreated: node.origin === 'instructor',
+        attachedObjectiveCodes: objectiveCodesFromLabels(node.learningObjectives ?? []),
         breadcrumbTrail: [
           { label: 'Manage', to: '/' },
           { label: 'Customize Content', to: '/customize' },
@@ -254,7 +300,9 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   };
 
   const handleCancel = () => {
-    setUnits(JSON.parse(savedSnapshot) as CurriculumNode[]);
+    const restored = JSON.parse(savedSnapshot) as CurriculumNode[];
+    setUnits(restored);
+    persistCurriculum(restored);
     setOpenMenuId(null);
     setDialog(null);
     navigate('/');
@@ -262,32 +310,26 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
   const handleSave = () => {
     if (!dirty) return;
-    setSavedSnapshot(JSON.stringify(units));
+    const snapshot = JSON.stringify(units);
+    setSavedSnapshot(snapshot);
+    persistCurriculum(units);
     announce('Saved to this course section.');
   };
 
-  const openSaveBlueprint = () => {
-    setOpenMenuId(null);
-    setDraftName('Chemistry 101 — customized structure');
-    setBlueprintDescription('');
-    setBlueprintVisibility('only-me');
-    setDialog({ type: 'save-blueprint' });
-  };
-
-  const saveBlueprint = () => {
-    const name = draftName.trim();
-    if (!name) return;
-    const blueprint: CourseBlueprint = {
-      id: `bp-${Date.now()}`,
-      name,
-      description: blueprintDescription.trim(),
-      visibility: blueprintVisibility,
-      customizationSummary: [...customizationSummary],
-      savedAt: new Date().toLocaleString(),
-    };
-    setBlueprints((current) => [blueprint, ...current]);
-    setDialog({ type: 'blueprint-saved', blueprint });
-    announce(`Blueprint “${name}” saved.`);
+  const applyDrop = (targetId: string, placement: DropPlacement) => {
+    if (!draggingId) return;
+    const dragged = findNode(units, draggingId);
+    setUnits((current) => dropNode(current, draggingId, targetId, placement));
+    if (placement === 'inside') {
+      setExpandedIds((current) => {
+        const next = new Set(current);
+        next.add(targetId);
+        return next;
+      });
+    }
+    announce(`Moved “${dragged?.title ?? 'item'}”.`);
+    setDraggingId(null);
+    setDropHint(null);
   };
 
   const renderRows = (nodes: CurriculumNode[], depth: number): ReactNode[] =>
@@ -304,6 +346,8 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           menuOpen={openMenuId === node.id}
           showRemoved={showRemoved}
           units={units}
+          draggingId={draggingId}
+          dropHint={dropHint}
           onToggleExpand={() => toggleExpanded(node.id)}
           onOpenPage={() => openPage(node)}
           onAddChild={(childType) => openAdd(node.id, childType)}
@@ -319,6 +363,16 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
             setOpenMenuId(null);
             setDialog({ type: 'view-original', id: node.id });
           }}
+          onDragStart={(id) => {
+            setOpenMenuId(null);
+            setDraggingId(id);
+          }}
+          onDragEnd={() => {
+            setDraggingId(null);
+            setDropHint(null);
+          }}
+          onDropHint={setDropHint}
+          onDropRow={applyDrop}
         />,
       ];
       if (node.type === 'unit' || node.type === 'module') {
@@ -327,13 +381,16 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           rows.push(renderRows(nestableChildren, depth + 1));
         } else if (expanded) {
           rows.push(
-            <div
+            <EmptyDropZone
               key={`${node.id}-empty`}
-              className="curriculum-empty"
-              style={{ paddingLeft: 28 + depth * 24 }}
-            >
-              No {node.type === 'unit' ? 'modules' : 'pages'} yet.
-            </div>,
+              parent={node}
+              depth={depth}
+              draggingId={draggingId}
+              dropHint={dropHint}
+              units={units}
+              onDropHint={setDropHint}
+              onDropRow={applyDrop}
+            />,
           );
         }
       }
@@ -342,26 +399,20 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
   const dialogTitle =
     dialog?.type === 'add'
-      ? `Add ${dialog.childType}`
+      ? `Create ${dialog.childType}`
       : dialog?.type === 'rename'
         ? 'Rename'
         : dialog?.type === 'view-original'
           ? 'Original version'
           : dialog?.type === 'review-objectives'
             ? 'Review affected objectives'
-            : dialog?.type === 'save-blueprint'
-              ? 'Save as reusable blueprint'
-              : dialog?.type === 'blueprint-saved'
-                ? 'Blueprint saved'
-                : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
-                  ? 'Remove from this course'
-                  : '';
+            : dialog?.type === 'existing-materials'
+              ? 'Add existing materials'
+              : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
+                ? 'Remove from this course'
+                : '';
   const dialogNode =
-    dialog &&
-    dialog.type !== 'add' &&
-    dialog.type !== 'review-objectives' &&
-    dialog.type !== 'save-blueprint' &&
-    dialog.type !== 'blueprint-saved'
+    dialog && dialog.type !== 'add' && dialog.type !== 'review-objectives' && dialog.type !== 'existing-materials'
       ? findNode(units, dialog.id)
       : undefined;
   const removeKindLabel = dialogNode ? NODE_TYPE_LABEL[dialogNode.type as 'unit' | 'module' | 'page'].toLowerCase() : 'item';
@@ -379,9 +430,6 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
               <button type="button" className="button button--subtle" onClick={handleCancel}>
                 Cancel
               </button>
-              <button type="button" className="button button--secondary" onClick={openSaveBlueprint}>
-                Save as reusable blueprint
-              </button>
               <button
                 type="button"
                 className={dirty ? 'button button--primary' : 'button button--disabled'}
@@ -396,7 +444,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           <div className="curriculum-toolbar">
             <p className="curriculum-helper">
               Content from the original course has no extra label. Items you added or edited are marked. Removed items stay
-              restorable and appear only when shown.
+              restorable and appear only when shown. Drag the handle to reorder units, modules, and pages.
             </p>
             <label className="check-row curriculum-show-removed" htmlFor={showRemovedId}>
               <input
@@ -410,47 +458,20 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           </div>
 
           <div className="curriculum-tree" role="region" aria-label="Course curriculum">
+            <span className="visually-hidden" id="curriculum-drag-help">
+              Drag to a new position, or use the up and down arrow keys to reorder.
+            </span>
             {renderRows(units, 0)}
           </div>
 
-          <div className="footer-actions">
+          <div className="footer-actions footer-actions--row">
             <button type="button" className="button button--primary" onClick={() => openAdd(null, 'unit')}>
-              Add unit
+              Create unit
+            </button>
+            <button type="button" className="button button--secondary" onClick={() => setDialog({ type: 'existing-materials' })}>
+              Add existing materials
             </button>
           </div>
-
-          <section className="blueprint-list" aria-labelledby="my-blueprints-heading">
-            <div className="blueprint-list__header">
-              <h2 id="my-blueprints-heading">My blueprints</h2>
-              <p>
-                Saved course structures you can reuse as a starting point for future sections. This prototype keeps them
-                locally in this session.
-              </p>
-            </div>
-            {blueprints.length === 0 ? (
-              <p className="blueprint-list__empty">No blueprints yet. Save this customized course structure to create one.</p>
-            ) : (
-              <ul className="blueprint-list__items">
-                {blueprints.map((blueprint) => (
-                  <li key={blueprint.id} className="blueprint-card">
-                    <div className="blueprint-card__top">
-                      <h3>{blueprint.name}</h3>
-                      <span className="blueprint-card__visibility">{VISIBILITY_LABEL[blueprint.visibility]}</span>
-                    </div>
-                    {blueprint.description ? <p className="blueprint-card__description">{blueprint.description}</p> : null}
-                    <p className="blueprint-card__meta">
-                      Saved {blueprint.savedAt}
-                      {blueprint.customizationSummary.length > 0
-                        ? ` · ${blueprint.customizationSummary.length} customization${
-                            blueprint.customizationSummary.length === 1 ? '' : 's'
-                          }`
-                        : ' · Structure matches the original course'}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
         </div>
 
       <div className="visually-hidden" role="status" aria-live="polite">
@@ -465,11 +486,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
       {dialog ? (
         <div className="modal-backdrop" role="presentation" onClick={() => setDialog(null)}>
           <div
-            className={
-              dialog.type === 'save-blueprint' || dialog.type === 'blueprint-saved'
-                ? 'modal-card modal-card--wide'
-                : 'modal-card'
-            }
+            className={dialog.type === 'existing-materials' ? 'modal-card modal-card--wide' : 'modal-card'}
             role="dialog"
             aria-modal="true"
             aria-labelledby="curriculum-dialog-title"
@@ -493,15 +510,66 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
                     aria-required="true"
                   />
                 </label>
+                {dialog.type === 'add' && dialog.childType === 'page' ? (
+                  <fieldset className="page-scoring-fieldset">
+                    <legend>Page type</legend>
+                    <label>
+                      <input
+                        type="radio"
+                        name="page-scoring"
+                        checked={draftScoring === 'scored'}
+                        onChange={() => setDraftScoring('scored')}
+                      />
+                      Scored
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="page-scoring"
+                        checked={draftScoring === 'practice'}
+                        onChange={() => setDraftScoring('practice')}
+                      />
+                      Practice
+                    </label>
+                  </fieldset>
+                ) : null}
                 <div className="modal-actions">
                   <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
                     Cancel
                   </button>
                   <button type="submit" className="button button--primary" disabled={!draftName.trim()}>
-                    {dialog.type === 'add' ? 'Add' : 'Save'}
+                    {dialog.type === 'add' ? 'Create' : 'Save'}
                   </button>
                 </div>
               </form>
+            ) : null}
+            {dialog.type === 'existing-materials' ? (
+              <ExistingMaterialsDialog
+                units={units}
+                onCancel={() => setDialog(null)}
+                onAdd={({ material, projectName, parentId }) => {
+                  const child = createInstructorNode(material.type, material.title, {
+                    pageScoring: material.type === 'page' ? material.pageScoring ?? 'scored' : undefined,
+                  });
+                  setUnits((current) => addChildNode(current, parentId, child));
+                  setExpandedIds((current) => {
+                    const next = new Set(current);
+                    if (parentId) next.add(parentId);
+                    next.add(child.id);
+                    return next;
+                  });
+                  if (material.type === 'page') {
+                    seedImportedPage(
+                      material.title,
+                      material.pageScoring ?? 'scored',
+                      projectName,
+                      material.summary,
+                    );
+                  }
+                  announce(`${NODE_TYPE_LABEL[material.type]} “${material.title}” added from ${projectName}.`);
+                  setDialog(null);
+                }}
+              />
             ) : null}
             {dialog.type === 'view-original' && dialogNode ? (
               <>
@@ -621,103 +689,175 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
                 </div>
               </>
             ) : null}
-            {dialog.type === 'save-blueprint' ? (
-              <form
-                className="blueprint-form"
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  saveBlueprint();
-                }}
-              >
-                <p className="blueprint-form__intro">
-                  Save this customized course structure so you or your department can use it as a starting point for
-                  future course sections.
-                </p>
-                <label className="field">
-                  <span>Blueprint name</span>
-                  <input
-                    ref={nameInputRef}
-                    value={draftName}
-                    onChange={(event) => setDraftName(event.target.value)}
-                    aria-required="true"
-                  />
-                </label>
-                <label className="field">
-                  <span>Description</span>
-                  <textarea
-                    rows={3}
-                    value={blueprintDescription}
-                    onChange={(event) => setBlueprintDescription(event.target.value)}
-                    placeholder="Optional. Note who this is for or what was customized."
-                  />
-                </label>
-                <fieldset className="blueprint-form__visibility">
-                  <legend>Visibility</legend>
-                  <label>
-                    <input
-                      type="radio"
-                      name="blueprint-visibility"
-                      checked={blueprintVisibility === 'only-me'}
-                      onChange={() => setBlueprintVisibility('only-me')}
-                    />
-                    Only me
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="blueprint-visibility"
-                      checked={blueprintVisibility === 'department'}
-                      onChange={() => setBlueprintVisibility('department')}
-                    />
-                    My department
-                  </label>
-                </fieldset>
-                <div className="blueprint-form__summary">
-                  <h4>Customizations included</h4>
-                  {customizationSummary.length === 0 ? (
-                    <p className="blueprint-form__summary-empty">
-                      No structural customizations yet. The blueprint will still save the current course structure.
-                    </p>
-                  ) : (
-                    <ul>
-                      {customizationSummary.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-                <div className="modal-actions">
-                  <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
-                    Cancel
-                  </button>
-                  <button type="submit" className="button button--primary" disabled={!draftName.trim()}>
-                    Save blueprint
-                  </button>
-                </div>
-              </form>
-            ) : null}
-            {dialog.type === 'blueprint-saved' ? (
-              <>
-                <div className="blueprint-success" role="status">
-                  <p>
-                    <strong>“{dialog.blueprint.name}”</strong> is saved and available in My blueprints.
-                  </p>
-                  <p>
-                    Visibility: {VISIBILITY_LABEL[dialog.blueprint.visibility]}. You can use this structure as a starting
-                    point for future course sections.
-                  </p>
-                </div>
-                <div className="modal-actions">
-                  <button type="button" className="button button--primary" onClick={() => setDialog(null)}>
-                    Done
-                  </button>
-                </div>
-              </>
-            ) : null}
           </div>
         </div>
       ) : null}
     </>
+  );
+}
+
+function ExistingMaterialsDialog({
+  units,
+  onCancel,
+  onAdd,
+}: {
+  units: CurriculumNode[];
+  onCancel: () => void;
+  onAdd: (payload: { material: ExistingMaterial; projectName: string; parentId: string | null }) => void;
+}) {
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [destinationId, setDestinationId] = useState('');
+  const unitsForModules = units.filter((node) => node.type === 'unit' && node.status !== 'removed');
+  const modules = listModules(units);
+
+  const selected = INSTRUCTOR_PROJECTS.flatMap((project) =>
+    project.materials.map((material) => ({ material, projectName: project.name })),
+  ).find((item) => item.material.id === selectedId);
+
+  const destinationOptions =
+    selected?.material.type === 'module'
+      ? unitsForModules.map((unit) => ({ id: unit.id, label: unit.title }))
+      : selected?.material.type === 'page'
+        ? modules.map((module) => ({ id: module.id, label: `${module.unitTitle} / ${module.title}` }))
+        : [];
+
+  const canAdd =
+    Boolean(selected) &&
+    (selected?.material.type === 'unit' || Boolean(destinationId) || destinationOptions.length === 0);
+
+  return (
+    <>
+      <p>Select a unit, module, or page from a project you can access, then add it to this course.</p>
+      <div className="existing-materials" role="list">
+        {INSTRUCTOR_PROJECTS.map((project) => (
+          <section key={project.id} className="existing-project">
+            <div className="existing-project__head">
+              <h4>{project.name}</h4>
+              <span>{project.access}</span>
+            </div>
+            {project.materials.map((material) => (
+              <label key={material.id} className="existing-material">
+                <input
+                  type="radio"
+                  name="existing-material"
+                  checked={selectedId === material.id}
+                  onChange={() => {
+                    setSelectedId(material.id);
+                    setDestinationId('');
+                  }}
+                />
+                <span>
+                  <strong>{material.title}</strong>
+                  <span className="existing-material__meta">
+                    {NODE_TYPE_LABEL[material.type]}
+                    {material.pageScoring ? ` · ${material.pageScoring}` : ''}
+                  </span>
+                  <span className="existing-material__summary">{material.summary}</span>
+                </span>
+              </label>
+            ))}
+          </section>
+        ))}
+      </div>
+      {selected && selected.material.type !== 'unit' ? (
+        <label className="field">
+          <span>{selected.material.type === 'module' ? 'Add to unit' : 'Add to module'}</span>
+          <select
+            className="select"
+            value={destinationId}
+            onChange={(event) => setDestinationId(event.target.value)}
+            disabled={destinationOptions.length === 0}
+          >
+            <option value="">{destinationOptions.length === 0 ? 'No destination available' : 'Select a destination'}</option>
+            {destinationOptions.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      ) : null}
+      <div className="modal-actions">
+        <button type="button" className="button button--subtle" onClick={onCancel}>
+          Cancel
+        </button>
+        <button
+          type="button"
+          className="button button--primary"
+          disabled={!canAdd}
+          onClick={() => {
+            if (!selected) return;
+            onAdd({
+              material: selected.material,
+              projectName: selected.projectName,
+              parentId: selected.material.type === 'unit' ? null : destinationId || null,
+            });
+          }}
+        >
+          Add to course
+        </button>
+      </div>
+    </>
+  );
+}
+
+function placementForDrag(
+  event: DragEvent<HTMLElement>,
+  units: CurriculumNode[],
+  draggedId: string,
+  target: CurriculumNode,
+): DropPlacement | null {
+  const dragged = findNode(units, draggedId);
+  if (!dragged) return null;
+  if (isValidDrop(units, draggedId, target.id, 'inside') && dragged.type !== target.type) {
+    return 'inside';
+  }
+  const rect = event.currentTarget.getBoundingClientRect();
+  const placement: DropPlacement = event.clientY < rect.top + rect.height / 2 ? 'before' : 'after';
+  return isValidDrop(units, draggedId, target.id, placement) ? placement : null;
+}
+
+function EmptyDropZone({
+  parent,
+  depth,
+  draggingId,
+  dropHint,
+  units,
+  onDropHint,
+  onDropRow,
+}: {
+  parent: CurriculumNode;
+  depth: number;
+  draggingId: string | null;
+  dropHint: DropHint | null;
+  units: CurriculumNode[];
+  onDropHint: (hint: DropHint | null) => void;
+  onDropRow: (targetId: string, placement: DropPlacement) => void;
+}) {
+  const childLabel = parent.type === 'unit' ? 'modules' : 'pages';
+  const isInside = dropHint?.id === parent.id && dropHint.placement === 'inside';
+  return (
+    <div
+      className={isInside ? 'curriculum-empty is-drop-inside' : 'curriculum-empty'}
+      style={{ paddingLeft: 28 + depth * 24 }}
+      onDragOver={(event) => {
+        if (!draggingId) return;
+        if (!isValidDrop(units, draggingId, parent.id, 'inside')) return;
+        event.preventDefault();
+        onDropHint({ id: parent.id, placement: 'inside' });
+      }}
+      onDragLeave={() => {
+        if (isInside) onDropHint(null);
+      }}
+      onDrop={(event) => {
+        event.preventDefault();
+        if (draggingId && isValidDrop(units, draggingId, parent.id, 'inside')) {
+          onDropRow(parent.id, 'inside');
+        }
+      }}
+    >
+      No {childLabel} yet.
+    </div>
   );
 }
 
@@ -728,6 +868,8 @@ function CurriculumRow({
   menuOpen,
   showRemoved,
   units,
+  draggingId,
+  dropHint,
   onToggleExpand,
   onOpenPage,
   onAddChild,
@@ -737,6 +879,10 @@ function CurriculumRow({
   onRemove,
   onRestore,
   onViewOriginal,
+  onDragStart,
+  onDragEnd,
+  onDropHint,
+  onDropRow,
 }: {
   node: CurriculumNode;
   depth: number;
@@ -744,6 +890,8 @@ function CurriculumRow({
   menuOpen: boolean;
   showRemoved: boolean;
   units: CurriculumNode[];
+  draggingId: string | null;
+  dropHint: DropHint | null;
   onToggleExpand: () => void;
   onOpenPage: () => void;
   onAddChild: (childType: 'module' | 'page') => void;
@@ -753,6 +901,10 @@ function CurriculumRow({
   onRemove: () => void;
   onRestore: () => void;
   onViewOriginal: () => void;
+  onDragStart: (id: string) => void;
+  onDragEnd: () => void;
+  onDropHint: (hint: DropHint | null) => void;
+  onDropRow: (targetId: string, placement: DropPlacement) => void;
 }) {
   const canExpand = node.type === 'unit' || node.type === 'module';
   const childType = childTypeFor(node.type);
@@ -762,6 +914,9 @@ function CurriculumRow({
   const accessibleName = `${rowLabel} ${node.title}, ${statusDescription(node)}`;
   const canMoveUp = canMoveNode(units, node.id, 'up', showRemoved);
   const canMoveDown = canMoveNode(units, node.id, 'down', showRemoved);
+  const scoring = node.type === 'page' ? pageScoringOf(node) : null;
+  const isDragging = draggingId === node.id;
+  const hint = dropHint?.id === node.id ? dropHint.placement : null;
 
   const rowClass = [
     'curriculum-row',
@@ -769,6 +924,10 @@ function CurriculumRow({
     node.status === 'removed' ? 'curriculum-row--removed' : '',
     node.status === 'added' ? 'curriculum-row--added' : '',
     node.status === 'modified' ? 'curriculum-row--modified' : '',
+    isDragging ? 'is-dragging' : '',
+    hint === 'before' ? 'is-drop-before' : '',
+    hint === 'after' ? 'is-drop-after' : '',
+    hint === 'inside' ? 'is-drop-inside' : '',
   ]
     .filter(Boolean)
     .join(' ');
@@ -777,8 +936,62 @@ function CurriculumRow({
     <div
       className={rowClass}
       style={{ paddingLeft: 12 + depth * 24 }}
+      onDragOver={(event) => {
+        if (!draggingId || draggingId === node.id) return;
+        const placement = placementForDrag(event, units, draggingId, node);
+        if (!placement) return;
+        event.preventDefault();
+        event.dataTransfer.dropEffect = 'move';
+        onDropHint({ id: node.id, placement });
+      }}
+      onDragLeave={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+          onDropHint(null);
+        }
+      }}
+      onDrop={(event) => {
+        event.preventDefault();
+        if (!draggingId) return;
+        const placement = placementForDrag(event, units, draggingId, node);
+        if (placement) onDropRow(node.id, placement);
+      }}
     >
       <div className="curriculum-row__main">
+        {node.status !== 'removed' ? (
+          <button
+            type="button"
+            className="curriculum-drag"
+            draggable
+            aria-label={`Drag to reorder ${node.title}`}
+            aria-describedby="curriculum-drag-help"
+            onDragStart={(event) => {
+              event.dataTransfer.setData('text/plain', node.id);
+              event.dataTransfer.effectAllowed = 'move';
+              const row = event.currentTarget.closest('.curriculum-row');
+              if (row instanceof HTMLElement) {
+                event.dataTransfer.setDragImage(row, 24, 16);
+              }
+              onDragStart(node.id);
+            }}
+            onDragEnd={onDragEnd}
+            onKeyDown={(event) => {
+              if (event.key === 'ArrowUp' && canMoveUp) {
+                event.preventDefault();
+                onMove('up');
+              }
+              if (event.key === 'ArrowDown' && canMoveDown) {
+                event.preventDefault();
+                onMove('down');
+              }
+            }}
+          >
+            <span className="curriculum-drag__dots" aria-hidden="true">
+              <i /><i /><i /><i /><i /><i />
+            </span>
+          </button>
+        ) : (
+          <span className="curriculum-drag curriculum-drag--spacer" aria-hidden="true" />
+        )}
         {canExpand ? (
           <button
             type="button"
@@ -816,6 +1029,11 @@ function CurriculumRow({
             </span>
           </button>
         )}
+        {scoring ? (
+          <span className={`curriculum-scoring curriculum-scoring--${scoring}`}>
+            {scoring === 'scored' ? 'Scored' : 'Practice'}
+          </span>
+        ) : null}
         {label ? (
           <span className={`curriculum-status curriculum-status--${node.status}`}>{label}</span>
         ) : (
@@ -832,7 +1050,7 @@ function CurriculumRow({
           ) : null}
           {childType && node.status !== 'removed' ? (
             <button type="button" className="button button--secondary button--small" onClick={() => onAddChild(childType)}>
-              Add {childType}
+              Create {childType}
             </button>
           ) : null}
           <div className="curriculum-menu-wrap" data-curriculum-menu>
@@ -850,7 +1068,7 @@ function CurriculumRow({
               <div className="curriculum-menu" role="menu" aria-label={`Actions for ${node.title}`}>
                 {childType && node.status !== 'removed' ? (
                   <button type="button" role="menuitem" className="curriculum-menu__item" onClick={() => onAddChild(childType)}>
-                    Add {childType}
+                    Create {childType}
                   </button>
                 ) : null}
                 {node.status !== 'removed' ? (
@@ -858,24 +1076,6 @@ function CurriculumRow({
                     Rename
                   </button>
                 ) : null}
-                <button
-                  type="button"
-                  role="menuitem"
-                  className="curriculum-menu__item"
-                  onClick={() => onMove('up')}
-                  disabled={!canMoveUp}
-                >
-                  Move up
-                </button>
-                <button
-                  type="button"
-                  role="menuitem"
-                  className="curriculum-menu__item"
-                  onClick={() => onMove('down')}
-                  disabled={!canMoveDown}
-                >
-                  Move down
-                </button>
                 {node.origin === 'canonical' ? (
                   <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onViewOriginal}>
                     View original version

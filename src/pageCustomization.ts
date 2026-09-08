@@ -1,3 +1,5 @@
+import type { PageScoring } from './curriculumData';
+
 export type PageBlockKind = 'text' | 'example' | 'question' | 'bank' | 'course-resource';
 export type PageBlockOrigin = 'canonical' | 'instructor';
 export type PageBlockStatus = 'original' | 'added' | 'removed';
@@ -69,6 +71,12 @@ export type PageObjectiveOption = {
   label: string;
 };
 
+export type PageMeta = {
+  scoring: PageScoring;
+  attachedObjectiveCodes: string[];
+  isInstructorCreated: boolean;
+};
+
 export type ChangeSummary = {
   count: number;
   items: string[];
@@ -89,6 +97,7 @@ export const COURSE_RESOURCE_OPTIONS: CourseResourceContent[] = [
 ];
 
 const STORAGE_PREFIX = 'torusux:pageLayout:v2:';
+const META_PREFIX = 'torusux:pageMeta:v1:';
 
 type StoredLayout = {
   v: 1;
@@ -147,6 +156,34 @@ export function persistDraftPageLayout(assessmentTitle: string, blocks: PageBloc
 export function persistSavedPageLayout(assessmentTitle: string, blocks: PageBlock[]) {
   writeLayout(assessmentTitle, 'saved', blocks);
   writeLayout(assessmentTitle, 'draft', blocks);
+}
+
+const metaKey = (assessmentTitle: string) => `${META_PREFIX}${encodeURIComponent(assessmentTitle)}`;
+
+export function loadPageMeta(assessmentTitle: string): PageMeta | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = sessionStorage.getItem(metaKey(assessmentTitle));
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<PageMeta>;
+    if (!parsed || (parsed.scoring !== 'scored' && parsed.scoring !== 'practice')) return null;
+    return {
+      scoring: parsed.scoring,
+      attachedObjectiveCodes: Array.isArray(parsed.attachedObjectiveCodes) ? parsed.attachedObjectiveCodes : [],
+      isInstructorCreated: Boolean(parsed.isInstructorCreated),
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function persistPageMeta(assessmentTitle: string, meta: PageMeta) {
+  if (typeof window === 'undefined') return;
+  try {
+    sessionStorage.setItem(metaKey(assessmentTitle), JSON.stringify(meta));
+  } catch {
+    /* ignore quota / private mode */
+  }
 }
 
 export function sanitizeInstructorHtml(html: string): string {

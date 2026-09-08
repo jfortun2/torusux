@@ -11,6 +11,7 @@ import {
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
 import {
   AddContentGap,
+  AddExistingMaterialsButton,
   CanonicalCourseNotice,
   CompareWithOriginalDialog,
   CourseResourceView,
@@ -19,11 +20,20 @@ import {
   PageBlockFrame,
   PageCustomizeBar,
   PageCustomizeDialogs,
+  PageObjectivesAttach,
   QuestionBlockForm,
   StudentQuestionView,
   TextBlockView,
   type CustomizeDialog,
 } from './PageCustomize';
+import {
+  COURSE_LEARNING_OBJECTIVES,
+  labelsFromObjectiveCodes,
+  loadCurriculum,
+  persistCurriculum,
+  setPageObjectives,
+  type PageScoring,
+} from './curriculumData';
 import { bankObjectivesById, evaluatePageBlockRemoval, type RemovalImpact } from './learningDesign';
 import {
   addedQuestionCoverage,
@@ -33,10 +43,12 @@ import {
   createDefaultPageBlocks,
   insertBlock,
   loadDraftPageLayout,
+  loadPageMeta,
   loadSavedPageLayout,
   moveBlock,
   pageIsCustomized,
   persistDraftPageLayout,
+  persistPageMeta,
   persistSavedPageLayout,
   removedBankIds,
   removedEmbeddedFromBlocks,
@@ -973,20 +985,36 @@ function AssessmentScreen() {
     assessmentTitle?: string;
     breadcrumbTrail?: BreadcrumbItem[];
     scrollToBankId?: string;
+    pageId?: string;
+    pageScoring?: PageScoring;
+    isInstructorCreated?: boolean;
+    attachedObjectiveCodes?: string[];
   } | null;
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
-  const pageObjectives = getPageObjectives(assessmentTitle);
+  const storedMeta = loadPageMeta(assessmentTitle);
+  const isInstructorCreated = state?.isInstructorCreated ?? storedMeta?.isInstructorCreated ?? false;
+  const pageScoring: PageScoring = state?.pageScoring ?? storedMeta?.scoring ?? 'scored';
+  const pageId = state?.pageId;
+  const catalogObjectives = getPageObjectives(assessmentTitle);
+  const initialAttachedCodes = storedMeta
+    ? storedMeta.attachedObjectiveCodes
+    : isInstructorCreated
+      ? (state?.attachedObjectiveCodes ?? [])
+      : catalogObjectives.map((objective) => objective.code);
   const buildDefaultBlocks = () =>
-    createDefaultPageBlocks({
-      isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
-      selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
-      removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
-      removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-      images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
-      objectives: getPageObjectives(assessmentTitle),
-    });
+    isInstructorCreated
+      ? []
+      : createDefaultPageBlocks({
+          isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
+          selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
+          removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
+          removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
+          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+          objectives: getPageObjectives(assessmentTitle),
+        });
   const [blocks, setBlocks] = useState<PageBlock[]>(() => loadDraftPageLayout(assessmentTitle) ?? loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [savedBlocks, setSavedBlocks] = useState<PageBlock[]>(() => loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
+  const [attachedCodes, setAttachedCodes] = useState<string[]>(() => initialAttachedCodes);
   const [selectedBlockId, setSelectedBlockId] = useState<string | null>(null);
   const [customizeDialog, setCustomizeDialog] = useState<CustomizeDialog | null>(null);
   const [showCompareOriginal, setShowCompareOriginal] = useState(false);
@@ -998,6 +1026,10 @@ function AssessmentScreen() {
   );
   const [viewMode, setViewMode] = useState<ViewMode>('instructor');
   const [announcement, setAnnouncement] = useState('');
+  const pageObjectives = useMemo(
+    () => COURSE_LEARNING_OBJECTIVES.filter((objective) => attachedCodes.includes(objective.code)),
+    [attachedCodes],
+  );
   const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
   const isStudentPreview = viewMode === 'student';
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
@@ -1008,17 +1040,22 @@ function AssessmentScreen() {
   const changeSummary = useMemo(() => summarizePageChanges(savedBlocks, blocks), [savedBlocks, blocks]);
   const canonicalBlocks = useMemo(
     () =>
-      createDefaultPageBlocks({
-        isNuclear: isNuclearAssessment,
-        selectionIds: assessmentSelections.map((selection) => selection.id),
-        removedBanks: [],
-        removedEmbedded: {},
-        images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
-        objectives: pageObjectives,
-      }),
-    [isNuclearAssessment, assessmentSelections, pageObjectives],
+      isInstructorCreated
+        ? []
+        : createDefaultPageBlocks({
+            isNuclear: isNuclearAssessment,
+            selectionIds: assessmentSelections.map((selection) => selection.id),
+            removedBanks: [],
+            removedEmbedded: {},
+            images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+            objectives: pageObjectives,
+          }),
+    [isInstructorCreated, isNuclearAssessment, assessmentSelections, pageObjectives],
   );
-  const isPageCustomized = useMemo(() => pageIsCustomized(canonicalBlocks, blocks), [canonicalBlocks, blocks]);
+  const isPageCustomized = useMemo(
+    () => !isInstructorCreated && pageIsCustomized(canonicalBlocks, blocks),
+    [isInstructorCreated, canonicalBlocks, blocks],
+  );
   const extraQuestions = addedQuestionCoverage(blocks);
   const studentPreviewData = useMemo(() => {
     const usesVariantNaming = usesTaggedVariantNaming(assessmentTitle);
@@ -1111,27 +1148,29 @@ function AssessmentScreen() {
     () =>
       computeObjectiveCoverage({
         assessmentTitle,
-        selections: assessmentSelections,
+        selections: isInstructorCreated ? [] : assessmentSelections,
         removedBanks,
         removedEmbedded: removedEmbeddedQuestions,
         extraQuestions,
       }),
-    [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions, extraQuestions],
+    [assessmentTitle, isInstructorCreated, assessmentSelections, removedBanks, removedEmbeddedQuestions, extraQuestions],
   );
 
   const overallPageScore = useMemo(() => {
     let total = 0;
-    assessmentSelections.forEach((selection) => {
-      if (removedBanks.includes(selection.id)) return;
-      const pointsPerQuestion = selection.exampleQuestions[0]?.points ?? 1;
-      total += selection.numberToSelect * pointsPerQuestion;
-    });
+    if (!isInstructorCreated) {
+      assessmentSelections.forEach((selection) => {
+        if (removedBanks.includes(selection.id)) return;
+        const pointsPerQuestion = selection.exampleQuestions[0]?.points ?? 1;
+        total += selection.numberToSelect * pointsPerQuestion;
+      });
+    }
     blocks.forEach((block) => {
       if (block.kind !== 'question' || block.status === 'removed') return;
       total += block.question.points;
     });
     return total;
-  }, [assessmentSelections, removedBanks, blocks]);
+  }, [isInstructorCreated, assessmentSelections, removedBanks, blocks]);
 
   const showBlockToast = (blockId: string, message: string) => {
     setBlockToasts((current) => ({ ...current, [blockId]: message }));
@@ -1145,14 +1184,16 @@ function AssessmentScreen() {
   };
 
   useLayoutEffect(() => {
-    const defaults = createDefaultPageBlocks({
-      isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
-      selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
-      removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
-      removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-      images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
-      objectives: getPageObjectives(assessmentTitle),
-    });
+    const defaults = isInstructorCreated
+      ? []
+      : createDefaultPageBlocks({
+          isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
+          selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
+          removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
+          removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
+          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+          objectives: getPageObjectives(assessmentTitle),
+        });
     const saved = loadSavedPageLayout(assessmentTitle) ?? defaults;
     const draft = loadDraftPageLayout(assessmentTitle) ?? saved;
     setSavedBlocks(saved);
@@ -1160,11 +1201,27 @@ function AssessmentScreen() {
     setSelectedBlockId(null);
     setCustomizeDialog(null);
     setShowCompareOriginal(false);
-  }, [assessmentTitle]);
+    const nextMeta = loadPageMeta(assessmentTitle);
+    setAttachedCodes(
+      nextMeta
+        ? nextMeta.attachedObjectiveCodes
+        : isInstructorCreated
+          ? (state?.attachedObjectiveCodes ?? [])
+          : getPageObjectives(assessmentTitle).map((objective) => objective.code),
+    );
+  }, [assessmentTitle, isInstructorCreated, state?.attachedObjectiveCodes]);
 
   useEffect(() => {
     persistDraftPageLayout(assessmentTitle, blocks);
   }, [assessmentTitle, blocks]);
+
+  useEffect(() => {
+    persistPageMeta(assessmentTitle, {
+      scoring: pageScoring,
+      attachedObjectiveCodes: attachedCodes,
+      isInstructorCreated,
+    });
+  }, [assessmentTitle, pageScoring, attachedCodes, isInstructorCreated]);
 
   useEffect(() => {
     if (!state?.removeBankId) return;
@@ -1391,6 +1448,8 @@ function AssessmentScreen() {
           viewMode={viewMode}
           onViewModeChange={setViewMode}
           overallPageScore={overallPageScore}
+          pageScoring={pageScoring}
+          objectives={pageObjectives}
         />
         <div className="assessment-content">
           {attemptsStarted && !isStudentPreview ? (
@@ -1408,6 +1467,25 @@ function AssessmentScreen() {
           {blockToasts['page-save'] ? <SuccessToast message={blockToasts['page-save']} /> : null}
           <div className="assessment-main">
             {!isStudentPreview ? (
+              <PageObjectivesAttach
+                allObjectives={COURSE_LEARNING_OBJECTIVES}
+                attachedCodes={attachedCodes}
+                onChange={(codes) => {
+                  setAttachedCodes(codes);
+                  if (pageId) {
+                    persistCurriculum(setPageObjectives(loadCurriculum(), pageId, labelsFromObjectiveCodes(codes)));
+                  }
+                  setAnnouncement(
+                    codes.length === 0
+                      ? 'Learning objectives removed from this page.'
+                      : `Learning objectives updated. ${codes.length} attached.`,
+                  );
+                }}
+              />
+            ) : (
+              <PageObjectivesAttach allObjectives={COURSE_LEARNING_OBJECTIVES} attachedCodes={attachedCodes} readOnly />
+            )}
+            {!isStudentPreview && jumpTargets.length > 0 ? (
               <div className="assessment-shortcuts-card">
                 <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
                   <span className="jump-section-header__label">Jump to section</span>
@@ -1448,53 +1526,66 @@ function AssessmentScreen() {
                     if (block.kind === 'bank') return renderStudentBank(block);
                     return <StudentQuestionView key={block.id} block={block} name={block.id} />;
                   })
-              : blocks.flatMap((block, index) => {
-                  const frame = (
-                    <div key={block.id} className="page-block-stack">
-                      {blockToasts[block.id] ? <SuccessToast message={blockToasts[block.id]} inline /> : null}
-                      <PageBlockFrame
-                        block={block}
-                        htmlId={block.kind === 'bank' ? undefined : block.id}
-                        selected={selectedBlockId === block.id}
-                        canMoveUp={canMoveBlock(blocks, block.id, 'up')}
-                        canMoveDown={canMoveBlock(blocks, block.id, 'down')}
-                        canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
-                        onEdit={() => {
-                          if (block.kind === 'text') {
-                            setCustomizeDialog({ type: 'edit-text', block });
-                            return;
-                          }
-                          if (block.kind === 'question') {
-                            setCustomizeDialog({ type: 'edit-question', block });
-                          }
-                        }}
-                        onSelect={() => setSelectedBlockId(block.id)}
-                        onMoveUp={() => {
-                          setBlocks((current) => moveBlock(current, block.id, 'up'));
-                          setAnnouncement(`Moved “${block.title}” up.`);
-                        }}
-                        onMoveDown={() => {
-                          setBlocks((current) => moveBlock(current, block.id, 'down'));
-                          setAnnouncement(`Moved “${block.title}” down.`);
-                        }}
-                        onRemove={() => requestToggleBlock(block.id)}
-                        onRestore={() => requestToggleBlock(block.id)}
-                      >
-                        {renderBlockBody(block)}
-                      </PageBlockFrame>
-                    </div>
-                  );
-                  return [
-                    <AddContentGap key={`add-${index}`} onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: index })} />,
-                    frame,
-                    index === blocks.length - 1 ? (
-                      <AddContentGap
-                        key="add-end"
-                        onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: blocks.length })}
-                      />
-                    ) : null,
-                  ];
-                })}
+              : [
+                  ...(blocks.length === 0
+                    ? [
+                        <AddContentGap
+                          key="add-empty"
+                          onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: 0 })}
+                        />,
+                      ]
+                    : blocks.flatMap((block, index) => {
+                        const frame = (
+                          <div key={block.id} className="page-block-stack">
+                            {blockToasts[block.id] ? <SuccessToast message={blockToasts[block.id]} inline /> : null}
+                            <PageBlockFrame
+                              block={block}
+                              htmlId={block.kind === 'bank' ? undefined : block.id}
+                              selected={selectedBlockId === block.id}
+                              canMoveUp={canMoveBlock(blocks, block.id, 'up')}
+                              canMoveDown={canMoveBlock(blocks, block.id, 'down')}
+                              canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
+                              onEdit={() => {
+                                if (block.kind === 'text') {
+                                  setCustomizeDialog({ type: 'edit-text', block });
+                                  return;
+                                }
+                                if (block.kind === 'question') {
+                                  setCustomizeDialog({ type: 'edit-question', block });
+                                }
+                              }}
+                              onSelect={() => setSelectedBlockId(block.id)}
+                              onMoveUp={() => {
+                                setBlocks((current) => moveBlock(current, block.id, 'up'));
+                                setAnnouncement(`Moved “${block.title}” up.`);
+                              }}
+                              onMoveDown={() => {
+                                setBlocks((current) => moveBlock(current, block.id, 'down'));
+                                setAnnouncement(`Moved “${block.title}” down.`);
+                              }}
+                              onRemove={() => requestToggleBlock(block.id)}
+                              onRestore={() => requestToggleBlock(block.id)}
+                            >
+                              {renderBlockBody(block)}
+                            </PageBlockFrame>
+                          </div>
+                        );
+                        return [
+                          <AddContentGap key={`add-${index}`} onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: index })} />,
+                          frame,
+                          index === blocks.length - 1 ? (
+                            <AddContentGap
+                              key="add-end"
+                              onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: blocks.length })}
+                            />
+                          ) : null,
+                        ];
+                      })),
+                  <AddExistingMaterialsButton
+                    key="add-existing"
+                    onAdd={() => setCustomizeDialog({ type: 'existing-projects', insertAt: blocks.length })}
+                  />,
+                ]}
           </div>
           <div className="assessment-footer">
             <button className="button button--secondary">Previous</button>
@@ -1509,7 +1600,7 @@ function AssessmentScreen() {
       {!isStudentPreview ? (
         <PageCustomizeDialogs
           dialog={customizeDialog}
-          objectives={pageObjectives}
+          objectives={COURSE_LEARNING_OBJECTIVES}
           onClose={() => setCustomizeDialog(null)}
           onChoose={setCustomizeDialog}
           onAddBlocks={(insertAt, nextBlocks) => {
@@ -2236,11 +2327,11 @@ function BulkWarningModal({
   );
 }
 
-function IconScoredPageFlag() {
+function IconScoredPageFlag({ practice = false }: { practice?: boolean }) {
   return (
     <svg className="assessment-page-ribbon__flag-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
       <path
-        fill="#ea580c"
+        fill={practice ? '#0f766e' : '#ea580c'}
         d="M2 1.5h1.25v12H2v-12zm1.25 2.2l3.25 1.45 5.5-2.05v5.4l-5.5 2.05-3.25-1.45V3.7z"
       />
     </svg>
@@ -2263,17 +2354,20 @@ function AssessmentHeader({
   viewMode,
   onViewModeChange,
   overallPageScore,
+  pageScoring = 'scored',
+  objectives,
 }: {
   coverageSummary: { coverage: ObjectiveCoverage[]; taggedIncluded: number; untaggedIncluded: number };
   viewMode: ViewMode;
   onViewModeChange: (mode: ViewMode) => void;
   overallPageScore: number;
+  pageScoring?: PageScoring;
+  objectives: PageObjective[];
 }) {
   const location = useLocation();
   const [viewMenuOpen, setViewMenuOpen] = useState(false);
   const state = location.state as { breadcrumbTrail?: BreadcrumbItem[]; assessmentTitle?: string } | null;
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
-  const objectives = getPageObjectives(assessmentTitle);
 
   return (
     <>
@@ -2341,17 +2435,25 @@ function AssessmentHeader({
             <span className="assessment-page-ribbon__eyebrow">UNIT 1</span>
             <span className="assessment-page-ribbon__sep" aria-hidden="true" />
             <span className="assessment-page-ribbon__flag" aria-hidden="true">
-              <IconScoredPageFlag />
+              <IconScoredPageFlag practice={pageScoring === 'practice'} />
             </span>
-            <span className="assessment-page-ribbon__eyebrow">SCORED PAGE</span>
-          </div>
-          <div className="assessment-page-ribbon__right">
-            <span className="assessment-page-ribbon__score-label">Overall Page Score</span>
-            <span className="assessment-page-score-badge">
-              <IconScoreStar />
-              {overallPageScore}
+            <span className="assessment-page-ribbon__eyebrow">
+              {pageScoring === 'practice' ? 'Practice page' : 'Scored page'}
             </span>
           </div>
+          {pageScoring === 'scored' ? (
+            <div className="assessment-page-ribbon__right">
+              <span className="assessment-page-ribbon__score-label">Overall Page Score</span>
+              <span className="assessment-page-score-badge">
+                <IconScoreStar />
+                {overallPageScore}
+              </span>
+            </div>
+          ) : (
+            <div className="assessment-page-ribbon__right">
+              <span className="assessment-page-ribbon__score-label">Not scored</span>
+            </div>
+          )}
         </div>
         <h1 className="assessment-title">{assessmentTitle}</h1>
         <p className="assessment-dates">
@@ -2363,7 +2465,7 @@ function AssessmentHeader({
         </p>
         {viewMode === 'student' ? (
           <div className="student-preview-badge">Preview only - students will not see instructor controls.</div>
-        ) : (
+        ) : objectives.length > 0 ? (
           <div className="learning-objectives">
             <div className="learning-objectives__head">
               <div className="learning-objectives__label">Learning Objectives &amp; Proficiency</div>
@@ -2404,7 +2506,7 @@ function AssessmentHeader({
               })}
             </ul>
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

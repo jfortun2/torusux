@@ -21,6 +21,8 @@ import {
   type QuestionContent,
   type TextContent,
 } from './pageCustomization';
+import { INSTRUCTOR_PROJECTS } from './existingMaterials';
+import { NODE_TYPE_LABEL } from './curriculumData';
 
 export type CustomizeDialog =
   | { type: 'chooser'; insertAt: number }
@@ -30,6 +32,7 @@ export type CustomizeDialog =
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
   | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
   | { type: 'community-resources'; insertAt: number }
+  | { type: 'existing-projects'; insertAt: number }
   | { type: 'coming-later'; label: string };
 
 export function PageCustomizeBar({
@@ -207,6 +210,85 @@ export function AddContentGap({ onAdd }: { onAdd: () => void }) {
         Add content
       </button>
     </div>
+  );
+}
+
+export function AddExistingMaterialsButton({ onAdd }: { onAdd: () => void }) {
+  return (
+    <div className="add-existing-materials">
+      <button type="button" className="button button--secondary" onClick={onAdd}>
+        Add existing materials
+      </button>
+    </div>
+  );
+}
+
+export function PageObjectivesAttach({
+  allObjectives,
+  attachedCodes,
+  onChange,
+  readOnly = false,
+}: {
+  allObjectives: PageObjectiveOption[];
+  attachedCodes: string[];
+  onChange?: (codes: string[]) => void;
+  readOnly?: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const attached = allObjectives.filter((objective) => attachedCodes.includes(objective.code));
+
+  return (
+    <section className="page-objectives-attach" aria-label="Learning objectives on this page">
+      <div className="page-objectives-attach__head">
+        <h2>Learning objectives</h2>
+        {!readOnly ? (
+          <button type="button" className="button button--secondary button--small" onClick={() => setOpen((current) => !current)}>
+            {open ? 'Done' : attached.length > 0 ? 'Edit learning objectives' : 'Attach learning objectives'}
+          </button>
+        ) : null}
+      </div>
+      {attached.length === 0 ? (
+        <p className="page-objectives-attach__empty">
+          {readOnly
+            ? 'No learning objectives are attached to this page.'
+            : 'Attach learning objectives so they appear at the top of this page.'}
+        </p>
+      ) : (
+        <ul className="page-objectives-attach__list">
+          {attached.map((objective) => (
+            <li key={objective.code}>
+              <span className="page-objectives-attach__code">{objective.code}</span>
+              {objective.label}
+            </li>
+          ))}
+        </ul>
+      )}
+      {!readOnly && open ? (
+        <fieldset className="page-objectives-attach__picker">
+          <legend>Select objectives for this page</legend>
+          {allObjectives.map((objective) => {
+            const checked = attachedCodes.includes(objective.code);
+            return (
+              <label key={objective.code}>
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => {
+                    const next = checked
+                      ? attachedCodes.filter((code) => code !== objective.code)
+                      : [...attachedCodes, objective.code];
+                    onChange?.(next);
+                  }}
+                />
+                <span>
+                  <strong>{objective.code}</strong> {objective.label}
+                </span>
+              </label>
+            );
+          })}
+        </fieldset>
+      ) : null}
+    </section>
   );
 }
 
@@ -452,6 +534,18 @@ export function PageCustomizeDialogs({
   if (dialog.type === 'community-resources') {
     return (
       <CommunityResourcesPanel
+        onCancel={onClose}
+        onAdd={(resource) => {
+          onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
+          onClose();
+        }}
+      />
+    );
+  }
+
+  if (dialog.type === 'existing-projects') {
+    return (
+      <ExistingProjectsForm
         onCancel={onClose}
         onAdd={(resource) => {
           onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
@@ -1054,6 +1148,73 @@ export function QuestionBlockForm({
           </button>
           <button type="submit" className="button button--primary" disabled={!canSave}>
             {submitLabel ?? 'Save to page'}
+          </button>
+        </div>
+      </form>
+    </ModalShell>
+  );
+}
+
+function ExistingProjectsForm({
+  onCancel,
+  onAdd,
+}: {
+  onCancel: () => void;
+  onAdd: (resource: CourseResourceContent) => void;
+}) {
+  const [selectedId, setSelectedId] = useState(INSTRUCTOR_PROJECTS[0]?.materials[0]?.id ?? '');
+  const selected = INSTRUCTOR_PROJECTS.flatMap((project) =>
+    project.materials.map((material) => ({ material, project })),
+  ).find((item) => item.material.id === selectedId);
+
+  return (
+    <ModalShell title="Add existing materials" onClose={onCancel} wide>
+      <p>Select a material from a project you have access to and add it to this page.</p>
+      <form
+        className="page-customize-form"
+        onSubmit={(event) => {
+          event.preventDefault();
+          if (!selected) return;
+          onAdd({
+            title: selected.material.title,
+            sourceLabel: `${selected.project.name} · ${NODE_TYPE_LABEL[selected.material.type]}`,
+          });
+        }}
+      >
+        <div className="existing-materials" role="list">
+          {INSTRUCTOR_PROJECTS.map((project) => (
+            <section key={project.id} className="existing-project">
+              <div className="existing-project__head">
+                <h4>{project.name}</h4>
+                <span>{project.access}</span>
+              </div>
+              {project.materials.map((material) => (
+                <label key={material.id} className="existing-material">
+                  <input
+                    type="radio"
+                    name="page-existing-material"
+                    checked={selectedId === material.id}
+                    onChange={() => setSelectedId(material.id)}
+                  />
+                  <span>
+                    <strong>{material.title}</strong>
+                    <span className="existing-material__meta">
+                      {NODE_TYPE_LABEL[material.type]}
+                      {material.pageScoring ? ` · ${material.pageScoring}` : ''}
+                    </span>
+                    <span className="existing-material__summary">{material.summary}</span>
+                  </span>
+                </label>
+              ))}
+            </section>
+          ))}
+        </div>
+        <div className="modal-actions">
+          <button type="button" className="button button--subtle" onClick={onCancel}>
+            Cancel
+          </button>
+          <button type="submit" className="button button--primary" disabled={!selected}>
+            Add to page
           </button>
         </div>
       </form>
