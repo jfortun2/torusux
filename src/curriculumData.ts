@@ -2,6 +2,13 @@ export type CurriculumStatus = 'original' | 'modified' | 'added' | 'removed';
 export type CurriculumOrigin = 'canonical' | 'instructor';
 export type CurriculumNodeType = 'unit' | 'module' | 'page' | 'block';
 export type ContentBlockKind = 'explanation' | 'example' | 'question' | 'bank';
+export type PageScoring = 'scored' | 'practice';
+export type DropPlacement = 'before' | 'after' | 'inside';
+
+export type CourseLearningObjective = {
+  code: string;
+  label: string;
+};
 
 export type CurriculumNode = {
   id: string;
@@ -15,6 +22,7 @@ export type CurriculumNode = {
   assessmentTitle?: string;
   attemptsStarted?: boolean;
   learningObjectives?: string[];
+  pageScoring?: PageScoring;
 };
 
 const LO_REDOX = 'LO 1.1 Balance redox equations and construct half-reactions.';
@@ -38,6 +46,16 @@ export const NODE_TYPE_LABEL: Record<Exclude<CurriculumNodeType, 'block'>, strin
   module: 'Module',
   page: 'Page',
 };
+
+export const COURSE_LEARNING_OBJECTIVES: CourseLearningObjective[] = [
+  { code: 'LO 1.1', label: 'L1 Balance redox equations and construct half-reactions.' },
+  { code: 'LO 1.2', label: 'L2 Predict electrochemical behavior and cell trends.' },
+  { code: 'LO 1.3', label: 'L3 Evaluate electrochemistry applications in real systems.' },
+  { code: 'LO 1.4', label: 'L4 Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
+  { code: 'LO 1.5', label: 'L5 Explain how pathway and tissue sensitivity influence biological effects.' },
+];
+
+const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v1';
 
 const item = (
   node: Omit<CurriculumNode, 'children' | 'originalTitle' | 'origin' | 'status'> &
@@ -397,6 +415,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
           children: [
             item({
               id: 'page-recitation-practice',
+              pageScoring: 'practice',
               type: 'page',
               title: 'Practice set: local examples',
               origin: 'instructor',
@@ -423,7 +442,11 @@ export function newCurriculumId(): string {
   return `c-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
-export function createInstructorNode(type: Exclude<CurriculumNodeType, 'block'>, title: string): CurriculumNode {
+export function createInstructorNode(
+  type: Exclude<CurriculumNodeType, 'block'>,
+  title: string,
+  options?: { pageScoring?: PageScoring; learningObjectives?: string[] },
+): CurriculumNode {
   return item({
     id: newCurriculumId(),
     type,
@@ -432,7 +455,36 @@ export function createInstructorNode(type: Exclude<CurriculumNodeType, 'block'>,
     status: 'added',
     children: [],
     assessmentTitle: type === 'page' ? title : undefined,
+    pageScoring: type === 'page' ? options?.pageScoring ?? 'scored' : undefined,
+    learningObjectives: options?.learningObjectives,
   });
+}
+
+export function pageScoringOf(node: CurriculumNode): PageScoring {
+  if (node.pageScoring) return node.pageScoring;
+  return (node.title ?? '').toLowerCase().includes('practice') ? 'practice' : 'scored';
+}
+
+export function loadCurriculum(): CurriculumNode[] {
+  if (typeof window === 'undefined') return createInitialCurriculum();
+  try {
+    const raw = sessionStorage.getItem(CURRICULUM_STORAGE_KEY);
+    if (!raw) return createInitialCurriculum();
+    const parsed = JSON.parse(raw) as CurriculumNode[];
+    if (!Array.isArray(parsed)) return createInitialCurriculum();
+    return parsed;
+  } catch {
+    return createInitialCurriculum();
+  }
+}
+
+export function persistCurriculum(nodes: CurriculumNode[]): void {
+  if (typeof window === 'undefined') return;
+  try {
+    sessionStorage.setItem(CURRICULUM_STORAGE_KEY, JSON.stringify(nodes));
+  } catch {
+    /* ignore quota / private mode */
+  }
 }
 
 export function cloneCurriculum(nodes: CurriculumNode[]): CurriculumNode[] {
@@ -539,6 +591,79 @@ export function canMoveNode(
   return direction === 'up' ? position > 0 : position < visibleIndexes.length - 1;
 }
 
+function isDescendant(node: CurriculumNode, id: string): boolean {
+  return node.children.some((child) => child.id === id || isDescendant(child, id));
+}
+
+function extractNode(
+  nodes: CurriculumNode[],
+  id: string,
+): { nodes: CurriculumNode[]; removed: CurriculumNode | undefined } {
+  const index = nodes.findIndex((node) => node.id === id);
+  if (index >= 0) {
+    return { nodes: [...nodes.slice(0, index), ...nodes.slice(index + 1)], removed: nodes[index] };
+  }
+  let removed: CurriculumNode | undefined;
+  const next = nodes.map((node) => {
+    if (removed) return node;
+    const result = extractNode(node.children, id);
+    if (result.removed) {
+      removed = result.removed;
+      return { ...node, children: result.nodes };
+    }
+    return node;
+  });
+  return { nodes: removed ? next : nodes, removed };
+}
+
+export function isValidDrop(
+  nodes: CurriculumNode[],
+  draggedId: string,
+  targetId: string,
+  placement: DropPlacement,
+): boolean {
+  if (draggedId === targetId) return false;
+  const dragged = findNode(nodes, draggedId);
+  const target = findNode(nodes, targetId);
+  if (!dragged || !target) return false;
+  if (dragged.type === 'block' || target.type === 'block') return false;
+  if (dragged.status === 'removed' || target.status === 'removed') return false;
+  if (isDescendant(dragged, targetId)) return false;
+  if (placement === 'inside') return childTypeFor(target.type) === dragged.type;
+  return dragged.type === target.type;
+}
+
+export function dropNode(
+  nodes: CurriculumNode[],
+  draggedId: string,
+  targetId: string,
+  placement: DropPlacement,
+): CurriculumNode[] {
+  if (!isValidDrop(nodes, draggedId, targetId, placement)) return nodes;
+  const { nodes: without, removed } = extractNode(nodes, draggedId);
+  if (!removed) return nodes;
+  if (placement === 'inside') {
+    return updateNodeById(without, targetId, (parent) => ({
+      ...parent,
+      children: [...parent.children, removed],
+    }));
+  }
+  const context = findSiblingContext(without, targetId);
+  if (!context) return nodes;
+  const insertAt = context.index + (placement === 'after' ? 1 : 0);
+  const nextSiblings = [...context.siblings];
+  nextSiblings.splice(insertAt, 0, removed);
+  return replaceChildren(without, context.parentId, nextSiblings);
+}
+
+export function setPageObjectives(nodes: CurriculumNode[], id: string, learningObjectives: string[]): CurriculumNode[] {
+  return updateNodeById(nodes, id, (node) => ({
+    ...node,
+    learningObjectives,
+    status: node.origin === 'instructor' ? (node.status === 'removed' ? 'removed' : 'added') : node.status === 'removed' ? 'removed' : 'modified',
+  }));
+}
+
 export function renameNode(nodes: CurriculumNode[], id: string, title: string): CurriculumNode[] {
   const trimmed = title.trim();
   if (!trimmed) return nodes;
@@ -625,4 +750,22 @@ export function childTypeFor(type: CurriculumNodeType): 'module' | 'page' | null
   if (type === 'unit') return 'module';
   if (type === 'module') return 'page';
   return null;
+}
+
+export function objectiveCodesFromLabels(labels: string[]): string[] {
+  return COURSE_LEARNING_OBJECTIVES.filter((objective) =>
+    labels.some((label) => {
+      const normalized = label.toLowerCase();
+      return (
+        normalized.includes(objective.code.toLowerCase()) ||
+        normalized.includes(objective.label.replace(/^L\d+\s+/i, '').toLowerCase())
+      );
+    }),
+  ).map((objective) => objective.code);
+}
+
+export function labelsFromObjectiveCodes(codes: string[]): string[] {
+  return COURSE_LEARNING_OBJECTIVES.filter((objective) => codes.includes(objective.code)).map(
+    (objective) => `${objective.code} ${objective.label.replace(/^L\d+\s+/i, '')}`,
+  );
 }
