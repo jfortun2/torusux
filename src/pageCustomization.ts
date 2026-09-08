@@ -339,6 +339,29 @@ export function moveBlock(blocks: PageBlock[], id: string, direction: 'up' | 'do
   return next;
 }
 
+export function moveBlockToIndex(blocks: PageBlock[], id: string, toIndex: number): PageBlock[] {
+  const fromIndex = blocks.findIndex((block) => block.id === id);
+  if (fromIndex < 0) return blocks;
+  let insertAt = Math.max(0, Math.min(toIndex, blocks.length));
+  if (fromIndex < insertAt) insertAt -= 1;
+  if (fromIndex === insertAt) return blocks;
+  const next = cloneBlocks(blocks);
+  const [item] = next.splice(fromIndex, 1);
+  next.splice(insertAt, 0, item);
+  return next;
+}
+
+export function moveBlockRelative(
+  blocks: PageBlock[],
+  draggedId: string,
+  targetId: string,
+  placement: 'before' | 'after',
+): PageBlock[] {
+  const targetIndex = blocks.findIndex((block) => block.id === targetId);
+  if (targetIndex < 0) return blocks;
+  return moveBlockToIndex(blocks, draggedId, placement === 'before' ? targetIndex : targetIndex + 1);
+}
+
 export function canMoveBlock(blocks: PageBlock[], id: string, direction: 'up' | 'down'): boolean {
   const index = blocks.findIndex((block) => block.id === id);
   if (index < 0) return false;

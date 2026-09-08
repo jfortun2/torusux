@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useId, useRef, useState, type DragEvent, type ReactNode } from 'react';
 import { friendlyObjectiveName, impactHeadline, type ObjectiveImpact } from './learningDesign';
 import {
   BLOCK_KIND_LABEL,
@@ -21,8 +21,6 @@ import {
   type QuestionContent,
   type TextContent,
 } from './pageCustomization';
-import { INSTRUCTOR_PROJECTS } from './existingMaterials';
-import { NODE_TYPE_LABEL } from './curriculumData';
 
 export type CustomizeDialog =
   | { type: 'chooser'; insertAt: number }
@@ -32,7 +30,6 @@ export type CustomizeDialog =
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
   | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
   | { type: 'community-resources'; insertAt: number }
-  | { type: 'existing-projects'; insertAt: number }
   | { type: 'coming-later'; label: string };
 
 export function PageCustomizeBar({
@@ -60,7 +57,7 @@ export function PageCustomizeBar({
               {summary.items.length > 3 ? ` And ${summary.items.length - 3} more.` : ''}
             </>
           ) : (
-            'No unsaved changes. Select a block to move or remove it, or add content between blocks.'
+            'No unsaved changes. Select a block to edit, remove, or drag it. Add content between blocks.'
           )}
         </p>
       </div>
@@ -203,21 +200,32 @@ export function CompareWithOriginalDialog({
   );
 }
 
-export function AddContentGap({ onAdd }: { onAdd: () => void }) {
+export function AddContentGap({
+  onAdd,
+  reordering = false,
+  dropActive = false,
+  onDragOver,
+  onDragLeave,
+  onDrop,
+}: {
+  onAdd: () => void;
+  reordering?: boolean;
+  dropActive?: boolean;
+  onDragOver?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragLeave?: (event: DragEvent<HTMLDivElement>) => void;
+  onDrop?: (event: DragEvent<HTMLDivElement>) => void;
+}) {
   return (
-    <div className="add-content-gap">
+    <div
+      className={['add-content-gap', reordering ? 'is-reordering' : '', dropActive ? 'is-drop-over' : '']
+        .filter(Boolean)
+        .join(' ')}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
+    >
       <button type="button" className="add-content-gap__button" onClick={onAdd}>
-        Add content
-      </button>
-    </div>
-  );
-}
-
-export function AddExistingMaterialsButton({ onAdd }: { onAdd: () => void }) {
-  return (
-    <div className="add-existing-materials">
-      <button type="button" className="button button--secondary" onClick={onAdd}>
-        Add existing materials
+        {dropActive ? 'Drop here' : 'Add content'}
       </button>
     </div>
   );
@@ -299,12 +307,19 @@ export function PageBlockFrame({
   canMoveUp,
   canMoveDown,
   canEdit,
+  dragging = false,
+  dropPlacement = null,
   onSelect,
   onMoveUp,
   onMoveDown,
   onRemove,
   onRestore,
   onEdit,
+  onDragStart,
+  onDragEnd,
+  onDragOver,
+  onDragLeave,
+  onDrop,
   children,
 }: {
   block: PageBlock;
@@ -313,12 +328,19 @@ export function PageBlockFrame({
   canMoveUp: boolean;
   canMoveDown: boolean;
   canEdit?: boolean;
+  dragging?: boolean;
+  dropPlacement?: 'before' | 'after' | null;
   onSelect: () => void;
   onMoveUp: () => void;
   onMoveDown: () => void;
   onRemove: () => void;
   onRestore: () => void;
   onEdit?: () => void;
+  onDragStart: () => void;
+  onDragEnd: () => void;
+  onDragOver: (event: DragEvent<HTMLElement>) => void;
+  onDragLeave: (event: DragEvent<HTMLElement>) => void;
+  onDrop: (event: DragEvent<HTMLElement>) => void;
   children: ReactNode;
 }) {
   const removed = block.status === 'removed';
@@ -326,6 +348,9 @@ export function PageBlockFrame({
     'page-block',
     selected ? 'is-selected' : '',
     removed ? 'is-removed' : '',
+    dragging ? 'is-dragging' : '',
+    dropPlacement === 'before' ? 'is-drop-before' : '',
+    dropPlacement === 'after' ? 'is-drop-after' : '',
   ]
     .filter(Boolean)
     .join(' ');
@@ -337,18 +362,55 @@ export function PageBlockFrame({
       aria-selected={selected}
       aria-label={`${BLOCK_KIND_LABEL[block.kind]}: ${block.title}${removed ? ', removed' : ''}`}
       onClick={onSelect}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
     >
-      <div className="page-block__body">{children}</div>
       {selected ? (
-        <div className="page-block__actions" onClick={(event) => event.stopPropagation()}>
+        <div
+          className="page-block__actions"
+          onClick={(event) => event.stopPropagation()}
+          onDragOver={onDragOver}
+          onDrop={onDrop}
+        >
+          <button
+            type="button"
+            className="page-block__drag"
+            draggable
+            aria-label={`Drag to reorder ${block.title}`}
+            aria-grabbed={dragging}
+            onDragStart={(event) => {
+              event.dataTransfer.setData('text/plain', block.id);
+              event.dataTransfer.effectAllowed = 'move';
+              const frame = event.currentTarget.closest('.page-block');
+              if (frame instanceof HTMLElement) {
+                event.dataTransfer.setDragImage(frame, 24, 16);
+              }
+              onDragStart();
+            }}
+            onDragEnd={onDragEnd}
+            onKeyDown={(event) => {
+              if (event.key === 'ArrowUp' && canMoveUp) {
+                event.preventDefault();
+                onMoveUp();
+              }
+              if (event.key === 'ArrowDown' && canMoveDown) {
+                event.preventDefault();
+                onMoveDown();
+              }
+            }}
+          >
+            <span className="page-block__drag-dots" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+            </span>
+          </button>
           <span className="page-block__kind">{BLOCK_KIND_LABEL[block.kind]}</span>
           {removed ? <span className="status-pill">Removed</span> : null}
-          <button type="button" className="button button--secondary button--small" onClick={onMoveUp} disabled={!canMoveUp}>
-            Move up
-          </button>
-          <button type="button" className="button button--secondary button--small" onClick={onMoveDown} disabled={!canMoveDown}>
-            Move down
-          </button>
           {canEdit && !removed ? (
             <button type="button" className="button button--secondary button--small" onClick={onEdit} disabled={!onEdit}>
               Edit
@@ -365,6 +427,7 @@ export function PageBlockFrame({
           )}
         </div>
       ) : null}
+      <div className="page-block__body">{children}</div>
     </article>
   );
 }
@@ -534,18 +597,6 @@ export function PageCustomizeDialogs({
   if (dialog.type === 'community-resources') {
     return (
       <CommunityResourcesPanel
-        onCancel={onClose}
-        onAdd={(resource) => {
-          onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
-          onClose();
-        }}
-      />
-    );
-  }
-
-  if (dialog.type === 'existing-projects') {
-    return (
-      <ExistingProjectsForm
         onCancel={onClose}
         onAdd={(resource) => {
           onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
@@ -1148,73 +1199,6 @@ export function QuestionBlockForm({
           </button>
           <button type="submit" className="button button--primary" disabled={!canSave}>
             {submitLabel ?? 'Save to page'}
-          </button>
-        </div>
-      </form>
-    </ModalShell>
-  );
-}
-
-function ExistingProjectsForm({
-  onCancel,
-  onAdd,
-}: {
-  onCancel: () => void;
-  onAdd: (resource: CourseResourceContent) => void;
-}) {
-  const [selectedId, setSelectedId] = useState(INSTRUCTOR_PROJECTS[0]?.materials[0]?.id ?? '');
-  const selected = INSTRUCTOR_PROJECTS.flatMap((project) =>
-    project.materials.map((material) => ({ material, project })),
-  ).find((item) => item.material.id === selectedId);
-
-  return (
-    <ModalShell title="Add existing materials" onClose={onCancel} wide>
-      <p>Select a material from a project you have access to and add it to this page.</p>
-      <form
-        className="page-customize-form"
-        onSubmit={(event) => {
-          event.preventDefault();
-          if (!selected) return;
-          onAdd({
-            title: selected.material.title,
-            sourceLabel: `${selected.project.name} · ${NODE_TYPE_LABEL[selected.material.type]}`,
-          });
-        }}
-      >
-        <div className="existing-materials" role="list">
-          {INSTRUCTOR_PROJECTS.map((project) => (
-            <section key={project.id} className="existing-project">
-              <div className="existing-project__head">
-                <h4>{project.name}</h4>
-                <span>{project.access}</span>
-              </div>
-              {project.materials.map((material) => (
-                <label key={material.id} className="existing-material">
-                  <input
-                    type="radio"
-                    name="page-existing-material"
-                    checked={selectedId === material.id}
-                    onChange={() => setSelectedId(material.id)}
-                  />
-                  <span>
-                    <strong>{material.title}</strong>
-                    <span className="existing-material__meta">
-                      {NODE_TYPE_LABEL[material.type]}
-                      {material.pageScoring ? ` · ${material.pageScoring}` : ''}
-                    </span>
-                    <span className="existing-material__summary">{material.summary}</span>
-                  </span>
-                </label>
-              ))}
-            </section>
-          ))}
-        </div>
-        <div className="modal-actions">
-          <button type="button" className="button button--subtle" onClick={onCancel}>
-            Cancel
-          </button>
-          <button type="submit" className="button button--primary" disabled={!selected}>
-            Add to page
           </button>
         </div>
       </form>

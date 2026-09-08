@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type DragEvent } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import {
   getIncludedQuestionCountForBank,
@@ -11,7 +11,6 @@ import {
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
 import {
   AddContentGap,
-  AddExistingMaterialsButton,
   CanonicalCourseNotice,
   CompareWithOriginalDialog,
   CourseResourceView,
@@ -46,6 +45,8 @@ import {
   loadPageMeta,
   loadSavedPageLayout,
   moveBlock,
+  moveBlockRelative,
+  moveBlockToIndex,
   pageIsCustomized,
   persistDraftPageLayout,
   persistPageMeta,
@@ -1016,6 +1017,10 @@ function AssessmentScreen() {
   const [savedBlocks, setSavedBlocks] = useState<PageBlock[]>(() => loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [attachedCodes, setAttachedCodes] = useState<string[]>(() => initialAttachedCodes);
   const [selectedBlockId, setSelectedBlockId] = useState<string | null>(null);
+  const [draggingBlockId, setDraggingBlockId] = useState<string | null>(null);
+  const [dropHint, setDropHint] = useState<
+    { kind: 'block'; id: string; placement: 'before' | 'after' } | { kind: 'gap'; index: number } | null
+  >(null);
   const [customizeDialog, setCustomizeDialog] = useState<CustomizeDialog | null>(null);
   const [showCompareOriginal, setShowCompareOriginal] = useState(false);
   const [showJumpLinks, setShowJumpLinks] = useState(false);
@@ -1351,6 +1356,34 @@ function AssessmentScreen() {
   const jumpTargets = blocks.filter((block) => block.status !== 'removed' && (block.kind === 'bank' || block.kind === 'question'));
   const pendingRemoveBlock = blocks.find((block) => block.id === pendingRemoveBlockId);
 
+  const clearBlockDrag = () => {
+    setDraggingBlockId(null);
+    setDropHint(null);
+  };
+
+  const applyBlockDropOnBlock = (targetId: string, placement: 'before' | 'after') => {
+    if (!draggingBlockId) return;
+    const title = blocks.find((item) => item.id === draggingBlockId)?.title ?? 'block';
+    setBlocks((current) => moveBlockRelative(current, draggingBlockId, targetId, placement));
+    setSelectedBlockId(draggingBlockId);
+    setAnnouncement(`Moved “${title}”.`);
+    clearBlockDrag();
+  };
+
+  const applyBlockDropOnGap = (index: number) => {
+    if (!draggingBlockId) return;
+    const title = blocks.find((item) => item.id === draggingBlockId)?.title ?? 'block';
+    setBlocks((current) => moveBlockToIndex(current, draggingBlockId, index));
+    setSelectedBlockId(draggingBlockId);
+    setAnnouncement(`Moved “${title}”.`);
+    clearBlockDrag();
+  };
+
+  const placementFromDrag = (event: { currentTarget: EventTarget & HTMLElement; clientY: number }): 'before' | 'after' => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    return event.clientY < rect.top + rect.height / 2 ? 'before' : 'after';
+  };
+
   const renderBlockBody = (block: PageBlock) => {
     if (block.kind === 'text') return <TextBlockView block={block} showObjective={!isStudentPreview} />;
     if (block.kind === 'example') return <ExampleBlockView block={block} />;
@@ -1451,7 +1484,7 @@ function AssessmentScreen() {
           pageScoring={pageScoring}
           objectives={pageObjectives}
         />
-        <div className="assessment-content">
+        <div className={draggingBlockId ? 'assessment-content is-reordering' : 'assessment-content'}>
           {attemptsStarted && !isStudentPreview ? (
             <div className="attempts-banner" role="status" aria-live="polite">
               <img src={warningIcon} alt="" aria-hidden="true" />
@@ -1466,7 +1499,7 @@ function AssessmentScreen() {
           ) : null}
           {blockToasts['page-save'] ? <SuccessToast message={blockToasts['page-save']} /> : null}
           <div className="assessment-main">
-            {!isStudentPreview ? (
+            {isInstructorCreated && !isStudentPreview ? (
               <PageObjectivesAttach
                 allObjectives={COURSE_LEARNING_OBJECTIVES}
                 attachedCodes={attachedCodes}
@@ -1482,9 +1515,7 @@ function AssessmentScreen() {
                   );
                 }}
               />
-            ) : (
-              <PageObjectivesAttach allObjectives={COURSE_LEARNING_OBJECTIVES} attachedCodes={attachedCodes} readOnly />
-            )}
+            ) : null}
             {!isStudentPreview && jumpTargets.length > 0 ? (
               <div className="assessment-shortcuts-card">
                 <button type="button" className="jump-section-header" onClick={() => setShowJumpLinks((open) => !open)} aria-expanded={showJumpLinks}>
@@ -1526,66 +1557,114 @@ function AssessmentScreen() {
                     if (block.kind === 'bank') return renderStudentBank(block);
                     return <StudentQuestionView key={block.id} block={block} name={block.id} />;
                   })
-              : [
-                  ...(blocks.length === 0
-                    ? [
-                        <AddContentGap
-                          key="add-empty"
-                          onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: 0 })}
-                        />,
-                      ]
-                    : blocks.flatMap((block, index) => {
-                        const frame = (
-                          <div key={block.id} className="page-block-stack">
-                            {blockToasts[block.id] ? <SuccessToast message={blockToasts[block.id]} inline /> : null}
-                            <PageBlockFrame
-                              block={block}
-                              htmlId={block.kind === 'bank' ? undefined : block.id}
-                              selected={selectedBlockId === block.id}
-                              canMoveUp={canMoveBlock(blocks, block.id, 'up')}
-                              canMoveDown={canMoveBlock(blocks, block.id, 'down')}
-                              canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
-                              onEdit={() => {
-                                if (block.kind === 'text') {
-                                  setCustomizeDialog({ type: 'edit-text', block });
-                                  return;
-                                }
-                                if (block.kind === 'question') {
-                                  setCustomizeDialog({ type: 'edit-question', block });
-                                }
-                              }}
-                              onSelect={() => setSelectedBlockId(block.id)}
-                              onMoveUp={() => {
-                                setBlocks((current) => moveBlock(current, block.id, 'up'));
-                                setAnnouncement(`Moved “${block.title}” up.`);
-                              }}
-                              onMoveDown={() => {
-                                setBlocks((current) => moveBlock(current, block.id, 'down'));
-                                setAnnouncement(`Moved “${block.title}” down.`);
-                              }}
-                              onRemove={() => requestToggleBlock(block.id)}
-                              onRestore={() => requestToggleBlock(block.id)}
-                            >
-                              {renderBlockBody(block)}
-                            </PageBlockFrame>
-                          </div>
+              : blocks.length === 0
+                ? [
+                    <AddContentGap
+                      key="add-empty"
+                      onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: 0 })}
+                    />,
+                  ]
+                : blocks.flatMap((block, index) => {
+                    const gapProps = (insertAt: number) => ({
+                      reordering: Boolean(draggingBlockId),
+                      dropActive: dropHint?.kind === 'gap' && dropHint.index === insertAt,
+                      onAdd: () => setCustomizeDialog({ type: 'chooser', insertAt }),
+                      onDragOver: (event: DragEvent<HTMLDivElement>) => {
+                        if (!draggingBlockId) return;
+                        event.preventDefault();
+                        event.dataTransfer.dropEffect = 'move';
+                        setDropHint((current) =>
+                          current?.kind === 'gap' && current.index === insertAt ? current : { kind: 'gap', index: insertAt },
                         );
-                        return [
-                          <AddContentGap key={`add-${index}`} onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: index })} />,
-                          frame,
-                          index === blocks.length - 1 ? (
-                            <AddContentGap
-                              key="add-end"
-                              onAdd={() => setCustomizeDialog({ type: 'chooser', insertAt: blocks.length })}
-                            />
-                          ) : null,
-                        ];
-                      })),
-                  <AddExistingMaterialsButton
-                    key="add-existing"
-                    onAdd={() => setCustomizeDialog({ type: 'existing-projects', insertAt: blocks.length })}
-                  />,
-                ]}
+                      },
+                      onDragLeave: (event: DragEvent<HTMLDivElement>) => {
+                        if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                          setDropHint((current) =>
+                            current?.kind === 'gap' && current.index === insertAt ? null : current,
+                          );
+                        }
+                      },
+                      onDrop: (event: DragEvent<HTMLDivElement>) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        applyBlockDropOnGap(insertAt);
+                      },
+                    });
+                    const frame = (
+                      <div key={block.id} className="page-block-stack">
+                        {blockToasts[block.id] ? <SuccessToast message={blockToasts[block.id]} inline /> : null}
+                        <PageBlockFrame
+                          block={block}
+                          htmlId={block.kind === 'bank' ? undefined : block.id}
+                          selected={selectedBlockId === block.id}
+                          canMoveUp={canMoveBlock(blocks, block.id, 'up')}
+                          canMoveDown={canMoveBlock(blocks, block.id, 'down')}
+                          canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
+                          dragging={draggingBlockId === block.id}
+                          dropPlacement={
+                            dropHint?.kind === 'block' && dropHint.id === block.id ? dropHint.placement : null
+                          }
+                          onEdit={() => {
+                            if (block.kind === 'text') {
+                              setCustomizeDialog({ type: 'edit-text', block });
+                              return;
+                            }
+                            if (block.kind === 'question') {
+                              setCustomizeDialog({ type: 'edit-question', block });
+                            }
+                          }}
+                          onSelect={() => setSelectedBlockId(block.id)}
+                          onMoveUp={() => {
+                            setBlocks((current) => moveBlock(current, block.id, 'up'));
+                            setAnnouncement(`Moved “${block.title}” up.`);
+                          }}
+                          onMoveDown={() => {
+                            setBlocks((current) => moveBlock(current, block.id, 'down'));
+                            setAnnouncement(`Moved “${block.title}” down.`);
+                          }}
+                          onRemove={() => requestToggleBlock(block.id)}
+                          onRestore={() => requestToggleBlock(block.id)}
+                          onDragStart={() => {
+                            setSelectedBlockId(block.id);
+                            setDraggingBlockId(block.id);
+                            setDropHint(null);
+                          }}
+                          onDragEnd={clearBlockDrag}
+                          onDragOver={(event) => {
+                            if (!draggingBlockId || draggingBlockId === block.id) return;
+                            event.preventDefault();
+                            event.dataTransfer.dropEffect = 'move';
+                            const placement = placementFromDrag(event);
+                            setDropHint((current) =>
+                              current?.kind === 'block' && current.id === block.id && current.placement === placement
+                                ? current
+                                : { kind: 'block', id: block.id, placement },
+                            );
+                          }}
+                          onDragLeave={(event) => {
+                            if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                              setDropHint((current) =>
+                                current?.kind === 'block' && current.id === block.id ? null : current,
+                              );
+                            }
+                          }}
+                          onDrop={(event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            if (!draggingBlockId || draggingBlockId === block.id) return;
+                            applyBlockDropOnBlock(block.id, placementFromDrag(event));
+                          }}
+                        >
+                          {renderBlockBody(block)}
+                        </PageBlockFrame>
+                      </div>
+                    );
+                    return [
+                      <AddContentGap key={`add-${index}`} {...gapProps(index)} />,
+                      frame,
+                      index === blocks.length - 1 ? <AddContentGap key="add-end" {...gapProps(blocks.length)} /> : null,
+                    ];
+                  })}
           </div>
           <div className="assessment-footer">
             <button className="button button--secondary">Previous</button>
@@ -1906,6 +1985,14 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     applyBulkAction(false);
   };
 
+  const requestToggleQuestion = (question: BankQuestionRow) => {
+    if (attemptsStarted && !question.removed) {
+      setPendingRemoval({ type: 'question', ids: [question.id] });
+      return;
+    }
+    toggleQuestionRemoved(question.id);
+  };
+
   return (
     <InstructorShell>
       <div className="bank-screen">
@@ -2000,9 +2087,11 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
             </div>
             <div className="question-list" role="listbox" aria-label="Questions">
               {filteredQuestions.map((question) => (
-                <button
+                <div
                   key={question.id}
-                  type="button"
+                  role="option"
+                  aria-selected={question.id === currentQuestion?.id}
+                  tabIndex={0}
                   className={[
                     'question-row',
                     selected.includes(question.id) ? 'is-selected' : '',
@@ -2013,6 +2102,12 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                     .join(' ')}
                   onClick={() => {
                     setActiveQuestionId(question.id);
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      setActiveQuestionId(question.id);
+                    }
                   }}
                 >
                   {selectionType && ((selectionType === 'included' && question.removed) || (selectionType === 'removed' && !question.removed)) ? (
@@ -2032,46 +2127,42 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                     <span>{question.title}</span>
                     {question.removed ? <span className="removed-pill">Removed</span> : null}
                   </div>
-                </button>
+                </div>
               ))}
             </div>
           </div>
           <div className="question-detail">
             <div className="question-detail__header">
-              <div>
+              <div className="question-detail__copy">
                 <div className="eyebrow">{questionTypeLabel(currentQuestion?.kind ?? 'mcq')} · {currentQuestion?.points ?? 1} point{(currentQuestion?.points ?? 1) > 1 ? 's' : ''}</div>
                 <h2>{currentQuestion?.title ?? 'Question'}</h2>
                 <p>{currentQuestion?.prompt ?? 'Question prompt'}</p>
               </div>
-              {bulkEdit ? (
-                <button className="button button--disabled button--small">Remove</button>
-              ) : selected.length > 1 ? (
-                <button className="button button--disabled button--small">{currentQuestion?.removed ? 'Restore' : 'Remove'}</button>
-              ) : (
-                <button
-                  className={currentQuestion?.removed ? 'button button--secondary button--small' : 'button button--danger button--small'}
-                  onClick={() => {
-                    if (!currentQuestion) return;
-                    if (attemptsStarted && !currentQuestion.removed) {
-                      setPendingRemoval({ type: 'question', ids: [currentQuestion.id] });
-                      return;
-                    }
-                    toggleQuestionRemoved(currentQuestion.id);
-                  }}
-                >
-                  {currentQuestion?.removed ? <img src={resetIcon} alt="" aria-hidden="true" /> : null}
-                  {currentQuestion?.removed ? 'Restore' : 'Remove'}
-                </button>
-              )}
-              {!bulkEdit && selected.length <= 1 && currentQuestion ? (
-                <button
-                  type="button"
-                  className="button button--secondary button--small"
-                  onClick={() => setEditQuestionId(currentQuestion.id)}
-                >
-                  Edit
-                </button>
-              ) : null}
+              <div className="question-detail__actions">
+                {!bulkEdit && currentQuestion ? (
+                  <button
+                    type="button"
+                    className="button button--secondary button--small"
+                    onClick={() => setEditQuestionId(currentQuestion.id)}
+                  >
+                    Edit
+                  </button>
+                ) : null}
+                {bulkEdit ? (
+                  <button type="button" className="button button--disabled button--small" disabled>
+                    Remove
+                  </button>
+                ) : currentQuestion ? (
+                  <button
+                    type="button"
+                    className={currentQuestion.removed ? 'button button--secondary button--small' : 'button button--danger button--small'}
+                    onClick={() => requestToggleQuestion(currentQuestion)}
+                  >
+                    {currentQuestion.removed ? <img src={resetIcon} alt="" aria-hidden="true" /> : null}
+                    {currentQuestion.removed ? 'Restore' : 'Remove'}
+                  </button>
+                ) : null}
+              </div>
             </div>
             {currentQuestion ? <BankQuestionPreview question={currentQuestion} /> : null}
           </div>

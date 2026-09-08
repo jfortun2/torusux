@@ -2160,7 +2160,7 @@ button {
 
 .question-list-panel {
   display: flex;
-  flex: 0 0 390px;
+  flex: 0 0 480px;
   flex-direction: column;
   max-height: 800px;
   padding: 0;
@@ -2187,13 +2187,14 @@ button {
 }
 
 .question-row {
-  align-items: flex-start;
+  align-items: center;
   background: #fff;
   border: 0;
   border-bottom: 1px solid var(--border-soft);
+  cursor: pointer;
   display: flex;
-  gap: 10px;
-  padding: 12px 14px;
+  gap: 12px;
+  padding: 10px 14px;
   text-align: left;
   transition: background-color 0.15s ease;
   width: 100%;
@@ -2228,12 +2229,14 @@ button {
 
 .question-row__title {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .question-row__title > span {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -2285,7 +2288,19 @@ button {
 .question-detail__header {
   align-items: flex-start;
   display: flex;
+  gap: 16px;
   justify-content: space-between;
+}
+
+.question-detail__copy {
+  min-width: 0;
+}
+
+.question-detail__actions {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 8px;
 }
 
 .question-detail .question-type-card {
@@ -3008,13 +3023,6 @@ select:focus-visible,
   font-size: 14px;
 }
 
-.add-existing-materials {
-  display: flex;
-  justify-content: center;
-  margin: 8px auto 16px;
-  max-width: 715px;
-}
-
 .curriculum-row__actions {
   align-items: center;
   display: flex;
@@ -3352,6 +3360,15 @@ select:focus-visible,
   display: flex;
   justify-content: center;
   min-height: 28px;
+  transition: min-height 0.12s ease;
+}
+
+.add-content-gap.is-reordering {
+  min-height: 36px;
+}
+
+.add-content-gap.is-reordering .add-content-gap__button {
+  pointer-events: none;
 }
 
 .add-content-gap__button {
@@ -3370,6 +3387,13 @@ select:focus-visible,
   border-color: #8ab8e5;
 }
 
+.add-content-gap.is-drop-over .add-content-gap__button {
+  background: #eef5ff;
+  border-color: #0073e5;
+  border-style: solid;
+  color: #0d63c5;
+}
+
 .page-block-stack {
   display: grid;
   gap: 8px;
@@ -3380,15 +3404,19 @@ select:focus-visible,
   border: 1px solid transparent;
   border-radius: 12px;
   cursor: pointer;
-  padding: 4px;
+  padding: 0;
   position: relative;
+  transition: background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
 }
 
 .page-block:hover {
-  border-color: #d7e3f4;
+  background: #f3f8ff;
+  border-color: #7eb0e4;
+  box-shadow: 0 0 0 1px #8ab8e5;
 }
 
 .page-block.is-selected {
+  background: #f7fbff;
   border-color: #0073e5;
   box-shadow: 0 0 0 1px #0073e5;
   cursor: default;
@@ -3398,7 +3426,30 @@ select:focus-visible,
   opacity: 0.78;
 }
 
+.page-block.is-dragging {
+  opacity: 0.45;
+}
+
+.page-block.is-drop-before {
+  box-shadow: inset 0 3px 0 0 #0073e5;
+}
+
+.page-block.is-drop-after {
+  box-shadow: inset 0 -3px 0 0 #0073e5;
+}
+
+.page-block.is-selected.is-drop-before,
+.page-block:hover.is-drop-before {
+  box-shadow: 0 0 0 1px #0073e5, inset 0 3px 0 0 #0073e5;
+}
+
+.page-block.is-selected.is-drop-after,
+.page-block:hover.is-drop-after {
+  box-shadow: 0 0 0 1px #0073e5, inset 0 -3px 0 0 #0073e5;
+}
+
 .page-block__body {
+  padding: 4px;
   pointer-events: auto;
 }
 
@@ -3406,13 +3457,69 @@ select:focus-visible,
   cursor: default;
 }
 
+.page-block:hover:not(.is-dragging) .question-type-card,
+.page-block:hover:not(.is-dragging) .assessment-intro,
+.page-block:hover:not(.is-dragging) .page-example-block,
+.page-block:hover:not(.is-dragging) .page-resource-card,
+.page-block:hover:not(.is-dragging) .bank-card {
+  border-color: #8ab8e5;
+}
+
+.page-block.is-selected .question-type-card,
+.page-block.is-selected .assessment-intro,
+.page-block.is-selected .page-example-block,
+.page-block.is-selected .page-resource-card,
+.page-block.is-selected .bank-card {
+  border-color: #7eb0e4;
+}
+
 .page-block__actions {
   align-items: center;
+  background: #eef5ff;
+  border-bottom: 1px solid #d7e8f8;
+  border-radius: 11px 11px 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: flex-end;
-  padding: 10px 6px 6px;
+  padding: 8px 8px 8px 6px;
+}
+
+.page-block__drag {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: #9aa1ad;
+  cursor: grab;
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 28px;
+  justify-content: center;
+  padding: 0;
+  width: 20px;
+}
+
+.page-block__drag:hover {
+  background: #e4eef8;
+  color: #4b5563;
+}
+
+.page-block__drag:active {
+  cursor: grabbing;
+}
+
+.page-block__drag-dots {
+  display: grid;
+  gap: 3px 4px;
+  grid-template-columns: 3px 3px;
+}
+
+.page-block__drag-dots i {
+  background: currentColor;
+  border-radius: 50%;
+  display: block;
+  height: 3px;
+  width: 3px;
 }
 
 .page-block__kind {
@@ -3428,6 +3535,10 @@ select:focus-visible,
 .page-block .bank-card-wrapper,
 .page-block .question-type-card {
   margin: 0;
+}
+
+.assessment-content.is-reordering .page-block:not(.is-dragging) * {
+  pointer-events: none;
 }
 
 .page-text-block__heading,
