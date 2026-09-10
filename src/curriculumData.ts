@@ -134,13 +134,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   learningObjectives: [LO_REDOX],
                 }),
                 item({
-                  id: 'block-redox-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: assigning oxidation numbers',
-                  learningObjectives: [LO_REDOX],
-                }),
-                item({
                   id: 'block-redox-q',
                   type: 'block',
                   blockKind: 'question',
@@ -235,13 +228,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   learningObjectives: [LO_APPS, LO_CORROSION],
                 }),
                 item({
-                  id: 'block-app-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: sacrificial anode protection',
-                  learningObjectives: [LO_APPS, LO_CORROSION],
-                }),
-                item({
                   id: 'block-app-bank',
                   type: 'block',
                   blockKind: 'bank',
@@ -266,15 +252,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   status: 'added',
                   learningObjectives: [LO_CORROSION],
                 }),
-                item({
-                  id: 'block-corrosion-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: galvanic corrosion of a water pipe',
-                  origin: 'instructor',
-                  status: 'added',
-                  learningObjectives: [LO_CORROSION],
-                }),
               ],
             }),
             item({
@@ -288,12 +265,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   type: 'block',
                   blockKind: 'explanation',
                   title: 'Household battery types',
-                }),
-                item({
-                  id: 'block-batteries-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: primary vs secondary cells',
                 }),
               ],
             }),
@@ -316,13 +287,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   blockKind: 'explanation',
                   title: 'Unit review',
                   learningObjectives: [LO_REDOX, LO_CELL, LO_APPS, LO_EQUILIBRIUM],
-                }),
-                item({
-                  id: 'block-e-check-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: electrolysis cell',
-                  learningObjectives: [LO_CELL],
                 }),
                 item({
                   id: 'block-e-check-bank-1',
@@ -419,13 +383,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   learningObjectives: [LO_RAD, LO_BIO],
                 }),
                 item({
-                  id: 'block-n-check-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: choosing shielding materials',
-                  learningObjectives: [LO_RAD],
-                }),
-                item({
                   id: 'block-n-check-bank',
                   type: 'block',
                   blockKind: 'bank',
@@ -475,14 +432,6 @@ export function createInitialCurriculum(): CurriculumNode[] {
                   origin: 'instructor',
                   status: 'added',
                 }),
-                item({
-                  id: 'block-recitation-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Worked example: this week’s lab calculation',
-                  origin: 'instructor',
-                  status: 'added',
-                }),
               ],
             }),
           ],
@@ -496,50 +445,24 @@ export function newCurriculumId(): string {
   return `c-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
-function exampleTitleForPage(pageTitle: string): string {
-  const title = pageTitle.toLowerCase();
-  if (/nuclear|radiation|shield/.test(title)) return 'Worked example: choosing shielding materials';
-  if (/corrosion/.test(title)) return 'Worked example: galvanic corrosion of a water pipe';
-  if (/batter/.test(title)) return 'Worked example: primary vs secondary cells';
-  if (/notation/.test(title)) return 'Worked example: writing standard cell notation';
-  if (/galvanic/.test(title)) return 'Worked example: zinc–copper cell';
-  if (/practice|recitation|lab/.test(title)) return 'Worked example: this week’s lab calculation';
-  if (/application/.test(title)) return 'Worked example: sacrificial anode protection';
-  if (/redox|oxidation|foundational/.test(title)) return 'Worked example: assigning oxidation numbers';
-  if (/electrochem|electrolysis/.test(title)) return 'Worked example: electrolysis cell';
-  return `Worked example: ${pageTitle}`;
-}
+const INJECTED_PAGE_EXAMPLE_IDS = new Set([
+  'block-redox-example',
+  'block-app-example',
+  'block-corrosion-example',
+  'block-batteries-example',
+  'block-e-check-example',
+  'block-n-check-example',
+  'block-recitation-example',
+]);
 
-function hashTitle(value: string): number {
-  let hash = 2166136261;
-  for (let i = 0; i < value.length; i += 1) {
-    hash ^= value.charCodeAt(i);
-    hash = Math.imul(hash, 16777619);
-  }
-  return hash >>> 0;
-}
-
-function ensurePageExamples(nodes: CurriculumNode[]): CurriculumNode[] {
+function stripInjectedPageExamples(nodes: CurriculumNode[]): CurriculumNode[] {
   return nodes.map((node) => {
-    const children = ensurePageExamples(node.children);
-    if (node.type !== 'page') return { ...node, children };
-    const hasExample = children.some((child) => child.blockKind === 'example');
-    if (hasExample) return { ...node, children };
-    const inheritedObjectives =
-      node.learningObjectives ?? children.find((child) => child.learningObjectives?.length)?.learningObjectives;
-    const example = item({
-      id: `${node.id}-example`,
-      type: 'block',
-      blockKind: 'example',
-      title: exampleTitleForPage(node.title),
-      origin: node.origin,
-      status: node.origin === 'instructor' ? 'added' : 'original',
-      learningObjectives: inheritedObjectives,
+    const children = stripInjectedPageExamples(node.children).filter((child) => {
+      if (INJECTED_PAGE_EXAMPLE_IDS.has(child.id)) return false;
+      if (node.type === 'page' && child.id === `${node.id}-example`) return false;
+      return true;
     });
-    const insertAt = Math.min(1 + (hashTitle(node.id) % Math.max(1, children.length)), children.length);
-    const nextChildren = [...children];
-    nextChildren.splice(insertAt, 0, example);
-    return { ...node, children: nextChildren };
+    return { ...node, children };
   });
 }
 
@@ -548,7 +471,7 @@ export function createInstructorNode(
   title: string,
   options?: { pageScoring?: PageScoring; learningObjectives?: string[] },
 ): CurriculumNode {
-  const node = item({
+  return item({
     id: newCurriculumId(),
     type,
     title,
@@ -559,20 +482,6 @@ export function createInstructorNode(
     pageScoring: type === 'page' ? options?.pageScoring ?? 'scored' : undefined,
     learningObjectives: options?.learningObjectives,
   });
-  if (type === 'page') {
-    node.children = [
-      item({
-        id: newCurriculumId(),
-        type: 'block',
-        blockKind: 'example',
-        title: exampleTitleForPage(title),
-        origin: 'instructor',
-        status: 'added',
-        learningObjectives: options?.learningObjectives,
-      }),
-    ];
-  }
-  return node;
 }
 
 export function pageScoringOf(node: CurriculumNode): PageScoring {
@@ -587,7 +496,7 @@ export function loadCurriculum(): CurriculumNode[] {
     if (!raw) return createInitialCurriculum();
     const parsed = JSON.parse(raw) as CurriculumNode[];
     if (!Array.isArray(parsed)) return createInitialCurriculum();
-    return ensurePageExamples(parsed);
+    return stripInjectedPageExamples(parsed);
   } catch {
     return createInitialCurriculum();
   }

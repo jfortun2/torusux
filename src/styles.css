@@ -2590,6 +2590,34 @@ select:focus-visible,
   margin: 8px 0 16px;
 }
 
+.curriculum-toolbar__aside {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.curriculum-expand-all {
+  background: none;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.curriculum-expand-all:hover:not(:disabled) {
+  color: var(--blue);
+}
+
+.curriculum-expand-all:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
 .curriculum-helper {
   color: var(--muted);
   font-size: 14px;
@@ -2602,7 +2630,6 @@ select:focus-visible,
   color: var(--text);
   flex-shrink: 0;
   font-size: 14px;
-  padding-top: 2px;
 }
 
 .blueprint-list {
@@ -3234,6 +3261,10 @@ select:focus-visible,
   .curriculum-toolbar {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .curriculum-toolbar__aside {
+    flex-wrap: wrap;
   }
 
   .curriculum-row {

@@ -40,11 +40,7 @@ import {
   friendlyObjectiveName,
   type RemovalImpact,
 } from './learningDesign';
-import { persistPageMeta, persistSavedPageLayout, pageExampleBlock } from './pageCustomization';
-import electrolysisImage from './assets/electrolysis.jpg';
-import radiationMaterialsImage from './assets/radiation_materials.jpg';
-import formulaImage from './assets/formula.png';
-import graphImage from './assets/graph.png';
+import { persistPageMeta, persistSavedPageLayout } from './pageCustomization';
 
 const ROOT_DESTINATION = '__root__';
 
@@ -90,6 +86,19 @@ function emptyChildLabel(parent: CurriculumNode): string {
   return `${labels.slice(0, -1).join(', ')} or ${labels[labels.length - 1]}`;
 }
 
+function collectExpandableIds(nodes: CurriculumNode[], showRemoved: boolean): string[] {
+  const ids: string[] = [];
+  const walk = (list: CurriculumNode[]) => {
+    list.forEach((node) => {
+      if (node.type === 'block' || !isNodeVisible(node, showRemoved)) return;
+      if (isContainerType(node.type)) ids.push(node.id);
+      walk(node.children);
+    });
+  };
+  walk(nodes);
+  return ids;
+}
+
 function structuralLabel(type: CurriculumNode['type']): string {
   return type === 'block' ? 'Item' : NODE_TYPE_LABEL[type];
 }
@@ -108,12 +117,6 @@ function seedImportedPage(title: string, scoring: PageScoring, projectName: stri
         learningObjective: '',
       },
     },
-    pageExampleBlock(title, {
-      electrolysis: electrolysisImage,
-      radiation: radiationMaterialsImage,
-      formula: formulaImage,
-      graph: graphImage,
-    }, 'instructor'),
   ]);
   persistPageMeta(title, {
     scoring,
@@ -208,6 +211,19 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     });
   };
 
+  const expandableIds = collectExpandableIds(units, showRemoved);
+  const allExpanded = expandableIds.length > 0 && expandableIds.every((id) => expandedIds.has(id));
+
+  const toggleExpandAll = () => {
+    if (allExpanded) {
+      setExpandedIds(new Set());
+      announce('Collapsed all units, modules, and sections.');
+      return;
+    }
+    setExpandedIds(new Set(expandableIds));
+    announce('Expanded all units, modules, and sections.');
+  };
+
   const openAdd = (parentId: string | null, childType: StructuralNodeType) => {
     setOpenMenuId(null);
     setDraftName('');
@@ -239,14 +255,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
         return next;
       });
       if (dialog.childType === 'page') {
-        persistSavedPageLayout(name, [
-          pageExampleBlock(name, {
-            electrolysis: electrolysisImage,
-            radiation: radiationMaterialsImage,
-            formula: formulaImage,
-            graph: graphImage,
-          }, 'instructor'),
-        ]);
+        persistSavedPageLayout(name, []);
         persistPageMeta(name, {
           scoring: draftScoring,
           attachedObjectiveCodes: [],
@@ -504,15 +513,25 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
               this outline but are not shown to students. Removed items stay restorable and appear only when shown. Drag the
               handle to reorder units, modules, sections, and pages.
             </p>
-            <label className="check-row curriculum-show-removed" htmlFor={showRemovedId}>
-              <input
-                id={showRemovedId}
-                type="checkbox"
-                checked={showRemoved}
-                onChange={(event) => setShowRemoved(event.target.checked)}
-              />
-              Show removed content
-            </label>
+            <div className="curriculum-toolbar__aside">
+              <button
+                type="button"
+                className="curriculum-expand-all"
+                onClick={toggleExpandAll}
+                disabled={expandableIds.length === 0}
+              >
+                {allExpanded ? 'Collapse all' : 'Expand all'}
+              </button>
+              <label className="check-row curriculum-show-removed" htmlFor={showRemovedId}>
+                <input
+                  id={showRemovedId}
+                  type="checkbox"
+                  checked={showRemoved}
+                  onChange={(event) => setShowRemoved(event.target.checked)}
+                />
+                Show removed content
+              </label>
+            </div>
           </div>
 
           <div className="curriculum-tree" role="region" aria-label="Course curriculum">
