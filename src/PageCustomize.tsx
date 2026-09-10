@@ -4,13 +4,15 @@ import {
   BLOCK_KIND_LABEL,
   COURSE_RESOURCE_OPTIONS,
   courseResourceBlock,
-  describeBlockForCompare,
+  editorObjectiveOptions,
   exampleMcqDraft,
   exampleMultiInputDraft,
   exampleTextDraft,
+  formatObjectiveTag,
+  generateQuestionsWithAi,
   questionBlockFromDraft,
+  resolveEditorObjectiveValue,
   sanitizeInstructorHtml,
-  summarizeAgainstCanonical,
   textBlockFromDraft,
   type ChangeSummary,
   type CourseResourceContent,
@@ -28,19 +30,24 @@ export type CustomizeDialog =
   | { type: 'course-resource'; insertAt: number }
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
   | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
+  | { type: 'ai-question'; insertAt: number }
   | { type: 'community-resources'; insertAt: number }
   | { type: 'coming-later'; label: string };
 
 export function PageCustomizeBar({
   summary,
   dirty,
+  isCustomized = false,
   onCancel,
   onSave,
+  onRestoreOriginal,
 }: {
   summary: ChangeSummary;
   dirty: boolean;
+  isCustomized?: boolean;
   onCancel: () => void;
   onSave: () => void;
+  onRestoreOriginal?: () => void;
 }) {
   return (
     <div className="page-customize-bar" role="region" aria-label="Page customization">
@@ -56,11 +63,16 @@ export function PageCustomizeBar({
               {summary.items.length > 3 ? ` And ${summary.items.length - 3} more.` : ''}
             </>
           ) : (
-            'No unsaved changes. Select a block to edit, remove, or drag it. Add content between blocks.'
+            'No unsaved changes. Edit, remove, or drag a block. Add content and questions between blocks.'
           )}
         </p>
       </div>
       <div className="page-customize-bar__actions">
+        {isCustomized && onRestoreOriginal ? (
+          <button type="button" className="button button--secondary" onClick={onRestoreOriginal}>
+            Restore original
+          </button>
+        ) : null}
         <button type="button" className="button button--subtle" onClick={onCancel}>
           Cancel
         </button>
@@ -77,122 +89,33 @@ export function PageCustomizeBar({
   );
 }
 
-export function CanonicalCourseNotice({ onCompare }: { onCompare: () => void }) {
-  return (
-    <div className="canonical-course-notice" role="status">
-      <p>
-        You customized this page for your course. Other unchanged course content can continue to receive updates from
-        the original course.
-      </p>
-      <button type="button" className="button button--secondary button--small" onClick={onCompare}>
-        Compare with original
-      </button>
-    </div>
-  );
-}
-
-export function CompareWithOriginalDialog({
-  originalBlocks,
-  currentBlocks,
+export function RestoreOriginalConfirm({
   onClose,
   onRestore,
+  title = 'Restore original version?',
+  body = 'This replaces your customized version with the original course version. Content you added will be removed, and original items you changed or removed will be restored.',
 }: {
-  originalBlocks: PageBlock[];
-  currentBlocks: PageBlock[];
   onClose: () => void;
   onRestore: () => void;
+  title?: string;
+  body?: string;
 }) {
-  const [confirmRestore, setConfirmRestore] = useState(false);
-  const changes = summarizeAgainstCanonical(originalBlocks, currentBlocks);
-  const originalVisible = originalBlocks.filter((block) => block.status !== 'removed');
-  const currentVisible = currentBlocks.filter((block) => block.status !== 'removed');
-  const removedCurrent = currentBlocks.filter((block) => block.status === 'removed');
-
-  if (confirmRestore) {
-    return (
-      <ModalShell title="Restore original version?" onClose={onClose} wide={false}>
-        <p>
-          This replaces your customized page with the original course version. Content you added for this course will be
-          removed, and removed original items will be restored.
-        </p>
-        <div className="modal-actions modal-actions--wrap">
-          <button type="button" className="button button--subtle" onClick={() => setConfirmRestore(false)}>
-            Keep my version
-          </button>
-          <button
-            type="button"
-            className="button button--danger"
-            onClick={() => {
-              onRestore();
-              onClose();
-            }}
-          >
-            Restore original
-          </button>
-        </div>
-      </ModalShell>
-    );
-  }
-
   return (
-    <ModalShell title="Compare with original" onClose={onClose} wide>
-      <p className="canonical-compare__intro">
-        Local changes apply to your course section. Unchanged content stays connected to the original course.
-      </p>
-
-      <div className="canonical-compare__columns">
-        <section className="canonical-compare__column" aria-labelledby="canonical-original-heading">
-          <h4 id="canonical-original-heading">Original content</h4>
-          <ol className="canonical-compare__list">
-            {originalVisible.map((block) => (
-              <li key={block.id}>
-                <span className="canonical-compare__kind">{BLOCK_KIND_LABEL[block.kind]}</span>
-                <span>{describeBlockForCompare(block)}</span>
-              </li>
-            ))}
-          </ol>
-        </section>
-        <section className="canonical-compare__column" aria-labelledby="canonical-current-heading">
-          <h4 id="canonical-current-heading">Your customized content</h4>
-          <ol className="canonical-compare__list">
-            {currentVisible.map((block) => (
-              <li key={block.id}>
-                <span className="canonical-compare__kind">
-                  {BLOCK_KIND_LABEL[block.kind]}
-                  {block.origin === 'instructor' ? ' · added' : ''}
-                </span>
-                <span>{describeBlockForCompare(block)}</span>
-              </li>
-            ))}
-            {removedCurrent.map((block) => (
-              <li key={block.id} className="canonical-compare__removed">
-                <span className="canonical-compare__kind">{BLOCK_KIND_LABEL[block.kind]} · removed</span>
-                <span>{block.title}</span>
-              </li>
-            ))}
-          </ol>
-        </section>
-      </div>
-
-      <section className="canonical-compare__changes" aria-labelledby="canonical-changes-heading">
-        <h4 id="canonical-changes-heading">Changes on this page</h4>
-        {changes.count === 0 ? (
-          <p className="canonical-compare__empty">This page matches the original course version.</p>
-        ) : (
-          <ul>
-            {changes.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        )}
-      </section>
-
+    <ModalShell title={title} onClose={onClose} wide={false}>
+      <p>{body}</p>
       <div className="modal-actions modal-actions--wrap">
-        <button type="button" className="button button--secondary" onClick={() => setConfirmRestore(true)} disabled={changes.count === 0}>
-          Restore original version
+        <button type="button" className="button button--subtle" onClick={onClose}>
+          Keep my version
         </button>
-        <button type="button" className="button button--primary" onClick={onClose}>
-          Close
+        <button
+          type="button"
+          className="button button--danger"
+          onClick={() => {
+            onRestore();
+            onClose();
+          }}
+        >
+          Restore original
         </button>
       </div>
     </ModalShell>
@@ -224,7 +147,7 @@ export function AddContentGap({
       onDrop={onDrop}
     >
       <button type="button" className="add-content-gap__button" onClick={onAdd}>
-        {dropActive ? 'Drop here' : 'Add content'}
+        {dropActive ? 'Drop here' : 'Add content and questions'}
       </button>
     </div>
   );
@@ -306,6 +229,7 @@ export function PageBlockFrame({
   canMoveUp,
   canMoveDown,
   canEdit,
+  canRestoreOriginal = false,
   dragging = false,
   dropPlacement = null,
   onSelect,
@@ -313,6 +237,7 @@ export function PageBlockFrame({
   onMoveDown,
   onRemove,
   onRestore,
+  onRestoreOriginal,
   onEdit,
   onDragStart,
   onDragEnd,
@@ -327,6 +252,7 @@ export function PageBlockFrame({
   canMoveUp: boolean;
   canMoveDown: boolean;
   canEdit?: boolean;
+  canRestoreOriginal?: boolean;
   dragging?: boolean;
   dropPlacement?: 'before' | 'after' | null;
   onSelect: () => void;
@@ -334,6 +260,7 @@ export function PageBlockFrame({
   onMoveDown: () => void;
   onRemove: () => void;
   onRestore: () => void;
+  onRestoreOriginal?: () => void;
   onEdit?: () => void;
   onDragStart: () => void;
   onDragEnd: () => void;
@@ -410,6 +337,7 @@ export function PageBlockFrame({
           </button>
           <span className="page-block__kind">{BLOCK_KIND_LABEL[block.kind]}</span>
           {removed ? <span className="status-pill">Removed</span> : null}
+          {canRestoreOriginal && !removed ? <span className="status-pill status-pill--edited">Edited</span> : null}
           {canEdit && !removed ? (
             <button type="button" className="button button--secondary button--small" onClick={onEdit} disabled={!onEdit}>
               Edit
@@ -420,9 +348,16 @@ export function PageBlockFrame({
               Restore
             </button>
           ) : (
-            <button type="button" className="button button--danger button--small" onClick={onRemove}>
-              Remove
-            </button>
+            <>
+              {canRestoreOriginal && onRestoreOriginal ? (
+                <button type="button" className="button button--secondary button--small" onClick={onRestoreOriginal}>
+                  Restore original
+                </button>
+              ) : null}
+              <button type="button" className="button button--danger button--small" onClick={onRemove}>
+                Remove
+              </button>
+            </>
           )}
         </div>
       ) : null}
@@ -476,6 +411,7 @@ export function CourseResourceView({ block }: { block: Extract<PageBlock, { kind
 export function PageCustomizeDialogs({
   dialog,
   objectives,
+  pageContext = '',
   onClose,
   onChoose,
   onAddBlocks,
@@ -483,6 +419,7 @@ export function PageCustomizeDialogs({
 }: {
   dialog: CustomizeDialog | null;
   objectives: PageObjectiveOption[];
+  pageContext?: string;
   onClose: () => void;
   onChoose: (next: CustomizeDialog) => void;
   onAddBlocks: (insertAt: number, blocks: PageBlock[]) => void;
@@ -519,6 +456,7 @@ export function PageCustomizeDialogs({
     return (
       <QuestionBlockForm
         objectives={objectives}
+        pageContext={pageContext}
         initialDraft={dialog.block.question}
         modalTitle="Edit a question"
         submitLabel="Save changes"
@@ -543,6 +481,7 @@ export function PageCustomizeDialogs({
         onSelect={(kind) => {
           if (kind === 'text') onChoose({ type: 'text', insertAt: dialog.insertAt });
           if (kind === 'question') onChoose({ type: 'question', insertAt: dialog.insertAt });
+          if (kind === 'ai') onChoose({ type: 'ai-question', insertAt: dialog.insertAt });
           if (kind === 'community') onChoose({ type: 'community-resources', insertAt: dialog.insertAt });
         }}
       />
@@ -566,9 +505,27 @@ export function PageCustomizeDialogs({
     return (
       <QuestionBlockForm
         objectives={objectives}
+        pageContext={pageContext}
         onCancel={onClose}
         onAdd={(draft) => {
           onAddBlocks(dialog.insertAt, [questionBlockFromDraft(draft)]);
+          onClose();
+        }}
+      />
+    );
+  }
+
+  if (dialog.type === 'ai-question') {
+    return (
+      <AiQuestionForm
+        objectives={objectives}
+        pageContext={pageContext}
+        onCancel={onClose}
+        onAdd={(drafts) => {
+          onAddBlocks(
+            dialog.insertAt,
+            drafts.map((draft) => questionBlockFromDraft(draft)),
+          );
           onClose();
         }}
       />
@@ -679,10 +636,10 @@ function ChooserDialog({
   onSelect,
 }: {
   onClose: () => void;
-  onSelect: (kind: 'text' | 'question' | 'community') => void;
+  onSelect: (kind: 'text' | 'question' | 'ai' | 'community') => void;
 }) {
   return (
-    <ModalShell title="Add content" onClose={onClose} wide={false}>
+    <ModalShell title="Add content and questions" onClose={onClose} wide={false}>
       <p>Choose what to add to this page.</p>
       <div className="content-chooser">
         <ChooserOption
@@ -692,8 +649,13 @@ function ChooserDialog({
         />
         <ChooserOption
           title="Question"
-          description="A multiple-choice or multi-input question."
+          description="Write a multiple-choice or multi-input question."
           onClick={() => onSelect('question')}
+        />
+        <ChooserOption
+          title="Generate questions with AI"
+          description="Draft one or more questions from a learning objective and optional page context."
+          onClick={() => onSelect('ai')}
         />
         <ChooserOption
           title="Community resources"
@@ -938,6 +900,77 @@ export function CoverageImpactPanel({
   );
 }
 
+function readImageAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result ?? ''));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
+}
+
+function initializeQuestionDraft(objectives: PageObjectiveOption[], initial?: QuestionContent): QuestionContent {
+  const base = initial ?? exampleMcqDraft(objectives);
+  const learningObjective = resolveEditorObjectiveValue(base.learningObjective, objectives);
+  const inputs =
+    base.kind === 'multi-input' && base.inputs.length === 0
+      ? [
+          { id: 'i1', label: 'Part 1', answer: '' },
+          { id: 'i2', label: 'Part 2', answer: '' },
+        ]
+      : base.inputs;
+  const choices =
+    base.kind === 'mcq' && base.choices.length < 2 ? exampleMcqDraft(objectives).choices : base.choices;
+  return { ...base, learningObjective, inputs, choices };
+}
+
+export function QuestionDraftPreview({ draft }: { draft: QuestionContent }) {
+  return (
+    <div className="question-draft-preview">
+      {draft.generatedByAi ? <p className="question-draft-preview__ai">AI-generated draft — review before saving.</p> : null}
+      <div className="student-question-card__meta">
+        {draft.kind === 'mcq' ? 'Multiple choice' : 'Multi-input'} · {draft.points} point
+        {draft.points === 1 ? '' : 's'}
+      </div>
+      <h3>{draft.title.trim() || 'Untitled question'}</h3>
+      <p>{draft.prompt.trim() || 'Question prompt'}</p>
+      {draft.imageSrc ? (
+        <img className="question-media" src={draft.imageSrc} alt={draft.imageAlt || draft.title} />
+      ) : null}
+      {draft.kind === 'mcq' ? (
+        <div className="student-choice-list">
+          {draft.choices
+            .filter((choice) => choice.text.trim())
+            .map((choice) => (
+              <label key={choice.id} className="student-choice-row">
+                <input type="radio" name={`preview-${draft.title}`} disabled />
+                <span>
+                  {choice.text}
+                  {choice.correct ? <em className="question-draft-preview__correct"> Correct</em> : null}
+                </span>
+              </label>
+            ))}
+        </div>
+      ) : (
+        <div className="student-input-list">
+          {draft.inputs.map((input) => (
+            <label key={input.id} className="student-input-row">
+              <span>{input.label || 'Input'}</span>
+              <input disabled placeholder="Student response" />
+              {input.answer ? <span className="page-customize-hint">Expected: {input.answer}</span> : null}
+            </label>
+          ))}
+        </div>
+      )}
+      {draft.learningObjective ? (
+        <p className="learning-objective-footnote">
+          <strong>LO</strong> {draft.learningObjective}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 export function QuestionBlockForm({
   objectives,
   onCancel,
@@ -945,6 +978,8 @@ export function QuestionBlockForm({
   initialDraft,
   modalTitle,
   submitLabel,
+  pageContext = '',
+  showAiGenerate = true,
 }: {
   objectives: PageObjectiveOption[];
   onCancel: () => void;
@@ -952,19 +987,28 @@ export function QuestionBlockForm({
   initialDraft?: QuestionContent;
   modalTitle?: string;
   submitLabel?: string;
+  pageContext?: string;
+  showAiGenerate?: boolean;
 }) {
-  const [draft, setDraft] = useState<QuestionContent>(() => initialDraft ?? exampleMcqDraft(objectives));
+  const [draft, setDraft] = useState<QuestionContent>(() => initializeQuestionDraft(objectives, initialDraft));
   const [confirmWithoutObjective, setConfirmWithoutObjective] = useState(false);
+  const [preview, setPreview] = useState(false);
+  const [aiOpen, setAiOpen] = useState(false);
+  const [aiBusy, setAiBusy] = useState(false);
+  const [imageName, setImageName] = useState(initialDraft?.imageAlt ?? '');
   const titleId = useId();
   const promptId = useId();
   const objectiveId = useId();
   const pointsId = useId();
+  const imageInputId = useId();
+  const objectiveOptions = editorObjectiveOptions(objectives, draft.learningObjective);
+  const objectiveValue = resolveEditorObjectiveValue(draft.learningObjective, objectives);
   const canSave =
     draft.title.trim().length > 0 &&
     draft.prompt.trim().length > 0 &&
     (draft.kind === 'mcq'
       ? draft.choices.filter((choice) => choice.text.trim()).length >= 2 && draft.choices.some((choice) => choice.correct)
-      : draft.inputs.some((input) => input.label.trim() && input.answer.trim()));
+      : draft.inputs.some((input) => input.label.trim()));
 
   const setKind = (kind: 'mcq' | 'multi-input') => {
     setDraft((current) => {
@@ -979,6 +1023,9 @@ export function QuestionBlockForm({
           learningObjective: current.learningObjective,
           correctFeedback: current.correctFeedback,
           incorrectFeedback: current.incorrectFeedback,
+          imageSrc: current.imageSrc,
+          imageAlt: current.imageAlt,
+          generatedByAi: current.generatedByAi,
         };
       }
       const next = exampleMultiInputDraft(objectives);
@@ -990,6 +1037,9 @@ export function QuestionBlockForm({
         learningObjective: current.learningObjective,
         correctFeedback: current.correctFeedback,
         incorrectFeedback: current.incorrectFeedback,
+        imageSrc: current.imageSrc,
+        imageAlt: current.imageAlt,
+        generatedByAi: current.generatedByAi,
       };
     });
   };
@@ -1004,6 +1054,29 @@ export function QuestionBlockForm({
         return { ...choice, ...patch };
       }),
     }));
+  };
+
+  const generateWithAi = () => {
+    setAiBusy(true);
+    window.setTimeout(() => {
+      const [generated] = generateQuestionsWithAi({
+        objectives,
+        objectiveValue: objectiveValue || formatObjectiveTag(objectives[0] ?? { code: '', label: '' }),
+        sourceText: pageContext,
+        count: 1,
+      });
+      if (generated) {
+        setDraft((current) => ({
+          ...generated,
+          imageSrc: current.imageSrc,
+          imageAlt: current.imageAlt,
+          points: current.points || generated.points,
+        }));
+        setPreview(true);
+      }
+      setAiBusy(false);
+      setAiOpen(false);
+    }, 700);
   };
 
   if (confirmWithoutObjective) {
@@ -1038,210 +1111,312 @@ export function QuestionBlockForm({
             setConfirmWithoutObjective(true);
             return;
           }
-          onAdd(draft);
+          onAdd({ ...draft, learningObjective: objectiveValue || draft.learningObjective });
         }}
       >
-        <fieldset className="page-customize-kind">
-          <legend>Question type</legend>
-          <label>
-            <input type="radio" name="question-kind" checked={draft.kind === 'mcq'} onChange={() => setKind('mcq')} />
-            Multiple choice
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="question-kind"
-              checked={draft.kind === 'multi-input'}
-              onChange={() => setKind('multi-input')}
-            />
-            Multi-input
-          </label>
-        </fieldset>
+        <div className="page-customize-form__tabs" role="tablist" aria-label="Question editor">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={!preview}
+            className={!preview ? 'tab-strip__tab is-active' : 'tab-strip__tab'}
+            onClick={() => setPreview(false)}
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={preview}
+            className={preview ? 'tab-strip__tab is-active' : 'tab-strip__tab'}
+            onClick={() => setPreview(true)}
+          >
+            Preview
+          </button>
+        </div>
 
-        <label className="field" htmlFor={titleId}>
-          <span>Title</span>
-          <input
-            id={titleId}
-            value={draft.title}
-            onChange={(event) => setDraft((current) => ({ ...current, title: event.target.value }))}
-          />
-        </label>
-        <label className="field" htmlFor={promptId}>
-          <span>Question</span>
-          <textarea
-            id={promptId}
-            rows={3}
-            value={draft.prompt}
-            onChange={(event) => setDraft((current) => ({ ...current, prompt: event.target.value }))}
-          />
-        </label>
-
-        {draft.kind === 'mcq' ? (
-          <fieldset className="page-customize-choices">
-            <legend>Answer choices</legend>
-            <p className="page-customize-hint">Mark one correct answer. You can add or remove choices.</p>
-            {draft.choices.map((choice, index) => (
-              <div key={choice.id} className="page-customize-choice-row">
-                <label className="page-customize-choice-row__correct">
-                  <input
-                    type="radio"
-                    name="correct-choice"
-                    checked={choice.correct}
-                    onChange={() => updateChoice(choice.id, { correct: true })}
-                  />
-                  <span className="visually-hidden">Correct answer</span>
-                </label>
-                <input
-                  aria-label={`Choice ${index + 1}`}
-                  value={choice.text}
-                  onChange={(event) => updateChoice(choice.id, { text: event.target.value })}
-                />
-                <button
-                  type="button"
-                  className="button button--subtle button--small"
-                  onClick={() =>
-                    setDraft((current) => ({
-                      ...current,
-                      choices: current.choices.filter((item) => item.id !== choice.id),
-                    }))
-                  }
-                  disabled={draft.choices.length <= 2}
-                >
-                  Remove
-                </button>
-              </div>
-            ))}
-            <button
-              type="button"
-              className="button button--secondary button--small"
-              onClick={() =>
-                setDraft((current) => ({
-                  ...current,
-                  choices: [
-                    ...current.choices,
-                    { id: `c-${Date.now()}`, text: `Choice ${current.choices.length + 1}`, correct: false },
-                  ],
-                }))
-              }
-            >
-              Add choice
-            </button>
-          </fieldset>
+        {preview ? (
+          <div className="page-customize-preview" role="tabpanel">
+            <QuestionDraftPreview draft={{ ...draft, learningObjective: objectiveValue || draft.learningObjective }} />
+          </div>
         ) : (
-          <fieldset className="page-customize-choices">
-            <legend>Student inputs</legend>
-            <p className="page-customize-hint">Each row is a blank students fill in. Include the expected answer.</p>
-            {draft.inputs.map((input, index) => (
-              <div key={input.id} className="page-customize-input-row">
-                <input
-                  aria-label={`Input ${index + 1} label`}
-                  placeholder="Label"
-                  value={input.label}
-                  onChange={(event) =>
-                    setDraft((current) => ({
-                      ...current,
-                      inputs: current.inputs.map((item) =>
-                        item.id === input.id ? { ...item, label: event.target.value } : item,
-                      ),
-                    }))
-                  }
-                />
-                <input
-                  aria-label={`Input ${index + 1} correct answer`}
-                  placeholder="Correct answer"
-                  value={input.answer}
-                  onChange={(event) =>
-                    setDraft((current) => ({
-                      ...current,
-                      inputs: current.inputs.map((item) =>
-                        item.id === input.id ? { ...item, answer: event.target.value } : item,
-                      ),
-                    }))
-                  }
-                />
-                <button
-                  type="button"
-                  className="button button--subtle button--small"
-                  onClick={() =>
-                    setDraft((current) => ({
-                      ...current,
-                      inputs: current.inputs.filter((item) => item.id !== input.id),
-                    }))
-                  }
-                  disabled={draft.inputs.length <= 1}
-                >
-                  Remove
-                </button>
+          <div className="page-customize-form__fields" role="tabpanel">
+            {showAiGenerate ? (
+              <div className="ai-generate-panel">
+                <div className="ai-generate-panel__head">
+                  <p>
+                    <strong>Generate with AI</strong> Draft a question from the learning objectives on this page.
+                  </p>
+                  <button
+                    type="button"
+                    className="button button--secondary button--small"
+                    onClick={() => setAiOpen((open) => !open)}
+                  >
+                    {aiOpen ? 'Hide' : 'Generate with AI'}
+                  </button>
+                </div>
+                {aiOpen ? (
+                  <div className="ai-generate-panel__body">
+                    <p className="page-customize-hint">
+                      Uses the selected learning objective
+                      {pageContext.trim() ? ' and visible page content as context.' : '.'} You can edit the draft before saving.
+                    </p>
+                    <button
+                      type="button"
+                      className="button button--primary button--small"
+                      onClick={generateWithAi}
+                      disabled={aiBusy || objectives.length === 0}
+                    >
+                      {aiBusy ? 'Generating…' : 'Generate a question'}
+                    </button>
+                  </div>
+                ) : null}
               </div>
-            ))}
-            <button
-              type="button"
-              className="button button--secondary button--small"
-              onClick={() =>
-                setDraft((current) => ({
-                  ...current,
-                  inputs: [...current.inputs, { id: `i-${Date.now()}`, label: `Part ${current.inputs.length + 1}`, answer: '' }],
-                }))
-              }
-            >
-              Add input
-            </button>
-          </fieldset>
-        )}
+            ) : null}
 
-        <label className="field">
-          <span>Feedback for correct answer (optional)</span>
-          <textarea
-            rows={2}
-            value={draft.correctFeedback}
-            onChange={(event) => setDraft((current) => ({ ...current, correctFeedback: event.target.value }))}
-          />
-        </label>
-        <label className="field">
-          <span>Feedback for incorrect answer (optional)</span>
-          <textarea
-            rows={2}
-            value={draft.incorrectFeedback}
-            onChange={(event) => setDraft((current) => ({ ...current, incorrectFeedback: event.target.value }))}
-          />
-        </label>
-        <div>
-          <div className="page-customize-form__split">
-            <label className="field" htmlFor={objectiveId}>
-              <span>Learning objective</span>
-              <select
-                id={objectiveId}
-                className="select"
-                value={draft.learningObjective}
-                onChange={(event) => setDraft((current) => ({ ...current, learningObjective: event.target.value }))}
-              >
-                <option value="">Select a learning objective</option>
-                {objectives.map((objective) => (
-                  <option key={objective.code} value={objective.label}>
-                    {objective.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="field" htmlFor={pointsId}>
-              <span>Points</span>
+            <fieldset className="page-customize-kind">
+              <legend>Question type</legend>
+              <label>
+                <input type="radio" name="question-kind" checked={draft.kind === 'mcq'} onChange={() => setKind('mcq')} />
+                Multiple choice
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="question-kind"
+                  checked={draft.kind === 'multi-input'}
+                  onChange={() => setKind('multi-input')}
+                />
+                Multi-input
+              </label>
+            </fieldset>
+
+            <label className="field" htmlFor={titleId}>
+              <span>Title</span>
               <input
-                id={pointsId}
-                type="number"
-                min={1}
-                max={10}
-                value={draft.points}
-                onChange={(event) =>
-                  setDraft((current) => ({ ...current, points: Math.max(1, Number(event.target.value) || 1) }))
-                }
+                id={titleId}
+                value={draft.title}
+                onChange={(event) => setDraft((current) => ({ ...current, title: event.target.value }))}
               />
             </label>
+            <label className="field" htmlFor={promptId}>
+              <span>Question</span>
+              <textarea
+                id={promptId}
+                rows={3}
+                value={draft.prompt}
+                onChange={(event) => setDraft((current) => ({ ...current, prompt: event.target.value }))}
+              />
+            </label>
+
+            <div className="field">
+              <span>Question image (optional)</span>
+              {draft.imageSrc ? (
+                <div className="image-upload image-upload--selected">
+                  <img className="image-upload__preview" src={draft.imageSrc} alt={draft.imageAlt || ''} />
+                  <p className="image-upload__name">{imageName || draft.imageAlt || 'Question image'}</p>
+                  <button
+                    type="button"
+                    className="button button--subtle button--small"
+                    onClick={() => {
+                      setDraft((current) => ({ ...current, imageSrc: undefined, imageAlt: undefined }));
+                      setImageName('');
+                    }}
+                  >
+                    Remove image
+                  </button>
+                </div>
+              ) : (
+                <label className="image-upload" htmlFor={imageInputId}>
+                  <input
+                    id={imageInputId}
+                    type="file"
+                    accept="image/*"
+                    className="visually-hidden"
+                    onChange={(event) => {
+                      const file = event.target.files?.[0];
+                      if (!file) return;
+                      void readImageAsDataUrl(file).then((src) => {
+                        setImageName(file.name);
+                        setDraft((current) => ({ ...current, imageSrc: src, imageAlt: file.name }));
+                      });
+                    }}
+                  />
+                  <span className="image-upload__title">Upload an image</span>
+                  <span className="image-upload__hint">Choose a PNG, JPG, or GIF to show with this question.</span>
+                </label>
+              )}
+            </div>
+
+            {draft.kind === 'mcq' ? (
+              <fieldset className="page-customize-choices">
+                <legend>Answer choices</legend>
+                <p className="page-customize-hint">Mark one correct answer. You can add or remove choices.</p>
+                {draft.choices.map((choice, index) => (
+                  <div key={choice.id} className="page-customize-choice-row">
+                    <label className="page-customize-choice-row__correct">
+                      <input
+                        type="radio"
+                        name="correct-choice"
+                        checked={choice.correct}
+                        onChange={() => updateChoice(choice.id, { correct: true })}
+                      />
+                      <span className="visually-hidden">Correct answer</span>
+                    </label>
+                    <input
+                      aria-label={`Choice ${index + 1}`}
+                      value={choice.text}
+                      onChange={(event) => updateChoice(choice.id, { text: event.target.value })}
+                    />
+                    <button
+                      type="button"
+                      className="button button--subtle button--small"
+                      onClick={() =>
+                        setDraft((current) => ({
+                          ...current,
+                          choices: current.choices.filter((item) => item.id !== choice.id),
+                        }))
+                      }
+                      disabled={draft.choices.length <= 2}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className="button button--secondary button--small"
+                  onClick={() =>
+                    setDraft((current) => ({
+                      ...current,
+                      choices: [
+                        ...current.choices,
+                        { id: `c-${Date.now()}`, text: `Choice ${current.choices.length + 1}`, correct: false },
+                      ],
+                    }))
+                  }
+                >
+                  Add choice
+                </button>
+              </fieldset>
+            ) : (
+              <fieldset className="page-customize-choices">
+                <legend>Student inputs</legend>
+                <p className="page-customize-hint">Each row is a blank students fill in. Include the expected answer when you have it.</p>
+                {draft.inputs.map((input, index) => (
+                  <div key={input.id} className="page-customize-input-row">
+                    <input
+                      aria-label={`Input ${index + 1} label`}
+                      placeholder="Label"
+                      value={input.label}
+                      onChange={(event) =>
+                        setDraft((current) => ({
+                          ...current,
+                          inputs: current.inputs.map((item) =>
+                            item.id === input.id ? { ...item, label: event.target.value } : item,
+                          ),
+                        }))
+                      }
+                    />
+                    <input
+                      aria-label={`Input ${index + 1} correct answer`}
+                      placeholder="Correct answer"
+                      value={input.answer}
+                      onChange={(event) =>
+                        setDraft((current) => ({
+                          ...current,
+                          inputs: current.inputs.map((item) =>
+                            item.id === input.id ? { ...item, answer: event.target.value } : item,
+                          ),
+                        }))
+                      }
+                    />
+                    <button
+                      type="button"
+                      className="button button--subtle button--small"
+                      onClick={() =>
+                        setDraft((current) => ({
+                          ...current,
+                          inputs: current.inputs.filter((item) => item.id !== input.id),
+                        }))
+                      }
+                      disabled={draft.inputs.length <= 1}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className="button button--secondary button--small"
+                  onClick={() =>
+                    setDraft((current) => ({
+                      ...current,
+                      inputs: [...current.inputs, { id: `i-${Date.now()}`, label: `Part ${current.inputs.length + 1}`, answer: '' }],
+                    }))
+                  }
+                >
+                  Add input
+                </button>
+              </fieldset>
+            )}
+
+            <label className="field">
+              <span>Feedback for correct answer (optional)</span>
+              <textarea
+                rows={2}
+                value={draft.correctFeedback}
+                onChange={(event) => setDraft((current) => ({ ...current, correctFeedback: event.target.value }))}
+              />
+            </label>
+            <label className="field">
+              <span>Feedback for incorrect answer (optional)</span>
+              <textarea
+                rows={2}
+                value={draft.incorrectFeedback}
+                onChange={(event) => setDraft((current) => ({ ...current, incorrectFeedback: event.target.value }))}
+              />
+            </label>
+            <div>
+              <div className="page-customize-form__split">
+                <label className="field" htmlFor={objectiveId}>
+                  <span>Learning objective</span>
+                  <select
+                    id={objectiveId}
+                    className="select"
+                    value={objectiveValue}
+                    onChange={(event) => setDraft((current) => ({ ...current, learningObjective: event.target.value }))}
+                  >
+                    <option value="">Select a learning objective</option>
+                    {objectiveOptions.map((objective) => (
+                      <option key={objective.code} value={formatObjectiveTag(objective)}>
+                        {formatObjectiveTag(objective)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="field" htmlFor={pointsId}>
+                  <span>Points</span>
+                  <input
+                    id={pointsId}
+                    type="number"
+                    min={1}
+                    max={10}
+                    value={draft.points}
+                    onChange={(event) =>
+                      setDraft((current) => ({ ...current, points: Math.max(1, Number(event.target.value) || 1) }))
+                    }
+                  />
+                </label>
+              </div>
+              <p className="page-customize-hint">
+                These are the learning objectives attached to this page. Aligning the question helps Torus include it in
+                proficiency calculations and instructor reporting.
+              </p>
+            </div>
           </div>
-          <p className="page-customize-hint">
-            Strongly recommended. Aligning this question with a learning objective helps Torus include the activity in
-            proficiency calculations and instructor reporting.
-          </p>
-        </div>
+        )}
+
         <div className="modal-actions">
           <button type="button" className="button button--subtle" onClick={onCancel}>
             Cancel
@@ -1251,6 +1426,144 @@ export function QuestionBlockForm({
           </button>
         </div>
       </form>
+    </ModalShell>
+  );
+}
+
+function AiQuestionForm({
+  objectives,
+  pageContext,
+  onCancel,
+  onAdd,
+}: {
+  objectives: PageObjectiveOption[];
+  pageContext: string;
+  onCancel: () => void;
+  onAdd: (drafts: QuestionContent[]) => void;
+}) {
+  const defaultObjective = objectives[0] ? formatObjectiveTag(objectives[0]) : '';
+  const [objectiveValue, setObjectiveValue] = useState(defaultObjective);
+  const [count, setCount] = useState(2);
+  const [usePageContext, setUsePageContext] = useState(Boolean(pageContext.trim()));
+  const [busy, setBusy] = useState(false);
+  const [generated, setGenerated] = useState<QuestionContent[]>([]);
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [previewId, setPreviewId] = useState<string | null>(null);
+
+  const runGenerate = () => {
+    setBusy(true);
+    window.setTimeout(() => {
+      const next = generateQuestionsWithAi({
+        objectives,
+        objectiveValue,
+        sourceText: usePageContext ? pageContext : '',
+        count,
+      });
+      setGenerated(next);
+      setSelectedIds(next.map((item) => item.title));
+      setPreviewId(next[0]?.title ?? null);
+      setBusy(false);
+    }, 800);
+  };
+
+  const selected = generated.filter((item) => selectedIds.includes(item.title));
+  const preview = generated.find((item) => item.title === previewId) ?? selected[0] ?? generated[0];
+
+  return (
+    <ModalShell title="Generate questions with AI" onClose={onCancel} wide>
+      <div className="page-customize-form">
+        <p className="page-customize-hint">
+          Draft questions from a learning objective on this page. Review the preview, then add the ones you want.
+        </p>
+        <div className="page-customize-form__split page-customize-form__split--ai">
+          <label className="field">
+            <span>Learning objective</span>
+            <select
+              className="select"
+              value={objectiveValue}
+              onChange={(event) => setObjectiveValue(event.target.value)}
+            >
+              {objectives.map((objective) => (
+                <option key={objective.code} value={formatObjectiveTag(objective)}>
+                  {formatObjectiveTag(objective)}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="field">
+            <span>How many</span>
+            <select className="select" value={count} onChange={(event) => setCount(Number(event.target.value))}>
+              <option value={1}>1 question</option>
+              <option value={2}>2 questions</option>
+              <option value={3}>3 questions</option>
+            </select>
+          </label>
+        </div>
+        <label className="check-row">
+          <input
+            type="checkbox"
+            checked={usePageContext}
+            onChange={(event) => setUsePageContext(event.target.checked)}
+            disabled={!pageContext.trim()}
+          />
+          <span>Use this page’s content as context</span>
+        </label>
+        <div>
+          <button
+            type="button"
+            className="button button--primary"
+            onClick={runGenerate}
+            disabled={busy || objectives.length === 0}
+          >
+            {busy ? 'Generating…' : generated.length > 0 ? 'Regenerate' : 'Generate questions'}
+          </button>
+        </div>
+        {generated.length > 0 ? (
+          <div className="ai-question-results">
+            <fieldset className="page-customize-choices">
+              <legend>Generated questions</legend>
+              {generated.map((item) => (
+                <label key={item.title} className="ai-question-results__row">
+                  <input
+                    type="checkbox"
+                    checked={selectedIds.includes(item.title)}
+                    onChange={() => {
+                      setSelectedIds((current) =>
+                        current.includes(item.title)
+                          ? current.filter((id) => id !== item.title)
+                          : [...current, item.title],
+                      );
+                      setPreviewId(item.title);
+                    }}
+                  />
+                  <button type="button" className="ai-question-results__title" onClick={() => setPreviewId(item.title)}>
+                    {item.title}
+                  </button>
+                </label>
+              ))}
+            </fieldset>
+            {preview ? (
+              <div className="page-customize-preview">
+                <p className="page-customize-hint">Preview</p>
+                <QuestionDraftPreview draft={preview} />
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+        <div className="modal-actions">
+          <button type="button" className="button button--subtle" onClick={onCancel}>
+            Cancel
+          </button>
+          <button
+            type="button"
+            className="button button--primary"
+            disabled={selected.length === 0}
+            onClick={() => onAdd(selected)}
+          >
+            Add {selected.length === 1 ? '1 question' : `${selected.length || ''} questions`.trim()} to page
+          </button>
+        </div>
+      </div>
     </ModalShell>
   );
 }
@@ -1656,6 +1969,9 @@ export function StudentQuestionView({
       </div>
       <h3>{question.title}</h3>
       <p>{question.prompt}</p>
+      {question.imageSrc ? (
+        <img className="question-media" src={question.imageSrc} alt={question.imageAlt || question.title} />
+      ) : null}
       {question.kind === 'mcq' ? (
         <div className="student-choice-list">
           {question.choices.map((choice) => (

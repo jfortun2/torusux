@@ -15,9 +15,16 @@ export type BankQuestionEditDraft = {
   prompt?: string;
   learningObjective?: string;
   points?: number;
+  kind?: 'mcq' | 'multi-input' | 'cata' | 'short-answer';
   choices?: string[];
+  correctChoiceIndex?: number;
+  inputs?: { id: string; label: string; answer: string }[];
   cataStatements?: string[];
   showGraph?: boolean;
+  imageSrc?: string;
+  imageAlt?: string;
+  correctFeedback?: string;
+  incorrectFeedback?: string;
 };
 
 const emptyDraft = (): AssessmentDraftV1 => ({
@@ -100,6 +107,33 @@ export function persistBankEditedQuestion(
         [questionId]: { ...existingPatch, ...patch },
       },
     },
+  });
+}
+
+/** Remove saved edits so a bank question returns to its original seeded version. */
+export function clearBankEditedQuestion(assessmentTitle: string, bankId: string, questionId: string) {
+  const cur = loadAssessmentDraft(assessmentTitle);
+  const existingByBank = cur.bankEditedQuestions ?? {};
+  const existingForBank = { ...(existingByBank[bankId] ?? {}) };
+  delete existingForBank[questionId];
+  saveDraft(assessmentTitle, {
+    ...cur,
+    bankEditedQuestions: {
+      ...existingByBank,
+      [bankId]: existingForBank,
+    },
+  });
+}
+
+export function clearBankEditedQuestionsForBanks(assessmentTitle: string, bankIds: string[]) {
+  const cur = loadAssessmentDraft(assessmentTitle);
+  const next = { ...(cur.bankEditedQuestions ?? {}) };
+  bankIds.forEach((bankId) => {
+    delete next[bankId];
+  });
+  saveDraft(assessmentTitle, {
+    ...cur,
+    bankEditedQuestions: next,
   });
 }
 

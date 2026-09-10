@@ -7,12 +7,13 @@ import {
   persistAssessmentSurface,
   persistBankRemovedQuestionIds,
   persistBankEditedQuestion,
+  clearBankEditedQuestion,
+  clearBankEditedQuestionsForBanks,
+  type BankQuestionEditDraft,
 } from './assessmentDraftStorage';
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
 import {
   AddContentGap,
-  CanonicalCourseNotice,
-  CompareWithOriginalDialog,
   CourseResourceView,
   CoverageImpactPanel,
   ExampleBlockView,
@@ -20,6 +21,7 @@ import {
   PageCustomizeBar,
   PageCustomizeDialogs,
   PageObjectivesAttach,
+  RestoreOriginalConfirm,
   QuestionBlockForm,
   StudentQuestionView,
   TextBlockView,
@@ -36,10 +38,13 @@ import {
 import { bankObjectivesById, evaluatePageBlockRemoval, type RemovalImpact } from './learningDesign';
 import {
   addedQuestionCoverage,
+  blockContentDiffers,
   blocksEqual,
   canMoveBlock,
   cloneBlocks,
   createDefaultPageBlocks,
+  extractObjectiveCode,
+  formatObjectiveTag,
   insertBlock,
   loadDraftPageLayout,
   loadPageMeta,
@@ -47,6 +52,7 @@ import {
   moveBlock,
   moveBlockRelative,
   moveBlockToIndex,
+  pageExampleBlock,
   pageIsCustomized,
   persistDraftPageLayout,
   persistPageMeta,
@@ -56,6 +62,7 @@ import {
   setBlockRemoved,
   summarizePageChanges,
   type PageBlock,
+  type QuestionContent,
 } from './pageCustomization';
 import formulaImage from './assets/formula.png';
 import graphImage from './assets/graph.png';
@@ -75,6 +82,13 @@ import studentIcon from './assets/student.png';
 import radiationMaterialsImage from './assets/radiation_materials.jpg';
 import electrolysisImage from './assets/electrolysis.jpg';
 import kittenImage from './assets/kitten.png';
+
+const PAGE_EXAMPLE_IMAGES = {
+  electrolysis: electrolysisImage,
+  radiation: radiationMaterialsImage,
+  formula: formulaImage,
+  graph: graphImage,
+};
 
 type Material = {
   id: string;
@@ -114,6 +128,13 @@ type BankQuestionRow = {
   cataStatements?: string[];
   showGraph?: boolean;
   removed?: boolean;
+  edited?: boolean;
+  inputs?: { id: string; label: string; answer: string }[];
+  imageSrc?: string;
+  imageAlt?: string;
+  correctFeedback?: string;
+  incorrectFeedback?: string;
+  correctChoiceIndex?: number;
 };
 
 type PageObjective = {
@@ -698,12 +719,6 @@ const getPageObjectives = (assessmentTitle?: string): PageObjective[] => {
       ];
 };
 
-const extractObjectiveCode = (objectiveText?: string) => {
-  if (!objectiveText) return null;
-  const match = objectiveText.match(/LO\s*\d+(?:\.\d+)?/i);
-  return match ? match[0].replace(/\s+/g, ' ').toUpperCase() : null;
-};
-
 function App() {
   return (
     <Routes>
@@ -1004,13 +1019,14 @@ function AssessmentScreen() {
       : catalogObjectives.map((objective) => objective.code);
   const buildDefaultBlocks = () =>
     isInstructorCreated
-      ? []
+      ? [pageExampleBlock(assessmentTitle, PAGE_EXAMPLE_IMAGES, 'instructor')]
       : createDefaultPageBlocks({
+          pageTitle: assessmentTitle,
           isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
           selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
           removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
           removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+          images: PAGE_EXAMPLE_IMAGES,
           objectives: getPageObjectives(assessmentTitle),
         });
   const [blocks, setBlocks] = useState<PageBlock[]>(() => loadDraftPageLayout(assessmentTitle) ?? loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
@@ -1022,7 +1038,7 @@ function AssessmentScreen() {
     { kind: 'block'; id: string; placement: 'before' | 'after' } | { kind: 'gap'; index: number } | null
   >(null);
   const [customizeDialog, setCustomizeDialog] = useState<CustomizeDialog | null>(null);
-  const [showCompareOriginal, setShowCompareOriginal] = useState(false);
+  const [restoreOriginalTarget, setRestoreOriginalTarget] = useState<'page' | string | null>(null);
   const [showJumpLinks, setShowJumpLinks] = useState(false);
   const [blockToasts, setBlockToasts] = useState<Record<string, string>>({});
   const [pendingRemoveBlockId, setPendingRemoveBlockId] = useState<string | null>(null);
@@ -1048,11 +1064,12 @@ function AssessmentScreen() {
       isInstructorCreated
         ? []
         : createDefaultPageBlocks({
+            pageTitle: assessmentTitle,
             isNuclear: isNuclearAssessment,
             selectionIds: assessmentSelections.map((selection) => selection.id),
             removedBanks: [],
             removedEmbedded: {},
-            images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+            images: PAGE_EXAMPLE_IMAGES,
             objectives: pageObjectives,
           }),
     [isInstructorCreated, isNuclearAssessment, assessmentSelections, pageObjectives],
@@ -1190,13 +1207,14 @@ function AssessmentScreen() {
 
   useLayoutEffect(() => {
     const defaults = isInstructorCreated
-      ? []
+      ? [pageExampleBlock(assessmentTitle, PAGE_EXAMPLE_IMAGES, 'instructor')]
       : createDefaultPageBlocks({
+          pageTitle: assessmentTitle,
           isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
           selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
           removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
           removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
+          images: PAGE_EXAMPLE_IMAGES,
           objectives: getPageObjectives(assessmentTitle),
         });
     const saved = loadSavedPageLayout(assessmentTitle) ?? defaults;
@@ -1205,7 +1223,6 @@ function AssessmentScreen() {
     setBlocks(draft);
     setSelectedBlockId(null);
     setCustomizeDialog(null);
-    setShowCompareOriginal(false);
     const nextMeta = loadPageMeta(assessmentTitle);
     setAttachedCodes(
       nextMeta
@@ -1324,7 +1341,6 @@ function AssessmentScreen() {
     persistDraftPageLayout(assessmentTitle, savedBlocks);
     setSelectedBlockId(null);
     setCustomizeDialog(null);
-    setShowCompareOriginal(false);
     setAnnouncement(dirty ? 'Changes discarded.' : '');
   };
 
@@ -1337,6 +1353,10 @@ function AssessmentScreen() {
       removedBanks: [],
       removedEmbedded: {},
     });
+    clearBankEditedQuestionsForBanks(
+      assessmentTitle,
+      assessmentSelections.map((selection) => selection.id),
+    );
     persistSavedPageLayout(assessmentTitle, original);
     setSavedBlocks(original);
     setBlocks(original);
@@ -1423,6 +1443,8 @@ function AssessmentScreen() {
         incorrectFeedback={block.question.incorrectFeedback}
         inputs={block.question.kind === 'multi-input' ? block.question.inputs : undefined}
         showGraph={block.question.showGraph}
+        imageSrc={block.question.imageSrc}
+        imageAlt={block.question.imageAlt}
         embedded
         removed={block.status === 'removed'}
         studentPreview={isStudentPreview}
@@ -1492,10 +1514,14 @@ function AssessmentScreen() {
             </div>
           ) : null}
           {!isStudentPreview ? (
-            <PageCustomizeBar summary={changeSummary} dirty={dirty} onCancel={handleCancelPage} onSave={handleSavePage} />
-          ) : null}
-          {!isStudentPreview && isPageCustomized ? (
-            <CanonicalCourseNotice onCompare={() => setShowCompareOriginal(true)} />
+            <PageCustomizeBar
+              summary={changeSummary}
+              dirty={dirty}
+              isCustomized={isPageCustomized}
+              onCancel={handleCancelPage}
+              onSave={handleSavePage}
+              onRestoreOriginal={() => setRestoreOriginalTarget('page')}
+            />
           ) : null}
           {blockToasts['page-save'] ? <SuccessToast message={blockToasts['page-save']} /> : null}
           <div className="assessment-main">
@@ -1590,6 +1616,13 @@ function AssessmentScreen() {
                         applyBlockDropOnGap(insertAt);
                       },
                     });
+                    const originalBlock = canonicalBlocks.find((item) => item.id === block.id);
+                    const canRestoreOriginal = Boolean(
+                      originalBlock &&
+                        block.origin === 'canonical' &&
+                        block.status !== 'removed' &&
+                        blockContentDiffers(block, originalBlock),
+                    );
                     const frame = (
                       <div key={block.id} className="page-block-stack">
                         {blockToasts[block.id] ? <SuccessToast message={blockToasts[block.id]} inline /> : null}
@@ -1600,6 +1633,7 @@ function AssessmentScreen() {
                           canMoveUp={canMoveBlock(blocks, block.id, 'up')}
                           canMoveDown={canMoveBlock(blocks, block.id, 'down')}
                           canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
+                          canRestoreOriginal={canRestoreOriginal}
                           dragging={draggingBlockId === block.id}
                           dropPlacement={
                             dropHint?.kind === 'block' && dropHint.id === block.id ? dropHint.placement : null
@@ -1624,6 +1658,7 @@ function AssessmentScreen() {
                           }}
                           onRemove={() => requestToggleBlock(block.id)}
                           onRestore={() => requestToggleBlock(block.id)}
+                          onRestoreOriginal={() => setRestoreOriginalTarget(block.id)}
                           onDragStart={() => {
                             setSelectedBlockId(block.id);
                             setDraggingBlockId(block.id);
@@ -1679,7 +1714,14 @@ function AssessmentScreen() {
       {!isStudentPreview ? (
         <PageCustomizeDialogs
           dialog={customizeDialog}
-          objectives={COURSE_LEARNING_OBJECTIVES}
+          objectives={pageObjectives.length > 0 ? pageObjectives : COURSE_LEARNING_OBJECTIVES}
+          pageContext={blocks
+            .filter(
+              (block): block is Extract<PageBlock, { kind: 'text' }> =>
+                block.kind === 'text' && block.status !== 'removed',
+            )
+            .map((block) => `${block.text.heading} ${block.text.bodyHtml}`)
+            .join(' ')}
           onClose={() => setCustomizeDialog(null)}
           onChoose={setCustomizeDialog}
           onAddBlocks={(insertAt, nextBlocks) => {
@@ -1700,12 +1742,27 @@ function AssessmentScreen() {
           }}
         />
       ) : null}
-      {!isStudentPreview && showCompareOriginal ? (
-        <CompareWithOriginalDialog
-          originalBlocks={canonicalBlocks}
-          currentBlocks={blocks}
-          onClose={() => setShowCompareOriginal(false)}
-          onRestore={handleRestoreOriginalPage}
+      {!isStudentPreview && restoreOriginalTarget ? (
+        <RestoreOriginalConfirm
+          onClose={() => setRestoreOriginalTarget(null)}
+          title={restoreOriginalTarget === 'page' ? 'Restore original version?' : 'Restore original content?'}
+          body={
+            restoreOriginalTarget === 'page'
+              ? 'This replaces your customized page with the original course version. Content you added for this course will be removed, and removed original items will be restored.'
+              : 'This restores this item to the original course version. Your edits to it will be discarded.'
+          }
+          onRestore={() => {
+            if (restoreOriginalTarget === 'page') {
+              handleRestoreOriginalPage();
+              return;
+            }
+            const original = canonicalBlocks.find((item) => item.id === restoreOriginalTarget);
+            if (!original) return;
+            setBlocks((current) =>
+              current.map((item) => (item.id === restoreOriginalTarget ? cloneBlocks([original])[0] : item)),
+            );
+            setAnnouncement(`Restored the original version of “${original.title}”.`);
+          }}
         />
       ) : null}
       {!isStudentPreview && pendingCoverageImpact ? (
@@ -1744,6 +1801,57 @@ function AssessmentScreen() {
   );
 }
 
+function bankRowToQuestionDraft(row: BankQuestionRow, objectives: PageObjective[]): QuestionContent {
+  const kind: QuestionContent['kind'] = row.kind === 'multi-input' ? 'multi-input' : 'mcq';
+  const matched = objectives.find((objective) => extractObjectiveCode(row.learningObjective) === objective.code.toUpperCase());
+  const learningObjective = matched ? formatObjectiveTag(matched) : row.learningObjective;
+  const correctIndex = row.correctChoiceIndex ?? 0;
+  const sourceChoices =
+    row.choices && row.choices.length > 0 ? row.choices : ['Option A', 'Option B', 'Option C', 'Option D'];
+  return {
+    kind,
+    title: row.title,
+    prompt: row.prompt,
+    points: row.points,
+    learningObjective,
+    choices: sourceChoices.map((text, index) => ({
+      id: `c-${index}`,
+      text,
+      correct: index === correctIndex,
+    })),
+    inputs:
+      row.inputs && row.inputs.length > 0
+        ? row.inputs
+        : [
+            { id: 'i1', label: 'Part 1', answer: '' },
+            { id: 'i2', label: 'Part 2', answer: '' },
+          ],
+    correctFeedback: row.correctFeedback ?? '',
+    incorrectFeedback: row.incorrectFeedback ?? '',
+    showGraph: row.showGraph,
+    imageSrc: row.imageSrc,
+    imageAlt: row.imageAlt,
+  };
+}
+
+function questionDraftToBankPatch(draft: QuestionContent): BankQuestionEditDraft {
+  return {
+    title: draft.title.trim(),
+    prompt: draft.prompt.trim(),
+    learningObjective: draft.learningObjective,
+    points: draft.points,
+    kind: draft.kind,
+    choices: draft.kind === 'mcq' ? draft.choices.map((choice) => choice.text.trim()).filter(Boolean) : undefined,
+    correctChoiceIndex: draft.kind === 'mcq' ? Math.max(0, draft.choices.findIndex((choice) => choice.correct)) : undefined,
+    inputs: draft.kind === 'multi-input' ? draft.inputs : undefined,
+    showGraph: draft.showGraph,
+    imageSrc: draft.imageSrc,
+    imageAlt: draft.imageAlt,
+    correctFeedback: draft.correctFeedback,
+    incorrectFeedback: draft.incorrectFeedback,
+  };
+}
+
 function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const navigate = useNavigate();
   const location = useLocation();
@@ -1763,60 +1871,70 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   }, [location.pathname, location.key, state?.bankId, bulkEdit]);
 
   const generatedQuestionCount = selectedBank.availableQuestions;
+  const pageMeta = loadPageMeta(assessmentTitle);
+  const pageEditorObjectives =
+    pageMeta?.attachedObjectiveCodes?.length
+      ? COURSE_LEARNING_OBJECTIVES.filter((objective) => pageMeta.attachedObjectiveCodes.includes(objective.code))
+      : getPageObjectives(assessmentTitle);
   const variantSuffix = [
     'with a conceptual check',
     'with a quantitative emphasis',
     'with an error-analysis angle',
     'with a real-world application',
   ];
-  const baseQuestions: BankQuestionRow[] = useMemo(() => {
-    const draft = loadAssessmentDraft(assessmentTitle);
-    const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBank.id] ?? []);
-    const editedById = draft.bankEditedQuestions?.[selectedBank.id] ?? {};
+  const seededQuestions: BankQuestionRow[] = useMemo(() => {
     if (usesTaggedVariantNaming(assessmentTitle)) {
       return Array.from({ length: generatedQuestionCount }).map((_, index) => {
         const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
-        const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index) : undefined;
-        const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index) : undefined;
-        const id = `${selectedBank.id}-q-${index + 1}`;
-        const edit = editedById[id] ?? {};
         return {
-          id,
+          id: `${selectedBank.id}-q-${index + 1}`,
           title: `${seeded.title}_v${index + 1}`,
           prompt: seeded.prompt,
           kind: seeded.kind,
           points: seeded.points,
           learningObjective: seeded.learningObjective,
-          choices: rotatedChoices,
-          cataStatements: rotatedStatements,
+          choices: seeded.choices ? rotateArray(seeded.choices, index) : undefined,
+          cataStatements: seeded.cataStatements ? rotateArray(seeded.cataStatements, index) : undefined,
           showGraph: seeded.showGraph,
-          ...(edit ?? {}),
-          removed: removedIdSet.has(id),
         };
       });
     }
     return Array.from({ length: generatedQuestionCount }).map((_, index) => {
       const seeded = selectedBank.exampleQuestions[index % selectedBank.exampleQuestions.length];
-      const promptVariant = index < selectedBank.exampleQuestions.length ? seeded.prompt : `${seeded.prompt} (${variantSuffix[index % variantSuffix.length]})`;
-      const rotatedChoices = seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined;
-      const rotatedStatements = seeded.cataStatements ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length) : undefined;
-      const id = `${selectedBank.id}-q-${index + 1}`;
-      const edit = editedById[id] ?? {};
+      const promptVariant =
+        index < selectedBank.exampleQuestions.length
+          ? seeded.prompt
+          : `${seeded.prompt} (${variantSuffix[index % variantSuffix.length]})`;
       return {
-        id,
+        id: `${selectedBank.id}-q-${index + 1}`,
         title: index < selectedBank.exampleQuestions.length ? seeded.title : `${seeded.title} Variant ${index + 1}`,
         prompt: promptVariant,
         kind: seeded.kind,
         points: seeded.points,
         learningObjective: seeded.learningObjective,
-        choices: rotatedChoices,
-        cataStatements: rotatedStatements,
+        choices: seeded.choices ? rotateArray(seeded.choices, index % seeded.choices.length) : undefined,
+        cataStatements: seeded.cataStatements
+          ? rotateArray(seeded.cataStatements, index % seeded.cataStatements.length)
+          : undefined,
         showGraph: seeded.showGraph,
-        ...(edit ?? {}),
-        removed: removedIdSet.has(id),
       };
     });
   }, [assessmentTitle, generatedQuestionCount, selectedBank]);
+  const [bankEditRevision, setBankEditRevision] = useState(0);
+  const baseQuestions: BankQuestionRow[] = useMemo(() => {
+    const draft = loadAssessmentDraft(assessmentTitle);
+    const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBank.id] ?? []);
+    const editedById = draft.bankEditedQuestions?.[selectedBank.id] ?? {};
+    return seededQuestions.map((question) => {
+      const edit = editedById[question.id] ?? {};
+      return {
+        ...question,
+        ...edit,
+        edited: Object.keys(edit).length > 0,
+        removed: removedIdSet.has(question.id),
+      };
+    });
+  }, [assessmentTitle, selectedBank.id, seededQuestions, bankEditRevision]);
   const [questionRows, setQuestionRows] = useState<BankQuestionRow[]>(baseQuestions);
   const [filterMode, setFilterMode] = useState<'all' | 'included' | 'removed'>('all');
   const [searchText, setSearchText] = useState('');
@@ -1826,6 +1944,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const [limitModalContext, setLimitModalContext] = useState<{ remaining: number } | null>(null);
   const [pendingRemoval, setPendingRemoval] = useState<{ type: 'question'; ids: string[] } | null>(null);
   const [editQuestionId, setEditQuestionId] = useState<string | null>(null);
+  const [restoreQuestionId, setRestoreQuestionId] = useState<string | null>(null);
   const editQuestion = editQuestionId ? questionRows.find((q) => q.id === editQuestionId) ?? null : null;
   const availableQuestionCount = questionRows.filter((question) => !question.removed).length;
   const normalizedSearch = searchText.trim().toLowerCase();
@@ -2135,7 +2254,10 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
             <div className="question-detail__header">
               <div className="question-detail__copy">
                 <div className="eyebrow">{questionTypeLabel(currentQuestion?.kind ?? 'mcq')} · {currentQuestion?.points ?? 1} point{(currentQuestion?.points ?? 1) > 1 ? 's' : ''}</div>
-                <h2>{currentQuestion?.title ?? 'Question'}</h2>
+                <h2>
+                  {currentQuestion?.title ?? 'Question'}
+                  {currentQuestion?.edited ? <span className="status-pill status-pill--edited">Edited</span> : null}
+                </h2>
                 <p>{currentQuestion?.prompt ?? 'Question prompt'}</p>
               </div>
               <div className="question-detail__actions">
@@ -2146,6 +2268,15 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
                     onClick={() => setEditQuestionId(currentQuestion.id)}
                   >
                     Edit
+                  </button>
+                ) : null}
+                {!bulkEdit && currentQuestion?.edited ? (
+                  <button
+                    type="button"
+                    className="button button--secondary button--small"
+                    onClick={() => setRestoreQuestionId(currentQuestion.id)}
+                  >
+                    Restore original
                   </button>
                 ) : null}
                 {bulkEdit ? (
@@ -2201,35 +2332,42 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
       {editQuestion ? (
         <QuestionBlockForm
           key={editQuestion.id}
-          objectives={getPageObjectives(assessmentTitle)}
+          objectives={pageEditorObjectives.length > 0 ? pageEditorObjectives : COURSE_LEARNING_OBJECTIVES}
           modalTitle="Edit question"
           submitLabel="Save changes"
-          initialDraft={{
-            kind: editQuestion.kind === 'mcq' || editQuestion.kind === 'multi-input' ? editQuestion.kind : 'mcq',
-            title: editQuestion.title,
-            prompt: editQuestion.prompt,
-            points: editQuestion.points,
-            learningObjective: editQuestion.learningObjective,
-            choices: (editQuestion.choices ?? []).map((text, i) => ({ id: `c-${i}`, text, correct: i === 0 })),
-            inputs: [],
-            correctFeedback: '',
-            incorrectFeedback: '',
-            showGraph: editQuestion.showGraph,
-          }}
+          initialDraft={bankRowToQuestionDraft(editQuestion, pageEditorObjectives)}
           onCancel={() => setEditQuestionId(null)}
           onAdd={(draft) => {
-            const patch = {
-              title: draft.title.trim(),
-              prompt: draft.prompt.trim(),
-              learningObjective: draft.learningObjective,
-              points: draft.points,
-              showGraph: draft.showGraph,
-              choices: draft.kind === 'mcq' ? draft.choices.map((c) => c.text.trim()).filter(Boolean) : editQuestion.choices,
-            };
+            const patch = questionDraftToBankPatch(draft);
             persistBankEditedQuestion(assessmentTitle, selectedBank.id, editQuestion.id, patch);
-            setQuestionRows((current) => current.map((q) => (q.id === editQuestion.id ? { ...q, ...patch } : q)));
+            setQuestionRows((current) =>
+              current.map((question) =>
+                question.id === editQuestion.id ? { ...question, ...patch, edited: true } : question,
+              ),
+            );
+            setBankEditRevision((value) => value + 1);
             setEditQuestionId(null);
             setToastMessage('Question updated.');
+          }}
+        />
+      ) : null}
+      {restoreQuestionId ? (
+        <RestoreOriginalConfirm
+          title="Restore original question?"
+          body="This discards your edits and restores the original activity bank question."
+          onClose={() => setRestoreQuestionId(null)}
+          onRestore={() => {
+            const original = seededQuestions.find((question) => question.id === restoreQuestionId);
+            clearBankEditedQuestion(assessmentTitle, selectedBank.id, restoreQuestionId);
+            setQuestionRows((current) =>
+              current.map((question) =>
+                question.id === restoreQuestionId
+                  ? { ...(original ?? question), removed: question.removed, edited: false }
+                  : question,
+              ),
+            );
+            setBankEditRevision((value) => value + 1);
+            setToastMessage('Original question restored.');
           }}
         />
       ) : null}
@@ -2251,7 +2389,11 @@ function BankQuestionPreview({ question }: { question: BankQuestionRow }) {
 
   return (
     <div className="bank-question-preview">
-      {question.showGraph ? <img className="question-media" src={graphImage} alt="Question graph" /> : null}
+      {question.imageSrc ? (
+        <img className="question-media" src={question.imageSrc} alt={question.imageAlt || question.title} />
+      ) : question.showGraph ? (
+        <img className="question-media" src={graphImage} alt="Question graph" />
+      ) : null}
       {question.kind === 'mcq' ? (
         <div className="question-answer-list">
           {(question.choices ?? ['Option A', 'Option B', 'Option C', 'Option D']).map((choice) => (
@@ -2747,6 +2889,8 @@ function QuestionTypeCard({
   choices,
   cataStatements,
   showGraph = false,
+  imageSrc,
+  imageAlt,
   embedded = false,
   removed = false,
   onToggleRemove,
@@ -2764,6 +2908,8 @@ function QuestionTypeCard({
   choices?: string[];
   cataStatements?: string[];
   showGraph?: boolean;
+  imageSrc?: string;
+  imageAlt?: string;
   embedded?: boolean;
   removed?: boolean;
   onToggleRemove?: () => void;
@@ -2951,6 +3097,7 @@ function QuestionTypeCard({
         ) : null}
       </div>
       <h3>{title}</h3>
+      {imageSrc ? <img className="question-media" src={imageSrc} alt={imageAlt || title} /> : null}
       {kind === 'mcq' ? (
         <>
           <p>{prompt}</p>

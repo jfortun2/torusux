@@ -40,7 +40,11 @@ import {
   friendlyObjectiveName,
   type RemovalImpact,
 } from './learningDesign';
-import { persistPageMeta, persistSavedPageLayout } from './pageCustomization';
+import { persistPageMeta, persistSavedPageLayout, pageExampleBlock } from './pageCustomization';
+import electrolysisImage from './assets/electrolysis.jpg';
+import radiationMaterialsImage from './assets/radiation_materials.jpg';
+import formulaImage from './assets/formula.png';
+import graphImage from './assets/graph.png';
 
 const ROOT_DESTINATION = '__root__';
 
@@ -104,6 +108,12 @@ function seedImportedPage(title: string, scoring: PageScoring, projectName: stri
         learningObjective: '',
       },
     },
+    pageExampleBlock(title, {
+      electrolysis: electrolysisImage,
+      radiation: radiationMaterialsImage,
+      formula: formulaImage,
+      graph: graphImage,
+    }, 'instructor'),
   ]);
   persistPageMeta(title, {
     scoring,
@@ -229,7 +239,14 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
         return next;
       });
       if (dialog.childType === 'page') {
-        persistSavedPageLayout(name, []);
+        persistSavedPageLayout(name, [
+          pageExampleBlock(name, {
+            electrolysis: electrolysisImage,
+            radiation: radiationMaterialsImage,
+            formula: formulaImage,
+            graph: graphImage,
+          }, 'instructor'),
+        ]);
         persistPageMeta(name, {
           scoring: draftScoring,
           attachedObjectiveCodes: [],

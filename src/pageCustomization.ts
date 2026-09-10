@@ -41,6 +41,9 @@ export type QuestionContent = {
   incorrectFeedback: string;
   canonicalKey?: 'nuclearSafety' | 'exitQuestion';
   showGraph?: boolean;
+  imageSrc?: string;
+  imageAlt?: string;
+  generatedByAi?: boolean;
 };
 
 export type BankContent = {
@@ -244,6 +247,293 @@ export function exampleTextDraft(objectives: PageObjectiveOption[]): TextContent
   };
 }
 
+export function formatObjectiveTag(objective: PageObjectiveOption): string {
+  if (!objective.code || objective.label.toLowerCase().startsWith(objective.code.toLowerCase())) {
+    return objective.label;
+  }
+  const detail = objective.label.replace(/^(LO\s*\d+(?:\.\d+)?|L\d+)\s+/i, '').trim();
+  return `${objective.code} ${detail}`.trim();
+}
+
+export function extractObjectiveCode(text?: string): string | null {
+  if (!text) return null;
+  const match = text.match(/LO\s*\d+(?:\.\d+)?/i);
+  return match ? match[0].replace(/\s+/g, ' ').toUpperCase() : null;
+}
+
+export function resolveEditorObjectiveValue(currentValue: string, pageObjectives: PageObjectiveOption[]): string {
+  const code = extractObjectiveCode(currentValue);
+  if (code) {
+    const match = pageObjectives.find((objective) => objective.code.toUpperCase() === code);
+    if (match) return formatObjectiveTag(match);
+  }
+  const match = pageObjectives.find(
+    (objective) => objective.label === currentValue || formatObjectiveTag(objective) === currentValue,
+  );
+  return match ? formatObjectiveTag(match) : currentValue;
+}
+
+export function editorObjectiveOptions(
+  pageObjectives: PageObjectiveOption[],
+  currentValue?: string,
+): PageObjectiveOption[] {
+  const options = [...pageObjectives];
+  if (!currentValue?.trim()) return options;
+  const resolved = resolveEditorObjectiveValue(currentValue, pageObjectives);
+  const alreadyListed = options.some(
+    (objective) => formatObjectiveTag(objective) === resolved || objective.label === currentValue,
+  );
+  if (alreadyListed) return options;
+  const code = extractObjectiveCode(currentValue);
+  options.push({
+    code: code ?? currentValue,
+    label: currentValue,
+  });
+  return options;
+}
+
+function choiceDraft(id: string, text: string, correct: boolean): QuestionChoice {
+  return { id, text, correct };
+}
+
+export function generateQuestionsWithAi({
+  objectives,
+  objectiveValue,
+  sourceText = '',
+  count = 1,
+}: {
+  objectives: PageObjectiveOption[];
+  objectiveValue: string;
+  sourceText?: string;
+  count?: number;
+}): QuestionContent[] {
+  const objective =
+    objectives.find((item) => formatObjectiveTag(item) === objectiveValue || item.label === objectiveValue) ??
+    objectives[0];
+  const tag = objective ? formatObjectiveTag(objective) : objectiveValue;
+  const code = (objective?.code ?? extractObjectiveCode(objectiveValue) ?? 'LO 1.1').toUpperCase();
+  const snippet = sourceText.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 90);
+  const context = snippet ? ` Use this course context: “${snippet}${sourceText.length > 90 ? '…' : ''}”.` : '';
+  const templates: QuestionContent[] = [];
+
+  if (code.includes('1.4') || code.includes('1.5')) {
+    templates.push(
+      {
+        kind: 'mcq',
+        title: 'Shielding choice for mixed sources',
+        prompt: `A teaching lab stores sealed alpha, beta, and gamma sources.${context} Which control set best reduces exposure while keeping the demonstration visible?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'Paper wrapping for every source and open trays for easier viewing.', false),
+          choiceDraft('ai-c2', 'Lead only around the alpha source; leave beta and gamma unshielded.', false),
+          choiceDraft('ai-c3', 'Keep sources sealed, acrylic for beta, and lead plus distance for gamma.', true),
+          choiceDraft('ai-c4', 'Store all emitters together to shorten handling time.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. Match shielding to radiation type and keep sources sealed.',
+        incorrectFeedback: 'Incorrect. Alpha is stopped easily; beta and gamma need different controls and distance.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'mcq',
+        title: 'Why equal dose is not equal harm',
+        prompt: `Two people absorb the same dose from the same radionuclide.${context} Which factor most directly explains different biological outcomes?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'All tissues respond identically to ionizing radiation.', false),
+          choiceDraft('ai-c2', 'Pathway, dose rate, and tissue radiosensitivity change biological effect.', true),
+          choiceDraft('ai-c3', 'Only external exposure can cause tissue damage.', false),
+          choiceDraft('ai-c4', 'Shielding type no longer matters once exposure has occurred.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. Outcome depends on pathway, dose rate, and the tissue involved.',
+        incorrectFeedback: 'Incorrect. Equal absorbed dose can still produce different effects across tissues and pathways.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'multi-input',
+        title: 'Name the dominant control',
+        prompt: `For each radiation type, enter the practical control students should use in a teaching lab.${context}`,
+        points: 3,
+        learningObjective: tag,
+        choices: [],
+        inputs: [
+          { id: 'ai-i1', label: 'Alpha emitters', answer: 'sealed source / gloves' },
+          { id: 'ai-i2', label: 'Beta emitters', answer: 'acrylic shielding' },
+          { id: 'ai-i3', label: 'Gamma emitters', answer: 'lead shielding and distance' },
+        ],
+        correctFeedback: 'Correct. Match the barrier to the radiation type.',
+        incorrectFeedback: 'Incorrect. Alpha needs containment, beta needs plastic, gamma needs dense shielding and distance.',
+        generatedByAi: true,
+      },
+    );
+  } else if (code.includes('1.2')) {
+    templates.push(
+      {
+        kind: 'mcq',
+        title: 'What the cell potential is telling you',
+        prompt: `A galvanic cell is assembled under standard conditions.${context} Which statement best describes a positive E°cell?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'The reaction as written is nonspontaneous.', false),
+          choiceDraft('ai-c2', 'Electrons flow from cathode to anode in the external circuit.', false),
+          choiceDraft('ai-c3', 'The reaction as written is spontaneous under standard conditions.', true),
+          choiceDraft('ai-c4', 'The salt bridge is unnecessary because charge is already balanced.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. A positive standard cell potential means the written reaction is spontaneous.',
+        incorrectFeedback: 'Incorrect. E°cell > 0 means the reaction as written is spontaneous, with electrons leaving the anode.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'multi-input',
+        title: 'Electrode products in an electrolytic cell',
+        prompt: `Aqueous NaCl is electrolyzed with inert electrodes.${context} Identify the dominant product at each electrode.`,
+        points: 3,
+        learningObjective: tag,
+        choices: [],
+        inputs: [
+          { id: 'ai-i1', label: 'Anode product', answer: 'Cl2 / chlorine' },
+          { id: 'ai-i2', label: 'Cathode product', answer: 'H2 / hydrogen' },
+        ],
+        correctFeedback: 'Correct. Chloride is oxidized at the anode; water is reduced at the cathode in this cell.',
+        incorrectFeedback: 'Incorrect. In aqueous NaCl, chlorine typically forms at the anode and hydrogen at the cathode.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'mcq',
+        title: 'Reading an equivalence point',
+        prompt: `A titration curve is collected for a strong acid–strong base titration.${context} At the equivalence point, which statement is true?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'Moles of analyte equal moles of titrant.', true),
+          choiceDraft('ai-c2', 'The pH must be less than 7.', false),
+          choiceDraft('ai-c3', 'No current can flow in a related electrochemical cell.', false),
+          choiceDraft('ai-c4', 'The indicator has not yet changed color.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. Equivalence is defined by equal moles of analyte and titrant.',
+        incorrectFeedback: 'Incorrect. Equivalence is the stoichiometric point, not a specific color or pH value alone.',
+        generatedByAi: true,
+      },
+    );
+  } else if (code.includes('1.3')) {
+    templates.push(
+      {
+        kind: 'mcq',
+        title: 'Choosing a corrosion-control strategy',
+        prompt: `An iron structure sits in contact with copper fittings in a wet environment.${context} Which action best slows corrosion of the iron?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'Connect a more easily oxidized metal so it corrodes instead of the iron.', true),
+          choiceDraft('ai-c2', 'Paint only the copper so the iron remains the cathode.', false),
+          choiceDraft('ai-c3', 'Add salt to the water to increase conductivity and even out the cell.', false),
+          choiceDraft('ai-c4', 'Electrically connect iron and copper with a thicker wire.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. A sacrificial anode (more easily oxidized metal) protects the iron.',
+        incorrectFeedback: 'Incorrect. Increasing the cell or leaving iron as the anode speeds corrosion.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'mcq',
+        title: 'Battery type in context',
+        prompt: `A device must deliver current for as long as fuel is supplied, not from a stored chemical inventory.${context} Which system matches that requirement?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'A primary alkaline cell.', false),
+          choiceDraft('ai-c2', 'A rechargeable lead-acid battery.', false),
+          choiceDraft('ai-c3', 'A fuel cell.', true),
+          choiceDraft('ai-c4', 'A concentration cell with identical electrodes.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. Fuel cells convert supplied fuel continuously while reactants are available.',
+        incorrectFeedback: 'Incorrect. Batteries store a finite inventory of reactants; a fuel cell is fed continuously.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'multi-input',
+        title: 'Name the application',
+        prompt: `Identify the electrochemical application described in each case.${context}`,
+        points: 3,
+        learningObjective: tag,
+        choices: [],
+        inputs: [
+          { id: 'ai-i1', label: 'Portable, non-rechargeable consumer cell', answer: 'primary battery / alkaline' },
+          { id: 'ai-i2', label: 'Rechargeable vehicle starting battery', answer: 'lead-acid / secondary battery' },
+        ],
+        correctFeedback: 'Correct. Primary cells are not meant to be recharged; lead-acid is a secondary battery.',
+        incorrectFeedback: 'Incorrect. Match rechargeability and typical use to the battery class.',
+        generatedByAi: true,
+      },
+    );
+  } else {
+    templates.push(
+      {
+        kind: 'mcq',
+        title: 'Identify the species oxidized',
+        prompt: `In Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s),${context} which species is oxidized?`.replace(/\s+/g, ' '),
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'Zn(s)', true),
+          choiceDraft('ai-c2', 'Cu²⁺(aq)', false),
+          choiceDraft('ai-c3', 'Zn²⁺(aq)', false),
+          choiceDraft('ai-c4', 'Cu(s)', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. Zinc loses electrons and is oxidized to Zn²⁺.',
+        incorrectFeedback: 'Incorrect. Oxidation is the loss of electrons. Zinc metal is oxidized in this reaction.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'multi-input',
+        title: 'Oxidation numbers for manganese',
+        prompt: `Enter the oxidation number of manganese in each species.${context}`,
+        points: 3,
+        learningObjective: tag,
+        choices: [],
+        inputs: [
+          { id: 'ai-i1', label: 'Mn in MnO₄⁻', answer: '+7' },
+          { id: 'ai-i2', label: 'Mn in Mn²⁺', answer: '+2' },
+        ],
+        correctFeedback: 'Correct. Oxygen is −2, so Mn is +7 in permanganate and +2 after reduction.',
+        incorrectFeedback: 'Incorrect. Assign oxygen as −2 and solve for manganese in each formula.',
+        generatedByAi: true,
+      },
+      {
+        kind: 'mcq',
+        title: 'Balance in acidic solution',
+        prompt: `When MnO₄⁻ is reduced to Mn²⁺ in acid,${context} which statement is true of the balanced half-reaction?`,
+        points: 3,
+        learningObjective: tag,
+        choices: [
+          choiceDraft('ai-c1', 'Water appears on the product side and H⁺ on the reactant side.', true),
+          choiceDraft('ai-c2', 'OH⁻ must be added to both sides.', false),
+          choiceDraft('ai-c3', 'No electrons are transferred.', false),
+          choiceDraft('ai-c4', 'Manganese is oxidized from +7 to +2.', false),
+        ],
+        inputs: [],
+        correctFeedback: 'Correct. Acidic medium uses H⁺ and H₂O; MnO₄⁻ is reduced, not oxidized.',
+        incorrectFeedback: 'Incorrect. In acid, H⁺ and water balance oxygen and hydrogen; Mn is reduced.',
+        generatedByAi: true,
+      },
+    );
+  }
+
+  const n = Math.max(1, Math.min(count, templates.length));
+  return templates.slice(0, n).map((question, index) => ({
+    ...question,
+    title: n === 1 ? question.title : `${question.title} (${index + 1})`,
+  }));
+}
+
 export function exampleMcqDraft(_objectives: PageObjectiveOption[]): QuestionContent {
   return {
     kind: 'mcq',
@@ -280,19 +570,233 @@ export function exampleMultiInputDraft(_objectives: PageObjectiveOption[]): Ques
   };
 }
 
-export function cannedExampleBlock(): PageBlock {
+export type PageExampleImages = {
+  electrolysis?: string;
+  radiation?: string;
+  formula?: string;
+  graph?: string;
+};
+
+type ExampleVariant = {
+  heading: string;
+  bodyHtml: string;
+  imageKey?: keyof PageExampleImages;
+  imageAlt?: string;
+  stableId?: string;
+};
+
+function hashString(value: string): number {
+  let hash = 2166136261;
+  for (let i = 0; i < value.length; i += 1) {
+    hash ^= value.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function slugForExample(title: string): string {
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return slug.slice(0, 40) || 'page';
+}
+
+const PAGE_EXAMPLE_TOPICS: { test: (title: string) => boolean; variants: ExampleVariant[] }[] = [
+  {
+    test: (title) => /nuclear|radiation|shield/.test(title),
+    variants: [
+      {
+        stableId: 'example-radiation',
+        heading: 'Radiation materials in the teaching lab',
+        bodyHtml:
+          '<p>Sealed sources, shielding, and handling controls used when students observe alpha, beta, and gamma emitters. Match the barrier to the radiation type: paper or dead-air distance for alpha, acrylic for beta, and lead plus distance for gamma.</p>',
+        imageKey: 'radiation',
+        imageAlt: 'Nuclear chemistry lab and radiation safety materials',
+      },
+      {
+        heading: 'Worked example: inverse-square dose',
+        bodyHtml:
+          '<p>If dose rate is 40 μSv/h at 0.5 m from a point source, doubling the distance to 1.0 m drops the rate by a factor of four to 10 μSv/h. Distance is often the first control when shielding is already in place.</p>',
+      },
+    ],
+  },
+  {
+    test: (title) => /corrosion/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: galvanic corrosion of a water pipe',
+        bodyHtml:
+          '<p>A steel pipe joined to a copper fitting in aerated water forms a galvanic couple. Iron oxidizes (anode) while dissolved oxygen is reduced on copper (cathode). A dielectric union or a more active sacrificial metal interrupts that cell.</p>',
+        imageKey: 'graph',
+        imageAlt: 'Potential trend illustrating a galvanic couple',
+      },
+      {
+        heading: 'Worked example: sacrificial anode selection',
+        bodyHtml:
+          '<p>On a steel hull in seawater, zinc is more active than iron, so Zn oxidizes preferentially and the steel is cathodically protected. Inspect the anode mass on a schedule; once it is consumed, the steel becomes the anode again.</p>',
+      },
+    ],
+  },
+  {
+    test: (title) => /batter/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: primary vs secondary cells',
+        bodyHtml:
+          '<p>An alkaline AA cell is primary: the Zn/MnO<sub>2</sub> chemistry is not designed for recharge. A lithium-ion pack is secondary: intercalation at both electrodes can reverse. Fuel cells differ again—they need a continuous fuel feed rather than storing all reactants inside the cell.</p>',
+      },
+      {
+        heading: 'Worked example: discharge-curve regions',
+        bodyHtml:
+          '<p>A typical battery discharge curve has a plateau while the cell reaction buffers voltage, then a steep drop as reactants are depleted. The steep region is the practical end-of-life signal, not the first millivolt of sag at the start of discharge.</p>',
+        imageKey: 'graph',
+        imageAlt: 'Discharge curve showing a plateau then a steep voltage drop',
+      },
+    ],
+  },
+  {
+    test: (title) => /notation|cell diagram/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: writing standard cell notation',
+        bodyHtml:
+          '<p>For Zn(s) | Zn<sup>2+</sup>(aq) || Cu<sup>2+</sup>(aq) | Cu(s), the left half-cell is oxidation (anode) and the right is reduction (cathode). The double bar is the salt bridge. Phase boundaries use a single bar; same-phase species are separated by a comma.</p>',
+        imageKey: 'formula',
+        imageAlt: 'Cell notation written as a line diagram',
+      },
+    ],
+  },
+  {
+    test: (title) => /galvanic/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: zinc–copper cell',
+        bodyHtml:
+          '<p>In a Daniell cell, Zn is oxidized at the anode and Cu<sup>2+</sup> is reduced at the cathode. Electrons travel Zn → Cu through the external wire; cations move toward the cathode through the salt bridge to keep charge balance. E°<sub>cell</sub> is positive, so the cell is galvanic under standard conditions.</p>',
+        imageKey: 'graph',
+        imageAlt: 'Cell potential trend for a spontaneous galvanic reaction',
+      },
+      {
+        heading: 'Worked example: sign of cell potential',
+        bodyHtml:
+          '<p>If E°<sub>cathode</sub> = +0.34 V (Cu<sup>2+</sup>/Cu) and E°<sub>anode</sub> = −0.76 V (Zn<sup>2+</sup>/Zn), then E°<sub>cell</sub> = 0.34 − (−0.76) = 1.10 V. A positive E°<sub>cell</sub> means the written direction is spontaneous as a galvanic cell.</p>',
+        imageKey: 'formula',
+        imageAlt: 'Standard cell potential calculation',
+      },
+    ],
+  },
+  {
+    test: (title) => /practice|recitation|lab/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: this week’s lab calculation',
+        bodyHtml:
+          '<p>24.0 mL of 0.030 M MnO<sub>4</sub><sup>−</sup> titrates Fe<sup>2+</sup>. Moles of MnO<sub>4</sub><sup>−</sup> = 7.2 × 10<sup>−4</sup>. In acid, 1 MnO<sub>4</sub><sup>−</sup> oxidizes 5 Fe<sup>2+</sup>, so moles of Fe<sup>2+</sup> = 3.6 × 10<sup>−3</sup>. Use that stoichiometric factor before converting to concentration.</p>',
+        imageKey: 'formula',
+        imageAlt: 'Stoichiometry setup for a redox titration',
+      },
+    ],
+  },
+  {
+    test: (title) => /application/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: sacrificial anode protection',
+        bodyHtml:
+          '<p>A zinc block bolted to a steel pier in seawater is the anode of a galvanic cell: Zn → Zn<sup>2+</sup> + 2e<sup>−</sup>, while O<sub>2</sub> is reduced on the steel. The steel remains the cathode and corrodes much more slowly until the zinc is consumed.</p>',
+        imageKey: 'electrolysis',
+        imageAlt: 'Electrode processes in a protection cell',
+      },
+      {
+        heading: 'Worked example: electroplating a workpiece',
+        bodyHtml:
+          '<p>In copper electroplating, the jewelry is the cathode (Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu) and a copper anode dissolves to replenish Cu<sup>2+</sup>. Current density sets deposit rate; too high and the coating becomes powdery instead of adherent.</p>',
+        imageKey: 'electrolysis',
+        imageAlt: 'Electroplating cell with anode and cathode processes',
+      },
+    ],
+  },
+  {
+    test: (title) => /redox|oxidation|foundational/.test(title),
+    variants: [
+      {
+        heading: 'Worked example: assigning oxidation numbers',
+        bodyHtml:
+          '<p>In MnO<sub>4</sub><sup>−</sup>, oxygen is −2. Four oxygens contribute −8, and the ion charge is −1, so Mn is +7. In Mn<sup>2+</sup>, Mn is +2. The drop from +7 to +2 is a 5-electron reduction—the factor that balances Fe<sup>2+</sup> → Fe<sup>3+</sup> in acidic permanganate titrations.</p>',
+        imageKey: 'formula',
+        imageAlt: 'Oxidation-number assignment for manganese species',
+      },
+      {
+        heading: 'Worked example: identifying oxidation',
+        bodyHtml:
+          '<p>In Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu, zinc loses electrons (oxidation) and copper ions gain electrons (reduction). The species that loses electrons is the one that is oxidized; it is also the reducing agent.</p>',
+      },
+    ],
+  },
+  {
+    test: (title) => /electrochem|electrolysis/.test(title),
+    variants: [
+      {
+        stableId: 'example-electrolysis',
+        heading: 'Electrolysis cell diagram',
+        bodyHtml:
+          '<p>An electrolytic cell uses electrical work to drive a nonspontaneous redox process at the electrodes. Electrons are forced onto the cathode (reduction) while the anode is oxidized; the applied voltage must exceed the magnitude of the negative E°<sub>cell</sub>.</p>',
+        imageKey: 'electrolysis',
+        imageAlt: 'Electrolysis setup with electrodes and ion movement',
+      },
+      {
+        heading: 'Worked example: predicting electrolysis products',
+        bodyHtml:
+          '<p>In aqueous NaCl with inert electrodes, water is reduced at the cathode (H<sub>2</sub> + OH<sup>−</sup>) while chloride is often oxidized to Cl<sub>2</sub> at the anode. The applied potential and electrode material decide whether water or Cl<sup>−</sup> wins at the anode.</p>',
+        imageKey: 'electrolysis',
+        imageAlt: 'Electrolysis setup with electrodes and ion movement',
+      },
+    ],
+  },
+];
+
+const FALLBACK_EXAMPLE: ExampleVariant = {
+  heading: 'Worked example',
+  bodyHtml:
+    '<p>State the knowns, write the governing relationship, and substitute once. Name the species oxidized and reduced, then check that atoms and charge balance before reporting a numeric answer.</p>',
+};
+
+export function exampleContentForPage(pageTitle: string, images: PageExampleImages = {}): ExampleContent & { stableId: string } {
+  const title = pageTitle.toLowerCase();
+  const topic = PAGE_EXAMPLE_TOPICS.find((entry) => entry.test(title));
+  const variants = topic?.variants ?? [FALLBACK_EXAMPLE];
+  const variant = variants[hashString(pageTitle) % variants.length];
+  const imageSrc = variant.imageKey ? images[variant.imageKey] : undefined;
   return {
-    id: newPageBlockId(),
+    stableId: variant.stableId ?? `example-${slugForExample(pageTitle)}`,
+    heading: variant.heading,
+    bodyHtml: variant.bodyHtml,
+    imageSrc,
+    imageAlt: imageSrc ? variant.imageAlt : undefined,
+  };
+}
+
+export function pageExampleBlock(
+  pageTitle: string,
+  images: PageExampleImages = {},
+  origin: PageBlockOrigin = 'canonical',
+): Extract<PageBlock, { kind: 'example' }> {
+  const content = exampleContentForPage(pageTitle, images);
+  return {
+    id: content.stableId,
     kind: 'example',
-    origin: 'instructor',
-    status: 'added',
-    title: 'Worked example: identifying oxidation',
+    origin,
+    status: origin === 'instructor' ? 'added' : 'original',
+    title: content.heading,
     example: {
-      heading: 'Worked example: identifying oxidation',
-      bodyHtml:
-        '<p>In Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu, zinc loses electrons (oxidation) and copper ions gain electrons (reduction). The species that loses electrons is the one that is oxidized.</p>',
+      heading: content.heading,
+      bodyHtml: content.bodyHtml,
+      imageSrc: content.imageSrc,
+      imageAlt: content.imageAlt,
     },
   };
+}
+
+export function cannedExampleBlock(): PageBlock {
+  return { ...pageExampleBlock('Oxidation and reduction review', {}, 'instructor'), id: newPageBlockId() };
 }
 
 export function courseResourceBlock(resource: CourseResourceContent): PageBlock {
@@ -467,6 +971,10 @@ function blockPayload(block: PageBlock): string {
   return JSON.stringify(rest);
 }
 
+export function blockContentDiffers(a: PageBlock, b: PageBlock): boolean {
+  return blockPayload(a) !== blockPayload(b);
+}
+
 /** Concise list of how this page differs from the original course version. */
 export function summarizeAgainstCanonical(canonical: PageBlock[], current: PageBlock[]): ChangeSummary {
   const items: string[] = [];
@@ -544,19 +1052,23 @@ function choice(id: string, text: string, correct: boolean): QuestionChoice {
 }
 
 export function createDefaultPageBlocks({
+  pageTitle,
   isNuclear,
   selectionIds,
   removedBanks,
   removedEmbedded,
   images,
 }: {
+  pageTitle?: string;
   isNuclear: boolean;
   selectionIds: string[];
   removedBanks: string[];
   removedEmbedded: Record<string, boolean>;
-  images: { electrolysis: string; radiation: string };
+  images: PageExampleImages;
   objectives?: PageObjectiveOption[];
 }): PageBlock[] {
+  const title =
+    pageTitle?.trim() || (isNuclear ? 'Nuclear Chemistry Unit Checkpoint' : 'Electrochemistry Unit Checkpoint');
   const introObjective = isNuclear
     ? 'Connect exposure pathway to biological outcomes'
     : 'Explain equilibrium shifts';
@@ -583,20 +1095,11 @@ export function createDefaultPageBlocks({
     })),
   ];
 
+  const example = pageExampleBlock(title, images);
+  const insertAt = Math.min(1 + (hashString(title) % Math.max(1, blocks.length)), blocks.length);
+  blocks.splice(insertAt, 0, example);
+
   if (isNuclear) {
-    blocks.push({
-      id: 'example-radiation',
-      kind: 'example',
-      origin: 'canonical',
-      status: 'original',
-      title: 'Radiation materials in the teaching lab',
-      example: {
-        heading: 'Radiation materials in the teaching lab',
-        bodyHtml: '<p>Sealed sources, shielding, and handling controls used when students observe alpha, beta, and gamma emitters.</p>',
-        imageSrc: images.radiation,
-        imageAlt: 'Nuclear chemistry lab and radiation safety materials',
-      },
-    });
     blocks.push({
       id: 'nuclearSafety',
       kind: 'question',
@@ -624,20 +1127,6 @@ export function createDefaultPageBlocks({
         correctFeedback: 'Correct. Match shielding to radiation type and keep sources sealed.',
         incorrectFeedback: 'Incorrect. Alpha, beta, and gamma require different shielding and handling controls.',
         canonicalKey: 'nuclearSafety',
-      },
-    });
-  } else {
-    blocks.push({
-      id: 'example-electrolysis',
-      kind: 'example',
-      origin: 'canonical',
-      status: 'original',
-      title: 'Electrolysis cell diagram',
-      example: {
-        heading: 'Electrolysis cell diagram',
-        bodyHtml: '<p>An electrolytic cell uses electrical work to drive a nonspontaneous redox process at the electrodes.</p>',
-        imageSrc: images.electrolysis,
-        imageAlt: 'Electrolysis setup with electrodes and ion movement',
       },
     });
   }
