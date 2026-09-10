@@ -1,6 +1,7 @@
 export type CurriculumStatus = 'original' | 'modified' | 'added' | 'removed';
 export type CurriculumOrigin = 'canonical' | 'instructor';
-export type CurriculumNodeType = 'unit' | 'module' | 'page' | 'block';
+export type CurriculumNodeType = 'unit' | 'module' | 'section' | 'page' | 'block';
+export type StructuralNodeType = Exclude<CurriculumNodeType, 'block'>;
 export type ContentBlockKind = 'explanation' | 'example' | 'question' | 'bank';
 export type PageScoring = 'scored' | 'practice';
 export type DropPlacement = 'before' | 'after' | 'inside';
@@ -18,6 +19,7 @@ export type CurriculumNode = {
   origin: CurriculumOrigin;
   status: CurriculumStatus;
   children: CurriculumNode[];
+  hidden?: boolean;
   blockKind?: ContentBlockKind;
   assessmentTitle?: string;
   attemptsStarted?: boolean;
@@ -41,9 +43,10 @@ export const BLOCK_KIND_LABEL: Record<ContentBlockKind, string> = {
   bank: 'Activity bank',
 };
 
-export const NODE_TYPE_LABEL: Record<Exclude<CurriculumNodeType, 'block'>, string> = {
+export const NODE_TYPE_LABEL: Record<StructuralNodeType, string> = {
   unit: 'Unit',
   module: 'Module',
+  section: 'Section',
   page: 'Page',
 };
 
@@ -443,7 +446,7 @@ export function newCurriculumId(): string {
 }
 
 export function createInstructorNode(
-  type: Exclude<CurriculumNodeType, 'block'>,
+  type: StructuralNodeType,
   title: string,
   options?: { pageScoring?: PageScoring; learningObjectives?: string[] },
 ): CurriculumNode {
@@ -629,8 +632,12 @@ export function isValidDrop(
   if (dragged.type === 'block' || target.type === 'block') return false;
   if (dragged.status === 'removed' || target.status === 'removed') return false;
   if (isDescendant(dragged, targetId)) return false;
-  if (placement === 'inside') return childTypeFor(target.type) === dragged.type;
-  return dragged.type === target.type;
+  if (placement === 'inside') return canContain(target.type, dragged.type);
+  const context = findSiblingContext(nodes, targetId);
+  if (!context) return false;
+  if (context.parentId === null) return canContain(null, dragged.type);
+  const parent = findNode(nodes, context.parentId);
+  return parent ? canContain(parent.type, dragged.type) : false;
 }
 
 export function dropNode(
@@ -691,6 +698,10 @@ export function removeFromCourse(nodes: CurriculumNode[], id: string): Curriculu
   return updateNodeById(nodes, id, (node) => ({ ...node, status: 'removed' }));
 }
 
+export function setNodeHidden(nodes: CurriculumNode[], id: string, hidden: boolean): CurriculumNode[] {
+  return updateNodeById(nodes, id, (node) => ({ ...node, hidden }));
+}
+
 export function restoreOriginal(nodes: CurriculumNode[], id: string): CurriculumNode[] {
   return updateNodeById(nodes, id, (node) => {
     if (node.origin === 'instructor') {
@@ -712,10 +723,11 @@ export function statusLabel(status: CurriculumStatus): string | null {
 }
 
 export function statusDescription(node: CurriculumNode): string {
-  if (node.status === 'added') return 'added by you';
-  if (node.status === 'modified') return 'edited for this course';
+  const visibility = node.hidden && node.status !== 'removed' ? ', hidden from students' : '';
+  if (node.status === 'added') return `added by you${visibility}`;
+  if (node.status === 'modified') return `edited for this course${visibility}`;
   if (node.status === 'removed') return 'removed from this course';
-  return 'from the original course';
+  return `from the original course${visibility}`;
 }
 
 /** Concise list of structural customizations for blueprint / review summaries. */
@@ -727,7 +739,7 @@ export function summarizeCurriculumCustomizations(nodes: CurriculumNode[]): stri
         walk(node.children);
         return;
       }
-      const kind = NODE_TYPE_LABEL[node.type as 'unit' | 'module' | 'page'];
+      const kind = NODE_TYPE_LABEL[node.type as StructuralNodeType];
       if (node.status === 'added') {
         items.push(`Added ${kind.toLowerCase()} “${node.title}”`);
       } else if (node.status === 'modified') {
@@ -739,6 +751,9 @@ export function summarizeCurriculumCustomizations(nodes: CurriculumNode[]): stri
       } else if (node.status === 'removed') {
         items.push(`Removed ${kind.toLowerCase()} “${node.title}”`);
       }
+      if (node.hidden && node.status !== 'removed') {
+        items.push(`Hid ${kind.toLowerCase()} “${node.title}” from students`);
+      }
       walk(node.children);
     });
   };
@@ -746,10 +761,20 @@ export function summarizeCurriculumCustomizations(nodes: CurriculumNode[]): stri
   return items;
 }
 
-export function childTypeFor(type: CurriculumNodeType): 'module' | 'page' | null {
-  if (type === 'unit') return 'module';
-  if (type === 'module') return 'page';
-  return null;
+export function isContainerType(type: CurriculumNodeType): boolean {
+  return type === 'unit' || type === 'module' || type === 'section';
+}
+
+export function childTypesFor(parentType: CurriculumNodeType | null): StructuralNodeType[] {
+  if (parentType === null) return ['unit', 'page'];
+  if (parentType === 'unit') return ['module', 'page'];
+  if (parentType === 'module') return ['section', 'page'];
+  if (parentType === 'section') return ['page'];
+  return [];
+}
+
+export function canContain(parentType: CurriculumNodeType | null, childType: CurriculumNodeType): boolean {
+  return (childTypesFor(parentType) as CurriculumNodeType[]).includes(childType);
 }
 
 export function objectiveCodesFromLabels(labels: string[]): string[] {
