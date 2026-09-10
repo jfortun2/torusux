@@ -38,14 +38,6 @@ import {
 } from './learningDesign';
 import { persistPageMeta, persistSavedPageLayout } from './pageCustomization';
 
-const INITIAL_EXPANDED = [
-  'unit-electrochemistry',
-  'module-foundational',
-  'module-galvanic',
-  'module-applications',
-  'module-e-chem-checkpoint',
-];
-
 type DialogState =
   | { type: 'add'; parentId: string | null; childType: 'unit' | 'module' | 'page' }
   | { type: 'rename'; id: string }
@@ -99,7 +91,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   const showRemovedId = useId();
   const [units, setUnits] = useState<CurriculumNode[]>(() => loadCurriculum());
   const [savedSnapshot, setSavedSnapshot] = useState(() => JSON.stringify(loadCurriculum()));
-  const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set(INITIAL_EXPANDED));
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set());
   const [showRemoved, setShowRemoved] = useState(false);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [dialog, setDialog] = useState<DialogState>(null);
