@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type DragEvent, type ReactNode } from 'react';
+import { useEffect, useId, useRef, useState, type DragEvent, type MutableRefObject, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import chevronDownIcon from './assets/icon-chevron-down.png';
 import containerIcon from './assets/icon-container.png';
@@ -7,11 +7,13 @@ import pageIcon from './assets/icon-page.png';
 import { CoverageImpactPanel } from './PageCustomize';
 import {
   addChildNode,
+  canContain,
   canMoveNode,
-  childTypeFor,
+  childTypesFor,
   createInstructorNode,
   dropNode,
   findNode,
+  isContainerType,
   isNodeVisible,
   isValidDrop,
   loadCurriculum,
@@ -23,11 +25,13 @@ import {
   removeFromCourse,
   renameNode,
   restoreOriginal,
+  setNodeHidden,
   statusDescription,
   statusLabel,
   type CurriculumNode,
   type DropPlacement,
   type PageScoring,
+  type StructuralNodeType,
 } from './curriculumData';
 import { INSTRUCTOR_PROJECTS, type ExistingMaterial } from './existingMaterials';
 import {
@@ -38,8 +42,10 @@ import {
 } from './learningDesign';
 import { persistPageMeta, persistSavedPageLayout } from './pageCustomization';
 
+const ROOT_DESTINATION = '__root__';
+
 type DialogState =
-  | { type: 'add'; parentId: string | null; childType: 'unit' | 'module' | 'page' }
+  | { type: 'add'; parentId: string | null; childType: StructuralNodeType }
   | { type: 'rename'; id: string }
   | { type: 'view-original'; id: string }
   | { type: 'remove'; id: string }
@@ -51,17 +57,37 @@ type DialogState =
 
 type DropHint = { id: string; placement: DropPlacement };
 
-function listModules(nodes: CurriculumNode[]): { id: string; title: string; unitTitle: string }[] {
-  const items: { id: string; title: string; unitTitle: string }[] = [];
-  nodes.forEach((unit) => {
-    if (unit.type !== 'unit' || unit.status === 'removed') return;
-    unit.children.forEach((module) => {
-      if (module.type === 'module' && module.status !== 'removed') {
-        items.push({ id: module.id, title: module.title, unitTitle: unit.title });
+function listDestinations(
+  nodes: CurriculumNode[],
+  childType: StructuralNodeType,
+): { id: string; label: string }[] {
+  const items: { id: string; label: string }[] = [];
+  if (childTypesFor(null).includes(childType)) {
+    items.push({ id: ROOT_DESTINATION, label: 'Top of course (not in a unit)' });
+  }
+  const walk = (list: CurriculumNode[], trail: string[]) => {
+    list.forEach((node) => {
+      if (node.status === 'removed' || node.type === 'block') return;
+      const nextTrail = [...trail, node.title];
+      if (canContain(node.type, childType)) {
+        items.push({ id: node.id, label: nextTrail.join(' / ') });
       }
+      walk(node.children, nextTrail);
     });
-  });
+  };
+  walk(nodes, []);
   return items;
+}
+
+function emptyChildLabel(parent: CurriculumNode): string {
+  const labels = childTypesFor(parent.type).map((type) => `${type}s`);
+  if (labels.length === 0) return 'content';
+  if (labels.length === 1) return labels[0];
+  return `${labels.slice(0, -1).join(', ')} or ${labels[labels.length - 1]}`;
+}
+
+function structuralLabel(type: CurriculumNode['type']): string {
+  return type === 'block' ? 'Item' : NODE_TYPE_LABEL[type];
 }
 
 function seedImportedPage(title: string, scoring: PageScoring, projectName: string, summary: string) {
@@ -101,6 +127,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   const [announcement, setAnnouncement] = useState('');
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dropHint, setDropHint] = useState<DropHint | null>(null);
+  const draggingIdRef = useRef<string | null>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const lastMenuTriggerRef = useRef<HTMLButtonElement | null>(null);
@@ -171,7 +198,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     });
   };
 
-  const openAdd = (parentId: string | null, childType: 'unit' | 'module' | 'page') => {
+  const openAdd = (parentId: string | null, childType: StructuralNodeType) => {
     setOpenMenuId(null);
     setDraftName('');
     setDraftScoring('scored');
@@ -218,7 +245,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
       if (!name) return;
       const node = findNode(units, dialog.id);
       setUnits((current) => renameNode(current, dialog.id, name));
-      announce(`${node ? NODE_TYPE_LABEL[node.type as 'unit' | 'module' | 'page'] : 'Item'} renamed to “${name}”.`);
+      announce(`${node ? structuralLabel(node.type) : 'Item'} renamed to “${name}”.`);
       setDialog(null);
     }
   };
@@ -265,6 +292,19 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     );
   };
 
+  const handleHide = (id: string) => {
+    const node = findNode(units, id);
+    if (!node || node.status === 'removed') return;
+    setOpenMenuId(null);
+    const nextHidden = !node.hidden;
+    setUnits((current) => setNodeHidden(current, id, nextHidden));
+    announce(
+      nextHidden
+        ? `“${node.title}” hidden from students.`
+        : `“${node.title}” shown to students.`,
+    );
+  };
+
   const handleMove = (id: string, direction: 'up' | 'down') => {
     const node = findNode(units, id);
     setOpenMenuId(null);
@@ -292,12 +332,13 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   };
 
   const handleCancel = () => {
+    setOpenMenuId(null);
+    setDialog(null);
+    if (!dirty) return;
     const restored = JSON.parse(savedSnapshot) as CurriculumNode[];
     setUnits(restored);
     persistCurriculum(restored);
-    setOpenMenuId(null);
-    setDialog(null);
-    navigate('/');
+    announce('Unsaved changes discarded.');
   };
 
   const handleSave = () => {
@@ -309,9 +350,10 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
   };
 
   const applyDrop = (targetId: string, placement: DropPlacement) => {
-    if (!draggingId) return;
-    const dragged = findNode(units, draggingId);
-    setUnits((current) => dropNode(current, draggingId, targetId, placement));
+    const id = draggingIdRef.current ?? draggingId;
+    if (!id) return;
+    const dragged = findNode(units, id);
+    setUnits((current) => dropNode(current, id, targetId, placement));
     if (placement === 'inside') {
       setExpandedIds((current) => {
         const next = new Set(current);
@@ -320,6 +362,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
       });
     }
     announce(`Moved “${dragged?.title ?? 'item'}”.`);
+    draggingIdRef.current = null;
     setDraggingId(null);
     setDropHint(null);
   };
@@ -339,6 +382,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           showRemoved={showRemoved}
           units={units}
           draggingId={draggingId}
+          draggingIdRef={draggingIdRef}
           dropHint={dropHint}
           onToggleExpand={() => toggleExpanded(node.id)}
           onOpenPage={() => openPage(node)}
@@ -350,6 +394,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           onRename={() => openRename(node.id)}
           onMove={(direction) => handleMove(node.id, direction)}
           onRemove={() => openRemove(node.id)}
+          onHide={() => handleHide(node.id)}
           onRestore={() => handleRestore(node.id)}
           onViewOriginal={() => {
             setOpenMenuId(null);
@@ -357,9 +402,11 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           }}
           onDragStart={(id) => {
             setOpenMenuId(null);
+            draggingIdRef.current = id;
             setDraggingId(id);
           }}
           onDragEnd={() => {
+            draggingIdRef.current = null;
             setDraggingId(null);
             setDropHint(null);
           }}
@@ -367,7 +414,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           onDropRow={applyDrop}
         />,
       ];
-      if (node.type === 'unit' || node.type === 'module') {
+      if (isContainerType(node.type)) {
         const visibleNestable = nestableChildren.filter((child) => isNodeVisible(child, showRemoved));
         if (expanded && visibleNestable.length > 0) {
           rows.push(renderRows(nestableChildren, depth + 1));
@@ -378,6 +425,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
               parent={node}
               depth={depth}
               draggingId={draggingId}
+              draggingIdRef={draggingIdRef}
               dropHint={dropHint}
               units={units}
               onDropHint={setDropHint}
@@ -407,7 +455,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     dialog && dialog.type !== 'add' && dialog.type !== 'review-objectives' && dialog.type !== 'existing-materials'
       ? findNode(units, dialog.id)
       : undefined;
-  const removeKindLabel = dialogNode ? NODE_TYPE_LABEL[dialogNode.type as 'unit' | 'module' | 'page'].toLowerCase() : 'item';
+  const removeKindLabel = dialogNode ? structuralLabel(dialogNode.type).toLowerCase() : 'item';
 
   return (
     <>
@@ -435,8 +483,9 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
           <div className="curriculum-toolbar">
             <p className="curriculum-helper">
-              Content from the original course has no extra label. Items you added or edited are marked. Removed items stay
-              restorable and appear only when shown. Drag the handle to reorder units, modules, and pages.
+              Content from the original course has no extra label. Items you added or edited are marked. Hidden items stay in
+              this outline but are not shown to students. Removed items stay restorable and appear only when shown. Drag the
+              handle to reorder units, modules, sections, and pages.
             </p>
             <label className="check-row curriculum-show-removed" htmlFor={showRemovedId}>
               <input
@@ -459,6 +508,9 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
           <div className="footer-actions footer-actions--row">
             <button type="button" className="button button--primary" onClick={() => openAdd(null, 'unit')}>
               Create unit
+            </button>
+            <button type="button" className="button button--secondary" onClick={() => openAdd(null, 'page')}>
+              Create page
             </button>
             <button type="button" className="button button--secondary" onClick={() => setDialog({ type: 'existing-materials' })}>
               Add existing materials
@@ -699,19 +751,18 @@ function ExistingMaterialsDialog({
 }) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [destinationId, setDestinationId] = useState('');
-  const unitsForModules = units.filter((node) => node.type === 'unit' && node.status !== 'removed');
-  const modules = listModules(units);
 
   const selected = INSTRUCTOR_PROJECTS.flatMap((project) =>
     project.materials.map((material) => ({ material, projectName: project.name })),
   ).find((item) => item.material.id === selectedId);
 
-  const destinationOptions =
+  const destinationOptions = selected ? listDestinations(units, selected.material.type) : [];
+  const destinationPrompt =
     selected?.material.type === 'module'
-      ? unitsForModules.map((unit) => ({ id: unit.id, label: unit.title }))
-      : selected?.material.type === 'page'
-        ? modules.map((module) => ({ id: module.id, label: `${module.unitTitle} / ${module.title}` }))
-        : [];
+      ? 'Add to unit'
+      : selected?.material.type === 'section'
+        ? 'Add to module'
+        : 'Add to';
 
   const canAdd =
     Boolean(selected) &&
@@ -719,7 +770,7 @@ function ExistingMaterialsDialog({
 
   return (
     <>
-      <p>Select a unit, module, or page from a project you can access, then add it to this course.</p>
+      <p>Select a unit, module, section, or page from a project you can access, then add it to this course.</p>
       <div className="existing-materials" role="list">
         {INSTRUCTOR_PROJECTS.map((project) => (
           <section key={project.id} className="existing-project">
@@ -753,7 +804,7 @@ function ExistingMaterialsDialog({
       </div>
       {selected && selected.material.type !== 'unit' ? (
         <label className="field">
-          <span>{selected.material.type === 'module' ? 'Add to unit' : 'Add to module'}</span>
+          <span>{destinationPrompt}</span>
           <select
             className="select"
             value={destinationId}
@@ -782,7 +833,10 @@ function ExistingMaterialsDialog({
             onAdd({
               material: selected.material,
               projectName: selected.projectName,
-              parentId: selected.material.type === 'unit' ? null : destinationId || null,
+              parentId:
+                selected.material.type === 'unit' || destinationId === ROOT_DESTINATION || !destinationId
+                  ? null
+                  : destinationId,
             });
           }}
         >
@@ -801,18 +855,32 @@ function placementForDrag(
 ): DropPlacement | null {
   const dragged = findNode(units, draggedId);
   if (!dragged) return null;
-  if (isValidDrop(units, draggedId, target.id, 'inside') && dragged.type !== target.type) {
+  const rect = event.currentTarget.getBoundingClientRect();
+  const ratio = (event.clientY - rect.top) / Math.max(rect.height, 1);
+  const canInside = isValidDrop(units, draggedId, target.id, 'inside');
+  const canBefore = isValidDrop(units, draggedId, target.id, 'before');
+  const canAfter = isValidDrop(units, draggedId, target.id, 'after');
+
+  if (canInside) {
+    // Prefer sibling placement on the edges so a page can leave a unit/module.
+    const edge = canBefore || canAfter ? 0.4 : 0.5;
+    if (ratio < edge && canBefore) return 'before';
+    if (ratio > 1 - edge && canAfter) return 'after';
     return 'inside';
   }
-  const rect = event.currentTarget.getBoundingClientRect();
-  const placement: DropPlacement = event.clientY < rect.top + rect.height / 2 ? 'before' : 'after';
-  return isValidDrop(units, draggedId, target.id, placement) ? placement : null;
+
+  if (ratio < 0.5 && canBefore) return 'before';
+  if (ratio >= 0.5 && canAfter) return 'after';
+  if (canBefore) return 'before';
+  if (canAfter) return 'after';
+  return null;
 }
 
 function EmptyDropZone({
   parent,
   depth,
   draggingId,
+  draggingIdRef,
   dropHint,
   units,
   onDropHint,
@@ -821,20 +889,23 @@ function EmptyDropZone({
   parent: CurriculumNode;
   depth: number;
   draggingId: string | null;
+  draggingIdRef: MutableRefObject<string | null>;
   dropHint: DropHint | null;
   units: CurriculumNode[];
   onDropHint: (hint: DropHint | null) => void;
   onDropRow: (targetId: string, placement: DropPlacement) => void;
 }) {
-  const childLabel = parent.type === 'unit' ? 'modules' : 'pages';
+  const childLabel = emptyChildLabel(parent);
   const isInside = dropHint?.id === parent.id && dropHint.placement === 'inside';
+  const activeId = () => draggingIdRef.current ?? draggingId;
   return (
     <div
       className={isInside ? 'curriculum-empty is-drop-inside' : 'curriculum-empty'}
       style={{ paddingLeft: 28 + depth * 24 }}
       onDragOver={(event) => {
-        if (!draggingId) return;
-        if (!isValidDrop(units, draggingId, parent.id, 'inside')) return;
+        const id = activeId();
+        if (!id) return;
+        if (!isValidDrop(units, id, parent.id, 'inside')) return;
         event.preventDefault();
         onDropHint({ id: parent.id, placement: 'inside' });
       }}
@@ -843,7 +914,8 @@ function EmptyDropZone({
       }}
       onDrop={(event) => {
         event.preventDefault();
-        if (draggingId && isValidDrop(units, draggingId, parent.id, 'inside')) {
+        const id = activeId();
+        if (id && isValidDrop(units, id, parent.id, 'inside')) {
           onDropRow(parent.id, 'inside');
         }
       }}
@@ -861,6 +933,7 @@ function CurriculumRow({
   showRemoved,
   units,
   draggingId,
+  draggingIdRef,
   dropHint,
   onToggleExpand,
   onOpenPage,
@@ -868,6 +941,7 @@ function CurriculumRow({
   onOpenMenu,
   onRename,
   onMove,
+  onHide,
   onRemove,
   onRestore,
   onViewOriginal,
@@ -883,13 +957,15 @@ function CurriculumRow({
   showRemoved: boolean;
   units: CurriculumNode[];
   draggingId: string | null;
+  draggingIdRef: MutableRefObject<string | null>;
   dropHint: DropHint | null;
   onToggleExpand: () => void;
   onOpenPage: () => void;
-  onAddChild: (childType: 'module' | 'page') => void;
+  onAddChild: (childType: StructuralNodeType) => void;
   onOpenMenu: (trigger: HTMLButtonElement) => void;
   onRename: () => void;
   onMove: (direction: 'up' | 'down') => void;
+  onHide: () => void;
   onRemove: () => void;
   onRestore: () => void;
   onViewOriginal: () => void;
@@ -898,10 +974,10 @@ function CurriculumRow({
   onDropHint: (hint: DropHint | null) => void;
   onDropRow: (targetId: string, placement: DropPlacement) => void;
 }) {
-  const canExpand = node.type === 'unit' || node.type === 'module';
-  const childType = childTypeFor(node.type);
+  const canExpand = isContainerType(node.type);
+  const childTypes = node.status === 'removed' ? [] : childTypesFor(node.type);
   const label = statusLabel(node.status);
-  const rowLabel = NODE_TYPE_LABEL[node.type as 'unit' | 'module' | 'page'];
+  const rowLabel = structuralLabel(node.type);
   const icon = node.type === 'page' ? pageIcon : containerIcon;
   const accessibleName = `${rowLabel} ${node.title}, ${statusDescription(node)}`;
   const canMoveUp = canMoveNode(units, node.id, 'up', showRemoved);
@@ -914,6 +990,7 @@ function CurriculumRow({
     'curriculum-row',
     `curriculum-row--${node.type}`,
     node.status === 'removed' ? 'curriculum-row--removed' : '',
+    node.hidden && node.status !== 'removed' ? 'curriculum-row--hidden' : '',
     node.status === 'added' ? 'curriculum-row--added' : '',
     node.status === 'modified' ? 'curriculum-row--modified' : '',
     isDragging ? 'is-dragging' : '',
@@ -929,8 +1006,9 @@ function CurriculumRow({
       className={rowClass}
       style={{ paddingLeft: 12 + depth * 24 }}
       onDragOver={(event) => {
-        if (!draggingId || draggingId === node.id) return;
-        const placement = placementForDrag(event, units, draggingId, node);
+        const id = draggingIdRef.current ?? draggingId;
+        if (!id || id === node.id) return;
+        const placement = placementForDrag(event, units, id, node);
         if (!placement) return;
         event.preventDefault();
         event.dataTransfer.dropEffect = 'move';
@@ -943,8 +1021,9 @@ function CurriculumRow({
       }}
       onDrop={(event) => {
         event.preventDefault();
-        if (!draggingId) return;
-        const placement = placementForDrag(event, units, draggingId, node);
+        const id = draggingIdRef.current ?? draggingId;
+        if (!id || id === node.id) return;
+        const placement = placementForDrag(event, units, id, node);
         if (placement) onDropRow(node.id, placement);
       }}
     >
@@ -963,6 +1042,7 @@ function CurriculumRow({
               if (row instanceof HTMLElement) {
                 event.dataTransfer.setDragImage(row, 24, 16);
               }
+              draggingIdRef.current = node.id;
               onDragStart(node.id);
             }}
             onDragEnd={onDragEnd}
@@ -1031,6 +1111,9 @@ function CurriculumRow({
         ) : (
           <span className="visually-hidden">From original course</span>
         )}
+        {node.hidden && node.status !== 'removed' ? (
+          <span className="curriculum-status curriculum-status--hidden">Hidden</span>
+        ) : null}
       </div>
 
       <div className="curriculum-row__actions">
@@ -1040,11 +1123,16 @@ function CurriculumRow({
               Edit
             </button>
           ) : null}
-          {childType && node.status !== 'removed' ? (
-            <button type="button" className="button button--secondary button--small" onClick={() => onAddChild(childType)}>
+          {childTypes.map((childType) => (
+            <button
+              key={childType}
+              type="button"
+              className="button button--secondary button--small"
+              onClick={() => onAddChild(childType)}
+            >
               Create {childType}
             </button>
-          ) : null}
+          ))}
           <div className="curriculum-menu-wrap" data-curriculum-menu>
             <button
               type="button"
@@ -1058,14 +1146,14 @@ function CurriculumRow({
             </button>
             {menuOpen ? (
               <div className="curriculum-menu" role="menu" aria-label={`Actions for ${node.title}`}>
-                {childType && node.status !== 'removed' ? (
-                  <button type="button" role="menuitem" className="curriculum-menu__item" onClick={() => onAddChild(childType)}>
-                    Create {childType}
-                  </button>
-                ) : null}
                 {node.status !== 'removed' ? (
                   <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onRename}>
                     Rename
+                  </button>
+                ) : null}
+                {node.status !== 'removed' ? (
+                  <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onHide}>
+                    {node.hidden ? 'Show' : 'Hide'}
                   </button>
                 ) : null}
                 {node.origin === 'canonical' ? (
