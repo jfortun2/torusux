@@ -52,7 +52,6 @@ import {
   moveBlock,
   moveBlockRelative,
   moveBlockToIndex,
-  pageExampleBlock,
   pageIsCustomized,
   persistDraftPageLayout,
   persistPageMeta,
@@ -82,13 +81,6 @@ import studentIcon from './assets/student.png';
 import radiationMaterialsImage from './assets/radiation_materials.jpg';
 import electrolysisImage from './assets/electrolysis.jpg';
 import kittenImage from './assets/kitten.png';
-
-const PAGE_EXAMPLE_IMAGES = {
-  electrolysis: electrolysisImage,
-  radiation: radiationMaterialsImage,
-  formula: formulaImage,
-  graph: graphImage,
-};
 
 type Material = {
   id: string;
@@ -1019,14 +1011,13 @@ function AssessmentScreen() {
       : catalogObjectives.map((objective) => objective.code);
   const buildDefaultBlocks = () =>
     isInstructorCreated
-      ? [pageExampleBlock(assessmentTitle, PAGE_EXAMPLE_IMAGES, 'instructor')]
+      ? []
       : createDefaultPageBlocks({
-          pageTitle: assessmentTitle,
           isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
           selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
           removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
           removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-          images: PAGE_EXAMPLE_IMAGES,
+          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
           objectives: getPageObjectives(assessmentTitle),
         });
   const [blocks, setBlocks] = useState<PageBlock[]>(() => loadDraftPageLayout(assessmentTitle) ?? loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
@@ -1064,12 +1055,11 @@ function AssessmentScreen() {
       isInstructorCreated
         ? []
         : createDefaultPageBlocks({
-            pageTitle: assessmentTitle,
             isNuclear: isNuclearAssessment,
             selectionIds: assessmentSelections.map((selection) => selection.id),
             removedBanks: [],
             removedEmbedded: {},
-            images: PAGE_EXAMPLE_IMAGES,
+            images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
             objectives: pageObjectives,
           }),
     [isInstructorCreated, isNuclearAssessment, assessmentSelections, pageObjectives],
@@ -1207,14 +1197,13 @@ function AssessmentScreen() {
 
   useLayoutEffect(() => {
     const defaults = isInstructorCreated
-      ? [pageExampleBlock(assessmentTitle, PAGE_EXAMPLE_IMAGES, 'instructor')]
+      ? []
       : createDefaultPageBlocks({
-          pageTitle: assessmentTitle,
           isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
           selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
           removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
           removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-          images: PAGE_EXAMPLE_IMAGES,
+          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
           objectives: getPageObjectives(assessmentTitle),
         });
     const saved = loadSavedPageLayout(assessmentTitle) ?? defaults;
