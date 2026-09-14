@@ -3692,6 +3692,22 @@ select:focus-visible,
   text-align: left;
 }
 
+.bulk-question-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bulk-question-issues {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  color: #9a3412;
+  font-size: 13px;
+  margin: 0;
+  padding: 10px 12px 10px 28px;
+}
+
 .question-draft-preview {
   display: grid;
   gap: 8px;

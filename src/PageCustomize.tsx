@@ -31,6 +31,7 @@ import {
   type QuestionInput,
   type TextContent,
 } from './pageCustomization';
+import { buildSampleQuestionCsv, parseQuestionCsv } from './questionCsv';
 
 export type CustomizeDialog =
   | { type: 'chooser'; insertAt: number }
@@ -38,6 +39,7 @@ export type CustomizeDialog =
   | { type: 'image'; insertAt: number }
   | { type: 'question-type'; insertAt: number }
   | { type: 'question'; insertAt: number; questionKind: QuestionContentKind }
+  | { type: 'bulk-question'; insertAt: number }
   | { type: 'course-resource'; insertAt: number }
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
   | { type: 'edit-example'; block: Extract<PageBlock, { kind: 'example' }> }
@@ -609,6 +611,23 @@ export function PageCustomizeDialogs({
       <QuestionTypeChooser
         onClose={() => onChoose({ type: 'chooser', insertAt: dialog.insertAt })}
         onSelect={(questionKind) => onChoose({ type: 'question', insertAt: dialog.insertAt, questionKind })}
+        onBulkUpload={() => onChoose({ type: 'bulk-question', insertAt: dialog.insertAt })}
+      />
+    );
+  }
+
+  if (dialog.type === 'bulk-question') {
+    return (
+      <BulkQuestionUploadForm
+        objectives={objectives}
+        onCancel={() => onChoose({ type: 'question-type', insertAt: dialog.insertAt })}
+        onAdd={(drafts) => {
+          onAddBlocks(
+            dialog.insertAt,
+            drafts.map((draft) => questionBlockFromDraft(draft)),
+          );
+          onClose();
+        }}
       />
     );
   }
@@ -767,7 +786,7 @@ function ChooserDialog({
         />
         <ChooserOption
           title="Question"
-          description="Write a multiple-choice, fill-in-the-blank, or dropdown question."
+          description="Write a multiple-choice, fill-in-the-blank, or dropdown question, or upload several from a CSV."
           onClick={() => onSelect('question')}
         />
         <ChooserOption
@@ -793,13 +812,15 @@ function ChooserDialog({
 function QuestionTypeChooser({
   onClose,
   onSelect,
+  onBulkUpload,
 }: {
   onClose: () => void;
   onSelect: (kind: QuestionContentKind) => void;
+  onBulkUpload: () => void;
 }) {
   return (
     <ModalShell title="Choose a question type" onClose={onClose} wide={false}>
-      <p>Pick how students will answer. You cannot change the question type after this.</p>
+      <p>Write one question, or upload several from a CSV. You cannot change a written question’s type after this.</p>
       <div className="content-chooser">
         <ChooserOption
           title="Multiple choice"
@@ -815,6 +836,11 @@ function QuestionTypeChooser({
           title="Multi-input dropdown"
           description="Students choose an answer for each blank from a dropdown list."
           onClick={() => onSelect('multi-input-dropdown')}
+        />
+        <ChooserOption
+          title="Bulk upload questions"
+          description="Import multiple questions from a CSV file, then review them before adding to this page."
+          onClick={onBulkUpload}
         />
       </div>
       <div className="modal-actions">
@@ -1954,6 +1980,7 @@ export function QuestionBlockForm({
   );
 }
 
+
 function AiQuestionForm({
   objectives,
   pageContext,
@@ -2083,6 +2110,184 @@ function AiQuestionForm({
             className="button button--primary"
             disabled={selected.length === 0}
             onClick={() => onAdd(selected)}
+          >
+            Add {selected.length === 1 ? '1 question' : `${selected.length || ''} questions`.trim()} to page
+          </button>
+        </div>
+      </div>
+    </ModalShell>
+  );
+}
+
+function BulkQuestionUploadForm({
+  objectives,
+  onCancel,
+  onAdd,
+}: {
+  objectives: PageObjectiveOption[];
+  onCancel: () => void;
+  onAdd: (drafts: QuestionContent[]) => void;
+}) {
+  const fileInputId = useId();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [fileName, setFileName] = useState('');
+  const [error, setError] = useState('');
+  const [issues, setIssues] = useState<{ row: number; message: string }[]>([]);
+  const [imported, setImported] = useState<{ id: string; question: QuestionContent }[]>([]);
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [previewId, setPreviewId] = useState<string | null>(null);
+
+  const applyParse = (text: string, name: string) => {
+    const result = parseQuestionCsv(text, objectives);
+    const next = result.questions.map((question, index) => ({
+      id: `csv-${index}-${question.title}`,
+      question,
+    }));
+    setFileName(name);
+    setError('');
+    setIssues(result.issues);
+    setImported(next);
+    setSelectedIds(next.map((item) => item.id));
+    setPreviewId(next[0]?.id ?? null);
+  };
+
+  const selected = imported.filter((item) => selectedIds.includes(item.id));
+  const preview = imported.find((item) => item.id === previewId) ?? selected[0] ?? imported[0];
+
+  const downloadSample = () => {
+    const csv = buildSampleQuestionCsv(objectives);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'question-upload-sample.csv';
+    link.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+
+  return (
+    <ModalShell title="Bulk upload questions" onClose={onCancel} wide>
+      <div className="page-customize-form">
+        <p className="page-customize-hint">
+          Upload a CSV with one question per row. Multiple-choice (MCQ) and short-answer (TEXT, NUMBER, or PARAGRAPH)
+          questions can be added to this page. Download the sample file to see the expected columns.
+        </p>
+        <div className="bulk-question-toolbar">
+          <button type="button" className="button button--secondary" onClick={downloadSample}>
+            Download sample CSV
+          </button>
+        </div>
+        <input
+          id={fileInputId}
+          ref={fileInputRef}
+          type="file"
+          accept=".csv,text/csv"
+          className="visually-hidden"
+          onChange={(event) => {
+            const file = event.target.files?.[0];
+            if (!file) return;
+            if (!/\.csv$/i.test(file.name) && file.type !== 'text/csv') {
+              setFileName(file.name);
+              setError('Use a CSV file. Download the sample for the expected format.');
+              setIssues([]);
+              setImported([]);
+              setSelectedIds([]);
+              setPreviewId(null);
+              return;
+            }
+            void file.text().then((text) => applyParse(text, file.name));
+          }}
+        />
+        {fileName ? (
+          <div className="image-upload image-upload--selected">
+            <p className="image-upload__name">{fileName}</p>
+            <p className="image-upload__hint">
+              {imported.length === 0
+                ? 'No questions could be imported from this file'
+                : `${imported.length} question${imported.length === 1 ? '' : 's'} ready to review${
+                    issues.length > 0 ? ` · ${issues.length} row${issues.length === 1 ? '' : 's'} skipped` : ''
+                  }`}
+            </p>
+            <div className="bulk-question-toolbar">
+              <button type="button" className="button button--subtle button--small" onClick={() => fileInputRef.current?.click()}>
+                Replace file
+              </button>
+              <button
+                type="button"
+                className="button button--subtle button--small"
+                onClick={() => {
+                  setFileName('');
+                  setError('');
+                  setIssues([]);
+                  setImported([]);
+                  setSelectedIds([]);
+                  setPreviewId(null);
+                  if (fileInputRef.current) fileInputRef.current.value = '';
+                }}
+              >
+                Remove file
+              </button>
+            </div>
+          </div>
+        ) : (
+          <label className="image-upload" htmlFor={fileInputId}>
+            <span className="image-upload__title">Upload a CSV</span>
+            <span className="image-upload__hint">Choose a .csv file with one question per row.</span>
+          </label>
+        )}
+        {error ? (
+          <div className="guardrail-callout">
+            <p>{error}</p>
+          </div>
+        ) : null}
+        {issues.length > 0 ? (
+          <ul className="bulk-question-issues">
+            {issues.map((issue) => (
+              <li key={`${issue.row}-${issue.message}`}>Row {issue.row}: {issue.message}</li>
+            ))}
+          </ul>
+        ) : null}
+        {imported.length > 0 ? (
+          <div className="ai-question-results">
+            <fieldset className="page-customize-choices">
+              <legend>Imported questions</legend>
+              {imported.map((item) => (
+                <label key={item.id} className="ai-question-results__row">
+                  <input
+                    type="checkbox"
+                    checked={selectedIds.includes(item.id)}
+                    onChange={() => {
+                      setSelectedIds((current) =>
+                        current.includes(item.id)
+                          ? current.filter((id) => id !== item.id)
+                          : [...current, item.id],
+                      );
+                      setPreviewId(item.id);
+                    }}
+                  />
+                  <button type="button" className="ai-question-results__title" onClick={() => setPreviewId(item.id)}>
+                    {item.question.title}
+                  </button>
+                </label>
+              ))}
+            </fieldset>
+            {preview ? (
+              <div className="page-customize-preview">
+                <p className="page-customize-hint">Preview</p>
+                <QuestionDraftPreview draft={preview.question} />
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+        <div className="modal-actions">
+          <button type="button" className="button button--subtle" onClick={onCancel}>
+            Back
+          </button>
+          <button
+            type="button"
+            className="button button--primary"
+            disabled={selected.length === 0}
+            onClick={() => onAdd(selected.map((item) => item.question))}
           >
             Add {selected.length === 1 ? '1 question' : `${selected.length || ''} questions`.trim()} to page
           </button>
