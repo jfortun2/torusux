@@ -21,6 +21,7 @@ import {
   PageCustomizeBar,
   PageCustomizeDialogs,
   PageObjectivesAttach,
+  PlaceholderBlockView,
   RestoreOriginalConfirm,
   QuestionBlockForm,
   StudentQuestionView,
@@ -47,6 +48,7 @@ import {
   insertBlock,
   isUnitCheckpointPage,
   resolvePageProfile,
+  importedBankSelection,
   loadDraftPageLayout,
   loadPageMeta,
   loadSavedPageLayout,
@@ -117,6 +119,7 @@ type AssessmentSelection = {
   numberToSelect: number;
   criteriaTag: string;
   exampleQuestions: ExampleQuestion[];
+  fromQuestionBank?: boolean;
 };
 type BankQuestionRow = {
   id: string;
@@ -169,6 +172,7 @@ type StudentPreviewBank = {
   numberToSelect: number;
   candidateQuestions: StudentPreviewQuestion[];
   scenarioQuestions: StudentPreviewQuestion[];
+  bankSummary?: string;
 };
 
 const rotateArray = <T,>(items: T[], amount: number): T[] => {
@@ -698,17 +702,38 @@ const nuclearSelections: AssessmentSelection[] = [
 
 const allAssessmentSelections = (): AssessmentSelection[] => [...electrochemistrySelections, ...nuclearSelections];
 
-const getAssessmentSelections = (assessmentTitle?: string) => {
-  const bankIds = resolvePageProfile(assessmentTitle).bankIds;
+const getAssessmentSelections = (assessmentTitle?: string, pageId?: string) => {
+  const bankIds = resolvePageProfile(assessmentTitle, pageId).bankIds;
   if (bankIds.length === 0) return [];
   const pool = allAssessmentSelections();
   return bankIds
-    .map((id) => pool.find((selection) => selection.id === id))
+    .map((id) => {
+      const imported = importedBankSelection(id);
+      if (imported) {
+        return {
+          id: imported.id,
+          availableQuestions: Math.max(imported.availableQuestions, imported.numberToSelect),
+          numberToSelect: imported.numberToSelect,
+          criteriaTag: imported.title,
+          fromQuestionBank: true,
+          exampleQuestions: [
+            {
+              kind: 'mcq' as const,
+              points: 1,
+              title: imported.title,
+              prompt: `This page selects ${imported.numberToSelect} question${imported.numberToSelect === 1 ? '' : 's'} from the “${imported.title}” bank.`,
+              learningObjective: imported.learningObjective,
+            },
+          ],
+        } satisfies AssessmentSelection;
+      }
+      return pool.find((selection) => selection.id === id);
+    })
     .filter((selection): selection is AssessmentSelection => Boolean(selection));
 };
 
-const getPageObjectives = (assessmentTitle?: string): PageObjective[] => {
-  const codes = resolvePageProfile(assessmentTitle).objectiveCodes;
+const getPageObjectives = (assessmentTitle?: string, pageId?: string): PageObjective[] => {
+  const codes = resolvePageProfile(assessmentTitle, pageId).objectiveCodes;
   return COURSE_LEARNING_OBJECTIVES.filter((objective) => codes.includes(objective.code)).map((objective, index) => ({
     code: objective.code,
     label: `L${index + 1} ${objective.label.replace(/^L\d+\s+/i, '')}`,
@@ -964,13 +989,14 @@ function CustomizeScreen() {
   );
 }
 
-function pageDefaultBlocks(assessmentTitle: string, isInstructorCreated: boolean): PageBlock[] {
-  const profile = resolvePageProfile(assessmentTitle);
+function pageDefaultBlocks(assessmentTitle: string, isInstructorCreated: boolean, pageId?: string): PageBlock[] {
+  const profile = resolvePageProfile(assessmentTitle, pageId);
   if (isInstructorCreated && !profile.matched) return [];
   const draft = loadAssessmentDraft(assessmentTitle);
   return createDefaultPageBlocks({
     pageTitle: assessmentTitle,
-    selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
+    pageId,
+    selectionIds: getAssessmentSelections(assessmentTitle, pageId).map((selection) => selection.id),
     removedBanks: draft.removedBanks,
     removedEmbedded: draft.removedEmbedded,
     images: PAGE_IMAGES,
@@ -992,18 +1018,18 @@ function AssessmentScreen() {
     isInstructorCreated?: boolean;
     attachedObjectiveCodes?: string[];
   } | null;
-  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
+  const assessmentTitle = state?.assessmentTitle ?? 'Electrochemistry Unit Checkpoint';
   const storedMeta = loadPageMeta(assessmentTitle);
   const isInstructorCreated = state?.isInstructorCreated ?? storedMeta?.isInstructorCreated ?? false;
   const pageScoring: PageScoring = state?.pageScoring ?? storedMeta?.scoring ?? 'scored';
-  const pageId = state?.pageId;
-  const catalogObjectives = getPageObjectives(assessmentTitle);
+  const pageId = state?.pageId ?? (state?.assessmentTitle ? undefined : 'page-80839');
+  const catalogObjectives = getPageObjectives(assessmentTitle, pageId);
   const initialAttachedCodes = storedMeta
     ? storedMeta.attachedObjectiveCodes
     : state?.attachedObjectiveCodes && state.attachedObjectiveCodes.length > 0
       ? state.attachedObjectiveCodes
       : catalogObjectives.map((objective) => objective.code);
-  const buildDefaultBlocks = () => pageDefaultBlocks(assessmentTitle, isInstructorCreated);
+  const buildDefaultBlocks = () => pageDefaultBlocks(assessmentTitle, isInstructorCreated, pageId);
   const [blocks, setBlocks] = useState<PageBlock[]>(() => loadDraftPageLayout(assessmentTitle) ?? loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [savedBlocks, setSavedBlocks] = useState<PageBlock[]>(() => loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [attachedCodes, setAttachedCodes] = useState<string[]>(() => initialAttachedCodes);
@@ -1026,9 +1052,9 @@ function AssessmentScreen() {
     () => COURSE_LEARNING_OBJECTIVES.filter((objective) => attachedCodes.includes(objective.code)),
     [attachedCodes],
   );
-  const isCheckpointAssessment = isUnitCheckpointPage(assessmentTitle);
+  const isCheckpointAssessment = isUnitCheckpointPage(assessmentTitle, pageId);
   const isStudentPreview = viewMode === 'student';
-  const assessmentSelections = getAssessmentSelections(assessmentTitle);
+  const assessmentSelections = getAssessmentSelections(assessmentTitle, pageId);
   const attemptsStarted = state?.attemptsStarted ?? false;
   const removedBanks = removedBankIds(blocks);
   const dirty = !blocksEqual(blocks, savedBlocks);
@@ -1039,12 +1065,13 @@ function AssessmentScreen() {
         ? []
         : createDefaultPageBlocks({
             pageTitle: assessmentTitle,
+            pageId,
             selectionIds: assessmentSelections.map((selection) => selection.id),
             removedBanks: [],
             removedEmbedded: {},
             images: PAGE_IMAGES,
           }),
-    [isInstructorCreated, assessmentTitle, assessmentSelections],
+    [isInstructorCreated, assessmentTitle, pageId, assessmentSelections],
   );
   const isPageCustomized = useMemo(
     () => !isInstructorCreated && pageIsCustomized(canonicalBlocks, blocks),
@@ -1059,6 +1086,16 @@ function AssessmentScreen() {
     const banks: StudentPreviewBank[] = assessmentSelections
       .filter((selection) => !removedBanks.includes(selection.id))
       .map((selection, index) => {
+        if (selection.fromQuestionBank) {
+          return {
+            id: selection.id,
+            label: selection.criteriaTag || `Activity Bank ${index + 1}`,
+            numberToSelect: selection.numberToSelect,
+            candidateQuestions: [],
+            scenarioQuestions: [],
+            bankSummary: selection.exampleQuestions[0]?.prompt,
+          };
+        }
         const candidateCount = isCheckpointAssessment
           ? selection.availableQuestions
           : Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
@@ -1147,7 +1184,7 @@ function AssessmentScreen() {
   };
 
   useLayoutEffect(() => {
-    const defaults = pageDefaultBlocks(assessmentTitle, isInstructorCreated);
+    const defaults = pageDefaultBlocks(assessmentTitle, isInstructorCreated, pageId);
     const saved = loadSavedPageLayout(assessmentTitle) ?? defaults;
     const draft = loadDraftPageLayout(assessmentTitle) ?? saved;
     setSavedBlocks(saved);
@@ -1160,9 +1197,9 @@ function AssessmentScreen() {
         ? nextMeta.attachedObjectiveCodes
         : state?.attachedObjectiveCodes && state.attachedObjectiveCodes.length > 0
           ? state.attachedObjectiveCodes
-          : getPageObjectives(assessmentTitle).map((objective) => objective.code),
+          : getPageObjectives(assessmentTitle, pageId).map((objective) => objective.code),
     );
-  }, [assessmentTitle, isInstructorCreated, state?.attachedObjectiveCodes]);
+  }, [assessmentTitle, pageId, isInstructorCreated, state?.attachedObjectiveCodes]);
 
   useEffect(() => {
     persistDraftPageLayout(assessmentTitle, blocks);
@@ -1178,7 +1215,7 @@ function AssessmentScreen() {
 
   useEffect(() => {
     if (!state?.removeBankId) return;
-    const bankMeta = getAssessmentSelections(assessmentTitle).find((selection) => selection.id === state.removeBankId);
+    const bankMeta = getAssessmentSelections(assessmentTitle, pageId).find((selection) => selection.id === state.removeBankId);
     if (bankMeta) {
       persistAllQuestionsRemovedForBank(assessmentTitle, state.removeBankId, bankMeta.availableQuestions);
     }
@@ -1339,6 +1376,7 @@ function AssessmentScreen() {
     if (block.kind === 'text') return <TextBlockView block={block} showObjective={!isStudentPreview} />;
     if (block.kind === 'example') return <ExampleBlockView block={block} />;
     if (block.kind === 'course-resource') return <CourseResourceView block={block} />;
+    if (block.kind === 'placeholder') return <PlaceholderBlockView block={block} />;
     if (block.kind === 'bank') {
       const selection = assessmentSelections.find((item) => item.id === block.bank.selectionId);
       if (!selection) return null;
@@ -1353,7 +1391,8 @@ function AssessmentScreen() {
           removed={block.status === 'removed'}
           onToggleRemove={() => requestToggleBlock(block.id)}
           attemptsStarted={attemptsStarted}
-          assessmentTitle={state?.assessmentTitle}
+          assessmentTitle={assessmentTitle}
+          pageId={pageId}
           breadcrumbTrail={state?.breadcrumbTrail}
           canManage={!isStudentPreview}
           hideRemove
@@ -1388,6 +1427,13 @@ function AssessmentScreen() {
     if (!bank) return null;
     return (
       <section key={block.id} className="student-bank-preview">
+        {bank.bankSummary && bank.scenarioQuestions.length === 0 ? (
+          <aside className="page-placeholder" data-content-type="Question bank">
+            <p className="page-placeholder__type">Question bank</p>
+            <p className="page-placeholder__detail">{bank.label}</p>
+            <p className="page-placeholder__note">{bank.bankSummary}</p>
+          </aside>
+        ) : null}
         {bank.scenarioQuestions.map((question) => (
           <article key={question.id} className="student-question-card">
             <div className="student-question-card__meta">
@@ -1511,6 +1557,7 @@ function AssessmentScreen() {
                     if (block.kind === 'text') return <TextBlockView key={block.id} block={block} />;
                     if (block.kind === 'example') return <ExampleBlockView key={block.id} block={block} />;
                     if (block.kind === 'course-resource') return <CourseResourceView key={block.id} block={block} />;
+                    if (block.kind === 'placeholder') return <PlaceholderBlockView key={block.id} block={block} />;
                     if (block.kind === 'bank') return renderStudentBank(block);
                     return <StudentQuestionView key={block.id} block={block} name={block.id} />;
                   })
@@ -1795,9 +1842,10 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     attemptsStarted?: boolean;
     assessmentTitle?: string;
     breadcrumbTrail?: BreadcrumbItem[];
+    pageId?: string;
   } | null;
-  const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
-  const pageSelections = getAssessmentSelections(state?.assessmentTitle);
+  const assessmentTitle = state?.assessmentTitle ?? 'Electrochemistry Unit Checkpoint';
+  const pageSelections = getAssessmentSelections(state?.assessmentTitle, state?.pageId);
   const selectedBank =
     pageSelections.find((bank) => bank.id === state?.bankId) ??
     allAssessmentSelections().find((bank) => bank.id === state?.bankId) ??
@@ -2692,6 +2740,7 @@ function ActivityBankSelectionCard({
   onToggleRemove,
   attemptsStarted,
   assessmentTitle,
+  pageId,
   breadcrumbTrail,
   canManage,
   hideRemove = false,
@@ -2703,6 +2752,7 @@ function ActivityBankSelectionCard({
   onToggleRemove: () => void;
   attemptsStarted: boolean;
   assessmentTitle?: string;
+  pageId?: string;
   breadcrumbTrail?: BreadcrumbItem[];
   canManage: boolean;
   hideRemove?: boolean;
@@ -2719,7 +2769,9 @@ function ActivityBankSelectionCard({
       <div className={removed ? 'bank-card bank-card--removed' : 'bank-card'}>
         <div className="bank-card__header">
           <div className="bank-card__header-main">
-            <h2 className="bank-card__title">Activity Bank Selection</h2>
+            <h2 className="bank-card__title">
+              {selection.fromQuestionBank ? selection.criteriaTag : 'Activity Bank Selection'}
+            </h2>
             {removed ? <span className="status-pill bank-card__status-pill">Removed</span> : null}
           </div>
           {canManage && !hideRemove ? (
@@ -2751,7 +2803,7 @@ function ActivityBankSelectionCard({
             </span>
             <span className="bank-card__stat-line">
               <span className="bank-card__stat-label">Points per question:</span>{' '}
-              <span className="bank-card__stat-value">{exampleQuestion.points}</span>
+              <span className="bank-card__stat-value">{exampleQuestion?.points ?? 1}</span>
             </span>
           </div>
         </div>
@@ -2767,7 +2819,7 @@ function ActivityBankSelectionCard({
           className="button button--primary button--small bank-card__manage"
           onClick={() =>
             navigate('/inside-bank', {
-              state: { bankId: selection.id, attemptsStarted, assessmentTitle, breadcrumbTrail },
+              state: { bankId: selection.id, attemptsStarted, assessmentTitle, breadcrumbTrail, pageId },
             })
           }
         >
