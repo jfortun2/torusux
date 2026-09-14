@@ -1,0 +1,736 @@
+{
+  "id": "80505",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78116"
+  ],
+  "title": "po5_UA_nuclear_decay_time_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "jsg1rurl6vpblx8",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "vcleaqu8gc46mw6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Starting with 16 "
+                  },
+                  {
+                    "sup": true,
+                    "text": "131"
+                  },
+                  {
+                    "text": "I nuclei, it takes 4 half-lives until only 1 is left."
+                  }
+                ],
+                "id": "k03h5gtxqwvrr6h",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}16\\;\\xrightarrow[{1\\;t_\\frac12}]{}\\;8\\;\\xrightarrow[{2\\;\\;t_\\frac12}]{}\\;4\\;\\xrightarrow[{3\\;t_\\frac12}]{}\\;2\\;\\xrightarrow[{4\\;t_\\frac12}]{}\\;1\\\\\\mathrm{then}\\;\\;\\;4\\times8.03\\;\\mathrm d\\;=\\;32.1\\;\\mathrm d\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "28dqcxqykh87507",
+                "type": "p"
+              }
+            ],
+            "id": "1303707104"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mb14dy7cv3i7aqg",
+                  "type": "p"
+                }
+              ],
+              "id": "2529834441"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qmakhd9j09krqm6",
+                  "type": "p"
+                }
+              ],
+              "id": "749449885"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jnc29ekkj04uown",
+                  "type": "p"
+                }
+              ],
+              "id": "2441783895"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "d8gb7pll7i71uim",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Starting with 16 "
+                      },
+                      {
+                        "sup": true,
+                        "text": "131"
+                      },
+                      {
+                        "text": "I nuclei, it takes 4 half-lives until only 1 is left."
+                      }
+                    ],
+                    "id": "n03bqrfyfcluwt2",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}16\\;\\xrightarrow[{1\\;t_\\frac12}]{}\\;8\\;\\xrightarrow[{2\\;\\;t_\\frac12}]{}\\;4\\;\\xrightarrow[{3\\;t_\\frac12}]{}\\;2\\;\\xrightarrow[{4\\;t_\\frac12}]{}\\;1\\\\\\mathrm{then}\\;\\;\\;4\\times8.03\\;\\mathrm d\\;=\\;32.1\\;\\mathrm d\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "214po58lq2jusfz",
+                    "type": "p"
+                  }
+                ],
+                "id": "4099638570"
+              },
+              "id": "3844492327",
+              "legacyMatch": "[32,32.2]",
+              "rule": "input = {[32,32.2]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that 50% of the radioisotope decays during each half-life. Starting with the initial amount of "
+                      },
+                      {
+                        "sup": true,
+                        "text": "131"
+                      },
+                      {
+                        "text": "I, determine how many half-lives it takes to reach the final amount of "
+                      },
+                      {
+                        "sup": true,
+                        "text": "131"
+                      },
+                      {
+                        "text": "I."
+                      }
+                    ],
+                    "id": "e5808b6b748841b7a446b4598df7ce28",
+                    "type": "p"
+                  }
+                ],
+                "id": "4105221899"
+              },
+              "id": "2257233711",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " The decay constant is:"
+                  }
+                ],
+                "id": "2ruyrhm429tzpj9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{\\displaystyle\\frac12}}\\;=\\;\\frac{0.693}{8.03\\;\\mathrm d}\\;=\\;0.0863\\;\\mathrm d^{-1}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "stg0tfajwjzun50",
+                "type": "p"
+              }
+            ],
+            "id": "3522759904"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5bndd62l8a77shl",
+                  "type": "p"
+                }
+              ],
+              "id": "414160939"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rm1s17mo1j5vp3f",
+                  "type": "p"
+                }
+              ],
+              "id": "2465626271"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uuq45t4ug9vypy8",
+                  "type": "p"
+                }
+              ],
+              "id": "867895667"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The decay constant is:"
+                      }
+                    ],
+                    "id": "qpvovgrtthkcbj7",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{\\displaystyle\\frac12}}\\;=\\;\\frac{0.693}{8.03\\;\\mathrm d}\\;=\\;0.0863\\;\\mathrm d^{-1}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "nz2zcd102qgnwgx",
+                    "type": "p"
+                  }
+                ],
+                "id": "3793609675"
+              },
+              "id": "347351229",
+              "legacyMatch": "[0.0861,0.0865]",
+              "rule": "input = {[0.0861,0.0865]}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the relationship between the half-life ("
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "1/2"
+                      },
+                      {
+                        "text": ") and the decay constant ("
+                      },
+                      {
+                        "em": true,
+                        "text": "λ"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "a001ac60330a4572b81454fd78c39caa",
+                    "type": "p"
+                  }
+                ],
+                "id": "3659415517"
+              },
+              "id": "3609959490",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "rdfdlpt2cuct5z4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "g0kt5944fwbgqnf",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "N_t\\;=\\;N_0e^{-\\lambda t}\\\\=\\;\\left(78.0\\;\\mathrm{mg}\\right)\\cdot\\mathrm e^{-\\left((\\frac{0.0863}{\\mathrm d})\\cdot\\left(\\frac{7\\;\\mathrm d}{1\\;\\mathrm{wk}}\\right)\\cdot\\left(3.00\\;\\mathrm{wk}\\right)\\right)}\\\\=\\;12.7\\:\\mathrm{mg}\\\\\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "r704oh6he32o3di",
+                "type": "p"
+              }
+            ],
+            "id": "281543724"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qo7qdsr6fzs521n",
+                  "type": "p"
+                }
+              ],
+              "id": "3527474037"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q4uzknsccess756",
+                  "type": "p"
+                }
+              ],
+              "id": "1548659758"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bk76fka801b2zr9",
+                  "type": "p"
+                }
+              ],
+              "id": "1523012521"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "nrvjdll4ym7o3f3",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "N_t\\;=\\;N_0e^{-\\lambda t}\\\\=\\;\\left(78.0\\;\\mathrm{mg}\\right)\\cdot\\mathrm e^{-\\left((\\frac{0.0863}{\\mathrm d})\\cdot\\left(\\frac{7\\;\\mathrm d}{1\\;\\mathrm{wk}}\\right)\\cdot\\left(3.00\\;\\mathrm{wk}\\right)\\right)}\\\\=\\;12.7\\:\\mathrm{mg}\\\\\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "wn32u0odo54o5gm",
+                    "type": "p"
+                  }
+                ],
+                "id": "26086434"
+              },
+              "id": "1560445698",
+              "legacyMatch": "[12.5,12.9]",
+              "rule": "input = {[12.5,12.9]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that nuclear decay follows 1"
+                      },
+                      {
+                        "sup": true,
+                        "text": "st"
+                      },
+                      {
+                        "text": "-order kinetics, and use the equation relating amount ("
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "text": ") and time ("
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "cc8edcd5104f49d8980efda3ea61b28e",
+                    "type": "p"
+                  }
+                ],
+                "id": "2573539025"
+              },
+              "id": "4030134616",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The radioisotope 131I is used to study Grave's disease, a disorder of the thyroid gland. 131I has a half-life of 8.03 days.    How much time has elapsed for the process shown above?  dDetermine the decay constant for 131I.  d-1Starting with 78.0 mg 131I, how much of this radioisotope is left after 3.00 weeks?  mg",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The radioisotope "
+            },
+            {
+              "sup": true,
+              "text": "131"
+            },
+            {
+              "text": "I is used to study Grave's disease, a disorder of the thyroid gland. "
+            },
+            {
+              "sup": true,
+              "text": "131"
+            },
+            {
+              "text": "I has a half-life of 8.03 days.   "
+            }
+          ],
+          "id": "f1f3c028e8a94e15bc010f272ab61034",
+          "type": "p"
+        },
+        {
+          "caption": [
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "id": "a28d997e473e4b6f9bed4a7ab19156b9",
+              "type": "p"
+            }
+          ],
+          "children": [
+            {
+              "id": "2w0m34p1zumzr87",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "height": 128.95746770376834,
+          "id": "a84cc70f1b41463cb1364cf0bb2e6f98",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/7a/7a6ffbc492822f25f3568540a290ef45/I-131_decay_V2.png",
+          "style": "inline",
+          "type": "img",
+          "vertical-align": "middle",
+          "width": 400
+        },
+        {
+          "children": [
+            {
+              "text": "How much time has elapsed for the process shown above? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " d"
+            }
+          ],
+          "id": "d1b6e7b232c64c93bcb3099db9ddeee5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Determine the decay constant for "
+            },
+            {
+              "sup": true,
+              "text": "131"
+            },
+            {
+              "text": "I. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " d"
+            },
+            {
+              "sup": true,
+              "text": "-1"
+            }
+          ],
+          "id": "f95131e31aec4f4fb3bd797207640e5c",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Starting with 78.0 mg "
+            },
+            {
+              "sup": true,
+              "text": "131"
+            },
+            {
+              "text": "I, how much of this radioisotope is left after 3.00 weeks? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            },
+            {
+              "text": " mg"
+            }
+          ],
+          "id": "d94d45db0c294af9bca98d389ee6780a",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

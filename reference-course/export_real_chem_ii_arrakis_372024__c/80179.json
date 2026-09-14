@@ -1,0 +1,256 @@
+{
+  "id": "80179",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "gen_equilibrium_quiz-q9",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "exdxsshiyx6nabc",
+                  "type": "p"
+                }
+              ],
+              "id": "2408765901"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w9re703bpjkeluz",
+                  "type": "p"
+                }
+              ],
+              "id": "2288924950"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "foqbauk27c56gw3",
+                  "type": "p"
+                }
+              ],
+              "id": "1721705666"
+            }
+          ],
+          "id": "2357191175",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Q > K."
+                      }
+                    ],
+                    "id": "a9ga2o5n10nga6t",
+                    "type": "p"
+                  }
+                ],
+                "id": "1403485171"
+              },
+              "id": "3161295731",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Q > K."
+                      }
+                    ],
+                    "id": "x3s6x8ptqdtx3bd",
+                    "type": "p"
+                  }
+                ],
+                "id": "92114748"
+              },
+              "id": "3367171662",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Q > K."
+                      }
+                    ],
+                    "id": "oka45ch3gtrcc9f",
+                    "type": "p"
+                  }
+                ],
+                "id": "3842297108"
+              },
+              "id": "1790063950",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "w4330zdi0l1esdl",
+                    "type": "p"
+                  }
+                ],
+                "id": "426435829"
+              },
+              "id": "83142612",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3161295731"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3367171662"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1790063950"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3161295731"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3367171662"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1790063950"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "328380444",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "shift to the left"
+              }
+            ],
+            "id": "akiwbfs8uwcbhz8",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "shift to the right"
+              }
+            ],
+            "id": "ktjncnkn64k10ez",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "the reaction is at equilibrium."
+              }
+            ],
+            "id": "ncrsqfizc089rbg",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In the reaction described in the previous question, Indicate in which direction the reaction will shift to reach equilibrium."
+            }
+          ],
+          "id": "0h11cod5qivna58",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2357191175": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

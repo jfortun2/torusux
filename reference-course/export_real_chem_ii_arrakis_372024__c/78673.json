@@ -1,0 +1,231 @@
+{
+  "id": "78673",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78271"
+  ],
+  "title": "CFT_splitting_calc_pool1_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1533953266",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1354069159",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "3383583681",
+          "incorrectScore": null,
+          "outOf": 6,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The crystal field splitting is approximately equal to the energy for photons corresponding to the maximum absorbance."
+                      }
+                    ],
+                    "id": "78228736",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "d203515qptr7zwk",
+                        "text": ""
+                      }
+                    ],
+                    "id": "2041767150",
+                    "src": "\\mathrm\\Delta\\;=\\;E_{photon}\\;=\\;\\frac{hc}\\lambda\\;=\\;\\frac{(6.626\\times10^{-34}\\;\\mathrm J\\cdot\\mathrm s)(\\;2.998\\times10^8\\;\\mathrm m/\\mathrm s)}{735\\times10^{-9}\\;\\mathrm m}\\;=\\;2.70\\times10^{-19}\\;\\mathrm J",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2452505530",
+                    "src": "\\mathrm\\Delta\\;=\\;E_{photon}\\;=\\;\\frac{hc}\\lambda\\;=\\;\\frac{(6.626\\times10^{-34}\\;\\mathrm J\\cdot\\mathrm s)(\\;2.998\\times10^8\\;\\mathrm m/\\mathrm s)}{735\\times10^{-9}\\;\\mathrm m}\\;=\\;2.70\\times10^{-19}\\;\\mathrm J",
+                    "subtype": "latex",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1021800660",
+                "textDirection": "ltr"
+              },
+              "id": "3722083895",
+              "rule": "input = {[2.6e-19,2.8e-19]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The crystal field splitting is approximately equal to the energy for photons corresponding to the maximum absorbance."
+                      }
+                    ],
+                    "id": "2964270495",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "λ"
+                      },
+                      {
+                        "text": "·"
+                      },
+                      {
+                        "em": true,
+                        "text": "ν"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": "  and "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "hν"
+                      },
+                      {
+                        "text": " to calculate the energy. Pay attention to units."
+                      }
+                    ],
+                    "id": "xoyhksz7mq2qyvg",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3338381156",
+                "textDirection": "ltr"
+              },
+              "id": "407745201",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "The coordination complex ion [CrCl6]3– has a maximum absorbance of light at 735 nm. Calculate the approximate value of the crystal field splitting for this complex. Δ =  J",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1722220625",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "1044418213",
+        "inputType": "numeric",
+        "partId": "3383583681"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The coordination complex ion [CrCl"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "3–"
+            },
+            {
+              "text": " has a maximum absorbance of light at 735 nm. Calculate the approximate value of the crystal field splitting for this complex. "
+            }
+          ],
+          "id": "2092746540",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1044418213",
+              "type": "input_ref"
+            },
+            {
+              "text": " J"
+            }
+          ],
+          "id": "2888464849",
+          "type": "p"
+        }
+      ],
+      "id": "3320086824"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "3383583681": [
+      "78300"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

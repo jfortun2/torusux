@@ -1,0 +1,435 @@
+{
+  "id": "79678",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "nonstandard_lbd-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t1klkoqbahbdvon",
+                  "type": "p"
+                }
+              ],
+              "id": "2669212193"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "roa6vxjbd97elie",
+                  "type": "p"
+                }
+              ],
+              "id": "2794275639"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4y2yuv0g6xu7r3w",
+                  "type": "p"
+                }
+              ],
+              "id": "2999188245"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "y3vhrro4rzjcjyf",
+                    "type": "p"
+                  }
+                ],
+                "id": "1443568780"
+              },
+              "id": "2928868577",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "pvdqsyhhtxt14ja",
+                    "type": "p"
+                  }
+                ],
+                "id": "2724538290"
+              },
+              "id": "766056874",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "2n3b0zrjjsqtplj",
+                    "type": "p"
+                  }
+                ],
+                "id": "735750692"
+              },
+              "id": "2336676157",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jhh7c3glxc2q7bg",
+                  "type": "p"
+                }
+              ],
+              "id": "2099024776"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qk5behcqvcbe4tx",
+                  "type": "p"
+                }
+              ],
+              "id": "3203619253"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lhemud2yvcfiu6m",
+                  "type": "p"
+                }
+              ],
+              "id": "4077645920"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "fme4gfkwmlitvd3",
+                    "type": "p"
+                  }
+                ],
+                "id": "3027175697"
+              },
+              "id": "2752166445",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "5bq7g21gk672r3l",
+                    "type": "p"
+                  }
+                ],
+                "id": "3047023831"
+              },
+              "id": "1840412411",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "snhortogclp1ot1",
+                    "type": "p"
+                  }
+                ],
+                "id": "418092569"
+              },
+              "id": "2712518386",
+              "legacyMatch": "C",
+              "rule": "input like {second_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "9q2jb6owfowi5nm",
+                    "type": "p"
+                  }
+                ],
+                "id": "1642631728"
+              },
+              "id": "2323661198",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2928868577"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "766056874"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "2752166445"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "1840412411"
+        ],
+        [
+          [
+            "second_C"
+          ],
+          "2712518386"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "2559598191",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "1378673010",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "6jv5gmu29u8gd48",
+            "text": "spontaneous "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "oy41leelcukf0i2",
+            "text": "not spontaneous "
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "ndxqqu8bgn3vueq",
+            "text": "greater than 0 "
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "3michfrsvip12zm",
+            "text": "less than 0 "
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "u9zlw0ctesn8c6d",
+            "text": "equal to 0"
+          }
+        ],
+        "id": "second_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "second_C"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The reaction is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " because "
+            },
+            {
+              "em": true,
+              "text": "E"
+            },
+            {
+              "sub": true,
+              "text": "cell"
+            },
+            {
+              "text": " is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "zrcz2ncnc48vhxg",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78527"
+    ],
+    "second": [
+      "78527"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,329 @@
+{
+  "id": "79728",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78275"
+  ],
+  "title": "entropy_fill_in_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6x05tl6x2ypks0d",
+                  "type": "p"
+                }
+              ],
+              "id": "3857826590"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "17cqaymvyh2qxge",
+                  "type": "p"
+                }
+              ],
+              "id": "1313781279"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0ieu0zh3ssuzew4",
+                  "type": "p"
+                }
+              ],
+              "id": "1704764827"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The process of the carbon dioxide escaping the soda increases the dispersal of matter (the entropy)."
+                      }
+                    ],
+                    "id": "uj9wkft4en1hx4t",
+                    "type": "p"
+                  }
+                ],
+                "id": "1753324548"
+              },
+              "id": "122566576",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Carbonation is a result of carbon dioxide gas that is dissolved in a liquid. Entropy can be described as a measure of the dispersal of matter, or disorder of a system. Matter that is least dispersed, and is most ordered (least disordered) has the least entropy. Matter that is most dispersed, and is most disordered has the greatest entropy."
+                      }
+                    ],
+                    "id": "ie7wwozz6euqcqm",
+                    "type": "p"
+                  }
+                ],
+                "id": "2758929412"
+              },
+              "id": "3463480130",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q72uuy463yoarrg",
+                  "type": "p"
+                }
+              ],
+              "id": "2838216023"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dj0hvdrko9mb68s",
+                  "type": "p"
+                }
+              ],
+              "id": "177801729"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "azk0tm1qoip8sje",
+                  "type": "p"
+                }
+              ],
+              "id": "2651689082"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The process of the carbon dioxide escaping the soda increases the dispersal of matter (the entropy) and allows the system to occupy a greater distribution of kinetic states."
+                      }
+                    ],
+                    "id": "8lxph46i663759j",
+                    "type": "p"
+                  }
+                ],
+                "id": "1132658327"
+              },
+              "id": "1780183683",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Carbonation is a result of carbon dioxide gas that is dissolved in a liquid. Entropy can be described as a measure of the dispersal of matter or distribution of kinetic states (microstates). Matter that is least dispersed has the lowest distribution of microstates and matter that is most dispersed has the highest distribution of microstates."
+                      }
+                    ],
+                    "id": "2xfzu2oe2130xj1",
+                    "type": "p"
+                  }
+                ],
+                "id": "2739616516"
+              },
+              "id": "2713172633",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "eb0d8c0cq39o2yd",
+            "text": "increases"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "pyq414dllvl7gl5",
+            "text": "decreases"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "dizfcffq3trgj62",
+            "text": "stays the same"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "tiub4l4pdmjzi2d",
+            "text": "a greater distribution"
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "z1lpnzhrtfo5cej",
+            "text": "a smaller distribution"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "dzzz6ojz0zgqihx",
+            "text": "the same distribution"
+          }
+        ],
+        "id": "two_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A can of soda is opened and some of the carbonation escapes the soda causing it to go flat. During this process the entropy of the soda "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " and the system occupies "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " of kinetic energy states. Treat the soda and its carbonation as the system."
+            }
+          ],
+          "id": "vjoc79ekh6sjppu",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

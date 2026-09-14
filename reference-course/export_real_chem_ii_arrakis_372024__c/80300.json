@@ -1,0 +1,193 @@
+{
+  "id": "80300",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "lbd_mech_rate2-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6uueszgkjoo08ic",
+                  "type": "p"
+                }
+              ],
+              "id": "1194075769"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7dd3pcfpg2unfza",
+                  "type": "p"
+                }
+              ],
+              "id": "2689283567"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pju1olr2djqopa0",
+                  "type": "p"
+                }
+              ],
+              "id": "3158399157"
+            }
+          ],
+          "id": "528342385",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. O is produced in the first step and consumed in the second step."
+                      }
+                    ],
+                    "id": "jkn6hwkpzmlt9pb",
+                    "type": "p"
+                  }
+                ],
+                "id": "4099674313"
+              },
+              "id": "869062358",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. O is produced in the first step and consumed in the second step."
+                      }
+                    ],
+                    "id": "9qasktbr2x56z33",
+                    "type": "p"
+                  }
+                ],
+                "id": "1693384359"
+              },
+              "id": "3278873097",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "2564016393",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O"
+              }
+            ],
+            "id": "v5drjl5478aibwg",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "nt58lvkx9i9a2w5",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "O"
+              }
+            ],
+            "id": "9wyw0y9g2j7f5i1",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Identify the intermediate(s)."
+            }
+          ],
+          "id": "rrd2aj7p9f15s7u",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "528342385": [
+      "78465"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

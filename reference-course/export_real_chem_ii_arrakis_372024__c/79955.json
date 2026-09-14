@@ -1,0 +1,180 @@
+{
+  "id": "79955",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary08-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l4u33qdpl88zrod",
+                  "type": "p"
+                }
+              ],
+              "id": "1776438785"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mts2vzvtedjh67h",
+                  "type": "p"
+                }
+              ],
+              "id": "953381531"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kz9rh1l4j88am1x",
+                  "type": "p"
+                }
+              ],
+              "id": "3221821217"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "x9vmxt0kub4cakr",
+                    "type": "p"
+                  }
+                ],
+                "id": "481241417"
+              },
+              "id": "1973654219",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "92783dy2xxoi2km",
+            "text": "1. Not at all "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "09io43x3ja59dwx",
+            "text": "2. "
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "wx5c2ss2qvjox86",
+            "text": "3. "
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "njyh2hym09yurnd",
+            "text": "4. "
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "wmkdpz9mc06bsd8",
+            "text": "5. Significantly"
+          }
+        ],
+        "id": "one_E"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D",
+          "one_E"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "To what extent did you change what and how you taught based on use of the OLI courseware? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "bkim6x9i0eiref3",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

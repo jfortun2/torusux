@@ -1,0 +1,237 @@
+{
+  "id": "80437",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78200"
+  ],
+  "title": "galvanic_cell_concept_pool_v1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "D"
+        ],
+        "4289563777"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The correct answers are: "
+                  }
+                ],
+                "id": "mnig5mp3ldose3g",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "cpmenjled7avnbu",
+                        "text": "Electrons flow from the anode to the cathode."
+                      }
+                    ],
+                    "id": "oz011n3zjb0haz3",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "iwc3wfvd5mh64wm",
+                        "text": "The anode is negatively charged."
+                      }
+                    ],
+                    "id": "celn0ql2773ner5",
+                    "type": "li"
+                  }
+                ],
+                "id": "jt7ydut771z9w39",
+                "type": "ul"
+              }
+            ],
+            "id": "3833058737"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zyollfizx0vyksk",
+                  "type": "p"
+                }
+              ],
+              "id": "1321282337"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8e5zh901sbrdmb9",
+                  "type": "p"
+                }
+              ],
+              "id": "1400901542"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b0k2judsgngu66d",
+                  "type": "p"
+                }
+              ],
+              "id": "4286220739"
+            }
+          ],
+          "id": "130616646",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Electrons flow from the anode to the cathode and the anode is negatively charged."
+                      }
+                    ],
+                    "id": "are8u1y9bs6pzoj",
+                    "type": "p"
+                  }
+                ],
+                "id": "4079287829"
+              },
+              "id": "4289563777",
+              "legacyMatch": "A,D",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && (input like {D} && (input like {A})))",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the setup and operation of galvanic cells, especially the meaning of oxidation and reduction and the definition of anode and cathode in terms of loss or gain of electrons, and the resulting direction of flow of electrons and ions from the salt bridge."
+                      }
+                    ],
+                    "id": "oy6pwhv0wsp4j2s",
+                    "type": "p"
+                  }
+                ],
+                "id": "3469955673"
+              },
+              "id": "279612984",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Electrons flow from the anode to the cathode."
+              }
+            ],
+            "id": "lz4giop3c69cbsd",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidation happens at the cathode and reduction happens at the anode."
+              }
+            ],
+            "id": "x3uk9aifecf3fr7",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Cations from the salt bridge flow into the oxidation half-cell."
+              }
+            ],
+            "id": "cbb4hixckmlnw1o",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The anode is negatively charged."
+              }
+            ],
+            "id": "e0lljoi633kcqng",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements about galvanic cells are true? Select all that apply."
+            }
+          ],
+          "id": "fipruno2mnu96m6",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "130616646": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

@@ -1,0 +1,249 @@
+{
+  "id": "78779",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "NameCoordComplexLBD2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "There are three ethylenediamine (en) ligands present. This ligand contains "
+                  },
+                  {
+                    "em": true,
+                    "text": "di"
+                  },
+                  {
+                    "text": " in its name, so the prefix "
+                  },
+                  {
+                    "em": true,
+                    "text": "tris"
+                  },
+                  {
+                    "text": "- is used to indicate three en molecules. "
+                  }
+                ],
+                "id": "2827230248",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "En is neutral, and the complex has a charge of +2, so the charge on Ni is also +2. Since the complex ion is a cation, this is named nickel(II)."
+                  }
+                ],
+                "id": "1163296450",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This name of the complex is therefore tris(ethylenediamine)nickel(II) ion."
+                  }
+                ],
+                "id": "978289947",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "3364594637",
+            "textDirection": "ltr"
+          },
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "194526625",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3969983206",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Ethylenediamine (en) contains "
+                      },
+                      {
+                        "em": true,
+                        "text": "di"
+                      },
+                      {
+                        "text": " in its name, so the prefix "
+                      },
+                      {
+                        "em": true,
+                        "text": "tris"
+                      },
+                      {
+                        "text": "- is used to indicate three en ligands. En is neutral, and the complex has a charge of +2, so the charge on Ni is also +2. The complex is a cation, so it is named: tris(ethylenediamine)nickel(II) ion."
+                      }
+                    ],
+                    "id": "4027272816",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3973513523",
+                "textDirection": "ltr"
+              },
+              "id": "2752503748",
+              "rule": "input contains {tris(ethylenediamine)nickel(II)}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The ligand is named first. Ethylenediamine contains "
+                      },
+                      {
+                        "em": true,
+                        "text": "di"
+                      },
+                      {
+                        "text": ", so a special prefix is used to indicate the number. The metal ion is named next, with a Roman numeral indicating the charge. The complex ion is a cation, so the metal name is unchanged."
+                      }
+                    ],
+                    "id": "3673225700",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4251681728",
+                "textDirection": "ltr"
+              },
+              "id": "946721599",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination complex [Ni(H2NCH2CH2NH2)3]2+.   ion",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "2544279981",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "93568757",
+        "inputType": "text",
+        "partId": "1",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination complex [Ni(H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "NCH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "CH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "NH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": ".  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "93568757",
+              "type": "input_ref"
+            },
+            {
+              "text": " ion"
+            }
+          ],
+          "id": "1892761605",
+          "type": "p"
+        }
+      ],
+      "id": "3078212755"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78460"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

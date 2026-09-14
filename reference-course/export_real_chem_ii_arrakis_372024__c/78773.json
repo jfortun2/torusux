@@ -1,0 +1,273 @@
+{
+  "id": "78773",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_conc_digt-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xmwpk4fsj4i7xft",
+                  "type": "p"
+                }
+              ],
+              "id": "642476301"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ad53ekqh1vtv8ix",
+                  "type": "p"
+                }
+              ],
+              "id": "3680921728"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "90akxvu1z6oxc0r",
+                  "type": "p"
+                }
+              ],
+              "id": "2265375987"
+            }
+          ],
+          "id": "3183916983",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the reaction shifts to the left, the product amounts will decrease."
+                      }
+                    ],
+                    "id": "yinjryb22bs0rjx",
+                    "type": "p"
+                  }
+                ],
+                "id": "2745130626"
+              },
+              "id": "1663394746",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If the reaction shifts to the left, the product amounts will decrease."
+                      }
+                    ],
+                    "id": "k1w3q937b4waw90",
+                    "type": "p"
+                  }
+                ],
+                "id": "3585785917"
+              },
+              "id": "1764945234",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the reaction shifts to the left, the product amounts will decrease."
+                      }
+                    ],
+                    "id": "mlpm1ajdo2sb39j",
+                    "type": "p"
+                  }
+                ],
+                "id": "493709536"
+              },
+              "id": "3804646075",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "umk0xv5zg1cu4uu",
+                    "type": "p"
+                  }
+                ],
+                "id": "1389852366"
+              },
+              "id": "2994735069",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1663394746"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1764945234"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3804646075"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1663394746"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1764945234"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3804646075"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3370716752",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will increase."
+              }
+            ],
+            "id": "3q3z0f6smplleex",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will decrease."
+              }
+            ],
+            "id": "6h9qjw0q6ssplmv",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will remain the same."
+              }
+            ],
+            "id": "s9scyi6fk9w4f9d",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What will happen to the amount of H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": ")?"
+            }
+          ],
+          "id": "1djbd2e6yavezto",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3183916983": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,150 @@
+{
+  "id": "78697",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary04-q14",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e0f32jthoaiw7d8",
+                  "type": "p"
+                }
+              ],
+              "id": "1141704894"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zqpuwaa8nm9jgry",
+                  "type": "p"
+                }
+              ],
+              "id": "2730958555"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dq8uf3cokmukosc",
+                  "type": "p"
+                }
+              ],
+              "id": "2305246430"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "y2kg279peaxfe36",
+                    "type": "p"
+                  }
+                ],
+                "id": "2296046711"
+              },
+              "id": "2478275776",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "i043gyx2t6qzne1",
+            "text": "yes"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "kkxodjajwyu57ug",
+            "text": "no"
+          }
+        ],
+        "id": "one_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Did you experience any new or striking challenges from using OLI in your course this week? If so, please describe. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "ez9b7nk8i8inos1",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

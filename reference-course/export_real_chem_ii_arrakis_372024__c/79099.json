@@ -1,0 +1,360 @@
+{
+  "id": "79099",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "GeomIsomerLBD1_q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "926136605",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1978628708",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2153928597",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3069855594",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "949957730",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2497017724",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Six ligands form an octahedral geometry."
+                      }
+                    ],
+                    "id": "2431248448",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4264494507",
+                "textDirection": "ltr"
+              },
+              "id": "878620266",
+              "rule": "input like {1291177281}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A linear shape forms from two ligands."
+                      }
+                    ],
+                    "id": "3677716669",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3943997995",
+                "textDirection": "ltr"
+              },
+              "id": "573934067",
+              "rule": "input like {1614738841}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A square planar geometry forms from four ligands."
+                      }
+                    ],
+                    "id": "1618337257",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "(Also, additional information beyond the scope of this unit is needed to predict square planar over tetrahedral.)"
+                      }
+                    ],
+                    "id": "2860860264",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2247350804",
+                "textDirection": "ltr"
+              },
+              "id": "4266990434",
+              "rule": "input like {2985195277}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A tetrahedral geometry forms from four ligands."
+                      }
+                    ],
+                    "id": "3321203594",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "(Also, additional information beyond the scope of this unit is needed to predict tetrahedral over square planar.)"
+                      }
+                    ],
+                    "id": "780579077",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1948066117",
+                "textDirection": "ltr"
+              },
+              "id": "3370405303",
+              "rule": "input like {2111877724}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A square planar or tetrahedral geometry forms from four ligands."
+                      }
+                    ],
+                    "id": "594533674",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1598489502",
+                "textDirection": "ltr"
+              },
+              "id": "380607382",
+              "rule": "input like {2785897954}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "2130904540",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2501262056",
+                "textDirection": "ltr"
+              },
+              "id": "486868532",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "What geometry do the ligands form around the central cobalt(II) ion?",
+      "targeted": [
+        [
+          [
+            "1614738841"
+          ],
+          "573934067"
+        ],
+        [
+          [
+            "2985195277"
+          ],
+          "4266990434"
+        ],
+        [
+          [
+            "2111877724"
+          ],
+          "3370405303"
+        ],
+        [
+          [
+            "2785897954"
+          ],
+          "380607382"
+        ]
+      ],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "638856861",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Linear"
+              }
+            ],
+            "id": "909422962",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1614738841",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Square planar"
+              }
+            ],
+            "id": "3459973226",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2985195277",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Tetrahedral"
+              }
+            ],
+            "id": "4175373548",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2111877724",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Square planar or tetrahedral"
+              }
+            ],
+            "id": "709573137",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2785897954",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Octahedral"
+              }
+            ],
+            "id": "75206377",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1291177281",
+        "textDirection": "ltr"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What geometry do the ligands form around the central cobalt(II) ion?"
+            }
+          ],
+          "id": "11281221",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "1545152078",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": [
+      "78297"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

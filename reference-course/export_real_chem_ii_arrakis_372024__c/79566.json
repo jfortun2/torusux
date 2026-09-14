@@ -1,0 +1,272 @@
+{
+  "id": "79566",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78078"
+  ],
+  "title": "corrosion_skill_pool_v1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D",
+          "E"
+        ],
+        "4230171858"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "71b1dqibrb70o79",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "aj8hqgezex9ma1x",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "8xn6lx1vqt5uvxa",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "955jbw7mzfm3ivz",
+                        "text": "The presence of water and electrolytes can promote corrosion."
+                      }
+                    ],
+                    "id": "3l3abu7az4z5chh",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "3aoh4czlkfqtxo4",
+                        "text": "Painting or galvanizing can protect metal from corrosion."
+                      }
+                    ],
+                    "id": "byu8ckd1m7lrkju",
+                    "type": "li"
+                  }
+                ],
+                "id": "sbu8kiq3yrc9pi9",
+                "type": "ul"
+              }
+            ],
+            "id": "1240983846"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m4xrnmo1v1nqlqy",
+                  "type": "p"
+                }
+              ],
+              "id": "668248350"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bojsml15m1nucoa",
+                  "type": "p"
+                }
+              ],
+              "id": "1210243496"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n9cz4rx6n87kqdp",
+                  "type": "p"
+                }
+              ],
+              "id": "2455036922"
+            }
+          ],
+          "id": "aeaa1bc1d1db449db5ecde811d26b5e9",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Corrosion occurs when a metal undergoes oxidation, usually through natural contact with oxygen in the air or contact with moisture, especially water containing electrolytes."
+                      }
+                    ],
+                    "id": "a25d5a4fa2c145418c51b6ff9d3fee99",
+                    "type": "p"
+                  }
+                ],
+                "id": "951922620"
+              },
+              "id": "4230171858",
+              "legacyMatch": "D,E",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E} && (input like {D}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Corrosion occurs when a metal undergoes oxidation, usually through natural contact with oxygen in the air or contact with moisture, especially water containing electrolytes. Metals tend to lose electrons (oxidation), so many metals corrode over time. Metals can be protected against corrosion in several ways, including covering its surface with paint or another substance or having a layer of surface oxidation. Also, a sacrificial anode made from a metal that is more reactive and more likely to corrode can be connected to the metal needing protection against corrosion."
+                      }
+                    ],
+                    "id": "dbbc94893eae434291e43241536d0434",
+                    "type": "p"
+                  }
+                ],
+                "id": "3146165023"
+              },
+              "id": "318909359",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Steel will not corrode over time."
+              }
+            ],
+            "id": "usymul7f8layi1c",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Very few metals undergo oxidation over time."
+              }
+            ],
+            "id": "jmq4xslbwse91ei",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Connecting metal A to a less reactive metal will prevent or slow the corrosion of metal A."
+              }
+            ],
+            "id": "gejjadmsiwut39q",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The presence of water and electrolytes can promote corrosion."
+              }
+            ],
+            "id": "bkzei1kf6md51bz",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Painting or galvanizing can protect metal from corrosion. "
+              }
+            ],
+            "id": "nrioxhswu7em9cr",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements about corrosion is true? Select all that apply."
+            }
+          ],
+          "id": "b4f62ebe5fc74f52ad063fbb34d155b2",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "aeaa1bc1d1db449db5ecde811d26b5e9": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

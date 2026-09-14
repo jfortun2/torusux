@@ -40,7 +40,7 @@ import {
   friendlyObjectiveName,
   type RemovalImpact,
 } from './learningDesign';
-import { persistPageMeta, persistSavedPageLayout } from './pageCustomization';
+import { createDefaultPageBlocks, persistPageMeta, persistSavedPageLayout, resolvePageProfile } from './pageCustomization';
 
 const ROOT_DESTINATION = '__root__';
 
@@ -104,23 +104,36 @@ function structuralLabel(type: CurriculumNode['type']): string {
 }
 
 function seedImportedPage(title: string, scoring: PageScoring, projectName: string, summary: string) {
-  persistSavedPageLayout(title, [
-    {
-      id: `pb-import-${Date.now()}`,
-      origin: 'instructor',
-      status: 'added',
-      kind: 'text',
-      title,
-      text: {
-        heading: title,
-        bodyHtml: `<p>Imported from ${projectName}. ${summary}</p>`,
-        learningObjective: '',
-      },
-    },
-  ]);
+  const profile = resolvePageProfile(title);
+  persistSavedPageLayout(
+    title,
+    profile.matched
+      ? createDefaultPageBlocks({
+          pageTitle: title,
+          selectionIds: profile.bankIds,
+          removedBanks: [],
+          removedEmbedded: {},
+          images: {},
+          origin: 'instructor',
+        })
+      : [
+          {
+            id: `pb-import-${Date.now()}`,
+            origin: 'instructor',
+            status: 'added',
+            kind: 'text',
+            title,
+            text: {
+              heading: title,
+              bodyHtml: `<p>Imported from ${projectName}. ${summary}</p>`,
+              learningObjective: '',
+            },
+          },
+        ],
+  );
   persistPageMeta(title, {
     scoring,
-    attachedObjectiveCodes: [],
+    attachedObjectiveCodes: profile.objectiveCodes,
     isInstructorCreated: true,
   });
 }

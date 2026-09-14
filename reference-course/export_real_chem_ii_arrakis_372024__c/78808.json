@@ -1,0 +1,258 @@
+{
+  "id": "78808",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_acidic2_digt-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "D"
+        ],
+        "3936552408"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. In your balanced overall equation, you should have H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " on the left side of the equation and H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O on the right side of the equation."
+                  }
+                ],
+                "id": "3z22n6q0e7ijp9p",
+                "type": "p"
+              }
+            ],
+            "id": "2582520282"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ad65o111ogpvo4d",
+                  "type": "p"
+                }
+              ],
+              "id": "2673701219"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y595d2o8cq4ikh9",
+                  "type": "p"
+                }
+              ],
+              "id": "2842442619"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "we6vsi2cn37p3hv",
+                  "type": "p"
+                }
+              ],
+              "id": "3712729558"
+            }
+          ],
+          "id": "3792064836",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "341vej6aaju3ds2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3905559487"
+              },
+              "id": "3936552408",
+              "legacyMatch": "A,D",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && (input like {D} && (input like {A})))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are two correct choices."
+                      }
+                    ],
+                    "id": "9czfiykffn2unsx",
+                    "type": "p"
+                  }
+                ],
+                "id": "2285595530"
+              },
+              "id": "2775251789",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Balance the reaction above in acidic, aqueous solution on a separate sheet of paper. Which of the following statements are true of the balanced overall equation? Select all that apply. ",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " on the left side of the equation."
+              }
+            ],
+            "id": "jix5q2ucx1jloae",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " on the right side of the equation."
+              }
+            ],
+            "id": "8n321wamrjwme1l",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O on the left side of the equation."
+              }
+            ],
+            "id": "ojm0jmdwhuu3dn6",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O on the right side of the equation."
+              }
+            ],
+            "id": "fw1d4vw5g6y8luq",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Balance the reaction above in acidic, aqueous solution on a separate sheet of paper. Which of the following statements are true of the balanced overall equation? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply. "
+            }
+          ],
+          "id": "2ef8yskvi9mkp6g",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "3792064836": [
+      "78507"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

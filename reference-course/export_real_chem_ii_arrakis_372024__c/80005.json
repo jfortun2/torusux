@@ -1,0 +1,537 @@
+{
+  "id": "80005",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "homo_hetero_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "text": "O("
+                    },
+                    {
+                      "em": true,
+                      "text": "l"
+                    },
+                    {
+                      "text": ") does not get included in the equilibrium constant expression."
+                    }
+                  ],
+                  "id": "92jibssqsqbszz6",
+                  "type": "p"
+                }
+              ],
+              "id": "3200529809"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Remember to include the coefficient(s) as exponents."
+                    }
+                  ],
+                  "id": "209kq8m6l8wfoji",
+                  "type": "p"
+                }
+              ],
+              "id": "1823595797"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iuacu91sfbl247s",
+                  "type": "p"
+                }
+              ],
+              "id": "841514944"
+            }
+          ],
+          "id": "1500137156",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "s3su1ux8mc4iswf",
+                    "type": "p"
+                  }
+                ],
+                "id": "2504792966"
+              },
+              "id": "345227841",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember to include the coefficient(s) as exponents."
+                      }
+                    ],
+                    "id": "omaeefludh162n5",
+                    "type": "p"
+                  }
+                ],
+                "id": "4207925633"
+              },
+              "id": "2932956765",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O("
+                      },
+                      {
+                        "em": true,
+                        "text": "l"
+                      },
+                      {
+                        "text": ") does not get included in the equilibrium constant expression."
+                      }
+                    ],
+                    "id": "rveqitzqwcwp4in",
+                    "type": "p"
+                  }
+                ],
+                "id": "428569608"
+              },
+              "id": "3878038373",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant expression is [products]/[reactants]. H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O("
+                      },
+                      {
+                        "em": true,
+                        "text": "l"
+                      },
+                      {
+                        "text": ") does not get included in the equilibrium constant expression. "
+                      }
+                    ],
+                    "id": "jc9ebyjfqrlj22o",
+                    "type": "p"
+                  }
+                ],
+                "id": "2618809713"
+              },
+              "id": "1021104004",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant expression is [products]/[reactants]. Remember to include the coefficient(s) as exponents."
+                      }
+                    ],
+                    "id": "464ct8ymqk3m0tp",
+                    "type": "p"
+                  }
+                ],
+                "id": "4023631468"
+              },
+              "id": "1157861323",
+              "legacyMatch": "E",
+              "rule": "input like {E}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant expression is [products]/[reactants]."
+                      }
+                    ],
+                    "id": "d757rnpqcezg96k",
+                    "type": "p"
+                  }
+                ],
+                "id": "781351337"
+              },
+              "id": "363766654",
+              "legacyMatch": "F",
+              "rule": "input like {F}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "dc0jqlr6o94km4t",
+                    "type": "p"
+                  }
+                ],
+                "id": "1809297935"
+              },
+              "id": "1581351937",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "345227841"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2932956765"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3878038373"
+            ],
+            [
+              [
+                "D"
+              ],
+              "1021104004"
+            ],
+            [
+              [
+                "E"
+              ],
+              "1157861323"
+            ],
+            [
+              [
+                "F"
+              ],
+              "363766654"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "345227841"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2932956765"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3878038373"
+        ],
+        [
+          [
+            "D"
+          ],
+          "1021104004"
+        ],
+        [
+          [
+            "E"
+          ],
+          "1157861323"
+        ],
+        [
+          [
+            "F"
+          ],
+          "363766654"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "2720471854",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack{\\mathrm{CO}}_2\\rbrack}{\\lbrack{\\mathrm{CH}}_4\\rbrack\\lbrack{\\mathrm O}_2\\rbrack^2}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "8qf4367qcqgay7o",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack{\\mathrm{CO}}_2\\rbrack}{\\lbrack{\\mathrm{CH}}_4\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "06gfdi0646267jq",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack{\\mathrm{CO}}_2\\rbrack\\lbrack{\\mathrm H}_2\\mathrm O\\rbrack^2}{\\lbrack{\\mathrm{CH}}_4 \\rbrack\\lbrack{\\mathrm O}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "9hwe7pjgk84zfxs",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack{\\mathrm{CH}}_4\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}{\\lbrack{\\mathrm{CO}}_2\\rbrack\\lbrack {\\mathrm H}_2\\mathrm O\\rbrack^2}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "z6sp815ruqvstye",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack{\\mathrm{CH}}_4\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}{\\lbrack{\\mathrm{CO}}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "jlm9gc2n9qoop4n",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack{\\mathrm{CH}}_4\\rbrack\\lbrack{\\mathrm O}_2\\rbrack^2}{\\lbrack{\\mathrm{CO}}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "5b3sgm2fijha4pe",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is the correct equilibrium expression for the reaction below? "
+            }
+          ],
+          "id": "osbrr0v5wbbgteb",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "i67cf1xtv7hhapp",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "d4ednu5lny35yl2",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{CH}}_4(g)\\;+\\;2\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{CO}}_2(g)\\;+\\;2\\;{\\mathrm H}_2\\mathrm O(l)",
+          "subtype": "latex",
+          "type": "formula"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1500137156": [
+      "78396"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

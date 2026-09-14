@@ -1,0 +1,245 @@
+{
+  "id": "79756",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78049"
+  ],
+  "title": "conc_species_weak_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": " Incorrect. "
+                  }
+                ],
+                "id": "vixbklekj5iov4r",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution."
+                  }
+                ],
+                "id": "mpkzb6e1rfouoyn",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " Since @@acid@@ is a weak acid, it only partially dissociates. Therefore the reactant (@@acid@@ acid) is in the highest concentration with little product (@@conjugate@@ ion and hydronium ion) formed. Since the solution is acidic, the hydronium concentration is higher than the hydroxide concentration. "
+                  }
+                ],
+                "id": "thabxpzlkx3c39p",
+                "type": "p"
+              }
+            ],
+            "id": "2111680498"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uk301lclwh0nvmg",
+                  "type": "p"
+                }
+              ],
+              "id": "1103512251"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kaddi925b22qxjj",
+                  "type": "p"
+                }
+              ],
+              "id": "4237632181"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4ecowcr85zd4ub4",
+                  "type": "p"
+                }
+              ],
+              "id": "2016178058"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Since @@acid@@ is a weak acid, it only partially dissociates. Therefore the reactant (@@acid@@ acid) is in the highest concentration with little product (@@conjugate@@ ion and hydronium ion) formed. Since the solution is acidic, the hydronium concentration is higher than the hydroxide concentration."
+                      }
+                    ],
+                    "id": "a7d64b4f6c374a9593e5e79ff6670d62",
+                    "type": "p"
+                  }
+                ],
+                "id": "267652661"
+              },
+              "id": "2589694661",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. To determine the concentration of different species in aqueous solution, determine:  whether the species is an electrolyte (dissolves in water) or a non-electrolyte (does not dissolve in water) based on its solubility,  whether the species is an acid, base, or neither based on its ability to donate or accept protons, and whether the species is a strong or weak acid or base.  Strong acids or bases in solution ionize completely, which means only the forward reaction to form products will occur. Weak acids and bases ionize partially, which means only a small extent of forward reaction to form products will occur and the reverse reaction will occur to a much larger extent. Be sure to apply the stoichiometric ratio of cations to anions in the species to determine the relative concentrations of cations and anions in solution."
+                      }
+                    ],
+                    "id": "f9b540bab6674e85b1cc795922556e43",
+                    "type": "p"
+                  }
+                ],
+                "id": "3863072806"
+              },
+              "id": "4199017694",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "2408243476",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst a=[\"hypoiodious\",\"hydrocyanic\",\"hypobromous\",\"hypochlorous\",\"benzoic\",\"formic\",\"nitrous\",\"hydrofluoric\",\"chlorous\",\"periodic\",\"iodic\",\"acetic\"];\n\nconst conj = [\"hypoiodite\",\"cyanide\",\"hypobromite\",\"hypochlorite\",\"benzoate\",\"formate\",\"nitrite\",\"fluoride\",\"chlorite\",\"periodate\",\"iodate\",\"acetate\"];\n\n\nconst c = OLI.random(0,11);\nconst acid = a[c];\nconst conjugate = conj[c];\n\n\n// Expose variables to OLI\nmodule.exports = {\n a, conj, acid, conjugate\n};\n",
+              "id": "fb9e2223519c405f9588f1d9e6ae5d11",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@conjugate@@ ion"
+              }
+            ],
+            "id": "l5de8ebqqsvly3v",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "hydronium ion"
+              }
+            ],
+            "id": "8wpec4etp1fm0kl",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "hydroxide ion"
+              }
+            ],
+            "id": "stk458cco90gn5c",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@acid@@ acid"
+              }
+            ],
+            "id": "0d4vfg7yzf3sqwo",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In a solution of 0.100 M @@acid@@ acid, what species is in the highest concentration? "
+            }
+          ],
+          "id": "b4c39da97f4540f79c304021257ea6db",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

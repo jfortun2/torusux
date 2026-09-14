@@ -1,0 +1,184 @@
+{
+  "id": "80007",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary05-q2a",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "1748230866"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ihlcj86cjclxymc",
+                  "type": "p"
+                }
+              ],
+              "id": "2714963621"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b67s4pzt8cp1xp0",
+                  "type": "p"
+                }
+              ],
+              "id": "4015514538"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8yk67funqt9vfay",
+                  "type": "p"
+                }
+              ],
+              "id": "1664732763"
+            }
+          ],
+          "id": "38291156",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "ixxgis2reo1emvd",
+                    "type": "p"
+                  }
+                ],
+                "id": "2604209121"
+              },
+              "id": "1748230866",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*}))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online-synchronous"
+              }
+            ],
+            "id": "wmqb8mm3gasuqf9",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online-asynchronous"
+              }
+            ],
+            "id": "wsrpdz7weub3mq5",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "In-person"
+              }
+            ],
+            "id": "2bn6jyywvdszell",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Other"
+              }
+            ],
+            "id": "j51xvz17g2ak43n",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What are your mode(s) of instruction for the following: "
+            }
+          ],
+          "id": "3q5ga4j61sz1czd",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Lecture (select all that apply)"
+            }
+          ],
+          "id": "qzwaa9ykk1tfo5n",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "38291156": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

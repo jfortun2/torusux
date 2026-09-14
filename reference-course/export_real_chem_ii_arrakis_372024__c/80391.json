@@ -1,0 +1,396 @@
+{
+  "id": "80391",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ColorOfComplexesLBD2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "What color is 700 nm light?"
+                    }
+                  ],
+                  "id": "861233809",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1731681636",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "4089458813",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 700 nm light is red. A substance that absorbs red light will appear green (the complementary color to red)."
+                      }
+                    ],
+                    "id": "3957082997",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "688026366",
+                "textDirection": "ltr"
+              },
+              "id": "3793983631",
+              "rule": "input like {3414126287}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect.  A substance appears to be the complementary color of the color it absorbs. Use the color wheel."
+                      }
+                    ],
+                    "id": "1473280719",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1507264566",
+                "textDirection": "ltr"
+              },
+              "id": "3921661160",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "What are the complementary colors to blue "
+                    },
+                    {
+                      "text": "and",
+                      "underline": true
+                    },
+                    {
+                      "text": " violet?"
+                    }
+                  ],
+                  "id": "3427574463",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "772892344",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "172067882",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A substance that is blue-violet will absorb yellow-orange light (yellow is the complement to violet and orange is the complement to blue). The wavelength of yellow-orange light is approximately 590 nm."
+                      }
+                    ],
+                    "id": "288787940",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2851179314",
+                "textDirection": "ltr"
+              },
+              "id": "3487133412",
+              "rule": "input = {[570,620]}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A substance absorbs light that is complementary to the perceived color of the substance. Use the color wheel and consider both absorbed colors."
+                      }
+                    ],
+                    "id": "1684163108",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1397021700",
+                "textDirection": "ltr"
+              },
+              "id": "2026758663",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "CoF63− has an absorption maximum at approximately 700 nm. What color is CoF63−?An aqueous solution of a transition metal ion with octahedral geometry appears blue-violet. What is the approximate wavelength for the absorption maximum for this ion? nm",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "2056507615",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3552414441",
+          "operation": "shuffle",
+          "partId": "4089458813",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "red"
+              }
+            ],
+            "id": "2820445473",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2662563493",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "orange"
+              }
+            ],
+            "id": "1014093576",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "549361112",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "yellow"
+              }
+            ],
+            "id": "4276300426",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2724274381",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "green"
+              }
+            ],
+            "id": "3241664436",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3414126287",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "blue"
+              }
+            ],
+            "id": "1398021939",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1440716687",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "violet"
+              }
+            ],
+            "id": "2607912516",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3497418125",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "2662563493",
+          "549361112",
+          "2724274381",
+          "3414126287",
+          "1440716687",
+          "3497418125"
+        ],
+        "id": "2767076755",
+        "inputType": "dropdown",
+        "partId": "4089458813"
+      },
+      {
+        "id": "94078035",
+        "inputType": "numeric",
+        "partId": "172067882",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "CoF"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "sup": true,
+              "text": "3−"
+            },
+            {
+              "text": " has an absorption maximum at approximately 700 nm. What color is CoF"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "sup": true,
+              "text": "3−"
+            },
+            {
+              "text": "?"
+            }
+          ],
+          "id": "825821224",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2767076755",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2285113944",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "An aqueous solution of a transition metal ion with octahedral geometry appears blue-violet. What is the approximate wavelength for the absorption maximum for this ion?"
+            }
+          ],
+          "id": "2515381517",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "94078035",
+              "type": "input_ref"
+            },
+            {
+              "text": " nm"
+            }
+          ],
+          "id": "143173074",
+          "type": "p"
+        }
+      ],
+      "id": "3127139223"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "172067882": [
+      "78328"
+    ],
+    "4089458813": [
+      "78328"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

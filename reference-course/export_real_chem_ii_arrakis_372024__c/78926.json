@@ -1,0 +1,392 @@
+{
+  "id": "78926",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "electro_calc_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\mathrm{Volume}\\;=\\;\\left(0.100\\;\\mathrm{mm}\\;\\times\\frac{1\\;\\mathrm{cm}}{10\\;\\mathrm{mm}}\\right)\\;\\times\\;\\left(16.5\\;\\mathrm m^2\\;\\times\\;\\left(\\frac{10,000\\;\\mathrm{cm}^2}{1\\;\\mathrm m^2}\\right)\\right)\\;=\\;165\\;\\mathrm{cm}^3\\\\\\mathrm{Mass}\\;=\\;(165\\;\\mathrm{cm}^3)\\;\\times\\;(7.140\\;\\mathrm g/\\mathrm{cm}^3)\\;=\\;1,178\\;\\mathrm g\\;\\mathrm{Zn}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "sbh1llfohrwprz9",
+                "type": "p"
+              }
+            ],
+            "id": "321221822"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nbzkin9qu8ntba5",
+                  "type": "p"
+                }
+              ],
+              "id": "3735251920"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k9l3r660j7f22nn",
+                  "type": "p"
+                }
+              ],
+              "id": "2940017388"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9j3awyhixzktsgm",
+                  "type": "p"
+                }
+              ],
+              "id": "3813985035"
+            }
+          ],
+          "id": "2984548877",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\mathrm{Volume}\\;=\\;\\left(0.100\\;\\mathrm{mm}\\;\\times\\frac{1\\;\\mathrm{cm}}{10\\;\\mathrm{mm}}\\right)\\;\\times\\;\\left(16.5\\;\\mathrm m^2\\;\\times\\;\\left(\\frac{10,000\\;\\mathrm{cm}^2}{1\\;\\mathrm m^2}\\right)\\right)\\;=\\;165\\;\\mathrm{cm}^3\\\\\\mathrm{Mass}\\;=\\;(165\\;\\mathrm{cm}^3)\\;\\times\\;(7.140\\;\\mathrm g/\\mathrm{cm}^3)\\;=\\;1,178\\;\\mathrm g\\;\\mathrm{Zn}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "i6ltjpfsbznl5oy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3053943974"
+              },
+              "id": "1417211749",
+              "legacyMatch": "[1175,1180]",
+              "rule": "input = {[1175,1180]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "4n8q5r31ohalunf",
+                    "type": "p"
+                  }
+                ],
+                "id": "2211432192"
+              },
+              "id": "3047749806",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\mathrm{mol}\\;\\mathrm{Zn}\\;=\\;11,780\\;\\mathrm g\\;\\mathrm{Zn}\\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{Zn}}{65.38\\;\\mathrm g\\;\\mathrm{Zn}}\\;=\\;180.02\\;\\mathrm{mol}\\;\\mathrm{Zn}\\\\\\mathrm{Zn}^{2+}\\;+\\;2\\;\\mathrm e^-\\;\\;\\rightarrow\\;\\;\\mathrm{Zn}\\\\\\mathrm Q\\;=\\;180.02\\;\\mathrm{mol}\\;\\mathrm{Zn}\\;\\times\\;\\frac{2\\;\\mathrm{mol}\\;\\mathrm e^-}{1\\;\\mathrm{mol}\\;\\mathrm{Cr}}\\;\\times\\;\\frac{96,485\\;\\mathrm C}{1\\;\\mathrm{mol}\\;\\mathrm e^-}\\;=\\;3.48\\times10^7\\;\\mathrm C\\\\t\\;=\\;\\frac QI\\;=\\;\\frac{3.48\\times10^7\\;\\mathrm C}{25.5\\;\\mathrm C/\\mathrm s}\\;=\\;1.36\\times10^5\\;\\mathrm s\\;=\\;379\\;\\mathrm{hr}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "qqebzoe3urlnto6",
+                "type": "p"
+              }
+            ],
+            "id": "2161929977"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2m67675g33q4vxj",
+                  "type": "p"
+                }
+              ],
+              "id": "2145457262"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o3b3mionns1edzf",
+                  "type": "p"
+                }
+              ],
+              "id": "2168324400"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gzwpqauu2yuc8u5",
+                  "type": "p"
+                }
+              ],
+              "id": "2095914243"
+            }
+          ],
+          "id": "2771895465",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\mathrm{mol}\\;\\mathrm{Zn}\\;=\\;11,780\\;\\mathrm g\\;\\mathrm{Zn}\\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{Zn}}{65.38\\;\\mathrm g\\;\\mathrm{Zn}}\\;=\\;180.02\\;\\mathrm{mol}\\;\\mathrm{Zn}\\\\\\mathrm{Zn}^{2+}\\;+\\;2\\;\\mathrm e^-\\;\\;\\rightarrow\\;\\;\\mathrm{Zn}\\\\\\mathrm Q\\;=\\;180.02\\;\\mathrm{mol}\\;\\mathrm{Zn}\\;\\times\\;\\frac{2\\;\\mathrm{mol}\\;\\mathrm e^-}{1\\;\\mathrm{mol}\\;\\mathrm{Cr}}\\;\\times\\;\\frac{96,485\\;\\mathrm C}{1\\;\\mathrm{mol}\\;\\mathrm e^-}\\;=\\;3.48\\times10^7\\;\\mathrm C\\\\t\\;=\\;\\frac QI\\;=\\;\\frac{3.48\\times10^7\\;\\mathrm C}{25.5\\;\\mathrm C/\\mathrm s}\\;=\\;1.36\\times10^5\\;\\mathrm s\\;=\\;379\\;\\mathrm{hr}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "hbmcm3yv5mj9vso",
+                    "type": "p"
+                  }
+                ],
+                "id": "3161007490"
+              },
+              "id": "3633618652",
+              "legacyMatch": "[378,384]",
+              "rule": "input = {[378,384]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "1uw2cq4bu7z19xj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1717580265"
+              },
+              "id": "786569876",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What mass of zinc is required to galvanize the top of a 3.00 m × 5.50 m sheet of iron to a thickness of 0.100 mm of zinc? If the zinc comes from a solution of Zn(NO3)2 and the current is 25.5 A, how long will it take to galvanize the top of the iron? The density of zinc is 7.140 g/cm3.  g Zn  hr ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2984548877",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "2771895465",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What mass of zinc is required to galvanize the top of a 3.00 m × 5.50 m sheet of iron to a thickness of 0.100 mm of zinc? If the zinc comes from a solution of Zn(NO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and the current is 25.5 A, how long will it take to galvanize the top of the iron? The density of zinc is 7.140 g/cm"
+            },
+            {
+              "sup": true,
+              "text": "3"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "gw4gmd2bpykstch",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " g Zn "
+            }
+          ],
+          "id": "z7h62o8l9w49wq0",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " hr "
+            }
+          ],
+          "id": "jdvqlf9bxxkctev",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2771895465": [
+      "78505"
+    ],
+    "2984548877": [
+      "78505"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

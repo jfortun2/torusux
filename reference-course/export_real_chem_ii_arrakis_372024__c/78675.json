@@ -1,0 +1,240 @@
+{
+  "id": "78675",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary10-q2b",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "2666332313"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "quph20wkxjmvst2",
+                  "type": "p"
+                }
+              ],
+              "id": "2098037171"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ulo57j2lua7txzm",
+                  "type": "p"
+                }
+              ],
+              "id": "903357157"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ds0vpaidvvcf6ir",
+                  "type": "p"
+                }
+              ],
+              "id": "179952772"
+            }
+          ],
+          "id": "3807925680",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "a3tueu7ogdu4ez5",
+                    "type": "p"
+                  }
+                ],
+                "id": "975037067"
+              },
+              "id": "2666332313",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {H})) && ((!(input like {G})) && ((!(input like {F})) && ((!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*}))))))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online-synchronous"
+              }
+            ],
+            "id": "1yexzsv8slj2ad1",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online-asynchronous"
+              }
+            ],
+            "id": "j9kurh500c9o7yo",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "In-person"
+              }
+            ],
+            "id": "bkis0wlgalcr079",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "At-home Lab Kit"
+              }
+            ],
+            "id": "u37n2yp5zo4cg88",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "In-person"
+              }
+            ],
+            "id": "p5g48cgz1obuo75",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Simulations"
+              }
+            ],
+            "id": "4gtr3eiyj8kyk9i",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Experiment Video"
+              }
+            ],
+            "id": "7ht7s2mc7scxepf",
+            "type": "p"
+          }
+        ],
+        "id": "G"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Other"
+              }
+            ],
+            "id": "iv1wpy788pyk8zg",
+            "type": "p"
+          }
+        ],
+        "id": "H"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What are your mode(s) of instruction for the following: "
+            }
+          ],
+          "id": "rdrworu5ekwn1um",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Lab(Experiments) (select all that apply)"
+            }
+          ],
+          "id": "iyqtbzlpuuwz7qr",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "3807925680": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

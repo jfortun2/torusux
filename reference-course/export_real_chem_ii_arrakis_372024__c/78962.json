@@ -1,0 +1,458 @@
+{
+  "id": "78962",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78048"
+  ],
+  "title": "overall_rate_law_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "7lpsgeebt5iykkc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "tld41u4h5dxo19z",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " Step 2 is the rate-limiting step, with: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{rate}\\;=\\;k_2\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm{NO}}_2\\rbrack",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Since Step 1 is fast and reversible (i.e. equilibrium): "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\mathrm{rate}}_{1\\rightarrow}\\;=\\;k_{1\\rightarrow}\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack\\;=\\;{\\mathrm{rate}}_{1\\leftarrow}\\;=\\;k_{1\\leftarrow}\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm O}_2\\rbrack\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Solving this for the intermediate [NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "]: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack{\\mathrm{NO}}_3\\rbrack\\;=\\;\\frac{k_{1\\rightarrow}\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack}{k_{1\\leftarrow}\\lbrack{\\mathrm O}_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Substituting into the rate law for the rate-limiting step: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{rate}\\;=\\;k_2\\left(\\frac{k_{1\\rightarrow}\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack}{k_{1\\leftarrow}\\lbrack{\\mathrm O}_2\\rbrack}\\right)\\;\\lbrack{\\mathrm{NO}}_2\\rbrack\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Combining "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": " values and simplifying: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{rate}\\;=\\;k\\;\\frac{{\\lbrack{\\mathrm{NO}}_2\\rbrack}^2\\lbrack{\\mathrm O}_3\\rbrack}{\\lbrack{\\mathrm O}_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "82w0iuj6tuwkr4p",
+                "type": "p"
+              }
+            ],
+            "id": "1348094640"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "se8g2jk1pve6iwt",
+                  "type": "p"
+                }
+              ],
+              "id": "836769074"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mydqv1oucp7dlws",
+                  "type": "p"
+                }
+              ],
+              "id": "632485818"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "to446dqnkyy421r",
+                  "type": "p"
+                }
+              ],
+              "id": "761369202"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Step 2 is the rate-limiting step, with: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{rate}\\;=\\;k_2\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm{NO}}_2\\rbrack",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Since Step 1 is fast and reversible (i.e. equilibrium): "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\mathrm{rate}}_{1\\rightarrow}\\;=\\;k_{1\\rightarrow}\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack\\;=\\;{\\mathrm{rate}}_{1\\leftarrow}\\;=\\;k_{1\\leftarrow}\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm O}_2\\rbrack\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Solving this for the intermediate [NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "]: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack{\\mathrm{NO}}_3\\rbrack\\;=\\;\\frac{k_{1\\rightarrow}\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack}{k_{1\\leftarrow}\\lbrack{\\mathrm O}_2\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Substituting into the rate law for the rate-limiting step: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{rate}\\;=\\;k_2\\left(\\frac{k_{1\\rightarrow}\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack}{k_{1\\leftarrow}\\lbrack{\\mathrm O}_2\\rbrack}\\right)\\;\\lbrack{\\mathrm{NO}}_2\\rbrack\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Combining "
+                      },
+                      {
+                        "em": true,
+                        "text": "k"
+                      },
+                      {
+                        "text": " values and simplifying: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{rate}\\;=\\;k\\;\\frac{{\\lbrack{\\mathrm{NO}}_2\\rbrack}^2\\lbrack{\\mathrm O}_3\\rbrack}{\\lbrack{\\mathrm O}_2\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ezomf1olrdbrd3s",
+                    "type": "p"
+                  }
+                ],
+                "id": "1352656282"
+              },
+              "id": "4069595337",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate law for an overall reaction is the same as the rate law for the rate-determining (or rate-limiting) step of the reaction, and the rate law for an elementary reaction is expressed using the rate constant ("
+                      },
+                      {
+                        "em": true,
+                        "text": "k"
+                      },
+                      {
+                        "text": "), the concentration of the reactant(s), and the order of the reaction (exponent) for each reactant. However, the rate law for an overall reaction cannot include intermediate species. If the rate-determining step includes an intermediate, then use the rate laws from the other elementary reactions to derive an equation that shows the intermediate in terms of one or more reactants. Then substitute the intermediate in the overall rate law with its equivalent in terms of one or more reactants."
+                      }
+                    ],
+                    "id": "o2wa1jiqrk8ewdw",
+                    "type": "p"
+                  }
+                ],
+                "id": "3384940527"
+              },
+              "id": "1632850310",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "1103162489",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "hzk240ulfuzaklu",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "358gqnymepwifw1",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{Rate}\\;=\\;k\\frac{\\lbrack{\\mathrm{NO}}_2\\rbrack^2\\lbrack{\\mathrm O}_3\\rbrack}{\\lbrack{\\mathrm O}_2\\rbrack}",
+            "subtype": "latex",
+            "type": "formula"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "kcf7wpjrjddmw1k",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "6t1q1mhqc5zxdhp",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm{NO}}_2\\rbrack",
+            "subtype": "latex",
+            "type": "formula"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "eg4iquwj4qy37vk",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "p9sljriwv3cixwn",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{Rate}\\;=\\;k\\frac{\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm{NO}}_2\\rbrack}{\\lbrack{\\mathrm O}_2\\rbrack}",
+            "subtype": "latex",
+            "type": "formula"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "ir2n7y54lw17vgx",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ob9dj4b48vk8lnd",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm{NO}}_2\\rbrack^2\\lbrack{\\mathrm O}_3\\rbrack",
+            "subtype": "latex",
+            "type": "formula"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "h4gf19171ug68lj",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "vhhkq1j10qxlqi7",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm O}_3\\rbrack",
+            "subtype": "latex",
+            "type": "formula"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A mechanism for a reaction is proposed:"
+            }
+          ],
+          "id": "fwpvyrwcm23fbbx",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "dau5oyq83iy7zin",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "yuuz5zvt2jnzn23",
+          "legacyBlockRendered": "true",
+          "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;{\\mathrm{NO}}_2\\;+\\;{\\mathrm O}_3\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{NO}}_3\\;+\\;{\\mathrm O}_2 \\;\\;\\;\\;(\\mathrm{fast},\\;\\mathrm{reversible})\\;\\\\\\mathrm{Step}\\;2:\\;\\;{\\mathrm{NO}}_3\\;+\\;{\\mathrm{NO}}_2\\;\\rightarrow\\;{\\mathrm N}_2 {\\mathrm O}_5\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{slow})\\end{array}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the rate law for this mechanism?"
+            }
+          ],
+          "id": "lxqgbqbtflo8bvh",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

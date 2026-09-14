@@ -1,0 +1,1244 @@
+{
+  "id": "80639",
+  "type": "Page",
+  "tags": [],
+  "title": "Relating Reaction Mechanisms to Rate Laws",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "The rate law for a reaction is always determined using experimental data.  Once the experimental rate law is determined, proposed mechanisms can be evaluated for consistency with the rate law and used to explain how the reaction occurs. If the reaction mechanism has the same rate law as the known rate law, the proposed mechanism is a possible pathway for the reaction. If the rate law for the mechanism is not the same as the known rate law, the mechanism is not correct. We usually cannot “prove” a mechanism is correct, but additional evidence—such as detection of an intermediate—can provide support for it. If a mechanism has a sufficient amount of supporting evidence, chemists accept the mechanism as accurately describing what occurs."
+              }
+            ],
+            "id": "4yu97s80vb093l5",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Devising a reaction mechanism requires consideration of various factors, such as "
+              },
+              {
+                "children": [
+                  {
+                    "text": "bond energies"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "The energy required to break a specific covalent bond in one mole of gaseous molecules."
+                      }
+                    ],
+                    "id": "194807911",
+                    "type": "p"
+                  }
+                ],
+                "id": "2246927918",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": ", molecular geometries, and relative molecular orientations. This task can be challenging and is largely beyond the scope of this course. We focus instead on determining whether a proposed mechanism is a possible pathway for the reaction."
+              }
+            ],
+            "id": "nxcjpk8jgfqosyc",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "We start by noting that in most chemical reactions, one of the elementary steps in the reaction mechanism is significantly slower than the others. Because a reaction cannot proceed faster than its slowest step, this step limits the rate at which the overall reaction occurs and determines the rate law for the overall reaction. The slowest step is therefore called the "
+              },
+              {
+                "children": [
+                  {
+                    "text": "rate-determining step"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "The slowest elementary step in a reaction mechanism. Also called "
+                      },
+                      {
+                        "em": true,
+                        "text": "rate-limiting step"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "2538406800",
+                    "type": "p"
+                  }
+                ],
+                "id": "3470774201",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " (or "
+              },
+              {
+                "em": true,
+                "text": "rate-limiting step"
+              },
+              {
+                "text": ") for the reaction."
+              }
+            ],
+            "id": "hhs9j5rs31p1mso",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "The rate-determining step in a reaction is analogous to encountering a bottleneck—such as a toll booth—while driving from one place to another. As illustrated below, cars traveling from point A to point B are not slowed when they go through the EZ Pass (step 1), which deals with the toll electronically. However, cars have to stop at the toll booth (step 2) to manually pay the toll. Passing through the toll booth plays a limiting (or rate-determining) role on the rate at which cars can travel from A to B."
+              }
+            ],
+            "id": "k6pwzkrv7a8q9vm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "7tgesodc9o7zln5",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "v358g1xv2cfgeuu",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/37/37a02d96a8439242e9c89b1e8c7338e4/highway_rate_limiting.gif",
+            "type": "img",
+            "width": "750"
+          },
+          {
+            "children": [
+              {
+                "text": "Similarly, the rate-determining step in a chemical reaction limits the rate at which reactants can form products. For this reason, we start with the slow step when determining whether a proposed mechanism is a possible description of the reaction of interest. We also use the fact that, although we cannot directly determine a rate law from the stoichiometry of an overall reaction equation, we "
+              },
+              {
+                "em": true,
+                "text": "can"
+              },
+              {
+                "text": " derive rate laws directly for elementary reactions."
+              }
+            ],
+            "id": "kbuxb0kkc3uknxk",
+            "type": "p"
+          }
+        ],
+        "id": "1471102781",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Let's first consider the reaction of NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and CO:"
+                  }
+                ],
+                "id": "kjcajwsrybahly4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "oop6rwp7mvpu5do",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "irdizf4q87zid8y",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{NO}}_2(g)\\;+\\;\\mathrm{CO}(g)\\;\\;\\longrightarrow\\;\\;{\\mathrm{CO}}_2(g)\\;+\\;\\mathrm{NO}(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "At temperatures below 225 °C, this reaction is found to be second order with respect to NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "q5brb2gtmk62r1v",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "e96slb15b1emjj0",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "sff8sxw8nmj8coc",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm{NO}}_2\\rbrack^2",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Is the following a possible mechanism for this reaction?"
+                  }
+                ],
+                "id": "enwcclizej1pvj9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "9qsiu9uq0u12oh6",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ij0cyjq0em3rag0",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;{\\mathrm{NO}}_2(g)\\;+\\;{\\mathrm{NO}}_2(g)\\;\\;\\xrightarrow{k_1}\\;\\;{\\mathrm{NO}}_3(g)\\; +\\;\\mathrm{NO}(g)\\;\\;\\;\\;\\;\\;\\;(\\mathrm{slow})\\\\\\mathrm{Step}\\;2:\\;\\;\\;\\;\\;\\;{\\mathrm{NO}}_3(g)\\;+\\;\\mathrm{CO}(g)\\;\\;\\xrightarrow{k_2} \\;\\;{\\mathrm{NO}}_2(g)\\;+\\;{\\mathrm{CO}}_2(g)\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast})\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "For a reaction mechanism to be possible, its steps must sum up to the overall reaction "
+                  },
+                  {
+                    "em": true,
+                    "text": "and"
+                  },
+                  {
+                    "text": " it must give the known rate law. The first criterion is easily verified. To check the second, we start with the slow (rate-determining) step. Because this is an elementary reaction, its rate law is determined by its molecularity:"
+                  }
+                ],
+                "id": "6jrw8n4ex1awyl0",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "65qyk2o21n45bbb",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "q1dbqyy4lvbkb79",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{Rate}}_1\\;=\\;k_1\\lbrack{\\mathrm{NO}}_2\\rbrack^2",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Step 2 is fast and does not affect the reaction rate, so the rate law for this mechanism is the same as the rate law for step 1. The rate law for this proposed mechanism is consistent with (matches) the known rate law, so this is a possible mechanism for the reaction."
+                  }
+                ],
+                "id": "rjhnymva0p8hmlw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "c8fesqde01xn87g",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "4sf3drozkx5mr9b",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{Rate}}_1\\;=\\;k_1\\lbrack{\\mathrm{NO}}_2\\rbrack^2\\;\\;\\;\\;\\;\\Leftrightarrow\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack{\\mathrm{NO}}_2\\rbrack^2",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In general, when the rate-determining (slow) step is the first step in a mechanism, the rate law for the overall reaction is the same as the rate law for this step."
+                  }
+                ],
+                "id": "d5qqeqtghfq8c6l",
+                "type": "p"
+              }
+            ],
+            "id": "3793111771",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2435485797",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Following is the two-step mechanism for the decomposition of hydrogen peroxide, H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", in the presence of iodide, I"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": ". "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;{\\mathrm H}_2{\\mathrm O}_2\\;+\\;\\mathrm I^-\\;\\;\\rightarrow\\;\\;{\\mathrm H}_2\\mathrm O\\; +\\;\\mathrm{IO}^-\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{slow})\\\\\\mathrm{Step}\\;2:\\;\\;\\;\\;\\;{\\mathrm H}_2{\\mathrm O}_2\\; +\\;\\mathrm{IO}^-\\;\\;\\rightarrow\\;\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2\\;+\\;\\mathrm I^-\\;\\;\\;\\;\\;(\\mathrm{fast})\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": "Answer the following questions based on this mechanism."
+                  }
+                ],
+                "id": "0yaoy33ke0ur3hv",
+                "type": "p"
+              }
+            ],
+            "id": "2663837782",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79864,
+                "id": "3832655818",
+                "type": "activity-reference"
+              },
+              {
+                "id": "259062556",
+                "type": "break"
+              },
+              {
+                "activity_id": 80447,
+                "id": "1660765678",
+                "type": "activity-reference"
+              },
+              {
+                "id": "3476570397",
+                "type": "break"
+              },
+              {
+                "activity_id": 80194,
+                "id": "2686649932",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "1472187178",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "321371948",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79694,
+            "id": "3804259881",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80079,
+            "id": "1577067478",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79541,
+            "id": "1587378628",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80204,
+            "id": "3754693053",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2595125815",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "When the rate-determining step is not the first step of a mechanism, we use the same principles—start with the rate-determining step and derive the rate law for each step from its molecularity—but the rate law for the mechanism requires a bit more work."
+              }
+            ],
+            "id": "174q3gzll75dcg9",
+            "type": "p"
+          }
+        ],
+        "id": "1297224802",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Consider the following reaction:"
+                  }
+                ],
+                "id": "1olx8d9dno98ohn",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "5o57haio5mzaacx",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "lj02mcuyw0b6a4d",
+                "legacyBlockRendered": "true",
+                "src": "2\\;\\mathrm{NO}\\;+\\;{\\mathrm H}_2\\;\\;\\rightarrow\\;\\;{\\mathrm N}_2\\mathrm O\\;+\\;{\\mathrm H}_2\\mathrm O",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "and the proposed mechanism:"
+                  }
+                ],
+                "id": "nuslcngdp9t534m",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "w92m2qxkcs0bo0k",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "q63cc1fbmfx3jd2",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;2\\;\\mathrm{NO}\\;\\;\\overset{k_1}{\\underset{k_{-1}}\\rightleftharpoons} \\;\\;{\\mathrm N}_2{\\mathrm O}_2\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast},\\;\\mathrm{reversible})\\\\\\mathrm{Step}\\;2:\\;\\;\\;\\;\\; {\\mathrm N}_2{\\mathrm O}_2\\;+\\;{\\mathrm H}_2\\;\\;\\xrightarrow{k_2}\\;\\;{\\mathrm N}_2\\mathrm O\\;+\\;{\\mathrm H}_2\\mathrm O\\;\\;\\;\\;\\;\\;\\;\\; (\\mathrm{slow})\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine whether this is a possible mechanism for the reaction."
+                  }
+                ],
+                "id": "dtg1auxyoc2whaz",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This is a possible mechanism if its steps sum up to the overall reaction "
+                  },
+                  {
+                    "em": true,
+                    "text": "and"
+                  },
+                  {
+                    "text": " it gives the known rate law. The first requirement is readily confirmed. To determine whether the second requirement is met, we start with step 2, the rate-determining step. This is an elementary reaction, so we can derive its rate law from its molecularity:"
+                  }
+                ],
+                "id": "6b1tcian7y8mz2j",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "mquogsgdv1hhntc",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "nqet2guwbldzs56",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;{\\mathrm{Rate}}_2\\;=\\;k_2\\lbrack{\\mathrm N}_2{\\mathrm O}_2\\rbrack\\lbrack{\\mathrm H}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is an intermediate, so it cannot be included in the overall rate law. We use step 1 to determine [N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "] in terms of other concentrations."
+                  }
+                ],
+                "id": "5ias8qgzyemedcu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Step 1 is reversible, so the rate of the forward reaction is equal to the rate of the reverse reaction:"
+                  }
+                ],
+                "id": "0iq8x4xhg3mhmon",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ckhxck2c7izsjmi",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "6egseas9ghho65u",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{c}{\\mathrm{Rate}}_1\\;=\\;\\;{\\mathrm{Rate}}_{-1}\\\\{\\mathrm{Rate}}_1\\;=\\;k_1{\\lbrack\\mathrm{NO}\\rbrack}^2\\;\\;\\;\\;\\;\\; \\mathrm{and}\\;\\;\\;\\;\\;{\\mathrm{Rate}}_{-1}\\;=\\;k_{-1}\\lbrack{\\mathrm N}_2{\\mathrm O}_2\\rbrack\\\\\\mathit\\Rightarrow\\mathit\\;\\mathit\\; \\mathit\\;\\mathit\\;k_1{\\lbrack\\mathrm{NO}\\rbrack}^2\\;=\\;k_{-1}\\lbrack{\\mathrm N}_2{\\mathrm O}_2\\rbrack\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solving for [N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "]:"
+                  }
+                ],
+                "id": "1evt8virfd613ct",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "axdeuhwfyk09bkk",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "kkz93klrg6mupfn",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm N}_2{\\mathrm O}_2\\rbrack\\;=\\;\\frac{k_1}{k_{-1}}{\\lbrack\\mathrm{NO}\\rbrack}^2",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Substituting [N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "] into the rate law for the rate-determining step:"
+                  }
+                ],
+                "id": "95n1x3vi217ahmd",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "8anbyxlg3f9ug7a",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "n7br74cderouwmu",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k_2\\lbrack{\\mathrm N}_2{\\mathrm O}_2\\rbrack\\lbrack{\\mathrm H}_2{\\rbrack\\;=\\;\\;k_2\\frac{k_1}{k_{-1}} {\\lbrack\\mathrm{NO}\\rbrack}^2\\lbrack{\\mathrm H}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Combining the rate constants for the steps into a single rate constant gives the rate law for the mechanism:"
+                  }
+                ],
+                "id": "tfxnfvliqzevo1a",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "9hvi7i5yqckpt48",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "aqulx1krlep438r",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm N}_2{\\mathrm O}_2\\rbrack\\lbrack{\\mathrm H}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1163730006",
+                "type": "p"
+              }
+            ],
+            "id": "94419884",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "3967498737",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Derive the rate law for the following reaction mechanism:"
+                  }
+                ],
+                "id": "qbeqc5ff41srg8l",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "t2845mfl16betcp",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "8m3luhfk8ac8pss",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm I}_2\\;\\;\\overset{k_1}{\\underset{k_{-1}}\\rightleftharpoons} \\;\\;2\\;\\mathrm I\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast},\\;\\mathrm{reversible})\\\\\\underline{\\mathrm{Step}\\;2:\\;\\;\\;\\;\\;{\\mathrm H}_2\\;+\\;2\\;\\mathrm I \\;\\;\\xrightarrow{k_2}\\;\\;2\\;\\mathrm{HI}\\;\\;\\;\\;\\;\\;\\;(\\mathrm{slow})\\;\\;\\;}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\\\\\mathrm{Overall}:\\;\\;\\;\\;\\;{\\mathrm H}_2 \\;+\\;{\\mathrm I}_2\\;\\;\\xrightarrow k\\;\\;2\\;\\mathrm{HI}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The rate law for reaction is determined by the rate law for step 2, the slow step:"
+                  }
+                ],
+                "id": "3by8nl490sy8ao5",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "se4sjdre0kyby34",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hzvz9f6x3fjbrl6",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;{\\mathrm{Rate}}_2\\;=\\;k_2\\lbrack{\\mathrm H}_2\\rbrack\\lbrack\\mathrm I\\rbrack^2",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The intermediate, I, cannot be included in the rate law for the overall reaction, so we must derive [I] from the first step."
+                  }
+                ],
+                "id": "63dhkk8hk6y1j8n",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Step 1 is reversible, so the rate of the forward reaction is equal to the rate of the reverse reaction:"
+                  }
+                ],
+                "id": "vkkxjmg1of8o770",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "o99149tpcxyc163",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "a58wupii2itvka5",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{c}{\\mathrm{Rate}}_1\\;=\\;\\;{\\mathrm{Rate}}_{-1}\\\\{\\mathrm{Rate}}_1\\;=\\;k_1\\lbrack{\\mathrm I}_2\\rbrack\\;\\;\\;\\;\\;\\; \\mathrm{and}\\;\\;\\;\\;\\;{\\mathrm{Rate}}_{-1}\\;=\\;k_{-1}\\lbrack\\mathrm I\\rbrack^2\\\\\\mathit\\Rightarrow\\mathit\\;\\mathit\\;\\mathit\\;\\mathit \\;k_1\\lbrack{\\mathrm I}_2\\rbrack\\;=\\;k_{-1}\\lbrack\\mathrm I\\rbrack^2\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solving for [I]:"
+                  }
+                ],
+                "id": "vk2673xozoifk4r",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "o7it1aqcc7u53z3",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "u6fdgrwiube604k",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack\\mathrm I\\rbrack\\;=\\;\\sqrt{\\frac{k_1}{k_{-1}}\\lbrack{\\mathrm I}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Substituting [I] into the rate law for the rate-determining step:"
+                  }
+                ],
+                "id": "ogj3ak19f16ybtc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ib433ykyro0skpq",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "yrm5n7r10jd8wcb",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k_2\\lbrack{\\mathrm H}_2\\rbrack\\lbrack\\mathrm I{\\rbrack^2\\;=\\;\\;k_2\\lbrack{\\mathrm H}_2\\rbrack\\left(\\sqrt{\\frac{k_1} {k_{-1}}\\lbrack{\\mathrm I}_2\\rbrack}\\right)^2\\;=\\;}k_2\\lbrack{\\mathrm H}_2\\rbrack\\frac{k_1}{k_{-1}}\\lbrack{\\mathrm I}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Combining the rate constants for the steps into a single rate constant gives the rate law for the mechanism:"
+                  }
+                ],
+                "id": "dhiynxh39e50rhd",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "4edso1gedz8wxdj",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "iwgn8u4s2firt2n",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm H}_2\\rbrack\\lbrack{\\mathrm I}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The rate law for this proposed mechanism is the same as the known rate law, so this is a possible mechanism for the reaction."
+                  }
+                ],
+                "id": "5mhc5vrfuzthge7",
+                "type": "p"
+              }
+            ],
+            "id": "3001653235",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "1768455208",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Consider the following mechanism:"
+                  }
+                ],
+                "id": "t839ef44c0mpxy1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "aig46tslr2qk3iw",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "fycytjt0pn2gpl5",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm N}_2\\mathrm O\\;\\;\\overset{k_1}{\\underset{k_{-1}}\\rightleftharpoons} \\;\\;{\\mathrm N}_2\\;+\\;\\mathrm O\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast},\\;\\mathrm{reversible})\\;\\;\\\\\\mathrm{Step}\\;2:\\;\\;\\;\\;\\;{\\mathrm N}_2\\mathrm O\\; +\\;\\mathrm O\\;\\;\\xrightarrow{k_2}\\;\\;{\\mathrm N}_2\\;+\\;{\\mathrm O}_2\\;\\;\\;\\;\\;(\\mathrm{slow})\\;\\;\\;\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Answer the questions below based on this mechanism."
+                  }
+                ],
+                "id": "jnloy1x7ii46b89",
+                "type": "p"
+              }
+            ],
+            "id": "707124026",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 80300,
+                "id": "547772619",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79567,
+                "id": "1097911286",
+                "type": "activity-reference"
+              },
+              {
+                "id": "4258205040",
+                "type": "break"
+              },
+              {
+                "activity_id": 79891,
+                "id": "452325110",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "3693788430",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Consider the following mechanism:"
+                  }
+                ],
+                "id": "6f66emi8w2sf15s",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "bcihpl024t0wohu",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "chaqal6c48jq4wx",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{Step\\;1:}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;2\\;\\mathrm{NO}\\;\\;\\overset{k_1}{\\underset{k_{-1}}\\rightleftharpoons}\\;\\; {\\mathrm N}_2{\\mathrm O}_2\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast},\\;\\mathrm{reversible})\\\\\\mathrm{Step}\\;2:\\;\\;\\;\\; {\\mathrm N}_2{\\mathrm O}_2\\;+\\;{\\mathrm H}_2\\;\\;\\xrightarrow{k_2}\\;\\;{\\mathrm N}_2\\mathrm O\\;+\\;{\\mathrm H}_2\\mathrm O\\;\\;\\;\\;\\;\\; (\\mathrm{slow})\\\\\\mathrm{Step}\\;3:\\;\\;\\;\\;\\;\\;{\\mathrm N}_2\\mathrm O\\;+\\;{\\mathrm H}_2\\;\\xrightarrow{k_3}\\;{\\mathrm N}_2\\;+\\; {\\mathrm H}_2\\mathrm O\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast})\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Answer the questions below based on this mechanism."
+                  }
+                ],
+                "id": "24fz9yqohb9ddqb",
+                "type": "p"
+              }
+            ],
+            "id": "1650615284",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79272,
+                "id": "176125849",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78759,
+                "id": "3279426089",
+                "type": "activity-reference"
+              },
+              {
+                "id": "460256390",
+                "type": "break"
+              },
+              {
+                "activity_id": 78888,
+                "id": "894285816",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "4079541257",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "3684111170",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "449b67f451iv2l8",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/ 85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "lguow7xskc12344",
+            "type": "p"
+          }
+        ],
+        "id": "1238000130",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78541"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

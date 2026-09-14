@@ -1,0 +1,516 @@
+{
+  "id": "80470",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "predicting_type_radio-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dfwbd0mfd9gryan",
+                  "type": "p"
+                }
+              ],
+              "id": "1492474126"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ibnvee2divzfp0z",
+                  "type": "p"
+                }
+              ],
+              "id": "292822862"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m1wsqhjynov0apm",
+                  "type": "p"
+                }
+              ],
+              "id": "3315973399"
+            }
+          ],
+          "id": "electron_area",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The atomic mass of Hg is approximately 201, so isotopes nearest "
+                      },
+                      {
+                        "sup": true,
+                        "text": "201"
+                      },
+                      {
+                        "text": "Hg are most likely to be stable. "
+                      },
+                      {
+                        "sup": true,
+                        "text": "197"
+                      },
+                      {
+                        "text": "Hg has a lower n:p ratio than "
+                      },
+                      {
+                        "sup": true,
+                        "text": "201"
+                      },
+                      {
+                        "text": "Hg, so it will likely undergo electron capture (which increases the n:p ratio)."
+                      }
+                    ],
+                    "id": "af1c95716a844972a852ff667ee4b87f",
+                    "type": "p"
+                  }
+                ],
+                "id": "4265188077"
+              },
+              "id": "3115820787",
+              "legacyMatch": "electron",
+              "rule": "input like {electron_area_electron}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The atomic mass of Hg is approximately 201, so isotopes nearest "
+                      },
+                      {
+                        "sup": true,
+                        "text": "201"
+                      },
+                      {
+                        "text": "Hg are most likely to be stable. Since "
+                      },
+                      {
+                        "sup": true,
+                        "text": "197"
+                      },
+                      {
+                        "text": "Hg has a lower neutron-to-proton ratio than "
+                      },
+                      {
+                        "sup": true,
+                        "text": "201"
+                      },
+                      {
+                        "text": "Hg, it will likely undergo a type of radioactive decay that increases the n:p ratio."
+                      }
+                    ],
+                    "id": "a8dbb3efe057481a8d3fdce1b71f4134",
+                    "type": "p"
+                  }
+                ],
+                "id": "4007554625"
+              },
+              "id": "831510251",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "llupac5bmdztr93",
+                  "type": "p"
+                }
+              ],
+              "id": "3050651733"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tltoeet6rp17m88",
+                  "type": "p"
+                }
+              ],
+              "id": "4199439667"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0zw3axbq7cdpthc",
+                  "type": "p"
+                }
+              ],
+              "id": "382513842"
+            }
+          ],
+          "id": "beta_area",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The atomic mass of Co is approximately 59, so isotopes nearest "
+                      },
+                      {
+                        "sup": true,
+                        "text": "59"
+                      },
+                      {
+                        "text": "Co are most likely to be stable. "
+                      },
+                      {
+                        "sup": true,
+                        "text": "62"
+                      },
+                      {
+                        "text": "Co has a higher n:p ratio than "
+                      },
+                      {
+                        "sup": true,
+                        "text": "59"
+                      },
+                      {
+                        "text": "Co, so it will likely undergo β decay (which increases the n:p ratio)."
+                      }
+                    ],
+                    "id": "ddb1101a87ab4273802ab3b937f5a093",
+                    "type": "p"
+                  }
+                ],
+                "id": "2704176752"
+              },
+              "id": "974691001",
+              "legacyMatch": "beta",
+              "rule": "input like {beta_area_beta}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The atomic mass of Co is approximately 59, so isotopes nearest "
+                      },
+                      {
+                        "sup": true,
+                        "text": "59"
+                      },
+                      {
+                        "text": "Co are most likely to be stable. Since "
+                      },
+                      {
+                        "sup": true,
+                        "text": "62"
+                      },
+                      {
+                        "text": "Co has a higher n:p ratio than "
+                      },
+                      {
+                        "sup": true,
+                        "text": "59"
+                      },
+                      {
+                        "text": "Co, it will likely undergo a type of radioactive decay that increases the n:p ratio."
+                      }
+                    ],
+                    "id": "bc3fc74fe40c4070a54a9eeb824e20e2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3597041278"
+              },
+              "id": "1216955815",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r6cvbheks66n0ta",
+                  "type": "p"
+                }
+              ],
+              "id": "2256523081"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hm0l19xzdgcvxzl",
+                  "type": "p"
+                }
+              ],
+              "id": "1837968486"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y3hx600i4m9yok4",
+                  "type": "p"
+                }
+              ],
+              "id": "290119676"
+            }
+          ],
+          "id": "alpha_area",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U is a very large nuclide (Z > 82). It will likely undergo α decay, thereby losing two protons and two neutrons and decreasing the size of the nucleus."
+                      }
+                    ],
+                    "id": "d5e339c7a45c4cf9b3009e2c76d92320",
+                    "type": "p"
+                  }
+                ],
+                "id": "3535126644"
+              },
+              "id": "491117565",
+              "legacyMatch": "alpha",
+              "rule": "input like {alpha_area_alpha}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U is a very large nuclide (Z > 82). It will likely undergo a type of radioactive decay that decreases the size of the nucleus."
+                      }
+                    ],
+                    "id": "d213911f7f254ad6a7b994e705a1faf3",
+                    "type": "p"
+                  }
+                ],
+                "id": "3634184671"
+              },
+              "id": "4194820714",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "2740015342",
+          "operation": "shuffle",
+          "partId": "electron_area",
+          "path": "choices"
+        },
+        {
+          "id": "4116358194",
+          "operation": "shuffle",
+          "partId": "beta_area",
+          "path": "choices"
+        },
+        {
+          "id": "441708318",
+          "operation": "shuffle",
+          "partId": "alpha_area",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [],
+        "id": "electron_area_electron"
+      },
+      {
+        "content": [],
+        "id": "electron_area_alpha"
+      },
+      {
+        "content": [],
+        "id": "electron_area_beta"
+      },
+      {
+        "content": [],
+        "id": "beta_area_electron"
+      },
+      {
+        "content": [],
+        "id": "beta_area_alpha"
+      },
+      {
+        "content": [],
+        "id": "beta_area_beta"
+      },
+      {
+        "content": [],
+        "id": "alpha_area_electron"
+      },
+      {
+        "content": [],
+        "id": "alpha_area_alpha"
+      },
+      {
+        "content": [],
+        "id": "alpha_area_beta"
+      }
+    ],
+    "height": "800",
+    "initiators": "\r\n    \t\t\t\r\n        \t<div input_val=\"electron\" class=\"initiator\">electron capture</div>\r\n\t\t\t<div input_val=\"alpha\" class=\"initiator\">alpha decay</div>\r\n\t\t\t<div input_val=\"beta\" class=\"initiator\">beta decay</div>\r\n\t\t\r\n\t\t\t\r\n\t\t\t\t\t\r\n\t\t\r\n  ",
+    "inputs": [
+      {
+        "choiceIds": [
+          "electron_area_electron",
+          "electron_area_alpha",
+          "electron_area_beta"
+        ],
+        "id": "electron_area",
+        "inputType": "dropdown",
+        "partId": "electron_area",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "beta_area_electron",
+          "beta_area_alpha",
+          "beta_area_beta"
+        ],
+        "id": "beta_area",
+        "inputType": "dropdown",
+        "partId": "beta_area",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "alpha_area_electron",
+          "alpha_area_alpha",
+          "alpha_area_beta"
+        ],
+        "id": "alpha_area",
+        "inputType": "dropdown",
+        "partId": "alpha_area",
+        "shuffle": "true"
+      }
+    ],
+    "layoutStyles": "\r\n    \r\n\t\t\t\t\r\n#q5_target_container0 {  \r\n    margin: auto;\r\n    position:relative; <!-- This is important-->\r\n    width: 680px;  \r\n    height: 350px;\r\n   \r\n}\t\r\n\t.tbody .th {\r\n    text-align: center;\r\n}\t\t\r\n\t\t\t.target {  \r\n\t\t\t  border: 2px;\r\n\t\t\t  border-style: dashed;\r\n\t\t\t  border-color: #999999; \r\n\t\t\t  display: inline-block; \r\n\t\t\t  position: absolute; \r\n\t\t\t  min-width: 200px;  \r\n\t\t\t  width: 250px;  \r\n\t\t\t  min-height: 40px; \r\n\t\t\t  height: 40px;\r\n\t\t\t  \r\n\t\t\t}\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t.initiator\r\n\t\t\t{\r\n        color:black;\r\n\t\t\t\tdisplay: inline-block;\r\n\t\t\t\tmin-height: 20px;\r\n\t\t\t\theight: 30px;\r\n\t\t\t\tmin-width: 60px;\r\n\t\t\t\twidth: 200px;\r\n\t\t\t\tbackground: #ffc;\r\n\t\t\t\ttext-align: center;\r\n\t\t\t\tpadding: 4px;\r\n\t\t\t\tcursor: move;\r\n\t\t\t\tborder-style: solid;\r\n    \t\t\tborder-width: 1px;\r\n    \t\t\tborder-color: black;\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\t.dragdropspacer\r\n\t\t\t{\r\n\t\t\t\theight: 30px;\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\r\n\t\t\r\n  ",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Select the likely radioactive decay mode for each of the isotopes below."
+            }
+          ],
+          "id": "bce56be785524d8582851702467a9be3",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true,
+    "targetArea": "\r\n    \r\n\t\t<div id=\"q5_target_container0\">\r\n\r\n\r\n<div id=\"lefttitle\" style=\"position:absolute;top:30px; left:5px\"><b>Co-62 is likely to undergo</b></div>\r\n\r\n<div id=\"middletitle\" style=\"position:absolute;top:95px; left:5px\"><b>Hg-197 is likely to undergo</b></div>\r\n\r\n<div id=\"bottomtitle\" style=\"position:absolute;top:160px; left:5px\"><b>U-238 is likely to undergo</b></div>\r\n\r\n\r\n\r\n\r\n<div input_ref=\"beta_area\" class=\"target\" style=\"left:245px; top:25px; width:240px; height:40px;\"> </div>\r\n\r\n<div input_ref=\"electron_area\" class=\"target\" style=\"left:245px;top:85px; width:240px; height:40px;\"> </div>\r\n\r\n\r\n<div input_ref=\"alpha_area\" class=\"target\" style=\"left:245px; top:145px; width:240px; height:40px;\"> </div>\r\n\r\n\r\n\r\n\r\n\t\t    </div>\r\n\t\t\t\r\n\t\t\r\n  ",
+    "width": "680"
+  },
+  "objectives": {
+    "alpha_area": [
+      "78379"
+    ],
+    "beta_area": [
+      "78379"
+    ],
+    "electron_area": [
+      "78379"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_custom_dnd"
+}

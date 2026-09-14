@@ -1,0 +1,281 @@
+{
+  "id": "79213",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "salt_ph_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7urkv8d7cu3b8j5",
+                  "type": "p"
+                }
+              ],
+              "id": "4145341656"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6phiiuwyuofwpaz",
+                  "type": "p"
+                }
+              ],
+              "id": "3483549004"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1kfd0i7nxm0y3x9",
+                  "type": "p"
+                }
+              ],
+              "id": "2166023538"
+            }
+          ],
+          "id": "2654836633",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is the cation of a strong base, and OCl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a weak acid."
+                      }
+                    ],
+                    "id": "mfxmrg4lox19su7",
+                    "type": "p"
+                  }
+                ],
+                "id": "2244353099"
+              },
+              "id": "2489311657",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is the cation of a strong base. "
+                      }
+                    ],
+                    "id": "pf3e2blovewfvx1",
+                    "type": "p"
+                  }
+                ],
+                "id": "1595191208"
+              },
+              "id": "246012478",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. OCl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a weak acid."
+                      }
+                    ],
+                    "id": "umo9b68emb3y2kq",
+                    "type": "p"
+                  }
+                ],
+                "id": "98536472"
+              },
+              "id": "1457265678",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "n04h3vwzozfk04x",
+                    "type": "p"
+                  }
+                ],
+                "id": "3033023935"
+              },
+              "id": "3928451400",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2489311657"
+            ],
+            [
+              [
+                "B"
+              ],
+              "246012478"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1457265678"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2489311657"
+        ],
+        [
+          [
+            "B"
+          ],
+          "246012478"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1457265678"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Basic"
+              }
+            ],
+            "id": "2d7864pu1emq8m3",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Acidic"
+              }
+            ],
+            "id": "nh07eqki0tp1o9p",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Neutral"
+              }
+            ],
+            "id": "bytcy3yqnbah6i4",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "KOCl"
+            }
+          ],
+          "id": "1hpvhbmbgwts6c9",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2654836633": [
+      "78479"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

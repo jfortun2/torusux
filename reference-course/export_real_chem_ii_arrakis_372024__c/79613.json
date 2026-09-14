@@ -1,0 +1,138 @@
+{
+  "id": "79613",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Hours of work",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1989708044",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3764755193",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3367980304",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3774930679",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3693614686",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1549384178",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "1588746480",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "57309315",
+                "textDirection": "ltr"
+              },
+              "id": "1352079852",
+              "rule": "input = {1}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "3276029144",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2036376519",
+                "textDirection": "ltr"
+              },
+              "id": "2848383868",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "17. If you are currently working (e.g., full-time, part-time, internship), approximately how many hours do you work per week? Please respond as a numerical value (i.e., “10” rather than “ten”)",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "numeric",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "17. If you are currently working (e.g., full-time, part-time, internship), approximately how many hours do you work per week? Please respond as a numerical value (i.e., “10” rather than “ten”)"
+            }
+          ],
+          "id": "2229713499",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "301075405",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

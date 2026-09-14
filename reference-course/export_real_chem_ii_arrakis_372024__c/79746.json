@@ -1,0 +1,185 @@
+{
+  "id": "79746",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "catalyst_1digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lrvmro8wnh5f3cx",
+                  "type": "p"
+                }
+              ],
+              "id": "3188245388"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iqundiycwcc7bxq",
+                  "type": "p"
+                }
+              ],
+              "id": "671047761"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "d1foj1rl0yhefw4",
+                  "type": "p"
+                }
+              ],
+              "id": "151645985"
+            }
+          ],
+          "id": "2972684059",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This is the reaction with the lower activation energy."
+                      }
+                    ],
+                    "id": "h93n85ih259mz59",
+                    "type": "p"
+                  }
+                ],
+                "id": "3380689965"
+              },
+              "id": "4137261059",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The catalyzed reaction has lower activation energy than the uncatalyzed reaction."
+                      }
+                    ],
+                    "id": "uc1zunb7ckw5j7k",
+                    "type": "p"
+                  }
+                ],
+                "id": "677007520"
+              },
+              "id": "3705249558",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " The two reaction diagrams represent the same reaction: one without a catalyst and one with a catalyst. Identify which diagram suggests the presence of a catalyst.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "a"
+              }
+            ],
+            "id": "gcn5jcf2n7zcewj",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "b"
+              }
+            ],
+            "id": "2vkz459wv2m5kxy",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "1847536835",
+          "type": "p"
+        },
+        {
+          "alt": "In this figure, two graphs are shown. The x-axes are labeled, “Extent of reaction,” and the y-axes are labeled, “Energy (k J).” The y-axis of the first graph is marked off from 0 to 30 in intervals of 5. The y-axis of the second graph is marked off from 0 to 25 by intervals of 5. In a, a blue curve is shown. It begins with a horizontal region at about 12. The curve then rises sharply near the middle to reach a maximum of about 24 and similarly falls to another horizontal segment at 5. In b, the curve begins and ends similarly, but the maximum reached near the center of the graph is only 20.",
+          "children": [
+            {
+              "id": "265hfsxgjj8wff3",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "s4b7zob9a9lj3lk",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/2b/2b8b5655428b9a69824fcda7912c4e72/CNX_Chem_12_07_Exercise4a_img.jpg",
+          "type": "img",
+          "width": "650"
+        },
+        {
+          "children": [
+            {
+              "text": "The two reaction diagrams represent the same reaction: one without a catalyst and one with a catalyst. Identify which diagram suggests the presence of a catalyst."
+            }
+          ],
+          "id": "qfljro7wv722lui",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2972684059": [
+      "78497"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

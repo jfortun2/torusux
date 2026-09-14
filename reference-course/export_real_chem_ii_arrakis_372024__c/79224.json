@@ -1,0 +1,189 @@
+{
+  "id": "79224",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary16-q10",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "2400919532"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mbf9rjmfu69y11l",
+                  "type": "p"
+                }
+              ],
+              "id": "2795785020"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4mdfpe2bt9zssev",
+                  "type": "p"
+                }
+              ],
+              "id": "430907921"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j4427v6tnn53i6g",
+                  "type": "p"
+                }
+              ],
+              "id": "2315030637"
+            }
+          ],
+          "id": "2964182320",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "bshupykhjjtgpua",
+                    "type": "p"
+                  }
+                ],
+                "id": "3085737231"
+              },
+              "id": "2400919532",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*})))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Lecture "
+              }
+            ],
+            "id": "sj91tyqw1ymh9ke",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Lab "
+              }
+            ],
+            "id": "lk41hzpfexkk61k",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Discussion "
+              }
+            ],
+            "id": "z5bu0eun59t6mlf",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Other "
+              }
+            ],
+            "id": "gs16woz8y28mbct",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "uqi37nkx4hah5gp",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Did you use OLI data to choose/determine/inform what course material was covered and/or select activities for use in class (whole-class adaptation) this week? Check if used in lectures, discussion sections, or labs, then describe below, or explain why not. Check all that apply. "
+            }
+          ],
+          "id": "g660fibf6nxyrjt",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2964182320": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

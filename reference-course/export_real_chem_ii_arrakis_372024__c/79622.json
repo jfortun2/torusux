@@ -1,0 +1,286 @@
+{
+  "id": "79622",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pOH_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "i8h4t86bsz1rjzj",
+                  "type": "p"
+                }
+              ],
+              "id": "1270773886"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hh9u6hnavigdn5g",
+                  "type": "p"
+                }
+              ],
+              "id": "1326910447"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jub525cdg2uz3nq",
+                  "type": "p"
+                }
+              ],
+              "id": "2939855190"
+            }
+          ],
+          "id": "463278725",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log(4.56\\;\\times10^{-9})\\;=\\;8.341",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "25g08pheq2ra9s5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3068861046"
+              },
+              "id": "2518450892",
+              "legacyMatch": "8.341",
+              "rule": "input = {8.341}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct, except for the significant figures. The [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "] has three significant figures, so the pOH should also have three significant figures. This answer has two significant figures. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log(4.56\\;\\times10^{-9})\\;=\\;8.341",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "5kirpfofdpkc41p",
+                    "type": "p"
+                  }
+                ],
+                "id": "1842063170"
+              },
+              "id": "2275071822",
+              "legacyMatch": "8.34",
+              "rule": "input = {8.34}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct, except for the significant figures. The [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "] has three significant figures, so the pOH should also have three significant figures. This answer has one significant figure. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pOH}\\;=\\;-\\log\\;\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log\\;(4.56\\;\\times10^{-9})\\;=\\;8.341",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "sanpne24qlb03fs",
+                    "type": "p"
+                  }
+                ],
+                "id": "1724606561"
+              },
+              "id": "973985007",
+              "legacyMatch": "8.3",
+              "rule": "input = {8.3}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log(4.56\\;\\times10^{-9})\\;=\\;8.341",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "emt7ztju06au8lv",
+                    "type": "p"
+                  }
+                ],
+                "id": "4082021923"
+              },
+              "id": "2275994038",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "A solution has [OH−] of 4.56 × 10−9 M. What is the pOH of the solution? pOH =  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "463278725",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A solution has [OH"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "] of 4.56 × 10"
+            },
+            {
+              "sup": true,
+              "text": "−9"
+            },
+            {
+              "text": " M. What is the pOH of the solution? "
+            }
+          ],
+          "id": "git885yhs43bka9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pOH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "pcily2br6f7ca8o",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "463278725": [
+      "78356"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

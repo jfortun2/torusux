@@ -1,0 +1,278 @@
+{
+  "id": "79504",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "lechat_temp_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yw31wgefrytke0l",
+                  "type": "p"
+                }
+              ],
+              "id": "3171851471"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o5jvnzkzp7ma6pj",
+                  "type": "p"
+                }
+              ],
+              "id": "161342775"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u6fk9v5ojmkjd2v",
+                  "type": "p"
+                }
+              ],
+              "id": "3969787055"
+            }
+          ],
+          "id": "790144985",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. For an exothermic reaction, an increase in temperature causes the system to shift to the left. The concentration of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " therefore increases."
+                      }
+                    ],
+                    "id": "4hx7tpvob3hvemk",
+                    "type": "p"
+                  }
+                ],
+                "id": "358441150"
+              },
+              "id": "1855265078",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For an exothermic reaction, an increase in temperature causes the system to shift to the left. The concentration of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " therefore increases."
+                      }
+                    ],
+                    "id": "bgadqiol43nhdmg",
+                    "type": "p"
+                  }
+                ],
+                "id": "2652866774"
+              },
+              "id": "3774591797",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For an exothermic reaction, an increase in temperature causes the system to shift to the left. The concentration of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " therefore increases."
+                      }
+                    ],
+                    "id": "icl2xtuumm8cocl",
+                    "type": "p"
+                  }
+                ],
+                "id": "2293792432"
+              },
+              "id": "1321225823",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "b5nr0xp9tawrngh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2916907928"
+              },
+              "id": "2381261009",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1855265078"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3774591797"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1321225823"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1855265078"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3774591797"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1321225823"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increase"
+              }
+            ],
+            "id": "36qz7272vvxpsd5",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decrease"
+              }
+            ],
+            "id": "lpgn6akdc29fz09",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Stay the same"
+              }
+            ],
+            "id": "jlbjs27gz94fqdd",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Concentration of H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            }
+          ],
+          "id": "hmwb65whx1eor3b",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "790144985": [
+      "78280"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

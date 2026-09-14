@@ -1,0 +1,663 @@
+{
+  "id": "79352",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "buf_capacity2_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qnq0v8c0bzrqbtw",
+                  "type": "p"
+                }
+              ],
+              "id": "2793080647"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jb9plg0vj27j51l",
+                  "type": "p"
+                }
+              ],
+              "id": "3057477470"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "stfktkzfkj1uxta",
+                  "type": "p"
+                }
+              ],
+              "id": "2107118299"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A buffer solution with a pH greater than 7 should be made with a weak base. "
+                      }
+                    ],
+                    "id": "wm4i7400wqdaut9",
+                    "type": "p"
+                  }
+                ],
+                "id": "40893414"
+              },
+              "id": "3243849636",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A buffer solution with a pH greater than 7 should be made with a weak base."
+                      }
+                    ],
+                    "id": "8tbu5gx3xy25vkw",
+                    "type": "p"
+                  }
+                ],
+                "id": "3220932111"
+              },
+              "id": "3128097521",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ea2bt1y2msms3nl",
+                    "type": "p"
+                  }
+                ],
+                "id": "212387614"
+              },
+              "id": "4263727210",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w70k4hf4ifk7fb5",
+                  "type": "p"
+                }
+              ],
+              "id": "1320210989"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r4jzug1f0hksje5",
+                  "type": "p"
+                }
+              ],
+              "id": "1552402143"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j3l6zkzzz2qo8wr",
+                  "type": "p"
+                }
+              ],
+              "id": "2677522714"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The salt used to prepare the buffer should contain the conjugate acid of the weak base used."
+                      }
+                    ],
+                    "id": "mv59qy8v7sjnr30",
+                    "type": "p"
+                  }
+                ],
+                "id": "927478063"
+              },
+              "id": "2085063495",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The salt used to prepare the buffer should contain the conjugate acid of the weak base used."
+                      }
+                    ],
+                    "id": "nn9siibagpzsuwd",
+                    "type": "p"
+                  }
+                ],
+                "id": "2113667293"
+              },
+              "id": "609183966",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "dcgviqoobikc52s",
+                    "type": "p"
+                  }
+                ],
+                "id": "3467896018"
+              },
+              "id": "954258935",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6bsw7vfqzwg071l",
+                  "type": "p"
+                }
+              ],
+              "id": "505373208"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8h15vmbbbk59cqa",
+                  "type": "p"
+                }
+              ],
+              "id": "3987148762"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jk4gr4dftz5qin8",
+                  "type": "p"
+                }
+              ],
+              "id": "890439565"
+            }
+          ],
+          "id": "third",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solutions with higher concentrations of weak base are more effective buffers."
+                      }
+                    ],
+                    "id": "l2x42dcidzybluj",
+                    "type": "p"
+                  }
+                ],
+                "id": "924752932"
+              },
+              "id": "1181614550",
+              "legacyMatch": "A",
+              "rule": "input like {third_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solutions with higher concentrations of weak base are more effective buffers."
+                      }
+                    ],
+                    "id": "p6vfy4q8a4o0dba",
+                    "type": "p"
+                  }
+                ],
+                "id": "2885817396"
+              },
+              "id": "2173557729",
+              "legacyMatch": "B",
+              "rule": "input like {third_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solutions with higher concentrations of weak base are more effective buffers."
+                      }
+                    ],
+                    "id": "z086m019objisme",
+                    "type": "p"
+                  }
+                ],
+                "id": "563791565"
+              },
+              "id": "3949159308",
+              "legacyMatch": "C",
+              "rule": "input like {third_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Solutions with higher concentrations of weak base are more effective buffers."
+                      }
+                    ],
+                    "id": "xvujspk3sckpdue",
+                    "type": "p"
+                  }
+                ],
+                "id": "506061415"
+              },
+              "id": "203701645",
+              "legacyMatch": "D",
+              "rule": "input like {third_D}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "c84xpoebe6nqvxk",
+                    "type": "p"
+                  }
+                ],
+                "id": "2623126081"
+              },
+              "id": "2289162401",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The two components you will need for the buffer solution are:component 1: component 2: Which concentration for component 1 would make the most effective buffer?[component 1] = ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3243849636"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3128097521"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "2085063495"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "609183966"
+        ],
+        [
+          [
+            "third_A"
+          ],
+          "1181614550"
+        ],
+        [
+          [
+            "third_B"
+          ],
+          "2173557729"
+        ],
+        [
+          [
+            "third_C"
+          ],
+          "3949159308"
+        ],
+        [
+          [
+            "third_D"
+          ],
+          "203701645"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3540729410",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "1665853737",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "m6rqhzsy83n2dom",
+            "text": "a weak acid "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "78qbpcy006zzcnj",
+            "text": "a weak base"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "iid9qvv2bxofoj6",
+            "text": "a salt of its conjugate acid"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "bihimn4qcygsvkr",
+            "text": "a salt of its conjugate base"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "ct3hgcqhybgjrgx",
+            "text": "0.10 M "
+          }
+        ],
+        "id": "third_A"
+      },
+      {
+        "content": [
+          {
+            "id": "9ru0scq71ux9fn6",
+            "text": "0.50 M"
+          }
+        ],
+        "id": "third_B"
+      },
+      {
+        "content": [
+          {
+            "id": "bj3q2hzsw5n03x5",
+            "text": "1.0 M"
+          }
+        ],
+        "id": "third_C"
+      },
+      {
+        "content": [
+          {
+            "id": "zwp2eg4pj7r5gfc",
+            "text": "2.0 M"
+          }
+        ],
+        "id": "third_D"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "third_A",
+          "third_B",
+          "third_C",
+          "third_D"
+        ],
+        "id": "third",
+        "inputType": "dropdown",
+        "partId": "third",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The two components you will need for the buffer solution are:"
+            }
+          ],
+          "id": "8crli6u5ap8xyj1",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "component 1: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "avzmbiq0as3dxg2",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "component 2: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "kvswa8twxros78x",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Which concentration for component 1 would make the most effective buffer?"
+            }
+          ],
+          "id": "aisrhszb95rfrpf",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[component 1] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "third",
+              "input": "third",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "0x87cfhhls7poj9",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78482"
+    ],
+    "second": [
+      "78482"
+    ],
+    "third": [
+      "78482"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

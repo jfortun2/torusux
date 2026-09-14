@@ -1,0 +1,138 @@
+{
+  "id": "78682",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Single Response - race/ethnicity",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2717299773",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2036484683",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2286600714",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2426411809",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1709311951",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "460469242",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "3547256940",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3080179654",
+                "textDirection": "ltr"
+              },
+              "id": "1434843985",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2682398267",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2048022606",
+                "textDirection": "ltr"
+              },
+              "id": "2321870156",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "13a. If none of the above accurately represents your racial and ethnic background, please feel free to describe yourself here.",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "textarea",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "13a. If none of the above accurately represents your racial and ethnic background, please feel free to describe yourself here."
+            }
+          ],
+          "id": "2865147727",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "2250154737",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

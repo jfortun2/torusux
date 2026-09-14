@@ -1,0 +1,203 @@
+{
+  "id": "79736",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "GeomIsomerLBD1_q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3096408950",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "894858212",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2280782564",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2722671090",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "863887766",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2384552812",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Trans"
+                      },
+                      {
+                        "text": "- means \"opposite.\""
+                      }
+                    ],
+                    "id": "2163946415",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2740255041",
+                "textDirection": "ltr"
+              },
+              "id": "3947448611",
+              "rule": "input like {2684793470}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Trans"
+                      },
+                      {
+                        "text": "- means \"opposite.\""
+                      }
+                    ],
+                    "id": "1206886643",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1971354478",
+                "textDirection": "ltr"
+              },
+              "id": "204601665",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Trans- means members of each ligand group are:",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "986515838",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "opposite from each other."
+              }
+            ],
+            "id": "3422151114",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2684793470",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "next to each other."
+              }
+            ],
+            "id": "133078703",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3613889532",
+        "textDirection": "ltr"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "Trans"
+            },
+            {
+              "text": "- means members of each ligand group are:"
+            }
+          ],
+          "id": "302587924",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "970715017",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": [
+      "78318"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

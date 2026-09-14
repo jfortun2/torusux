@@ -1,0 +1,189 @@
+{
+  "id": "80171",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary01-q6",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "1604132211"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rdatjp5wyx5rmhs",
+                  "type": "p"
+                }
+              ],
+              "id": "1516011718"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u4mqp3b08341336",
+                  "type": "p"
+                }
+              ],
+              "id": "1084730616"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ok49sdz4clortxh",
+                  "type": "p"
+                }
+              ],
+              "id": "3078370138"
+            }
+          ],
+          "id": "1034701073",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "qg8j5gr8zbg9kvm",
+                    "type": "p"
+                  }
+                ],
+                "id": "1723771912"
+              },
+              "id": "1604132211",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*})))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Lecture "
+              }
+            ],
+            "id": "xyxdn1sr349g4sd",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Lab "
+              }
+            ],
+            "id": "isb0yboff4k4eof",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Discussion "
+              }
+            ],
+            "id": "4jcevk824lnj9vn",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Other "
+              }
+            ],
+            "id": "0uc64bzfkuoyk40",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "se1drirg39mp22s",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Did you use any other active learning techniques in class during this past week? Check if used in lectures, lab, or discussion sections, or otherwise, then describe below. Check all that apply. "
+            }
+          ],
+          "id": "j6cbjdgozpe2u4p",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "1034701073": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

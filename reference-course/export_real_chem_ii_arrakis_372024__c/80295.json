@@ -1,0 +1,210 @@
+{
+  "id": "80295",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary02-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mnggfm5e0jzmnxg",
+                  "type": "p"
+                }
+              ],
+              "id": "2824848047"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sq6udbzro9v23ik",
+                  "type": "p"
+                }
+              ],
+              "id": "1179430171"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qo14u0p899u9vsn",
+                  "type": "p"
+                }
+              ],
+              "id": "348737525"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "padkkdr7d638jtx",
+                    "type": "p"
+                  }
+                ],
+                "id": "1612503926"
+              },
+              "id": "2678316764",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "zry9mojeoqkql5k",
+            "text": "Solutions"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "t85wum7agbr2sze",
+            "text": "Thermodyanmics"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "gefpsgqr9pepppd",
+            "text": "Chemical Kinetics"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "o9e1thojaaji8ft",
+            "text": "Chemical Equilibrium"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "ffmveapyoq4viku",
+            "text": "Acids and Bases"
+          }
+        ],
+        "id": "one_E"
+      },
+      {
+        "content": [
+          {
+            "id": "nsi2uvbqgeti124",
+            "text": "Equilibria of Other Reactions"
+          }
+        ],
+        "id": "one_F"
+      },
+      {
+        "content": [
+          {
+            "id": "8os92cm0y5btire",
+            "text": "Electrochemistry"
+          }
+        ],
+        "id": "one_G"
+      },
+      {
+        "content": [
+          {
+            "id": "31m1smfywqkau74",
+            "text": "Nuclear Chemistry"
+          }
+        ],
+        "id": "one_H"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D",
+          "one_E",
+          "one_F",
+          "one_G",
+          "one_H"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Unit: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "sgyg61olj2ypxui",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

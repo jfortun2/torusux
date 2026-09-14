@@ -1,0 +1,326 @@
+{
+  "id": "80380",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "henderson_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "0utmj48xa4q5j01",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "43m4ahp25re4kq2",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hbyk7jn07y7w2ny",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{pH}\\;=\\;\\mathrm pK_{\\mathrm a}\\mathit\\;+\\:\\log\\frac{\\lbrack{\\mathrm C}_7{\\mathrm H}_5{\\mathrm O}_2^-\\rbrack}{\\lbrack {\\mathrm{HC}}_7{\\mathrm H}_5{\\mathrm O}_2\\rbrack}\\;=\\;-\\log(6.4\\times10^{-5})\\;+\\;\\log\\left(\\frac{0.25}{0.15}\\right)\\;=\\;4.42",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3470172882",
+                "type": "p"
+              }
+            ],
+            "id": "1019226680"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iaz9nvc2soefq16",
+                  "type": "p"
+                }
+              ],
+              "id": "4431479"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "76elva21k26241z",
+                  "type": "p"
+                }
+              ],
+              "id": "3773247595"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q42sobq2uw9ud5q",
+                  "type": "p"
+                }
+              ],
+              "id": "3229254720"
+            }
+          ],
+          "id": "622521800",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "vlnpvkw900iaz1h",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "zx3wd8rh5sw7ehg",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "qhxjwl38foxxz5k",
+                    "legacyBlockRendered": "true",
+                    "src": "\\mathrm{pH}\\;=\\;\\mathrm pK_{\\mathrm a}\\mathit\\;+\\:\\log\\frac{\\lbrack{\\mathrm C}_7{\\mathrm H}_5{\\mathrm O}_2^-\\rbrack}{\\lbrack {\\mathrm{HC}}_7{\\mathrm H}_5{\\mathrm O}_2\\rbrack}\\;=\\;-\\log(6.4\\times10^{-5})\\;+\\;\\log\\left(\\frac{0.25}{0.15}\\right)\\;=\\;4.42",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2043128876",
+                    "type": "p"
+                  }
+                ],
+                "id": "2282802995"
+              },
+              "id": "885246249",
+              "legacyMatch": "[4.4,4.5]",
+              "rule": "input = {[4.4,4.5]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Convert "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " to p"
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " and then use the Henderson-Hasselbalch equation:"
+                      }
+                    ],
+                    "id": "knz936j7ctue2wu",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "djpmob2avat6pqm",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "ndaj8pa33blnfor",
+                    "legacyBlockRendered": "true",
+                    "src": "\\mathrm{pH}\\;=\\;\\mathrm pK_{\\mathrm a}\\mathit\\;+\\:\\log\\frac{\\lbrack{\\mathrm C}_7{\\mathrm H}_5{\\mathrm O}_2^-\\rbrack} {\\lbrack{\\mathrm{HC}}_7{\\mathrm H}_5{\\mathrm O}_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3328518389",
+                    "type": "p"
+                  }
+                ],
+                "id": "3599504742"
+              },
+              "id": "3984369314",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Use the Henderson-Hasselbalch equation to determine the pH of a solution comprised of 0.15 M HC7H5O2 (benzoic acid) and 0.25 M NaC7H5O2 (sodium benzoate). The Ka for benzoic acid is 6.4 × 10−5.pH = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "622521800",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Use the Henderson-Hasselbalch equation to determine the pH of a solution comprised of 0.15 M HC"
+            },
+            {
+              "sub": true,
+              "text": "7"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "5"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " (benzoic acid) and 0.25 M NaC"
+            },
+            {
+              "sub": true,
+              "text": "7"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "5"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " (sodium benzoate). The "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " for benzoic acid is 6.4 × 10"
+            },
+            {
+              "sup": true,
+              "text": "−5"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "kss0dwjhec22ea8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "gtg0f6qgiq6veta",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "622521800": [
+      "78412"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

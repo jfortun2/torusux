@@ -1,0 +1,1982 @@
+{
+  "id": "80836",
+  "type": "Page",
+  "tags": [],
+  "title": "Predicting Precipitation",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium between solid calcium carbonate and its solvated ions is described by:"
+              }
+            ],
+            "id": "eo3wtqhe5slaa81",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "ihsh0hk4vl7zg01",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "cp3nmdfk59g9llg",
+            "legacyBlockRendered": "true",
+            "src": "{\\mathrm{CaCO}}_3(s)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Ca}^{2+}(aq)\\;+\\;\\mathrm{CO}_3^{2-}(aq)\\;\\;\\;\\;\\;\\;\\;\\; K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Ca}^{2+}\\rbrack\\lbrack\\mathrm{CO}_3^{2-}\\rbrack\\;=\\;8.7\\times10^{-9}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "We can establish this equilibrium either by adding solid calcium carbonate to water or by mixing a solution containing calcium ions with a solution containing carbonate ions. If we add calcium carbonate to water, the solid dissolves until the concentrations are such that the value of the reaction quotient ("
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " = [Ca"
+              },
+              {
+                "sup": true,
+                "text": "2+"
+              },
+              {
+                "text": "][CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "2−"
+              },
+              {
+                "text": "]) is equal to the solubility product ("
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": " = 8.7 × 10"
+              },
+              {
+                "sup": true,
+                "text": "–9"
+              },
+              {
+                "text": "). If we mix a solution of calcium nitrate, which contains Ca"
+              },
+              {
+                "sup": true,
+                "text": "2+"
+              },
+              {
+                "text": " ions, with a solution of sodium carbonate, which contains CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "2−"
+              },
+              {
+                "text": " ions, the slightly soluble ionic solid CaCO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": " precipitates if the concentrations of Ca"
+              },
+              {
+                "sup": true,
+                "text": "2+"
+              },
+              {
+                "text": " and CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "2−"
+              },
+              {
+                "text": " ions are such that the initial "
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " for the mixture is greater than "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": ". The reaction shifts to the left, and the concentrations of the ions are reduced by formation of the solid until the value of "
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " equals "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp,"
+              },
+              {
+                "text": " resulting in a saturated solution in equilibrium with the undissolved solid. If the concentrations are such that "
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " is less than "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": ", then the solution is not saturated and no precipitate will form."
+              }
+            ],
+            "id": "hvgp1s74cvr3chm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "The comparison of "
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " to "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": " to predict "
+              },
+              {
+                "children": [
+                  {
+                    "text": "precipitation"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "The formation of an insoluble solid from a supersaturated solution."
+                      }
+                    ],
+                    "id": "2742248421",
+                    "type": "p"
+                  }
+                ],
+                "id": "1666187294",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " is an example of the general approach to predicting the direction of a reaction first introduced in the chapter on equilibrium. For the specific case of solubility equilibria:"
+              }
+            ],
+            "id": "1d14yzjgipwhjd1",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "em": true,
+                        "strong": true,
+                        "text": "Q"
+                      },
+                      {
+                        "strong": true,
+                        "text": " < "
+                      },
+                      {
+                        "em": true,
+                        "strong": true,
+                        "text": "K"
+                      },
+                      {
+                        "strong": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "strong": true,
+                        "text": ":"
+                      },
+                      {
+                        "text": " The reaction proceeds in the forward direction (solution is not "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "saturated"
+                          }
+                        ],
+                        "content": [
+                          {
+                            "children": [
+                              {
+                                "text": "Describes a solution that contains the maximum concentration of solute possible for a given temperature and pressure; of concentration equal to solubility."
+                              }
+                            ],
+                            "id": "732492070",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "300755471",
+                        "trigger": "hover",
+                        "type": "popup"
+                      },
+                      {
+                        "text": "; no precipitation observed)."
+                      }
+                    ],
+                    "id": "9jepcd03nl6c70i",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "em": true,
+                        "strong": true,
+                        "text": "Q"
+                      },
+                      {
+                        "strong": true,
+                        "text": " > "
+                      },
+                      {
+                        "em": true,
+                        "strong": true,
+                        "text": "K"
+                      },
+                      {
+                        "strong": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "strong": true,
+                        "text": ":"
+                      },
+                      {
+                        "text": " The reaction proceeds in the reverse direction (solution is "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "supersaturated"
+                          }
+                        ],
+                        "content": [
+                          {
+                            "children": [
+                              {
+                                "text": "Describes a solution containing more than the maximum concentration of a solute dissolved in a solvent (a nonequilibrium state)."
+                              }
+                            ],
+                            "id": "549203557",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "716734038",
+                        "trigger": "hover",
+                        "type": "popup"
+                      },
+                      {
+                        "text": "; precipitation will occur)."
+                      }
+                    ],
+                    "id": "bvfbqcr23hk86s1",
+                    "type": "p"
+                  }
+                ],
+                "id": "1485547620",
+                "type": "li"
+              }
+            ],
+            "id": "4105612402",
+            "style": "none",
+            "type": "ul"
+          },
+          {
+            "children": [
+              {
+                "text": "This predictive strategy and related calculations are demonstrated in the next few example exercises. (Note: Because all forms of equilibrium constants are temperature dependent, we assume a room temperature environment unless a different temperature value is explicitly specified in the example.)"
+              }
+            ],
+            "id": "spw0eoj1af60ly9",
+            "type": "p"
+          }
+        ],
+        "id": "2776494798",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "The first step in the preparation of magnesium metal is the precipitation of Mg(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " from sea water by the addition of lime, Ca(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", a readily available inexpensive source of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " ion:"
+                  }
+                ],
+                "id": "ykl2sq1h23gx3km",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "z42270w6bduq825",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "vuviy109frq3x1s",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Mg}(\\mathrm{OH})_2(s)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Mg}^{2+}(aq)\\;+\\;2\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Mg}^{2+}\\rbrack{\\lbrack\\mathrm{OH}^-\\rbrack}^2\\;=\\;8.9\\times10^{-12}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The concentration of Mg"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "("
+                  },
+                  {
+                    "em": true,
+                    "text": "aq"
+                  },
+                  {
+                    "text": ") in sea water is 0.0537 M. Will Mg(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " precipitate when enough Ca(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is added to give an OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " concentration of 0.0010 M? Note: The amount of added lime is very small, so the volume of solution is essentially unchanged."
+                  }
+                ],
+                "id": "msdzx4uamcqf8fc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "To answer this question, we need to compare "
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": " to "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": ". For the given conditions, the reaction quotient is:"
+                  }
+                ],
+                "id": "6rbhsfo6mlo2qhy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "v7rtl0yarwm2vt4",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "k3i15yydlg6xwqc",
+                "legacyBlockRendered": "true",
+                "src": "Q\\;=\\;\\lbrack\\mathrm{Mg}^{2+}\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack^2\\;=\\;(0.0537)(0.0010)^2\\; =\\;5.4\\times10^{-8}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Because "
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": " is greater than "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": " (5.4 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–8"
+                  },
+                  {
+                    "text": " > 8.9 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–12"
+                  },
+                  {
+                    "text": "), the reaction will shift to the left and form solid magnesium hydroxide. Mg(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "("
+                  },
+                  {
+                    "em": true,
+                    "text": "aq"
+                  },
+                  {
+                    "text": ") will precipitate until the concentrations of magnesium ion and hydroxide ion are reduced enough that "
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": " is equal to "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "lbjtylrlvaugaga",
+                "type": "p"
+              }
+            ],
+            "id": "1291200159",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2313807274",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Does silver chloride precipitate when equal volumes of a 2.0 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–4"
+                  },
+                  {
+                    "text": " M solution of AgNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " and a 2.0 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–4"
+                  },
+                  {
+                    "text": " M solution of NaCl are mixed?"
+                  }
+                ],
+                "id": "9on9o5sblgqoxic",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note: When AgNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "("
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": ") and NaCl("
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": ") are mixed, the possible products are AgCl and NaNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": ". We have previously seen that AgCl is only slightly soluble and can form a precipitate. When we refer to the solubility rules, we see that NaNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " is very soluble and will not form a precipitate."
+                  }
+                ],
+                "id": "yisviof9an4gm5q",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The equilibrium between solid silver chloride, silver ion, and chloride ion is described by:"
+                  }
+                ],
+                "id": "g7iceq5ej27ghe4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "liefsjexmscw1ox",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "37b1gqecwuxsd2g",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{AgCl}(s)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Ag}^+(aq)\\;+\\;\\mathrm{Cl}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; K_\\mathrm{sp}\\;=\\;\\lbrack\\mathrm{Ag}^+\\rbrack\\lbrack\\mathrm{Cl}^-\\rbrack\\;=\\;1.6\\times10^{-10}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "AgCl will precipitate if the reaction quotient calculated from the concentrations right after AgNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " and NaCl are mixed is greater than "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": ". When we mix equal volumes of AgNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " and NaCl, the volume of solution doubles, so each concentration is reduced to half its initial value. Therefore, immediately upon mixing:"
+                  }
+                ],
+                "id": "gc6g227o8z29qjk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "clecwb9e7n1dy47",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "m8vprvh1plj3nmg",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack\\mathrm{Ag}^+\\rbrack\\;=\\;\\lbrack\\mathrm{Cl}^-\\rbrack\\;=\\;\\frac12(2.0\\times10^{-4})\\;\\mathrm M\\; =\\;1.0\\times10^{-4}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The reaction quotient is:"
+                  }
+                ],
+                "id": "nyx94jy744gtch7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "7m5aikzowujwkn4",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "2kbgp0xlmcbze1j",
+                "legacyBlockRendered": "true",
+                "src": "Q\\;=\\;\\lbrack\\mathrm{Ag}^+\\rbrack\\lbrack\\mathrm{Cl}^-\\rbrack\\;=\\;(1.0\\times10^{-4})(1.0\\times10^{-4})\\; =\\;1.0\\times10^{-8}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": " (1.0 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−4"
+                  },
+                  {
+                    "text": ") is momentarily greater than "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": " (1.6 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−10"
+                  },
+                  {
+                    "text": ") for AgCl, so the reaction will shift to the left and form AgCl(s). Silver chloride will precipitate until the concentrations of Ag"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and Cl"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": " are such that "
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": " equals "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "cm5tumkddwcvmhz",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note: We can also think of this as potentially forming a supersaturated solution of AgCl. Supersaturated solutions are unstable, so AgCl will precipitate from the mixture until the solution returns to equilibrium (when "
+                  },
+                  {
+                    "em": true,
+                    "text": "Q"
+                  },
+                  {
+                    "text": " = "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": ")."
+                  }
+                ],
+                "id": "mj7nthjhctycaul",
+                "type": "p"
+              }
+            ],
+            "id": "3225207378",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "514265226",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79359,
+            "id": "3865324913",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79257,
+            "id": "3452733864",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78783,
+            "id": "1604988647",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3681474705",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "In the previous two examples, we saw that Mg(OH)"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " and AgCl precipitate when "
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " is greater than "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": ". In general, when a solution of a soluble salt of the M"
+              },
+              {
+                "sup": true,
+                "text": "m+"
+              },
+              {
+                "text": " ion is mixed with a solution of a soluble salt of the X"
+              },
+              {
+                "sup": true,
+                "text": "n–"
+              },
+              {
+                "text": " ion, the solid, M"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "p"
+              },
+              {
+                "text": "X"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "q"
+              },
+              {
+                "text": ", precipitates if the value of "
+              },
+              {
+                "em": true,
+                "text": "Q"
+              },
+              {
+                "text": " for the mixture of M"
+              },
+              {
+                "sup": true,
+                "text": "m+"
+              },
+              {
+                "text": " and X"
+              },
+              {
+                "sup": true,
+                "text": "n–"
+              },
+              {
+                "text": " is greater than "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": " for M"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "p"
+              },
+              {
+                "text": "X"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "q"
+              },
+              {
+                "text": ". Thus, if we know the concentration of one of the ions of a slightly soluble ionic solid and the value for the solubility product of the solid, then we can calculate the concentration that the other ion must exceed for precipitation to begin. To simplify the calculation, we will assume that precipitation begins when the reaction quotient becomes equal to the solubility product."
+              }
+            ],
+            "id": "p4h0rcerpcoq5rz",
+            "type": "p"
+          }
+        ],
+        "id": "2497118767",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1229894838",
+                "type": "p"
+              },
+              {
+                "border": "hidden",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": "A photograph is shown of 6 vials of blood resting on and near a black and white document. Two of the vials have purple caps, three have tan caps, and one has a red cap. Each has a label and the vials with tan caps have a small amount of an off-white material present in a layer at the base of the vial.",
+                            "caption": [
+                              {
+                                "children": [
+                                  {
+                                    "em": true,
+                                    "text": "Anticoagulants can be added to blood that will combine with the Ca"
+                                  },
+                                  {
+                                    "em": true,
+                                    "sup": true,
+                                    "text": "2+"
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": " ions in blood serum and prevent the blood from clotting. (Credit: Modification of work by Neeta Lind.)"
+                                  }
+                                ],
+                                "type": "p"
+                              }
+                            ],
+                            "children": [
+                              {
+                                "id": "1hsk14x97bbt7dn",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "29cyeh2gsd5non8",
+                            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/21/216154b214d5a38a6fa1c3131ff4cdfa/CNX_Chem_15_01_Blood.jpg",
+                            "type": "img",
+                            "width": "300"
+                          }
+                        ],
+                        "id": "vs60j4ks045wwwz",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Blood will not clot if calcium ions are removed from its plasma. Some blood collection tubes contain salts of the oxalate ion, C"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O"
+                              },
+                              {
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "sup": true,
+                                "text": "2−"
+                              },
+                              {
+                                "text": ", for this purpose. At sufficiently high concentrations, the calcium and oxalate ions form a solid, CaC"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O"
+                              },
+                              {
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "text": "·H"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O (which also contains water bound in the solid). The concentration of Ca"
+                              },
+                              {
+                                "sup": true,
+                                "text": "2+"
+                              },
+                              {
+                                "text": " in a sample of blood serum is 2.2 × 10"
+                              },
+                              {
+                                "sup": true,
+                                "text": "–3"
+                              },
+                              {
+                                "text": " M. What concentration of C"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O"
+                              },
+                              {
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "sup": true,
+                                "text": "2−"
+                              },
+                              {
+                                "text": " ion must be established before CaC"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O"
+                              },
+                              {
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "text": " · H"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O begins to precipitate?"
+                              }
+                            ],
+                            "id": "qmee6b53zql8pxw",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "dwpncznzfd94aei",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "kxntf53kbqq820p",
+                    "type": "tr"
+                  }
+                ],
+                "id": "ai1vizdnkiydra4",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The reaction and equilibrium expression are: "
+                  }
+                ],
+                "id": "cpjmuvntlyzc94t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wnzzn4tg2hgnhz9",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "xi9vfi5vv1i6n14",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{CaC}}_2{\\mathrm O}_4\\cdot{\\mathrm H}_2\\mathrm O(s)\\;\\rightleftharpoons\\;\\mathrm{Ca}^{2+}(aq)+{\\mathrm C}_2\\mathrm O_4^{2-}(aq)+{\\mathrm H}_2\\mathrm O(l)\\;\\;\\;K_{\\mathrm{sp}}=\\lbrack\\mathrm{Ca}^{2+}\\rbrack\\lbrack{\\mathrm C}_2\\mathrm O_4^{2-}\\rbrack=2.32\\times10^{-9}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note: CaC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": " · H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O is a solid and H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O is a liquid, so they do not appear in the solubility product expression."
+                  }
+                ],
+                "id": "toz2k6uobufrwyl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solid CaC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": " · H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O does not begin to form until Q equals "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": ". Because we know "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": " and [Ca"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "], we can solve for the concentration of C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2−"
+                  },
+                  {
+                    "text": " · H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O that is necessary to produce the first trace of solid:"
+                  }
+                ],
+                "id": "0lon57r0ayrdqj2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "1q8g9bje4bib4pm",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "atr1e0mkj9xo6fz",
+                "legacyBlockRendered": "true",
+                "src": "Q\\;=\\;K_\\mathrm{sp}\\;=\\;\\lbrack\\mathrm{Ca}^{2+}\\rbrack\\lbrack{\\mathrm C}_2\\mathrm O_4^{2-}\\rbrack\\; =\\;2.32\\times10^{-9}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "0o8l1tjyo9c9rdm",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "5qdx55gfe0lsbdu",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack\\mathrm{Ca}^{2+}\\rbrack\\;=\\;\\frac{K_\\mathrm{sp}}{\\lbrack{\\mathrm C}_2\\mathrm O_4^{2-}\\rbrack}\\; =\\;\\frac{2.32\\times10^{-9}}{2.0\\times10^{-3}}\\;=\\;1.2\\times10^{-6}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "A concentration of [C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2−"
+                  },
+                  {
+                    "text": "] = 1.2 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M is necessary to initiate the precipitation of CaC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": " · H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O under these conditions."
+                  }
+                ],
+                "id": "631ynos8fp6fvr0",
+                "type": "p"
+              }
+            ],
+            "id": "587187436",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "1693401574",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80089,
+            "id": "1478479289",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79414,
+            "id": "192054031",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1448812042",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "It is sometimes useful to know the concentration of an ion that remains in solution after precipitation. We can use the solubility product for this calculation too. If we know the value of "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "sp"
+              },
+              {
+                "text": " and the concentration of one ion in solution, we can calculate the concentration of the second ion remaining in solution. The calculation is of the same type as that in the following example—calculation of the concentration of a species in an equilibrium mixture from the concentrations of the other species and the equilibrium constant. However, the concentrations are different; we are calculating concentrations after precipitation is complete rather than at the start of precipitation."
+              }
+            ],
+            "id": "izkuu77jw7looj7",
+            "type": "p"
+          }
+        ],
+        "id": "1068112658",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Clothing washed in water that has a manganese ion (Mn"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "("
+                  },
+                  {
+                    "em": true,
+                    "text": "aq"
+                  },
+                  {
+                    "text": ")) concentration exceeding 0.10 mg/L (1.8 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M) may be stained by the manganese upon oxidation, but the amount of Mn"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " in the water can be reduced by adding a base. If a person doing laundry wishes to add a buffer to keep the pH high enough to precipitate the manganese as the hydroxide, Mn(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", what pH is required to keep [Mn"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "] equal to 1.8 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M?"
+                  }
+                ],
+                "id": "jpcl329unlompm4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The dissolution of Mn(OH)"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is described by:"
+                  }
+                ],
+                "id": "5yauts11bxp1s03",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "t00l80eam9g6z7f",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "fwy0ikf0xwaugw9",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Mn}(\\mathrm{OH})_2(s)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Mn}^{2+}(aq)\\;+\\;2\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Mn}^{2+}\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;2\\times10^{-13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "At equilibrium when the concentration of Mn"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is 1.8 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M, we have:"
+                  }
+                ],
+                "id": "hl8v3x6eeziwxwn",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "j2qmcsb4qthy6mm",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "buktsxamsxictge",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Mn}^{2+}\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack^2\\; =\\;(1.8\\times10^{-6})\\lbrack\\mathrm{OH}^-\\rbrack^2\\;=\\;2\\times10^{-13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We solve this for the concentration of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "waot9gu6sbnhjkp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "xn29jdz6vn9ax4r",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "e6jbtyslll8e3vx",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack\\mathrm{OH}^-\\rbrack^2\\;=\\;\\frac{K_{\\mathrm{sp}}}{\\lbrack\\mathrm{Mn}^{2+}\\rbrack}\\;\\;\\;\\;\\; \\Rightarrow\\;\\;\\;\\;\\;\\;\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\sqrt{\\frac{\\;2\\times10^{-13}}{\\;1.8\\times10^{-6}}}\\; =\\;3.3\\times10^{-4}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "From that, we calculate the pOH and then the pH:"
+                  }
+                ],
+                "id": "wlt06u09qefzk1u",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "p8blruagdof073o",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "g797uvwqx7wy004",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log\\;(3.3\\times10^{-4})\\; =\\;3.48\\\\\\mathrm{pH}\\;=\\;14.00\\;-\\;\\mathrm{pOH}\\;=\\;14.00\\;-\\;3.80\\;=\\;10.52\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "If the person doing laundry adds a base, such as the sodium silicate (Na"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": "SiO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": ") in some detergents, to the wash water until the pH is raised to 10.52, the manganese ion will be reduced to a concentration of 1.8 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M; at that concentration or less, the ion will not stain clothing."
+                  }
+                ],
+                "id": "z76vmuthpkd3e45",
+                "type": "p"
+              }
+            ],
+            "id": "1118858431",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2787125688",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79591,
+            "id": "1439209489",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80230,
+            "id": "3427170206",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "4051396816",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": " Use "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Solubility Products"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_solubility_products_k4ulz",
+                    "idref": "80605",
+                    "target": "new",
+                    "type": "a"
+                  },
+                  {
+                    "text": " as needed. "
+                  }
+                ],
+                "id": "gr69txg26q4rzeu",
+                "type": "p"
+              }
+            ],
+            "id": "1761865053",
+            "page": "1102400462",
+            "type": "content"
+          },
+          {
+            "activity_id": 78789,
+            "id": "740076578",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79828,
+            "id": "1730743156",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78973,
+            "id": "1420663358",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79151,
+            "id": "2900141374",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3288589944",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "1oi489bgmqizy99",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "ecblb6wswmpymv4",
+            "type": "p"
+          }
+        ],
+        "id": "2644161472",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78554"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

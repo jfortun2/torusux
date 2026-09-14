@@ -1,0 +1,236 @@
+{
+  "id": "79729",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78271"
+  ],
+  "title": "CFT_splitting_calc_pool1_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2445849324",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3788118924",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2162924905",
+          "incorrectScore": null,
+          "outOf": 6.2,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The crystal field splitting is approximately equal to the energy for photons corresponding to the maximum absorbance."
+                      }
+                    ],
+                    "id": "1631322284",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "54ui72yp1qf38la",
+                        "text": ""
+                      }
+                    ],
+                    "id": "283359092",
+                    "src": "\\mathrm\\Delta\\;=\\;E_{photon}\\;=\\;\\frac{hc}\\lambda\\;=\\;\\frac{(6.626\\times10^{-34}\\;\\mathrm J\\cdot\\mathrm s)(\\;2.998\\times10^8\\;\\mathrm m/\\mathrm s)}{570\\times10^{-9}\\;\\mathrm m}\\;=\\;3.49\\times10^{-19}\\;\\mathrm J",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "971274165",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3245660044",
+                "textDirection": "ltr"
+              },
+              "id": "3309851066",
+              "rule": "input = {[3.4e-19,3.6e-19]}",
+              "score": 6.2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The crystal field splitting is approximately equal to the energy for photons corresponding to the maximum absorbance."
+                      }
+                    ],
+                    "id": "3313131873",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "λ"
+                      },
+                      {
+                        "text": "·"
+                      },
+                      {
+                        "em": true,
+                        "text": "ν"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": "  and "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "hν"
+                      },
+                      {
+                        "text": " to calculate the energy. Pay attention to units."
+                      }
+                    ],
+                    "id": "0fsv03xoxknebxa",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3294127428",
+                "textDirection": "ltr"
+              },
+              "id": "2856321157",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "The coordination complex ion [Ni(NH3)6]2+ has a maximum absorbance of light at 570 nm. Calculate the approximate value of the crystal field splitting for this complex.Δ =  J",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "499702806",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "1315813681",
+        "inputType": "numeric",
+        "partId": "2162924905"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The coordination complex ion [Ni(NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": " has a maximum absorbance of light at 570 nm. Calculate the approximate value of the crystal field splitting for this complex."
+            }
+          ],
+          "id": "3557127197",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1315813681",
+              "type": "input_ref"
+            },
+            {
+              "text": " J"
+            }
+          ],
+          "id": "4127922584",
+          "type": "p"
+        }
+      ],
+      "id": "560208313"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2162924905": [
+      "78300"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

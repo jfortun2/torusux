@@ -1,0 +1,247 @@
+{
+  "id": "79921",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78109"
+  ],
+  "title": "bronsted_arrhenius_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. This substance is a Bronsted-Lowry acid because it can donate a proton (hydrogen cation H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": ") to another substance."
+                  }
+                ],
+                "id": "letyutz22d4m48h",
+                "type": "p"
+              }
+            ],
+            "id": "1659701889"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bdg0rpwo4880x98",
+                  "type": "p"
+                }
+              ],
+              "id": "4161398087"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2mslcmjo5wt00e3",
+                  "type": "p"
+                }
+              ],
+              "id": "2255318125"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ok9m1114z6mv3r1",
+                  "type": "p"
+                }
+              ],
+              "id": "2778507703"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This substance is a Bronsted-Lowry acid because it can donate a proton (hydrogen cation H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") to another substance."
+                      }
+                    ],
+                    "id": "bac863b13768466b94b66b0d87946dd5",
+                    "type": "p"
+                  }
+                ],
+                "id": "2588151798"
+              },
+              "id": "1224958229",
+              "legacyMatch": "ef9579c1c567445b9627721244b0b669",
+              "rule": "input like {ef9579c1c567445b9627721244b0b669}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. According to the Bronsted-Lowry definition, an acid is a substance that donates a proton (hydrogen cation H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") to another substance, and a base is a substance that accepts a proton from another substance."
+                      }
+                    ],
+                    "id": "a6cce83cb23f4fcd820e65822e569ede",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "b07fd816c6fe4deea9923aba1ee212b4",
+                    "type": "p"
+                  }
+                ],
+                "id": "1219561356"
+              },
+              "id": "345892239",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "332727721",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NaOH"
+              }
+            ],
+            "id": "fb9ns6duqdcsgqt",
+            "type": "p"
+          }
+        ],
+        "id": "cd3f85231e32499397babfc56eb90159"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Mg(OH)"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "qq0qaj1wfaxqp9l",
+            "type": "p"
+          }
+        ],
+        "id": "d09aea7eda0148759831c8f0f24a6a7a"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "HCl"
+              }
+            ],
+            "id": "i0jb3nflmufomdr",
+            "type": "p"
+          }
+        ],
+        "id": "ef9579c1c567445b9627721244b0b669"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              }
+            ],
+            "id": "1rfr8leap5bcjsj",
+            "type": "p"
+          }
+        ],
+        "id": "c57669c622fb41819c21156875163a29"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is a Bronsted-Lowry acid?"
+            }
+          ],
+          "id": "ce87f11324a74e77a7e9b9f9ef0a1799",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

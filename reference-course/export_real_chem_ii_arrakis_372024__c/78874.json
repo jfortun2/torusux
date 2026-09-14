@@ -1,0 +1,189 @@
+{
+  "id": "78874",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary06-q8",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "1993555166"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "galk101h8gywa1l",
+                  "type": "p"
+                }
+              ],
+              "id": "141180282"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ajbchm7q5dxoktx",
+                  "type": "p"
+                }
+              ],
+              "id": "3027719934"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a1fkjo6apm2ajx0",
+                  "type": "p"
+                }
+              ],
+              "id": "2126619525"
+            }
+          ],
+          "id": "2395932976",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "cg3zvpcemzokgar",
+                    "type": "p"
+                  }
+                ],
+                "id": "3283066998"
+              },
+              "id": "1993555166",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*})))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Lecture "
+              }
+            ],
+            "id": "742p87bt776fd47",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Lab "
+              }
+            ],
+            "id": "11g7v1oy52aku8t",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Discussion "
+              }
+            ],
+            "id": "brpwgin21bhx9k5",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes - Other "
+              }
+            ],
+            "id": "2gfl2okxlvj090k",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "osddjg6hzl2u21i",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Did you use questions from OLI in your course this week? Check if used in lectures, discussion sections, labs, homework, or otherwise, then describe below, or explain why not. Check all that apply. "
+            }
+          ],
+          "id": "agw44h0ctg9za92",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2395932976": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

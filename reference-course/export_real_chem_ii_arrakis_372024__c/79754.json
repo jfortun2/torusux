@@ -1,0 +1,307 @@
+{
+  "id": "79754",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ox_numbers_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. In this ionic compound, calcium is a +2 ion, so the oxidation number for Ca is +2."
+                  }
+                ],
+                "id": "ao84rspvvxfz8mm",
+                "type": "p"
+              }
+            ],
+            "id": "3332722473"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The oxidation number of a monatomic ion is equal to the ion’s charge."
+                    }
+                  ],
+                  "id": "f64aon1oxb3fjjr",
+                  "type": "p"
+                }
+              ],
+              "id": "2209323872"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "doy53fbeheu4s06",
+                  "type": "p"
+                }
+              ],
+              "id": "3662333660"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "you4cyymvn9wvzo",
+                  "type": "p"
+                }
+              ],
+              "id": "2282512291"
+            }
+          ],
+          "id": "2588482223",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. In this ionic compound, calcium is a +2 ion, so the oxidation number for Ca is +2."
+                      }
+                    ],
+                    "id": "hhv1lrvqmq0byod",
+                    "type": "p"
+                  }
+                ],
+                "id": "47904821"
+              },
+              "id": "2185681206",
+              "legacyMatch": "2",
+              "rule": "input = {2}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hint and try again."
+                      }
+                    ],
+                    "id": "evddnoisyovst4o",
+                    "type": "p"
+                  }
+                ],
+                "id": "932201059"
+              },
+              "id": "78867720",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Calcium is a metal; when hydrogen combines with a metal its oxidation number is −1."
+                  }
+                ],
+                "id": "zae46nfqs80s0vm",
+                "type": "p"
+              }
+            ],
+            "id": "819354376"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Hydrogen has an oxidation number of +1 when combined with nonmetals, and −1 when combined with metals."
+                    }
+                  ],
+                  "id": "iohlh533pae6dzm",
+                  "type": "p"
+                }
+              ],
+              "id": "1864712094"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "itg84xa8mrd7f2i",
+                  "type": "p"
+                }
+              ],
+              "id": "1412840908"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t2hgzpk12sn849c",
+                  "type": "p"
+                }
+              ],
+              "id": "3765344182"
+            }
+          ],
+          "id": "1771172942",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Calcium is a metal; when hydrogen combines with a metal its oxidation number is −1."
+                      }
+                    ],
+                    "id": "6aofkiskm8wwxtc",
+                    "type": "p"
+                  }
+                ],
+                "id": "785099937"
+              },
+              "id": "402020209",
+              "legacyMatch": "-1",
+              "rule": "input = {-1}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hint and try again."
+                      }
+                    ],
+                    "id": "hwgumjy3q4uzqmb",
+                    "type": "p"
+                  }
+                ],
+                "id": "3710873884"
+              },
+              "id": "2100463751",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2588482223",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "1771172942",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Determine the oxidation numbers for each element in CaH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "6yk7j8ev2ah9itg",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The oxidation number for Ca is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            }
+          ],
+          "id": "dg1rf7qnuho1laf",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The oxidation number for H is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            }
+          ],
+          "id": "9uv6vvy7qz70263",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1771172942": [],
+    "2588482223": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

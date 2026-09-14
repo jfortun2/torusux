@@ -1,0 +1,152 @@
+{
+  "id": "78571",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "GeomIsomerLBD1_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1450635952",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2235706233",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Diaqua"
+                      },
+                      {
+                        "text": "- means this complex contains two water molecules."
+                      }
+                    ],
+                    "id": "961635214",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2624857511",
+                "textDirection": "ltr"
+              },
+              "id": "378603713",
+              "rule": "input = {2}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Diaqua"
+                      },
+                      {
+                        "text": "- means this complex contains two water molecules."
+                      }
+                    ],
+                    "id": "1951453555",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3324785046",
+                "textDirection": "ltr"
+              },
+              "id": "11942019",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "H﻿ow many water molecules does this complex ion contain? ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1295965175",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "1079751347",
+        "inputType": "numeric",
+        "partId": "1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "H﻿ow many water molecules does this complex ion contain? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1079751347",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2212077565",
+          "type": "p"
+        }
+      ],
+      "id": "3198633594"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78318"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,288 @@
+{
+  "id": "78691",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "indicators_lbd-q2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "C"
+        ],
+        "1335241627"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Choose an indicator(s) that changes color in the indicated end-point pH range."
+                    }
+                  ],
+                  "id": "vfdf1t7gy1yklxb",
+                  "type": "p"
+                }
+              ],
+              "id": "2116304327"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "72i3d4p9muf83zc",
+                  "type": "p"
+                }
+              ],
+              "id": "1602622339"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pmnv1v6ajbb9bxg",
+                  "type": "p"
+                }
+              ],
+              "id": "4171446705"
+            }
+          ],
+          "id": "2920113088",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Because the volume change in the end-point range (2.8,6.0) is very small, any indicator that shows a color change within this range will work for this titration."
+                      }
+                    ],
+                    "id": "csrx1vg4ejr87q8",
+                    "type": "p"
+                  }
+                ],
+                "id": "1049253309"
+              },
+              "id": "1335241627",
+              "legacyMatch": "B,C",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {A})) && (input like {C} && (input like {B}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "This is correct, but there is one more indicator that can be used for this titration."
+                      }
+                    ],
+                    "id": "azp1on6t7nxponb",
+                    "type": "p"
+                  }
+                ],
+                "id": "2882253868"
+              },
+              "id": "2206687204",
+              "legacyMatch": "B",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {A})) && (input like {B}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "This is correct, but there is one more indicator that can be used for this titration."
+                      }
+                    ],
+                    "id": "bh2alcse4n3d1v3",
+                    "type": "p"
+                  }
+                ],
+                "id": "2110385702"
+              },
+              "id": "3310649817",
+              "legacyMatch": "C",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {B})) && ((!(input like {A})) && (input like {C}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Because the volume change in the end-point range (2.8,6.0) is very small, any indicator that shows a color change within this range will work for this titration. "
+                      }
+                    ],
+                    "id": "k82y1ubwhkopta6",
+                    "type": "p"
+                  }
+                ],
+                "id": "3764663758"
+              },
+              "id": "2055010181",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Choose appropriate indicator(s) for this titration.  ",
+      "targeted": [
+        [
+          [
+            "B"
+          ],
+          "2206687204"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3310649817"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Bromthymol blue"
+              }
+            ],
+            "id": "ne57f21q946h3kn",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Bromophenol blue"
+              }
+            ],
+            "id": "yft6s3yko7arqzs",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Methyl orange"
+              }
+            ],
+            "id": "xcpcvsrhrhlc0oy",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Litmus"
+              }
+            ],
+            "id": "x1hmo2zrjys0ray",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Phenolphthalein"
+              }
+            ],
+            "id": "wugy7zvwbrflgke",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Choose appropriate indicator(s) for this titration. "
+            }
+          ],
+          "id": "26jbw8915chzvzh",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "kyjqf7vpezm4z1u",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "c77rhyh71cdl38l",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/eb/eb001cc4694b8981058beafdef19c978/indicators.png",
+          "type": "img",
+          "width": "550"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "3698439065",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2920113088": [
+      "78298"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

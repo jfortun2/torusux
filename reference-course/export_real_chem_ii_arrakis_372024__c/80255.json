@@ -1,0 +1,264 @@
+{
+  "id": "80255",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "lechat_quiz-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kzr3z9wg5updrsv",
+                  "type": "p"
+                }
+              ],
+              "id": "1190229806"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "14exqygmgcyd7el",
+                  "type": "p"
+                }
+              ],
+              "id": "1520636269"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y1z31imy5ha1opi",
+                  "type": "p"
+                }
+              ],
+              "id": "2698033016"
+            }
+          ],
+          "id": "2877213046",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solid substances have no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "g5qmmfacvuuqw5a",
+                    "type": "p"
+                  }
+                ],
+                "id": "2443092949"
+              },
+              "id": "1842708142",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solid substances have no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "anr9z3568o2suw2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3366763191"
+              },
+              "id": "84022258",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Solid substances have no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "f8rzy6bboq7ok81",
+                    "type": "p"
+                  }
+                ],
+                "id": "2061643184"
+              },
+              "id": "1782383438",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "up9ynf6gi3c6fgd",
+                    "type": "p"
+                  }
+                ],
+                "id": "2818564949"
+              },
+              "id": "2916371118",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1842708142"
+            ],
+            [
+              [
+                "B"
+              ],
+              "84022258"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1782383438"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1842708142"
+        ],
+        [
+          [
+            "B"
+          ],
+          "84022258"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1782383438"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "increase"
+              }
+            ],
+            "id": "nqdd8iyshfzcb2u",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "decrease"
+              }
+            ],
+            "id": "lugimld1wy7y9vp",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "stay the same"
+              }
+            ],
+            "id": "00w5haxafyujtux",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "If P"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "(s) is added to the reaction, what will happen to the amount of O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "(g)?"
+            }
+          ],
+          "id": "4qam2gw0f02gwi7",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2877213046": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

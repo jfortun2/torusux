@@ -1,0 +1,496 @@
+{
+  "id": "79629",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "LigandPrefixesLBD1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2976932580",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4205968771",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1084573749",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. There are two chloro ligands."
+                      }
+                    ],
+                    "id": "1477122589",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4165213500",
+                "textDirection": "ltr"
+              },
+              "id": "1643909344",
+              "rule": "input like {3212247232}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Check the ligand name and how many are present to determine which prefix is needed."
+                      }
+                    ],
+                    "id": "2963964094",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3180479381",
+                "textDirection": "ltr"
+              },
+              "id": "1042566256",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1167220023",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "630665068",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "3015955264",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. There are two ethylenediamine ligands. Since ethylenediamine contains a prefix (di) and is polydentate, the special prefix "
+                      },
+                      {
+                        "em": true,
+                        "text": "bis"
+                      },
+                      {
+                        "text": " is needed."
+                      }
+                    ],
+                    "id": "2010806924",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3759535468",
+                "textDirection": "ltr"
+              },
+              "id": "858878131",
+              "rule": "input like {4163135649}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2745171636",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1146115688",
+                "textDirection": "ltr"
+              },
+              "id": "4233744570",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "In the complex [CoCl2(en)2]+, what prefixes are needed?chloroethylenediaminecobalt(III)",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "4067399181",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "721979220",
+          "operation": "shuffle",
+          "partId": "1454210928",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2475835170",
+          "operation": "shuffle",
+          "partId": "3015955264",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3490332096",
+          "operation": "shuffle",
+          "partId": "1084573749",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bi"
+              }
+            ],
+            "id": "1692346107",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3563634190",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tri"
+              }
+            ],
+            "id": "2316803327",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2409280743",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetra"
+              }
+            ],
+            "id": "3926634693",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "623806093",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bis"
+              }
+            ],
+            "id": "3658097397",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "4163135649",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tris"
+              }
+            ],
+            "id": "1638050414",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "348862039",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetrakis"
+              }
+            ],
+            "id": "866559228",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1183389687",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "di"
+              }
+            ],
+            "id": "2683089483",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3212247232",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tri"
+              }
+            ],
+            "id": "2900030874",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1993058378",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetra"
+              }
+            ],
+            "id": "1617036836",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "4066117357",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bis"
+              }
+            ],
+            "id": "670017021",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2494468371",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tris"
+              }
+            ],
+            "id": "2387592093",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "4292324451",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetrakis"
+              }
+            ],
+            "id": "2600493747",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2742791812",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "3212247232",
+          "1993058378",
+          "4066117357",
+          "2494468371",
+          "4292324451",
+          "2742791812"
+        ],
+        "id": "457488416",
+        "inputType": "dropdown",
+        "partId": "1084573749",
+        "size": "small"
+      },
+      {
+        "choiceIds": [
+          "3563634190",
+          "2409280743",
+          "623806093",
+          "4163135649",
+          "348862039",
+          "1183389687"
+        ],
+        "id": "945558710",
+        "inputType": "dropdown",
+        "partId": "3015955264",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In the complex [CoCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "(en)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": ", what prefixes are needed?"
+            }
+          ],
+          "id": "1982160572",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "457488416",
+              "type": "input_ref"
+            },
+            {
+              "text": "chloro"
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "945558710",
+              "type": "input_ref"
+            },
+            {
+              "text": "ethylenediaminecobalt(III)"
+            }
+          ],
+          "id": "1592422920",
+          "type": "p"
+        }
+      ],
+      "id": "97239972"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1084573749": [
+      "78460"
+    ],
+    "3015955264": [
+      "78460"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,329 @@
+{
+  "id": "79838",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78275"
+  ],
+  "title": "entropy_fill_in_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rtg9cj5vmlgr2kr",
+                  "type": "p"
+                }
+              ],
+              "id": "4075425026"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dk4e83418u6j7dq",
+                  "type": "p"
+                }
+              ],
+              "id": "2440312701"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "avbxunxt7raepf7",
+                  "type": "p"
+                }
+              ],
+              "id": "1918981155"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The process of air escaping from the balloon increases the dispersal of matter (the entropy) and allows the system to occupy a greater distribution of kinetic states."
+                      }
+                    ],
+                    "id": "xx2pqy351pliu34",
+                    "type": "p"
+                  }
+                ],
+                "id": "2664605014"
+              },
+              "id": "2877528189",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Entropy can be described as a measure of the dispersal of matter, or disorder of a system. Matter that is least dispersed, and is most ordered (least disordered) has the least entropy. Matter that is most dispersed, and is most disordered has the greatest entropy. "
+                      }
+                    ],
+                    "id": "ozrbg0gnazld7e2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3713067994"
+              },
+              "id": "2924881205",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5hjww3k8s7lzyzw",
+                  "type": "p"
+                }
+              ],
+              "id": "33145944"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bicejx0v5tyqnga",
+                  "type": "p"
+                }
+              ],
+              "id": "3676799804"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q61hu7q9bzvrh9f",
+                  "type": "p"
+                }
+              ],
+              "id": "2635025551"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The process of air escaping from the balloon increases the dispersal of matter (the entropy) and allows the system to occupy a greater distribution of kinetic states."
+                      }
+                    ],
+                    "id": "daa351rwecetw77",
+                    "type": "p"
+                  }
+                ],
+                "id": "731638487"
+              },
+              "id": "842388386",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Entropy can be described as a measure of the dispersal of matter or distribution of kinetic states (microstates). Matter that is least dispersed has the lowest distribution of microstates and matter that is most dispersed has the highest distribution of microstates."
+                      }
+                    ],
+                    "id": "pfo9mpts6aug63g",
+                    "type": "p"
+                  }
+                ],
+                "id": "1140993548"
+              },
+              "id": "1774644960",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "nk3xvb30ie282w7",
+            "text": "increases"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "337pb8m7zct67yc",
+            "text": "decreases"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "g6yvg2n2nwhucob",
+            "text": "stays the same"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "z8yflidqjfen4kp",
+            "text": "a greater distribution"
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "8407a74nb7j5pqz",
+            "text": "a smaller distribution"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "tcmh1kwdkjsaadk",
+            "text": "the same distribution"
+          }
+        ],
+        "id": "two_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "When an inflated balloon is untied in a room, the air inside the balloon rushes out and fills the room. The entropy of the air "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " as the gas expands, allowing it to occupy "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " of kinetic energy states. Treat the balloon and its air as the system."
+            }
+          ],
+          "id": "n8msy8oucst3k31",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

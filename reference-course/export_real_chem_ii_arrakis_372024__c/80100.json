@@ -1,0 +1,560 @@
+{
+  "id": "80100",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78123"
+  ],
+  "title": "po8_UA_deltaG_K_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "ji3yvio7fq3cgdt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "737to81q0a6cudv",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\Delta G^\\circ\\;=\\;\\Delta H^\\circ-\\;T\\cdot\\Delta S^\\circ\\\\ =\\;26.2\\;\\mathrm{kJ}\\;\\;+\\;\\left(@@temp@@\\;\\mathrm K\\right)\\cdot\\left(108.1\\;{\\mathrm J/\\mathrm K}\\right)\\cdot\\left(\\;\\dfrac{1\\;\\mathrm{kJ}}{1000\\;\\mathrm J}\\right)\\;\\\\ =\\;@@ans1@@\\;\\mathrm{kJ}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3suai51ymjxt291",
+                "type": "p"
+              }
+            ],
+            "id": "2651834013"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jhvkyd9i6isckcq",
+                  "type": "p"
+                }
+              ],
+              "id": "156621120"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t1k6glyshwzl2ln",
+                  "type": "p"
+                }
+              ],
+              "id": "2658050799"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0ynuuqnnqbjkg9a",
+                  "type": "p"
+                }
+              ],
+              "id": "1318640562"
+            }
+          ],
+          "id": "de2f172dae194161a62c408089c58a60",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "i9904u3kkxhmoco",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\Delta G^\\circ\\;=\\;\\Delta H^\\circ-\\;T\\cdot\\Delta S^\\circ\\\\ =\\;26.2\\;\\mathrm{kJ}\\;\\;+\\;\\left(@@temp@@\\;\\mathrm K\\right)\\cdot\\left(108.1\\;{\\mathrm J/\\mathrm K}\\right)\\cdot\\left(\\;\\dfrac{1\\;\\mathrm{kJ}}{1000\\;\\mathrm J}\\right)\\;\\\\ =\\;@@ans1@@\\;\\mathrm{kJ}\\end{array}\\\\\\\\\\;\\;\\;\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "m5w9y7r9vd3p7yp",
+                    "type": "p"
+                  }
+                ],
+                "id": "634867313"
+              },
+              "id": "3864123970",
+              "legacyMatch": "[@@low@@,@@high@@]",
+              "rule": "input = {[@@ans1low@@,@@ans1high@@]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that:"
+                      }
+                    ],
+                    "id": "8f3fquqrvi8noea",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta G^\\circ\\;=\\;\\Delta H^\\circ-\\;T\\cdot\\Delta S^\\circ",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "qjisbn2lfocxaxl",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Be sure to use the correct units."
+                      }
+                    ],
+                    "id": "hk06x2ejojra3vm",
+                    "type": "p"
+                  }
+                ],
+                "id": "3771016472"
+              },
+              "id": "1239038002",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "i9svsnmllpswtk8",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "me6tdcjqdhjpxee",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K\\;=\\;\\mathrm e^{\\displaystyle-\\frac{\\Delta G^\\circ}{\\mathrm RT}}\\; =\\;\\mathrm e^{\\left(\\displaystyle-\\frac{@@ans1@@\\;\\mathrm{kJ}}{\\left(0.008314\\;{\\displaystyle\\mathrm{kJ}/\\mathrm K} \\right)\\cdot\\;\\left(@@temp@@\\;\\mathrm K\\right)\\;}\\right)}\\; =\\;@@ans2sf@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "y794lzdzch13klb",
+                "type": "p"
+              }
+            ],
+            "id": "3316578416"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gefi12sec7bx92f",
+                  "type": "p"
+                }
+              ],
+              "id": "1793572252"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c8e3d86obyvg3o6",
+                  "type": "p"
+                }
+              ],
+              "id": "4283893997"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fonzgtcp60sn50f",
+                  "type": "p"
+                }
+              ],
+              "id": "41144111"
+            }
+          ],
+          "id": "a659ea17640e4b219a4a482b20243f64",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "1xxu1oz0johxk45",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K\\;=\\;\\mathrm e^{\\displaystyle-\\frac{\\Delta G^\\circ}{\\mathrm RT}}\\; =\\;\\mathrm e^{\\left(\\displaystyle-\\frac{@@ans1@@\\;\\mathrm{kJ}}{\\left(0.008314\\;{\\displaystyle\\mathrm{kJ}/\\mathrm K} \\right)\\cdot\\;\\left(@@temp@@\\;\\mathrm K\\right)\\;}\\right)}\\; =\\;@@ans2sf@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "0i4s9dx0n1tnsfl",
+                    "type": "p"
+                  }
+                ],
+                "id": "1393270149"
+              },
+              "id": "970349964",
+              "legacyMatch": "[@@ans2low@@,@@ans2high@@]",
+              "rule": "input = {[@@ans2low@@,@@ans2high@@]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that:"
+                      }
+                    ],
+                    "id": "cjht2typkbm0ssp",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K\\;=\\;\\mathrm e^{\\displaystyle-\\frac{\\Delta G^\\circ}{\\mathrm RT}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "barfmtue6dumujc",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Be careful with units and significant figures."
+                      }
+                    ],
+                    "id": "ovw95ae1vaq8j07",
+                    "type": "p"
+                  }
+                ],
+                "id": "3802836462"
+              },
+              "id": "1176889945",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Given:  Determine the value of the standard Gibbs free energy change for this reaction at @@tempC@@ oC.ΔGo =  kJDetermine the value of the equilibrium constant for this reaction at @@tempC@@ oC.K = ",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst t = OLI.random(65, 95, 3);\nconst tempC = t .toPrecision(3);\nconst tempK = t + 273.2;\nconst temp = tempK .toFixed(1);\nconst deltaG = 26.2 - tempK*0.1081;\nconst ans1 = deltaG .toFixed(1);\nconst ans1low = 0.98*ans1;\nconst ans1high = 1.02*ans1;\nconst ratio = -ans1/(0.008314*tempK);\nconst ans2 = Math.exp(ratio);\nconst ans2sf = ans2 .toPrecision(3);\nconst ans2low = 0.95*ans2;\nconst ans2high = 1.05*ans2;\n\n// Expose variables to OLI\nmodule.exports = {\n  t, tempC, tempK, temp, deltaG, ans1, ans1low, ans1high, ratio, ans2, ans2sf, ans2low, ans2high\n};\n",
+              "id": "a6f4fe3e14bb4f08b8bd0939a51243a8",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "a760340e09b3417b910f2623557901fd",
+        "inputType": "numeric",
+        "partId": "de2f172dae194161a62c408089c58a60",
+        "size": "small"
+      },
+      {
+        "id": "fb7a4141ba634f2ca477e44b8f2acbd9",
+        "inputType": "numeric",
+        "partId": "a659ea17640e4b219a4a482b20243f64",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given:  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\begin{array}{c}{\\mathrm{NH}}_4{\\mathrm{NO}}_3(s)\\;\\xrightarrow{{\\mathrm H}_2\\mathrm O}\\;\\mathrm{NH}_4^+(aq)\\;+\\;\\mathrm{NO}_3^-(aq)\\;\\\\\\;\\mathrm{with}\\;\\;\\mathrm\\Delta H^\\circ\\;=\\;26.2\\;\\mathrm{kJ}\\;\\;\\mathrm{and}\\;\\;\\mathrm\\Delta S^\\circ\\;=\\;108.1\\;{\\mathrm J/\\mathrm K}\\end{array}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "df0nz0wleg4lk1o",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Determine the value of the standard Gibbs free energy change for this reaction at @@tempC@@ "
+            },
+            {
+              "sup": true,
+              "text": "o"
+            },
+            {
+              "text": "C."
+            }
+          ],
+          "id": "1b5l61p2c263agt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "em": true,
+              "sup": true,
+              "text": "o"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "a760340e09b3417b910f2623557901fd",
+              "input": "a760340e09b3417b910f2623557901fd",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ"
+            }
+          ],
+          "id": "f2522cyuulcjbba",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Determine the value of the equilibrium constant for this reaction at @@tempC@@ "
+            },
+            {
+              "sup": true,
+              "text": "o"
+            },
+            {
+              "text": "C."
+            }
+          ],
+          "id": "i36pw8cgseabndg",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "fb7a4141ba634f2ca477e44b8f2acbd9",
+              "input": "fb7a4141ba634f2ca477e44b8f2acbd9",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "988ofo98lf6sktw",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "a659ea17640e4b219a4a482b20243f64": [],
+    "de2f172dae194161a62c408089c58a60": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

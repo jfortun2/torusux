@@ -1,0 +1,206 @@
+{
+  "id": "80079",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "mech_rate_digt1-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7n43r2f0a5gljem",
+                  "type": "p"
+                }
+              ],
+              "id": "692507289"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yue5720egw6gtez",
+                  "type": "p"
+                }
+              ],
+              "id": "1981933625"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8a7jytimojeiqq7",
+                  "type": "p"
+                }
+              ],
+              "id": "3637577486"
+            }
+          ],
+          "id": "1111993695",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate-determining step is the slow step, which in this case is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;\\;\\;{\\mathrm H}_2\\;+\\;\\;\\mathrm{ICl}\\;\\;\\rightarrow\\;\\;\\mathrm{HI}\\;+\\;\\mathrm{HCl} \\;\\;\\;\\;\\;\\;\\;(\\mathrm{slow})",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "tfiz899yxocxfqz",
+                    "type": "p"
+                  }
+                ],
+                "id": "664945430"
+              },
+              "id": "3391782296",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate-determining step is the slow step, which in this case is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;\\;\\;{\\mathrm H}_2\\;+\\;\\;\\mathrm{ICl}\\;\\;\\rightarrow\\;\\;\\mathrm{HI}\\;+\\;\\mathrm{HCl} \\;\\;\\;\\;\\;\\;\\;(\\mathrm{slow})",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "yhvffgc6rj9zg8a",
+                    "type": "p"
+                  }
+                ],
+                "id": "1724456079"
+              },
+              "id": "1620257780",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "The rate determining step is  .",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "0k53bzjhse1n50i",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "vm40u0kelufd33i",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The rate determining step is  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": false,
+              "src": "\\textstyle\\mathrm{HI}\\;+\\;\\mathrm{ICl}\\;\\longrightarrow\\;{\\mathrm I}_2\\;+\\;\\mathrm{HCl}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "bxf7xxw1sjcqsep",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1111993695": [
+      "78388"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

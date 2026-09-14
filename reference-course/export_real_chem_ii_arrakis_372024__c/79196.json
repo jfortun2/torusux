@@ -1,0 +1,410 @@
+{
+  "id": "79196",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ph_salt2_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8lokdbbfop4do36",
+                  "type": "p"
+                }
+              ],
+              "id": "4129148132"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a7achqp3vszx34c",
+                  "type": "p"
+                }
+              ],
+              "id": "993628685"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hrjy6z6qox2krvu",
+                  "type": "p"
+                }
+              ],
+              "id": "2494412978"
+            }
+          ],
+          "id": "3391135269",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While the KCN does dissociate in water to produce K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": ", this is not the reaction that affects the pH of the solution."
+                      }
+                    ],
+                    "id": "td5fhjo4cy3mjg6",
+                    "type": "p"
+                  }
+                ],
+                "id": "1195954423"
+              },
+              "id": "3170495843",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While the KCN does dissociate in water to produce K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": ", this is not the reaction that affects the pH of the solution."
+                      }
+                    ],
+                    "id": "6cur14nipvo4gg1",
+                    "type": "p"
+                  }
+                ],
+                "id": "515733875"
+              },
+              "id": "3760837686",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the conjugate base of the weak acid HCN and will react with water to produce the weak acid HCN and OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "q9on9audyywzc1w",
+                    "type": "p"
+                  }
+                ],
+                "id": "1211425393"
+              },
+              "id": "1871791393",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is the cation of a strong base and will not react with the water and therefore will not affect the pH."
+                      }
+                    ],
+                    "id": "plsu6yqmn09htcj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1319526690"
+              },
+              "id": "2547154272",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "t5h2widh22zssbe",
+                    "type": "p"
+                  }
+                ],
+                "id": "3766298970"
+              },
+              "id": "3647553773",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3170495843"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3760837686"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1871791393"
+            ],
+            [
+              [
+                "D"
+              ],
+              "2547154272"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3170495843"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3760837686"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1871791393"
+        ],
+        [
+          [
+            "D"
+          ],
+          "2547154272"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "2354289514",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{KCN}\\;+\\;{\\mathrm H}_2\\mathrm O\\;\\;\\rightleftharpoons\\;\\;\\mathrm K^+\\;+\\;\\mathrm{CN}^-\\;+\\;{\\mathrm H}_2\\mathrm O",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "2q56vjviyt46fh7",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{KCN}\\;\\;\\rightleftharpoons\\;\\;\\mathrm K^+\\;+\\;\\mathrm{CN}^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "t0k3jrrchrs5od2",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{CN}^-\\;+\\;{\\mathrm H}_2\\mathrm O\\;\\;\\rightleftharpoons\\;\\;\\mathrm{HCN}\\;+\\;\\mathrm{OH}^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "91e94umhe671p11",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm K^+\\;+\\;{\\mathrm H}_2\\mathrm O\\;\\;\\rightleftharpoons\\;\\;\\mathrm{KH}^+\\;+\\;\\mathrm{OH}^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "98qve3emfhvg705",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "First, which is the relevant reaction that occurs in the solution that affects the pH?"
+            }
+          ],
+          "id": "rml9zp3bqwg6sqr",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3391135269": [
+      "78489"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

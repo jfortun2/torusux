@@ -1,0 +1,399 @@
+{
+  "id": "78668",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calculating_entropy_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "umrm84b26jzh4ws",
+                  "type": "p"
+                }
+              ],
+              "id": "820989633"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mds5etw0f7t2ocx",
+                  "type": "p"
+                }
+              ],
+              "id": "1942264556"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "95rojqq5sd47bgz",
+                  "type": "p"
+                }
+              ],
+              "id": "427215028"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The larger the transfer of heat from the system to the surroundings or the surroundings to the system, the greater the increase in change in entropy."
+                      }
+                    ],
+                    "id": "kma44ef6q2vdeyx",
+                    "type": "p"
+                  }
+                ],
+                "id": "3676278388"
+              },
+              "id": "1928225457",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The larger the transfer of heat from the system to the surroundings or the surroundings to the system, the greater the increase in change in entropy."
+                      }
+                    ],
+                    "id": "e4zcta01jpo6zpl",
+                    "type": "p"
+                  }
+                ],
+                "id": "293147275"
+              },
+              "id": "2413578315",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "7h129zw8fppnc3w",
+                    "type": "p"
+                  }
+                ],
+                "id": "4062348905"
+              },
+              "id": "3732237672",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zih0o93cu90dgl5",
+                  "type": "p"
+                }
+              ],
+              "id": "1368381804"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kg75hzdofi8sum4",
+                  "type": "p"
+                }
+              ],
+              "id": "650046275"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ahpe37z056yjpz9",
+                  "type": "p"
+                }
+              ],
+              "id": "1384701515"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. At higher temperatures, the change in entropy is less affected by heat transfer, and at lower temperatures, the change in entropy is more affected by heat transfer."
+                      }
+                    ],
+                    "id": "4x35h07ha38wdnl",
+                    "type": "p"
+                  }
+                ],
+                "id": "268843663"
+              },
+              "id": "939278667",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. At higher temperatures, the change in entropy is less affected by heat transfer, and at lower temperatures, the change in entropy is more affected by heat transfer."
+                      }
+                    ],
+                    "id": "h5zizim3hyiw72q",
+                    "type": "p"
+                  }
+                ],
+                "id": "3601746925"
+              },
+              "id": "834616876",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "s97w5q9ta026f2s",
+                    "type": "p"
+                  }
+                ],
+                "id": "786340500"
+              },
+              "id": "906393732",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "1928225457"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "2413578315"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "939278667"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "834616876"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1611424408",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "2741442934",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "f6uz9vi9y0c3xb2",
+            "text": "directly proportional"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "z24mu03i86fplsv",
+            "text": "inversely proportional"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "bppw6usemtd91s0",
+            "text": "directly proportional"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "q4qc1jcntrpfuwd",
+            "text": "inversely proportional"
+          }
+        ],
+        "id": "second_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "sub": true,
+              "text": "surr"
+            },
+            {
+              "text": " is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " to the energy added to or taken away from the surroundings and "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " to the temperature. "
+            }
+          ],
+          "id": "p5930ncc4bfutd0",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78411"
+    ],
+    "second": [
+      "78411"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,283 @@
+{
+  "id": "79610",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78153"
+  ],
+  "title": "electrolysis_skill_pool_v3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B",
+          "C"
+        ],
+        "2728311872"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "i5ctq5b6du3m1m0",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "l9hrydpgnhz38l7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "6tps7rrindqghst",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "5ab9lkenr9vf4nb",
+                        "text": "Electroplating is an important use for electrolytic cells."
+                      }
+                    ],
+                    "id": "t6o8662wk5cm00g",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "05nnqc62asxvc46",
+                        "text": "Recharging a rechargeable battery is an electrolysis process."
+                      }
+                    ],
+                    "id": "xsk1i7kvzvixlve",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ex3t071q9dmr7ks",
+                        "text": "The electrolysis of molten sodium chloride produces sodium metal and chlorine gas. "
+                      }
+                    ],
+                    "id": "jufcrp7z5xfalub",
+                    "type": "li"
+                  }
+                ],
+                "id": "ho5ng5q73p0tbap",
+                "type": "ul"
+              }
+            ],
+            "id": "2768749683"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fn36jfhrv5sjfxv",
+                  "type": "p"
+                }
+              ],
+              "id": "525562620"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "llktuelvaxgktna",
+                  "type": "p"
+                }
+              ],
+              "id": "3098919490"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8mmj60962pzo3ci",
+                  "type": "p"
+                }
+              ],
+              "id": "608370951"
+            }
+          ],
+          "id": "cd43847aeb394d3caaeaa7d8fd66e363",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "cdeb9960a85f419c83de0c5b53773325",
+                    "type": "p"
+                  }
+                ],
+                "id": "866021995"
+              },
+              "id": "2728311872",
+              "legacyMatch": "A,B,C",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && (input like {C} && (input like {B} && (input like {A}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "c770f7a1d6bf41e4a7677bbad69b8fdc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2256206500"
+              },
+              "id": "3880877291",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Electroplating is an important use for electrolytic cells. "
+              }
+            ],
+            "id": "lnf9mu6uhvx7e8v",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Recharging a rechargeable battery is an electrolysis process."
+              }
+            ],
+            "id": "wuvbd8vkjmjhuri",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The electrolysis of molten sodium chloride produces sodium metal and chlorine gas. "
+              }
+            ],
+            "id": "ozles1fwnkjhtp8",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Water can be electrolytically decomposed into hydrogen and oxygen gases. This process would happen spontaneously without applying external voltage, but at a slower rate."
+              }
+            ],
+            "id": "8rgvbyyo5arfbap",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": " In galvanic cells oxidation occurs at the anode, but in electrolytic cells oxidation occurs at the cathode."
+              }
+            ],
+            "id": "wslfjcxqacdy46u",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements are true? Select all that apply."
+            }
+          ],
+          "id": "f4b60a9bf06148649a3d8a64d169d4d6",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "cd43847aeb394d3caaeaa7d8fd66e363": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

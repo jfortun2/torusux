@@ -1,0 +1,250 @@
+{
+  "id": "79750",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78084"
+  ],
+  "title": "calc_microstates_pool-v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "km5t5do2po10lsj",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solution"
+                  }
+                ],
+                "id": "qajnv1vm9tgc38o",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "S\\;=\\;k\\ln W\\;=\\;(1.38\\times10^{-23}\\;\\mathrm J/\\mathrm K)\\ln(24)\\;=\\;4.39\\times10^{-23}\\;\\mathrm J/\\mathrm K",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "m5uozm7kzvgro8y",
+                "type": "p"
+              }
+            ],
+            "id": "1684912076"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u6ypvuw2q1gr23y",
+                  "type": "p"
+                }
+              ],
+              "id": "1994860922"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l0y3b457uojh77p",
+                  "type": "p"
+                }
+              ],
+              "id": "255503466"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "g4sp15cuu3qmb4t",
+                  "type": "p"
+                }
+              ],
+              "id": "2378472423"
+            }
+          ],
+          "id": "3661142530",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "S\\;=\\;k\\ln W\\;=\\;(1.38\\times10^{-23}\\;\\mathrm J/\\mathrm K)\\ln(24)\\;=\\;4.39\\times10^{-23}\\;\\mathrm J/\\mathrm K",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "cjj8wtaheidayaz",
+                    "type": "p"
+                  }
+                ],
+                "id": "831755500"
+              },
+              "id": "2649219916",
+              "legacyMatch": "[4.3e-23,4.5e-23]",
+              "rule": "input = {[4.3e-23,4.5e-23]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "S\\;=\\;k\\ln W",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "16id5dt4xc5n5sz",
+                    "type": "p"
+                  }
+                ],
+                "id": "1288691701"
+              },
+              "id": "2273631319",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "3661142530"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A molecule of carbon monoxide is adsorbed onto 1 of 24 possible sites on the surface of a catalyst. Calculate the entropy of this system."
+            }
+          ],
+          "id": "xo03elai4u4cb49",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "avgf7jxqec632sw",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "3ovhdyjxnf9yaji",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/68/68fca05e9b990e0db0052bfb62d31658/adsorbed_molecule_24.png",
+          "type": "img"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            },
+            {
+              "text": " J/K"
+            }
+          ],
+          "id": "e6osvzmacrmrljv",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3661142530": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,328 @@
+{
+  "id": "79011",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "NameCoordComplexLBD1_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "There are six H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O (aqua) ligands, which are named as "
+                  },
+                  {
+                    "em": true,
+                    "text": "hexaaqua"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ],
+                "id": "3808010789",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O has a 0 charge, so the charge on Co is +2 (+2 + 6(0) = +2). Since this complex is a cation, Co"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is named as "
+                  },
+                  {
+                    "em": true,
+                    "text": "cobalt(II)"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ],
+                "id": "3151883807",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This complex is named  "
+                  },
+                  {
+                    "em": true,
+                    "text": "hexaaquacobalt(II)"
+                  },
+                  {
+                    "text": " ion."
+                  }
+                ],
+                "id": "1216184756",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "1083587857",
+            "textDirection": "ltr"
+          },
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1563848341",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "39258683",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The six H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O (aqua) ligands are named as "
+                      },
+                      {
+                        "em": true,
+                        "text": "hexaaqua"
+                      },
+                      {
+                        "text": ". H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O has a 0 charge, so the charge on Co is +2 (+2 + 6(0) = +2). This complex is a cation, so Co"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " is named as "
+                      },
+                      {
+                        "em": true,
+                        "text": "cobalt(II)"
+                      },
+                      {
+                        "text": ". This complex is named "
+                      },
+                      {
+                        "em": true,
+                        "text": "hexaaquacobalt(II)"
+                      },
+                      {
+                        "text": " ion."
+                      }
+                    ],
+                    "id": "1172342155",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1783379154",
+                "textDirection": "ltr"
+              },
+              "id": "3044222058",
+              "rule": "input contains {hexaaquacobalt(II)}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Almost correct! Be careful of the spelling (an \"a\" is missing). The six H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O (aqua) ligands are "
+                      },
+                      {
+                        "em": true,
+                        "text": "hexaaqua"
+                      },
+                      {
+                        "text": " ("
+                      },
+                      {
+                        "text": "not",
+                        "underline": true
+                      },
+                      {
+                        "text": " hexaqua)."
+                      }
+                    ],
+                    "id": "3616708311",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1323060272",
+                "textDirection": "ltr"
+              },
+              "id": "2472145873",
+              "rule": "input contains {hexaquacobalt(II)}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The ligand is named first, with a prefix indicating the number. The metal ion is named next, with a Roman numeral indicating the charge. The complex ion is a cation, so the metal name is unchanged."
+                      }
+                    ],
+                    "id": "701460036",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2991348349",
+                "textDirection": "ltr"
+              },
+              "id": "528622471",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination complex [Co(H2O)6]2+. ion",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1621537598",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "2561254253",
+        "inputType": "text",
+        "partId": "1",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination complex [Co(H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O)"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "4274421347",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2561254253",
+              "type": "input_ref"
+            },
+            {
+              "text": " ion"
+            }
+          ],
+          "id": "1626553911",
+          "type": "p"
+        }
+      ],
+      "id": "977157351"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78460"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

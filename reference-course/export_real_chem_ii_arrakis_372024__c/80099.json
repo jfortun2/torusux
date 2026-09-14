@@ -1,0 +1,677 @@
+{
+  "id": "80099",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78206"
+  ],
+  "title": "pool01_mass_defect_bind_energy-pool01_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "The total mass of the subatomic particles in Ne-22 is: "
+                  }
+                ],
+                "id": "2967633090",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "rjkcirvsbktafcr",
+                    "text": ""
+                  }
+                ],
+                "id": "1150659375",
+                "src": "\\left(10\\times1.0073+12\\times1.0087+10\\times0.00055\\right)\\;\\mathrm{amu}\\;=\\;22.1829\\;\\mathrm{amu}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The mass defect is: "
+                  }
+                ],
+                "id": "2326014233",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "w2kvfrspcvwwrw4",
+                    "text": ""
+                  }
+                ],
+                "id": "1737647598",
+                "src": "22.1829\\;-\\;21.9914\\;\\mathrm{amu}\\;=\\;0.1915\\;\\mathrm{amu}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "663530348",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "280207012",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hocdi1sdtxc0ypj",
+                  "type": "p"
+                }
+              ],
+              "id": "1383190554"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3m4h7sksmlwnz9f",
+                  "type": "p"
+                }
+              ],
+              "id": "1944427696"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pfsoqcxzmz7q196",
+                  "type": "p"
+                }
+              ],
+              "id": "3546869733"
+            }
+          ],
+          "id": "mass_defect",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The total mass of the subatomic particles in Ne-22 is: "
+                      }
+                    ],
+                    "id": "bd8e5f26d1fd4468bc88f8f0b5a2b3e2",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "r2cn2pw0xhd2rhf",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1349140691",
+                    "src": "\\left(10\\times1.0073+12\\times1.0087+10\\times0.00055\\right)\\;\\mathrm{amu}\\;=\\;22.1829\\;\\mathrm{amu}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The mass defect is:  "
+                      }
+                    ],
+                    "id": "180900453",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "zohwcbqi6j7elsd",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1685519590",
+                    "src": "22.1829\\;-\\;21.9914\\;\\mathrm{amu}\\;=\\;0.1915\\;\\mathrm{amu}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3962974966",
+                    "type": "p"
+                  }
+                ],
+                "id": "459146006"
+              },
+              "id": "3626874505",
+              "legacyMatch": "[0.155,0.162]",
+              "rule": "input = {[0.190,0.192]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect is found by calculating the difference between the experimentally measured mass of the Ne-22 and the total calculated mass of its protons, neutrons, and electrons."
+                      }
+                    ],
+                    "id": "cb49msd3jcnx7b8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2031193223"
+              },
+              "id": "643561930",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "The mass defect in amu/atom is equal to the mass defect in g/mol. Then using "
+                  },
+                  {
+                    "em": true,
+                    "text": "E"
+                  },
+                  {
+                    "text": " = "
+                  },
+                  {
+                    "em": true,
+                    "text": "mc"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ": "
+                  }
+                ],
+                "id": "1383924004",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "814qcem5nrr7oce",
+                    "text": ""
+                  }
+                ],
+                "id": "1885878350",
+                "src": "\\begin{array}{c}\\left(\\dfrac{0.1915\\;\\mathrm g}{\\mathrm{mol}}\\right)\\left(\\dfrac{\\mathrm{kg}}{10^3\\;\\mathrm g}\\right)\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\left(\\dfrac{\\mathrm J}{\\displaystyle\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\right)\\\\=\\;1.722\\times10^{13}\\;\\mathrm J/\\mathrm{mol}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2049930207",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "916112303",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ke75vcjp1txy8ea",
+                  "type": "p"
+                }
+              ],
+              "id": "3063286735"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bgp9zf3937594sr",
+                  "type": "p"
+                }
+              ],
+              "id": "1987608257"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t8uth0mvmhvo4a0",
+                  "type": "p"
+                }
+              ],
+              "id": "3015640805"
+            }
+          ],
+          "id": "binding_energyJ",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The mass defect in amu/atom is equal to the mass defect in g/mol. Then using "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "mc"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ": "
+                      }
+                    ],
+                    "id": "ce4a9ed1bfd4483db2907533609fe740",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "5llpjjz4vxfy3kf",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4074687862",
+                    "src": "\\begin{array}{c}\\left(\\dfrac{0.1915\\;\\mathrm g}{\\mathrm{mol}}\\right)\\left(\\dfrac{\\mathrm{kg}}{10^3\\;\\mathrm g}\\right)\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\left(\\dfrac{\\mathrm J}{\\displaystyle\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\right)\\\\=\\;1.722\\times10^{13}\\;\\mathrm J/\\mathrm{mol}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "676027619",
+                    "type": "p"
+                  }
+                ],
+                "id": "3288223243"
+              },
+              "id": "360550763",
+              "legacyMatch": "[1.4e13,1.5e13]",
+              "rule": "input = {[17100000000000,17300000000000]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect in amu/atom is equal to the mass defect in g/mol. Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "mc"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and pay attention to units."
+                      }
+                    ],
+                    "id": "pqeixnnewtu98g3",
+                    "type": "p"
+                  }
+                ],
+                "id": "2714292538"
+              },
+              "id": "4284438610",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Converting from J/mol to MeV/atom: "
+                  }
+                ],
+                "id": "3956794596",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "20titkrulvwweg8",
+                    "text": ""
+                  }
+                ],
+                "id": "2144630095",
+                "src": "\\begin{array}{c}\\left(\\dfrac{1.722\\times10^{13}\\;\\mathrm J}{\\mathrm{mol}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}}{6.022\\times10^{23}\\;\\mathrm{atoms}}\\right)\\left(\\dfrac{1\\;\\mathrm{eV}}{1.602\\times10^{-19}\\;\\mathrm J}\\right)\\left(\\dfrac{\\mathrm{MeV}}{10^6\\;\\mathrm{eV}}\\right)\\\\=\\;178.5\\;\\mathrm{MeV}/\\mathrm{atom}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3978119041",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "217700390",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "aiv1tzvw0wdjd51",
+                  "type": "p"
+                }
+              ],
+              "id": "2523484253"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t5lm9e45j2vhg74",
+                  "type": "p"
+                }
+              ],
+              "id": "2688412067"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gqizkjne08bgacx",
+                  "type": "p"
+                }
+              ],
+              "id": "1589817552"
+            }
+          ],
+          "id": "binding_energyMV",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Converting from J/mol to MeV/atom: "
+                      }
+                    ],
+                    "id": "f59eea4c76d1411a994e391e1fb1d9f2",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "s63ep8uvbcxmyew",
+                        "text": ""
+                      }
+                    ],
+                    "id": "461794942",
+                    "src": "\\begin{array}{c}\\left(\\dfrac{1.722\\times10^{13}\\;\\mathrm J}{\\mathrm{mol}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}}{6.022\\times10^{23}\\;\\mathrm{atoms}}\\right)\\left(\\dfrac{1\\;\\mathrm{eV}}{1.602\\times10^{-19}\\;\\mathrm J}\\right)\\left(\\dfrac{\\mathrm{MeV}}{10^6\\;\\mathrm{eV}}\\right)\\\\=\\;178.5\\;\\mathrm{MeV}/\\mathrm{atom}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2449002911",
+                    "type": "p"
+                  }
+                ],
+                "id": "1686865605"
+              },
+              "id": "3049684191",
+              "legacyMatch": "[145,150]",
+              "rule": "input = {[176,179]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the appropriate conversion factors to convert binding energy from J/mol to MeV/atom."
+                      }
+                    ],
+                    "id": "a0821c1f493d4831beae1a3539e874cf",
+                    "type": "p"
+                  }
+                ],
+                "id": "3832844219"
+              },
+              "id": "1560665368",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The experimentally determined atomic mass of Ne-22 is 21.9914 amu. Calculate the mass defect, the binding energy in J/mol, and the binding energy in MeV/atom.Mass defect =  amuBinding Energy =  J/molBinding Energy =  MeV/atom",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "mass_defect",
+        "inputType": "numeric",
+        "partId": "mass_defect",
+        "size": "small"
+      },
+      {
+        "id": "binding_energyJ",
+        "inputType": "numeric",
+        "partId": "binding_energyJ",
+        "size": "small"
+      },
+      {
+        "id": "binding_energyMV",
+        "inputType": "numeric",
+        "partId": "binding_energyMV",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The experimentally determined atomic mass of Ne-22 is 21.9914 amu. Calculate the mass defect, the binding energy in J/mol, and the binding energy in MeV/atom."
+            }
+          ],
+          "id": "da5e4fb70f69486d8efbe38903efc796",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Mass defect = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "mass_defect",
+              "input": "mass_defect",
+              "type": "input_ref"
+            },
+            {
+              "text": " amu"
+            }
+          ],
+          "id": "ff527435da4748908fc708cd2a2edec6",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Binding Energy = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "binding_energyJ",
+              "input": "binding_energyJ",
+              "type": "input_ref"
+            },
+            {
+              "text": " J/mol"
+            }
+          ],
+          "id": "befb1044ad6641b9b2fadc74c2e4d952",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Binding Energy = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "binding_energyMV",
+              "input": "binding_energyMV",
+              "type": "input_ref"
+            },
+            {
+              "text": " MeV/atom"
+            }
+          ],
+          "id": "b7d22ab4b82f4b5dba78bf24700f0787",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "binding_energyJ": [
+      "78444"
+    ],
+    "binding_energyMV": [
+      "78444"
+    ],
+    "mass_defect": [
+      "78324"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

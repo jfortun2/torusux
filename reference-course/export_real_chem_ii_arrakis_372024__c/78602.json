@@ -1,0 +1,355 @@
+{
+  "id": "78602",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78158"
+  ],
+  "title": "form_rate_law2_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The correct rate law is: Rate = "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": "[Y]"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "wwgqod6x1000xds",
+                "type": "p"
+              }
+            ],
+            "id": "937883307"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3n6naq4dfdlz0i5",
+                  "type": "p"
+                }
+              ],
+              "id": "3009649107"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "namyp924mypb9i4",
+                  "type": "p"
+                }
+              ],
+              "id": "2076797913"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q6kx5mos8s5bu7i",
+                  "type": "p"
+                }
+              ],
+              "id": "439217060"
+            }
+          ],
+          "id": "dfc547a8c8b04f55b09e1895d18bf2e5",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate law can be experimentally determined by changing the initial concentration of each reactant and observing the change in the reaction rate. If the concentration of a reactant is increased and the rate of the reaction remains constant, the order of that reactant is zero. If the concentration of a reactant is tripled and the observed reaction rate increases by a factor of nine, then the order of the reaction (the exponent) for that reactant must be 2, since 3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " = 9."
+                      }
+                    ],
+                    "id": "0f44wgby6t9cm5q",
+                    "type": "p"
+                  }
+                ],
+                "id": "3690698246"
+              },
+              "id": "1217255006",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate law can be experimentally determined by changing the initial concentration of each reactant and observing the change in the reaction rate. If the concentration of a reactant is increased and the rate of the reaction remains constant, the order of that reactant is zero. If the concentration of a reactant is tripled and the observed reaction rate increases by a factor of nine, then the order of the reaction (the exponent) for that reactant must be 2, since 3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " = 9."
+                      }
+                    ],
+                    "id": "ecywc3fq14mwqnu",
+                    "type": "p"
+                  }
+                ],
+                "id": "631545090"
+              },
+              "id": "2134429144",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "2034210473",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[X][Y]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              }
+            ],
+            "id": "poostws5c7znlq5",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[Y]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              }
+            ],
+            "id": "haofjpujxx95muu",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[X][Y]"
+              }
+            ],
+            "id": "6zm8vze3cjbe3nd",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[Y]"
+              },
+              {
+                "sup": true,
+                "text": "3"
+              }
+            ],
+            "id": "tpflzng2x1mfx56",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[X][Y]"
+              },
+              {
+                "sup": true,
+                "text": "3"
+              }
+            ],
+            "id": "wfj7767aqeupqrm",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[X][Y]"
+              },
+              {
+                "sup": true,
+                "text": "9"
+              }
+            ],
+            "id": "dzz0nje6b6owl7h",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For a given reaction:"
+            }
+          ],
+          "id": "0qe1ptdo4qhikw7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm X\\;+\\;\\mathrm Y\\;\\;\\rightarrow\\;\\;\\mathrm{products}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "n2x97c46snaahis",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "experimental data show that when [X] is doubled the rate remains constant and when [Y] is tripled the rate increases by a factor of nine. Which of the following is the correct rate law for this reaction?"
+            }
+          ],
+          "id": "iclfe1oinu4ibjn",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "dfc547a8c8b04f55b09e1895d18bf2e5": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

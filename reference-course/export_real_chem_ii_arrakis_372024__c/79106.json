@@ -1,0 +1,184 @@
+{
+  "id": "79106",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary03-q2c",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "2124783433"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sc1jklcd8qst1eu",
+                  "type": "p"
+                }
+              ],
+              "id": "1412537942"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ihqiaxizqp500s0",
+                  "type": "p"
+                }
+              ],
+              "id": "2020566106"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "oywurbww45xewcg",
+                  "type": "p"
+                }
+              ],
+              "id": "3481985478"
+            }
+          ],
+          "id": "1499627702",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "jnelfgzjqaw5ik5",
+                    "type": "p"
+                  }
+                ],
+                "id": "29404236"
+              },
+              "id": "2124783433",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*}))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online-synchronous"
+              }
+            ],
+            "id": "xw9176axhi5u7a1",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online-asynchronous"
+              }
+            ],
+            "id": "1hsovjin7agp9dm",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "In-person"
+              }
+            ],
+            "id": "u0t563a4n5tvdl9",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Other"
+              }
+            ],
+            "id": "rt764cw9wehjkqf",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What are your mode(s) of instruction for the following: "
+            }
+          ],
+          "id": "8ejz8wdfa5jwrbt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Discussion/Recitation/Problem-Solving Session (select all that apply)"
+            }
+          ],
+          "id": "niqip36uunru3lb",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "1499627702": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

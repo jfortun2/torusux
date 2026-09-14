@@ -1,0 +1,252 @@
+{
+  "id": "78982",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "intro_mechs_digt-q3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B"
+        ],
+        "3978729947"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zlvctl1hakoqlns",
+                  "type": "p"
+                }
+              ],
+              "id": "700319082"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "aq35c5wogwcc9fz",
+                  "type": "p"
+                }
+              ],
+              "id": "2187604389"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xf7rybrx16ee8tm",
+                  "type": "p"
+                }
+              ],
+              "id": "1488391654"
+            }
+          ],
+          "id": "1461329904",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The first elementary step indicates that two molecules of NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " collide, and the second elementary step indicates that the intermediate, NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ", and CO collide."
+                      }
+                    ],
+                    "id": "4gstcq2cb1dbftc",
+                    "type": "p"
+                  }
+                ],
+                "id": "4224766082"
+              },
+              "id": "3978729947",
+              "legacyMatch": "A,B",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && (input like {B} && (input like {A})))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The first elementary step indicates that two molecules of NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " collide, and the second elementary step indicates that the intermediate, NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ", and CO collide."
+                      }
+                    ],
+                    "id": "n4w2cyo0n80smjv",
+                    "type": "p"
+                  }
+                ],
+                "id": "2030154958"
+              },
+              "id": "3850632678",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Based on the reaction mechanism, which of the following statements are true regarding how this reaction occurs? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A molecule of NO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": " collides with a molecule of CO."
+              }
+            ],
+            "id": "s1zbpfeavxq58wu",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Two molecules of NO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " collide."
+              }
+            ],
+            "id": "swodnlxlpq0ft7j",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A molecule of NO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " collides with a molecule of CO."
+              }
+            ],
+            "id": "bctmht0wlnxj3uf",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A molecule of NO collides with a molecule of CO."
+              }
+            ],
+            "id": "4y36r44646m5xr2",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Based on the reaction mechanism, which of the following statements are true regarding how this reaction occurs? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "f83c650265r2x5x",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "1461329904": [
+      "78293"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

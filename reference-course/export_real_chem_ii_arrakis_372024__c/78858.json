@@ -1,0 +1,341 @@
+{
+  "id": "78858",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "homo_hetero_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "ftyxlobvnpdotcp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Correct. Solid species are not included in the equilibrium constant expression. Therefore:"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_\\mathrm{p}=P_{{\\mathrm{CO}}_2}=0.22",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "ghdb5ud2s8gvk8v",
+                "type": "p"
+              }
+            ],
+            "id": "4214686442"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "CaCO"
+                    },
+                    {
+                      "sub": true,
+                      "text": "3"
+                    },
+                    {
+                      "text": " and CaO are pure solids, so they are not included in the equilibrium constant expression."
+                    }
+                  ],
+                  "id": "ptz2fsrgz452l6f",
+                  "type": "p"
+                }
+              ],
+              "id": "3907546612"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "em": true,
+                      "text": "K"
+                    },
+                    {
+                      "sub": true,
+                      "text": "p"
+                    },
+                    {
+                      "text": " = "
+                    },
+                    {
+                      "em": true,
+                      "text": "P"
+                    },
+                    {
+                      "sub": true,
+                      "text": "CO"
+                    },
+                    {
+                      "doublesub": true,
+                      "text": "2"
+                    }
+                  ],
+                  "id": "wally52b7lmfeix",
+                  "type": "p"
+                }
+              ],
+              "id": "4264817583"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jeiyrvjs5gul0s9",
+                  "type": "p"
+                }
+              ],
+              "id": "1888383180"
+            }
+          ],
+          "id": "1263190072",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. CaCO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and CaO are pure solids, so they are not included in the equilibrium constant expression. Therefore:"
+                      }
+                    ],
+                    "id": "hynqefbkpmlnoto",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "h0rkq3jenavk5zq",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "xisauwvfq8g496o",
+                    "legacyBlockRendered": "true",
+                    "src": "K_\\mathrm{p}=P_{{\\mathrm{CO}}_2}=0.22",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2061475646",
+                    "type": "p"
+                  }
+                ],
+                "id": "3889584839"
+              },
+              "id": "3479373690",
+              "legacyMatch": "0.22",
+              "rule": "input = {0.22}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. CaCO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and CaO are pure solids, so they are not included in the equilibrium constant expression. "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "p"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "P"
+                      },
+                      {
+                        "sub": true,
+                        "text": "CO"
+                      },
+                      {
+                        "doublesub": true,
+                        "text": "2"
+                      }
+                    ],
+                    "id": "rkozb61y6o1hf8j",
+                    "type": "p"
+                  }
+                ],
+                "id": "3469012970"
+              },
+              "id": "3701913575",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "50.0 g of CaCO3 is placed in an evacuated 2.00-L sealed container and heated to 800 °C. CaCO3 decomposes until it reaches equilibrium according to:  At equilibrium, the pressure in the container is determined to be 0.22 atm. What is the value of Kp for this reaction?Kp =  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "1263190072"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "50.0 g of CaCO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " is placed in an evacuated 2.00-L sealed container and heated to 800 °C. CaCO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " decomposes until it reaches equilibrium according to: "
+            }
+          ],
+          "id": "7r1m6mk434185me",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "inz4su4jtkro471",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "l4averum9pfj8t5",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{CaCO}}_3(s)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{CaO}(s)\\;+\\;{\\mathrm{CO}}_2(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "At equilibrium, the pressure in the container is determined to be 0.22 atm. What is the value of "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " for this reaction?"
+            }
+          ],
+          "id": "e7x3zrdxsian55k",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "ebwvwm8rr7vkfdr",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1263190072": [
+      "78396"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

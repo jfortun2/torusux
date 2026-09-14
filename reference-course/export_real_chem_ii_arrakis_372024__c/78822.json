@@ -1,0 +1,233 @@
+{
+  "id": "78822",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "direction_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "Q_\\mathrm{p}=\\frac{0.356}{(0.852)(0.253)}=1.65",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "ept231okjfugppj",
+                "type": "p"
+              }
+            ],
+            "id": "1282852474"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o6gzxjpxoqmd5qe",
+                  "type": "p"
+                }
+              ],
+              "id": "4128117168"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mmyvfa7wjo3vwaz",
+                  "type": "p"
+                }
+              ],
+              "id": "3081568081"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "grvdiek3i9kk742",
+                  "type": "p"
+                }
+              ],
+              "id": "3326494479"
+            }
+          ],
+          "id": "3538159466",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q_\\mathrm{p}=\\frac{0.356}{(0.852)(0.253)}=1.65",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "dgkbuh2nqo1i8by",
+                    "type": "p"
+                  }
+                ],
+                "id": "1074275444"
+              },
+              "id": "2832606802",
+              "legacyMatch": "[1.6,1.7]",
+              "rule": "input = {[1.6,1.7]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Plug the initial concentrations given into the equilibrium expression. "
+                      }
+                    ],
+                    "id": "4u54weblohjke3h",
+                    "type": "p"
+                  }
+                ],
+                "id": "3904553180"
+              },
+              "id": "3322115676",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "On your own, write the equilibrium expression and an ICE table for the reaction, entering the initial partial pressures given in the problem. Because neither the reactants nor product are 0, we first need to calculate Qinitial to determine the direction the reaction will go in order to reach equilibrium. Calculate Qp.Qp =  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3538159466",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "On your own, write the equilibrium expression and an ICE table for the reaction, entering the initial partial pressures given in the problem. Because neither the reactants nor product are 0, we first need to calculate "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "sub": true,
+              "text": "initial"
+            },
+            {
+              "text": " to determine the direction the reaction will go in order to reach equilibrium. Calculate "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "zxwakjlfhgvryhc",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "xjucvhne0lzg38m",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3538159466": [
+      "78472"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

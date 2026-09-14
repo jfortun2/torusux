@@ -1,0 +1,284 @@
+{
+  "id": "79568",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ph_salt2_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_\\mathrm{b}\\;=\\;\\frac{1.0\\times10^{-14}}{4.9\\times10^{-10}}\\;=\\;2.04\\times10^{-5}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "set1yb2ntr87xsm",
+                "type": "p"
+              }
+            ],
+            "id": "4046585745"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "K_\\mathrm{b}({\\mathrm{NH}}_3)\\;\\times\\;K_\\mathrm{a}({\\mathrm{NH}}_4^+)\\;=\\;K_\\mathrm{w}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4hdu2wth4bbxbjq",
+                  "type": "p"
+                }
+              ],
+              "id": "1162371001"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "aig5tk1cfasmzqh",
+                  "type": "p"
+                }
+              ],
+              "id": "429377262"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mjffw2rv8nw0hn3",
+                  "type": "p"
+                }
+              ],
+              "id": "564637434"
+            }
+          ],
+          "id": "592762758",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{b}\\;=\\;\\frac{1.0\\times10^{-14}}{4.9\\times10^{-10}}\\;=\\;2.04\\times10^{-5}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "510iorfhht57b37",
+                    "type": "p"
+                  }
+                ],
+                "id": "3452689101"
+              },
+              "id": "2309824526",
+              "legacyMatch": "[2.0e-5,2.1e-5]",
+              "rule": "input = {[2.0e-5,2.1e-5]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "jk14tc4szrd87jd",
+                    "type": "p"
+                  }
+                ],
+                "id": "730892456"
+              },
+              "id": "2993673195",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " Given the Ka of HCN, calculate Kb for CN−.Kb (for CN−) =  M ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "592762758",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "3718501760",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "e0chu850r1iquv9",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ev7twe56ebk3436",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm{CN}^-\\;+\\;{\\mathrm H}_2\\mathrm O\\;\\;\\rightleftharpoons\\;\\;\\mathrm{HCN}\\;+\\;\\mathrm{OH}^-",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Given the "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " of HCN, calculate "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "b"
+            },
+            {
+              "text": " for CN"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "9dsztjd062szike",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "b"
+            },
+            {
+              "text": " (for CN"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": ") = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M "
+            }
+          ],
+          "id": "ho1plt35ccla645",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "592762758": [
+      "78412"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,253 @@
+{
+  "id": "79349",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_digt-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ldsu2ix4djjjvw5",
+                  "type": "p"
+                }
+              ],
+              "id": "2342226657"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e5x5l20fz0qu0ir",
+                  "type": "p"
+                }
+              ],
+              "id": "1766238592"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "i343std0ey87d4g",
+                  "type": "p"
+                }
+              ],
+              "id": "3798363648"
+            }
+          ],
+          "id": "579641730",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While a catalyst will increase the speed at which equilibrium is established, it does not affect equilibrium concentrations."
+                      }
+                    ],
+                    "id": "as4p2s5nygv6lle",
+                    "type": "p"
+                  }
+                ],
+                "id": "3376137046"
+              },
+              "id": "1256181406",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While a catalyst will increase the speed at which equilibrium is established, it does not affect equilibrium concentrations."
+                      }
+                    ],
+                    "id": "mshhbcnclne8f6p",
+                    "type": "p"
+                  }
+                ],
+                "id": "2370872049"
+              },
+              "id": "1017380734",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. While a catalyst will increase the speed at which equilibrium is established, it does not affect equilibrium concentrations."
+                      }
+                    ],
+                    "id": "qdf2ix4y2t4jtkj",
+                    "type": "p"
+                  }
+                ],
+                "id": "3625708764"
+              },
+              "id": "1005900563",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "wo8dnw7aef36efk",
+                    "type": "p"
+                  }
+                ],
+                "id": "3401943218"
+              },
+              "id": "1897017331",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1256181406"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1017380734"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1005900563"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1256181406"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1017380734"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1005900563"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increase"
+              }
+            ],
+            "id": "5xwcgtvdcvh310q",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decrease"
+              }
+            ],
+            "id": "xrpp2co8rzw92d6",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Stay the same"
+              }
+            ],
+            "id": "hrx5lw1ujzvw4yg",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Adding a catalyst to the reaction"
+            }
+          ],
+          "id": "r44ewegd80vxtmi",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "579641730": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

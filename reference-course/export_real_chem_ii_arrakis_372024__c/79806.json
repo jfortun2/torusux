@@ -1,0 +1,300 @@
+{
+  "id": "79806",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "isotope_review_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "et8e3zarhuonhol",
+                  "type": "p"
+                }
+              ],
+              "id": "1978440201"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bw3wsgvj5ey2hzb",
+                  "type": "p"
+                }
+              ],
+              "id": "680661564"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "30km208ojy3ryio",
+                  "type": "p"
+                }
+              ],
+              "id": "898099921"
+            }
+          ],
+          "id": "1860425771",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The atomic number for tantalum is 73."
+                      }
+                    ],
+                    "id": "txfg1urw7rbift0",
+                    "type": "p"
+                  }
+                ],
+                "id": "3977213309"
+              },
+              "id": "1024873825",
+              "legacyMatch": "73",
+              "rule": "input = {73}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use a periodic table to determine the atomic number for tantalum (Ta)."
+                      }
+                    ],
+                    "id": "ordo740f7k7wr7i",
+                    "type": "p"
+                  }
+                ],
+                "id": "1140830519"
+              },
+              "id": "854269893",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lonb85vmgvblrke",
+                  "type": "p"
+                }
+              ],
+              "id": "3673989705"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yd9r00hx8c427nq",
+                  "type": "p"
+                }
+              ],
+              "id": "2279946045"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "75tkxq2xkrymbae",
+                  "type": "p"
+                }
+              ],
+              "id": "2789762037"
+            }
+          ],
+          "id": "3436527522",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The mass number (175) minus the atomic number (73) corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "7bnvp249g863hq0",
+                    "type": "p"
+                  }
+                ],
+                "id": "509849047"
+              },
+              "id": "964407680",
+              "legacyMatch": "102",
+              "rule": "input = {102}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass number minus the atomic number corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "fjkqx0dzlpefayg",
+                    "type": "p"
+                  }
+                ],
+                "id": "3257571776"
+              },
+              "id": "1009519670",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Tantalum-175Protons Neutrons ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1860425771",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "3436527522",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "2165822367",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Tantalum-175"
+                }
+              ],
+              "id": "wb439whpmuesm6f",
+              "type": "p"
+            }
+          ],
+          "id": "4q6evu5jsjq2zcm",
+          "type": "callout"
+        },
+        {
+          "children": [
+            {
+              "text": "Protons "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "31onrxa4wbeskwc",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Neutrons "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "ccnhyhw9q7rih1f",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1860425771": [
+      "78520"
+    ],
+    "3436527522": [
+      "78520"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

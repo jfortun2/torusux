@@ -1,0 +1,196 @@
+{
+  "id": "80184",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "cell_notation_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "534o9gbcvwetikl",
+                  "type": "p"
+                }
+              ],
+              "id": "1093662807"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1hi8qm118h5oocd",
+                  "type": "p"
+                }
+              ],
+              "id": "1176845145"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "81p1mm6hkvapvrm",
+                  "type": "p"
+                }
+              ],
+              "id": "1043166322"
+            }
+          ],
+          "id": "2884063120",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. In the cell notation, the anode and its solution are written to the left of the symbol for the salt bridge."
+                      }
+                    ],
+                    "id": "7ie0m21ats5igay",
+                    "type": "p"
+                  }
+                ],
+                "id": "1280608392"
+              },
+              "id": "2401203966",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In the cell notation, the anode and its solution are written to the left of the symbol for the salt bridge."
+                      }
+                    ],
+                    "id": "1j99v92ctkk21eg",
+                    "type": "p"
+                  }
+                ],
+                "id": "3238563422"
+              },
+              "id": "2728089282",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "717723813",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{Cu}(s)│\\mathrm{Cu}^{2+}(aq)║\\mathrm{Pt}^{2+}(aq)│\\mathrm{Pt}(s)",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "7lzan9q9fjvpp4z",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{Pt}(s)│\\mathrm{Pt}^{2+}(aq)║\\mathrm{Cu}^{2+}(aq)│\\mathrm{Cu}(s)",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "j52lieysb1j10yt",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which is the correct cell notation?"
+            }
+          ],
+          "id": "6w61vev9ilgftxw",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2884063120": [
+      "78528"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,805 @@
+{
+  "id": "79854",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78232"
+  ],
+  "title": "calc_avg_rate_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "43q1r90cy611s5q",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "4izjq1acw88vq8r",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm{average}\\;\\mathrm{rate}\\;\\mathrm{of}\\;\\mathrm{change}\\;\\mathrm{of}\\;\\lbrack\\mathrm A\\rbrack\\;=\\;\\frac{\\triangle\\lbrack \\mathrm A\\rbrack}{\\triangle t}\\;=\\;\\frac{{\\lbrack\\mathrm A\\rbrack}_{\\mathrm f}\\;-\\;{\\lbrack\\mathrm A\\rbrack}_{\\mathrm i}\\;}{t_{\\mathrm f}\\;\\;-\\; t_{\\mathrm i}}\\\\=\\;\\frac{0.625\\;\\mathrm M\\;-\\;1.000\\;\\mathrm M}{10.0\\;\\mathrm s\\;-\\;0.0\\;\\mathrm s}\\;=\\;-\\frac{0.375\\;\\mathrm M}{10.0\\;\\mathrm s}\\; =\\;-0.0375\\;\\frac{\\mathrm M}{\\mathrm s}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Note: since A is a reactant, [A] decreases and Δ[A]/Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": " is negative. "
+                  }
+                ],
+                "id": "8mtkncxc31hhtzx",
+                "type": "p"
+              }
+            ],
+            "id": "4258911890"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ggbheyymvjke541",
+                  "type": "p"
+                }
+              ],
+              "id": "788428100"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4z3ehoqmlfhomxk",
+                  "type": "p"
+                }
+              ],
+              "id": "3565215572"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dbichj7ak9b48eb",
+                  "type": "p"
+                }
+              ],
+              "id": "1624949044"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm{average}\\;\\mathrm{rate}\\;\\mathrm{of}\\;\\mathrm{change}\\;\\mathrm{of}\\;\\lbrack\\mathrm A\\rbrack\\;=\\;\\frac{\\triangle\\lbrack \\mathrm A\\rbrack}{\\triangle t}\\;=\\;\\frac{{\\lbrack\\mathrm A\\rbrack}_{\\mathrm f}\\;-\\;{\\lbrack\\mathrm A\\rbrack}_{\\mathrm i}\\;}{t_{\\mathrm f}\\;\\;-\\; t_{\\mathrm i}}\\\\=\\;\\frac{0.625\\;\\mathrm M\\;-\\;1.000\\;\\mathrm M}{10.0\\;\\mathrm s\\;-\\;0.0\\;\\mathrm s}\\;=\\;-\\frac{0.375\\;\\mathrm M}{10.0\\;\\mathrm s}\\; =\\;-0.0375\\;\\frac{\\mathrm M}{\\mathrm s}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Note: since A is a reactant, [A] decreases and Δ[A]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " is negative. "
+                      }
+                    ],
+                    "id": "xhzpxzwd204djvt",
+                    "type": "p"
+                  }
+                ],
+                "id": "3451769458"
+              },
+              "id": "2157954119",
+              "legacyMatch": "[-0.038,-0.037]",
+              "rule": "input = {[-0.038,-0.037]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{average}\\;\\mathrm{rate}\\;\\mathrm{of}\\;\\mathrm{change}\\;\\mathrm{of}\\;\\lbrack\\mathrm A\\rbrack\\;=\\;\\frac{\\triangle\\lbrack\\mathrm A\\rbrack} {\\triangle t}\\;=\\;\\frac{{\\lbrack\\mathrm A\\rbrack}_{\\mathrm f}\\;-\\;{\\lbrack\\mathrm A\\rbrack}_{\\mathrm i}}{t_{\\mathrm f}\\;\\;-\\;t_{\\mathrm i}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "1cm25m67wup1e12",
+                    "type": "p"
+                  }
+                ],
+                "id": "1343233154"
+              },
+              "id": "3703909666",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "u4fs2vc1k0a9yea",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "r3qmh6cdkthm1ns",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The rate of change of [B] can be expressed in terms of the rate of change of [A] using the stoichiometric coefficients. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{rate}\\;=\\;-\\frac12\\frac{\\;\\triangle\\left[\\mathrm A\\right]}{\\triangle t}\\;=\\;+\\frac{\\triangle\\left[\\mathrm B\\right]}{\\triangle t}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Using the average rate of change of [A] from Part 1 to calculate the average rate of change of [B]: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{rate}\\;=\\;\\frac{\\triangle\\left[\\mathrm B\\right]}{\\triangle t}\\;=\\;-\\frac12\\frac{\\triangle\\left[\\mathrm A\\right]}{\\triangle t}\\; =\\;-\\frac12\\;(-0.0375\\;\\mathrm M/\\mathrm s)\\;=\\;0.0188\\;\\frac{\\mathrm M}{\\mathrm s}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "zyc2aaluc9g2u2e",
+                "type": "p"
+              }
+            ],
+            "id": "3523215641"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wi8vd5kqicsafxz",
+                  "type": "p"
+                }
+              ],
+              "id": "2454870705"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nhh92pe01fxquh8",
+                  "type": "p"
+                }
+              ],
+              "id": "3678886621"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "id6oz6tr91qaoqz",
+                  "type": "p"
+                }
+              ],
+              "id": "2222009754"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate of change of [B] can be expressed in terms of the rate of change of [A] using the stoichiometric coefficients. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{rate}\\;=\\;-\\frac12\\frac{\\;\\triangle\\left[\\mathrm A\\right]}{\\triangle t}\\;=\\;+\\frac{\\triangle\\left[\\mathrm B\\right]}{\\triangle t}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Using the average rate of change of [A] from Part 1 to calculate the average rate of change of [B]: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{rate}\\;=\\;\\frac{\\triangle\\left[\\mathrm B\\right]}{\\triangle t}\\;=\\;-\\frac12\\frac{\\triangle\\left[\\mathrm A\\right]}{\\triangle t}\\; =\\;-\\frac12\\;(-0.0375\\;\\mathrm M/\\mathrm s)\\;=\\;0.0188\\;\\frac{\\mathrm M}{\\mathrm s}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "szcptvnotwm6u5z",
+                    "type": "p"
+                  }
+                ],
+                "id": "1653536514"
+              },
+              "id": "515956999",
+              "legacyMatch": "[0.018,0.019]",
+              "rule": "input = {[0.018,0.019]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect.  Use the stoichiometric coefficients to relate Δ[A]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " to Δ[B]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ". Use the value of Δ[A]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " from Part 1 and the stoichiometric relationship to calculate Δ[B]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ".  "
+                      }
+                    ],
+                    "id": "31ttimtzzey4u62",
+                    "type": "p"
+                  }
+                ],
+                "id": "669716683"
+              },
+              "id": "3976164215",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "A study of the rate of the reaction represented as  gave the following data:Time (s)0.05.010.015.020.025.035.0[A] (M)1.0000.7750.6250.4650.3600.2850.230Determine the average rate of change of [A] and the average rate of change of [B] between 0.0 and 10.0 s.Average rate of change of [A] between 0.0 s to 10.0 s =   M/sAverage rate of change of [B] between 0.0 s and 10.0 s =   M/s",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      },
+      {
+        "id": "two",
+        "inputType": "numeric",
+        "partId": "two",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A study of the rate of the reaction represented as "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "2\\;\\mathrm A\\;\\;\\rightarrow\\;\\;\\mathrm B",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " gave the following data:"
+            }
+          ],
+          "id": "ou2uzsrck0lc5ji",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "Time (s)"
+                        }
+                      ],
+                      "id": "1o74jvzdvar2e9x",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "e877hztjx07g9j9",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.0"
+                        }
+                      ],
+                      "id": "ll29gd5uyzgjw31",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "viok967l0alfyd4",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "5.0"
+                        }
+                      ],
+                      "id": "o0x476432f4l7sn",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "zhv7a4777kdq7rc",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "10.0"
+                        }
+                      ],
+                      "id": "q36g0bn3gwvdjkm",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "3852x23tszic8cl",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "15.0"
+                        }
+                      ],
+                      "id": "ycq7duqush2kzga",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "8xgmx87moxzi9ao",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "20.0"
+                        }
+                      ],
+                      "id": "1dobofavrg13n55",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "fg2r7t8ssixd1y7",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "25.0"
+                        }
+                      ],
+                      "id": "m6c45iqp8r9ey4t",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "mt0dc8hukotxohf",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "35.0"
+                        }
+                      ],
+                      "id": "euyovni5jbnbgv8",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "blire0uv9l4gdm5",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "44bafsc3fj07bo2",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "[A] (M)"
+                        }
+                      ],
+                      "id": "k7ccfqtmawzoacr",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "ott0lydw6qurx4k",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "1.000"
+                        }
+                      ],
+                      "id": "f70py7yaf4arsv6",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "ppy4dzc64ms3u6h",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.775"
+                        }
+                      ],
+                      "id": "ktjdjg0ncqzqhuu",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "u2r6bzkjb60u1ui",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.625"
+                        }
+                      ],
+                      "id": "20jjri73me6rhtr",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "kj0l6pd9fogqcxs",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.465"
+                        }
+                      ],
+                      "id": "m3e2805odim1vcq",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "54nysvjhncruooy",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.360"
+                        }
+                      ],
+                      "id": "wi3uac1amxbe6m5",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "mtz374qp27ufte0",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.285"
+                        }
+                      ],
+                      "id": "x5hcnx3t7u52l51",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "wv6smpeb85lbh2v",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.230"
+                        }
+                      ],
+                      "id": "di23x3pv7w8v4wf",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "88x5afr7ytte9dq",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "ghr70mylc9blow2",
+              "type": "tr"
+            }
+          ],
+          "id": "0e2sep6dl4mdwu6",
+          "rowstyle": "plain",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": "Determine the average rate of change of [A] and the average rate of change of [B] between 0.0 and 10.0 s."
+            }
+          ],
+          "id": "x67la2rvdpiyhly",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Average rate of change of [A] between 0.0 s to 10.0 s =  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s"
+            }
+          ],
+          "id": "csgof1v30jxzb11",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Average rate of change of [B] between 0.0 s and 10.0 s =  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s"
+            }
+          ],
+          "id": "u0rnobhmcfw108m",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

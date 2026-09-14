@@ -1,0 +1,285 @@
+{
+  "id": "79972",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_digt-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uxmnrup9bzc884m",
+                  "type": "p"
+                }
+              ],
+              "id": "4222913704"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lu5j6fnzv6rk0uj",
+                  "type": "p"
+                }
+              ],
+              "id": "187955079"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o0ikzr9hxmfz0k2",
+                  "type": "p"
+                }
+              ],
+              "id": "4231233560"
+            }
+          ],
+          "id": "862245995",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When the volume of the container is decreased, the concentrations and partial pressures of all species and the total pressure all increase. Because there are the same number of gas molecules on each side of the reaction equation, the equilibrium does not undergo a shift."
+                      }
+                    ],
+                    "id": "pv2kbarueuw5xf1",
+                    "type": "p"
+                  }
+                ],
+                "id": "1923250487"
+              },
+              "id": "3242831942",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When the volume of the container is decreased, the concentrations and partial pressures of all species and the total pressure all increase. Because there are the same number of gas molecules on each side of the reaction equation, the equilibrium does not undergo a shift."
+                      }
+                    ],
+                    "id": "jbtymbzr7blnfgh",
+                    "type": "p"
+                  }
+                ],
+                "id": "393368576"
+              },
+              "id": "1711017387",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When the volume of the container is decreased, the concentrations and partial pressures of all species and the total pressure all increase. Because there are the same number of gas molecules on each side of the reaction equation, the equilibrium does not undergo a shift, so the concentrations are not affected further."
+                      }
+                    ],
+                    "id": "ft9eoc4jyrjgi4l",
+                    "type": "p"
+                  }
+                ],
+                "id": "2625462818"
+              },
+              "id": "2594301903",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "fx27dfuh9ehnxih",
+                    "type": "p"
+                  }
+                ],
+                "id": "197716015"
+              },
+              "id": "3759897645",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3242831942"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1711017387"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2594301903"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Consider the following reaction: Indicate how the following changes will affect the concentration of HI. Decreasing the volume of the container in which the reaction occurs",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3242831942"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1711017387"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2594301903"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increase"
+              }
+            ],
+            "id": "2ydp9pofglrtpa5",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decrease"
+              }
+            ],
+            "id": "a86opbg7h900ak4",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Stay the same"
+              }
+            ],
+            "id": "lnx18fd0csu2d3g",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the following reaction:"
+            }
+          ],
+          "id": "n4g1mixghbdih1b",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "x9zsj8iloeivo4w",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "o5jf9hxcqjid8w2",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm H}_2(g)\\;+\\;{\\mathrm I}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{HI}(g) \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm\\Delta H\\;=\\;53\\;\\mathrm{kJ}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Indicate how the following changes will affect the concentration of HI. "
+            }
+          ],
+          "id": "1v8aa1dsbyj4r30",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Decreasing the volume of the container in which the reaction occurs"
+            }
+          ],
+          "id": "gq5q64rh1qg6ctz",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "862245995": [
+      "78441"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

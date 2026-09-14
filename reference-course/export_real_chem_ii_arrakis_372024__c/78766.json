@@ -1,0 +1,329 @@
+{
+  "id": "78766",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78180"
+  ],
+  "title": "spontaneous_at_temp_pool_v4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vwyh6gpp7zlrtep",
+                  "type": "p"
+                }
+              ],
+              "id": "3374606007"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ph5gs64xtvrknlz",
+                  "type": "p"
+                }
+              ],
+              "id": "1705252420"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "slmq5b8ince75i0",
+                  "type": "p"
+                }
+              ],
+              "id": "2187448413"
+            }
+          ],
+          "id": "2383235356",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A spontaneous reaction is one in which ΔG<0. Given that "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta G\\;=\\;\\Delta H\\;-\\;T\\Delta S\\;\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " If the "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": "Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " term is greater than Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": ", the free energy change will be positive. Such a process is spontaneous at low temperatures and nonspontaneous at high temperatures. "
+                      }
+                    ],
+                    "id": "04f39uyb8ajrcr3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1029555239"
+              },
+              "id": "859000613",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A spontaneous reaction is one in which ΔG<0. Given that "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta G\\;=\\;\\Delta H\\;-\\;T\\Delta S\\;\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " If the "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": "Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " term is greater than Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": ", the free energy change will be positive. Such a process is spontaneous at low temperatures and nonspontaneous at high temperatures. "
+                      }
+                    ],
+                    "id": "b3pckoe2gkz485k",
+                    "type": "p"
+                  }
+                ],
+                "id": "453321339"
+              },
+              "id": "466237995",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Both Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " are positive."
+              }
+            ],
+            "id": "rapmr2k6dr2lh52",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Both Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " are negative."
+              }
+            ],
+            "id": "10xwiklswyt5c7s",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " is positive and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " is negative. "
+              }
+            ],
+            "id": "5x70pphwijnyhu2",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " is negative and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " is positive."
+              }
+            ],
+            "id": "58cmayqloygyeqd",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following combinations of values for Δ"
+            },
+            {
+              "em": true,
+              "text": "H"
+            },
+            {
+              "text": " and Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " for a given process, indicate that the process is spontaneous at low temperatures and nonspontaneous at high temperatures?"
+            }
+          ],
+          "id": "klur8ghwrtv1tph",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2383235356": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

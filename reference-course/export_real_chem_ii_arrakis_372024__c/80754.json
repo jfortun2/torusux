@@ -1,0 +1,331 @@
+{
+  "id": "80754",
+  "type": "Page",
+  "tags": [],
+  "title": "Reaction Order and Rate Constant Units",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "In some of our examples, the reaction orders in the rate law happen to be the same as the coefficients in the chemical equation for the reaction. This is merely a coincidence and very often is not the case. It is important to remember that "
+              },
+              {
+                "em": true,
+                "text": "rate laws are determined by experiment only and are not reliably predicted by reaction stoichiometry"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "yp9e06ab9qy2bcd",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Most of the rate laws we encounter will have integer order, such as 0, 1, or 2. However, rate laws may exhibit fractional orders for some reactants. They may also exhibit negative reaction orders when an increase in the concentration of one reactant causes a decrease in reaction rate. Here are a few examples illustrating these points:"
+              }
+            ],
+            "id": "gq4c7j1fg0if6y0",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "lvd6tldhle0q2jq",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "hfml1rj7edtkn73",
+            "legacyBlockRendered": "true",
+            "src": "2\\;{\\mathrm{NO}}_2(g)\\;+\\:{\\mathrm F}_2(\\mathrm g)\\;\\;\\longrightarrow\\;\\;2\\;{\\mathrm{NO}}_2\\mathrm F(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\left[{\\mathrm{NO}}_2\\right]\\left[{\\mathrm F}_2\\right]",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "57you7ow18hgdx8",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "mruwpzqnj71m8b7",
+            "legacyBlockRendered": "true",
+            "src": "cis-2-\\mathrm{butene}\\;\\;\\xrightarrow{\\left[{\\mathrm I}_2\\right]}\\;\\;trans-2-\\mathrm{butene}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\left[{cis}-2-\\mathrm{butene}\\right]\\left[{\\mathrm I}_2\\right]^\\frac12",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "uovmxo9jicai8w1",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "xosff5yivihiwej",
+            "legacyBlockRendered": "true",
+            "src": "2\\;{\\mathrm O}_3(g)\\;\\;\\longrightarrow\\;\\;3\\;{\\mathrm O}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\left[{\\mathrm O}_3\\right]^2\\left[{\\mathrm O}_2\\right]^{-1}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "277829thgva8eid",
+                "text": "Determining Rate Constant Units"
+              }
+            ],
+            "id": "up9gt0yf4kdjabj",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "Reaction orders also have a role in determining the units for the rate constant "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": ". Consider the reaction of nitrogen monoxide and ozone, which has the second-order rate law:"
+              }
+            ],
+            "id": "g8rxmkv3haycpmf",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "nf9nw93ggs0e59p",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "gebz9spvl7hhik4",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{Rate}\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack^1\\lbrack{\\mathrm O}_3\\rbrack^1\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_3\\rbrack",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Plugging in experimental data from a trial allows you to calculate the value of "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": ". When the units are properly canceled, the units that remain are L mol"
+              },
+              {
+                "sup": true,
+                "text": "−1"
+              },
+              {
+                "text": " s"
+              },
+              {
+                "sup": true,
+                "text": "−1"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "t8ef4lbvpxrehzr",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "3lzkv3lafolu2z0",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "7w368xfl93rc53x",
+            "legacyBlockRendered": "true",
+            "src": "\\require{cancel}k\\;=\\;\\frac{\\mathrm{Rate}}{\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_3\\rbrack}\\;=\\;\\frac{6.60\\times10^{-5}\\; \\cancel{\\mathrm{mol}\\;\\mathrm L^{-1}\\;}\\boxed{\\mathrm s^{-1}}}{(1.00\\times10^{-6}\\;{\\cancel{\\mathrm{mol}\\;\\mathrm L^{-1}}}) (3.00\\times10^{-6}\\;\\boxed{\\mathrm{mol}\\;\\mathrm L^{-1}})}\\;=\\;2.20\\times10^7\\;\\mathrm L\\;\\mathrm{mol}^{-1}\\;\\mathrm s^{-1}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "This process can be used to determine the units for the rate constant for a reaction of any order: solve for "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": ", then cancel and simplify the units."
+              }
+            ],
+            "id": "o9bw26kzjoctard",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Concentration is typically expressed in terms of molarity (M), which can also be written as mol/L or mol L"
+              },
+              {
+                "sup": true,
+                "text": "−1"
+              },
+              {
+                "text": ". Because pressure is directly proportional to concentration for gases at a given temperature, for gas phase reactions, units such as atmospheres (atm) can be used instead of molarity. Units of time are often expressed in seconds but can be other units such as minutes, hours, or days. "
+              }
+            ],
+            "id": "vhjx6ocq00jjkg8",
+            "type": "p"
+          }
+        ],
+        "id": "1277913862",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79931,
+            "id": "19646651",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1665461703",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "k3w2afebs9kpwvs",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/ 85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "f81h9npdynwkr3o",
+            "type": "p"
+          }
+        ],
+        "id": "1212332182",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78539"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

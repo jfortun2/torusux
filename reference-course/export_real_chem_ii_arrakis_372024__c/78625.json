@@ -1,0 +1,349 @@
+{
+  "id": "78625",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_temp_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "trfmlffhfe4cxp7",
+                  "type": "p"
+                }
+              ],
+              "id": "2672425368"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lc5nipknm3vjesf",
+                  "type": "p"
+                }
+              ],
+              "id": "3889426078"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6wl6ak4rwqh7nsw",
+                  "type": "p"
+                }
+              ],
+              "id": "945415809"
+            }
+          ],
+          "id": "926848220",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An endothermic process with an increase in entropy will be spontaneous at high temperatures."
+                      }
+                    ],
+                    "id": "ll2pua6fdycgtvr",
+                    "type": "p"
+                  }
+                ],
+                "id": "2443966298"
+              },
+              "id": "3266822704",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An endothermic process with an increase in entropy will be spontaneous at high temperatures."
+                      }
+                    ],
+                    "id": "y166cyaana0bn2n",
+                    "type": "p"
+                  }
+                ],
+                "id": "2493024522"
+              },
+              "id": "2152528294",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An endothermic process with an increase in entropy will be spontaneous at high temperatures."
+                      }
+                    ],
+                    "id": "fiuswn9t6zzxlpw",
+                    "type": "p"
+                  }
+                ],
+                "id": "2849763073"
+              },
+              "id": "3161733456",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An endothermic process with an increase in entropy will be spontaneous at high temperatures."
+                      }
+                    ],
+                    "id": "6wx9ocvba13rydq",
+                    "type": "p"
+                  }
+                ],
+                "id": "1694171104"
+              },
+              "id": "1028145745",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ylz4cfr1mbmnrs4",
+                    "type": "p"
+                  }
+                ],
+                "id": "1386029490"
+              },
+              "id": "1218003236",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3266822704"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2152528294"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3161733456"
+            ],
+            [
+              [
+                "D"
+              ],
+              "1028145745"
+            ]
+          ]
+        }
+      ],
+      "previewText": "The above reaction is represented by the following equation:  It was previously determined for this reaction that ΔH is positive, ΔS is positive, and ΔG is negative. Which of the following statements is true about this reaction? ",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3266822704"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2152528294"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3161733456"
+        ],
+        [
+          [
+            "D"
+          ],
+          "1028145745"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3504587668",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is spontaneous at all temperatures."
+              }
+            ],
+            "id": "a2sca18x09z4n9b",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is spontaneous at high temperatures."
+              }
+            ],
+            "id": "bjg4g7y7uao4ae6",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is spontaneous at low temperatures."
+              }
+            ],
+            "id": "u8jgnpoicvzc7v7",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is not spontaneous at any temperature."
+              }
+            ],
+            "id": "1vcz6yofg0kh2t0",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The above reaction is represented by the following equation: "
+            }
+          ],
+          "id": "eq7xfory9i3t1yr",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "cvojhqkb5dw3rq4",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "0yqpf0yrt5xt81c",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{NH}}_4{\\mathrm{NO}}_3(s)\\;\\longrightarrow\\;{\\mathrm{NH}}_4^+(aq)\\;+\\;{\\mathrm{NO}}_3^-(aq)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "It was previously determined for this reaction that Δ"
+            },
+            {
+              "em": true,
+              "text": "H"
+            },
+            {
+              "text": " is positive, Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " is positive, and Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "text": " is negative. Which of the following statements is true about this reaction? "
+            }
+          ],
+          "id": "au1s5wix6v6gqlv",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "926848220": [
+      "78422"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

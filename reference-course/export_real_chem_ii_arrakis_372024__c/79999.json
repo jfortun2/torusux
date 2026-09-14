@@ -1,0 +1,666 @@
+{
+  "id": "79999",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78240"
+  ],
+  "title": "pH_pOH_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "1vkgve6c0xtl82t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;10^{-\\mathrm{pH}}\\;=\\;10^{-@@pH@@}\\;=\\;@@H@@\\\\\\lbrack\\mathrm{OH}^-\\rbrack\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;K_{\\mathrm w}\\\\\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\frac{1.0\\times10^{-14}}{@@H@@}\\;=\\;@@OH@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "9ovkjsyi7sdqx85",
+                "type": "p"
+              }
+            ],
+            "id": "4049067159"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iqcznglpju3dmnq",
+                  "type": "p"
+                }
+              ],
+              "id": "1976397467"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3t26vrwbobggg7y",
+                  "type": "p"
+                }
+              ],
+              "id": "1913470668"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cw0gbiyjb42a1zi",
+                  "type": "p"
+                }
+              ],
+              "id": "3473260944"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;10^{-\\mathrm{pH}}\\;=\\;10^{-@@pH@@}\\;=\\;@@H@@\\\\\\lbrack\\mathrm{OH}^-\\rbrack\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;K_{\\mathrm w}\\\\\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\frac{1.0\\times10^{-14}}{@@H@@}\\;=\\;@@OH@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "06158d5d1zfkfi7",
+                    "type": "p"
+                  }
+                ],
+                "id": "3824904721"
+              },
+              "id": "1243806104",
+              "legacyMatch": "[@@OHlow@@,@@OHhigh@@]",
+              "rule": "input = {[@@OHlow@@,@@OHhigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the following relationships to calculate [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": "]. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;10^{-\\mathrm{pH}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm{OH}^-\\rbrack\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;K_{\\mathrm w}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "f9d7b977442341fba9d5aeeceb69ce65",
+                    "type": "p"
+                  }
+                ],
+                "id": "1635973040"
+              },
+              "id": "1514354662",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "sawrdusukgg0ofc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "528egn97tm08p7i",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{pH}\\;+\\;\\mathrm{pOH}\\;=\\;14\\\\\\mathrm{pOH}\\;=\\;14\\;-\\;@@pH@@\\;=\\;@@pOH@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "7t2f2l64d800l1r",
+                "type": "p"
+              }
+            ],
+            "id": "3929723122"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ujo6e4845bhoqrm",
+                  "type": "p"
+                }
+              ],
+              "id": "3735568489"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lc506erly2fa33k",
+                  "type": "p"
+                }
+              ],
+              "id": "165705673"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tvifrdqt3agqidt",
+                  "type": "p"
+                }
+              ],
+              "id": "2589062809"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;+\\;\\mathrm{pOH}\\;=\\;14.00\\\\\\mathrm{pOH}\\;=\\;14.00\\;-\\;@@pH@@\\;=\\;@@pOH@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "63wmu1re4kx0mxk",
+                    "type": "p"
+                  }
+                ],
+                "id": "3634298870"
+              },
+              "id": "3523465687",
+              "legacyMatch": "[@@pOHlow@@,@@pOHhigh@@]",
+              "rule": "input = {[@@pOHlow@@,@@pOHhigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. You can use the following relationship to calculate pOH given pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;+\\;\\mathrm{pOH}\\;=\\;14",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "uou62mke1rkzedp",
+                    "type": "p"
+                  }
+                ],
+                "id": "871736934"
+              },
+              "id": "3628765604",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "m0jovywjtj4txjt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "0l4oilswx8hh5j5",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;10^{-\\mathrm{pH}}\\\\\\lbrack{\\mathrm H}_3\\mathrm O+\\rbrack\\;={10^{-@@pH@@}\\;=\\;@@H@@\\;\\mathrm M}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "ql4na9p9cjjppcg",
+                "type": "p"
+              }
+            ],
+            "id": "57883074"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vvfbxrxbsvzxfnd",
+                  "type": "p"
+                }
+              ],
+              "id": "3053033773"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n25cvsh9z7suva2",
+                  "type": "p"
+                }
+              ],
+              "id": "101149962"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hkz1mcjnwj79vna",
+                  "type": "p"
+                }
+              ],
+              "id": "3829206702"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;10^{-\\mathrm{pH}}\\\\\\lbrack\\mathrm H3\\mathrm O+\\rbrack\\;={10^{-@@pH@@}\\;=\\;@@H@@\\;\\mathrm M}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "wvg0lv4nlpkizqy",
+                    "type": "p"
+                  }
+                ],
+                "id": "643876935"
+              },
+              "id": "3898306351",
+              "legacyMatch": "[@@Hlow@@,@@Hhigh@@]",
+              "rule": "input = {[@@Hlow@@,@@Hhigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Given pH use the following relationship to calculate [H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "]."
+                      }
+                    ],
+                    "id": "fefdd34b6764413fad2196568993f4db",
+                    "type": "p"
+                  }
+                ],
+                "id": "921795592"
+              },
+              "id": "336283060",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst D = OLI.random(1, 9.9,1);\nconst E = OLI.random(-13,-2,0);\nconst H = (D*10**E) .toPrecision(3);\nconst pH = (-Math.log10(H)) .toFixed(2);\nconst pOH = (14-pH) .toPrecision(3);\nconst OH = (10**-pOH) .toPrecision(3);\nconst pHlow = 0.98*pH;\nconst pHhigh = 1.02*pH;\nconst pOHlow = 0.99*pOH;\nconst pOHhigh = 1.02*pOH;\nconst OHlow = 0.98*OH;\nconst OHhigh = 1.02*OH;\nconst Hlow = 0.98*H;\nconst Hhigh = 1.02*H;\n// Expose variables to OLI\nmodule.exports = {\n  D,\n  E,\n  H,\n  pH,\n  pOH,\n  OH,\n  pHlow,\n  pHhigh,\n  pOHlow,\n  pOHhigh,\n  OHlow,\n  OHhigh,\n  Hlow,\n  Hhigh\n};\n",
+              "id": "b349c277a0144a108b83fe8d4af9388e",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A solution has a pH = @@pH@@. Calculate the following:"
+            }
+          ],
+          "id": "z9l0tdd0a62it2d",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[OH"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "dftwq77krldmt8f",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pOH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            }
+          ],
+          "id": "53bd8zc92ulffcs",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "07nokya8c352uiq",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

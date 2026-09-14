@@ -1,0 +1,237 @@
+{
+  "id": "79815",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78200"
+  ],
+  "title": "galvanic_cell_concept_pool_v4",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "D"
+        ],
+        "1136983200"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The correct answers are: "
+                  }
+                ],
+                "id": "8h4ickkvoy1r7qu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "1xqphbh9orp1ksn",
+                        "text": "Oxidation happens at the anode and reduction happens at the cathode."
+                      }
+                    ],
+                    "id": "o08df7xow4ni6rl",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "pz5l0s0gwgwfdey",
+                        "text": "The cathode is positively charged."
+                      }
+                    ],
+                    "id": "lyrbqrsyy6pru8t",
+                    "type": "li"
+                  }
+                ],
+                "id": "y6v4aznfgs8g7lu",
+                "type": "ul"
+              }
+            ],
+            "id": "3153482412"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9vdxplqzht0cpte",
+                  "type": "p"
+                }
+              ],
+              "id": "2086511451"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "flvjbquf1zw0hy5",
+                  "type": "p"
+                }
+              ],
+              "id": "1642217565"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "22getzwqvsktuey",
+                  "type": "p"
+                }
+              ],
+              "id": "2362851106"
+            }
+          ],
+          "id": "3194232189",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Oxidation happens at the anode and reduction happens at the cathode, and the cathode is positively charged."
+                      }
+                    ],
+                    "id": "kv1wj617px8o2er",
+                    "type": "p"
+                  }
+                ],
+                "id": "1816964387"
+              },
+              "id": "1136983200",
+              "legacyMatch": "B,D",
+              "rule": "(!(input like {C})) && ((!(input like {A})) && (input like {D} && (input like {B})))",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the setup and operation of galvanic cells, especially the meaning of oxidation and reduction and the definition of anode and cathode in terms of loss or gain of electrons, and the resulting direction of flow of electrons and ions from the salt bridge."
+                      }
+                    ],
+                    "id": "ahanihjyj14um9c",
+                    "type": "p"
+                  }
+                ],
+                "id": "863091580"
+              },
+              "id": "3774965148",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Electrons flow from the cathode to the anode."
+              }
+            ],
+            "id": "yoo1jird0brfxlp",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidation happens at the anode and reduction happens at the cathode."
+              }
+            ],
+            "id": "4c3l2b66e0tqfr9",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Anions from the salt bridge flow into the reduction half-cell."
+              }
+            ],
+            "id": "ik58vtztoz8qoh8",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The cathode is positively charged."
+              }
+            ],
+            "id": "6dtivss5djez8px",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements about galvanic cells are true? Select all that apply."
+            }
+          ],
+          "id": "68xovpdo78y40cm",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "3194232189": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

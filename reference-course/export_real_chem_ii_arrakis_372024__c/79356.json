@@ -1,0 +1,236 @@
+{
+  "id": "79356",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "nonstandard2_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}Q\\;=\\frac{\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack}{\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{cathode}}\\rbrack}\\\\4.2\\times10^{-4}\\;=\\;\\frac{\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack}{0.50\\;M}\\\\\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack\\;=\\;2.1\\times10^{-4}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "t0olmcok3ctmeme",
+                "type": "p"
+              }
+            ],
+            "id": "3514422782"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "em": true,
+                      "text": "Q"
+                    },
+                    {
+                      "text": " = 4.2 × 10"
+                    },
+                    {
+                      "sup": true,
+                      "text": "−4"
+                    }
+                  ],
+                  "id": "0n928pg548005u0",
+                  "type": "p"
+                }
+              ],
+              "id": "1490822892"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2878046377",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "10490u5bq6md00m",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "t323uy56ra9wtl0",
+                  "legacyBlockRendered": "true",
+                  "src": "Q\\;=\\frac{\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack}{\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{cathode}}\\rbrack}",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1960943192",
+                  "type": "p"
+                }
+              ],
+              "id": "3472130228"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bw6lefstbp5j1h8",
+                  "type": "p"
+                }
+              ],
+              "id": "3762869995"
+            }
+          ],
+          "id": "2589269999",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}Q\\;=\\dfrac{\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack}{\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{cathode}}\\rbrack}\\\\4.2\\times10^{-4}\\;=\\;\\dfrac{\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack}{0.50\\;M}\\\\\\;\\lbrack{\\mathrm{Zn}^{2+}}_{\\mathrm{anode}}\\rbrack\\;=\\;2.1\\times10^{-4}\\;\\mathrm M\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "f9fjjchos8brfyk",
+                    "type": "p"
+                  }
+                ],
+                "id": "618524305"
+              },
+              "id": "4130740436",
+              "legacyMatch": "[2.0e-4,2.2e-4]",
+              "rule": "input = {[2.0e-4,2.2e-4]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "034q4i69x57p4z4",
+                    "type": "p"
+                  }
+                ],
+                "id": "3432388101"
+              },
+              "id": "4173025363",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " If the concentration of zinc ion at the cathode was 0.50 M, what was the concentration at the anode?   M",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2589269999",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " If the concentration of zinc ion at the cathode was 0.50 M, what was the concentration at the anode? "
+            }
+          ],
+          "id": "2w06ssqfto1tl6f",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": "  M"
+            }
+          ],
+          "id": "sv3fnkbqqew5s1t",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2589269999": [
+      "78527"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

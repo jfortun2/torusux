@@ -1,0 +1,308 @@
+{
+  "id": "79672",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "large_k_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bjiu1czbwjlhofl",
+                  "type": "p"
+                }
+              ],
+              "id": "2868903498"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wnky8z1k81u8oic",
+                  "type": "p"
+                }
+              ],
+              "id": "369429579"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mi62f7jpzw2ej6m",
+                  "type": "p"
+                }
+              ],
+              "id": "1991512468"
+            }
+          ],
+          "id": "2570160984",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "xc4zb48vob8oju7",
+                    "type": "p"
+                  }
+                ],
+                "id": "1768814182"
+              },
+              "id": "488806573",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "nln0w8ue59kvmg0",
+                    "type": "p"
+                  }
+                ],
+                "id": "3619518043"
+              },
+              "id": "2428532680",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "ql4049u3al99ztl",
+                    "type": "p"
+                  }
+                ],
+                "id": "7053913"
+              },
+              "id": "4214350711",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "g7n6lhodxdqpt0c",
+                    "type": "p"
+                  }
+                ],
+                "id": "378835051"
+              },
+              "id": "588467120",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "7j7s67xig0jul7p",
+                    "type": "p"
+                  }
+                ],
+                "id": "860571670"
+              },
+              "id": "1320752219",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "488806573"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2428532680"
+            ],
+            [
+              [
+                "C"
+              ],
+              "4214350711"
+            ],
+            [
+              [
+                "D"
+              ],
+              "588467120"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "488806573"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2428532680"
+        ],
+        [
+          [
+            "C"
+          ],
+          "4214350711"
+        ],
+        [
+          [
+            "D"
+          ],
+          "588467120"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NO"
+              }
+            ],
+            "id": "ctclsyxrf91riup",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "pq8j92j76y460oe",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "both NO and O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "b7dzg3vth7ik03h",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "neither NO nor O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "js3c2t6q8wi1pfu",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "If we assume that K = ∞ (ie the reaction goes to completion), which of the reactants will be 0 when the reaction is complete. "
+            }
+          ],
+          "id": "sm2wkh2242wvdch",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2570160984": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

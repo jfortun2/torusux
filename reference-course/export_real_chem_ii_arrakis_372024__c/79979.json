@@ -1,0 +1,198 @@
+{
+  "id": "79979",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78094"
+  ],
+  "title": "qual_entropy_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f8ippbtu4xv2hwr",
+                  "type": "p"
+                }
+              ],
+              "id": "2562965192"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w3nkgpch4c5fr3a",
+                  "type": "p"
+                }
+              ],
+              "id": "3000809479"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nmcecbbeh1up3ka",
+                  "type": "p"
+                }
+              ],
+              "id": "1845080719"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. As a gas occupying a larger volume is more dispersed than the gas occupying a lower volume, so the process of allowing a gas to expand increases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": ">0)."
+                      }
+                    ],
+                    "id": "2qs6xcg033pqsrz",
+                    "type": "p"
+                  }
+                ],
+                "id": "966100063"
+              },
+              "id": "794882518",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Entropy can be described as a measure of the dispersal of matter, distribution of kinetic states (microstates), or disorder of a system. Matter that is least dispersed, has the lowest distribution of microstates, and is most ordered (least disordered) has the least entropy. Matter that is most dispersed, has the highest distribution of microstates, and is most disordered has the greatest entropy. Determine whether the process of allowing a gas to expand its volume increases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": ">0) or decreases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": "<0)."
+                      }
+                    ],
+                    "id": "rk1hbxmgp9crg53",
+                    "type": "p"
+                  }
+                ],
+                "id": "772709259"
+              },
+              "id": "3529986952",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "positive"
+              }
+            ],
+            "id": "xdsdcvv7e0wfr2c",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "negative"
+              }
+            ],
+            "id": "nt44onfbu3ayzsd",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Determine the sign of Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " for the following process."
+            }
+          ],
+          "id": "xmecmvd5w5w2ruu",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "One mole of helium gas is in a 1.0 L container. The gas is completely transferred to a 2.0 L container."
+            }
+          ],
+          "id": "6nbp4z1rhhtcqrr",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

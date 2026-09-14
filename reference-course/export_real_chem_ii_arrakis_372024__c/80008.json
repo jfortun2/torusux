@@ -1,0 +1,197 @@
+{
+  "id": "80008",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "TransMetalOxidStatesLBD2_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Hint: Valence electrons are outer shell (highest "
+                    },
+                    {
+                      "em": true,
+                      "text": "n"
+                    },
+                    {
+                      "text": ") electrons. For transition metals, "
+                    },
+                    {
+                      "em": true,
+                      "text": "d"
+                    },
+                    {
+                      "text": " orbital electrons are also considered valence electrons."
+                    }
+                  ],
+                  "id": "2720642800",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3156812870"
+            }
+          ],
+          "id": "2801354935",
+          "outOf": null,
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The maximum oxidation state for iridium is +9."
+                      }
+                    ],
+                    "id": "3065788385",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1934530952"
+              },
+              "id": "2584539",
+              "rule": "input equals {+9}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Iridium has nine valence electrons, which would all be oxidized in this maximum oxidation state."
+                      }
+                    ],
+                    "id": "1449697230",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4003670436",
+                "textDirection": "ltr"
+              },
+              "id": "2352145435",
+              "rule": "input equals {9}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Iridium has nine valence electrons, which would all be oxidized in this maximum oxidation state."
+                      }
+                    ],
+                    "id": "393266602",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4160594747",
+                "textDirection": "ltr"
+              },
+              "id": "3204402991",
+              "rule": "input equals {9+}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Write the ground-state electron configuration of iridium (symbol Ir) first to evaluate its valence electrons. "
+                      }
+                    ],
+                    "id": "1710527199",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1097895350"
+              },
+              "id": "659293433",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "It is possible to synthesize materials with new oxidation states. In 2014, researchers were successful in synthesizing a new oxidation state for iridium with all of its valence electrons oxidized.What is this new, maximum oxidation state for Ir? ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "50625905",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "3969913665",
+        "inputType": "text",
+        "partId": "2801354935"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "It is possible to synthesize materials with new oxidation states. In 2014, researchers were successful in synthesizing a new oxidation state for iridium with all of its valence electrons oxidized."
+            }
+          ],
+          "id": "2041822832",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What is this new, maximum oxidation state for Ir? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3969913665",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2598064006",
+          "type": "p"
+        }
+      ],
+      "id": "710478883"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2801354935": [
+      "78446"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

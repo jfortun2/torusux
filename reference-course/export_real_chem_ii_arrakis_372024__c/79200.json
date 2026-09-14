@@ -1,0 +1,308 @@
+{
+  "id": "79200",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "second_entropy_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\Delta S_{\\mathrm{univ}}\\;=\\;\\Delta S_{\\mathrm{univ}}\\;+\\;\\frac{\\Delta H_{\\mathrm{surr}}}T\\; =\\;109\\;\\frac{\\mathrm J}{\\mathrm K}\\;+\\;\\frac{-40,700\\;\\mathrm{J}}T",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{Solving}:\\;\\;\\;\\;T\\;=\\;373\\;\\mathrm K",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "pxlzksfrf8hocbu",
+                "type": "p"
+              }
+            ],
+            "id": "3639287599"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b3n9xagqhrd7kby",
+                  "type": "p"
+                }
+              ],
+              "id": "2415026172"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xibsgekyn3s4wy1",
+                  "type": "p"
+                }
+              ],
+              "id": "3624333360"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hoh246auzuqjm74",
+                  "type": "p"
+                }
+              ],
+              "id": "2559122846"
+            }
+          ],
+          "id": "4132216251",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta S_{\\mathrm{univ}}\\;=\\;\\Delta S_{\\mathrm{univ}}\\;+\\;\\frac{\\Delta H_{\\mathrm{surr}}}T\\; =\\;109\\;\\frac{\\mathrm J}{\\mathrm K}\\;+\\;\\frac{-40,700\\;\\mathrm{J}}T",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Solving}:\\;\\;\\;\\;T\\;=\\;373\\;\\mathrm K",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "mhm2xmk7imhz1kh",
+                    "type": "p"
+                  }
+                ],
+                "id": "167573219"
+              },
+              "id": "2390024121",
+              "legacyMatch": "[370,375]",
+              "rule": "input = {[370,375]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Use the equation: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta S_{\\mathrm{univ}}\\;=\\;\\Delta S_{\\mathrm{sys}}\\;+\\;\\frac{\\Delta H_{\\mathrm{surr}}}T",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Set Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "sub": true,
+                        "text": "univ"
+                      },
+                      {
+                        "text": " = 0 and solve for "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "lh8cbykq2su8beb",
+                    "type": "p"
+                  }
+                ],
+                "id": "1333449968"
+              },
+              "id": "1055977330",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "For the vaporization of water:  Calculate the temperature of the liquid–gas equilibrium.T =  K",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "4132216251",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the vaporization of water:"
+            }
+          ],
+          "id": "npljw012vpschqt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "a5ycke1vra7ae78",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "dr7ypvmxiqig1nz",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm H}_2\\mathrm O\\left(l\\right)\\;\\rightarrow\\;{\\mathrm H}_2\\mathrm O\\left(g\\right)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "id": "mbtae3u1uj2rh5k",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ugyi6xl85lfnwyx",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm\\Delta H^{\\circ}\\;=\\;40.7\\;\\mathrm{kJ}\\;\\;\\;\\;\\;\\mathrm{and}\\;\\;\\;\\;\\;\\mathrm\\Delta S^{\\circ}\\; =\\;109\\;\\mathrm J/\\mathrm K",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the temperature of the liquid–gas equilibrium."
+            }
+          ],
+          "id": "n4xm9e97g5b1akq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "T"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " K"
+            }
+          ],
+          "id": "w55jy18sklwme32",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "4132216251": [
+      "78411"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

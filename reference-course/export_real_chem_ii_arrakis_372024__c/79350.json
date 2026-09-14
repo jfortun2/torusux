@@ -1,0 +1,134 @@
+{
+  "id": "79350",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [],
+  "title": "Multi Input",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2824286662",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1116643960",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "2589592218",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3911173023",
+                "textDirection": "ltr"
+              },
+              "id": "728910091",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2882717835",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "687855767",
+                "textDirection": "ltr"
+              },
+              "id": "3173714246",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Example question with a fill in the blank",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "4126861333",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "3735582603",
+        "inputType": "text",
+        "partId": "1"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Example question with a fill in the blank "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3735582603",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "4156440444",
+          "type": "p"
+        }
+      ],
+      "id": "363923262"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,548 @@
+{
+  "id": "80043",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78179"
+  ],
+  "title": "pool04_radon_problem_pool-pool04_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "554476288",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The decay constant for Rn-222 is: "
+                  }
+                ],
+                "id": "1924112893",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "x1heu06szjqd54a",
+                    "text": ""
+                  }
+                ],
+                "id": "3663831413",
+                "src": "\\mathrm\\lambda\\;=\\;\\frac{\\ln(2)}{{\\mathrm t}_{1/2}}\\;=\\;\\frac{0.693}{3.823\\;\\mathrm d}\\;\\;=\\;0.1813\\;\\mathrm d^{-1}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The initial amount of Rn-222 is: "
+                  }
+                ],
+                "id": "1027825854",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "84jvsutkki9c3tl",
+                    "text": ""
+                  }
+                ],
+                "id": "3980607589",
+                "src": "\\begin{array}{l}N_t\\;=\\;N_0\\;\\mathrm e^{-\\lambda t}\\;\\;\\;\\Rightarrow\\;\\;\\;N_0\\;=\\;\\dfrac{N_{\\mathit t}}{\\mathrm e^{-\\mathrm\\lambda t}}\\\\N_0\\;=\\;\\dfrac{@@gramsRn@@\\times10^{-8}\\;\\mathrm g}{\\mathrm e^{-((0.1813\\;\\mathrm d^{-1})(@@days@@\\;\\mathrm d)}}\\\\\\;\\;\\;\\;\\;=\\;@@answer1@@\\;\\mathrm g\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "118744727",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "3121403787",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gq83syp4pjiuzet",
+                  "type": "p"
+                }
+              ],
+              "id": "1365717923"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rirvimuzaketzgl",
+                  "type": "p"
+                }
+              ],
+              "id": "869256552"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l66wr76eo9nw4xn",
+                  "type": "p"
+                }
+              ],
+              "id": "2949363098"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The decay constant for Rn-222 is: "
+                      }
+                    ],
+                    "id": "c3e82356ccf640a1998c72cdded71f02",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "sdu5qcvfegox8zg",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1368093358",
+                    "src": "\\mathrm\\lambda\\;=\\;\\frac{\\ln(2)}{{\\mathrm t}_{1/2}}\\;=\\;\\frac{0.693}{3.823\\;\\mathrm d}\\;\\;=\\;0.1813\\;\\mathrm d^{-1}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The initial amount of Rn-222 is: "
+                      }
+                    ],
+                    "id": "136526906",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "kkxzaoxoi85qv6f",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4132638752",
+                    "src": "\\begin{array}{l}N_t\\;=\\;N_0\\;\\mathrm e^{-\\lambda t}\\;\\;\\;\\Rightarrow\\;\\;\\;N_0\\;=\\;\\dfrac{N_{\\mathit t}}{\\mathrm e^{-\\mathrm\\lambda t}}\\\\N_0\\;=\\;\\dfrac{@@gramsRn@@\\times10^{-8}\\;\\mathrm g}{\\mathrm e^{-((0.1813\\;\\mathrm d^{-1})(@@days@@\\;\\mathrm d)}}\\\\\\;\\;\\;\\;\\;=\\;@@answer1@@\\;\\mathrm g\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "134124030",
+                    "type": "p"
+                  }
+                ],
+                "id": "2235786195"
+              },
+              "id": "488915659",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@answer1low@@,@@answer1high@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the half-life to determine the decay constant. Then, use the decay constant and the amount of Rn-222 after @@days@@ d to determine the initial amount of Rn-222."
+                      }
+                    ],
+                    "id": "cce02894c3024efbad37a69cfbe8d726",
+                    "type": "p"
+                  }
+                ],
+                "id": "3605560330"
+              },
+              "id": "1446570396",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "3056563366",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The amount of Rn-222 that decayed is:"
+                  }
+                ],
+                "id": "1006625570",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "@@answer1@@ g – @@gramsRn@@×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–8"
+                  },
+                  {
+                    "text": " g = @@answer1@@ g Rn-222"
+                  }
+                ],
+                "id": "1819213466",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The moles of Rn-222 that decayed are equal to the moles of Po-218 that formed, so: "
+                  }
+                ],
+                "id": "733565971",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "4j4u4yitnmv4lbs",
+                    "text": ""
+                  }
+                ],
+                "id": "738742703",
+                "src": "@@answer1@@\\;\\mathrm g\\;{}^{222}\\mathrm{Rn}\\left(\\frac{1\\;\\mathrm{mol}\\;{}^{222}\\mathrm{Rn}}{222\\;\\mathrm g\\;{}^{222}\\mathrm{Rn}}\\right)\\left(\\frac{1\\;\\mathrm{mol}\\;{}^{218}\\mathrm{Po}}{1\\;\\mathrm{mol}\\;{}^{222}\\mathrm{Rn}}\\right)\\;\\left(\\frac{218\\;\\mathrm g\\;{}^{218}\\mathrm{Po}}{1\\;\\mathrm{mol}\\;{}^{218}\\mathrm{Po}}\\right)\\;\\\\=\\;@@\\mathrm{answer}2@@\\;\\mathrm g\\;{}^{218}\\mathrm{Po}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2724594895",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "3498094869",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h5gpito9nwalm8w",
+                  "type": "p"
+                }
+              ],
+              "id": "3682988070"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "of2iw104fqmedyk",
+                  "type": "p"
+                }
+              ],
+              "id": "1849797389"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "erykiyo9zrnw481",
+                  "type": "p"
+                }
+              ],
+              "id": "3397022462"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The amount of Rn-222 that decayed is:"
+                      }
+                    ],
+                    "id": "3524528492",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "@@answer1@@ g – @@gramsRn@@×10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–8"
+                      },
+                      {
+                        "text": " g = @@answer1@@ g Rn-222"
+                      }
+                    ],
+                    "id": "3609109612",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The moles of Rn-222 that decayed are equal to the moles of Po-218 that formed, so: "
+                      }
+                    ],
+                    "id": "274095208",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ma8psw08zv2iqvz",
+                        "text": ""
+                      }
+                    ],
+                    "id": "3860319376",
+                    "src": "@@answer1@@\\;\\mathrm g\\;{}^{222}\\mathrm{Rn}\\left(\\frac{1\\;\\mathrm{mol}\\;{}^{222}\\mathrm{Rn}}{222\\;\\mathrm g\\;{}^{222}\\mathrm{Rn}}\\right)\\left(\\frac{1\\;\\mathrm{mol}\\;{}^{218}\\mathrm{Po}}{1\\;\\mathrm{mol}\\;{}^{222}\\mathrm{Rn}}\\right)\\;\\left(\\frac{218\\;\\mathrm g\\;{}^{218}\\mathrm{Po}}{1\\;\\mathrm{mol}\\;{}^{218}\\mathrm{Po}}\\right)\\;\\\\=\\;@@\\mathrm{answer}2@@\\;\\mathrm g\\;{}^{218}\\mathrm{Po}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "1878959224",
+                    "type": "p"
+                  }
+                ],
+                "id": "1412087125"
+              },
+              "id": "1358220697",
+              "legacyMatch": "[@@amtPoLow@@,@@amtPoHigh@@]",
+              "rule": "input = {[@@answer2low@@,@@answer2high@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. To find the amount of Po-218 formed, first determine the amount of Rn-222 that decayed. Then, use stoichiometry and molar mass to convert the difference into the amount of Po-218 that has formed. "
+                      }
+                    ],
+                    "id": "cbfb45b9689d41f9857bd9dbc14ec06d",
+                    "type": "p"
+                  }
+                ],
+                "id": "853756217"
+              },
+              "id": "4195371516",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Gaseous radon-222 forms in soil. As it rises from the soil, it can be trapped in basements below homes. This gas, an alpha emitter, decays into Po-218; once inhaled by people, it can cause lung cancer. A sample of gas is tested for Rn-222. The half-life of Rn-222 is 3.823 days. After @@days@@ days, the sample is found to contain @@gramsRn@@×10–8 g of Rn-222. How many grams of Rn-222 were initially present?  gHow many grams of Po-218 have been formed? g",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst gramsRn = OLI.random(1.02,9.98,2) .toFixed(2);\nconst daysIndex = OLI.random(0,6);\nconst daysArray = [32,35,38,41,44,47,51,54,58,62,65]\nconst days = daysArray[daysIndex];\nconst initialRn = gramsRn*Math.exp(0.1813*days)/100000000;\nconst answer1 = initialRn .toPrecision(3);\nconst answer1low = answer1*0.97;\nconst answer1high = answer1*1.03;\nconst amountPo = initialRn*218/222;\nconst answer2 = amountPo .toPrecision(3);\nconst answer2low = answer2*0.97;\nconst answer2high = answer2*1.03;\n\n// Expose variables to OLI\nmodule.exports = {\n  gramsRn,\n  days,\n  initialRn,\n  answer1,\n  answer1low,\n  answer1high,\n  amountPo,\n  answer2,\n  answer2low,\n  answer2high\n};\n",
+              "id": "d056abbdac4e4050999b792f7711cc2a",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      },
+      {
+        "id": "two",
+        "inputType": "numeric",
+        "partId": "two",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Gaseous radon-222 forms in soil. As it rises from the soil, it can be trapped in basements below homes. This gas, an alpha emitter, decays into Po-218; once inhaled by people, it can cause lung cancer. A sample of gas is tested for Rn-222. The half-life of Rn-222 is 3.823 days. After @@days@@ days, the sample is found to contain @@gramsRn@@×10"
+            },
+            {
+              "sup": true,
+              "text": "–8"
+            },
+            {
+              "text": " g of Rn-222. "
+            }
+          ],
+          "id": "f31d83289a1443a1a38d39ce2bf8f671",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "How many grams of Rn-222 were initially present? "
+            }
+          ],
+          "id": "fac3e2a09d394e28923f9fe6133f8490",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " g"
+            }
+          ],
+          "id": "d2cc753bd06d437a8cd599cdf9eefef4",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "How many grams of Po-218 have been formed?"
+            }
+          ],
+          "id": "ac816fd87fe249258e48b120f7cfbf43",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " g"
+            }
+          ],
+          "id": "f5875f9ecf764502a6518279624f12f9",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -30,7 +30,7 @@ export type CurriculumNode = {
 const LO_REDOX = 'LO 1.1 Balance redox equations and construct half-reactions.';
 const LO_CELL = 'LO 1.2 Predict electrochemical behavior and cell trends.';
 const LO_APPS = 'LO 1.3 Evaluate electrochemistry applications in real systems.';
-const LO_NOTATION = 'Write and interpret standard cell notation';
+const LO_NOTATION = 'LO 1.2 Use cell notation to describe galvanic cells.';
 const LO_EQUILIBRIUM = 'Explain equilibrium shifts';
 const LO_CORROSION = 'Explain electrochemical causes of corrosion';
 const LO_RAD = 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.';
@@ -58,7 +58,7 @@ export const COURSE_LEARNING_OBJECTIVES: CourseLearningObjective[] = [
   { code: 'LO 1.5', label: 'L5 Explain how pathway and tissue sensitivity influence biological effects.' },
 ];
 
-const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v1';
+const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v3';
 
 const item = (
   node: Omit<CurriculumNode, 'children' | 'originalTitle' | 'origin' | 'status'> &
@@ -88,6 +88,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               id: 'page-foundational',
               type: 'page',
               title: 'Foundational Concepts of Electrochemistry',
+              learningObjectives: [LO_REDOX],
               children: [
                 item({
                   id: 'block-foundational-expl',
@@ -125,6 +126,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               title: 'Oxidation and reduction review',
               originalTitle: 'Redox review',
               status: 'modified',
+              learningObjectives: [LO_REDOX],
               children: [
                 item({
                   id: 'block-redox-expl',
@@ -155,6 +157,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               id: 'page-galvanic',
               type: 'page',
               title: 'Galvanic Cells',
+              learningObjectives: [LO_CELL],
               children: [
                 item({
                   id: 'block-galvanic-expl',
@@ -189,21 +192,85 @@ export function createInitialCurriculum(): CurriculumNode[] {
             item({
               id: 'page-cell-notation',
               type: 'page',
-              title: 'Cell notation',
+              title: 'Cell Notation',
+              pageScoring: 'practice',
               learningObjectives: [LO_NOTATION],
               children: [
                 item({
                   id: 'block-notation-expl',
                   type: 'block',
                   blockKind: 'explanation',
-                  title: 'Reading and writing cell diagrams',
+                  title: 'Cell notation',
                   learningObjectives: [LO_NOTATION],
                 }),
                 item({
                   id: 'block-notation-example',
                   type: 'block',
                   blockKind: 'example',
-                  title: 'Standard cell notation',
+                  title: 'Example',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-lbd',
+                  type: 'block',
+                  blockKind: 'explanation',
+                  title: 'Learn by Doing',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-lbd-q1',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'Choose the oxidation and reduction half-reactions',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-lbd-q2',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'Fill in the correct coefficients for the balanced overall reaction',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-lbd-q3',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'Which half-reaction occurs at the anode and the cathode?',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-lbd-q4',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'Which is the correct cell notation?',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-digt',
+                  type: 'block',
+                  blockKind: 'explanation',
+                  title: 'Did I Get This',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-digt-q1',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'The oxidation and reduction half-reactions',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-digt-q2',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'Which reaction occurs at the anode and the cathode?',
+                  learningObjectives: [LO_NOTATION],
+                }),
+                item({
+                  id: 'block-notation-digt-q3',
+                  type: 'block',
+                  blockKind: 'question',
+                  title: 'Which is the correct cell notation?',
                   learningObjectives: [LO_NOTATION],
                 }),
               ],
@@ -219,6 +286,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               id: 'page-applications',
               type: 'page',
               title: 'Other Applications of Electrochemistry',
+              learningObjectives: [LO_APPS],
               children: [
                 item({
                   id: 'block-app-expl',
@@ -242,6 +310,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               title: 'Corrosion case study',
               origin: 'instructor',
               status: 'added',
+              learningObjectives: [LO_APPS, LO_CORROSION],
               children: [
                 item({
                   id: 'block-corrosion-expl',
@@ -259,6 +328,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               type: 'page',
               title: 'Batteries in consumer products',
               status: 'removed',
+              learningObjectives: [LO_APPS],
               children: [
                 item({
                   id: 'block-batteries-expl',
@@ -280,6 +350,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               type: 'page',
               title: 'Electrochemistry Unit Checkpoint',
               assessmentTitle: 'Electrochemistry Unit Checkpoint',
+              learningObjectives: [LO_REDOX, LO_CELL, LO_APPS],
               children: [
                 item({
                   id: 'block-e-check-expl',
@@ -336,6 +407,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               id: 'page-radiation',
               type: 'page',
               title: 'Radiation types and shielding',
+              learningObjectives: [LO_RAD],
               children: [
                 item({
                   id: 'block-rad-expl',
@@ -374,6 +446,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               title: 'Nuclear Chemistry Unit Checkpoint',
               assessmentTitle: 'Nuclear Chemistry Unit Checkpoint',
               attemptsStarted: true,
+              learningObjectives: [LO_RAD, LO_BIO],
               children: [
                 item({
                   id: 'block-n-check-expl',
@@ -423,6 +496,7 @@ export function createInitialCurriculum(): CurriculumNode[] {
               title: 'Practice set: local examples',
               origin: 'instructor',
               status: 'added',
+              learningObjectives: [LO_CELL, LO_APPS],
               children: [
                 item({
                   id: 'block-recitation-expl',

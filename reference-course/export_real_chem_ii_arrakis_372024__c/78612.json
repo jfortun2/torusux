@@ -1,0 +1,337 @@
+{
+  "id": "78612",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78210"
+  ],
+  "title": "calc_ph_buffer_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": " Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "lsyocose7xpwz7i",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This solution contains a weak acid (HA) and its conjugate base (A"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": ") in similar concentrations, so it is a buffer. Its pH is calculated by using the given concentrations of HA and A"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": ", the "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " of HA, and the Henderson-Hasselbalch equation: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log_{10}\\;\\left(\\frac{\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\right)\\; =\\;-\\log_{10}K_a\\;+\\;\\log_{10}\\;\\left(\\frac{\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\right)\\\\\\mathrm{pH}\\; =\\;@@pkaRnd@@\\;+\\;\\log_{10}\\;\\left(\\frac{(@@baseconc@@)}{(@@acidconc@@)}\\right)\\\\\\mathrm{pH}\\;=\\;@@phRnd@@\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "cplf0q753u3cxsr",
+                "type": "p"
+              }
+            ],
+            "id": "3578615604"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3ohbnqaryulre7l",
+                  "type": "p"
+                }
+              ],
+              "id": "948355339"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lbn6g9x66n28uzm",
+                  "type": "p"
+                }
+              ],
+              "id": "3846328123"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a8sipef2nq2ovhg",
+                  "type": "p"
+                }
+              ],
+              "id": "2864275694"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This solution contains a weak acid (HA) and its conjugate base (A"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ") in similar concentrations, so it is a buffer. Its pH is calculated by using the given concentrations of HA and A"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ", the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " of HA, and the Henderson-Hasselbalch equation: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log_{10}\\;\\left(\\frac{\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\right)\\; =\\;-\\log_{10}K_a\\;+\\;\\log_{10}\\;\\left(\\frac{\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\right)\\\\\\mathrm{pH}\\; =\\;@@pkaRnd@@\\;+\\;\\log_{10}\\;\\left(\\frac{(@@baseconc@@)}{(@@acidconc@@)}\\right)\\\\\\mathrm{pH}\\;=\\;@@phRnd@@\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "sk8u1k9ro9vkiqj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1599813687"
+              },
+              "id": "3612056351",
+              "legacyMatch": "[@@phlow@@,@@phhigh@@]",
+              "rule": "input = {[@@phlow@@,@@phhigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This solution contains a weak acid (HA) and its conjugate base (A"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ") in similar concentrations, so it is a buffer. Its pH is calculated by using the given concentrations of HA and A"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ", the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " of HA, and the Henderson-Hasselbalch equation: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log_{10}\\;\\left(\\frac{\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\right)\\; =\\;-\\log_{10}K_a\\;+\\;\\log_{10}\\;\\left(\\frac{\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "6ix8d5uzh1g8jdk",
+                    "type": "p"
+                  }
+                ],
+                "id": "1139573187"
+              },
+              "id": "4251655913",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\n\nconst conc = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8]\nconst c = OLI.random(0,14,0);\nconst cc = OLI.random(0,14,0);\n\nconst acidconc = conc[c] .toPrecision(3);\nconst baseconc = conc[cc] .toPrecision(3);\n\nconst d = OLI.random(1,9.99,2);\nconst exp = OLI.random(-9, -4,0);\nconst ka = d*10**exp;\nconst pka = -Math.log10(ka);\nconst pkaRnd = (pka).toPrecision(4);\nconst ratio = baseconc/acidconc;\nconst temp =  Math.log10(ratio) ;\nconst ph = pka + temp; \nconst phRnd = (ph).toPrecision(4);\nconst phlow = 0.98*ph;\nconst phhigh=1.02*ph;\n// Expose variables to OLI\nmodule.exports = {\n  acidconc, baseconc, d, exp, ka, pka, temp, ph, phlow, phhigh, phRnd, pkaRnd\n};\n",
+              "id": "a31ebfda8a0d42c7a20fe27f88f2d55b",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of a solution that is @@acidconc@@ M in the weak acid HA ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " = @@d@@×10"
+            },
+            {
+              "sup": true,
+              "text": "@@exp@@"
+            },
+            {
+              "text": ") and @@baseconc@@ M in A"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "4asoe9hgl4d9sm1",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "vgt2hv539fjqdpw",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

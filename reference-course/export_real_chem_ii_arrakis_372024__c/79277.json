@@ -1,0 +1,294 @@
+{
+  "id": "79277",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78078"
+  ],
+  "title": "corrosion_skill_pool_v3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "1906644249"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "1f5s2ym9vnzydck",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "o79tv6dsibsv1uf",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "vzd5v50y4tk6y47",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "b4lxhqqmmv58a3v",
+                        "text": "rust on iron"
+                      }
+                    ],
+                    "id": "eom2qfqyntdon76",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "43nb6m5c4on4s6w",
+                        "text": "blue-green patina on copper"
+                      }
+                    ],
+                    "id": "4h7z9yq6x4we8tq",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "78etejciejhg80r",
+                        "text": "tarnish on silver"
+                      }
+                    ],
+                    "id": "3hin3pg2t07lj8i",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "d8vsnqew5t0mc4f",
+                        "text": "powdery white coating on aluminum"
+                      }
+                    ],
+                    "id": "nwaa8x66a5dzjcu",
+                    "type": "li"
+                  }
+                ],
+                "id": "wnxbsdpz87z3hcr",
+                "type": "ul"
+              }
+            ],
+            "id": "2878295213"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "aqh3xomvkbb3gf5",
+                  "type": "p"
+                }
+              ],
+              "id": "868040636"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yfzlqc51g5octle",
+                  "type": "p"
+                }
+              ],
+              "id": "1237246147"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "flqe41339y57dpv",
+                  "type": "p"
+                }
+              ],
+              "id": "3040077213"
+            }
+          ],
+          "id": "da2a6eb1c3f740b98b9c4077c57e45e7",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "ea7ca9dd6db4445390c6639e57ce7aac",
+                    "type": "p"
+                  }
+                ],
+                "id": "3845390812"
+              },
+              "id": "1906644249",
+              "legacyMatch": "A,B,C,D",
+              "rule": "(!(input like {E})) && (input like {D} && (input like {C} && (input like {B} && (input like {A}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "c834e5c36c90436880eb17f3cb618087",
+                    "type": "p"
+                  }
+                ],
+                "id": "465734161"
+              },
+              "id": "4127589060",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "rust on iron "
+              }
+            ],
+            "id": "dexil9ojbim0mio",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "blue-green patina on copper"
+              }
+            ],
+            "id": "b8yf11lp0hm44dm",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tarnish on silver"
+              }
+            ],
+            "id": "7o4jvgky4f5vdax",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "powdery white coating on aluminum"
+              }
+            ],
+            "id": "244skol7df13uwl",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "shiny surface on chrome-plated steel "
+              }
+            ],
+            "id": "eit7kvic8sn8459",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following phenomena are examples of corrosion? Select all that apply."
+            }
+          ],
+          "id": "a86c610613b44d2c859120e9872404bf",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "da2a6eb1c3f740b98b9c4077c57e45e7": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

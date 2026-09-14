@@ -1,0 +1,260 @@
+{
+  "id": "79212",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "equil_calc_quiz-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0sils6bp9uhdg0m",
+                  "type": "p"
+                }
+              ],
+              "id": "3016202149"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0hf9azzj1xcrm3k",
+                  "type": "p"
+                }
+              ],
+              "id": "1384928024"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fu99covvp4osth6",
+                  "type": "p"
+                }
+              ],
+              "id": "2897520795"
+            }
+          ],
+          "id": "160018181",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "mi6dzwao9cwn6f8",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\mathrm{assuming}\\;\\mathrm{reaction}\\;\\mathrm{goes}\\;\\mathrm{to}\\;\\mathrm{completion}\\;{\\mathrm P}_{{\\mathrm{NO}}_2}\\;\\mathrm{and}\\;{\\mathrm P}_{{\\mathrm O}_2}\\;\\mathrm{are}\\;\\mathrm{both}\\;1.2\\times10^{-8}\\\\K_P\\;=\\;6.0\\times10^{34}\\;=\\;\\frac{(1.2\\times10^{-8})^2}{\\mathrm x^2}\\\\\\mathrm x\\;=\\;\\lbrack{\\mathrm O}_3\\rbrack\\;=\\;4.9\\times10^{-26}\\;\\mathrm{atm}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "jtcyhkp6zj8pq2k",
+                    "type": "p"
+                  }
+                ],
+                "id": "3038229290"
+              },
+              "id": "691401970",
+              "legacyMatch": "[4.8e-26,4.9e-26]",
+              "rule": "input = {[4.8e-26,4.9e-26]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ggx3iwucmmxz7r5",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\mathrm{assuming}\\;\\mathrm{reaction}\\;\\mathrm{goes}\\;\\mathrm{to}\\;\\mathrm{completion}\\;{\\mathrm P}_{{\\mathrm{NO}}_2}\\;\\mathrm{and}\\;{\\mathrm P}_{{\\mathrm O}_2}\\;\\mathrm{are}\\;\\mathrm{both}\\;1.2\\times10^{-8}\\\\K_P\\;=\\;6.0\\times10^{34}\\;=\\;\\frac{(1.2\\times10^{-8})^2}{\\mathrm x^2}\\\\\\mathrm x\\;=\\;\\lbrack{\\mathrm O}_3\\rbrack\\;=\\;4.9\\times10^{-26}\\;\\mathrm{atm}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "3l211jyl31tl6ez",
+                    "type": "p"
+                  }
+                ],
+                "id": "1831126440"
+              },
+              "id": "201709856",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "160018181"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "One of the important reactions in the formation of smog is represented by the equation"
+            }
+          ],
+          "id": "99981hoy5iwo235",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "x7qgc2hja6p7ta4",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ego09co4isu5wmo",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm O}_3(g)\\;+\\;\\mathrm{NO}(g)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{NO}}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_P\\;=\\;6.0\\times10^{34}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the pressure of O"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " remaining after a mixture of O"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " with a pressure of 1.2 × 10"
+            },
+            {
+              "sup": true,
+              "text": "−8"
+            },
+            {
+              "text": " atm and NO with a pressure of 1.2 × 10"
+            },
+            {
+              "sup": true,
+              "text": "−8"
+            },
+            {
+              "text": " atm comes to equilibrium?"
+            }
+          ],
+          "id": "yyshm18exjm2hu3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "O"
+            },
+            {
+              "doublesub": true,
+              "text": "3"
+            },
+            {
+              "text": "="
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            },
+            {
+              "text": "atm"
+            }
+          ],
+          "id": "bdq283mzlvqindo",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "160018181": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

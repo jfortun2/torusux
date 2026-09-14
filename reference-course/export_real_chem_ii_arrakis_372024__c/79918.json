@@ -1,0 +1,355 @@
+{
+  "id": "79918",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "conj_strength_1a_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7s68h9zqzermby8",
+                  "type": "p"
+                }
+              ],
+              "id": "2596290472"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b8ef9kwgzm54koa",
+                  "type": "p"
+                }
+              ],
+              "id": "265029075"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jf7rea2hx3v0q9j",
+                  "type": "p"
+                }
+              ],
+              "id": "2987641511"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The lesser value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " for NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " indicates a greater value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " for its conjugate, NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "uwqj7qwyo185u75",
+                    "type": "p"
+                  }
+                ],
+                "id": "2656025945"
+              },
+              "id": "2584054041",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The lesser value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " for NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " indicates a greater value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " for its conjugate, NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "c5vya4p8l2x7hzk",
+                    "type": "p"
+                  }
+                ],
+                "id": "1419072928"
+              },
+              "id": "451892797",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "5352do6jmoctztk",
+                    "type": "p"
+                  }
+                ],
+                "id": "2149409930"
+              },
+              "id": "2008695188",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2584054041"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "451892797"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3775960108",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "9p8j6e76wgyxdfc",
+            "text": "greater than "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "woyb4lyf9h4eyqg",
+            "text": "less than"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Without doing any calculations, fill in the following statement."
+            }
+          ],
+          "id": "u1jey0axn4bmhs7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " value for NH"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": " is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " for CH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "oxat7yrdhhzvu3t",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78412"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

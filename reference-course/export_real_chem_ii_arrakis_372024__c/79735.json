@@ -1,0 +1,732 @@
+{
+  "id": "79735",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_nuc_eq_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "irvd3b5azl7wq01",
+                  "type": "p"
+                }
+              ],
+              "id": "1962653751"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zfdwh5c21d1uhjy",
+                  "type": "p"
+                }
+              ],
+              "id": "1447104421"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zx1ol8h6kc8yk7c",
+                  "type": "p"
+                }
+              ],
+              "id": "4183201718"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A (high energy) particle with A = 1 and Z = 0 is a neutron."
+                      }
+                    ],
+                    "id": "2lurnn6awfar1st",
+                    "type": "p"
+                  }
+                ],
+                "id": "1722887826"
+              },
+              "id": "3228031422",
+              "legacyMatch": "E",
+              "rule": "input like {first_E}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Refer to the table for descriptions of the types of particles in nuclear reactions."
+                      }
+                    ],
+                    "id": "kcncq97troykjtl",
+                    "type": "p"
+                  }
+                ],
+                "id": "4053842450"
+              },
+              "id": "2660080752",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The value of A is 97."
+                  }
+                ],
+                "id": "wu1hej2q4ie0knx",
+                "type": "p"
+              }
+            ],
+            "id": "1268108245"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xghkue0chx8eayk",
+                  "type": "p"
+                }
+              ],
+              "id": "2680981402"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "oqojdvpy57z2jnd",
+                  "type": "p"
+                }
+              ],
+              "id": "555310004"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fghzlqwb5j84g6z",
+                  "type": "p"
+                }
+              ],
+              "id": "2153559676"
+            }
+          ],
+          "id": "633151234",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 2 + 97 = A + 2(1) → A = 97"
+                      }
+                    ],
+                    "id": "psfzhvivkuxj56u",
+                    "type": "p"
+                  }
+                ],
+                "id": "1542362656"
+              },
+              "id": "1847326192",
+              "legacyMatch": "97",
+              "rule": "input = {97}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The total mass on the left side of the equation must equal the total mass on the right side."
+                      }
+                    ],
+                    "id": "l64v47tqbeup4tz",
+                    "type": "p"
+                  }
+                ],
+                "id": "1683564050"
+              },
+              "id": "919486982",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The value of Z is 43."
+                  }
+                ],
+                "id": "4kygt4ub3nyj4j8",
+                "type": "p"
+              }
+            ],
+            "id": "4019513711"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f8b94hx1iaq5pmq",
+                  "type": "p"
+                }
+              ],
+              "id": "265210156"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9t9jfnv198phfgr",
+                  "type": "p"
+                }
+              ],
+              "id": "2814299775"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0h7ac43c5el7da4",
+                  "type": "p"
+                }
+              ],
+              "id": "4033494191"
+            }
+          ],
+          "id": "1428763965",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 1 + 42 = Z + 2(0) → Z = 43"
+                      }
+                    ],
+                    "id": "iy61m0hzl9fv53l",
+                    "type": "p"
+                  }
+                ],
+                "id": "1871002723"
+              },
+              "id": "145777708",
+              "legacyMatch": "43",
+              "rule": "input = {43}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The total charge on the left side of the equation must equal the total charge on the right side. "
+                      }
+                    ],
+                    "id": "dlipmlwkxtb8c6d",
+                    "type": "p"
+                  }
+                ],
+                "id": "3896055276"
+              },
+              "id": "1903175724",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The complete balanced nuclear equation is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{}_1^2\\mathrm H\\;+\\:{}_{42}^{97}\\mathrm{Mo}\\;\\rightarrow\\;2{}_0^1\\mathrm n\\;+\\;{}_{43}^{97}\\mathrm{Tc}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": "The first element to be prepared that does not occur naturally on the earth, technetium, was created by bombardment of molybdenum by deuterons (heavy hydrogen, "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_1^2\\mathrm H",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ") by Emilio Segre and Carlo Perrier in 1937."
+                  }
+                ],
+                "id": "0jlxgp2jw0jh00o",
+                "type": "p"
+              }
+            ],
+            "id": "3016842790"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "90n9cnfht3wstlm",
+                  "type": "p"
+                }
+              ],
+              "id": "1836376436"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cdds5eq7onyso0r",
+                  "type": "p"
+                }
+              ],
+              "id": "3077933004"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "je9cz0i13t0wiwj",
+                  "type": "p"
+                }
+              ],
+              "id": "386499993"
+            }
+          ],
+          "id": "1550628009",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The complete balanced nuclear equation is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{}_1^2\\mathrm H\\;+\\:{}_{42}^{97}\\mathrm{Mo}\\;\\rightarrow\\;2{}_0^1\\mathrm n\\;+\\;{}_{43}^{97}\\mathrm{Tc}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "The first element to be prepared that does not occur naturally on the earth, technetium, was created by the bombardment of molybdenum by deuterons (heavy hydrogen, "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "{}_1^2\\mathrm H",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ") by Emilio Segrè and Carlo Perrier in 1937."
+                      }
+                    ],
+                    "id": "y2prrv9wpxdwsp0",
+                    "type": "p"
+                  }
+                ],
+                "id": "524993559"
+              },
+              "id": "1220073998",
+              "legacyMatch": "Tc",
+              "rule": "input iequals {Tc}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. The atomic number Z identifies the element. "
+                      }
+                    ],
+                    "id": "0uzk6etamm8m16x",
+                    "type": "p"
+                  }
+                ],
+                "id": "1015031696"
+              },
+              "id": "3952615287",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Note: , referred to as a deuteron, is an isotope of hydrogen.   =  A =  Z =  X = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "ffx6nandck3n4kv",
+            "text": "alpha particle "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "po2r6maontu6p8e",
+            "text": "beta particle"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "6i7qrtbo638mzrt",
+            "text": "positron"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "kuy3w4d2smrd91s",
+            "text": "proton"
+          }
+        ],
+        "id": "first_D"
+      },
+      {
+        "content": [
+          {
+            "id": "patshbqewnk01bg",
+            "text": "neutron"
+          }
+        ],
+        "id": "first_E"
+      },
+      {
+        "content": [
+          {
+            "id": "9qy9jj6zjpb6t4v",
+            "text": "gamma ray"
+          }
+        ],
+        "id": "first_F"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C",
+          "first_D",
+          "first_E",
+          "first_F"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "633151234",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "1428763965",
+        "size": "small"
+      },
+      {
+        "id": "q1txt",
+        "inputType": "text",
+        "partId": "1550628009"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Note: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": false,
+              "src": "{}_1^2\\mathrm H",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ", referred to as a deuteron, is an isotope of hydrogen. "
+            }
+          ],
+          "id": "l3fanbg0nvrphj7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "ucnjpp83x1o6qkl",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "0pip4puho3hvqz2",
+          "legacyBlockRendered": "true",
+          "src": "{}_1^2\\mathrm H\\;\\;+\\;\\:{}_{42}^{97}\\mathrm{Mo}\\;\\;\\rightarrow\\;\\;{}_{\\mathrm Z}^{\\mathrm A}\\mathrm X\\;\\;+\\;\\;2\\;{\\color[rgb]{1.0, 0.0, 0.0}\\boxed{{}_{\\color[rgb]{0.1, 0.1, 0.1}0}^{\\color[rgb]{0.1, 0.1, 0.1}1}{\\color[rgb]{0.1, 0.1, 0.1}\\mathrm n}}}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2114468010",
+              "src": "{}_0^1\\mathrm n",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "g4dhh8ukismbe5w",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "A = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "63fa7qiu8gbq9n7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Z = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "dy2af9lntv7w4kf",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "X = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1txt",
+              "input": "q1txt",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "qhcwhv8aavy5dae",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1428763965": [
+      "78501"
+    ],
+    "1550628009": [
+      "78501"
+    ],
+    "633151234": [
+      "78501"
+    ],
+    "first": [
+      "78515"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

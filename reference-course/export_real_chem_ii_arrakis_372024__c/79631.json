@@ -1,0 +1,1183 @@
+{
+  "id": "79631",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78174"
+  ],
+  "title": "equil_large_small_k_skill2_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "nsqklqtbzml2bic",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": " Solution"
+                  }
+                ],
+                "id": "lknbzofhufj4sl8",
+                "type": "p"
+              }
+            ],
+            "id": "3632205063"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "95gxe31tffx25b1",
+                  "type": "p"
+                }
+              ],
+              "id": "3864508125"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tx7t7u9jp0epwwc",
+                  "type": "p"
+                }
+              ],
+              "id": "714817160"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qu6smkujpt9tvl4",
+                  "type": "p"
+                }
+              ],
+              "id": "1896554875"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Assuming "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is much less than the initial concentration of COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " because the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " value is very small, we assume that the initial concentration of COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is the same as the equilibrium concentration."
+                      }
+                    ],
+                    "id": "b5f69f154d0d48c0a3e8ba5371e54b47",
+                    "type": "p"
+                  }
+                ],
+                "id": "3321739423"
+              },
+              "id": "1828262500",
+              "legacyMatch": "@@conc@@",
+              "rule": "input = {@@conc@@}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Assuming "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is much less than the initial concentration of COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " because the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " value is very small, we assume that the initial concentration of COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is the same as the equilibrium concentration."
+                      }
+                    ],
+                    "id": "f17b52909214458a947bce9d2ad1c66e",
+                    "type": "p"
+                  }
+                ],
+                "id": "2293703321"
+              },
+              "id": "28207953",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "1js6m533f8qpsdi",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": " Solution"
+                  }
+                ],
+                "id": "7d5z9knr8fkjvaq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Make and ICE table to determine the relative equilibrium concentrations of each species"
+                  }
+                ],
+                "id": "so9qm5rjkn1d9wy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ". >"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\;\\;\\;\\;\\;\\;\\;{\\mathrm{COCl}}_2\\;\\;\\;\\;\\;\\;\\;\\;\\rightleftharpoons\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{CO}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm{Cl}}_2\\\\\\mathrm I:\\;\\;\\;\\;@@conc@@\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\\\\\mathrm C:\\;\\;\\;\\;-\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\\\\\mathrm E:\\;\\;\\;@@conc@@\\;\\mathrm M\\;-\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\\\\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Substituting "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "c"
+                  },
+                  {
+                    "text": " and relative equilibrium concentrations into the equilibrium expression and solving for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "e8nbrx9dtp8z2l1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{CO}\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack}{\\lbrack{\\mathrm{COCl}}_2\\rbrack}\\;\\;\\mathrm{making}\\;\\mathrm{the}\\;x\\;\\mathrm{assumption}\\\\2.2\\times10^{-10}\\;=\\;\\frac{x^2}{@@conc@@\\;\\mathrm M}\\;\\\\x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;\\\\\\lbrack\\mathrm{CO}\\rbrack\\;=\\;\\;\\mathrm x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "1mremfr0c0rtek0",
+                "type": "p"
+              }
+            ],
+            "id": "44152565"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tjdrhtkw1vrocuk",
+                  "type": "p"
+                }
+              ],
+              "id": "2231868429"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sites0u6zkqs5av",
+                  "type": "p"
+                }
+              ],
+              "id": "2716321133"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bzewp8f5jqu92ig",
+                  "type": "p"
+                }
+              ],
+              "id": "3654946297"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Make and ICE table to determine the relative equilibrium concentrations of each species. "
+                      }
+                    ],
+                    "id": "e8cdccb33e8342a79237923cbe8b7473",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\;\\;\\;\\;\\;\\;\\;{\\mathrm{COCl}}_2\\;\\;\\;\\;\\;\\;\\;\\;\\rightleftharpoons\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{CO}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm{Cl}}_2\\\\\\mathrm I:\\;\\;\\;\\;@@conc@@\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\\\\\mathrm C:\\;\\;\\;\\;-\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\\\\\mathrm E:\\;\\;\\;@@conc@@\\;\\mathrm M\\;-\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\\\\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "fe5ce65792024cf3a92c6cf2e110253c",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Substituting "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " and relative equilibrium concentrations into the equilibrium expression and solving for "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "cdca2cd7d5834ac5830183455c25dc05",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{CO}\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack}{\\lbrack{\\mathrm{COCl}}_2\\rbrack}\\;\\;\\mathrm{making}\\;\\mathrm{the}\\;x\\;\\mathrm{assumption}\\\\2.2\\times10^{-10}\\;=\\;\\frac{x^2}{@@conc@@\\;\\mathrm M}\\;\\\\x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;\\\\\\lbrack\\mathrm{CO}\\rbrack\\;=\\;\\;\\mathrm x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "e1a2618f31384b03a35081f0f11987fc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2653923059"
+              },
+              "id": "1067406637",
+              "legacyMatch": "[@@calcXLow@@,@@calcXHigh@@]",
+              "rule": "input = {[@@calcXLow@@,@@calcXHigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Make and ICE table to determine the relative equilibrium concentrations of each species. Substitute "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " and the relative equilibrium concentrations from the ICE table into the equilibrium expression. Assume that"
+                      },
+                      {
+                        "em": true,
+                        "text": " x"
+                      },
+                      {
+                        "text": " is much smaller than the initial [COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "], which allows you to ignore "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " in the [COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "] part of the expression. Solve for "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "b230020ae4f9437f99ab85417bc72e57",
+                    "type": "p"
+                  }
+                ],
+                "id": "2449750075"
+              },
+              "id": "298286944",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "pu807nntqzzktqp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": " Solution"
+                  }
+                ],
+                "id": "t1pp3mds8opnwdt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " Make and ICE table to determine the relative equilibrium concentrations of each species. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\;\\;\\;\\;\\;\\;\\;{\\mathrm{COCl}}_2\\;\\;\\;\\;\\;\\;\\;\\;\\rightleftharpoons\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{CO}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm{Cl}}_2\\\\\\mathrm I:\\;\\;\\;\\;@@conc@@\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\\\\\mathrm C:\\;\\;\\;\\;-\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\\\\\mathrm E:\\;\\;\\;@@conc@@\\;\\mathrm M\\;-\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\\\\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "fp6g4dk4i795u36",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Substituting "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "c"
+                  },
+                  {
+                    "text": " and relative equilibrium concentrations into the equilibrium expression and solving for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "byv1f0zbntlw9kq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{CO}\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack}{\\lbrack{\\mathrm{COCl}}_2\\rbrack}\\;\\;\\mathrm{making}\\;\\mathrm{the}\\;x\\;\\mathrm{assumption}\\\\2.2\\times10^{-10}\\;=\\;\\frac{x^2}{@@conc@@\\;\\mathrm M}\\;\\\\x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;\\\\\\lbrack\\mathrm{Cl_2}\\rbrack\\;=\\;\\;\\mathrm x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "xofdm45x6huj2d5",
+                "type": "p"
+              }
+            ],
+            "id": "1307354645"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "93gmp4ix6771r5o",
+                  "type": "p"
+                }
+              ],
+              "id": "786624090"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n9b1rp2bm66ct2j",
+                  "type": "p"
+                }
+              ],
+              "id": "3592120015"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3jdv0dejkjzaoip",
+                  "type": "p"
+                }
+              ],
+              "id": "2432313551"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Make and ICE table to determine the relative equilibrium concentrations of each species. "
+                      }
+                    ],
+                    "id": "d567c0be7f08450daecbff51bb231193",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\;\\;\\;\\;\\;\\;\\;{\\mathrm{COCl}}_2\\;\\;\\;\\;\\;\\;\\;\\;\\rightleftharpoons\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{CO}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm{Cl}}_2\\\\\\mathrm I:\\;\\;\\;\\;@@conc@@\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;0\\;\\mathrm M\\\\\\mathrm C:\\;\\;\\;\\;-\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;+\\mathrm x\\\\\\mathrm E:\\;\\;\\;@@conc@@\\;\\mathrm M\\;-\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm x\\\\\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "db710888ddc04138bb088c295b91cae7",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Substituting "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " and relative equilibrium concentrations into the equilibrium expression and solving for "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "cbac87fea8b14d578724144696fd95e0",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{CO}\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack}{\\lbrack{\\mathrm{COCl}}_2\\rbrack}\\;\\;\\mathrm{making}\\;\\mathrm{the}\\;x\\;\\mathrm{assumption}\\\\2.2\\times10^{-10}\\;=\\;\\frac{x^2}{@@conc@@\\;\\mathrm M}\\;\\\\x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;\\\\\\lbrack\\mathrm{Cl_2}\\rbrack\\;=\\;\\;\\mathrm x\\;=\\;@@decDisplay@@\\times10^{-6}\\;\\mathrm M\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "d75b7110e1f241fa90d46f6fc0ca1c34",
+                    "type": "p"
+                  }
+                ],
+                "id": "1900179253"
+              },
+              "id": "3908618342",
+              "legacyMatch": "[@@calcXLow@@,@@calcXHigh@@]",
+              "rule": "input = {[@@calcXLow@@,@@calcXHigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Make and ICE table to determine the relative equilibrium concentrations of each species. Substitute "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " and the relative equilibrium concentrations from the ICE table into the equilibrium expression. Assume that"
+                      },
+                      {
+                        "em": true,
+                        "text": " x"
+                      },
+                      {
+                        "text": " is much smaller than the initial [COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "], which allows you to ignore "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " in the [COCl"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "] part of the expression. Solve for "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "de7969668b1b440cb80f2c1b78373ee8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2429800675"
+              },
+              "id": "2478503955",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "545hfcsbqbfykmv",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": " Solution"
+                  }
+                ],
+                "id": "vnk53ek5kplijkc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\frac{\\mathrm x}{@@conc@@\\;}\\;=\\;\\frac{@@decDisplay@@\\times10^{-6}}{@@conc@@\\;}\\;=\\;@@validate@@\\;\\%\\;\\;\\mathrm{the}\\;\\mathrm{assumption}\\;\\mathrm{is}\\;\\mathrm{valid}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "0ct32rvadnc8roz",
+                "type": "p"
+              }
+            ],
+            "id": "1878552764"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jb3f4046r28nlpp",
+                  "type": "p"
+                }
+              ],
+              "id": "2063372049"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ey99us33t6cb9dt",
+                  "type": "p"
+                }
+              ],
+              "id": "3084874043"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jm4miq2deplc3l4",
+                  "type": "p"
+                }
+              ],
+              "id": "2253019286"
+            }
+          ],
+          "id": "numeric4",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{\\mathrm x}{@@conc@@\\;}\\;=\\;\\frac{@@decDisplay@@\\times10^{-6}}{@@conc@@\\;}\\;=\\;@@validate@@\\;\\%\\;\\;\\mathrm{the}\\;\\mathrm{assumption}\\;\\mathrm{is}\\;\\mathrm{valid}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "a51833c704d2494fa2e4324ceab85853",
+                    "type": "p"
+                  }
+                ],
+                "id": "3536660868"
+              },
+              "id": "926639051",
+              "legacyMatch": "[@@validateLow@@,@@validateHigh@@]",
+              "rule": "input = {[@@validateLow@@,@@validateHigh@@]}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "d04ca25148ad45849ff357ce79f447c9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1393045569"
+              },
+              "id": "2697156233",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate the equilibrium concentration of all species in an equilibrium mixture that results from the decomposition of COCl2 with an initial concentration of @@conc@@ M. Make the assumption that x is much smaller than the initial concentration of COCl2.[COCl2] =  M[CO] =  M[Cl2] =  MValidate the assumption.The assumption is valid because x is   % of [COCl2]i.",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nfunction numberOfZeros(n) {\n  var c = 0;\n  while (!~~n) {\n\tc++;\n\tn *= 10;\n  }\n  return c - 1;\n}\n\nconst conc = OLI.random(0.075, 0.425, 3) .toFixed(3);\nconst step1 = (conc*0.00000000022);\nconst calcX = Math.sqrt(step1);\nconst num = numberOfZeros(calcX);       \nconst exp = num +1; \nconst decX = calcX*10**(exp) .toPrecision(3);   \nconst decDisplay = decX .toPrecision(3);\nconst calcXLow = (calcX*0.98);\nconst calcXHigh = (calcX*1.02);\nconst validate = ((calcX/conc)*100) .toPrecision(3);\nconst validateLow = validate*0.98;\nconst validateHigh = validate*1.02;\n\n\n// Expose variables to OLI\nmodule.exports = {\n  conc,\n  step1,\n  calcX,\n  num,\n  decX,\n  decDisplay,\n  calcXLow,\n  calcXHigh,\n  validate,\n  validateLow,\n  validateHigh\n  \n  \n};\n",
+              "id": "da3768e30ef241daac711fec5baa54a7",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      },
+      {
+        "id": "numeric4",
+        "inputType": "numeric",
+        "partId": "numeric4",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the equilibrium concentration of all species in an equilibrium mixture that results from the decomposition of COCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " with an initial concentration of @@conc@@ M. "
+            }
+          ],
+          "id": "bcc9e62189e74d47b08bf3231af9c065",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm{COCl}}_2(g)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{CO}(g)\\;+\\;{\\mathrm{Cl}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;2.20\\times10^{-10}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "f96715a4f69944c7bd92ef3c872327ee",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Make the assumption that "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " is much smaller than the initial concentration of COCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "fbb428f63e7849488ab2bff7c11f6191",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[COCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "d77cfa6a200e4cc582d4f1054ba77926",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[CO] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "a2d694f361844e388fc2ba21a4d7715e",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[Cl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "a53b33f0552441ccb87da5a8e3633129",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Validate the assumption."
+            }
+          ],
+          "id": "a16eb37ebb014f63b79f684f5d5c595a",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The assumption is valid because "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " is  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric4",
+              "input": "numeric4",
+              "type": "input_ref"
+            },
+            {
+              "text": " % of [COCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sub": true,
+              "text": "i"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "b8ecf38d1e244eb9b111922b92f6b067",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": [],
+    "numeric4": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

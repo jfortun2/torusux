@@ -1,0 +1,257 @@
+{
+  "id": "79190",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_digt-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dk93q402q1ltwab",
+                  "type": "p"
+                }
+              ],
+              "id": "3181294930"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "p756i1rwds2gw3i",
+                  "type": "p"
+                }
+              ],
+              "id": "1160201254"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pjymxh15v0h36r0",
+                  "type": "p"
+                }
+              ],
+              "id": "3628958785"
+            }
+          ],
+          "id": "3957159660",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Decreasing the concentration of one of the reactants will cause the reaction to shift to the left, decreasing the amount of product."
+                      }
+                    ],
+                    "id": "l3lqz77tb7s9fdr",
+                    "type": "p"
+                  }
+                ],
+                "id": "301071001"
+              },
+              "id": "2188643501",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Decreasing the concentration of one of the reactants will cause the reaction to shift to the left, decreasing the amount of product."
+                      }
+                    ],
+                    "id": "s2esy51njp1f8gl",
+                    "type": "p"
+                  }
+                ],
+                "id": "91420004"
+              },
+              "id": "2798938729",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Decreasing the concentration of one of the reactants will cause the reaction to shift to the left, decreasing the amount of product."
+                      }
+                    ],
+                    "id": "pqn5f66kmg0uuf0",
+                    "type": "p"
+                  }
+                ],
+                "id": "4292086512"
+              },
+              "id": "1654974447",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "mz7qtq25u8zt5vq",
+                    "type": "p"
+                  }
+                ],
+                "id": "3367073668"
+              },
+              "id": "3526501021",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2188643501"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2798938729"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1654974447"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2188643501"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2798938729"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1654974447"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increase"
+              }
+            ],
+            "id": "q1480xqx8g8z4hy",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decrease"
+              }
+            ],
+            "id": "ikgtj7k4tdwuc6n",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Stay the same"
+              }
+            ],
+            "id": "5pntzijatygfxhk",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Removing I"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            }
+          ],
+          "id": "us4ieueqtj95hxx",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3957159660": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

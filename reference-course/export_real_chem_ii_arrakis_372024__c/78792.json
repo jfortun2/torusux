@@ -1,0 +1,214 @@
+{
+  "id": "78792",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_2lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\frac{0.0041}{0.95}\\times100\\%\\;=\\;0.43\\%",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "7fsg6hb20l6nwrr",
+                "type": "p"
+              }
+            ],
+            "id": "1137657550"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t9yasz8r797ri2y",
+                  "type": "p"
+                }
+              ],
+              "id": "4121779833"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7oujcgj74an0yz3",
+                  "type": "p"
+                }
+              ],
+              "id": "1507539577"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m6sp8pkbdc4hzrl",
+                  "type": "p"
+                }
+              ],
+              "id": "2102462881"
+            }
+          ],
+          "id": "359124033",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{0.0041}{0.95}\\times100\\%\\;=\\;0.43\\%",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "18xixyehv8uxkpi",
+                    "type": "p"
+                  }
+                ],
+                "id": "1539422553"
+              },
+              "id": "3798779910",
+              "legacyMatch": "[0.43,0.44]",
+              "rule": "input = {[0.43,0.44]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "roi1mwpmgldyu4u",
+                    "type": "p"
+                  }
+                ],
+                "id": "2429127462"
+              },
+              "id": "1483111363",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "x is what percent of the initial concentration of NH3? Calculate the value. %",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "359124033",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " is what percent of the initial concentration of NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "? Calculate the value."
+            }
+          ],
+          "id": "imlloc0d4eoyeag",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " %"
+            }
+          ],
+          "id": "ei4xn7h8aciot6s",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "359124033": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

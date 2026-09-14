@@ -1,0 +1,328 @@
+{
+  "id": "79066",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78201"
+  ],
+  "title": "trans_metal_oxid_pool2_v4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1260941171",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4262483922",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "504132308",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. There are more possible oxidation states for elements in the middle of a given transition series."
+                      }
+                    ],
+                    "id": "578713848",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2851540494",
+                "textDirection": "ltr"
+              },
+              "id": "748847851",
+              "rule": "input like {370986621}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are more possible oxidation states for elements in the middle of a given transition series."
+                      }
+                    ],
+                    "id": "85401407",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3810809306",
+                "textDirection": "ltr"
+              },
+              "id": "712099209",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3480251917",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1927243195",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "3536441156",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The valence electrons in Ru are farther from the nucleus and more easily lost."
+                      }
+                    ],
+                    "id": "1416849106",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "223931178",
+                "textDirection": "ltr"
+              },
+              "id": "1922991161",
+              "rule": "input like {817115898}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The valence electrons in Ru are farther from the nucleus and more easily lost."
+                      }
+                    ],
+                    "id": "4054431180",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1242517798",
+                "textDirection": "ltr"
+              },
+              "id": "1785226042",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Which transition metal is likely to have a larger number of possible oxidation states? Which transition metal is more stable as a +6 ion? ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "2309708784",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2939558580",
+          "operation": "shuffle",
+          "partId": "504132308",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3780242528",
+          "operation": "shuffle",
+          "partId": "3536441156",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Ti"
+              }
+            ],
+            "id": "651910552",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "509620962",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Co"
+              }
+            ],
+            "id": "1868726861",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "370986621",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Fe"
+              }
+            ],
+            "id": "2005791271",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "817115898",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Ru"
+              }
+            ],
+            "id": "2336159037",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3630519544",
+        "textDirection": "ltr"
+      }
+    ],
+    "customScoring": true,
+    "inputs": [
+      {
+        "choiceIds": [
+          "509620962",
+          "370986621"
+        ],
+        "id": "2764142625",
+        "inputType": "dropdown",
+        "partId": "504132308",
+        "size": "small"
+      },
+      {
+        "choiceIds": [
+          "817115898",
+          "3630519544"
+        ],
+        "id": "1998224434",
+        "inputType": "dropdown",
+        "partId": "3536441156",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which transition metal is likely to have a larger number of possible oxidation states? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2764142625",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "1227870760",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Which transition metal is more stable as a +6 ion? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1998224434",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "j2lsam4phzw1ted",
+          "type": "p"
+        }
+      ],
+      "id": "2090421583"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "3536441156": [],
+    "504132308": [
+      "78452"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

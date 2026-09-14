@@ -1,0 +1,237 @@
+{
+  "id": "79998",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "equil_calc_quiz-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9165wmw2aoqc9hf",
+                  "type": "p"
+                }
+              ],
+              "id": "3075260604"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2zbgr2xrn4mdp37",
+                  "type": "p"
+                }
+              ],
+              "id": "1896942576"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wnlei7x7vrnsxfg",
+                  "type": "p"
+                }
+              ],
+              "id": "4040681068"
+            }
+          ],
+          "id": "31608525",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K\\;=\\;\\frac{(0.261)^2}{(0.870)(0.870)\\;}\\;=\\;0.0900\\\\\\\\\\Delta G^\\circ\\;=\\;-(8.314\\;\\mathrm J/\\mathrm{mol}\\;\\mathrm K)(298\\;\\mathrm K)\\;\\ln(0.0900)\\;=\\;6000\\;\\mathrm J/\\mathrm{mol}\\;\\rightarrow\\;6.00\\;\\mathrm{kJ}/\\mathrm{mol}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "wqdb52udhf06lmi",
+                    "type": "p"
+                  }
+                ],
+                "id": "4291538584"
+              },
+              "id": "3001490160",
+              "legacyMatch": "[5,6.5]",
+              "rule": "input = {[5,6.5]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K\\;=\\;\\frac{(0.261)^2}{(0.870)(0.870)\\;}\\;=\\;0.0900\\\\\\\\\\Delta G^\\circ\\;=\\;-(8.314\\;\\mathrm J/\\mathrm{mol}\\;\\mathrm K)(298\\;\\mathrm K)\\;\\ln(0.0900)\\;=\\;6000\\;\\mathrm J/\\mathrm{mol}\\;\\rightarrow\\;6.00\\;\\mathrm{kJ}/\\mathrm{mol}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "od9cqgqqqo3jgxn",
+                    "type": "p"
+                  }
+                ],
+                "id": "1056768044"
+              },
+              "id": "3614034739",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "31608525"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The following reaction is allowed to reach equilibrium at 25 "
+            },
+            {
+              "sup": true,
+              "text": "o"
+            },
+            {
+              "text": "C and 1 atm."
+            }
+          ],
+          "id": "d0yu9nfve3t3gdz",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "ite2uqbo7p744g6",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ynix95idsxqo0ew",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm H}_2\\mathrm O(g)\\;+\\;{\\mathrm{Cl}}_2\\mathrm O(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{HOCl}(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "At equilibrium the concentrations of each species are found to be as follows: [H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O] = 0.870 M, [Cl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O] = 0.870 M, and [HOCl] = 0.261 M."
+            }
+          ],
+          "id": "y98pi3cxb0ljrjn",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate ΔG"
+            },
+            {
+              "sup": true,
+              "text": "∘"
+            },
+            {
+              "text": " for this reaction."
+            }
+          ],
+          "id": "tc8p0hws25c0sta",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            },
+            {
+              "text": "kJ/mol"
+            }
+          ],
+          "id": "zu7h5yl3ukjl903",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "31608525": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

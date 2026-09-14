@@ -1,0 +1,214 @@
+{
+  "id": "80489",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Reasons for taking course",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "3444777877"
+        ],
+        "3056697998"
+      ],
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3524723582",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1686186172",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2676149572",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "636670280",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1788376768",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1500492627",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "2769571875",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1876550751",
+                "textDirection": "ltr"
+              },
+              "id": "3056697998",
+              "rule": "(!(input like {4274172862})) && ((!(input like {871460051})) && ((!(input like {3349445171})) && (input like {3444777877})))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2235412386",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1585261750",
+                "textDirection": "ltr"
+              },
+              "id": "1227848724",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "8. What are the main reasons you are taking this course? (Select all that apply.)",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "To earn a general education credit"
+              }
+            ],
+            "id": "2120553371",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3444777877",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It’s required for my planned major"
+              }
+            ],
+            "id": "4274921411",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3349445171",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "I’m interested in the topic"
+              }
+            ],
+            "id": "622217194",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "871460051",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "I thought I would do well in it"
+              }
+            ],
+            "id": "1462785676",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "4274172862",
+        "textDirection": "ltr"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "8. What are the main reasons you are taking this course? (Select all that apply.)"
+            }
+          ],
+          "id": "2521094825",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "1365471501",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

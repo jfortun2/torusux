@@ -1,0 +1,1136 @@
+{
+  "id": "79784",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78090"
+  ],
+  "title": "galvanic_set_up_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4d7xzmgts7n37zh",
+                  "type": "p"
+                }
+              ],
+              "id": "290307806"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xpvi78ff5a0l162",
+                  "type": "p"
+                }
+              ],
+              "id": "4223421083"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "24z952wkh3njw1k",
+                  "type": "p"
+                }
+              ],
+              "id": "4027003444"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Oxidation occurs at the anode."
+                      }
+                    ],
+                    "id": "e2tbi2yerlnfvpc",
+                    "type": "p"
+                  }
+                ],
+                "id": "233472953"
+              },
+              "id": "3346778189",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Oxidation occurs at the anode."
+                      }
+                    ],
+                    "id": "lex2p0ysd7rg4bc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2764394215"
+              },
+              "id": "3670840351",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "h1p3d8zxywcu6io",
+                    "type": "p"
+                  }
+                ],
+                "id": "1881351490"
+              },
+              "id": "562092628",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xlu6lb34bkcx2dl",
+                  "type": "p"
+                }
+              ],
+              "id": "3554110572"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9bp7k8vmaa3srbh",
+                  "type": "p"
+                }
+              ],
+              "id": "974051918"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y9fva22lwk3ba2l",
+                  "type": "p"
+                }
+              ],
+              "id": "3932237318"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Electrons are gained in the \"M\" half-cell:"
+                      }
+                    ],
+                    "id": "9erep9axl8jmy80",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "4hhmyztzy3r50sq",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "i8eyrvi6gznfysq",
+                    "legacyBlockRendered": "true",
+                    "src": "\\mathrm Y^{2+}(aq)\\;+\\;2\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm M(s)",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "More M("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": ") is formed, so the M electrode increases in mass."
+                      }
+                    ],
+                    "id": "6o16wcopq8986pc",
+                    "type": "p"
+                  }
+                ],
+                "id": "996108037"
+              },
+              "id": "3384936239",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Electrons are gained in the \"M\" half-cell:"
+                      }
+                    ],
+                    "id": "65ce80k5448ek3f",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "xul4hf2is4sbi76",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "m98uoenm4asrc6l",
+                    "legacyBlockRendered": "true",
+                    "src": "\\mathrm Y^{2+}(aq)\\;+\\;2\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm M(s)",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "More M("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": ") is formed, so the M electrode increases in mass."
+                      }
+                    ],
+                    "id": "emav806wcuvbh08",
+                    "type": "p"
+                  }
+                ],
+                "id": "3467981243"
+              },
+              "id": "733307314",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "nhm3amnl6xa3gcy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3333707933"
+              },
+              "id": "1670057319",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dcbxayofx260yoy",
+                  "type": "p"
+                }
+              ],
+              "id": "1690299625"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wrwh6vv4j4jrm09",
+                  "type": "p"
+                }
+              ],
+              "id": "1381639701"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "reyagfrzchqifv7",
+                  "type": "p"
+                }
+              ],
+              "id": "2331934071"
+            }
+          ],
+          "id": "third",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. In the \"M\" half-cell, M"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " reacts, decreasing the number of cations in the solution. Cations from the salt bridge therefore flow into this half-cell to \"replace\" the M"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " ions that are \"lost\"."
+                      }
+                    ],
+                    "id": "f7rq2lsrevwsjgo",
+                    "type": "p"
+                  }
+                ],
+                "id": "1056255768"
+              },
+              "id": "1953773474",
+              "legacyMatch": "A",
+              "rule": "input like {third_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In the \"M\" half-cell, M"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " reacts, decreasing the number of cations in the solution. Cations from the salt bridge therefore flow into this half-cell to \"replace\" the M"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " ions that are \"lost\"."
+                      }
+                    ],
+                    "id": "w3l8jndxn2fdro1",
+                    "type": "p"
+                  }
+                ],
+                "id": "1038817374"
+              },
+              "id": "743558349",
+              "legacyMatch": "B",
+              "rule": "input like {third_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ktomr1karm3z2nn",
+                    "type": "p"
+                  }
+                ],
+                "id": "2242730338"
+              },
+              "id": "4227885622",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rp0d22p3lda96ad",
+                  "type": "p"
+                }
+              ],
+              "id": "780914381"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "57qd2hbimbj18rx",
+                  "type": "p"
+                }
+              ],
+              "id": "3570064140"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zpgjmnvu1h7721p",
+                  "type": "p"
+                }
+              ],
+              "id": "4004890664"
+            }
+          ],
+          "id": "four",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The half-reaction with the lower reduction potential occurs as an oxidation (i.e. the reverse of reduction) in the half-cell containing the anode, N."
+                      }
+                    ],
+                    "id": "jk4qciqada1ecyd",
+                    "type": "p"
+                  }
+                ],
+                "id": "3142480294"
+              },
+              "id": "3979164456",
+              "legacyMatch": "A",
+              "rule": "input like {four_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The half-reaction with the lower reduction potential occurs as an oxidation (i.e. the reverse of reduction) in the half-cell containing the anode, N."
+                      }
+                    ],
+                    "id": "cxln9wpqzo3blhk",
+                    "type": "p"
+                  }
+                ],
+                "id": "2094586853"
+              },
+              "id": "894802118",
+              "legacyMatch": "B",
+              "rule": "input like {four_B}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "h8t7htvfq6n1yc9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3211472436"
+              },
+              "id": "1265547489",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2098019750",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2748015600",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2282547739",
+          "incorrectScore": null,
+          "outOf": 3,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This equation represents oxidation."
+                      }
+                    ],
+                    "id": "2687947871",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3113261573",
+                "textDirection": "ltr"
+              },
+              "id": "1768998394",
+              "rule": "input like {2300846812}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This equation represents reduction."
+                      }
+                    ],
+                    "id": "2501717881",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2805692369",
+                "textDirection": "ltr"
+              },
+              "id": "3995866957",
+              "rule": "input like {113187784}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This equation cannot be correct because it is not charge balanced."
+                      }
+                    ],
+                    "id": "243085684",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "548712877",
+                "textDirection": "ltr"
+              },
+              "id": "417465747",
+              "rule": "input like {165425678}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This equation cannot be correct because it is not charge balanced."
+                      }
+                    ],
+                    "id": "2933521843",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1402313829",
+                "textDirection": "ltr"
+              },
+              "id": "660144313",
+              "rule": "input like {2354899727}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "536865302",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2282286748",
+                "textDirection": "ltr"
+              },
+              "id": "1979230456",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "A galvanic cell is made with one half-cell consisting of a metal \"M\" electrode placed in a 1.0 M solution of metal \"M\" sulfate, MSO4, and another half-cell consisting of a metal \"N\" electrode placed in a 1.0 M solution of metal \"N\" sulfate, NSO4. The resulting galvanic cell is pictured below. Fill in the following statements related to this galvanic cell. occurs in the half-cell with the \"N\" electrode.The  electrode will increase in mass.The cations in the salt bridge will flow toward the half cell with the  electrode. The half-reaction with the lower reduction potential occurs in the half-cell with the  electrode.What is the half-reaction that occurs in the cell on the right? ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3346778189"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3670840351"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "3384936239"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "733307314"
+        ],
+        [
+          [
+            "third_A"
+          ],
+          "1953773474"
+        ],
+        [
+          [
+            "third_B"
+          ],
+          "743558349"
+        ],
+        [
+          [
+            "four_A"
+          ],
+          "3979164456"
+        ],
+        [
+          [
+            "four_B"
+          ],
+          "894802118"
+        ],
+        [
+          [
+            "113187784"
+          ],
+          "3995866957"
+        ],
+        [
+          [
+            "165425678"
+          ],
+          "417465747"
+        ],
+        [
+          [
+            "2354899727"
+          ],
+          "660144313"
+        ]
+      ],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "2367350879",
+          "operation": "shuffle",
+          "partId": "4224955578",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "106876431",
+          "operation": "shuffle",
+          "partId": "2282547739",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "9x5e40k6fab32it",
+            "text": "Oxidation"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "he8te55wjhlcuhq",
+            "text": "Reduction"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "m9vxnu971gjn105",
+            "text": "M"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ceuyyz8ektyfdoh",
+            "text": "N"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "75opgwdd8y8bgj8",
+            "text": "M"
+          }
+        ],
+        "id": "third_A"
+      },
+      {
+        "content": [
+          {
+            "id": "a2rl9jjb525ytqs",
+            "text": "N"
+          }
+        ],
+        "id": "third_B"
+      },
+      {
+        "content": [
+          {
+            "id": "bni24d0lpwd5ram",
+            "text": "M"
+          }
+        ],
+        "id": "four_A"
+      },
+      {
+        "content": [
+          {
+            "id": "qzfekr702a2z1zh",
+            "text": "N"
+          }
+        ],
+        "id": "four_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N²⁺(aq) + 2 e⁻ --> N(s)"
+              }
+            ],
+            "id": "2151445009",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "113187784",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N²⁺(aq) --> N(s) + 2 e⁻"
+              }
+            ],
+            "id": "2400027204",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "165425678",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N(s) + 2 e⁻ --> N²⁺(aq)"
+              }
+            ],
+            "id": "4079146567",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2354899727",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N(s) --> N²⁺(aq) + 2 e⁻"
+              }
+            ],
+            "id": "3402626529",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2300846812",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "third_A",
+          "third_B"
+        ],
+        "id": "third",
+        "inputType": "dropdown",
+        "partId": "third",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "four_A",
+          "four_B"
+        ],
+        "id": "four",
+        "inputType": "dropdown",
+        "partId": "four",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "113187784",
+          "165425678",
+          "2354899727",
+          "2300846812"
+        ],
+        "id": "2729455216",
+        "inputType": "dropdown",
+        "partId": "2282547739"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A galvanic cell is made with one half-cell consisting of a metal \"M\" electrode placed in a 1.0 M solution of metal \"M\" sulfate, MSO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ", and another half-cell consisting of a metal \"N\" electrode placed in a 1.0 M solution of metal \"N\" sulfate, NSO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ". The resulting galvanic cell is pictured below."
+            }
+          ],
+          "id": "ucr9pol5exkv72m",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "uqisayele5mvqrg",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ukkcn8swkmi0imx",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/7f/7fc1b813b365146812e962bdab49462a/v3_galvanic.PNG",
+          "type": "img",
+          "width": "600"
+        },
+        {
+          "children": [
+            {
+              "text": "Fill in the following statements related to this galvanic cell."
+            }
+          ],
+          "id": "vae8rfkqj0cyrht",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " occurs in the half-cell with the \"N\" electrode."
+            }
+          ],
+          "id": "3348209837",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " electrode will increase in mass."
+            }
+          ],
+          "id": "o08fgg8fb2hnwap",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The cations in the salt bridge will flow toward the half cell with the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "third",
+              "input": "third",
+              "type": "input_ref"
+            },
+            {
+              "text": " electrode. "
+            }
+          ],
+          "id": "cw8w32tncxvqqht",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The half-reaction with the lower reduction potential occurs in the half-cell with the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "four",
+              "input": "four",
+              "type": "input_ref"
+            },
+            {
+              "text": " electrode."
+            }
+          ],
+          "id": "hc9ccvatrul9a5a",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the half-reaction that occurs in the cell on the right? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2729455216",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2874716869",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2282547739": [
+      "78304"
+    ],
+    "first": [
+      "78304"
+    ],
+    "four": [
+      "78327"
+    ],
+    "second": [
+      "78327"
+    ],
+    "third": [
+      "78327"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

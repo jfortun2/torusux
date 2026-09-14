@@ -1,0 +1,250 @@
+{
+  "id": "79707",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "half_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Using the first-order half-life equation: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "t_{1/2}\\;=\\;\\frac{0.693}k\\;=\\;\\frac{0.693}{1.21\\times10^{-4}\\;\\mathrm{yr}^{-1}}\\;=\\;5730\\;\\mathrm{yr}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "su2lis5ui8fvhf9",
+                "type": "p"
+              }
+            ],
+            "id": "4207150413"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2yfhauz2kzzl833",
+                  "type": "p"
+                }
+              ],
+              "id": "2307798125"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dfd9joljbfkmp3a",
+                  "type": "p"
+                }
+              ],
+              "id": "2297526874"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "voc2nxgz9jayc0q",
+                  "type": "p"
+                }
+              ],
+              "id": "3574345128"
+            }
+          ],
+          "id": "4029085587",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Using the first-order half-life equation: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t_{1/2}\\;=\\;\\frac{0.693}k\\;=\\;\\frac{0.693}{1.21\\times10^{-4}\\;\\mathrm{yr}^{-1}}\\;=\\;5730\\;\\mathrm{yr}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "uod7g7dw89cac6z",
+                    "type": "p"
+                  }
+                ],
+                "id": "2315359012"
+              },
+              "id": "3899379544",
+              "legacyMatch": "[5700,5750]",
+              "rule": "input = {[5700,5750]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Use the first-order half-life equation."
+                      }
+                    ],
+                    "id": "8qk6pixi9vxr06f",
+                    "type": "p"
+                  }
+                ],
+                "id": "754321514"
+              },
+              "id": "2478739939",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "4029085587",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the half-life for the first-order decay of carbon-14? "
+            }
+          ],
+          "id": "xzzltfa5czrbvq1",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "1gwl7g6vu6l15k5",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "igixfzbs5lynbxi",
+          "legacyBlockRendered": "true",
+          "src": "{}_6^{14}\\mathrm C\\;\\;\\rightarrow\\;\\;{}_7^{14}\\mathrm N\\;+\\;\\mathrm e^-",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "The rate constant for the decay is 1.21 × 10"
+            },
+            {
+              "sup": true,
+              "text": "−4"
+            },
+            {
+              "text": " years"
+            },
+            {
+              "sup": true,
+              "text": "−1"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "0nv3d7t2p9nzux8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "t"
+            },
+            {
+              "sub": true,
+              "text": "1/2"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " y"
+            }
+          ],
+          "id": "yztibpbnbn190or",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "4029085587": [
+      "78459"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

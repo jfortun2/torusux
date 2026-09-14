@@ -1,0 +1,700 @@
+{
+  "id": "79580",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78057"
+  ],
+  "title": "identify_ligand_denticity_pool_ver2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2973694131",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3574291598",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "4261228338",
+          "incorrectScore": null,
+          "outOf": 3,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The N atom has a lone pair that can form a coordinate bond."
+                      }
+                    ],
+                    "id": "694217533",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3011774882",
+                "textDirection": "ltr"
+              },
+              "id": "3402292022",
+              "rule": "input like {2140889164}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The N atom has a lone pair that can form a coordinate bond."
+                      }
+                    ],
+                    "id": "1704674992",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "688723229",
+                "textDirection": "ltr"
+              },
+              "id": "2368476967",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1920163186",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "973024962",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2732141744",
+          "incorrectScore": null,
+          "outOf": 3.1,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. All four of the N atoms have a lone pair that can form a coordinate bond."
+                      }
+                    ],
+                    "id": "4100369026",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1158107679",
+                "textDirection": "ltr"
+              },
+              "id": "3706032464",
+              "rule": "input like {76607090}",
+              "score": 3.1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. All four of the N atoms have a lone pair that can form a coordinate bond."
+                      }
+                    ],
+                    "id": "1471704001",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2536512478",
+                "textDirection": "ltr"
+              },
+              "id": "196434298",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1158429519",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3998569256",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2549085518",
+          "incorrectScore": null,
+          "outOf": 3,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Each of the two O atoms has a lone pair that can form a coordinate bond."
+                      }
+                    ],
+                    "id": "3415658957",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1336855937",
+                "textDirection": "ltr"
+              },
+              "id": "879330878",
+              "rule": "input like {2640431366}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Each of the two O atoms has a lone pair that can form a coordinate bond."
+                      }
+                    ],
+                    "id": "803754758",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "492427869",
+                "textDirection": "ltr"
+              },
+              "id": "4202954552",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Identify the denticity for each of the following ligands:  CH3NH2",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3582753690",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "266057765",
+          "operation": "shuffle",
+          "partId": "4261228338",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3433025103",
+          "operation": "shuffle",
+          "partId": "2732141744",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2705043863",
+          "operation": "shuffle",
+          "partId": "2549085518",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "monodentate"
+              }
+            ],
+            "id": "993478050",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2140889164",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bidentate"
+              }
+            ],
+            "id": "491135027",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1501026890",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "monodentate"
+              }
+            ],
+            "id": "299794417",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "933115382",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bidentate"
+              }
+            ],
+            "id": "1769167487",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2923600788",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "monodentate"
+              }
+            ],
+            "id": "3221643002",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2671514063",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bidentate"
+              }
+            ],
+            "id": "655597404",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2640431366",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tridentate"
+              }
+            ],
+            "id": "3619668771",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2912785133",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetradentate"
+              }
+            ],
+            "id": "2900210225",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3886005958",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tridentate"
+              }
+            ],
+            "id": "3998371685",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1067763740",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetradentate"
+              }
+            ],
+            "id": "4273774636",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "76607090",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tridentate"
+              }
+            ],
+            "id": "3370616669",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1011341197",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetradentate"
+              }
+            ],
+            "id": "291123335",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1328246604",
+        "textDirection": "ltr"
+      }
+    ],
+    "customScoring": true,
+    "inputs": [
+      {
+        "choiceIds": [
+          "2140889164",
+          "1501026890",
+          "2912785133",
+          "3886005958"
+        ],
+        "id": "1676365139",
+        "inputType": "dropdown",
+        "partId": "4261228338"
+      },
+      {
+        "choiceIds": [
+          "933115382",
+          "2923600788",
+          "1067763740",
+          "76607090"
+        ],
+        "id": "1420006757",
+        "inputType": "dropdown",
+        "partId": "2732141744"
+      },
+      {
+        "choiceIds": [
+          "2671514063",
+          "2640431366",
+          "1011341197",
+          "1328246604"
+        ],
+        "id": "3105037165",
+        "inputType": "dropdown",
+        "partId": "2549085518"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Identify the denticity for each of the following ligands:  "
+            }
+          ],
+          "id": "2341419873",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "CH"
+                        },
+                        {
+                          "sub": true,
+                          "text": "3"
+                        },
+                        {
+                          "text": "NH"
+                        },
+                        {
+                          "sub": true,
+                          "text": "2"
+                        }
+                      ],
+                      "id": "1767403584",
+                      "type": "p"
+                    },
+                    {
+                      "children": [
+                        {
+                          "sub": true,
+                          "text": ""
+                        }
+                      ],
+                      "id": "2682761288",
+                      "type": "p"
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ],
+                          "id": "1676365139",
+                          "type": "input_ref"
+                        },
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "2736449855",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "1485522753",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "3508372399",
+                      "type": "p"
+                    },
+                    {
+                      "children": [
+                        {
+                          "id": "snanlcd22qnf52o",
+                          "text": ""
+                        }
+                      ],
+                      "display": "block",
+                      "height": 121.1292724609375,
+                      "id": "3360576426",
+                      "src": "https://d2xvti2irp4c7t.cloudfront.net/media/29/299FD35F798E9B505CBF08A0D119A023/ID_dent_V3-2.png",
+                      "type": "img",
+                      "width": 125
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ],
+                          "id": "1420006757",
+                          "type": "input_ref"
+                        },
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "1537475343",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "1902456657",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "1396582245",
+                      "type": "p"
+                    },
+                    {
+                      "children": [
+                        {
+                          "id": "1dannjllthom8oi",
+                          "text": ""
+                        }
+                      ],
+                      "display": "block",
+                      "height": 86.34067792027406,
+                      "id": "622245348",
+                      "src": "https://d2xvti2irp4c7t.cloudfront.net/media/3C/3C5ABA08D98AFAF8591B0B7D5FA4BEA5/ID_dent_V2-1.png",
+                      "type": "img",
+                      "width": 140
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ],
+                          "id": "3105037165",
+                          "type": "input_ref"
+                        },
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "710929028",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "1722768020",
+                  "type": "td"
+                }
+              ],
+              "id": "3336696028",
+              "type": "tr"
+            }
+          ],
+          "id": "261235719",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "2365894509",
+          "type": "p"
+        }
+      ],
+      "id": "1562154117"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2549085518": [
+      "78400"
+    ],
+    "2732141744": [
+      "78400"
+    ],
+    "4261228338": [
+      "78400"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

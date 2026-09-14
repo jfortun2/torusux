@@ -1,0 +1,349 @@
+{
+  "id": "79037",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_temp_digt2-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kp682kt85sjut7o",
+                  "type": "p"
+                }
+              ],
+              "id": "3052903522"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hnidu1waipjtf8d",
+                  "type": "p"
+                }
+              ],
+              "id": "2485427010"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3k5pe2kxb60hyhj",
+                  "type": "p"
+                }
+              ],
+              "id": "4138186157"
+            }
+          ],
+          "id": "2153033475",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An exothermic process with a decrease in entropy will be spontaneous at low temperatures."
+                      }
+                    ],
+                    "id": "iped6y4ygfzie5w",
+                    "type": "p"
+                  }
+                ],
+                "id": "295769059"
+              },
+              "id": "3143776934",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An exothermic process with a decrease in entropy will be spontaneous at low temperatures."
+                      }
+                    ],
+                    "id": "g7w60funwff6wjz",
+                    "type": "p"
+                  }
+                ],
+                "id": "3008295010"
+              },
+              "id": "2475240050",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An exothermic process with a decrease in entropy will be spontaneous at low temperatures."
+                      }
+                    ],
+                    "id": "eyawc86oluicy0g",
+                    "type": "p"
+                  }
+                ],
+                "id": "3569127318"
+              },
+              "id": "2888064281",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An exothermic process with a decrease in entropy will be spontaneous at low temperatures."
+                      }
+                    ],
+                    "id": "uco214pbc93b1aq",
+                    "type": "p"
+                  }
+                ],
+                "id": "73927085"
+              },
+              "id": "104151293",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "9axgspeti59xy23",
+                    "type": "p"
+                  }
+                ],
+                "id": "1591883354"
+              },
+              "id": "2244337102",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3143776934"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2475240050"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2888064281"
+            ],
+            [
+              [
+                "D"
+              ],
+              "104151293"
+            ]
+          ]
+        }
+      ],
+      "previewText": "The above reaction is represented by the following equation:  It was previously determined for this reaction that ΔH is negative, ΔS is negative, and ΔG is negative. Which of the following statements is true about this reaction? ",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3143776934"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2475240050"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2888064281"
+        ],
+        [
+          [
+            "D"
+          ],
+          "104151293"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1921851730",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is spontaneous at all temperatures."
+              }
+            ],
+            "id": "te0ykzywu9q0bs0",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is spontaneous at high temperatures."
+              }
+            ],
+            "id": "5f6d6lyiiz0qcje",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is spontaneous at low temperatures."
+              }
+            ],
+            "id": "42sta0t1dy258d0",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The reaction is not spontaneous at any temperature."
+              }
+            ],
+            "id": "f9em6ydkr3mzdas",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The above reaction is represented by the following equation: "
+            }
+          ],
+          "id": "r2s40y82wihtfoc",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "squy5wktempwffr",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "2k0bgdlp7hrgz5e",
+          "legacyBlockRendered": "true",
+          "src": "2\\;\\mathrm{Na}(s)\\;+\\;{\\mathrm{Cl}}_2(g)\\;\\longrightarrow\\;2\\;\\mathrm{NaCl}(s)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "It was previously determined for this reaction that Δ"
+            },
+            {
+              "em": true,
+              "text": "H"
+            },
+            {
+              "text": " is negative, Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " is negative, and Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "text": " is negative. Which of the following statements is true about this reaction? "
+            }
+          ],
+          "id": "mnvzq6nal4no73s",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2153033475": [
+      "78296"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

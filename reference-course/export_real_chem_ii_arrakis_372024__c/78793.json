@@ -1,0 +1,607 @@
+{
+  "id": "78793",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "conj_pair_dnd_question4-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "i3m12mbaxorzisk",
+                  "type": "p"
+                }
+              ],
+              "id": "3850542903"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7d6tlcc1vl9cja9",
+                  "type": "p"
+                }
+              ],
+              "id": "920238682"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3zk8lqm3d4q7suf",
+                  "type": "p"
+                }
+              ],
+              "id": "3304803886"
+            }
+          ],
+          "id": "acid_target",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The acid donates a proton in the forward reaction. "
+                      }
+                    ],
+                    "id": "ix8xuaragf5u487",
+                    "type": "p"
+                  }
+                ],
+                "id": "4285147863"
+              },
+              "id": "1368485597",
+              "legacyMatch": "acid",
+              "rule": "input like {acid_target_acid}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The acid donates a proton in the forward reaction."
+                      }
+                    ],
+                    "id": "9uhe19f3nbifdxe",
+                    "type": "p"
+                  }
+                ],
+                "id": "4274136332"
+              },
+              "id": "2271530578",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yt6hwymnsu2fn2b",
+                  "type": "p"
+                }
+              ],
+              "id": "2984086815"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zi7g71deto44zs4",
+                  "type": "p"
+                }
+              ],
+              "id": "688287112"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6gdgc6ln3oftulb",
+                  "type": "p"
+                }
+              ],
+              "id": "2405849134"
+            }
+          ],
+          "id": "base_target",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The base accepts a proton in the forward reaction."
+                      }
+                    ],
+                    "id": "l0uuz0qkmbega2p",
+                    "type": "p"
+                  }
+                ],
+                "id": "2126171671"
+              },
+              "id": "3060153991",
+              "legacyMatch": "base",
+              "rule": "input like {base_target_base}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The base accepts a proton in the forward reaction."
+                      }
+                    ],
+                    "id": "yypce0qbvges5dh",
+                    "type": "p"
+                  }
+                ],
+                "id": "1548773566"
+              },
+              "id": "2105557354",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7erjfjteetsywin",
+                  "type": "p"
+                }
+              ],
+              "id": "4162991486"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jfr5wsrkoly6zgu",
+                  "type": "p"
+                }
+              ],
+              "id": "3136228786"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8b9tfa42l2m7o5h",
+                  "type": "p"
+                }
+              ],
+              "id": "4008684887"
+            }
+          ],
+          "id": "conj_acid_target",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The conjugate acid donates a proton in the reverse reaction."
+                      }
+                    ],
+                    "id": "epr1l2lbnlyzp4p",
+                    "type": "p"
+                  }
+                ],
+                "id": "3374574860"
+              },
+              "id": "3234597580",
+              "legacyMatch": "conj_acid",
+              "rule": "input like {conj_acid_target_conj_acid}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The conjugate acid donates a proton in the reverse reaction."
+                      }
+                    ],
+                    "id": "qyot11u4wjgli5g",
+                    "type": "p"
+                  }
+                ],
+                "id": "2600930588"
+              },
+              "id": "3706088361",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xma7ofvync0bjzl",
+                  "type": "p"
+                }
+              ],
+              "id": "750460782"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jb0yy06icngoeka",
+                  "type": "p"
+                }
+              ],
+              "id": "789800137"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5j5w7vaf0aw7zw7",
+                  "type": "p"
+                }
+              ],
+              "id": "2602443568"
+            }
+          ],
+          "id": "conj_base_target",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The conjugate base accepts a proton in the reverse reaction."
+                      }
+                    ],
+                    "id": "j7kc5whz7870kqd",
+                    "type": "p"
+                  }
+                ],
+                "id": "3501886212"
+              },
+              "id": "3167943632",
+              "legacyMatch": "conj_base",
+              "rule": "input like {conj_base_target_conj_base}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The conjugate base accepts a proton in the reverse reaction."
+                      }
+                    ],
+                    "id": "mp8gl6e1wlcxba8",
+                    "type": "p"
+                  }
+                ],
+                "id": "1733931669"
+              },
+              "id": "4240746272",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "qy1mqnqroz7pt5p",
+            "text": "acid"
+          }
+        ],
+        "id": "acid_target_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "cfpz93j1hr1jac8",
+            "text": "base"
+          }
+        ],
+        "id": "acid_target_base"
+      },
+      {
+        "content": [
+          {
+            "id": "bbchfl1dzuo4wjl",
+            "text": "conj_acid"
+          }
+        ],
+        "id": "acid_target_conj_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "qublus5yjgzd8ez",
+            "text": "conj_base"
+          }
+        ],
+        "id": "acid_target_conj_base"
+      },
+      {
+        "content": [
+          {
+            "id": "f2ci33n1jknilf8",
+            "text": "acid"
+          }
+        ],
+        "id": "base_target_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "ex3k4ewoj446bih",
+            "text": "base"
+          }
+        ],
+        "id": "base_target_base"
+      },
+      {
+        "content": [
+          {
+            "id": "4cqpjqtn862xx1i",
+            "text": "conj_acid"
+          }
+        ],
+        "id": "base_target_conj_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "eo5ro0siyn4b08y",
+            "text": "conj_base"
+          }
+        ],
+        "id": "base_target_conj_base"
+      },
+      {
+        "content": [
+          {
+            "id": "g4lb8lvmy8ron7i",
+            "text": "acid"
+          }
+        ],
+        "id": "conj_acid_target_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "7m4imkwonv3c3ot",
+            "text": "base"
+          }
+        ],
+        "id": "conj_acid_target_base"
+      },
+      {
+        "content": [
+          {
+            "id": "c9bhyba11lfdoss",
+            "text": "conj_acid"
+          }
+        ],
+        "id": "conj_acid_target_conj_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "tcd3lff9m657xb7",
+            "text": "conj_base"
+          }
+        ],
+        "id": "conj_acid_target_conj_base"
+      },
+      {
+        "content": [
+          {
+            "id": "5jtmrmw5lvc7ph7",
+            "text": "acid"
+          }
+        ],
+        "id": "conj_base_target_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "7w8sal26txysskc",
+            "text": "base"
+          }
+        ],
+        "id": "conj_base_target_base"
+      },
+      {
+        "content": [
+          {
+            "id": "n5wrl87worgionu",
+            "text": "conj_acid"
+          }
+        ],
+        "id": "conj_base_target_conj_acid"
+      },
+      {
+        "content": [
+          {
+            "id": "ly8qnl7jk5yqsxt",
+            "text": "conj_base"
+          }
+        ],
+        "id": "conj_base_target_conj_base"
+      }
+    ],
+    "height": "800",
+    "initiators": "\n        \t\t\t\n\t\t\t<div input_val=\"acid\" class=\"initiator\">acid</div>\n\t\t\t<div input_val=\"base\" class=\"initiator\">base</div>\n\t\t\t<div input_val=\"conj_acid\" class=\"initiator\">conjugate acid</div>\n\t\t\t<div input_val=\"conj_base\" class=\"initiator\">conjugate base</div>\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\n    ",
+    "inputs": [
+      {
+        "choiceIds": [
+          "acid_target_acid",
+          "acid_target_base",
+          "acid_target_conj_acid",
+          "acid_target_conj_base"
+        ],
+        "id": "acid_target",
+        "inputType": "dropdown",
+        "partId": "acid_target",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "base_target_acid",
+          "base_target_base",
+          "base_target_conj_acid",
+          "base_target_conj_base"
+        ],
+        "id": "base_target",
+        "inputType": "dropdown",
+        "partId": "base_target",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "conj_acid_target_acid",
+          "conj_acid_target_base",
+          "conj_acid_target_conj_acid",
+          "conj_acid_target_conj_base"
+        ],
+        "id": "conj_acid_target",
+        "inputType": "dropdown",
+        "partId": "conj_acid_target",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "conj_base_target_acid",
+          "conj_base_target_base",
+          "conj_base_target_conj_acid",
+          "conj_base_target_conj_base"
+        ],
+        "id": "conj_base_target",
+        "inputType": "dropdown",
+        "partId": "conj_base_target",
+        "shuffle": "false"
+      }
+    ],
+    "layoutStyles": "\n        \n\t\t\t\t\n#q4_target_container {  \n    margin: auto;\n    background-image: url(https://d2xvti2irp4c7t.cloudfront.net/media/8b/8b55b867ea60aba7341c557e787929bf/conj_digt4.png);\n    background-repeat: no-repeat;  \n    width: 750px;  \n    height:125px;\n    position: relative;\n}\t\n\t.tbody .th {\n    text-align: center;\n}\t\t\n\t\t\t.target \n\t\t\t{  \n    border: 2px;\n    border-style: dashed;\n    border-color: #999999; \n    display: inline-block; \n\twidth: 60px;\n\theight: 36px;\n\ttop: 60px;\n    position: absolute;  \n\t\t\t  \n\t\t\t}\n\t\t\t\n\t\t\t\n\t\t\t.initiator\n\t\t\t{\n        color:Black;\n\t\t\t\tdisplay: inline-block;\n\t\t\t\tmin-height: 30px;\n\t\t\t\tmin-width: 90px;\n\t\t\t\tbackground: #ffc;\n\t\t\t\ttext-align: center;\n\t\t\t\tpadding: 4px;\n\t\t\t\tcursor: move;\n\t\t\t\tborder-style: solid;\n    \t\t\tborder-width: 1px;\n    \t\t\tborder-color: black;\n\t\t\t}\n\t\t\t\n\t\t\t.dragdropspacer\n\t\t\t{\n\t\t\t\theight: 50px;\n\t\t\t}\n\n\t\t\t\n\t\t\t\t\n\t\t\n\t\t\n    ",
+    "stem": {
+      "content": []
+    },
+    "submitPerPart": true,
+    "targetArea": "\n        \n\t\t<div id=\"q4_target_container\">\n\t\t\n<div input_ref=\"base_target\" class=\"target\" style=\"left:7px; top:48px; width:115px; height:40px;\"> </div>\n<div input_ref=\"acid_target\" class=\"target\" style=\"left:159px; top:48px; width:115px; height:40px;\"> </div>\n<div input_ref=\"conj_base_target\" class=\"target\" style=\"left:367px; top:48px; width:115px; height:40px;\"> </div>\n<div input_ref=\"conj_acid_target\" class=\"target\" style=\"left:519px; top:48px; width:115px; height:40px;\"> </div>\n\n\n\t\t    </div>\n\t\t\t\n\t\t\n    ",
+    "width": "680"
+  },
+  "objectives": {
+    "acid_target": [
+      "78370"
+    ],
+    "base_target": [
+      "78370"
+    ],
+    "conj_acid_target": [
+      "78370"
+    ],
+    "conj_base_target": [
+      "78370"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_custom_dnd"
+}

@@ -1,0 +1,270 @@
+{
+  "id": "79150",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78219"
+  ],
+  "title": "le_chat_change_press_v1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "C",
+          "D"
+        ],
+        "869122678"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zpl1g8ctr18c4vj",
+                  "type": "p"
+                }
+              ],
+              "id": "3395346136"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "67zcrs6d9zgf35k",
+                  "type": "p"
+                }
+              ],
+              "id": "3437299535"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k49ng0bieksqtm4",
+                  "type": "p"
+                }
+              ],
+              "id": "3155476024"
+            }
+          ],
+          "id": "d3637f16972e4c3bb68b43823cb4e989",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Adding an inert or non-reactive species at constant volume does not change the partial pressures of the products or reactants. There is no change in "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": ", and the reaction remains at equilibrium."
+                      }
+                    ],
+                    "id": "xoironihh9is1f4",
+                    "type": "p"
+                  }
+                ],
+                "id": "2530624146"
+              },
+              "id": "869122678",
+              "legacyMatch": "C,D",
+              "rule": "(!(input like {B})) && ((!(input like {A})) && (input like {D} && (input like {C})))",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "tysobjqc91h78y2",
+                    "type": "p"
+                  }
+                ],
+                "id": "2708877407"
+              },
+              "id": "126455621",
+              "legacyMatch": ".*",
+              "namremoveSetOpse": "AUTOGEN_{A}",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium shifts to the right to produce more NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ")."
+              }
+            ],
+            "id": "o53q3fbx3olyrgp",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium shifts to the left to produce more NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ")."
+              }
+            ],
+            "id": "d5toa8h18fif128",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium does not change."
+              }
+            ],
+            "id": "9tylgifvrq99cjh",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The concentration of N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ") remains the same."
+              }
+            ],
+            "id": "77z3v7z9gm9rsub",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What happens to the following equilibrium when argon (Ar) is added to double the total pressure at constant volume? Select all correct answers."
+            }
+          ],
+          "id": "0s30q9kr8i1pnut",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm N}_2(g)\\;+\\;3\\;{\\mathrm H}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{NH}}_3(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "bqok3ovl9dvkeeg",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "d3637f16972e4c3bb68b43823cb4e989": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

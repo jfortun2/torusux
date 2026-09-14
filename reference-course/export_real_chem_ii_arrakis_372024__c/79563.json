@@ -1,0 +1,244 @@
+{
+  "id": "79563",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_lbd-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The rates of the forward and reverse reactions become equal when equilibrium is reached."
+                    }
+                  ],
+                  "id": "i6g4gm7bdcn5brf",
+                  "type": "p"
+                }
+              ],
+              "id": "1686252408"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rdukslswcs30mz9",
+                  "type": "p"
+                }
+              ],
+              "id": "3719096544"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "em56ilzgwt5cy1h",
+                  "type": "p"
+                }
+              ],
+              "id": "1369124305"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate of the forward reaction is not slower than the rate of the reverse reaction."
+                      }
+                    ],
+                    "id": "t0eixgkb7bori4u",
+                    "type": "p"
+                  }
+                ],
+                "id": "1099087706"
+              },
+              "id": "3874484597",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Since equilibrium has not yet been reached, the rate of the forward reaction is still faster than the rate of the reverse reaction."
+                      }
+                    ],
+                    "id": "uh9tx1ro9ncvxbi",
+                    "type": "p"
+                  }
+                ],
+                "id": "613383937"
+              },
+              "id": "3853633668",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Equilibrium has not yet been reached, so the rate of the forward reaction is not equal to the rate of the reverse reaction."
+                      }
+                    ],
+                    "id": "2xfu0zgabpxw61i",
+                    "type": "p"
+                  }
+                ],
+                "id": "3381327352"
+              },
+              "id": "295220129",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "2gean9637q8euyg",
+                    "type": "p"
+                  }
+                ],
+                "id": "3634993018"
+              },
+              "id": "888535921",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "At point C, the rate of the forward reaction is  the rate of the reverse reaction.",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3874484597"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3853633668"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "295220129"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "bxr9rch5eiapxmc",
+            "text": "slower than"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "zmv8hp6gcm1sc7u",
+            "text": "faster than"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "qvl0eztin2muu9s",
+            "text": "equal to"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At point C, the rate of the forward reaction is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the rate of the reverse reaction."
+            }
+          ],
+          "id": "d92ezkeud87rccv",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

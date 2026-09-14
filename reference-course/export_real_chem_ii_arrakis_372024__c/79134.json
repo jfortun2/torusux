@@ -1,0 +1,280 @@
+{
+  "id": "79134",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "kp_calculation_lbd-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_\\mathrm{c}=\\frac{K_\\mathrm{p}}{(RT)^{\\Delta n}}=\\frac{3.42}{\\left((0.08206)(1000)\\right)^{-1}}=(3.42)(0.08206)(1000)=281",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "6336jf59h4lm00k",
+                "type": "p"
+              }
+            ],
+            "id": "2924236200"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3047989811",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "si52zvtf4dgxa0a",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "1lrtg6tw7o77iv3",
+                  "legacyBlockRendered": "true",
+                  "src": "K_\\mathrm{c}=\\frac{K_\\mathrm{p}}{(RT)^{\\Delta n}}",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3066943007",
+                  "type": "p"
+                }
+              ],
+              "id": "397098301"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e0ww1cijmsfh00c",
+                  "type": "p"
+                }
+              ],
+              "id": "379918779"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pw0smrrn52tlje5",
+                  "type": "p"
+                }
+              ],
+              "id": "1820561626"
+            }
+          ],
+          "id": "2347345266",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{c}=\\frac{K_\\mathrm{p}}{(RT)^{\\Delta n}}=\\frac{3.42}{\\left((0.08206)(1000)\\right)^{-1}}=(3.42)(0.08206)(1000)=281",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "cfvvadlp147ir35",
+                    "type": "p"
+                  }
+                ],
+                "id": "2375258098"
+              },
+              "id": "4292026259",
+              "legacyMatch": "[280,281]",
+              "rule": "input = {[280,281]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{c}=\\frac{K_\\mathrm{p}}{(RT)^{\\Delta n}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Remember that a number raised to a negative power is equal to one over that number raised to the positive power and that dividing by a fraction is the same as multiplying by its inverse."
+                      }
+                    ],
+                    "id": "i3xo89c1zhxfgms",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Be sure to convert the temperature to kelvin. Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "R"
+                      },
+                      {
+                        "text": " = 0.08206."
+                      }
+                    ],
+                    "id": "d2owjeu1shwkete",
+                    "type": "p"
+                  }
+                ],
+                "id": "3742278665"
+              },
+              "id": "1470262859",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Then calculate Kc for the reaction.  Kc = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "2347345266"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Then calculate "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " for the reaction. "
+            }
+          ],
+          "id": "mhpow03z20lzptm",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "30f9covjq516wim",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2347345266": [
+      "78362"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

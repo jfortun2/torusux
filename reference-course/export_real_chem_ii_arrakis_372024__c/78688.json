@@ -1,0 +1,218 @@
+{
+  "id": "78688",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_digt-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4vdk2rmoha7eet8",
+                  "type": "p"
+                }
+              ],
+              "id": "2249134215"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jvvpyphvdchdmaf",
+                  "type": "p"
+                }
+              ],
+              "id": "2109068542"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "etj8dymx5oujceg",
+                  "type": "p"
+                }
+              ],
+              "id": "1556264782"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Equilibrium is achieved only in a closed system."
+                      }
+                    ],
+                    "id": "uy9pj9s922utd4u",
+                    "type": "p"
+                  }
+                ],
+                "id": "4221078161"
+              },
+              "id": "1478093026",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Equilibrium is achieved only in a closed system."
+                      }
+                    ],
+                    "id": "wey0uf7rzoqxt5a",
+                    "type": "p"
+                  }
+                ],
+                "id": "2229071474"
+              },
+              "id": "1188949450",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ihyxv7z6xlqegt3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1561344814"
+              },
+              "id": "2527643503",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "A system at equilibrium can be either open or closed. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "1478093026"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1188949450"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "3387986704",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "1762699056",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A system at equilibrium can be either open or closed. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "e4y5uwgjp18jqje",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

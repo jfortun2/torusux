@@ -1,0 +1,195 @@
+{
+  "id": "79559",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "k_digt-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hx4nfeu5maq0pyi",
+                  "type": "p"
+                }
+              ],
+              "id": "1908222481"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ltdm3v33wzsx1eq",
+                  "type": "p"
+                }
+              ],
+              "id": "2877204838"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q6gsb0mlg97z2bj",
+                  "type": "p"
+                }
+              ],
+              "id": "3367788580"
+            }
+          ],
+          "id": "1769454231",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Values for "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " are temperature dependent. "
+                      }
+                    ],
+                    "id": "xhaf6abflil8pjj",
+                    "type": "p"
+                  }
+                ],
+                "id": "271699455"
+              },
+              "id": "893577462",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Values for "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " are temperature dependent. "
+                      }
+                    ],
+                    "id": "lpt5qj9nt6o77ep",
+                    "type": "p"
+                  }
+                ],
+                "id": "3673849584"
+              },
+              "id": "2485994634",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Values for Kc do not change with changing temperature.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "j3nul03d5qsxpqh",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "afld1jx3rovym3z",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Values for "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " do not change with changing temperature."
+            }
+          ],
+          "id": "hi9gvle3uizdnsu",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1769454231": [
+      "78357"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,298 @@
+{
+  "id": "80233",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_ka_kb_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_\\mathrm{a}=\\frac{\\lbrack\\;{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack}{\\lbrack{\\mathrm{HSO}}_4^-\\rbrack}=\\frac{(0.027\\;\\mathrm M)(0.13\\;\\mathrm M)}{(0.29\\;\\mathrm M)}=0.012",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "7ghnq67n2f1phnm",
+                "type": "p"
+              }
+            ],
+            "id": "539632994"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yirrxlxm23y7534",
+                  "type": "p"
+                }
+              ],
+              "id": "2892468964"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yuv5yyvfw7hqsnx",
+                  "type": "p"
+                }
+              ],
+              "id": "1369053537"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8r06m661ln3pzd0",
+                  "type": "p"
+                }
+              ],
+              "id": "3236071545"
+            }
+          ],
+          "id": "472689489",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{a}=\\frac{\\lbrack\\;{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack}{\\lbrack{\\mathrm{HSO}}_4^-\\rbrack}=\\frac{(0.027\\;\\mathrm M)(0.13\\;\\mathrm M)}{(0.29\\;\\mathrm M)}=0.012",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "cuoa0kb5a7bb2fs",
+                    "type": "p"
+                  }
+                ],
+                "id": "3564289571"
+              },
+              "id": "3665480099",
+              "legacyMatch": "[0.012,0.0123]",
+              "rule": "input = {[0.012,0.0123]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{a}=\\frac{\\lbrack\\;{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack}{\\lbrack{\\mathrm{HSO}}_4^-\\rbrack}\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "27bmwq3nj1g76sp",
+                    "type": "p"
+                  }
+                ],
+                "id": "1290358293"
+              },
+              "id": "2453840696",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What is the equilibrium constant for the ionization of the HSO4− ion, the weak acid used in some household cleansers?  At equilibrium, [H3O+] = 0.027 M; [HSO4−] = 0.29 M; and [SO42−] = 0.13 M.Ka =  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "472689489",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the equilibrium constant for the ionization of the HSO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": " ion, the weak acid used in some household cleansers? "
+            }
+          ],
+          "id": "xhl2aztnlqnav0b",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "sloeo1lj2v2jdgn",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "1xvgfwd6n94u0fo",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{HSO}}_4^-(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm H}_3\\mathrm O^+(aq)\\;+\\;{\\mathrm{SO}}_4^{2-}(aq)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "At equilibrium, [H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] = 0.027 M; [HSO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "] = 0.29 M; and [SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "2−"
+            },
+            {
+              "text": "] = 0.13 M."
+            }
+          ],
+          "id": "lcsx18utqi5eneq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "09ce4kf3ymr2bw3",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "472689489": [
+      "78292"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

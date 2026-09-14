@@ -1,0 +1,674 @@
+{
+  "id": "80030",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78206"
+  ],
+  "title": "pool01_mass_defect_bind_energy-pool01_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "The total mass of the subatomic particles in O-16 is: "
+                  }
+                ],
+                "id": "1495050636",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "f43d3va5kxq3nd8",
+                    "text": ""
+                  }
+                ],
+                "id": "4255049181",
+                "src": "\\left(8\\times1.0073+8\\times1.0087+8\\times0.00055\\right)\\;\\mathrm{amu}\\;=\\;16.1324\\;\\mathrm{amu}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The mass defect is: "
+                  }
+                ],
+                "id": "3490658810",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ytwwo2v3djro7b1",
+                    "text": ""
+                  }
+                ],
+                "id": "1398026634",
+                "src": "16.1324\\;-\\;15.9949\\;\\mathrm{amu}\\;=\\;0.1375\\;\\mathrm{amu}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2055429724",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "2122132177",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uq8wbaf65hjoduw",
+                  "type": "p"
+                }
+              ],
+              "id": "1872264952"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1xhrj1t3fbfqfz8",
+                  "type": "p"
+                }
+              ],
+              "id": "2633534336"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "96dz53wwo0xpc6m",
+                  "type": "p"
+                }
+              ],
+              "id": "2666532570"
+            }
+          ],
+          "id": "mass_defect",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The total mass of the subatomic particles in O-16 is:"
+                      }
+                    ],
+                    "id": "b256563390204aa6ba59960b24476743",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "mrbu10rxtfwkg7o",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4286114230",
+                    "src": "\\left(8\\times1.0073+8\\times1.0087+8\\times0.00055\\right)\\;\\mathrm{amu}\\;=\\;16.1324\\;\\mathrm{amu}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The mass defect is: "
+                      }
+                    ],
+                    "id": "254780148",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "figxyj9ovl3n1su",
+                        "text": ""
+                      }
+                    ],
+                    "id": "2500984267",
+                    "src": "16.1324\\;-\\;15.9949\\;\\mathrm{amu}\\;=\\;0.1375\\;\\mathrm{amu}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3578256349",
+                    "type": "p"
+                  }
+                ],
+                "id": "3924290401"
+              },
+              "id": "2534597942",
+              "legacyMatch": "[0.13,0.14]",
+              "rule": "input = {[0.136,0.139]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect is found by calculating the difference between the experimentally measured mass of the O-16 and the total calculated mass of its protons, neutrons, and electrons."
+                      }
+                    ],
+                    "id": "43keox9yvruz56r",
+                    "type": "p"
+                  }
+                ],
+                "id": "870918132"
+              },
+              "id": "539837629",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "The mass defect in amu/atom equals the mass defect in g/mol. Then using "
+                  },
+                  {
+                    "em": true,
+                    "text": "E"
+                  },
+                  {
+                    "text": " = "
+                  },
+                  {
+                    "em": true,
+                    "text": "mc"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ": "
+                  }
+                ],
+                "id": "4227788280",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "gz13qn6wte3iqod",
+                    "text": ""
+                  }
+                ],
+                "id": "1064064228",
+                "src": "\\begin{array}{c}\\left(\\dfrac{0.1375\\;\\mathrm g}{\\mathrm{mol}}\\right)\\left(\\dfrac{\\mathrm{kg}}{10^3\\;\\mathrm g}\\right)\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\left(\\frac{\\mathrm J}{\\displaystyle\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\right)\\;\\;\\;\\\\=\\;1.236\\times10^{13}\\;\\mathrm J/\\mathrm{mol}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1710104353",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "355113033",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4kngotdc7d55qph",
+                  "type": "p"
+                }
+              ],
+              "id": "169293965"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "it4cwp2413903ok",
+                  "type": "p"
+                }
+              ],
+              "id": "3798740470"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gwr8zlc1oyj9v2z",
+                  "type": "p"
+                }
+              ],
+              "id": "869329847"
+            }
+          ],
+          "id": "binding_energyJ",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The mass defect in amu/atom equals the mass defect in g/mol. Then using "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "mc"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ": "
+                      }
+                    ],
+                    "id": "fd72adbf78d64edf9385b79bdeee852c",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "dablqsp5b5ub61o",
+                        "text": ""
+                      }
+                    ],
+                    "id": "2911368361",
+                    "src": "\\begin{array}{c}\\left(\\dfrac{0.1375\\;\\mathrm g}{\\mathrm{mol}}\\right)\\left(\\dfrac{\\mathrm{kg}}{10^3\\;\\mathrm g}\\right)\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\left(\\frac{\\mathrm J}{\\displaystyle\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\right)\\;\\;\\;\\\\=\\;1.236\\times10^{13}\\;\\mathrm J/\\mathrm{mol}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "1125705981",
+                    "type": "p"
+                  }
+                ],
+                "id": "44147"
+              },
+              "id": "2808423754",
+              "legacyMatch": "[1.2e13,1.3e13]",
+              "rule": "input = {[12300000000000,12500000000000]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect in amu/atom equals the mass defect in g/mol. Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "mc"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and pay attention to units."
+                      }
+                    ],
+                    "id": "yeu9z7wp8hno223",
+                    "type": "p"
+                  }
+                ],
+                "id": "330486425"
+              },
+              "id": "1597544432",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Converting from J/mol to MeV/atom: "
+                  }
+                ],
+                "id": "1053907573",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "3guib9255fk6gih",
+                    "text": ""
+                  }
+                ],
+                "id": "3041092468",
+                "src": "\\begin{array}{c}\\left(\\dfrac{1.236\\times10^{13}\\;\\mathrm J}{\\mathrm{mol}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}}{6.022\\times10^{23}\\;\\mathrm{atoms}}\\right)\\left(\\dfrac{1\\;\\mathrm{eV}}{1.602\\times10^{-19}\\;\\mathrm J}\\right)\\left(\\dfrac{\\mathrm{MeV}}{10^6\\;\\mathrm{eV}}\\right)\\\\\\;=\\;128.1\\;\\mathrm{MeV}/\\mathrm{atom}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1296026638",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "4029206207",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tv2somn98lf9b9l",
+                  "type": "p"
+                }
+              ],
+              "id": "3819949514"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m9m9t44hgewxazy",
+                  "type": "p"
+                }
+              ],
+              "id": "3379201209"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "we646hpaupg1akj",
+                  "type": "p"
+                }
+              ],
+              "id": "205728333"
+            }
+          ],
+          "id": "binding_energymEV",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Converting from J/mol to MeV/atom: "
+                      }
+                    ],
+                    "id": "fb936bdb2ef64cd4840f2242432f8957",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ycnszmasijrqvwc",
+                        "text": ""
+                      }
+                    ],
+                    "id": "455574258",
+                    "src": "\\begin{array}{c}\\left(\\dfrac{1.236\\times10^{13}\\;\\mathrm J}{\\mathrm{mol}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}}{6.022\\times10^{23}\\;\\mathrm{atoms}}\\right)\\left(\\dfrac{1\\;\\mathrm{eV}}{1.602\\times10^{-19}\\;\\mathrm J}\\right)\\left(\\dfrac{\\mathrm{MeV}}{10^6\\;\\mathrm{eV}}\\right)\\\\\\;=\\;128.1\\;\\mathrm{MeV}/\\mathrm{atom}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2373604048",
+                    "type": "p"
+                  }
+                ],
+                "id": "2130480062"
+              },
+              "id": "2458637957",
+              "legacyMatch": "[125,130]",
+              "rule": "input = {[127,129]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the appropriate conversion factors to convert binding energy from J/mol to MeV/atom."
+                      }
+                    ],
+                    "id": "d3fbe1292a6848b1bb80ba7e41c5319b",
+                    "type": "p"
+                  }
+                ],
+                "id": "2009986289"
+              },
+              "id": "1908515642",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The experimentally determined atomic mass of O-16 is 15.99491 amu. Calculate the mass defect, the binding energy in J/mol, and the binding energy in MeV/atom. Mass defect =  amuBinding Energy =  J/molBinding Energy =  MeV/atom",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "mass_defect",
+        "inputType": "numeric",
+        "partId": "mass_defect",
+        "size": "small"
+      },
+      {
+        "id": "binding_energyJ",
+        "inputType": "numeric",
+        "partId": "binding_energyJ",
+        "size": "small"
+      },
+      {
+        "id": "binding_energymEV",
+        "inputType": "numeric",
+        "partId": "binding_energymEV",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The experimentally determined atomic mass of O-16 is 15.99491 amu. Calculate the mass defect, the binding energy in J/mol, and the binding energy in MeV/atom. "
+            }
+          ],
+          "id": "d0b045be5ee14e7397209338e3d8d3dd",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Mass defect = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "mass_defect",
+              "type": "input_ref"
+            },
+            {
+              "text": " amu"
+            }
+          ],
+          "id": "3189125365",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Binding Energy = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "binding_energyJ",
+              "type": "input_ref"
+            },
+            {
+              "text": " J/mol"
+            }
+          ],
+          "id": "3589054670",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Binding Energy = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "binding_energymEV",
+              "type": "input_ref"
+            },
+            {
+              "text": " MeV/atom"
+            }
+          ],
+          "id": "1224397381",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "binding_energyJ": [
+      "78444"
+    ],
+    "binding_energymEV": [
+      "78444"
+    ],
+    "mass_defect": [
+      "78324"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

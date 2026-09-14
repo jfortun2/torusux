@@ -1,0 +1,296 @@
+{
+  "id": "79369",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_basic_digt-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D",
+          "F"
+        ],
+        "2564568971"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. After balancing as if in basic solution, there will be H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O and OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": " on the right side of the equation."
+                  }
+                ],
+                "id": "elh9nusxi3afvqh",
+                "type": "p"
+              }
+            ],
+            "id": "1738846004"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v898zu6nfdhw8lz",
+                  "type": "p"
+                }
+              ],
+              "id": "438986323"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bvfm8cr8cj6vwd3",
+                  "type": "p"
+                }
+              ],
+              "id": "1956882088"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2lcpr1evvj9wx0q",
+                  "type": "p"
+                }
+              ],
+              "id": "2302736847"
+            }
+          ],
+          "id": "2462451273",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "ln08wbkf7uxpjzv",
+                    "type": "p"
+                  }
+                ],
+                "id": "89197684"
+              },
+              "id": "2564568971",
+              "legacyMatch": "D,F",
+              "rule": "(!(input like {E})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {F} && (input like {D})))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are two correct choices."
+                      }
+                    ],
+                    "id": "ughf1jnwgtprerz",
+                    "type": "p"
+                  }
+                ],
+                "id": "973398637"
+              },
+              "id": "161250600",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Which of the following is true of the overall equation in basic solution?",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " on the left side of the equation."
+              }
+            ],
+            "id": "7wqaxmapldliuzf",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " on the right side of the equation."
+              }
+            ],
+            "id": "6z8fynbqkl71wpe",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O on the left side of the equation."
+              }
+            ],
+            "id": "v4nw0vjhrvbozx8",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O on the right side of the equation."
+              }
+            ],
+            "id": "i833d8sn6ifcw3p",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": " on the left side of the equation."
+              }
+            ],
+            "id": "ypkg8bjw8t66s6p",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": " on the right side of the equation."
+              }
+            ],
+            "id": "h8t91uapodbpdew",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is true of the overall equation in basic solution?"
+            }
+          ],
+          "id": "kgl56jz0o9k51zl",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2462451273": [
+      "78507"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

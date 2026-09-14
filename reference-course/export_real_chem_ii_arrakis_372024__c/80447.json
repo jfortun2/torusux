@@ -1,0 +1,403 @@
+{
+  "id": "80447",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "mech_rate_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Do not include the catalyst in the overall reaction."
+                    }
+                  ],
+                  "id": "xcr7aoe6pe2korb",
+                  "type": "p"
+                }
+              ],
+              "id": "2306957064"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m3yrwej4vfxua85",
+                  "type": "p"
+                }
+              ],
+              "id": "3350807462"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pvsxi9ej3c9xrg2",
+                  "type": "p"
+                }
+              ],
+              "id": "7550108"
+            }
+          ],
+          "id": "2645445014",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\require{cancel}\\begin{array}{l}{\\mathrm H}_2{\\mathrm O}_2\\;+\\cancel{\\boxed{\\;\\mathrm I^-}}\\;\\;\\rightarrow\\;\\;{\\mathrm H}_2\\mathrm O\\;+\\boxed{\\cancel{\\;\\mathrm{IO}^-}}\\\\\\underline{{\\mathrm H}_2{\\mathrm O}_2\\;+\\;\\boxed{\\cancel{\\mathrm{IO}^-}}\\;\\;\\rightarrow\\;\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2\\;+\\;\\cancel{\\boxed{\\mathrm I^-}}}\\\\2\\;{\\mathrm H}_2{\\mathrm O}_2\\;\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "f2fw5articaeug8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2037761654"
+              },
+              "id": "2655456410",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. I"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is a catalyst and should not be included in the overall reaction."
+                      }
+                    ],
+                    "id": "l2pfrxyayfjypja",
+                    "type": "p"
+                  }
+                ],
+                "id": "2524192406"
+              },
+              "id": "2761617030",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect> IO"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is an intermediate and should not be included in the overall reaction."
+                      }
+                    ],
+                    "id": "yejbrbc8nfjufv1",
+                    "type": "p"
+                  }
+                ],
+                "id": "44626986"
+              },
+              "id": "2179380581",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Neither the intermediate, IO"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": ", nor the catalyst, I"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": ", should be included in the overall reaction."
+                      }
+                    ],
+                    "id": "kunhuia6neiorpf",
+                    "type": "p"
+                  }
+                ],
+                "id": "2427766952"
+              },
+              "id": "3333909643",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "d9ya7ud8mnh6tvy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3180192512"
+              },
+              "id": "1027413493",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2655456410"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2761617030"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2179380581"
+            ],
+            [
+              [
+                "D"
+              ],
+              "3333909643"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2655456410"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2761617030"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2179380581"
+        ],
+        [
+          [
+            "D"
+          ],
+          "3333909643"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1858533340",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "2\\;{\\mathrm H}_2{\\mathrm O}_2\\;\\;\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "h24pyyw8fm33ww8",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "2\\;{\\mathrm H}_2{\\mathrm O}_2\\;+\\;\\mathrm I^-\\;\\;\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2\\;+\\;\\mathrm I^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "y1h2ta2u2zea8b9",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "2\\;{\\mathrm H}_2{\\mathrm O}_2\\;+\\;\\mathrm{IO}^-\\;\\;\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2\\;+\\;\\mathrm{IO}^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "mf4yjlkbwwc603c",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "2\\;{\\mathrm H}_2{\\mathrm O}_2\\;+\\;\\mathrm{IO}^-\\;+\\;\\mathrm I^-\\;\\;\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\;+\\;{\\mathrm O}_2\\;+\\;\\mathrm{IO}^-\\;+\\;\\mathrm I^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "scq1i2et7mof3fn",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the equation for the overall reaction?"
+            }
+          ],
+          "id": "bh9uyvxg0q4f80r",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2645445014": [
+      "78293"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

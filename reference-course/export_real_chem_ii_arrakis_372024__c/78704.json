@@ -1,0 +1,666 @@
+{
+  "id": "78704",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78264"
+  ],
+  "title": "relative_rates_SKILL_2_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Based on the stoichiometry of the reaction, the rate of appearance of P"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": " is one fourth the rate of disappearance of PH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "m4adm7m1e3kv0yw",
+                "type": "p"
+              }
+            ],
+            "id": "2352913327"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v6m3rf92csl6dx5",
+                  "type": "p"
+                }
+              ],
+              "id": "105437699"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l1qiglzaew0wvuh",
+                  "type": "p"
+                }
+              ],
+              "id": "145831630"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jm4rur3csk5eykq",
+                  "type": "p"
+                }
+              ],
+              "id": "1555552932"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reaction rate can be expressed in terms of the rates of change of PH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and P"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": ": "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Rate}\\;=\\;-\\frac14\\frac{\\triangle\\left[{\\mathrm{PH}}_3\\right]}{\\triangle t}\\;=\\;+\\frac{\\triangle\\left[{\\mathrm P}_4\\right]}{\\triangle t}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Solving for the rate of change of P"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": " in terms of the rate of change of PH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ": "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{\\triangle\\left[{\\mathrm P}_4\\right]}{\\triangle t}\\;=\\;-\\frac14\\frac{\\triangle\\left[{\\mathrm{PH}}_3\\right]}{\\triangle t}\\; =\\;-0.25\\;(-@@ratePH3@@\\times10^{-3}\\;\\mathrm M/\\mathrm s)\\;=\\;@@correctP4@@\\;\\mathrm M/\\mathrm s",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "g0zrhzlf9601d8f",
+                    "type": "p"
+                  }
+                ],
+                "id": "2439889872"
+              },
+              "id": "402150645",
+              "legacyMatch": "[@@corP4Low@@,@@corP4High@@]",
+              "rule": "input = {[@@corP4Low@@,@@corP4High@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "alo5c99j66syck3",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Use the stoichiometric coefficients and rates of change of PH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": " and P"
+                              },
+                              {
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "text": " to express the reaction rate."
+                              }
+                            ],
+                            "id": "697615168",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "rcl9750zzbgt5f1",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Solve for the rate of change of P"
+                              },
+                              {
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "text": " in terms of the rate of change of PH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": "."
+                              }
+                            ],
+                            "id": "1057879043",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "0rtqnao1ohqasml",
+                        "type": "li"
+                      }
+                    ],
+                    "id": "y2p6cdfrhgm0gs5",
+                    "type": "ol"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Note that the rate of change of reactant is a negative value to reflect that the reactant concentration is decreasing over time."
+                      }
+                    ],
+                    "id": "xt3hgp5w6lo6y35",
+                    "type": "p"
+                  }
+                ],
+                "id": "1772114732"
+              },
+              "id": "1853864401",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Based on the stoichiometry of the reaction, the rate of appearance of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is 1.5 greater than the rate of disappearance of PH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "ev59y2eg80iw9kn",
+                "type": "p"
+              }
+            ],
+            "id": "83902477"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6sodyr2zktdy33c",
+                  "type": "p"
+                }
+              ],
+              "id": "1852896856"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gjaclvu4e9ng1zm",
+                  "type": "p"
+                }
+              ],
+              "id": "688908341"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o8mmzsxt8dm2igk",
+                  "type": "p"
+                }
+              ],
+              "id": "718680795"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reaction rate can be expressed in terms of the rates of change of PH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ": "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Rate}\\;=\\;-\\frac14\\frac{\\triangle\\left[{\\mathrm{PH}}_3\\right]}{\\triangle t}\\;=\\;+\\frac16\\frac{\\triangle\\left[{\\mathrm H}_2\\right]}{\\triangle t}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Solving for the rate of change of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " in terms of the rate of change of PH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ": "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{\\triangle\\left[{\\mathrm H}_2\\right]}{\\triangle t}\\;=\\;-\\frac64\\frac{\\triangle\\left[{\\mathrm{PH}}_3\\right]}{\\triangle t}\\; =\\;-1.5\\;(-@@ratePH3@@\\times10^{-3}\\;\\mathrm M/\\mathrm s)\\;=\\;@@correctH2@@\\;\\mathrm M/\\mathrm s",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "beumv92bgabhi9a",
+                    "type": "p"
+                  }
+                ],
+                "id": "3050019795"
+              },
+              "id": "3492399616",
+              "legacyMatch": "[@@corH2Low@@,@@corH2High@@]",
+              "rule": "input = {[@@corH2Low@@,@@corH2High@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "yrsu1paz08oxkct",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Use the stoichiometric coefficients and rates of change of PH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": " and H"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": " to express the reaction rate."
+                              }
+                            ],
+                            "id": "2163016929",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "tz7oxc5nkq317xb",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Solve for the rate of change of H"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": " in terms of the rate of change of PH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": "."
+                              }
+                            ],
+                            "id": "322426052",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "jodkydcf9337rfl",
+                        "type": "li"
+                      }
+                    ],
+                    "id": "u3xz6mx94n7mu29",
+                    "type": "ol"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Note that the rate of change of reactant is a negative value to reflect that the reactant concentration is decreasing over time."
+                      }
+                    ],
+                    "id": "a57xq2z4jhaphfn",
+                    "type": "p"
+                  }
+                ],
+                "id": "1569822702"
+              },
+              "id": "527176948",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Given the reaction above, if the rate of disappearance of PH3 is @@ratePH3@@ × 10−3 M/s, what is the rate of appearance of each of the products?Rate of appearance of P4 =   M/sRate of appearance of H2 =   M/s",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst ratePH3 = OLI.random(1.2,9.8,2) .toPrecision(3);\nconst correctP4 = (ratePH3*0.25/1000) .toPrecision (3);\nconst corP4Low = correctP4*0.98;\nconst corP4High = correctP4*1.02;\nconst correctH2 =(ratePH3*1.5/1000) .toPrecision(3);\nconst corH2Low = correctH2*0.98;\nconst corH2High = correctH2*1.02;\n\n// Expose variables to OLI\nmodule.exports = {\n  ratePH3,\n  correctP4,\n  corP4Low,\n  corP4High,\n  correctH2,\n  corH2Low,\n  corH2High,\n};\n",
+              "id": "d5600bbb62554438b468c804c61d137a",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      },
+      {
+        "id": "two",
+        "inputType": "numeric",
+        "partId": "two",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "4\\;{\\mathrm{PH}}_3(g)\\;\\;\\rightarrow\\;\\;{\\mathrm P}_4(g)\\;+\\;6\\;{\\mathrm H}_2(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "d2a6hdfpwtvsuje",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Given the reaction above, if the rate of disappearance of PH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " is @@ratePH3@@ × 10"
+            },
+            {
+              "sup": true,
+              "text": "−3"
+            },
+            {
+              "text": " M/s, what is the rate of appearance of each of the products?"
+            }
+          ],
+          "id": "b4t8xv2tk4vr4bv",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Rate of appearance of P"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": " =  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s"
+            }
+          ],
+          "id": "h36nsxkam70sxkx",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Rate of appearance of H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " =  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s"
+            }
+          ],
+          "id": "idy7u5r6v6c4tub",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [
+      "78495"
+    ],
+    "two": [
+      "78553"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

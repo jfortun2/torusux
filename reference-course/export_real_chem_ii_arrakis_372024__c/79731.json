@@ -1,0 +1,305 @@
+{
+  "id": "79731",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78105"
+  ],
+  "title": "pool03_halflife_mass_remains-pool03_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "08conp2sq2ouspd",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "g6gy9yo51xlt9h9",
+                    "text": ""
+                  }
+                ],
+                "id": "2887773140",
+                "src": "\\lambda\\;=\\;\\frac{0.693}{t_{1/2}}\\;=\\;\\frac{0.693}{28.8\\;\\mathrm{y}}\\;=\\;0.0241\\;\\mathrm{y}^{-1}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "567217802",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "zb236f133j49n6l",
+                    "text": ""
+                  }
+                ],
+                "id": "2411650949",
+                "src": "\\begin{array}{l}\\begin{array}{l}N_t\\;=\\;N_0\\;\\mathrm e^{-kt}\\\\\\;\\;\\;\\;=\\;@@initialMass@@\\;\\mathrm g\\;\\cdot\\;\\mathrm e^{-(0.0241/\\mathrm y\\cdot@@years@@\\;\\mathrm y)\\;}\\\\\\;\\;\\;\\;=\\;@@massAtTime@@\\;\\mathrm g\\end{array}\\\\\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "535895011",
+                "type": "p"
+              }
+            ],
+            "id": "1918544064"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hxmcrmvv2qsu10p",
+                  "type": "p"
+                }
+              ],
+              "id": "3312945961"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xl4gwo9n28jnj4s",
+                  "type": "p"
+                }
+              ],
+              "id": "411987292"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "twzlpy2pdaxhdbq",
+                  "type": "p"
+                }
+              ],
+              "id": "177849262"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "2r9uo8fxtp9mzno",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lambda\\;=\\;\\frac{0.693}{t_{1/2}}\\;=\\;\\frac{0.693}{28.8\\;\\mathrm{y}}\\;=\\;0.0241\\;\\mathrm{y}^{-1}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "r9v7b0wv3ho3xe8",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "jkwstrg9mzrv4ew",
+                        "text": ""
+                      }
+                    ],
+                    "id": "3699126645",
+                    "src": "\\begin{array}{l}\\begin{array}{l}N_t\\;=\\;N_0\\;\\mathrm e^{-\\lambda t}\\\\\\;\\;\\;\\;=\\;@@initialMass@@\\;\\mathrm g\\;\\cdot\\;\\mathrm e^{-(0.0241/\\mathrm y\\cdot@@years@@\\;\\mathrm y)\\;}\\\\\\;\\;\\;\\;=\\;@@massAtTime@@\\;\\mathrm g\\end{array}\\\\\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2541715255",
+                    "type": "p"
+                  }
+                ],
+                "id": "2418110094"
+              },
+              "id": "1839923988",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. First, determine the decay constant using: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lambda\\;=\\;\\frac{0.693}{t_{1/2}}\\;\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Then, determine the amount of Sr-90 left after the given number of years using: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "N_t\\;=\\;N_0\\;\\mathrm e^{-\\lambda t}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "inja0lllmj9zb47",
+                    "type": "p"
+                  }
+                ],
+                "id": "1937637248"
+              },
+              "id": "589724605",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Sr-90 has a half-life of 28.8 years. Beginning with @@initialMass@@ g of Sr-90, how much will remain after @@years@@ years?amount left =  g",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst massIndex = OLI.random(0,5);\nconst massArray = [11.0,13.0,15.0,17.0,19.0,21.0];\nconst timeIndex = OLI.random(0,5);\nconst timeArray = [65,85,105,125,145,165];\nconst initialMass = massArray[massIndex] .toFixed(1);\nconst years = timeArray[timeIndex] .toPrecision(3);\nconst expPart = (-1*0.02406*years) .toPrecision(5);\nconst ePart = Math.exp(expPart);\nconst massAtTime = (initialMass*ePart) .toPrecision(3);\nconst corLow = massAtTime*0.98;\nconst corHigh = massAtTime*1.02;\n\n// Expose variables to OLI\nmodule.exports = {\n  initialMass,\n  years,\n  expPart,\n  ePart,\n  massAtTime,\n  corLow,\n  corHigh,\n};\n",
+              "id": "cb637dd6458f4561b7bcf3bd8389a764",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Sr-90 has a half-life of 28.8 years. Beginning with @@initialMass@@ g of Sr-90, how much will remain after @@years@@ years?"
+            }
+          ],
+          "id": "aec4a688868f4562b4038862d98655ad",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "amount left = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " g"
+            }
+          ],
+          "id": "cf9af7e650ee4c1ba1bc1a9495b51b45",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

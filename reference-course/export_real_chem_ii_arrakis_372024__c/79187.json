@@ -1,0 +1,444 @@
+{
+  "id": "79187",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [],
+  "title": "trans_metal_isolation_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "930165836",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3050841121",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2423864688",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Distillation changes the physical state of the metal from liquid to gas and then back to liquid, but does not change its chemical composition. "
+                      }
+                    ],
+                    "id": "862359851",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1449822133",
+                "textDirection": "ltr"
+              },
+              "id": "192539275",
+              "rule": "input like {3878354190}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Distillation changes the physical state of the metal from liquid to gas and then back to liquid, but does not change its chemical composition. "
+                      }
+                    ],
+                    "id": "199597143",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3806026038",
+                "textDirection": "ltr"
+              },
+              "id": "3065718653",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2157729289",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1465393281",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "3469682833",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Transition metals found as compounds in ores are chemically combined with other elements, and the metal is in an oxidized state in the compound. The oxidized metal must undergo reduction to be separated in its pure form."
+                      }
+                    ],
+                    "id": "3212116045",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "737184883",
+                "textDirection": "ltr"
+              },
+              "id": "275588819",
+              "rule": "input like {3380289926}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Transition metals found as compounds in ores are chemically combined with other elements, and the metal is already in an oxidized state. Further oxidation will not separate the metal into its pure form."
+                      }
+                    ],
+                    "id": "2624298248",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "722353467",
+                "textDirection": "ltr"
+              },
+              "id": "717635049",
+              "rule": "input like {1940746600}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Although electrolysis can be useful in separating some metals from their ores or purifying some metals, it is not a necessary step for all metals."
+                      }
+                    ],
+                    "id": "769035585",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2628852259",
+                "textDirection": "ltr"
+              },
+              "id": "2776242165",
+              "rule": "input like {3928212274}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Although distillation can be useful in purifying some metals, it is not a necessary step for isolating metals from their ores."
+                      }
+                    ],
+                    "id": "1160532094",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2554803665",
+                "textDirection": "ltr"
+              },
+              "id": "2189133263",
+              "rule": "input like {292506643}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "1675619563",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3744493122",
+                "textDirection": "ltr"
+              },
+              "id": "611690004",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "For the following steps in the isolation of a transition element,Distillation of the metal is a  process.When isolating transition metals found as compounds in ores, the metal must undergo .",
+      "targeted": [
+        [
+          [
+            "1940746600"
+          ],
+          "717635049"
+        ],
+        [
+          [
+            "3928212274"
+          ],
+          "2776242165"
+        ],
+        [
+          [
+            "292506643"
+          ],
+          "2189133263"
+        ]
+      ],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "391679496",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3250020238",
+          "operation": "shuffle",
+          "partId": "2423864688",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3061415798",
+          "operation": "shuffle",
+          "partId": "3469682833",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "physical"
+              }
+            ],
+            "id": "1608694158",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3878354190",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "chemical"
+              }
+            ],
+            "id": "166320198",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3432512105",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "oxidation"
+              }
+            ],
+            "id": "4051313343",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1940746600",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "electrolysis"
+              }
+            ],
+            "id": "2274707605",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3928212274",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "distillation"
+              }
+            ],
+            "id": "2430711139",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "292506643",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "reduction"
+              }
+            ],
+            "id": "3968441316",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3380289926",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "3878354190",
+          "3432512105"
+        ],
+        "id": "3306556328",
+        "inputType": "dropdown",
+        "partId": "2423864688"
+      },
+      {
+        "choiceIds": [
+          "1940746600",
+          "3928212274",
+          "292506643",
+          "3380289926"
+        ],
+        "id": "3869055568",
+        "inputType": "dropdown",
+        "partId": "3469682833"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the following steps in the isolation of a transition element,"
+            }
+          ],
+          "id": "1520857646",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Distillation of the metal is a "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3306556328",
+              "type": "input_ref"
+            },
+            {
+              "text": " process."
+            }
+          ],
+          "id": "2277907067",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "When isolating transition metals found as compounds in ores, the metal must undergo "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3869055568",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "2207465165",
+          "type": "p"
+        }
+      ],
+      "id": "233005063"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2423864688": [],
+    "3469682833": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

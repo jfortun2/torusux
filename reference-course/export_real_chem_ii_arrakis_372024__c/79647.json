@@ -1,0 +1,429 @@
+{
+  "id": "79647",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78129"
+  ],
+  "title": "reduce_solubility_precip_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": " Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Fe}^{2+}\\rbrack{\\lbrack\\mathrm{OH}^-\\rbrack}^2\\; =\\;(@@concFe@@\\times10^{-6})\\cdot{\\lbrack\\mathrm{OH}^-\\rbrack}^2=\\;8.00\\times10^{-16}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\lbrack\\mathrm{OH}^-\\rbrack}^2\\;=\\;\\frac{8.00\\times10^{-16}}{@@concFe@@\\times10^{-6}}\\;=\\;@@concOHst1@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\sqrt{@@concOHst1@@}\\;=\\;@@concOH@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "8pe9jw49h13nlqn",
+                "type": "p"
+              }
+            ],
+            "id": "769147341"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z81hpvgtt3tedt9",
+                  "type": "p"
+                }
+              ],
+              "id": "4153427423"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gsp0eiwkhvlnt87",
+                  "type": "p"
+                }
+              ],
+              "id": "3606811525"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t8yntxhuf6s8xve",
+                  "type": "p"
+                }
+              ],
+              "id": "495787129"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Fe}^{2+}\\rbrack{\\lbrack\\mathrm{OH}^-\\rbrack}^2\\; =\\;(@@concFe@@\\times10^{-6})\\cdot{\\lbrack\\mathrm{OH}^-\\rbrack}^2=\\;8.00\\times10^{-16}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\lbrack\\mathrm{OH}^-\\rbrack}^2\\;=\\;\\frac{8.00\\times10^{-16}}{@@concFe@@\\times10^{-6}}\\;=\\;@@concOHst1@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\sqrt{@@concOHst1@@}\\;=\\;@@concOH@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "ae474336b78c4b68bce8e0738b9c9131",
+                    "type": "p"
+                  }
+                ],
+                "id": "1620849539"
+              },
+              "id": "1644527969",
+              "legacyMatch": "[@@concOHLow@@,@@concOHHigh@@]",
+              "rule": "input = {[@@concOHLow@@,@@concOHHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A solution with dissolved solutes will begin precipitation of the solute when the solution contains the maximum amount of dissolved solute (ie, when its saturated). Within a saturated solution, an equilibrium exists between dissolved and undissolved solute, and the equilibrium constant for solubility equilibria is called the solubility product constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "fcd4822b6a7547828e6b39090356ea59",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " To calculate equilibrium concentrations, use "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ", the equilibrium expression, and the I-C-E (Initial-Change-Equilibrium) table. When writing the equilibrium expression, consider the phase of the different substances and stoichiometric coefficients."
+                      }
+                    ],
+                    "id": "udab6b47unokzdt",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the initial concentrations, identify the initial concentration of all reactants and products. If none of the substances in the equilibrium expression are already dissolved in solution, then all of the initial concentrations will be zero. If some of the substances in the equilibrium expression are already dissolved in solution, such as from another dissolved substance, then those concentrations will not be zero and will depend on how much is already dissolved."
+                      }
+                    ],
+                    "id": "fubu1ed3wpgbyn6",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the change in concentration required to reach equilibrium concentration, can be shown as -"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " for reactants and +"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " for products, consider the stoichiometric coefficients. Finally, use algebra to solve for changes in concentrations and final equilibrium concentrations. "
+                      }
+                    ],
+                    "id": "wi0odo90dzaov3y",
+                    "type": "p"
+                  },
+                  {
+                    "___selfClosing___": true,
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "5yxvnw2kblbbhw7",
+                    "type": "p"
+                  }
+                ],
+                "id": "3797540557"
+              },
+              "id": "3851193293",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst concFe = OLI.random (2.2,8.9,1) .toFixed(2);\nconst concFeReal = (concFe/1000000) .toPrecision(3);\nconst concOHst1 = (0.0000000000000008/concFeReal) .toPrecision(3);\nconst concOH = (Math.sqrt(concOHst1)).toPrecision(3);\nconst concOHLow = concOH*0.95;\nconst concOHHigh = concOH*1.05;\n\n// Expose variables to OLI\nmodule.exports = {\n concFe,\n concFeReal,\n concOHst1,\n concOH,\n concOHLow,\n concOHHigh\n \n};\n",
+              "id": "a6dffece8fd14fa08a1ff5c5138b1b0c",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Iron concentrations greater than @@concFe@@×10"
+            },
+            {
+              "sup": true,
+              "text": "-6"
+            },
+            {
+              "text": " M in water used for laundry purposes can cause staining. What [OH"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "] is required to reduce Fe"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": " to this level by precipitation of Fe(OH)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "?"
+            }
+          ],
+          "id": "lsfuzgzwtzbgqff",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " = 8.00×10"
+            },
+            {
+              "sup": true,
+              "text": "-16"
+            },
+            {
+              "text": ")"
+            }
+          ],
+          "id": "titrasas0vdjc5s",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[OH"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "5iiy8e57grv8n1l",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

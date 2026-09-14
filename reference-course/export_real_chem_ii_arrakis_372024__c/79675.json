@@ -1,0 +1,196 @@
+{
+  "id": "79675",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "cell_notation_1lbd-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9purbm4izj2pc9m",
+                  "type": "p"
+                }
+              ],
+              "id": "3278656943"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dxfs3egn01yzj4b",
+                  "type": "p"
+                }
+              ],
+              "id": "3293806932"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fr1zprc65x4o31v",
+                  "type": "p"
+                }
+              ],
+              "id": "3792147401"
+            }
+          ],
+          "id": "2913029122",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. In cell notation, the oxidation information is written on the left and the reduction information is written on the right."
+                      }
+                    ],
+                    "id": "7z57f2dx62mrqi9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1321927771"
+              },
+              "id": "1991200568",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In cell notation, the oxidation information is written on the left and the reduction information is written on the right."
+                      }
+                    ],
+                    "id": "ofuj2zsx8y1cb3x",
+                    "type": "p"
+                  }
+                ],
+                "id": "3067796932"
+              },
+              "id": "450236997",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "4249353141",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{Mg}(s)│\\mathrm{Mg}^{2+}(aq)║\\mathrm{Au}^{3+}(aq)│\\mathrm{Au}(s)",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "uzotvyxwuhiz047",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{Au}(s)│\\mathrm{Au}^{3+}(aq)║\\mathrm{Mg}^{2+}(aq)│\\mathrm{Mg}(s)",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "8bl7fhyiytvw1ls",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which is the correct cell notation?"
+            }
+          ],
+          "id": "7sa03onlcqjccni",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2913029122": [
+      "78528"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,217 @@
+{
+  "id": "78595",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78207"
+  ],
+  "title": "geom_isomer_pool1_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "916247255",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "342914563",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1334493328",
+          "incorrectScore": null,
+          "outOf": 6,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Four NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " ligands are named tetraammine, two NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "\\ ligands are named dinitro, and these are written in alphabetical order. The central metal atom is Ni"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": ", written as nickel(II). The prefix trans- is used to indicate the two NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ions are opposite each other. "
+                      }
+                    ],
+                    "id": "3379698120",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "This compound is named: trans-tetraamminedinitronickel(II)."
+                      }
+                    ],
+                    "id": "cfr1kxmok2kx9iw",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2209958736",
+                "textDirection": "ltr"
+              },
+              "id": "1602377150",
+              "rule": "input like {trans-tetraamminedinitronickel(II)}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the ligands and determine the charge of the metal ion. Write the names of the ligands in alphabetical order, with prefixes indicating the number of each. Write the name of the central metal next, with a Roman numeral indicating its charge. Add a prefix at the beginning of the complex name to indicate the geometric arrangement of the ligands."
+                      }
+                    ],
+                    "id": "2818325049",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "432516575",
+                "textDirection": "ltr"
+              },
+              "id": "1511815293",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Interpret the structure to write the name and chemical formula of the coordination compound shown below.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3915758881",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "2107901183",
+        "inputType": "text",
+        "partId": "1334493328",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Interpret the structure to write the name and chemical formula of the coordination compound shown below."
+            }
+          ],
+          "id": "401783340",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "8c11d9a6lhvh9te",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "y6gqyq9e0jww860",
+              "text": ""
+            }
+          ],
+          "display": "block",
+          "height": 232,
+          "id": "818423658",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/33/33A8D633739457467A11B811D14735D7/GeomIsomersV2.png",
+          "type": "img",
+          "width": 200
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2107901183",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "1648757135",
+          "type": "p"
+        }
+      ],
+      "id": "3946328327"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1334493328": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

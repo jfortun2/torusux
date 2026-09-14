@@ -1,0 +1,357 @@
+{
+  "id": "80504",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "TransMetalComplexDIGT1_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "65791574",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "607846541",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "342601579",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The complex has a charge of −2. Each bromide ion (Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": ") has a charge of −1, so Ni must have a +2 charge: +2 + 4(−1) = +2."
+                      }
+                    ],
+                    "id": "3362046929",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "528666960",
+                "textDirection": "ltr"
+              },
+              "id": "2336564800",
+              "rule": "input = {2}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The charge of the complex (−2) must equal the sum of the charges of nickel and the four bromide ions."
+                      }
+                    ],
+                    "id": "1536301492",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4214538680",
+                "textDirection": "ltr"
+              },
+              "id": "2180958386",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1610670491",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2663916085",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "908127043",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A bromide ion has a −1 charge: Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "1932513616",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3765404778",
+                "textDirection": "ltr"
+              },
+              "id": "65377094",
+              "rule": "input = {-1}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The charge of a ligand needs to be remembered or looked up. What is the charge of a bromide ion?"
+                      }
+                    ],
+                    "id": "4157948897",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1355835861",
+                "textDirection": "ltr"
+              },
+              "id": "2581608599",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1597218805",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "301260970",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1782673144",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. In the coordination sphere, four bromide ions are bonded to Ni, so the coordination number is 4."
+                      }
+                    ],
+                    "id": "2704450819",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2906086009",
+                "textDirection": "ltr"
+              },
+              "id": "562007085",
+              "rule": "input = {4}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The coordination number of the central metal ion is the number of donor atoms bonded to it (in the coordination sphere)."
+                      }
+                    ],
+                    "id": "2604691929",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "318577635",
+                "textDirection": "ltr"
+              },
+              "id": "2884963046",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "In [NiBr4]2−, Ni has a charge of  and Br has a charge of . The coordination number is .",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "2696420826",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "472195387",
+        "inputType": "numeric",
+        "partId": "342601579",
+        "size": "small"
+      },
+      {
+        "id": "1996658254",
+        "inputType": "numeric",
+        "partId": "908127043",
+        "size": "small"
+      },
+      {
+        "id": "4164852050",
+        "inputType": "numeric",
+        "partId": "1782673144",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In [NiBr"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2−"
+            },
+            {
+              "text": ", Ni has a charge of "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "472195387",
+              "type": "input_ref"
+            },
+            {
+              "text": " and Br has a charge of "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1996658254",
+              "type": "input_ref"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "2369491869",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The coordination number is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "4164852050",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "905403732",
+          "type": "p"
+        }
+      ],
+      "id": "3927548762"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1782673144": [
+      "78487"
+    ],
+    "342601579": [
+      "78438"
+    ],
+    "908127043": [
+      "78438"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

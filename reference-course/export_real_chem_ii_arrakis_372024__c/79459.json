@@ -1,0 +1,152 @@
+{
+  "id": "79459",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "GeomIsomerLBD1_q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "801974652",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3820981120",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Dichloro"
+                      },
+                      {
+                        "text": "- means this complex contains two chloride ions."
+                      }
+                    ],
+                    "id": "1850516165",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "773380913",
+                "textDirection": "ltr"
+              },
+              "id": "1398318905",
+              "rule": "input = {2}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Dichloro"
+                      },
+                      {
+                        "text": "- means this complex contains two chloride ions."
+                      }
+                    ],
+                    "id": "2168685875",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3514786288",
+                "textDirection": "ltr"
+              },
+              "id": "4201299966",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "How many chloride ions does this complex ion contain?  ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1153883412",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "517892540",
+        "inputType": "numeric",
+        "partId": "1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "How many chloride ions does this complex ion contain?  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "517892540",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "808118711",
+          "type": "p"
+        }
+      ],
+      "id": "3708159383"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78318"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

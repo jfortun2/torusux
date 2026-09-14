@@ -1,0 +1,309 @@
+{
+  "id": "79146",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_acidic_lbd-q2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "G"
+        ],
+        "931504599"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "text": "O is added to balance O, H"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": " is added to balance H, and electrons are added to balance charge."
+                    }
+                  ],
+                  "id": "hjo2ht9lmv1ysjf",
+                  "type": "p"
+                }
+              ],
+              "id": "2611431895"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e1hs0tdeuliioya",
+                  "type": "p"
+                }
+              ],
+              "id": "1474926966"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j4x7x572hyrnfh7",
+                  "type": "p"
+                }
+              ],
+              "id": "2873025742"
+            }
+          ],
+          "id": "2878845682",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Only the charge needs to be balanced, by adding electrons to the right."
+                      }
+                    ],
+                    "id": "sq52ij74v3287ea",
+                    "type": "p"
+                  }
+                ],
+                "id": "1746500583"
+              },
+              "id": "931504599",
+              "legacyMatch": "G",
+              "rule": "(!(input like {F})) && ((!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {G}))))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Only the charge needs to be balanced, by adding electrons to the right."
+                      }
+                    ],
+                    "id": "l4buegddcg47krl",
+                    "type": "p"
+                  }
+                ],
+                "id": "2004326448"
+              },
+              "id": "117543601",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Half-Reactions What needs to be done to the oxidation half-reaction to balance it? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Change a coefficient to balance an element other than H or O."
+              }
+            ],
+            "id": "4h95p0cd6q39ssb",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O to the left side of the equation."
+              }
+            ],
+            "id": "5nt4x6vjgt1ey4h",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O to the right side of the equation."
+              }
+            ],
+            "id": "yx6ysgzg2ldgyuw",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " to the left side of the equation."
+              }
+            ],
+            "id": "e8f3yv7ji8kws0c",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " to the right side of the equation."
+              }
+            ],
+            "id": "5c7g7l5fy71jctf",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add electrons to the left side of the equation."
+              }
+            ],
+            "id": "pv1tg4h9962l3pk",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add electrons to the right side of the equation."
+              }
+            ],
+            "id": "ixtddwopjcpbbr6",
+            "type": "p"
+          }
+        ],
+        "id": "G"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Half-Reactions"
+            }
+          ],
+          "id": "cb9y0wes1f5ovuq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "c18tjigepewdtbl",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "7qb5um8mxobw1mk",
+          "legacyBlockRendered": "true",
+          "src": "\\begin{array}{l}\\mathrm{Oxidation}\\;(\\mathrm{unbalanced}):\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\mathrm{Cu}(s)\\;\\;\\rightarrow\\;\\;\\mathrm{Cu}^{2+}(aq)\\\\\\mathrm{Reduction}\\;(\\mathrm{unbalanced}): \\;\\;\\;\\;{\\mathrm H}_2{\\mathrm{SO}}_3(aq)\\;\\;\\rightarrow\\;\\;\\mathrm S(s)\\end{array}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What needs to be done to the oxidation half-reaction to balance it? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "5mqtcbmmnlpdd09",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2878845682": [
+      "78507"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

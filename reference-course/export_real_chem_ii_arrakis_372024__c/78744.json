@@ -1,0 +1,212 @@
+{
+  "id": "78744",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "carbon_dating_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{1/2}}\\;=\\;\\frac{0.693}{5730\\;\\mathrm y}\\;=\\;1.21\\times10^{-4}\\;\\mathrm y^{-1}\\\\t\\;=\\;-\\frac1{\\mathrm\\lambda}\\;\\ln\\;\\left(\\frac{N_t}{N_0}\\right)\\;=\\;-\\left(\\frac1{1.21\\times10^{-4}\\;y^{-1}}\\right)\\;\\ln\\left(\\frac{8.25}{100}\\right)\\;=\\;20,600\\;\\mathrm y",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "b877iyq0oy7wmby",
+                "type": "p"
+              }
+            ],
+            "id": "2017783477"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b0xjx5gywkymzrr",
+                  "type": "p"
+                }
+              ],
+              "id": "3035689818"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n1j5u5156cnj527",
+                  "type": "p"
+                }
+              ],
+              "id": "477743981"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "spb4nkdeeg4n3fk",
+                  "type": "p"
+                }
+              ],
+              "id": "1055324972"
+            }
+          ],
+          "id": "3105082475",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{1/2}}\\;=\\;\\frac{0.693}{5730\\;\\mathrm y}\\;=\\;1.21\\times10^{-4}\\;\\mathrm y^{-1}\\\\t\\;=\\;-\\frac1{\\mathrm\\lambda}\\;\\ln\\;\\left(\\frac{N_t}{N_0}\\right)\\;=\\;-\\left(\\frac1{1.21\\times10^{-4}\\;y^{-1}}\\right)\\;\\ln\\left(\\frac{8.25}{100}\\right)\\;=\\;20,600\\;\\mathrm y",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "ei8788vopbix0i7",
+                    "type": "p"
+                  }
+                ],
+                "id": "1355164832"
+              },
+              "id": "3111593604",
+              "legacyMatch": "[20600,20650]",
+              "rule": "input = {[20600,20650]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "b5xuj6wbj7n61z1",
+                    "type": "p"
+                  }
+                ],
+                "id": "506604178"
+              },
+              "id": "129442268",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What is the age of mummified primate skin that contains 8.25% of the original quantity of 14C?  years",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3105082475",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the age of mummified primate skin that contains 8.25% of the original quantity of "
+            },
+            {
+              "sup": true,
+              "text": "14"
+            },
+            {
+              "text": "C? "
+            }
+          ],
+          "id": "8gdcy2fqhitg3in",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " years"
+            }
+          ],
+          "id": "8di1o95poa6ohiz",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3105082475": [
+      "78545"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

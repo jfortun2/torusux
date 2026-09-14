@@ -1,0 +1,613 @@
+{
+  "id": "80841",
+  "type": "Page",
+  "tags": [],
+  "title": "K Expressions and Coupled Equilibria",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium systems discussed so far have all been relatively straightforward, involving single reversible reactions written in a specific way. However, every reversible reaction can be written in different ways, and many systems involve two or more "
+              },
+              {
+                "children": [
+                  {
+                    "text": "coupled equilibria"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "A system characterized by the simultaneous establishment of two or more equilibrium reactions with one or more shared substances."
+                      }
+                    ],
+                    "id": "1467624945",
+                    "type": "p"
+                  }
+                ],
+                "id": "2406023382",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " reactions having reactant or product species in common. We can use the law of mass action to relate equilibrium constants for the different ways of writing a reaction and to determine the equilibrium constant for systems involving coupled equilibria. The three basic manipulations involved in this approach are illustrated using reactions involved in the creation of photochemical smog."
+              }
+            ],
+            "id": "4iy2cseiaj6632r",
+            "type": "p"
+          },
+          {
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "Photochemical smog over Mexico City, December 2010. (Modification of an image from Fidel Gonzalez.)"
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "ppstykcn6r3f4iq",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "3564pqkft8imolu",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/23/23e2acd452ad177ccf409fdd657f614c/smog_mexico_city.png",
+            "type": "img"
+          },
+          {
+            "children": [
+              {
+                "text": "Nitrogen oxides are among the main components of smog (a combination of the words "
+              },
+              {
+                "em": true,
+                "text": "smoke"
+              },
+              {
+                "text": " and "
+              },
+              {
+                "em": true,
+                "text": "fog"
+              },
+              {
+                "text": "). Nitrogen oxides form when nitrogen and oxygen gases react under high temperature conditions, such as inside a car engine. For example, nitrogen monoxide forms from nitrogen and oxygen in air:"
+              }
+            ],
+            "id": "r9ppn1rbl54xx12",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "09w3z7rgd8zheqt",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "wk1amb10kes2p8j",
+            "legacyBlockRendered": "true",
+            "src": "{\\mathrm N}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{NO}(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\; =\\;\\frac{{\\lbrack\\mathrm{NO}\\rbrack}^2}{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}\\; =\\;1.0\\times10{}^{-5}\\;\\;\\;\\mathrm{at}\\;1500\\;\\mathrm K",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "This reaction is reversible, and the choice of N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " and O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " as the reactants and NO as the product is arbitrary. What happens if we consider NO to be the reactant and N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " and O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " to be the products instead? In that case, the reaction and equilibrium constant are:"
+              }
+            ],
+            "id": "azizc3twzb5j83s",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "whj365gpapj6s3u",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "x1p54feohzfpij0",
+            "legacyBlockRendered": "true",
+            "src": "2\\;\\mathrm{NO}(g)\\;\\;\\rightarrow\\;\\;{\\mathrm N}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\; =\\;\\frac{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}{{\\lbrack\\mathrm{NO}\\rbrack}^2}\\;\\;\\;\\;\\mathrm{at}\\;1500\\;\\mathrm K",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "oze8dpkpp06wbzp",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "kd1iuuq7u458vhr",
+            "legacyBlockRendered": "true",
+            "src": "K_\\mathrm{c}\\;=\\;\\frac{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}{{\\lbrack\\mathrm{NO}\\rbrack}^2}\\; =\\;\\left(\\frac{{\\lbrack\\mathrm{NO}\\rbrack}^2}{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}\\right)^{-1} =\\;\\left(1.0\\times10^{-5}\\right)^{-1}\\;=\\;1.0\\times10{}^5{}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "When the reaction equation is reversed, the reactants and products are \"flipped,\" and the equilibrium constant is the reciprocal of the equilibrium constant for the original reaction."
+              }
+            ],
+            "id": "rohqnp6jpoktn9l",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "We sometimes write reaction equations with fractional coefficients or change the stoichiometric coefficients by some other factor. For example, we could write the previous equilibrium reaction and equilibrium constant as:"
+              }
+            ],
+            "id": "y8i7qm92zt4tkku",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "tb47tgcnxyb32dz",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ih0o3g06yexdhp2",
+            "legacyBlockRendered": "true",
+            "src": "\\frac12\\;{\\mathrm N}_2(g)\\;+\\;\\frac12\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{NO}(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\;=\\;\\frac{\\lbrack\\mathrm{NO}\\rbrack}{{\\lbrack{\\mathrm N}_2\\rbrack}^\\frac12{\\lbrack{\\mathrm O}_2\\rbrack}^\\frac12}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "vtlpw8t1qf1oskb",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "qlq9rhpibkgk336",
+            "legacyBlockRendered": "true",
+            "src": "K_\\mathrm{c}\\;=\\;\\frac{\\lbrack\\mathrm{NO}\\rbrack}{{\\lbrack{\\mathrm N}_2\\rbrack}^\\frac12{\\lbrack{\\mathrm O}_2\\rbrack}^\\frac12}\\;=\\;\\left(\\frac{{\\lbrack\\mathrm{NO}\\rbrack}^2}{{\\lbrack{\\mathrm N}_2\\rbrack}{\\lbrack{\\mathrm O}_2\\rbrack}}\\right)^\\frac12\\;=\\;\\left(1.0\\times10{}^{-5}{}\\right)^\\frac12\\;=\\;3.2\\times10^{-3}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "When the coefficients are multiplied by a factor (½ in this case), the exponents in the equilibrium constant change by that factor."
+              }
+            ],
+            "id": "pq1axwgacswgbq9",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "A second, coupled equilibrium occurs when the NO formed by the first reaction reacts with additional oxygen to form nitrogen dioxide:"
+              }
+            ],
+            "id": "wgnjabb22fb9qg5",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "gf9u5589fmaegzl",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "axtog9lrp4ord5p",
+            "legacyBlockRendered": "true",
+            "src": "2\\;\\mathrm{NO}(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\; =\\;\\frac{{\\lbrack{\\mathrm{NO}}_2\\rbrack}^2}{{\\lbrack\\mathrm{NO}\\rbrack}^2\\lbrack{\\mathrm O}_2\\rbrack}\\; =\\;2.0\\times10{}^{-4}\\;\\;\\;\\mathrm{at}\\;1500\\;\\mathrm K",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Combining the NO- and NO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "-producing reactions without canceling out like terms gives us the unsimplified equation for the overall reversible reaction for the coupled equilibria:"
+              }
+            ],
+            "id": "cheygyv0pqyz1w3",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "qnhd0lffo1xouat",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ur546totx7h1you",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;{\\mathrm N}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\; 2\\;\\mathrm{NO}(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_1\\;=1.0\\times10^{-5}\\\\\\underline{\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;2\\;\\mathrm{NO}(g) \\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_2\\;=\\;2.0\\times10^{-4}\\;}\\\\{\\mathrm N}_2(g) \\;+\\;2\\;{\\mathrm O}_2(g)\\;+\\:2\\;\\mathrm{NO}(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{NO}(g)\\;+\\;2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; K_{\\mathrm{overall}}\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "We then group terms to relate the equilibrium constant for the overall reaction, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "overall"
+              },
+              {
+                "text": ", to the equilibrium constants for the individual reactions, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "1"
+              },
+              {
+                "text": " and "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "xl7xte8ef6lw7pi",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "7nx4a1gspr8kb0e",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "wi08r169pui2bu8",
+            "legacyBlockRendered": "true",
+            "src": "K_{\\mathrm{overall}}\\;=\\;\\frac{{{\\lbrack\\mathrm{NO}\\rbrack}^2\\lbrack{\\mathrm{NO}}_2\\rbrack}^2}{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack {\\mathrm O}_2\\rbrack{\\lbrack\\mathrm{NO}\\rbrack}^2\\lbrack{\\mathrm O}_2\\rbrack}\\;=\\;\\left(\\frac{{\\lbrack\\mathrm{NO}\\rbrack}^2}{{\\lbrack {\\mathrm N}_2\\rbrack}\\lbrack{\\mathrm O}_2\\rbrack}\\right)\\;\\left(\\frac{{\\lbrack{\\mathrm{NO}}_2\\rbrack}^2}{{\\lbrack\\mathrm{NO}\\rbrack}^2 \\lbrack{\\mathrm O}_2\\rbrack}\\right)\\;=\\;K_1\\cdot K_2",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "When these two reactions are combined, we find that the equilibrium constant for the overall reaction is the product of the equilibrium constants for the individual reactions:"
+              }
+            ],
+            "id": "mxqw6dorzqblvwj",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "rreq7p0ug10oyps",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "12k2he6j27bflel",
+            "legacyBlockRendered": "true",
+            "src": "\\require{cancel}\\begin{array}{l}\\;\\;\\;\\;{\\mathrm N}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;\\cancel{2\\;\\mathrm{NO}(g)\\;} \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_1\\;=\\;1.0\\times10^{-5}\\;\\\\\\underline{\\cancel{2\\;\\mathrm{NO}(g)}\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\; 2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_2\\;=\\;2.0\\times10^{-4}\\;\\;\\;}\\;\\;\\;\\\\\\;{\\mathrm N}_2(g)\\;+\\;2\\;{\\mathrm O}_2(g)\\;\\; \\rightleftharpoons\\;\\;2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{overall}}\\;=\\;K_1\\cdot K_2\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "cjf2bn0tdrwargz",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "2z9a28nlwag15sm",
+            "legacyBlockRendered": "true",
+            "src": "K_{\\mathrm{overall}}\\;\\;=\\;\\frac{{\\lbrack{\\mathrm{NO}}_2\\rbrack}^2}{\\lbrack{\\mathrm N}_2\\rbrack{\\lbrack{\\mathrm O}_2\\rbrack}^2}\\; =\\;K_1\\cdot K_2\\;=\\;\\left(1.0\\times10^{-5}\\right)\\left(2.0\\times10^{-4}\\right)\\;=\\;2.0\\times10^{-9}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "The reasoning we used to determine relationships among these reactions can also be applied to other equilibria. The general rules are as follows:"
+              }
+            ],
+            "id": "s08getvh4e59p2b",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "1. Changing the direction of a reaction equation swaps the identities of reactants and products, so the equilibrium constant for the reversed reaction is the reciprocal of that for the forward equation:"
+              }
+            ],
+            "id": "enp7cholj6n6pw4",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "9jtp6z23me9gh8y",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "7z0lar3g8hnmisv",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm A\\;\\;\\rightleftharpoons\\;\\;\\mathrm B\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\;=\\;\\frac{\\lbrack\\mathrm B\\rbrack}{\\lbrack\\mathrm A\\rbrack}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "kp3224noxdc9kz8",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ti5kbpcv04hsspa",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm B\\;\\;\\rightleftharpoons\\;\\;\\mathrm A\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{reverse}}\\;=\\;\\frac{\\lbrack\\mathrm A\\rbrack} {\\lbrack\\mathrm B\\rbrack}\\;=\\;K_\\mathrm{c}^{-1\\;}\\;=\\;\\frac1{K_\\mathrm{c}}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "2. Changing the stoichiometric coefficients in an equation by some factor "
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": " results in an exponential change in the equilibrium constant by that same factor:"
+              }
+            ],
+            "id": "ss8k8asampaoic4",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "reamg3fkzcg6u99",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "3s03nqxsndfqmz2",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm A\\;\\;\\rightleftharpoons\\;\\;\\mathrm B\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\;=\\;\\frac{\\lbrack\\mathrm B\\rbrack}{\\lbrack\\mathrm A\\rbrack}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "0kl6kqmn7guawo8",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "5dc7wvpz32qt5hp",
+            "legacyBlockRendered": "true",
+            "src": "x\\;\\mathrm A\\;\\;\\rightleftharpoons\\;\\;x\\;\\mathrm B\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{factor}}\\;=\\;\\frac{{\\lbrack\\mathrm B\\rbrack}^x} {{\\lbrack\\mathrm A\\rbrack}^x}\\;=\\;K_\\mathrm{c}^x",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "3. Adding two equilibrium reactions together yields an overall reaction whose equilibrium constant is the mathematical product of the "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " values for the individual reactions:"
+              }
+            ],
+            "id": "xf7yfv4fvmcy404",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "9j3dw59vegoanzd",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "00xczqjvpfrwrq7",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm A\\;\\;\\rightleftharpoons\\;\\;\\mathrm B\\;\\;\\;\\;\\;\\;K_{\\mathrm{c}1}\\;=\\;\\frac{\\lbrack\\mathrm B\\rbrack}{\\lbrack\\mathrm A\\rbrack} \\;\\;\\;\\;\\;\\;\\;\\mathrm{and}\\;\\;\\;\\;\\;\\;\\;\\mathrm B\\;\\;\\rightleftharpoons\\;\\;\\mathrm C\\;\\;\\;\\;\\;\\;K_{\\mathrm{c}2}\\;=\\;\\frac{\\lbrack\\mathrm C\\rbrack} {\\lbrack\\mathrm B\\rbrack}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "hgisxcrjzk3hurc",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "7j9vytz4nq2fp3b",
+            "legacyBlockRendered": "true",
+            "src": "\\require{cancel}\\mathrm A\\;\\;\\rightleftharpoons\\;\\;\\mathrm C\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{combined}}\\;=\\;\\frac{\\lbrack\\mathrm C\\rbrack} {\\lbrack\\mathrm A\\rbrack}\\;=\\;\\frac{\\cancel{\\lbrack\\mathrm B\\rbrack}}{\\lbrack\\mathrm A\\rbrack}\\cdot\\frac{\\lbrack\\mathrm C\\rbrack} {\\cancel{\\lbrack\\mathrm B\\rbrack}}\\;=\\;K_{\\mathrm{c}1}\\cdot K_{\\mathrm{c}2}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "It is also important to recognize that the reaction equation and equilibrium constant provide the same information regardless of the form it is in."
+              }
+            ],
+            "id": "gzagltgeoxoo6ue",
+            "type": "p"
+          }
+        ],
+        "id": "2249779710",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80175,
+            "id": "3330414113",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79126,
+            "id": "2703155500",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80105,
+            "id": "4016598800",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "78869653",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79712,
+            "id": "2707319956",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79702,
+            "id": "1739485060",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79771,
+            "id": "3756873265",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2581738562",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78548"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

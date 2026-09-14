@@ -1,0 +1,201 @@
+{
+  "id": "80396",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ox_numbers_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "(2\\cdot x)\\;+\\;(4\\cdot(+1))\\;=\\;0\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;x\\;=\\;\\frac{-4}2\\;=\\;-2",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "rjivpkj408mifko",
+                "type": "p"
+              }
+            ],
+            "id": "2958714270"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ncdkr8rcvm6zbox",
+                  "type": "p"
+                }
+              ],
+              "id": "1467959566"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7qr8a7pafq5cr6i",
+                  "type": "p"
+                }
+              ],
+              "id": "2832441103"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "keqfh7k5wik2g2x",
+                  "type": "p"
+                }
+              ],
+              "id": "3611459665"
+            }
+          ],
+          "id": "2095708654",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Hydrogen is +1 when combined with nonmetals. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "(2\\cdot x)\\;+\\;(4\\cdot(+1))\\;=\\;0\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;x\\;=\\;\\frac{-4}2\\;=\\;-2",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "oyjxfstfg9cztex",
+                    "type": "p"
+                  }
+                ],
+                "id": "1058240561"
+              },
+              "id": "1528067214",
+              "legacyMatch": "-2",
+              "rule": "input = {-2}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Hydrogen is +1 when combined with nonmetals."
+                      }
+                    ],
+                    "id": "5l46ekavzbdem2a",
+                    "type": "p"
+                  }
+                ],
+                "id": "2005603807"
+              },
+              "id": "2808382854",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2095708654",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the oxidation number for nitrogen in N"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "j4kfljenp12a1gb",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2095708654": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,677 @@
+{
+  "id": "79195",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78219"
+  ],
+  "title": "le_chat_change_press_v2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "C",
+          "D"
+        ],
+        "3919487786"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "99beea9q2su7c0c",
+                  "type": "p"
+                }
+              ],
+              "id": "529190481"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "icuoktceztfq1hn",
+                  "type": "p"
+                }
+              ],
+              "id": "1468400076"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ee91j8p59fxoz5a",
+                  "type": "p"
+                }
+              ],
+              "id": "201207431"
+            }
+          ],
+          "id": "dec279c94cde42ac87c7295c712d0487",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Adding an inert or non-reactive species at constant volume does not change the partial pressures of the products or reactants. There is no change in "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": ", and the reaction remains at equilibrium."
+                      }
+                    ],
+                    "id": "u438n7elgu80p40",
+                    "type": "p"
+                  }
+                ],
+                "id": "3165136337"
+              },
+              "id": "3919487786",
+              "legacyMatch": "C,D",
+              "rule": "(!(input like {B})) && ((!(input like {A})) && (input like {D} && (input like {C})))",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "a6c19482cf38455b8d7805a9de3809ab",
+                    "type": "p"
+                  }
+                ],
+                "id": "1687200061"
+              },
+              "id": "1188921383",
+              "legacyMatch": "A",
+              "namremoveSetOpse": "AUTOGEN_{A}",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "c1403de1ca3a45b0a26805710a1a1093",
+                    "type": "p"
+                  }
+                ],
+                "id": "744478262"
+              },
+              "id": "1402452195",
+              "legacyMatch": "A,B",
+              "namremoveSetOpse": "AUTOGEN_{A,B}",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && (input like {B} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "fa44c8f782434eaa8a7b4ad6b3cc7421",
+                    "type": "p"
+                  }
+                ],
+                "id": "679055676"
+              },
+              "id": "2585475531",
+              "legacyMatch": "A,B,C",
+              "namremoveSetOpse": "AUTOGEN_{A,B,C}",
+              "rule": "(!(input like {D})) && (input like {C} && (input like {B} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "fba7711fdf7c4824a21b344bdcb8eccf",
+                    "type": "p"
+                  }
+                ],
+                "id": "990887603"
+              },
+              "id": "1252867569",
+              "legacyMatch": "A,B,C,D",
+              "namremoveSetOpse": "AUTOGEN_{A,B,C,D}",
+              "rule": "input like {D} && (input like {C} && (input like {B} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "aca473cb52a746c7b8881b28cc623da9",
+                    "type": "p"
+                  }
+                ],
+                "id": "2176706443"
+              },
+              "id": "2138309661",
+              "legacyMatch": "A,B,D",
+              "namremoveSetOpse": "AUTOGEN_{A,B,D}",
+              "rule": "(!(input like {C})) && (input like {D} && (input like {B} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "fa26b4594e6c4855a5d67c48de364649",
+                    "type": "p"
+                  }
+                ],
+                "id": "1257971311"
+              },
+              "id": "4243395587",
+              "legacyMatch": "A,C",
+              "namremoveSetOpse": "AUTOGEN_{A,C}",
+              "rule": "(!(input like {D})) && ((!(input like {B})) && (input like {C} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "c5b077a08a38457cbe92ea0048f818ff",
+                    "type": "p"
+                  }
+                ],
+                "id": "3069085991"
+              },
+              "id": "1748858299",
+              "legacyMatch": "A,C,D",
+              "namremoveSetOpse": "AUTOGEN_{A,C,D}",
+              "rule": "(!(input like {B})) && (input like {D} && (input like {C} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "f5199abdae5d49de8121f38e62eae290",
+                    "type": "p"
+                  }
+                ],
+                "id": "2061160320"
+              },
+              "id": "210674084",
+              "legacyMatch": "A,D",
+              "namremoveSetOpse": "AUTOGEN_{A,D}",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && (input like {D} && (input like {A})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "e471a756dafd4fa8ad6d3bdb289fe993",
+                    "type": "p"
+                  }
+                ],
+                "id": "2044678164"
+              },
+              "id": "162251007",
+              "legacyMatch": "B",
+              "namremoveSetOpse": "AUTOGEN_{B}",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && ((!(input like {A})) && (input like {B})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "ee5f8fbce48f4f1ba2fb2f6db8ce1950",
+                    "type": "p"
+                  }
+                ],
+                "id": "389373038"
+              },
+              "id": "1504592467",
+              "legacyMatch": "B,C",
+              "namremoveSetOpse": "AUTOGEN_{B,C}",
+              "rule": "(!(input like {D})) && ((!(input like {A})) && (input like {C} && (input like {B})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "a06b5c9df5f3455f80056aedc5ed9693",
+                    "type": "p"
+                  }
+                ],
+                "id": "1011331571"
+              },
+              "id": "3532274487",
+              "legacyMatch": "B,C,D",
+              "namremoveSetOpse": "AUTOGEN_{B,C,D}",
+              "rule": "(!(input like {A})) && (input like {D} && (input like {C} && (input like {B})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "be0e1fe59ce447c38e32be2ef6898b61",
+                    "type": "p"
+                  }
+                ],
+                "id": "1601484299"
+              },
+              "id": "1727812879",
+              "legacyMatch": "B,D",
+              "namremoveSetOpse": "AUTOGEN_{B,D}",
+              "rule": "(!(input like {C})) && ((!(input like {A})) && (input like {D} && (input like {B})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "c48dc69c7e914ecfacd6ed6d9b1fe6bf",
+                    "type": "p"
+                  }
+                ],
+                "id": "3114261949"
+              },
+              "id": "972442624",
+              "legacyMatch": "C",
+              "namremoveSetOpse": "AUTOGEN_{C}",
+              "rule": "(!(input like {D})) && ((!(input like {B})) && ((!(input like {A})) && (input like {C})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that when an equilibrium system experiences a change in conditions (is stressed), the system will respond to the stress by shifting in a way that re-establishes equilibrium, as described by Le Châtelier’s principle. Adding an inert or non-reactive species (a species that is not a reactant, product, or catalyst) may or may not change the reaction quotient Q. For reaction quotients with gaseous products and reactants, adding an inert species at constant volume increases the total pressure of the reaction, but it does not change the partial pressures of the products or reactants. There is no change in Q, and the reaction remains at equilibrium. For reaction quotients with gaseous products and reactants, adding an inert species at constant pressure can only occur if the volume also increases to maintain the same total pressure of the reaction. In this case, a possible change in Q and shift in the system depends on whether the number of moles of reactants and products are equal or different, "
+                      }
+                    ],
+                    "id": "b25be4ce3e334471818274b41b71a161",
+                    "type": "p"
+                  }
+                ],
+                "id": "2928682781"
+              },
+              "id": "2580702258",
+              "legacyMatch": "D",
+              "namremoveSetOpse": "AUTOGEN_{D}",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {D})))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "p50j63dhvuvi0cf",
+                    "type": "p"
+                  }
+                ],
+                "id": "1570140347"
+              },
+              "id": "198487215",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1188921383"
+        ],
+        [
+          [
+            "A",
+            "B"
+          ],
+          "1402452195"
+        ],
+        [
+          [
+            "A",
+            "B",
+            "C"
+          ],
+          "2585475531"
+        ],
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "1252867569"
+        ],
+        [
+          [
+            "A",
+            "B",
+            "D"
+          ],
+          "2138309661"
+        ],
+        [
+          [
+            "A",
+            "C"
+          ],
+          "4243395587"
+        ],
+        [
+          [
+            "A",
+            "C",
+            "D"
+          ],
+          "1748858299"
+        ],
+        [
+          [
+            "A",
+            "D"
+          ],
+          "210674084"
+        ],
+        [
+          [
+            "B"
+          ],
+          "162251007"
+        ],
+        [
+          [
+            "B",
+            "C"
+          ],
+          "1504592467"
+        ],
+        [
+          [
+            "B",
+            "C",
+            "D"
+          ],
+          "3532274487"
+        ],
+        [
+          [
+            "B",
+            "D"
+          ],
+          "1727812879"
+        ],
+        [
+          [
+            "C"
+          ],
+          "972442624"
+        ],
+        [
+          [
+            "D"
+          ],
+          "2580702258"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium shifts to the left to produce more NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ")."
+              }
+            ],
+            "id": "wb6hsdxy0qlpmj8",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The equilibrium shifts to the right to produce more NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ")."
+              }
+            ],
+            "id": "2zcw7pfdrrdf1l5",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The concentration of N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ") remains the same."
+              }
+            ],
+            "id": "ikzughjmhn2zx36",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The concentration of NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "("
+              },
+              {
+                "em": true,
+                "text": "g"
+              },
+              {
+                "text": ") remains the same."
+              }
+            ],
+            "id": "3ret6oo8yjhwnfi",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What happens to the following equilibrium when neon (Ne) is added to double the total pressure at constant volume? Select all correct answers."
+            }
+          ],
+          "id": "bhzikspxtaft8z5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm N}_2(g)\\;+\\;3\\;{\\mathrm H}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{NH}}_3(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "2eb9cjfm7xhp3r7",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "dec279c94cde42ac87c7295c712d0487": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

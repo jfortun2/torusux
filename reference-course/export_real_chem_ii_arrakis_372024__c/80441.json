@@ -1,0 +1,513 @@
+{
+  "id": "80441",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "strength_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gvdzr7j84jm5ait",
+                  "type": "p"
+                }
+              ],
+              "id": "2065596584"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rollawnee6s7pxs",
+                  "type": "p"
+                }
+              ],
+              "id": "719114380"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h4csbcvwu01s1k4",
+                  "type": "p"
+                }
+              ],
+              "id": "1026656985"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "08s6i5z7xyj5shm",
+                    "type": "p"
+                  }
+                ],
+                "id": "3192855433"
+              },
+              "id": "2920281489",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "ngc73ji8mpbn0ar",
+                    "type": "p"
+                  }
+                ],
+                "id": "391255329"
+              },
+              "id": "940862099",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "79heplkfbq74htk",
+                    "type": "p"
+                  }
+                ],
+                "id": "25148609"
+              },
+              "id": "1558203029",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3eenzyxq51uhese",
+                  "type": "p"
+                }
+              ],
+              "id": "4207594903"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jvft7wu4ls74kp8",
+                  "type": "p"
+                }
+              ],
+              "id": "49277116"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zcgao1qfi4nr8kw",
+                  "type": "p"
+                }
+              ],
+              "id": "337270232"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. With the equation for the base ionization constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": ", "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{b}\\;\\;=\\;\\frac{\\;\\lbrack\\mathrm{HB}^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack}{\\lbrack\\mathrm B\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Because a weak base only partially ionizes, the [B] is greater than [HB"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] and [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "] and therefore "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " is a smaller value."
+                      }
+                    ],
+                    "id": "sko2urzn46sllgs",
+                    "type": "p"
+                  }
+                ],
+                "id": "3888074791"
+              },
+              "id": "2511059940",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. With the equation for the base ionization constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": ", "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{b}\\;\\;=\\;\\frac{\\;\\lbrack\\mathrm{HB}^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack}{\\lbrack\\mathrm B\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Because a weak base only partially ionizes, the [B] is greater than [HB"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] and [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "], and therefore "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " is a smaller value. "
+                      }
+                    ],
+                    "id": "mt9l95yawzn8n4a",
+                    "type": "p"
+                  }
+                ],
+                "id": "2786211234"
+              },
+              "id": "2429084101",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "hjx83xnqcustksl",
+                    "type": "p"
+                  }
+                ],
+                "id": "1324925681"
+              },
+              "id": "571918441",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " The weaker the base, the  the value of Kb because the weaker the base, the  it ionizes. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2920281489"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "940862099"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "2511059940"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "2429084101"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1719492215",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "2990416316",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "mzvp3ewfbhwg1u7",
+            "text": "greater "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "8d7xzpvuardpz2y",
+            "text": "lesser"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "dgkf0m3qjoytlpk",
+            "text": "more"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "8m7edxkhs6o5uqd",
+            "text": "less"
+          }
+        ],
+        "id": "second_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " The "
+            },
+            {
+              "strong": true,
+              "text": "weaker"
+            },
+            {
+              "text": " the base, the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the value of "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "b"
+            },
+            {
+              "text": " because the "
+            },
+            {
+              "strong": true,
+              "text": "weaker"
+            },
+            {
+              "text": " the base, the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " it ionizes. "
+            }
+          ],
+          "id": "x6nj6ccy7o68l0f",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78389"
+    ],
+    "second": [
+      "78389"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

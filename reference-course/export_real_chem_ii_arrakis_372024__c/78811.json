@@ -1,0 +1,1058 @@
+{
+  "id": "78811",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_ph_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0rrh1b8zoc9utig",
+                  "type": "p"
+                }
+              ],
+              "id": "3547794941"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qspgwmlorarkypq",
+                  "type": "p"
+                }
+              ],
+              "id": "2273612678"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "22lj70jrrcuz7da",
+                  "type": "p"
+                }
+              ],
+              "id": "3228850984"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "xxzrmpe97xgzyqt",
+                    "type": "p"
+                  }
+                ],
+                "id": "1520615079"
+              },
+              "id": "753430853",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "x358pk0pz2aurlg",
+                    "type": "p"
+                  }
+                ],
+                "id": "2257799855"
+              },
+              "id": "2215745614",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "zhaj7zzs0fbjcht",
+                    "type": "p"
+                  }
+                ],
+                "id": "2789919901"
+              },
+              "id": "1877378778",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "33p7vrbhxc1c1k3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1156482722"
+              },
+              "id": "3006216436",
+              "legacyMatch": "D",
+              "rule": "input like {first_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "g9jwcql91kp1mwx",
+                    "type": "p"
+                  }
+                ],
+                "id": "2539470032"
+              },
+              "id": "3138785944",
+              "legacyMatch": "E",
+              "rule": "input like {first_E}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "cakzr88xlgidxeb",
+                    "type": "p"
+                  }
+                ],
+                "id": "3118029423"
+              },
+              "id": "1105712651",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o0xtvens7b2d26z",
+                  "type": "p"
+                }
+              ],
+              "id": "152375952"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9i9fu8vrefsrea5",
+                  "type": "p"
+                }
+              ],
+              "id": "1136283981"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k8zrs26otx9nqgh",
+                  "type": "p"
+                }
+              ],
+              "id": "1639148117"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Because pH is a logarithmic scale and pH = −log[H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "], every increase of 1 pH unit represents a 10-fold decrease in [H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "]."
+                      }
+                    ],
+                    "id": "bfi5ktrrmolbm7g",
+                    "type": "p"
+                  }
+                ],
+                "id": "2555443003"
+              },
+              "id": "3159777928",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Because pH is a logarithmic scale and pH = −log[H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "], every increase of 1 pH unit represents a 10-fold decrease in [H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "]."
+                      }
+                    ],
+                    "id": "5t5s297be741r1v",
+                    "type": "p"
+                  }
+                ],
+                "id": "3988640177"
+              },
+              "id": "2894291728",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "j3muq1wckwcdrpz",
+                    "type": "p"
+                  }
+                ],
+                "id": "1132608642"
+              },
+              "id": "1665854082",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8r94ajbz3uipi97",
+                  "type": "p"
+                }
+              ],
+              "id": "4272880573"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a1b044ynbfhqvr3",
+                  "type": "p"
+                }
+              ],
+              "id": "3315195119"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ns9ji6t33ghrbsy",
+                  "type": "p"
+                }
+              ],
+              "id": "2314802533"
+            }
+          ],
+          "id": "third",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "48deif632lf7bwr",
+                    "type": "p"
+                  }
+                ],
+                "id": "2604195484"
+              },
+              "id": "2532008299",
+              "legacyMatch": "A",
+              "rule": "input like {third_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "6nt5oegwlx8bsp9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1929968161"
+              },
+              "id": "4175913961",
+              "legacyMatch": "B",
+              "rule": "input like {third_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "ke7xbjsd8bwc17x",
+                    "type": "p"
+                  }
+                ],
+                "id": "1705864247"
+              },
+              "id": "225191692",
+              "legacyMatch": "C",
+              "rule": "input like {third_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "6cpd5vmycd15p9h",
+                    "type": "p"
+                  }
+                ],
+                "id": "1911904235"
+              },
+              "id": "3789829905",
+              "legacyMatch": "D",
+              "rule": "input like {third_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "xupgm5dop8tdvgb",
+                    "type": "p"
+                  }
+                ],
+                "id": "1125526688"
+              },
+              "id": "1652686820",
+              "legacyMatch": "E",
+              "rule": "input like {third_E}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "u1dxltdpcmnnwxv",
+                    "type": "p"
+                  }
+                ],
+                "id": "4203675179"
+              },
+              "id": "1696224850",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nkksr0rukyo6eri",
+                  "type": "p"
+                }
+              ],
+              "id": "2887669076"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cm09hiw1w2awevt",
+                  "type": "p"
+                }
+              ],
+              "id": "3184722126"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o4m41099q6u2y0i",
+                  "type": "p"
+                }
+              ],
+              "id": "1604107932"
+            }
+          ],
+          "id": "four",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Since pH is a logarithmic scale, a change of 1 pH unit corresponds to the [H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] changing by a factor of 10. A change of 3 pH units therefore corresponds to the [H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] changing by a factor of 10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ", or 1000."
+                      }
+                    ],
+                    "id": "s6783lgyi3mcpva",
+                    "type": "p"
+                  }
+                ],
+                "id": "461217450"
+              },
+              "id": "3033770069",
+              "legacyMatch": "A",
+              "rule": "input like {four_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Since pH is a logarithmic scale, a change of 1 pH unit corresponds to the [H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] changing by a factor of 10. A change of 3 pH units therefore corresponds to the [H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] changing by a factor of 10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ", or 1000."
+                      }
+                    ],
+                    "id": "rjej5h6gs1uqiyw",
+                    "type": "p"
+                  }
+                ],
+                "id": "1991166010"
+              },
+              "id": "1886943679",
+              "legacyMatch": "B",
+              "rule": "input like {four_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "4upigjqqmzroku6",
+                    "type": "p"
+                  }
+                ],
+                "id": "1680776326"
+              },
+              "id": "2022216501",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The pH of tomato juice, 4.50, is one unit greater than the pH of orange juice, 3.50.The [H3O+] of tomato juice is   than that of orange juice.A solution with a pH of 6.50, which is three units greater than orange juice, would have an [H3O+] that is   than that of orange juice. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "753430853"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "2215745614"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "1877378778"
+        ],
+        [
+          [
+            "first_D"
+          ],
+          "3006216436"
+        ],
+        [
+          [
+            "first_E"
+          ],
+          "3138785944"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "3159777928"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "2894291728"
+        ],
+        [
+          [
+            "third_A"
+          ],
+          "2532008299"
+        ],
+        [
+          [
+            "third_B"
+          ],
+          "4175913961"
+        ],
+        [
+          [
+            "third_C"
+          ],
+          "225191692"
+        ],
+        [
+          [
+            "third_D"
+          ],
+          "3789829905"
+        ],
+        [
+          [
+            "third_E"
+          ],
+          "1652686820"
+        ],
+        [
+          [
+            "four_A"
+          ],
+          "3033770069"
+        ],
+        [
+          [
+            "four_B"
+          ],
+          "1886943679"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1617580793",
+          "operation": "shuffle",
+          "partId": "four",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "rsa0lzdfekqvui9",
+            "text": "2 times "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "qkev5jo4vsmdcys",
+            "text": "3 times "
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "hk885b0rgsnaq1s",
+            "text": "10 times"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "xe043p2nbvgx04m",
+            "text": "100 times "
+          }
+        ],
+        "id": "first_D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "1000 times "
+              }
+            ],
+            "id": "3629033548",
+            "type": "p"
+          }
+        ],
+        "id": "first_E"
+      },
+      {
+        "content": [
+          {
+            "id": "8gp4xzc6gkkqak4",
+            "text": "less"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "oa3z6u28gazfa9r",
+            "text": "more"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "w79fm6ku5rq8l7e",
+            "text": "2 times "
+          }
+        ],
+        "id": "third_A"
+      },
+      {
+        "content": [
+          {
+            "id": "7vf52vomre32irs",
+            "text": "3 times "
+          }
+        ],
+        "id": "third_B"
+      },
+      {
+        "content": [
+          {
+            "id": "jddw5zfronrwso7",
+            "text": "10 times"
+          }
+        ],
+        "id": "third_C"
+      },
+      {
+        "content": [
+          {
+            "id": "zbc6srwsi301dlv",
+            "text": "100 times "
+          }
+        ],
+        "id": "third_D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "1000 times "
+              }
+            ],
+            "id": "371239686",
+            "type": "p"
+          }
+        ],
+        "id": "third_E"
+      },
+      {
+        "content": [
+          {
+            "id": "0ow6ueg63thopp5",
+            "text": "less"
+          }
+        ],
+        "id": "four_A"
+      },
+      {
+        "content": [
+          {
+            "id": "s2u6fdnxn8a2rw7",
+            "text": "more"
+          }
+        ],
+        "id": "four_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C",
+          "first_D",
+          "first_E"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "third_A",
+          "third_B",
+          "third_C",
+          "third_D",
+          "third_E"
+        ],
+        "id": "third",
+        "inputType": "dropdown",
+        "partId": "third",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "four_A",
+          "four_B"
+        ],
+        "id": "four",
+        "inputType": "dropdown",
+        "partId": "four",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The pH of tomato juice, 4.50, is one unit greater than the pH of orange juice, 3.50."
+            }
+          ],
+          "id": "cljs1ulce0th4ff",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The [H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] of tomato juice is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " than that of orange juice."
+            }
+          ],
+          "id": "1zqo6udvy87hjtj",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "A solution with a pH of 6.50, which is three units greater than orange juice, would have an [H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] that is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "third",
+              "input": "third",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "four",
+              "input": "four",
+              "type": "input_ref"
+            },
+            {
+              "text": " than that of orange juice. "
+            }
+          ],
+          "id": "i7769avwjgqqv91",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78356"
+    ],
+    "four": [
+      "78356"
+    ],
+    "second": [
+      "78356"
+    ],
+    "third": [
+      "78356"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

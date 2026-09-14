@@ -1,0 +1,173 @@
+{
+  "id": "78583",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "k_digt2-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wtpc3zxrujr5btp",
+                  "type": "p"
+                }
+              ],
+              "id": "3141998245"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tvj3umuncxvfd03",
+                  "type": "p"
+                }
+              ],
+              "id": "540759955"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "85lyi7vwkpv4b91",
+                  "type": "p"
+                }
+              ],
+              "id": "2340603425"
+            }
+          ],
+          "id": "1386626752",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The equilibrium constant is constant for a given reaction at a given temperature."
+                      }
+                    ],
+                    "id": "7whv9u1ndqaeb4c",
+                    "type": "p"
+                  }
+                ],
+                "id": "3133675460"
+              },
+              "id": "2287352843",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant is constant for a given reaction at a given temperature."
+                      }
+                    ],
+                    "id": "qbcr0ssiki20snt",
+                    "type": "p"
+                  }
+                ],
+                "id": "3494399553"
+              },
+              "id": "1578244198",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Given enough time, without changing any other conditions, the value for Kc will change.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "rb5jvy1y0ci1cuw",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "tjzecm5bkn9e2w5",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given enough time, without changing any other conditions, the value for "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " will change."
+            }
+          ],
+          "id": "6uc58r869h77ecq",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1386626752": [
+      "78357"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

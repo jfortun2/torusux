@@ -1,0 +1,385 @@
+{
+  "id": "79403",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78273"
+  ],
+  "title": "strength_conj_base_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": " Incorrect. "
+                  }
+                ],
+                "id": "yx9s9d1gw8ew77j",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "dgak8ijgictr89t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " An acid with the lowest "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " will be the weakest acid and have the strongest conjugate base. @@a@@, "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " = @@deca@@×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "@@expa@@"
+                  },
+                  {
+                    "text": " is the weakest acid and has the strongest conjugate base. "
+                  }
+                ],
+                "id": "0spo5oo8eejnv6z",
+                "type": "p"
+              }
+            ],
+            "id": "1386710541"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "34p81o6oucrl8tt",
+                  "type": "p"
+                }
+              ],
+              "id": "3211225021"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xqevzjgbjkb2rm8",
+                  "type": "p"
+                }
+              ],
+              "id": "1182978899"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t8xyflj3ciyyrn9",
+                  "type": "p"
+                }
+              ],
+              "id": "321696725"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An acid with the highest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " is the strongest acid and will have the weakest conjugate base. An acid with the lowest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " will be the weakest acid and have the strongest conjugate base. "
+                      }
+                    ],
+                    "id": "aec8c13fdff047679741fc4d6923becc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2464769310"
+              },
+              "id": "3751663894",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An acid with the highest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " is the strongest acid and will have the weakest conjugate base. An acid with the lowest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " will be the weakest acid and have the strongest conjugate base."
+                      }
+                    ],
+                    "id": "abec52e0a10e40af859499c1a77cb4dc",
+                    "type": "p"
+                  }
+                ],
+                "id": "1347680230"
+              },
+              "id": "835679993",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "836571360",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst weakest = [\"hypoiodous acid\", \"boric acid\", \"hydrocyanic acid\", \"hypobromous acid\", \"hypochlorous acid\"];\nconst d1 = [3.2, 5.4, 6.2, 2.8, 4.0];\nconst e1 = [-11, -10, -10, -9, -8];\nconst list2 = [\"propanoic acid\", \"butanoic acid\", \"pentanoic acid\", \"acetic acid\", \"hydrazoic acid\"];\nconst d2 = [1.3, 1.5, 1.5, 1.8, 2.5];\nconst e2 = [-5, -5, -5, -5, -5];\n\nconst list3 = [\"benzoic acid\", \"formic acid\", \"cyanic acid\", \"nitrous acid\", \"hydrofluoric acid\"];\nconst d3 = [6.3, 1.8, 3.5, 5.6, 6.3];\nconst e3 = [-5, -4, -4, -4, -4];\nconst strongest = [\"chloroacetic acid\", \"aresenic acid\", \"chlorous acid\", \"periodic acid\", \"iodic acid\", \"trichloroacetic acid\"]\nconst const1 = OLI.random(0,4);\nconst d4 = [1.4, 5.5, 1.1, 7.3, 1.7, 2.2];\nconst e4 = [-3, -3, -2, -2, -1];\nconst const2 = OLI.random(0,4);\nconst const3 = OLI.random(0,4);\nconst const4 = OLI.random(0,5);\nconst a = weakest[const1];\nconst deca = d1[const1];\nconst expa = e1[const1];\nconst b = list2[const2];\nconst decb = d2[const2];\nconst expb = e2[const2];\nconst c = list3[const3];\nconst decc = d3[const3];\nconst expc = e3[const3];\nconst d = strongest[const4];\nconst decd = d4[const4];\nconst expd = e4[const4];\n// Expose variables to OLI\nmodule.exports = {\n  const1,\n  const2,\n  const3,\n  const4,\n  a, deca, expa,\n  b, decb, expb,\n  c, decc, expc,\n  d, decd, expd\n};\n",
+              "id": "a7211f95bc914a688b997b54b0338d09",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@a@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@deca@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expa@@"
+              }
+            ],
+            "id": "6enym7k5g65tra8",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@b@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@decb@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expb@@"
+              }
+            ],
+            "id": "m2hzf8sw3yfjrzu",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@c@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@decc@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expc@@"
+              }
+            ],
+            "id": "xln86w12wy0y6go",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@d@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@decd@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expd@@"
+              }
+            ],
+            "id": "t6r0bep0t5ns13k",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following has the strongest conjugate base? "
+            }
+          ],
+          "id": "a0c6b7740b664069b9ab3c259fe2c8da",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

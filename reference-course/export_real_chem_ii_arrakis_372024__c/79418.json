@@ -1,0 +1,317 @@
+{
+  "id": "79418",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78274"
+  ],
+  "title": "explain_equilibrium_skill_pool-explain_equil_skill_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The statement that is true is: at equilibrium the concentrations of all species remain constant."
+                  }
+                ],
+                "id": "n5enyoch5h05dw9",
+                "type": "p"
+              }
+            ],
+            "id": "3398560698"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3qhop43oqgishxc",
+                  "type": "p"
+                }
+              ],
+              "id": "4228033423"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4hz4y50wl6t2pvs",
+                  "type": "p"
+                }
+              ],
+              "id": "418427307"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nca8gyp7n4qoil9",
+                  "type": "p"
+                }
+              ],
+              "id": "253716439"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. No chemical species in a reversible reaction will be 0 when the reaction is at equilibrium."
+                      }
+                    ],
+                    "id": "gjg4oqkzx3qb05x",
+                    "type": "p"
+                  }
+                ],
+                "id": "1489226776"
+              },
+              "id": "907443877",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. At equilibrium the rate of the forward reaction is equal to the rate of the reverse reaction."
+                      }
+                    ],
+                    "id": "dqi32r9xgjoepq2",
+                    "type": "p"
+                  }
+                ],
+                "id": "530963228"
+              },
+              "id": "3377702222",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. At equilibrium the concentrations of all species remain constant."
+                      }
+                    ],
+                    "id": "paunw6pap6u4set",
+                    "type": "p"
+                  }
+                ],
+                "id": "3650817455"
+              },
+              "id": "503414673",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Once at equilibrium a reaction will remain at equilibrium indefinitely, unless there is a change imposed on the system, i.e. a change in temperature."
+                      }
+                    ],
+                    "id": "irtqkgwoi1z7lvu",
+                    "type": "p"
+                  }
+                ],
+                "id": "828951515"
+              },
+              "id": "87442821",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ihpmck0ikeqwp7o",
+                    "type": "p"
+                  }
+                ],
+                "id": "469220954"
+              },
+              "id": "4232154226",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "907443877"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3377702222"
+            ],
+            [
+              [
+                "C"
+              ],
+              "503414673"
+            ],
+            [
+              [
+                "D"
+              ],
+              "87442821"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "907443877"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3377702222"
+        ],
+        [
+          [
+            "C"
+          ],
+          "503414673"
+        ],
+        [
+          [
+            "D"
+          ],
+          "87442821"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1848273682",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "When a reaction is at equilibrium one or more of the reactants or products will have a concentration of 0 M."
+              }
+            ],
+            "id": "v22cm435x3jmny9",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "At equilibrium the rate of the forward reaction is greater than the rate of the reverse reaction."
+              }
+            ],
+            "id": "3kped53gbl220zg",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "At equilibrium the concentrations of all species remain constant."
+              }
+            ],
+            "id": "blfbytw63qb66ag",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Once at equilibrium, a reaction can spontaneously shift out of equilibrium."
+              }
+            ],
+            "id": "m7cumiay7kyq1oe",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements about chemical equilibrium is true? "
+            }
+          ],
+          "id": "24v69qmuh1ckn0g",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

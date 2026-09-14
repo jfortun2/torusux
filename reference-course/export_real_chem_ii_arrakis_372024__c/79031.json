@@ -1,0 +1,138 @@
+{
+  "id": "79031",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Single Response - college major",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2913353052",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3842728663",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "873807871",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2544305210",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4236360908",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1165247432",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "3030201450",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2608953360",
+                "textDirection": "ltr"
+              },
+              "id": "4031338790",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "3808131597",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "987253113",
+                "textDirection": "ltr"
+              },
+              "id": "2675650625",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "7a. If none of the above accurately represents your current college major or prospective major, please describe it here. ",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "text",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "7a. If none of the above accurately represents your current college major or prospective major, please describe it here. "
+            }
+          ],
+          "id": "3325010257",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "3162210681",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

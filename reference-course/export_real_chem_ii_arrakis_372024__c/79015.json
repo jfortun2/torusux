@@ -1,0 +1,456 @@
+{
+  "id": "79015",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "AcidBaseExample_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dbz1n936q76izr3",
+                  "type": "p"
+                }
+              ],
+              "id": "2343801405"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bqablf3112bfkse",
+                  "type": "p"
+                }
+              ],
+              "id": "2503377109"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tcbvqpkc0135mpo",
+                  "type": "p"
+                }
+              ],
+              "id": "2497154836"
+            }
+          ],
+          "id": "1974227334",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While HCl is an Arrhenius acid, it can also be categorized as a Brønsted-Lowry acid. "
+                      }
+                    ],
+                    "id": "bq85m0rcm1o8g9w",
+                    "type": "p"
+                  }
+                ],
+                "id": "3605904668"
+              },
+              "id": "1420858030",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. HCl("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") produces H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " ions when dissolved in water."
+                      }
+                    ],
+                    "id": "9oqk9nne0zvdy12",
+                    "type": "p"
+                  }
+                ],
+                "id": "3450390312"
+              },
+              "id": "2410086939",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While HCl is an Brønsted-Lowry acid, it can also be categorized as a Arrhenius acid."
+                      }
+                    ],
+                    "id": "x41mj8eo537l3ki",
+                    "type": "p"
+                  }
+                ],
+                "id": "3361373659"
+              },
+              "id": "3953542482",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. HCl("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") produces H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " ions when dissolved in water. "
+                      }
+                    ],
+                    "id": "6bliqurjn9z8gqo",
+                    "type": "p"
+                  }
+                ],
+                "id": "2323468043"
+              },
+              "id": "3354164167",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. HCl both produces H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " when dissolved in water and is a proton donor."
+                      }
+                    ],
+                    "id": "330t222jahyulhy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3676856294"
+              },
+              "id": "2733223390",
+              "legacyMatch": "E",
+              "rule": "input like {E}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. HCl("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") produces H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " ions when dissolved in water. "
+                      }
+                    ],
+                    "id": "jrdvnjy85bpydsy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3775845593"
+              },
+              "id": "1460283485",
+              "legacyMatch": "F",
+              "rule": "input like {F}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "n45ot8l9lffu4l5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3777550100"
+              },
+              "id": "4281193980",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1420858030"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2410086939"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3953542482"
+            ],
+            [
+              [
+                "D"
+              ],
+              "3354164167"
+            ],
+            [
+              [
+                "E"
+              ],
+              "2733223390"
+            ],
+            [
+              [
+                "F"
+              ],
+              "1460283485"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Place each of the following compounds into the correct category.HCl(aq)",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1420858030"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2410086939"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3953542482"
+        ],
+        [
+          [
+            "D"
+          ],
+          "3354164167"
+        ],
+        [
+          [
+            "E"
+          ],
+          "2733223390"
+        ],
+        [
+          [
+            "F"
+          ],
+          "1460283485"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Arrhenius acid"
+              }
+            ],
+            "id": "njc9gfmd3xtd8vr",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Arrhenius base"
+              }
+            ],
+            "id": "yoba757l0wbj0dz",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Brønsted-Lowry acid"
+              }
+            ],
+            "id": "pz1485xc7px0a1q",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Brønsted-Lowry base"
+              }
+            ],
+            "id": "s72tn0pbokqbmc4",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Both Arrhenius and Brønsted-Lowry acid"
+              }
+            ],
+            "id": "4qjbmrsgrsyzvm9",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Both Arrhenius and Brønsted-Lowry base"
+              }
+            ],
+            "id": "rszshcj8saqhhtc",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Place each of the following compounds into the correct category."
+            }
+          ],
+          "id": "0aau6iyzu6eogdp",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "HCl("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ")"
+            }
+          ],
+          "id": "npjhl8s4wwogstc",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1974227334": [
+      "78367"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,218 @@
+{
+  "id": "79597",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "m2_lechat_feedback-3673882728",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fhfp9y8dbnlls4j",
+                  "type": "p"
+                }
+              ],
+              "id": "2374535699"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qmysii3qtgwi4gx",
+                  "type": "p"
+                }
+              ],
+              "id": "2285547697"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ujmlmh2v49ma3sq",
+                  "type": "p"
+                }
+              ],
+              "id": "1497998009"
+            }
+          ],
+          "id": "lechat",
+          "objectives": [],
+          "outOf": null,
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "5kghsvxrgeke5sk",
+                    "type": "p"
+                  }
+                ],
+                "id": "382079477"
+              },
+              "id": "3044388039",
+              "rule": "input like {1}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "2i3pzue1zhe9962",
+                    "type": "p"
+                  }
+                ],
+                "id": "1303720601"
+              },
+              "id": "397109608",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Not at all yet"
+              }
+            ],
+            "id": "5pd1vbmh5f2uc3i",
+            "type": "p"
+          }
+        ],
+        "id": "1"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "With a lot of support"
+              }
+            ],
+            "id": "9ewfndgnnml10pk",
+            "type": "p"
+          }
+        ],
+        "id": "2"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "With some support"
+              }
+            ],
+            "id": "ar3ojxsk9csgp5s",
+            "type": "p"
+          }
+        ],
+        "id": "3"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "With minimal support"
+              }
+            ],
+            "id": "6bqb0yiqtbir45v",
+            "type": "p"
+          }
+        ],
+        "id": "4"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "On my own"
+              }
+            ],
+            "id": "k1hi7cdl3t01u97",
+            "type": "p"
+          }
+        ],
+        "id": "5"
+      }
+    ],
+    "items": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": " Predict the response of a stressed equilibrium using Le Châtelier’s principle."
+              }
+            ],
+            "type": "p"
+          }
+        ],
+        "id": "lechat",
+        "required": "true"
+      }
+    ],
+    "orderDescending": false,
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Evaluate your ability to perform each of the following tasks. In other words, how well can you do each task?"
+            }
+          ],
+          "id": "1o5ox3qythrpmju",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "lechat": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_likert"
+}

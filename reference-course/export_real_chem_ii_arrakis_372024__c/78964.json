@@ -1,0 +1,403 @@
+{
+  "id": "78964",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78242"
+  ],
+  "title": "effect_rate_SKILL_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0nezq55aqm4gdgy",
+                  "type": "p"
+                }
+              ],
+              "id": "917996236"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uosu4zgdk8grdnj",
+                  "type": "p"
+                }
+              ],
+              "id": "3485658722"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wt449kgh4wwad11",
+                  "type": "p"
+                }
+              ],
+              "id": "2723800757"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Decreasing the concentration of the reactant usually decreases the reaction rate. "
+                      }
+                    ],
+                    "id": "df4c4cf4e8f0466ea0576e3cc691ad29",
+                    "type": "p"
+                  }
+                ],
+                "id": "2525842991"
+              },
+              "id": "4244390098",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Decreasing the concentration of the reactant usually decreases the reaction rate."
+                      }
+                    ],
+                    "id": "bc9ee3b0d6454e1392eaf5ad4e5fca39",
+                    "type": "p"
+                  }
+                ],
+                "id": "3370146188"
+              },
+              "id": "2551438308",
+              "legacyMatch": "B",
+              "rule": "input like {one_B}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "3bc8ghx3tmojtfd",
+                    "type": "p"
+                  }
+                ],
+                "id": "3027396250"
+              },
+              "id": "1532047981",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lv816fcccz5125q",
+                  "type": "p"
+                }
+              ],
+              "id": "3683934918"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ncczlfn8etjpz2e",
+                  "type": "p"
+                }
+              ],
+              "id": "630503058"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tpnkhpicz9xk4ce",
+                  "type": "p"
+                }
+              ],
+              "id": "406845388"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Adding a catalyst to the reaction increases the reaction rate."
+                      }
+                    ],
+                    "id": "tuh7u98gktufxfd",
+                    "type": "p"
+                  }
+                ],
+                "id": "3577540848"
+              },
+              "id": "432422893",
+              "legacyMatch": "increase",
+              "rule": "input like {two_increase}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Adding a catalyst to the reaction increases the reaction rate."
+                      }
+                    ],
+                    "id": "0h3kv10p749gs12",
+                    "type": "p"
+                  }
+                ],
+                "id": "3076415195"
+              },
+              "id": "264159622",
+              "legacyMatch": "decrease",
+              "rule": "input like {two_decrease}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "spr66u7uuze5ewu",
+                    "type": "p"
+                  }
+                ],
+                "id": "3034895171"
+              },
+              "id": "220799584",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " A key step in the manufacturing process to produce sulfuric acid is represented in the reaction below.  Decreasing the concentration of O2 in the reaction would   the rate of the reaction.Adding a catalyst to the reaction would  the rate of the reaction",
+      "targeted": [
+        [
+          [
+            "one_A"
+          ],
+          "4244390098"
+        ],
+        [
+          [
+            "one_B"
+          ],
+          "2551438308"
+        ],
+        [
+          [
+            "two_increase"
+          ],
+          "432422893"
+        ],
+        [
+          [
+            "two_decrease"
+          ],
+          "264159622"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "41zozs8q655pya9",
+            "text": "increase"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "4xhb0soq13lpr4w",
+            "text": "decrease"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "oec32ohzrdbgwnu",
+            "text": "increase"
+          }
+        ],
+        "id": "two_increase"
+      },
+      {
+        "content": [
+          {
+            "id": "jngckt0iuvibntm",
+            "text": "decrease"
+          }
+        ],
+        "id": "two_decrease"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_increase",
+          "two_decrease"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " A key step in the manufacturing process to produce sulfuric acid is represented in the reaction below. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "2\\;{\\mathrm{SO}}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightarrow\\;\\;2\\;{\\mathrm{SO}}_3(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " Decreasing the concentration of O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " in the reaction would  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " the rate of the reaction."
+            }
+          ],
+          "id": "c69586e9853d4b3e83b6011e86dca33e",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Adding a catalyst to the reaction would "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " the rate of the reaction"
+            }
+          ],
+          "id": "qip14ocadokq7oi",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

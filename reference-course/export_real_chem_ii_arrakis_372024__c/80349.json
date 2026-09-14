@@ -1,0 +1,189 @@
+{
+  "id": "80349",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "inline_pre_student_survey3-other_obs",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "1314761672"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0y6uqutgjpiw3nv",
+                  "type": "p"
+                }
+              ],
+              "id": "3978472820"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3enjxg8rc6nmhxl",
+                  "type": "p"
+                }
+              ],
+              "id": "2238050531"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4374bourzidj6yd",
+                  "type": "p"
+                }
+              ],
+              "id": "1804679175"
+            }
+          ],
+          "id": "1559236904",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you for your input."
+                      }
+                    ],
+                    "id": "fx9iu8670l9ogxb",
+                    "type": "p"
+                  }
+                ],
+                "id": "429304854"
+              },
+              "id": "1314761672",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {G})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*})))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "caring for family members"
+              }
+            ],
+            "id": "ccg5omrzdgptkqu",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "taking other courses"
+              }
+            ],
+            "id": "h6vnjoewrmvt4g5",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "unpaid or volunteer work"
+              }
+            ],
+            "id": "inousgecer8yph7",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "other"
+              }
+            ],
+            "id": "e2w0z9v0lmdji9q",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Prefer not to answer"
+              }
+            ],
+            "id": "duf1v295dkal9qy",
+            "type": "p"
+          }
+        ],
+        "id": "G"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Other than employment, do you have any other obligations that may affect the time you can spend on this course? Check ALL that apply. "
+            }
+          ],
+          "id": "4xfv7u3quy9wi59",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "1559236904": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

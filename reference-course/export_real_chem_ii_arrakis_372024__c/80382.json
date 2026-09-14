@@ -1,0 +1,1164 @@
+{
+  "id": "80382",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78205"
+  ],
+  "title": "identify_step_uni_bi_ter_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. This reaction has two molecules reacting and is therefore a bimolecular reaction."
+                  }
+                ],
+                "id": "jmso7kiv8nxdqau",
+                "type": "p"
+              }
+            ],
+            "id": "1451605495"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jcp5bttmey9ayo1",
+                  "type": "p"
+                }
+              ],
+              "id": "1144136138"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jtdkv8s1c40b7u1",
+                  "type": "p"
+                }
+              ],
+              "id": "3175367851"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "s60ixrd5vjg96cn",
+                  "type": "p"
+                }
+              ],
+              "id": "2766888078"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The molecularity of a reaction depends on the number of reactant molecules. Two molecules reacting is a bimolecular reaction."
+                      }
+                    ],
+                    "id": "l9sqeyag5j10rri",
+                    "type": "p"
+                  }
+                ],
+                "id": "2483637674"
+              },
+              "id": "972414968",
+              "legacyMatch": "B",
+              "rule": "input like {one_B}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " Incorrect. The molecularity of a reaction depends on the number of reactant molecules."
+                      }
+                    ],
+                    "id": "9hmrofw17sj5ezl",
+                    "type": "p"
+                  }
+                ],
+                "id": "2941985897"
+              },
+              "id": "239301447",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Since NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " is produced in step 1 and consumed in step 2, it is the intermediate in this reaction."
+                  }
+                ],
+                "id": "zzv69puk1j035eu",
+                "type": "p"
+              }
+            ],
+            "id": "1179046306"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "maugcjexdymn4ww",
+                  "type": "p"
+                }
+              ],
+              "id": "1821832840"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j5fiazfnfbf75or",
+                  "type": "p"
+                }
+              ],
+              "id": "2254666992"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kvrkf8onr51h45b",
+                  "type": "p"
+                }
+              ],
+              "id": "294121974"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An intermediate in a reaction is produced in one step and consumed in a later step, so it does not appear as a reactant or as a product in the overall reaction."
+                      }
+                    ],
+                    "id": "jb3edb3stqtvdff",
+                    "type": "p"
+                  }
+                ],
+                "id": "1096699390"
+              },
+              "id": "3907409972",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An intermediate in a reaction is produced in one step and consumed in a later step, so it does not appear as a reactant or as a product in the overall reaction. "
+                      }
+                    ],
+                    "id": "tqukmxulg9vylwo",
+                    "type": "p"
+                  }
+                ],
+                "id": "2460495570"
+              },
+              "id": "3125526055",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The overall reaction is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "2\\;{\\mathrm{NO}}_2\\;+\\;{\\mathrm O}_3\\;\\;\\rightarrow\\;\\;{\\mathrm N}_2{\\mathrm O}_5\\;+\\;{\\mathrm O}_2",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "ajw6xoewe1gzk24",
+                "type": "p"
+              }
+            ],
+            "id": "1183766909"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r9otx3pjtmimoi1",
+                  "type": "p"
+                }
+              ],
+              "id": "2898678957"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ydovnvz8egjm653",
+                  "type": "p"
+                }
+              ],
+              "id": "346386371"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mf0toqlajc1uplw",
+                  "type": "p"
+                }
+              ],
+              "id": "3968899240"
+            }
+          ],
+          "id": "three",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "8z3khy3ogbnjisj",
+                    "type": "p"
+                  }
+                ],
+                "id": "411118888"
+              },
+              "id": "3393216826",
+              "legacyMatch": "C",
+              "rule": "input like {three_C}",
+              "score": 2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "9j2uuidq7ckni7d",
+                    "type": "p"
+                  }
+                ],
+                "id": "1505570246"
+              },
+              "id": "2725653728",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The overall reaction is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "2\\;{\\mathrm{NO}}_2\\;+\\;{\\mathrm O}_3\\;\\;\\rightarrow\\;\\;{\\mathrm N}_2{\\mathrm O}_5\\;+\\;{\\mathrm O}_2",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "5zyecbelca835pw",
+                "type": "p"
+              }
+            ],
+            "id": "3610381938"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ef6sukby3niei15",
+                  "type": "p"
+                }
+              ],
+              "id": "2018750693"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k250bqmqil2rwk3",
+                  "type": "p"
+                }
+              ],
+              "id": "1456823399"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mc5n54duwv39asl",
+                  "type": "p"
+                }
+              ],
+              "id": "3093198636"
+            }
+          ],
+          "id": "four",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "7o2slmpmtq0zjx0",
+                    "type": "p"
+                  }
+                ],
+                "id": "369183576"
+              },
+              "id": "4241477804",
+              "legacyMatch": "A",
+              "rule": "input like {four_A}",
+              "score": 2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "ajfmgjtxzcfl28q",
+                    "type": "p"
+                  }
+                ],
+                "id": "492275258"
+              },
+              "id": "370326009",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The rate law for Step 2 is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{rate}\\;=\\;k\\lbrack{\\mathrm{NO}}_3\\rbrack\\lbrack{\\mathrm{NO}}_2\\rbrack",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "jbi0n7e1nd3llae",
+                "type": "p"
+              }
+            ],
+            "id": "1705289258"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "d24vhfkxuu16zjw",
+                  "type": "p"
+                }
+              ],
+              "id": "3638146181"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "evrlb1ktqo9nrsb",
+                  "type": "p"
+                }
+              ],
+              "id": "562377434"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sxrtmcm7nwof8ky",
+                  "type": "p"
+                }
+              ],
+              "id": "1366458704"
+            }
+          ],
+          "id": "five",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate law for an elementary reaction is expressed using the rate constant ("
+                      },
+                      {
+                        "em": true,
+                        "text": "k"
+                      },
+                      {
+                        "text": "), the concentration of the reactant(s),and the order of the reaction (exponent) for each reactant."
+                      }
+                    ],
+                    "id": "1r74uj2t73l5c5i",
+                    "type": "p"
+                  }
+                ],
+                "id": "277744544"
+              },
+              "id": "399648497",
+              "legacyMatch": "E",
+              "rule": "input like {five_E}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate law for an elementary reaction is expressed using the rate constant ("
+                      },
+                      {
+                        "em": true,
+                        "text": "k"
+                      },
+                      {
+                        "text": "), the concentration of the reactant(s), and the order of the reaction (exponent) for each reactant. "
+                      }
+                    ],
+                    "id": "rjfdmo197c2j48g",
+                    "type": "p"
+                  }
+                ],
+                "id": "2486345493"
+              },
+              "id": "262535697",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2if8v5e27ip3e39",
+                  "type": "p"
+                }
+              ],
+              "id": "2007946959"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3jicrr7btwo3qej",
+                  "type": "p"
+                }
+              ],
+              "id": "1723231607"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hz6lpp3n3l1u5y4",
+                  "type": "p"
+                }
+              ],
+              "id": "4089358788"
+            }
+          ],
+          "id": "six",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "isdn9es6s07i6ze",
+                    "type": "p"
+                  }
+                ],
+                "id": "3086989381"
+              },
+              "id": "4047895946",
+              "legacyMatch": "A",
+              "rule": "input like {six_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "llwq297ltcarxcc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2905611088"
+              },
+              "id": "2996377575",
+              "legacyMatch": "B",
+              "rule": "input like {six_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "jb0vxj1wi1b37nk",
+                    "type": "p"
+                  }
+                ],
+                "id": "4153060895"
+              },
+              "id": "342969602",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "six_A"
+          ],
+          "4047895946"
+        ],
+        [
+          [
+            "six_B"
+          ],
+          "2996377575"
+        ]
+      ],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "w1unvmc5s2abwcp",
+            "text": "unimolecular "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "nmi6i8uquq65f7k",
+            "text": "bimolecular"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "vwsola8izfyd5ew",
+            "text": "termolecular"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "52v8qsdl3tv0kdy",
+            "text": "NO₃ "
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "od2pq4k7rtw3t9v",
+            "text": "O₃"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "ysm7mhq7aqrcc9b",
+            "text": "O₂ "
+          }
+        ],
+        "id": "two_C"
+      },
+      {
+        "content": [
+          {
+            "id": "r2dkuewnyfdq4lf",
+            "text": "N₂O₅"
+          }
+        ],
+        "id": "two_D"
+      },
+      {
+        "content": [
+          {
+            "id": "qwe2rj973zffmtc",
+            "text": "NO₂ "
+          }
+        ],
+        "id": "two_E"
+      },
+      {
+        "content": [
+          {
+            "id": "0aqhuetp5jjumeh",
+            "text": "NO₃ + NO₂ "
+          }
+        ],
+        "id": "three_A"
+      },
+      {
+        "content": [
+          {
+            "id": "98dfon39xkq2uks",
+            "text": "NO₂ + O₃"
+          }
+        ],
+        "id": "three_B"
+      },
+      {
+        "content": [
+          {
+            "id": "cqq6vxwbqllyswg",
+            "text": "2 NO₂ + O₃ "
+          }
+        ],
+        "id": "three_C"
+      },
+      {
+        "content": [
+          {
+            "id": "i1escza73bzbr20",
+            "text": "2 NO₂ + NO₃ + O₃"
+          }
+        ],
+        "id": "three_D"
+      },
+      {
+        "content": [
+          {
+            "id": "49m5xzl7w6xqftx",
+            "text": "N₂O₅ + O₂ "
+          }
+        ],
+        "id": "four_A"
+      },
+      {
+        "content": [
+          {
+            "id": "rz59crvrr36nbxd",
+            "text": "NO₃ + O₂"
+          }
+        ],
+        "id": "four_B"
+      },
+      {
+        "content": [
+          {
+            "id": "q8xxbipqd5865uc",
+            "text": "N₂O₅ + NO₃ + O₂"
+          }
+        ],
+        "id": "four_C"
+      },
+      {
+        "content": [
+          {
+            "id": "iosoh6x40hay3s1",
+            "text": "k[NO₃][O₂] "
+          }
+        ],
+        "id": "five_A"
+      },
+      {
+        "content": [
+          {
+            "id": "wue9kke6vhfrat2",
+            "text": "k[NO₂][O₃]"
+          }
+        ],
+        "id": "five_B"
+      },
+      {
+        "content": [
+          {
+            "id": "g2kgk5xkrsh4t8k",
+            "text": "k[NO₃][NO₂][N₂O₅] "
+          }
+        ],
+        "id": "five_C"
+      },
+      {
+        "content": [
+          {
+            "id": "tco83c9bl38h857",
+            "text": "k[N₂O₅]"
+          }
+        ],
+        "id": "five_D"
+      },
+      {
+        "content": [
+          {
+            "id": "sulxbc7hxt8oj19",
+            "text": "k[NO₃][NO₂]"
+          }
+        ],
+        "id": "five_E"
+      },
+      {
+        "content": [
+          {
+            "id": "lrwn5lw3fg7qhcs",
+            "text": "true "
+          }
+        ],
+        "id": "six_A"
+      },
+      {
+        "content": [
+          {
+            "id": "1pp3simxt4ccpet",
+            "text": "false"
+          }
+        ],
+        "id": "six_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C",
+          "two_D",
+          "two_E"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two"
+      },
+      {
+        "choiceIds": [
+          "three_A",
+          "three_B",
+          "three_C",
+          "three_D"
+        ],
+        "id": "three",
+        "inputType": "dropdown",
+        "partId": "three"
+      },
+      {
+        "choiceIds": [
+          "four_A",
+          "four_B",
+          "four_C"
+        ],
+        "id": "four",
+        "inputType": "dropdown",
+        "partId": "four"
+      },
+      {
+        "choiceIds": [
+          "five_A",
+          "five_B",
+          "five_C",
+          "five_D",
+          "five_E"
+        ],
+        "id": "five",
+        "inputType": "dropdown",
+        "partId": "five"
+      },
+      {
+        "choiceIds": [
+          "six_A",
+          "six_B"
+        ],
+        "id": "six",
+        "inputType": "dropdown",
+        "partId": "six",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The following is the proposed mechanism for a given reaction:"
+            }
+          ],
+          "id": "lochjy06arkqea3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "9iut2s6q7kquhvr",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ggo8pwzvnup2hgq",
+          "legacyBlockRendered": "true",
+          "src": "\\begin{array}{l}\\mathrm{Step}\\;1:\\;\\;\\;\\;\\;\\;{\\mathrm{NO}}_2\\;+\\;{\\mathrm O}_3\\;\\;\\rightarrow\\;\\;{\\mathrm{NO}}_3\\;+\\;{\\mathrm O}_2\\;\\;\\;\\; (\\mathrm{slow})\\\\\\mathrm{Step}\\;2:\\;\\;\\;\\;{\\mathrm{NO}}_3\\;+\\;{\\mathrm{NO}}_2\\;\\rightarrow\\;{\\mathrm N}_2{\\mathrm O}_5\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;(\\mathrm{fast})\\\\\\end{array}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the molecularity of step 2? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "tztzqhtuwowgal9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the intermediate in this reaction? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            }
+          ],
+          "id": "szgsar5xelzgulv",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Choose the reactants and products for the overall reaction."
+            }
+          ],
+          "id": "y8ilofkdb0twpce",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "three",
+              "input": "three",
+              "type": "input_ref"
+            },
+            {
+              "text": "   "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": false,
+              "src": "\\rightarrow",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": "   "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "four",
+              "input": "four",
+              "type": "input_ref"
+            }
+          ],
+          "id": "qw6fftef4nfym2p",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the rate law for step 2?"
+            }
+          ],
+          "id": "v0yienori5jvnkc",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Rate = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "five",
+              "input": "five",
+              "type": "input_ref"
+            }
+          ],
+          "id": "hs6ju6sw13wn8iq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Since step 1 is the slow step, the rate law for this mechanism is the same as the rate law for step 1. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "six",
+              "input": "six",
+              "type": "input_ref"
+            }
+          ],
+          "id": "pxqyruo5vmdqf3w",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "five": [],
+    "four": [],
+    "one": [],
+    "six": [],
+    "three": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

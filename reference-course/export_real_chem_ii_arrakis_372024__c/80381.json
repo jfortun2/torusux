@@ -1,0 +1,253 @@
+{
+  "id": "80381",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "nonstandard2_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}E_{\\mathrm{cell}}\\;=\\;E_\\mathrm{cell}^\\circ\\;\\;-\\;\\frac{0.0592\\;\\mathrm V}n\\;\\log\\;Q\\\\0.10\\;\\mathrm V\\;=\\;0\\;-\\;\\frac{0.0592\\;\\mathrm V}2\\;\\log\\;Q\\\\0.10\\;\\mathrm V\\;=\\;(-0.0296)\\;\\log\\;Q\\\\\\log\\;Q\\;=-\\;3.378\\\\Q\\;=\\;4.2\\times10^{-4}\\\\\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "mfp3bz1rx01r16p",
+                "type": "p"
+              }
+            ],
+            "id": "1800941947"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The value of E"
+                    },
+                    {
+                      "sup": true,
+                      "text": "°"
+                    },
+                    {
+                      "sub": true,
+                      "text": "cell"
+                    },
+                    {
+                      "text": " for a concentration cell is 0."
+                    }
+                  ],
+                  "id": "lqnvwa05j6q573o",
+                  "type": "p"
+                }
+              ],
+              "id": "4277649981"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1003838450",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "9zbn4g1fcqhjxrv",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "v0gzvtwuhica2hc",
+                  "legacyBlockRendered": "true",
+                  "src": "E_{\\mathrm{cell}}\\;=\\;E_\\mathrm{cell}^\\circ\\;-\\;\\frac{0.0592\\;\\mathrm V}n\\;\\log\\;Q",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": "Solve for "
+                    },
+                    {
+                      "em": true,
+                      "text": "Q"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "id": "4pqo87ndlcwy0nn",
+                  "type": "p"
+                }
+              ],
+              "id": "2227776655"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hlku4zsakiuppib",
+                  "type": "p"
+                }
+              ],
+              "id": "1382878800"
+            }
+          ],
+          "id": "4118368142",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}E_{\\mathrm{cell}}\\;=\\;E_\\mathrm{cell}^\\circ\\;\\;-\\;\\dfrac{0.0592\\;\\mathrm V}n\\;\\log\\;Q\\\\0.10\\;\\mathrm V\\;=\\;0\\;-\\;\\dfrac{0.0592\\;\\mathrm V}2\\;\\log\\;Q\\\\0.10\\;\\mathrm V\\;=\\;(-0.0296)\\;\\log\\;Q\\\\\\log\\;Q\\;=-\\;3.378\\\\Q\\;=\\;4.2\\times10^{-4}\\\\\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "67darbc12qgbe7j",
+                    "type": "p"
+                  }
+                ],
+                "id": "743855658"
+              },
+              "id": "3430921101",
+              "legacyMatch": "[4.1e-4,4.25e-4]",
+              "rule": "input = {[4.1e-4,4.25e-4]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "npsxe3wtk2cp5w0",
+                    "type": "p"
+                  }
+                ],
+                "id": "1039347099"
+              },
+              "id": "3699369591",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What value of Q for the concentration cell described in the example above would result in a voltage of 0.10 V?  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "4118368142",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What value of "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": " for the concentration cell described in the example above would result in a voltage of 0.10 V? "
+            }
+          ],
+          "id": "pyfc0om0593h2n8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "zsceuuy94hsm3k4",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "4118368142": [
+      "78527"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

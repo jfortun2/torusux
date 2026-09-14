@@ -1,0 +1,195 @@
+{
+  "id": "78796",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Titration_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\require{cancel}\\begin{array}{l}(0.100\\;\\frac{\\mathrm{mol}}{\\cancel{\\mathrm L}})(0.04212\\cancel{\\;\\mathrm L})\\;=\\;0.004212\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\;\\\\\\\\0.004212\\cancel{\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\;}\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{HCl}}{1\\;\\cancel{\\mathrm{mol}\\;\\mathrm{NaOH}}}\\;=\\;0.004212\\;\\mathrm{mol}\\;\\mathrm{HCl}\\\\\\\\\\frac{0.004212\\;\\mathrm{mol}}{0.075\\;\\mathrm L}\\;=\\;0.0562\\;\\mathrm M\\\\\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "af385013e70e14c36a12218d42183",
+                "type": "p"
+              }
+            ],
+            "id": "2249623752"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8nmogzkvoxzf4uj",
+                  "type": "p"
+                }
+              ],
+              "id": "408931908"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "849hmqvegy1o83s",
+                  "type": "p"
+                }
+              ],
+              "id": "3643879783"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0unu60sjnvmm8ag",
+                  "type": "p"
+                }
+              ],
+              "id": "998198771"
+            }
+          ],
+          "id": "fc74414d9b9740eba850f4e2ce10bcd1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\require{cancel}\\begin{array}{l}(0.100\\;\\frac{\\mathrm{mol}}{\\cancel{\\mathrm L}})(0.04212\\cancel{\\;\\mathrm L})\\;=\\;0.004212\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\;\\\\\\\\0.004212\\cancel{\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\;}\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{HCl}}{1\\;\\cancel{\\mathrm{mol}\\;\\mathrm{NaOH}}}\\;=\\;0.004212\\;\\mathrm{mol}\\;\\mathrm{HCl}\\\\\\\\\\frac{0.004212\\;\\mathrm{mol}}{0.075\\;\\mathrm L}\\;=\\;0.0562\\;\\mathrm M\\\\\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "af385013e70e14c36a12218d42183debc",
+                    "type": "p"
+                  }
+                ],
+                "id": "290042551"
+              },
+              "id": "2789031361",
+              "legacyMatch": "0.0562",
+              "rule": "input = {0.0562}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Calculate the moles of NaOH in the 0.04212 L. Use the stoichiometric factor from the balanced equation to determine the number of moles in the HCl solution. Given the moles of HCl and the volume, 75.0 mL, calculate the concentration (M) of the HCl solution."
+                      }
+                    ],
+                    "id": "aeb99e5b4e5c84b8782ac111af1ba13dd",
+                    "type": "p"
+                  }
+                ],
+                "id": "1968282198"
+              },
+              "id": "1329759728",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "An HCl solution of unknown concentration is titrated with a 0.100 M NaOH solution. 42.12 mL of the titrant is required to reach the endpoint for 75.0 mL of the HCl solution. What is the concentration of the HCl solution?  M ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "a107b172505240f18b976fd5f1dcdd93",
+        "inputType": "numeric",
+        "partId": "fc74414d9b9740eba850f4e2ce10bcd1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "An HCl solution of unknown concentration is titrated with a 0.100 M NaOH solution. 42.12 mL of the titrant is required to reach the endpoint for 75.0 mL of the HCl solution. What is the concentration of the HCl solution?"
+            }
+          ],
+          "id": "ad4e35bf1e38845ac821fc5d6fd51216e",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "a107b172505240f18b976fd5f1dcdd93",
+              "input": "a107b172505240f18b976fd5f1dcdd93",
+              "type": "input_ref"
+            },
+            {
+              "text": " M "
+            }
+          ],
+          "id": "af65d669b1fb24eb989ff26ad53d7db3e",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "fc74414d9b9740eba850f4e2ce10bcd1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

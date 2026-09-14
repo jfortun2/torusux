@@ -1,0 +1,260 @@
+{
+  "id": "80128",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78121"
+  ],
+  "title": "wa_sb_calc_ph_different_pool_v1_q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bpom7il981ibd4u",
+                  "type": "p"
+                }
+              ],
+              "id": "2351529995"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "09dn52rkbbt8snm",
+                  "type": "p"
+                }
+              ],
+              "id": "4196008068"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f9mdpevowjmnm3m",
+                  "type": "p"
+                }
+              ],
+              "id": "1325415026"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Of the choices of answers, thymol blue has a well-defined color change at the equivalence point of the titration involving benzoic acid and NaOH."
+                      }
+                    ],
+                    "id": "lc5ayhksrfxzlc7",
+                    "type": "p"
+                  }
+                ],
+                "id": "4149441318"
+              },
+              "id": "2947759259",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In order to observe an accurate end point of a titration, the indicator must have a well-defined color change at the equivalence point of the titration, which is when the moles of acid and base are equal. Determine the pH at the equivalence point, and then choose the indicator that changes color at this pH."
+                      }
+                    ],
+                    "id": "mcomfz5nbtusm9a",
+                    "type": "p"
+                  }
+                ],
+                "id": "1889335099"
+              },
+              "id": "440337029",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Solution. Of the choices of answers, thymol blue has a well-defined color change at the equivalence point of the titration involving benzoic acid and NaOH."
+                      }
+                    ],
+                    "id": "ol203rjb6tfells",
+                    "type": "p"
+                  }
+                ],
+                "id": "886936053"
+              },
+              "id": "3202266024",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "1937404300",
+          "operation": "shuffle",
+          "partId": "one",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "rtkvk6ii6xujngx",
+            "text": "thymol blue"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ay4gfsxq9oqwezt",
+            "text": "bromophenol blue"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "z879vxpei1lrqu4",
+            "text": "methyl orange"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "akp46o44zq2aopr",
+            "text": "bromocresol green"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "yyc8ok7wpx88g6q",
+            "text": "methyl red"
+          }
+        ],
+        "id": "one_E"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D",
+          "one_E"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Use the table of indicators below to choose the most appropriate indicator to use when titrating benzoic acid with sodium hydroxide as described in the previous problem. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "y3c8a733wxmyaj3",
+          "type": "p"
+        },
+        {
+          "caption": [
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "id": "e62c5f4320e84701a3cc79a901b94bd8",
+              "type": "p"
+            }
+          ],
+          "children": [
+            {
+              "id": "is5d0wk06728fh3",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "c578d389a6f64019b91e2bae76e4bb39",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/eb/eb001cc4694b8981058beafdef19c978/indicators.png",
+          "style": "inline",
+          "type": "img",
+          "vertical-align": "middle",
+          "width": "550"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

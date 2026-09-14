@@ -1,0 +1,218 @@
+{
+  "id": "80159",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_digt-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u7opo80wucwdeps",
+                  "type": "p"
+                }
+              ],
+              "id": "2621400191"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h501dceb6w1kp0p",
+                  "type": "p"
+                }
+              ],
+              "id": "3673526439"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0gu1x60fz0p5a27",
+                  "type": "p"
+                }
+              ],
+              "id": "3154530292"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. At equilibrium, the concentrations of reactants and products may be the same but usually are not."
+                      }
+                    ],
+                    "id": "bn5gyfq1n8uxty6",
+                    "type": "p"
+                  }
+                ],
+                "id": "1883135632"
+              },
+              "id": "2126522862",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. At equilibrium, the concentrations of reactants and products may be the same but usually are not."
+                      }
+                    ],
+                    "id": "9u86pmggpdjmhif",
+                    "type": "p"
+                  }
+                ],
+                "id": "316553047"
+              },
+              "id": "3471199615",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "u9q0wf7et4zi288",
+                    "type": "p"
+                  }
+                ],
+                "id": "2441938202"
+              },
+              "id": "2686401421",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "At equilibrium, there will be equal concentrations of products and reactants. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2126522862"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3471199615"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "2173772907",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "1590346766",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At equilibrium, there will be equal concentrations of products and reactants. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "nxf6h3zsl6epdpn",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

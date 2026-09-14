@@ -1,0 +1,1542 @@
+{
+  "id": "79044",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78139"
+  ],
+  "title": "sa_sb_calc_ph_different_points_pool_v1_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "q6x1oszfgdbfo73",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "f4f4lab9g7yk1oy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Correct. HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " is a strong acid, so it completely dissociates in water into H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "kz3wsuoejp6kmgo",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The pH is therefore: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "pH\\;=\\;-\\log\\left[{{\\mathrm H}_3\\mathrm O}^+\\right]\\;=\\;-\\log\\left(@@conchno3@@\\right)\\;=\\;@@ph0sf@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "vtqnynvftah4mmn",
+                "type": "p"
+              }
+            ],
+            "id": "766153555"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q3jxnxwgbpw178j",
+                  "type": "p"
+                }
+              ],
+              "id": "1858793368"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tkaebv9oe241sr4",
+                  "type": "p"
+                }
+              ],
+              "id": "961638301"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v8rnaj34zun1r8l",
+                  "type": "p"
+                }
+              ],
+              "id": "3177475541"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " is a strong acid, so it completely dissociates in water into H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "b1u9zed22le31xt",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The pH is therefore: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "pH\\;=\\;-\\log\\left[{{\\mathrm H}_3\\mathrm O}^+\\right]\\;=\\;-\\log\\left(@@conchno3@@\\right)\\;=\\;@@ph0sf@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "rgsn6rf6r24f65s",
+                    "type": "p"
+                  }
+                ],
+                "id": "3152691764"
+              },
+              "id": "930977361",
+              "legacyMatch": "[@@ph0low@@,@@ph0high@@]",
+              "rule": "input = {[@@ph0low@@,@@ph0high@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " is a strong acid, so it ionizes completely in solution and the resulting concentration of hydronium is equal to the initial concentration of the strong acid. Then calculate pH according to the definition of pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "pH\\;=\\;-\\log\\left[{{\\mathrm H}_3\\mathrm O}^+\\right]",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "h7fd88bibphv6wh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2560572466"
+              },
+              "id": "987373420",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "wy3l2r77s6bkn0h",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "bwrqyp1pr6poywu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Correct. The strong acid HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " and the strong base KOH both fully dissociate, so the moles of hydronium are equal to the initial moles of HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " and the moles of hydroxide are equal to the initial moles of KOH. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\;\\;\\;\\begin{array}{c}@@vhno3@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conchno3@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhno3sf@@\\;\\mathrm{mol}\\;{\\mathrm H}_3\\mathrm O^+\\\\@@volbeforesf@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conckoh@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molkohbeforesf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " The hydronium and hydroxide react until the limiting reactant (OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": ") is used up. The reaction is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{{\\mathrm H}_3\\mathrm O}^+\\left(aq\\right)\\;+\\;\\mathrm{OH}^-\\left(aq\\right)\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\left(l\\right)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Then calculate the moles of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " left, the total volume of solution, the molarity of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and the pH: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\;\\;\\;\\begin{array}{c}\\;@@molhno3sf@@\\;\\mathrm{mol}\\;-\\;@@molkohbeforesf@@\\;\\mathrm{mol}\\;=\\;@@molhno31sf@@\\;\\mathrm{mol}\\;{\\mathrm H}_3\\mathrm O^+\\;\\mathrm{left}\\\\\\mathrm{in}\\;\\; \\left(@@vhno3@@\\;+\\;@@volbeforesf@@\\right)\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;=\\;@@vtotal1sf@@\\;\\mathrm L\\;\\mathrm{solution}\\\\\\;\\Rightarrow\\; \\frac{@@molhno31sf@@\\;\\mathrm{mol}}{@@vtotal1sf@@\\;\\mathrm L}\\;=\\;@@conchno3beforesf@@\\;\\mathrm M\\;{\\mathrm H}_3\\mathrm O^+\\\\\\;\\;pH\\; =\\;-\\log\\left(@@conchno3beforesf@@\\right)\\;=\\;@@pHbeforesf@@\\;\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "imlydpucqpagpr7",
+                "type": "p"
+              }
+            ],
+            "id": "1487820373"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zczk7i1fnfugrn4",
+                  "type": "p"
+                }
+              ],
+              "id": "119061300"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "041twsia7vk94uq",
+                  "type": "p"
+                }
+              ],
+              "id": "1589677167"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ga14yo0wlkeq35l",
+                  "type": "p"
+                }
+              ],
+              "id": "746669290"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The strong acid HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the strong base KOH both fully dissociate, so the moles of hydronium are equal to the initial moles of HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the moles of hydroxide are equal to the initial moles of KOH. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\;\\;\\;\\begin{array}{c}@@vhno3@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conchno3@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhno3sf@@\\;\\mathrm{mol}\\;{\\mathrm H}_3\\mathrm O^+\\\\@@volbeforesf@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conckoh@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molkohbeforesf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " The hydronium and hydroxide react until the limiting reactant (OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ") is used up. The reaction is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{{\\mathrm H}_3\\mathrm O}^+\\left(aq\\right)\\;+\\;\\mathrm{OH}^-\\left(aq\\right)\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\left(l\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Then calculate the moles of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " left, the total volume of solution, the molarity of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and the pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\;\\;\\;\\begin{array}{c}\\;@@molhno3sf@@\\;\\mathrm{mol}\\;-\\;@@molkohbeforesf@@\\;\\mathrm{mol}\\;=\\;@@molhno31sf@@\\;\\mathrm{mol}\\;{\\mathrm H}_3\\mathrm O^+\\;\\mathrm{left}\\\\\\mathrm{in}\\;\\; \\left(@@vhno3@@\\;+\\;@@volbeforesf@@\\right)\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;=\\;@@vtotal1sf@@\\;\\mathrm L\\;\\mathrm{solution}\\\\\\;\\Rightarrow\\; \\frac{@@molhno31sf@@\\;\\mathrm{mol}}{@@vtotal1sf@@\\;\\mathrm L}\\;=\\;@@conchno3beforesf@@\\;\\mathrm M\\;{\\mathrm H}_3\\mathrm O^+\\\\\\;\\;pH\\; =\\;-\\log\\left(@@conchno3beforesf@@\\right)\\;=\\;@@pHbeforesf@@\\;\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "qa43ss3jeo7p9uy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3145335563"
+              },
+              "id": "278317824",
+              "legacyMatch": "[@@phbeforelow@@,@@phbeforehigh@@]",
+              "rule": "input = {[@@pHbeforelow@@,@@pHbeforehigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that the strong acid HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the strong base KOH both fully dissociate, so the moles of hydronium are equal to the initial moles of HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the moles of hydroxide are equal to the initial moles of KOH. The hydronium and hydroxide react until the limiting reactant is used up, according to: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{{\\mathrm H}_3\\mathrm O}^+\\left(aq\\right)\\;+\\;\\mathrm{OH}^-\\left(aq\\right)\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\left(l\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "5ab9sz6w59m7uni",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The pH is then calculated based on the remaining unreacted moles of hydronium or hydroxide."
+                      }
+                    ],
+                    "id": "7ga673rtjremvxu",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are leftover moles of unreacted hydronium, the solution is acidic, and the concentration of hydronium is calculated from the moles and total volume of combined acid and base. The pH is then calculated according to the definition of pH."
+                      }
+                    ],
+                    "id": "7oz0yz959z2jfes",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are leftover moles of hydroxide, the solution is basic, and the concentration of hydroxide is calculated from the moles and total volume of combined acid and base. The pOH is calculated from the definition of pOH, which is then used to calculate pH."
+                      }
+                    ],
+                    "id": "hlfb5px5h37i4bw",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are no leftover moles of unreacted hydronium or hydroxide, then the solution is neutral, and the pH is 7."
+                      }
+                    ],
+                    "id": "t4hczs0zc4lkajx",
+                    "type": "p"
+                  }
+                ],
+                "id": "1847097419"
+              },
+              "id": "4082307248",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "fg832xlc08kg0zb",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "flwkcjx47i4adn5",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the moles of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and the moles of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " at this point:"
+                  }
+                ],
+                "id": "1vims59w0dx1ag1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\;\\;\\;\\begin{array}{c}@@vhno3@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conchno3@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhno3sf@@\\;\\mathrm{mol}\\;{\\mathrm H}_3\\mathrm O^+\\\\@@eqptsf@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conckoh@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@moleqptsf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "6q3myyq6o2btagq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Since the moles of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and the moles of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " are equal, this is the equivalence point. At the equivalence point of a titration between a strong acid and a strong base, the pH is 7.00."
+                  }
+                ],
+                "id": "xsu49z509nld0k1",
+                "type": "p"
+              }
+            ],
+            "id": "3855670995"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wcg2g0xgiiaqqjh",
+                  "type": "p"
+                }
+              ],
+              "id": "2738269968"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jcctvx0eq8nzsc8",
+                  "type": "p"
+                }
+              ],
+              "id": "4163933483"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "txl9caftumv5wn1",
+                  "type": "p"
+                }
+              ],
+              "id": "2007800920"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Determine the moles of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and the moles of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " at this point:"
+                      }
+                    ],
+                    "id": "ffjthjvifzawfod",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\;\\;\\;\\begin{array}{c}@@vhno3@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conchno3@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhno3sf@@\\;\\mathrm{mol}\\;{\\mathrm H}_3\\mathrm O^+\\\\@@eqptsf@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conckoh@@\\;\\mathrm{mol}}{\\mathrm L}\\; =\\;@@moleqptsf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "8m9qg41ex7vz8ci",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Since the moles of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and the moles of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " are equal, this is the equivalence point. At the equivalence point of a titration between a strong acid and a strong base, the pH is 7.00."
+                      }
+                    ],
+                    "id": "wh09ej2st4ey1yb",
+                    "type": "p"
+                  }
+                ],
+                "id": "1833066482"
+              },
+              "id": "3436328305",
+              "legacyMatch": "7",
+              "rule": "input = {7}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that the strong acid HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the strong base KOH both fully dissociate, so the moles of hydronium are equal to the initial moles of HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the moles of hydroxide are equal to the initial moles of KOH. The hydronium and hydroxide react until the limiting reactant is used up, according to: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{{\\mathrm H}_3\\mathrm O}^+\\left(aq\\right)\\;+\\;\\mathrm{OH}^-\\left(aq\\right)\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\left(l\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3qt4hm31i0863kx",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The pH is then calculated based on the remaining unreacted moles of hydronium or hydroxide."
+                      }
+                    ],
+                    "id": "yh13ngc9tdcp4ge",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are leftover moles of unreacted hydronium, the solution is acidic, and the concentration of hydronium is calculated from the moles and total volume of combined acid and base. The pH is then calculated according to the definition of pH."
+                      }
+                    ],
+                    "id": "y7rsgksr32w0w85",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are leftover moles of hydroxide, the solution is basic, and the concentration of hydroxide is calculated from the moles and total volume of combined acid and base. The pOH is calculated from the definition of pOH, which is then used to calculate pH."
+                      }
+                    ],
+                    "id": "f7jrpgpyanw4v58",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are no leftover moles of unreacted hydronium or hydroxide, then the solution is neutral, and the pH is 7."
+                      }
+                    ],
+                    "id": "9t4fwpziuo987aa",
+                    "type": "p"
+                  }
+                ],
+                "id": "3472600203"
+              },
+              "id": "3851914887",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "bka5899paumczea",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "3cn44o0w6d21cbk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the moles of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " at this point (the moles of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " are the same as in the previous parts):"
+                  }
+                ],
+                "id": "7har773yvopze7y",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "@@volaftersf@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conckoh@@\\;\\mathrm{mol}}{\\mathrm L}\\;=\\;@@molkohaftersf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "n1hsr7jdqb1nqog",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " is in excess, so calculate the moles of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " left, the total volume of solution, the molarity of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": ", the pOH and finally the pH: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\;\\;\\;\\begin{array}{c}\\;@@molkohaftersf@@\\;\\mathrm{mol}\\;-\\;@@molhno3sf@@\\;\\mathrm{mol}\\;=\\;@@excesskohsf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\;\\mathrm{left}\\\\\\mathrm{in}\\;\\;\\left(@@vhno3@@\\; +\\;@@volaftersf@@\\right)\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;=\\;@@vtotal2sf@@\\;\\mathrm L\\;\\mathrm{solution}\\\\\\;\\Rightarrow\\;\\frac{@@excesskohsf@@\\;\\mathrm{mol}}{@@vtotal2sf@@\\; \\mathrm L}\\;=\\;@@conckohaftersf@@\\;\\mathrm M\\;\\mathrm{OH}^-\\\\\\text{pOH}\\;=\\;-\\log\\left(@@conckohaftersf@@\\right)\\;=\\;@@pohaftersf@@\\\\\\mathrm{pH}\\;=\\;14.00\\;-\\;\\mathrm{pOH}\\; =\\;14.00\\;-\\;@@pohaftersf@@\\;=\\;@@phaftersf@@\\;\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "8fwfk3jnus2yi1c",
+                "type": "p"
+              }
+            ],
+            "id": "2229419242"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "modfju8qrlhszkh",
+                  "type": "p"
+                }
+              ],
+              "id": "4147957466"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ib1k3k4rt0jg6xo",
+                  "type": "p"
+                }
+              ],
+              "id": "1937696828"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ga70fn7qw6hdz09",
+                  "type": "p"
+                }
+              ],
+              "id": "2183165452"
+            }
+          ],
+          "id": "numeric4",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Determine the moles of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " at this point (the moles of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " are the same as in the previous parts):"
+                      }
+                    ],
+                    "id": "lmrftdindc8agi1",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "@@volaftersf@@\\;mL\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;\\times\\;\\frac{\\;@@conckoh@@\\;\\mathrm{mol}}{\\mathrm L}\\;=\\;@@molkohaftersf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "6jtiuaot38xdv0s",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " is in excess, so calculate the moles of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " left, the total volume of solution, the molarity of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ", the pOH and finally the pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\;\\;\\;\\begin{array}{c}\\;@@molkohaftersf@@\\;\\mathrm{mol}\\;-\\;@@molhno3sf@@\\;\\mathrm{mol}\\;=\\;@@excesskohsf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\;\\mathrm{left}\\\\\\mathrm{in}\\;\\;\\left(@@vhno3@@\\; +\\;@@volaftersf@@\\right)\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{1000\\;\\mathrm{mL}}\\;=\\;@@vtotal2sf@@\\;\\mathrm L\\;\\mathrm{solution}\\\\\\;\\Rightarrow\\;\\frac{@@excesskohsf@@\\;\\mathrm{mol}}{@@vtotal2sf@@\\; \\mathrm L}\\;=\\;@@conckohaftersf@@\\;\\mathrm M\\;\\mathrm{OH}^-\\\\\\text{pOH}\\;=\\;-\\log\\left(@@conckohaftersf@@\\right)\\;=\\;@@pohaftersf@@\\\\\\mathrm{pH}\\;=\\;14.00\\;-\\;\\mathrm{pOH}\\; =\\;14.00\\;-\\;@@pohaftersf@@\\;=\\;@@phaftersf@@\\;\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "384vofii5idbsp9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1850221414"
+              },
+              "id": "950020437",
+              "legacyMatch": "[@@phafterlow@@,@@phafterhigh@@]",
+              "rule": "input = {[@@phafterlow@@,@@phafterhigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that the strong acid HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the strong base KOH both fully dissociate, so the moles of hydronium are equal to the initial moles of HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " and the moles of hydroxide are equal to the initial moles of KOH. The hydronium and hydroxide react until the limiting reactant is used up, according to: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{{\\mathrm H}_3\\mathrm O}^+\\left(aq\\right)\\;+\\;\\mathrm{OH}^-\\left(aq\\right)\\;\\rightarrow\\;2\\;{\\mathrm H}_2\\mathrm O\\left(l\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "cv1ahqxzksm5ifp",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The pH is then calculated based on the remaining unreacted moles of hydronium or hydroxide."
+                      }
+                    ],
+                    "id": "cgxe0zixhtkrsw7",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are leftover moles of unreacted hydronium, the solution is acidic, and the concentration of hydronium is calculated from the moles and total volume of combined acid and base. The pH is then calculated according to the definition of pH."
+                      }
+                    ],
+                    "id": "zi0h020yjgyxi2g",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are leftover moles of hydroxide, the solution is basic, and the concentration of hydroxide is calculated from the moles and total volume of combined acid and base. The pOH is calculated from the definition of pOH, which is then used to calculate pH."
+                      }
+                    ],
+                    "id": "5f5ydan1zhmqlix",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "If there are no leftover moles of unreacted hydronium or hydroxide, then the solution is neutral, and the pH is 7."
+                      }
+                    ],
+                    "id": "zbg771qyatx6mlm",
+                    "type": "p"
+                  }
+                ],
+                "id": "2585590248"
+              },
+              "id": "12626604",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst vol = [35.0, 40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0];\nconst v = OLI.random(0,11,0);\nconst volhno3 = vol[v];\nconst vhno3 = volhno3 .toPrecision(3);\n\nconst conca = [0.325, 0.375, 0.425, 0.475, 0.525, 0.575, 0.625, 0.675, 0.725, 0.775, 0.825, 0.875, 0.925, 0.975];\nconst concb = [0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85];\nconst c1 = OLI.random(0,13,0);\nconst c2 = OLI.random(0,13,0);\nconst conchno3 = conca[c1] .toPrecision(3);\nconst conckoh = concb[c2] .toPrecision(3);\n\nconst molhno3 = conchno3*volhno3/1000;\nconst molhno3sf = molhno3 .toPrecision(3);\n\nconst eqpt = volhno3*conchno3/conckoh;\nconst eqptsf = eqpt .toPrecision(4);\n\n// Initial pH\nconst ph0 = -Math.log10(conchno3);\nconst ph0sf = ph0 .toPrecision(3);\nconst ph0low = 0.99*ph0;\nconst ph0high = 1.01*ph0;\n\n// pH before equivalence point\nconst volbefore = OLI.random(9,eqpt - 2,2);\nconst volbeforesf = volbefore .toPrecision(4);\nconst molkohbefore = conckoh*volbefore/1000;\nconst molkohbeforesf = molkohbefore .toPrecision(3);\nconst molhno31 = (molhno3 - molkohbefore);\nconst molhno31sf = molhno31 .toPrecision(3);\nconst vtotal1 = (volhno3 + volbefore)/1000;\nconst vtotal1sf = vtotal1 .toPrecision(4);\nconst conchno3before =  (molhno31)/vtotal1;\nconst conchno3beforesf = conchno3before .toPrecision(3);\nconst pHbefore = -Math.log10(conchno3before);\nconst pHbeforesf = pHbefore .toPrecision(3);\nconst pHbeforelow = 0.99*pHbefore;\nconst pHbeforehigh = 1.01*pHbefore;\n\n// pH at equivalence point\nconst moleqpt = conckoh*eqpt/1000;\nconst moleqptsf = moleqpt .toPrecision(3);\n\n//pH after eq exports\nconst volafter = OLI.random(eqpt+5, 2*eqpt,2);\nconst volaftersf = volafter .toPrecision(3);\nconst molkohafter = conckoh*volafter/1000;\nconst molkohaftersf = molkohafter .toPrecision(3);\nconst excesskoh = molkohafter - molhno3;\nconst excesskohsf = excesskoh .toPrecision(3);\nconst vtotal2 = (volhno3 + volafter)/1000;\nconst vtotal2sf = vtotal2 .toPrecision(4);\nconst conckohafter = excesskoh/(vtotal2);\nconst conckohaftersf = conckohafter .toPrecision(3);\n\nconst pohafter = -Math.log10(conckohafter);\nconst pohaftersf = pohafter .toPrecision(3);\nconst phafter = 14 + Math.log10(conckohafter);\nconst phaftersf = phafter .toPrecision(4);\nconst phafterlow = 0.99*phafter;\nconst phafterhigh = 1.01*phafter;\n\n// Expose variables to OLI\nmodule.exports = {\n  vhno3, conchno3, molhno3sf, conckoh, eqpt, eqptsf, ph0, ph0sf, ph0low, ph0high, volbefore, volbeforesf, molhno31sf, vtotal1sf, \n  conchno3beforesf, molkohbeforesf, pHbefore, pHbeforesf, pHbeforelow, pHbeforehigh, moleqptsf, volafter, volaftersf, vtotal2sf, molkohaftersf, \n  excesskohsf, conckohaftersf, pohaftersf, phaftersf, phafterlow, phafterhigh, volafter\n};\n",
+              "id": "ddc8028205f04a28ac554190abed6276",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      },
+      {
+        "id": "numeric4",
+        "inputType": "numeric",
+        "partId": "numeric4",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "@@vhno3@@ mL of @@conchno3@@ M HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " is titrated by @@conckoh@@ M KOH."
+            }
+          ],
+          "id": "433dnhgzlzm2z9j",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of the acid solution before any titrant is added."
+            }
+          ],
+          "id": "tqw4805xl6u0xu0",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "8s1jt5pf21zood7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the pH after @@volbeforesf@@ mL of @@conckoh@@ M KOH is added to @@vhno3@@ mL of @@conchno3@@ M HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "k3eqzdnlym58o2a",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            }
+          ],
+          "id": "av9q932os8o9vks",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Calculate the pH after @@eqptsf@@ mL of @@conckoh@@ M KOH is added to @@vhno3@@ mL of @@conchno3@@ M HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "s7lsxfjdtzm7zw4",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            }
+          ],
+          "id": "cr4cj0vp6i6u0ca",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Calculate the pH after @@volaftersf@@ mL of @@conckoh@@ M KOH is added to @@vhno3@@ mL of @@conchno3@@ M HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "t3oapzq80mptu8n",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric4",
+              "input": "numeric4",
+              "type": "input_ref"
+            }
+          ],
+          "id": "o5gjfq8z52q4hi1",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": [],
+    "numeric4": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

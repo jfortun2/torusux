@@ -1,0 +1,709 @@
+{
+  "id": "79259",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78259"
+  ],
+  "title": "pool01_calc_percent_left_pool-pool01_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "lw0pysly1pqka49",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "j6qyezyzqncs7u3",
+                    "text": ""
+                  }
+                ],
+                "id": "3635169917",
+                "src": "\\lambda\\;=\\;\\frac{\\ln(2)}{t_{1/2}}\\;=\\;\\frac{0.693}{18.68\\;\\mathrm d}\\;=\\;0.0371\\;\\mathrm d^{-1}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3618257160",
+                "type": "p"
+              }
+            ],
+            "id": "1485018102"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3iglrkithxw2o08",
+                  "type": "p"
+                }
+              ],
+              "id": "1037433650"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sc5ezrzo82a0jei",
+                  "type": "p"
+                }
+              ],
+              "id": "2054721069"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c5e28bzicujek2j",
+                  "type": "p"
+                }
+              ],
+              "id": "3646756157"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "d20qdu25d3fyoc6",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "a6f55vt7wu119ys",
+                        "text": ""
+                      }
+                    ],
+                    "id": "2160558180",
+                    "src": "\\lambda\\;=\\;\\frac{\\ln(2)}{t_{1/2}}\\;=\\;\\frac{0.693}{18.68\\;\\mathrm d}\\;=\\;0.0371\\;\\mathrm d^{-1}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2330796215",
+                    "type": "p"
+                  }
+                ],
+                "id": "2676586469"
+              },
+              "id": "2336340492",
+              "legacyMatch": "[0.037,0.038]",
+              "rule": "input = {[0.037,0.038]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Radioactive decay is a first-order process. The decay constant is: "
+                      }
+                    ],
+                    "id": "db99f6aaabac45bb8b9d86f5c99bf6dc",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "2ehhca0mdol1zx9",
+                        "text": ""
+                      }
+                    ],
+                    "id": "2166552445",
+                    "src": "\\lambda\\;=\\;\\frac{\\ln(2)}{t_{1/2}}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3079977367",
+                    "type": "p"
+                  }
+                ],
+                "id": "1363990133"
+              },
+              "id": "4124429761",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "rfgk7526sh75z16",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "0f62xs0sir6hpo7",
+                    "text": ""
+                  }
+                ],
+                "id": "4137063139",
+                "src": "\\begin{array}{l}N_t\\;=\\;N_0\\;\\mathrm e^{-kt}\\\\\\;\\;\\;\\;\\;=\\;(100.0\\%)\\mathrm e^{-((0.0371/\\mathrm d)(@@\\mathrm{days}@@\\;\\mathrm d))\\;}\\\\\\;\\;\\;\\;\\;=@@massAtTime@@\\;\\%\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "mxupk2eqkpbwjvu",
+                "type": "p"
+              }
+            ],
+            "id": "4029704706"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rk769nn0e9dm6p4",
+                  "type": "p"
+                }
+              ],
+              "id": "3964860325"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lef5u45p2psyrju",
+                  "type": "p"
+                }
+              ],
+              "id": "2882327120"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "00ee8k13kwtgkbg",
+                  "type": "p"
+                }
+              ],
+              "id": "1513504314"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "k2328cmgzvnjxb5",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "c05j9n746f3ofmt",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1438627801",
+                    "src": "\\begin{array}{l}N_t\\;=\\;N_0\\;\\mathrm e^{-kt}\\\\\\;\\;\\;\\;\\;=\\;(100.0\\%)\\mathrm e^{-((0.0371/\\mathrm d)(@@days@@\\;\\mathrm d))\\;}\\\\\\;\\;\\;\\;\\;=\\;@@massAtTime@@\\;\\%\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "qdy1gjfy209ks8v",
+                    "type": "p"
+                  }
+                ],
+                "id": "2383851696"
+              },
+              "id": "2383258143",
+              "legacyMatch": "[@@perLow@@,@@perHigh@@]",
+              "rule": "input = {[@@perLow@@,@@perHigh@@]}",
+              "score": 8
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The amount left, "
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ", is related to the initial amount, "
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "sub": true,
+                        "text": "0"
+                      },
+                      {
+                        "text": ", by:"
+                      }
+                    ],
+                    "id": "ab507d5876a2486aaf3d97897f145be4",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "17tv7kxzv230got",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1830849870",
+                    "src": "N_t\\;=\\;N_0\\;\\mathrm e^{-\\lambda t}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2929835037",
+                    "type": "p"
+                  }
+                ],
+                "id": "1877902690"
+              },
+              "id": "1353034401",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "y73si86xus19i93",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ylzak8yfu8383fi",
+                    "text": ""
+                  }
+                ],
+                "id": "2051163678",
+                "src": "\\begin{array}{l}t\\;=\\;-\\dfrac1{\\;\\mathrm\\lambda}\\;\\ln\\left(\\dfrac{N_t}{N_0}\\right)\\;\\\\\\;\\;\\;=\\;-\\dfrac1{0.0371\\;\\mathrm d^{-1}}\\;\\ln\\left(\\dfrac{(@@percent@@\\%}{100\\%}\\right)\\;\\\\\\;\\;\\;=\\;@@daysAnswer@@\\;d\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "4165870565",
+                "type": "p"
+              }
+            ],
+            "id": "1331623254"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b29sz57f9k57pte",
+                  "type": "p"
+                }
+              ],
+              "id": "2292614294"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2gj056vy60nzks2",
+                  "type": "p"
+                }
+              ],
+              "id": "1353755817"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "i56koshdr8xk1wd",
+                  "type": "p"
+                }
+              ],
+              "id": "3034297560"
+            }
+          ],
+          "id": "three",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct.  "
+                      }
+                    ],
+                    "id": "vnj9vkscsfsdri3",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "2wznz976qepqymt",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1123092872",
+                    "src": "\\begin{array}{l}t\\;=\\;-\\dfrac1{\\;\\mathrm\\lambda}\\;\\ln\\left(\\dfrac{N_t}{N_0}\\right)\\;\\\\\\;\\;\\;=\\;-\\dfrac1{0.0371\\;\\mathrm d^{-1}}\\;\\ln\\left(\\dfrac{(@@percent@@\\%}{100\\%}\\right)\\;\\\\\\;\\;\\;=\\;@@daysAnswer@@\\;d\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "fzehnsqfk9shc0y",
+                    "type": "p"
+                  }
+                ],
+                "id": "1838426992"
+              },
+              "id": "624003870",
+              "legacyMatch": "[@@daysLow@@,@@daysHigh@@]",
+              "rule": "input = {[@@daysLow@@,@@daysHigh@@]}",
+              "score": 8
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t\\;=\\;-\\frac1{\\;\\mathrm\\lambda}\\;\\ln\\left(\\frac{N_t}{N_0}\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "b373824527ab426f94f5f312de9f3704",
+                    "type": "p"
+                  }
+                ],
+                "id": "2366826844"
+              },
+              "id": "1322263052",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Thorium, a rare element in the earth's crust, has over seven radioactive isotopes. One of these, , has a half-life of 18.68 days. Calculate the decay constant. d−1What percent of Th-227 will be left after @@days@@ days? %When @@percent@@ % is left, how much time has passed? days",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst daysIndex = OLI.random(0,5);\nconst daysArray = [15,28,35,43,51,62];\nconst days = daysArray[daysIndex];\nconst expPart = (-1*0.03710*days) .toPrecision(5);\nconst ePart = Math.exp(expPart);\nconst massAtTime = (100*ePart) .toPrecision(3);\nconst perLow = massAtTime*0.98;\nconst perHigh = massAtTime*1.02;\nconst perIndex = OLI.random(0,5);\nconst perArray = [0.355,2.25,7.15,15.5,23.5,31.5];\nconst percent = perArray[perIndex];\nconst perDivHundred = (percent/100);\nconst logPercent = Math.log(perDivHundred);\nconst daysAnswer = (-26.954*logPercent) .toPrecision(3);\nconst daysLow = daysAnswer*0.98;\nconst daysHigh = daysAnswer*1.02;\n\n\n\n\n// Expose variables to OLI\nmodule.exports = {\n daysIndex,\n daysArray,\n days,\n expPart,\n ePart,\n massAtTime,\n perLow,\n perHigh,\n perIndex,\n perArray,\n percent,\n perDivHundred,\n logPercent,\n daysAnswer,\n daysLow,\n daysHigh,\n};\n",
+              "id": "e937d021f5e147009f16b4eed68859d3",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      },
+      {
+        "id": "two",
+        "inputType": "numeric",
+        "partId": "two",
+        "size": "small"
+      },
+      {
+        "id": "three",
+        "inputType": "numeric",
+        "partId": "three",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Thorium, a rare element in the earth's crust, has over seven radioactive isotopes. One of these, "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": false,
+              "src": "{}_{90}^{227}\\mathrm{Th}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ", has a half-life of 18.68 days. "
+            }
+          ],
+          "id": "d12b3c1ead2b4497bffbe1c9fbe4ef27",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the decay constant."
+            }
+          ],
+          "id": "e692a423f7fc4ed690c946810345b26d",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " d"
+            },
+            {
+              "sup": true,
+              "text": "−1"
+            }
+          ],
+          "id": "c5f0b3bbf42a4a778fa1dc07dd38e65f",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What percent of Th-227 will be left after @@days@@ days?"
+            }
+          ],
+          "id": "fdbac77e675549eba85703d91d28e5fd",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " %"
+            }
+          ],
+          "id": "f1da79eff94346c9ba247abf8ba13428",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "When @@percent@@ % is left, how much time has passed?"
+            }
+          ],
+          "id": "cc8345f71b454c0fac1dca6d3b4732d8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "three",
+              "input": "three",
+              "type": "input_ref"
+            },
+            {
+              "text": " days"
+            }
+          ],
+          "id": "e73ce350006347d4afa310d35a695f85",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "three": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

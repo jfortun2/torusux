@@ -1,0 +1,242 @@
+{
+  "id": "78789",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "predicting_precip_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vng608rlq8wmxmo",
+                  "type": "p"
+                }
+              ],
+              "id": "1954232036"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "30q0j7fs0qq1jwb",
+                  "type": "p"
+                }
+              ],
+              "id": "3855522994"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7tc8o7zthj1cq86",
+                  "type": "p"
+                }
+              ],
+              "id": "3104737360"
+            }
+          ],
+          "id": "3360155761",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Co}{(\\mathrm{OH})}_2\\;(s)\\;\\rightleftharpoons\\;\\;\\mathrm{Co}^{2+}(aq)\\;+\\;2\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{sp}}\\;=\\;2.5\\times10^{-16}\\\\Q\\;=\\;\\lbrack\\mathrm{Mg}^{2+}\\rbrack\\;\\lbrack\\mathrm{OH}^-\\rbrack^2\\;\\\\Q\\;=\\;(0.005)(5.0\\times10^{-8})^{2}\\;=\\;1.2\\times10^{-17}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " < "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ". Therefore, a precipitate will not form. "
+                      }
+                    ],
+                    "id": "fpvpliizkg2jsgv",
+                    "type": "p"
+                  }
+                ],
+                "id": "3461453268"
+              },
+              "id": "1057067734",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Co}{(\\mathrm{OH})}_2\\;(s)\\;\\rightleftharpoons\\;\\;\\mathrm{Co}^{2+}(aq)\\;+\\;2\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{sp}}\\;=\\;2.5\\times10^{-16}\\\\Q\\;=\\;\\lbrack\\mathrm{Mg}^{2+}\\rbrack\\;\\lbrack\\mathrm{OH}^-\\rbrack^2\\;\\\\Q\\;=\\;(0.005)(5.0\\times10^{-8})^{2}\\;=\\;1.2\\times10^{-17}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " < "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ". Therefore, a precipitate will not form. "
+                      }
+                    ],
+                    "id": "ksujxkg0savxx8z",
+                    "type": "p"
+                  }
+                ],
+                "id": "466325626"
+              },
+              "id": "1340665550",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " A solution containing 0.01 M [Co2+] is mixed with a solution of equal volume with [OH−] of 1.0 × 10–7 M. Will the precipitate Co(OH)2 form?",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes"
+              }
+            ],
+            "id": "m5w1ye7efrsyc3d",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "zlhukinw08ymem8",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " A solution containing 0.01 M [Co"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "] is mixed with a solution of equal volume with [OH"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "] of 1.0 × 10"
+            },
+            {
+              "sup": true,
+              "text": "–7"
+            },
+            {
+              "text": " M. Will the precipitate Co(OH)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " form?"
+            }
+          ],
+          "id": "uf9r8kk7v3jxmov",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3360155761": [
+      "78469"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

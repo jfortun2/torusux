@@ -1,0 +1,272 @@
+{
+  "id": "79570",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78153"
+  ],
+  "title": "electrolysis_skill_pool_v2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D",
+          "E"
+        ],
+        "731662745"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "o9eoe2rlrpaj15h",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "kb452oe8vm6f5pe",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "63qft827wlc9jom",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "7ntbtmr0v8z14o8",
+                        "text": "Reduction occurs at the cathode in a galvanic cell."
+                      }
+                    ],
+                    "id": "nv6d92o4mhxc5w3",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "kq6zrkvy2ufrnpl",
+                        "text": "When a galvanic cell is recharged, the reverse chemical reaction occurs as when the galvanic cell operates."
+                      }
+                    ],
+                    "id": "w1ed9dvikbnu96a",
+                    "type": "li"
+                  }
+                ],
+                "id": "oxh4pgopqx29qfk",
+                "type": "ul"
+              }
+            ],
+            "id": "2767024342"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cmvb4gn0uyozgez",
+                  "type": "p"
+                }
+              ],
+              "id": "758035896"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "p52jd58g32sdtze",
+                  "type": "p"
+                }
+              ],
+              "id": "3917959531"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m8abh3q1krx6t3i",
+                  "type": "p"
+                }
+              ],
+              "id": "653176260"
+            }
+          ],
+          "id": "f6b3ce58daf24c738778ac9e097f6663",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A rechargeable battery operates as an electrolytic cell when it is being recharged with external power."
+                      }
+                    ],
+                    "id": "a8059ed89df140168d6cc4e51ab16571",
+                    "type": "p"
+                  }
+                ],
+                "id": "1114759728"
+              },
+              "id": "731662745",
+              "legacyMatch": "D,E",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E} && (input like {D}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Electrolysis involves applying an external voltage to drive a redox reaction that would otherwise be nonspontaneous. To distinguish the nonspontaneous reaction from the spontaneous reaction that occurs in a galvanic cell, the electrolysis reaction is described as occurring in an electrolytic cell, even if both reactions occur in the same physical space. The electrolytic cell reaction is simply the reverse of the galvanic cell reaction. For example, a rechargeable battery operates as a galvanic cell when it provides power, and the battery operates as an electrolytic cell when it is being recharged with external power. When the redox process is reversed, the electrodes also have their names switched -- what was the anode for one reaction is now the cathode for the reverse reaction -- because the reaction is being forced to go in the reverse direction by the external power. Even though the electrodes switch names (anode vs. cathode) when the redox process is reversed, by definition oxidation still occurs at the anode and reduction at the cathode."
+                      }
+                    ],
+                    "id": "d32d4dbb6b77437c992f81ba2edbf5ba",
+                    "type": "p"
+                  }
+                ],
+                "id": "1926093670"
+              },
+              "id": "2206296532",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidation occurs at the anode in a galvanic cell but not in an electrolytic cell."
+              }
+            ],
+            "id": "foe6x0aitg5at7d",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "An electrolytic cell does not require external voltage to operate."
+              }
+            ],
+            "id": "on0hjsrs8zuyk20",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidation occurs at the cathode in an electrolytic cell."
+              }
+            ],
+            "id": "prfwl0nucqa7zra",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Reduction occurs at the cathode in a galvanic cell."
+              }
+            ],
+            "id": "9j2ovrk0cbifep2",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "When a galvanic cell is recharged, the reverse chemical reaction occurs as when the galvanic cell operates."
+              }
+            ],
+            "id": "0h6d777ko5fv613",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which one of the following statements is true? Select all that apply."
+            }
+          ],
+          "id": "c0ca106c3d334574a61891d7170c2fa6",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "f6b3ce58daf24c738778ac9e097f6663": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

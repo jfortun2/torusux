@@ -1,0 +1,283 @@
+{
+  "id": "79548",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78078"
+  ],
+  "title": "corrosion_skill_pool_v4",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B",
+          "D"
+        ],
+        "1508421262"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "6yrvtgfab94250b",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "zdl0ptphuv4397a",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "3rftbk25934anle",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "xkcmjc0fghwqszd",
+                        "text": "Painting can be used to prevent corrosion."
+                      }
+                    ],
+                    "id": "lbb340i1wtoeaoj",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "iccxoi36q1c3jo9",
+                        "text": "Alloying a metal with other metals can be used to prevent corrosion."
+                      }
+                    ],
+                    "id": "e99g0wu62elv2ve",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "v30osfx3b0vp0ch",
+                        "text": "Cathodic protection is to make the metal to be protected the cathode in a galvanic cell."
+                      }
+                    ],
+                    "id": "m4hpjfdnk2o7dvn",
+                    "type": "li"
+                  }
+                ],
+                "id": "lpkzy2vo9lqkab9",
+                "type": "ul"
+              }
+            ],
+            "id": "1001213656"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wnbnd4ikhhfrvb1",
+                  "type": "p"
+                }
+              ],
+              "id": "580820251"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lkq3b7bpear1jmx",
+                  "type": "p"
+                }
+              ],
+              "id": "2707368213"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "no36uaoy0cicvuw",
+                  "type": "p"
+                }
+              ],
+              "id": "4134767338"
+            }
+          ],
+          "id": "cb3b093d3aae4371a81b722f3abc9397",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "d1874dbcea06454bacfb9f254503a098",
+                    "type": "p"
+                  }
+                ],
+                "id": "2454696127"
+              },
+              "id": "1508421262",
+              "legacyMatch": "A,B,D",
+              "rule": "(!(input like {E})) && ((!(input like {C})) && (input like {D} && (input like {B} && (input like {A}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "e5ee7450c1534d1794830f01b99b508d",
+                    "type": "p"
+                  }
+                ],
+                "id": "155106426"
+              },
+              "id": "2786853082",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Painting can be used to prevent corrosion."
+              }
+            ],
+            "id": "54jllam8nraw3qm",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Alloying a metal with other metals can be used to prevent corrosion."
+              }
+            ],
+            "id": "ui8dchy66190otk",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Anodic protection can be used to prevent corrosion."
+              }
+            ],
+            "id": "0f3z61efvhx8jnz",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Cathodic protection is to make the metal to be protected the cathode in a galvanic cell."
+              }
+            ],
+            "id": "97ixh0z24ip2uzt",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Galvanized iron has a surface layer of chromium that protects it from corrosion. "
+              }
+            ],
+            "id": "mbs2lu6q5deidb9",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following descriptions are true for corrosion protection? Select all that apply."
+            }
+          ],
+          "id": "fdc8386dd98147cc81d8129b846703a7",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "cb3b093d3aae4371a81b722f3abc9397": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

@@ -1,0 +1,169 @@
+{
+  "id": "79949",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "pre_instructor-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1curh0pzglppaon",
+                  "type": "p"
+                }
+              ],
+              "id": "3365204439"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dwtcfximhfyw6l7",
+                  "type": "p"
+                }
+              ],
+              "id": "1079760095"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nuu8pgy4g5bk8i6",
+                  "type": "p"
+                }
+              ],
+              "id": "2365476871"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "256o11sxu9khxmm",
+                    "type": "p"
+                  }
+                ],
+                "id": "4174142780"
+              },
+              "id": "3698525880",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "jaomf1fsq18gh8n",
+            "text": "this is my first term"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "geb5ejtumdqq1r1",
+            "text": "this is my second term"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "g2vno7nt5eie8ei",
+            "text": "more than a year"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "How long have you been using OLI for any of your courses? "
+            }
+          ],
+          "id": "w9mtss1kvo2xogi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            }
+          ],
+          "id": "5cpr1pcq609evw9",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

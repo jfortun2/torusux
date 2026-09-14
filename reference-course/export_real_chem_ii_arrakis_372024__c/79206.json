@@ -1,0 +1,461 @@
+{
+  "id": "79206",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78245"
+  ],
+  "title": "Rate_Law_Mech_Pool_1_UA_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " Step 2 is the rate-limiting step, with: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "rate=k_2\\lbrack H_2\\rbrack{\\lbrack I\\rbrack}^2",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Since Step 1 is fast and reversible (i.e. equilibrium): "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "rate_{1\\rightarrow}=k_{1\\rightarrow}\\lbrack I_2\\rbrack\\;=\\;rate_{1\\leftarrow}=k_{1\\leftarrow}{\\lbrack I\\rbrack}^2",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Solving this in terms of the intermediate I: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\lbrack I\\rbrack}^2=\\frac{k_{1\\rightarrow}}{k_{1\\leftarrow}}\\lbrack I_2\\rbrack",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Then substituting [I]2 into the rate law for the rate-limiting step: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "rate=k_2\\lbrack H_2\\rbrack\\left(\\frac{k_{1\\rightarrow}\\lbrack I_2\\rbrack}{k_{1\\leftarrow}}\\right)^\\frac12",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " and combining the k values and simplifying: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": " rate=k\\lbrack H_2\\rbrack{\\lbrack I_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "jvfxogeb8m67vpn",
+                "type": "p"
+              }
+            ],
+            "id": "3241707874"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gjr8nyfbm8erxfh",
+                  "type": "p"
+                }
+              ],
+              "id": "2247624013"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8p8m51romvxtj55",
+                  "type": "p"
+                }
+              ],
+              "id": "3493532865"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "31o4vmjxay23zbr",
+                  "type": "p"
+                }
+              ],
+              "id": "2693618153"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Step 2 is the rate-limiting step, with: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "rate=k_2\\lbrack H_2\\rbrack{\\lbrack I\\rbrack}^2",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Since Step 1 is fast and reversible (i.e. equilibrium): "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "rate_{1\\rightarrow}=k_{1\\rightarrow}\\lbrack I_2\\rbrack\\;=\\;rate_{1\\leftarrow}=k_{1\\leftarrow}{\\lbrack I\\rbrack}^2",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Solving this in terms of the intermediate I: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\lbrack I\\rbrack}^2=\\frac{k_{1\\rightarrow}}{k_{1\\leftarrow}}\\lbrack I_2\\rbrack",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Then substituting [I]2 into the rate law for the rate-limiting step: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "rate=k_2\\lbrack H_2\\rbrack\\left(\\frac{k_{1\\rightarrow}\\lbrack I_2\\rbrack}{k_{1\\leftarrow}}\\right)^\\frac12",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " and combining the k values and simplifying: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": " rate=k\\lbrack H_2\\rbrack{\\lbrack I_2\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "8mba5idzj1ff9dp",
+                    "type": "p"
+                  }
+                ],
+                "id": "280499796"
+              },
+              "id": "2794491839",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Since the slow step limits the rate of reaction, first write the (elementary) rate law for that step. Then since an intermediate cannot be in the (overall) rate law, use the (elementary) rate laws for the fast, reversible step (recall that for this type of step the rate of 'forward' reaction equals the rate of 'reverse' reaction) to solve for the concentration of the intermediate. Finally, substitute this into the rate-determining step rate law to determine the (overall) rate law."
+                      }
+                    ],
+                    "id": "aa190a5d0f524664a07f4a54da167df0",
+                    "type": "p"
+                  }
+                ],
+                "id": "888744550"
+              },
+              "id": "398773059",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "3857725191",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{rate}=k\\lbrack{\\mathrm H}_2\\rbrack\\lbrack{\\mathrm I}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "fcr19jhso5c63jw",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{rate}=k\\frac{\\lbrack{\\mathrm H}_2\\rbrack\\lbrack{\\mathrm I}_2\\rbrack}{\\lbrack\\mathrm{HI}\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "islapz0bev0pitk",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{rate}=k{\\lbrack{\\mathrm H}_2\\rbrack}^\\frac12\\lbrack{\\mathrm I}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "wbonz8owh1sf5ec",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{rate}=k\\lbrack{\\mathrm H}_2\\rbrack{\\lbrack{\\mathrm I}_2\\rbrack}^\\frac122",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "5588eu6v0b6hdrz",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{rate}=k\\frac{\\lbrack{\\mathrm H}_2\\rbrack\\lbrack{\\mathrm I}_2\\rbrack}{{\\lbrack\\mathrm{HI}\\rbrack}^2}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "0gb33n8ytln2v00",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the reaction: "
+            }
+          ],
+          "id": "fc3071104bda4043b6a0c92c83e37c42",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm H}_2(g)\\;+\\;{\\mathrm I}_2(g)\\;\\rightarrow\\;2\\;\\mathrm{HI}(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "h6da3p1tskq28qi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The following mechanism has been proposed for this reaction. "
+            }
+          ],
+          "id": "0xn4vic8u7b8qcw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm I}_2(g)\\;\\rightleftharpoons\\;2\\;\\mathrm I(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;(\\mathrm{fast},\\;\\mathrm{reversible})\\;\\;\\\\{\\mathrm H}_2(\\mathrm g)\\;+\\;2\\;\\mathrm I(g)\\;\\rightarrow\\;2\\;\\mathrm{HI}(g)\\;\\;\\;(\\mathrm{slow})",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "jol28f183eyp3x8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Determine the rate law for this proposed mechanism."
+            }
+          ],
+          "id": "ad1d83fe4395499380ff715e60406e02",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

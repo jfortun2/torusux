@@ -1,0 +1,279 @@
+{
+  "id": "80448",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_equil_digt1-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "If Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "G"
+                    },
+                    {
+                      "text": " < 0, the reaction is spontaneous. If Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "G"
+                    },
+                    {
+                      "text": " > 0, the reaction is not spontaneous. If Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "G"
+                    },
+                    {
+                      "text": " = 0, the reaction is at equilibrium."
+                    }
+                  ],
+                  "id": "wybjmiaa7eiug6u",
+                  "type": "p"
+                }
+              ],
+              "id": "4258018801"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "26g5u0f2c8q20g5",
+                  "type": "p"
+                }
+              ],
+              "id": "3082987460"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7fbymcvfk4mrs43",
+                  "type": "p"
+                }
+              ],
+              "id": "2520802652"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again."
+                      }
+                    ],
+                    "id": "h4but70sak2ht8x",
+                    "type": "p"
+                  }
+                ],
+                "id": "3207248828"
+              },
+              "id": "1460978134",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " is > 0, so the reaction is not spontaneous under these conditions."
+                      }
+                    ],
+                    "id": "x4druitdhxuja70",
+                    "type": "p"
+                  }
+                ],
+                "id": "3409771327"
+              },
+              "id": "3958060038",
+              "legacyMatch": "B",
+              "rule": "input like {one_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again."
+                      }
+                    ],
+                    "id": "zsrc8hjrpj3yzg7",
+                    "type": "p"
+                  }
+                ],
+                "id": "1224042398"
+              },
+              "id": "1281260760",
+              "legacyMatch": "C",
+              "rule": "input like {one_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "b31dntimp4xmgzg",
+                    "type": "p"
+                  }
+                ],
+                "id": "1557241153"
+              },
+              "id": "1785609879",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "one_A"
+          ],
+          "1460978134"
+        ],
+        [
+          [
+            "one_B"
+          ],
+          "3958060038"
+        ],
+        [
+          [
+            "one_C"
+          ],
+          "1281260760"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1116354792",
+          "operation": "shuffle",
+          "partId": "one",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "3kh8psgxp8pifps",
+            "text": "spontaneous"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "s1h4ms7zvigruat",
+            "text": "not spontaneous"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "et171iac0x779pm",
+            "text": "at equilibrium"
+          }
+        ],
+        "id": "one_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Under these conditions, this reaction is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "hkvvcaop381p70e",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [
+      "78307"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

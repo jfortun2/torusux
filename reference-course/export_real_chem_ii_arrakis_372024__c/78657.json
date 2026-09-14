@@ -1,0 +1,274 @@
+{
+  "id": "78657",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78100"
+  ],
+  "title": "pH_calc_strong_base_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "wtax4mhfdyylifc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "ainm7em4365r29t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\text{pOH}=-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log\\;\\lbrack@@D@@\\times10^{@@E@@}\\rbrack\\;=\\;@@pOH@@\\\\\\\\\\mathrm{pH}\\;=\\;14\\;-\\;@@pOH@@\\;=\\;@@pH@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "b1gbu633nvprmk7",
+                "type": "p"
+              }
+            ],
+            "id": "1197579026"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cvjrvr5650u6ug5",
+                  "type": "p"
+                }
+              ],
+              "id": "1480507246"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w0q8kah2i87k8tn",
+                  "type": "p"
+                }
+              ],
+              "id": "1283261208"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9kx5e903788ktpa",
+                  "type": "p"
+                }
+              ],
+              "id": "2184523052"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\text{pOH}=-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log\\;\\lbrack@@D@@\\times10^{@@E@@}\\rbrack\\;=\\;@@pOH@@\\\\\\\\\\mathrm{pH}\\;=\\;14.000\\;-\\;@@pOH@@\\;=\\;@@pH@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "oydnvz5kt4pmhak",
+                    "type": "p"
+                  }
+                ],
+                "id": "3209454998"
+              },
+              "id": "2448904404",
+              "legacyMatch": "[@@pHlow@@,@@pHhigh@@]",
+              "rule": "input = {[@@pHlow@@,@@pHhigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The hydroxide ion concentration in a @@D@@×10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "@@E@@"
+                      },
+                      {
+                        "text": " M NaOH solution is @@D@@×10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "@@E@@"
+                      },
+                      {
+                        "text": " M since every formula unit of NaOH contains one hydroxide ion. Then use the definition of pOH to calculate pOH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\text{pOH} = -\\log_{10}[\\text{OH}^-]",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " and pH + pOH = 14 to calculate pH. "
+                      }
+                    ],
+                    "id": "c7521abdcc6e4c3fbb9bb6142635f730",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "e131ce7f3ec54bf19331484afb50ef5f",
+                    "type": "p"
+                  }
+                ],
+                "id": "2558377119"
+              },
+              "id": "1996865203",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst D = OLI.random(1, 9.99, 2);\nconst E = OLI.random(-6, -2,0);\nconst OH = D*10**E;\nconst pOH = (-Math.log10(OH)) .toFixed(3);\nconst pH = (14 - pOH) .toFixed(3);\nconst pHlow = 0.98*pH;\nconst pHhigh = 1.02*pH;\n\n// Expose variables to OLI\nmodule.exports = {\n  D,\n  E,\n  OH,\n  pOH,\n  pH,\n  pHlow,\n  pHhigh\n};\n",
+              "id": "ecada7131b554b448038a7cef800a21e",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of a NaOH solution with a concentration of @@D@@×10"
+            },
+            {
+              "sup": true,
+              "text": "@@E@@"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "c9137347fff1471d93e0061e43534ab5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "bfefd06ae6a048938cac214a985e38ad",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

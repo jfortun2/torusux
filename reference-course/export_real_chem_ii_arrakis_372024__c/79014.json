@@ -1,0 +1,347 @@
+{
+  "id": "79014",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78151"
+  ],
+  "title": "po9_UA_deltaG_nonstandard_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "z3ar1dp8w7xpbmn",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "xyddi5mgh28a6b7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm\\Delta G\\;=\\;\\mathrm\\Delta G^{\\mathit o}\\;+\\:\\mathrm RT\\;\\ln\\left(\\frac{\\left(P_{{\\mathrm{NO}}_2}\\right)^2}{\\left(P_{{\\mathrm{NO}}_2}\\right)^2\\cdot\\left(P_{{\\mathrm O}_2}\\right)}\\right)\\\\ =\\;-72.6\\;\\mathrm{kJ}\\;+\\:\\left(0.008314\\;\\frac{\\mathrm{kJ}}{\\mathrm K}\\right)\\cdot\\left(298\\;\\mathrm K\\right)\\cdot\\ln\\left(\\frac{\\left(@@pno2@@\\right)^2}{\\left(@@pno@@\\right)^2\\cdot\\left(@@po2@@\\right)}\\right)\\\\ =\\;@@anssf@@\\;\\mathrm{kJ}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "pv6st811nhaxrnl",
+                "type": "p"
+              }
+            ],
+            "id": "2596591556"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u4k8iq1n47kyya1",
+                  "type": "p"
+                }
+              ],
+              "id": "1929449484"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1xvx0q9ana84bu3",
+                  "type": "p"
+                }
+              ],
+              "id": "3629833131"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dd71ckto2uafxht",
+                  "type": "p"
+                }
+              ],
+              "id": "2687762454"
+            }
+          ],
+          "id": "3938162242",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "gt1k7b969cl9m8a",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm\\Delta G\\;=\\;\\mathrm\\Delta G^{\\mathit o}\\;+\\:\\mathrm RT\\;\\ln\\left(\\frac{\\left(P_{{\\mathrm{NO}}_2}\\right)^2}{\\left(P_{{\\mathrm{NO}}_2}\\right)^2\\cdot\\left(P_{{\\mathrm O}_2}\\right)}\\right)\\\\ =\\;-72.6\\;\\mathrm{kJ}\\;+\\:\\left(0.008314\\;\\frac{\\mathrm{kJ}}{\\mathrm K}\\right)\\cdot\\left(298\\;\\mathrm K\\right)\\cdot\\ln\\left(\\frac{\\left(@@pno2@@\\right)^2}{\\left(@@pno@@\\right)^2\\cdot\\left(@@po2@@\\right)}\\right)\\\\ =\\;@@anssf@@\\;\\mathrm{kJ}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "v8amdpgh9smekiw",
+                    "type": "p"
+                  }
+                ],
+                "id": "2934176872"
+              },
+              "id": "1894132407",
+              "legacyMatch": "[@@anshigh@@,@@anslow@@]",
+              "rule": "input = {[@@anshigh@@,@@anslow@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that the Gibbs free energy change Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " can be determined from the standard Gibbs free energy change Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "sup": true,
+                        "text": "o"
+                      },
+                      {
+                        "text": " and the reaction quotient Q:"
+                      }
+                    ],
+                    "id": "errbh7aqskaw0sr",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta G\\;=\\;\\mathrm\\Delta G^\\circ\\;+\\:\\mathrm RT\\;\\ln\\;Q",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ewl0mj08d8asy5o",
+                    "type": "p"
+                  }
+                ],
+                "id": "2102070198"
+              },
+              "id": "147271085",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst pressno = [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95];\nconst presso2 = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9];\nconst pressno2 = [1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5];\n\nconst p1 = OLI.random(0,9);1\nconst p2 = OLI.random(0,9);\nconst p3 = OLI.random(0,16);\nconst pno = pressno[p1] .toPrecision(3); \nconst po2 = presso2[p2] .toPrecision(3); \nconst pno2 = pressno2[p3] .toPrecision(3);\n\n// Two variable definitions\nconst ratio = (pno2**2/((pno**2)*po2));\nconst ratiosf = ratio .toPrecision(3);\nconst term = (8.314*298/1000)*math.log(ratio);\nconst ans = -72.6 + term;\nconst anssf = ans .toPrecision(3);\nconst anslow = 0.99*ans;\nconst anshigh = 1.01*ans;\n\n// Expose variables to OLI\nmodule.exports = {\n  pno, po2, pno2, ratio, ratiosf, term, ans, anssf, anslow, anshigh\n};\n",
+              "id": "cc536a46ff694c6ebcaca478feee007e",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "a8263ee6206047b7999407ccbe8dd343",
+        "inputType": "numeric",
+        "partId": "3938162242",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "2\\;\\mathrm{NO}(g)\\;+\\:{\\mathrm O}_2(g)\\;\\rightarrow\\;2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\mathrm{with}\\;\\;\\mathrm\\Delta G^\\circ\\;=\\;-72.6\\;\\mathrm{kJ}\\;\\;\\mathrm{at}\\;\\;25^\\circ\\mathrm C",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "54i81qhdkvf114x",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "A flask contains @@pno@@ atm NO("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": "), @@po2@@ atm O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": ") and @@pno2@@ atm NO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " ("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": ") at 25"
+            },
+            {
+              "sup": true,
+              "text": "o"
+            },
+            {
+              "text": "C. Determine the free energy change for the reaction above with these initial conditions. "
+            }
+          ],
+          "id": "oj1e8a181li9bjv",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "a8263ee6206047b7999407ccbe8dd343",
+              "input": "a8263ee6206047b7999407ccbe8dd343",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ"
+            }
+          ],
+          "id": "pai96hwd4xedws6",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3938162242": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

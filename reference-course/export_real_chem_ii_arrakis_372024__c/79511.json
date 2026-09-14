@@ -1,0 +1,260 @@
+{
+  "id": "79511",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_conc_digt2-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "90gz4v9orad3i9u",
+                  "type": "p"
+                }
+              ],
+              "id": "1009512518"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "p1p2974lxwilnw0",
+                  "type": "p"
+                }
+              ],
+              "id": "2825533483"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rs90vctyy5whebl",
+                  "type": "p"
+                }
+              ],
+              "id": "4153687750"
+            }
+          ],
+          "id": "2187621772",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Changing the amount of solid substances has no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "f5vb54bgx9t1gyc",
+                    "type": "p"
+                  }
+                ],
+                "id": "3722821589"
+              },
+              "id": "1652429746",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Changing the amount of solid substances has no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "9h7dteq8tb5h06x",
+                    "type": "p"
+                  }
+                ],
+                "id": "3741976976"
+              },
+              "id": "3396045547",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Changing the amount of solid substances has no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "4je7ekhb8h54dfs",
+                    "type": "p"
+                  }
+                ],
+                "id": "2647018293"
+              },
+              "id": "3656743320",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "62kgj5qjflh86vk",
+                    "type": "p"
+                  }
+                ],
+                "id": "2914340566"
+              },
+              "id": "833895132",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1652429746"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3396045547"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3656743320"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1652429746"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3396045547"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3656743320"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will shift to the right."
+              }
+            ],
+            "id": "80nvnv4t6fc50c5",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will shift to the left."
+              }
+            ],
+            "id": "mu9x7ylbypcxlzu",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No shift will occur."
+              }
+            ],
+            "id": "2xs3wotpd99ifbs",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Decreasing the amount of C("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ")"
+            }
+          ],
+          "id": "m1ng074sombfzym",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2187621772": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

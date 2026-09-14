@@ -1,0 +1,237 @@
+{
+  "id": "80392",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78200"
+  ],
+  "title": "galvanic_cell_concept_pool_v2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "C"
+        ],
+        "2729027019"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The correct answers are: "
+                  }
+                ],
+                "id": "pmnknnaf7xgstjc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "i7xvynma6mitxqp",
+                        "text": "Oxidation happens at the anode and reduction happens at the cathode."
+                      }
+                    ],
+                    "id": "hrjwjkhxn68mvym",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "mf6llo34zkaeg22",
+                        "text": "Anions from the salt bridge flow into the oxidation half-cell."
+                      }
+                    ],
+                    "id": "54aihc53mgtz206",
+                    "type": "li"
+                  }
+                ],
+                "id": "e6ctmwnknkje6wp",
+                "type": "ul"
+              }
+            ],
+            "id": "2816060218"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t2dxuzrij23a1s3",
+                  "type": "p"
+                }
+              ],
+              "id": "3739199942"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3na82462txvl8s1",
+                  "type": "p"
+                }
+              ],
+              "id": "3960652571"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4938l6me7zwggr3",
+                  "type": "p"
+                }
+              ],
+              "id": "3596102088"
+            }
+          ],
+          "id": "2700588831",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Oxidation happens at the anode and reduction happens at the cathode, and anions from the salt bridge flow into the oxidation half-cell."
+                      }
+                    ],
+                    "id": "rfha1mvfu7bxcmp",
+                    "type": "p"
+                  }
+                ],
+                "id": "3013120866"
+              },
+              "id": "2729027019",
+              "legacyMatch": "B,C",
+              "rule": "(!(input like {D})) && ((!(input like {A})) && (input like {C} && (input like {B})))",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the setup and operation of galvanic cells, especially the meaning of oxidation and reduction and the definition of anode and cathode in terms of loss or gain of electrons, and the resulting direction of flow of electrons and ions from the salt bridge."
+                      }
+                    ],
+                    "id": "rqzggjjxtajf2x1",
+                    "type": "p"
+                  }
+                ],
+                "id": "3168004379"
+              },
+              "id": "2172440352",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Electrons flow from the cathode to the anode."
+              }
+            ],
+            "id": "f9i0rtdg8aaupvb",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidation happens at the anode and reduction happens at the cathode."
+              }
+            ],
+            "id": "r905tt9e60512h2",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Anions from the salt bridge flow into the oxidation half-cell."
+              }
+            ],
+            "id": "fkrx3ntks0lfuxg",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The anode is positively charged."
+              }
+            ],
+            "id": "w9u8ctklfvmymr5",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements about galvanic cells are true? Select all that apply."
+            }
+          ],
+          "id": "l0mv07rc82ingu8",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2700588831": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

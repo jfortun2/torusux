@@ -1,0 +1,292 @@
+{
+  "id": "79107",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_conc_digt2-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q4c60g10d9kw00z",
+                  "type": "p"
+                }
+              ],
+              "id": "2584400358"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4r5f7ztxs211rqn",
+                  "type": "p"
+                }
+              ],
+              "id": "4182051930"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b07i2itze9rq1zg",
+                  "type": "p"
+                }
+              ],
+              "id": "1751332885"
+            }
+          ],
+          "id": "1318243373",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Changing the amount of solid substances has no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "73l17numm7vfi32",
+                    "type": "p"
+                  }
+                ],
+                "id": "2102829411"
+              },
+              "id": "1213881375",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Changing the amount of solid substances has no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "78lg7zivj1l6u99",
+                    "type": "p"
+                  }
+                ],
+                "id": "1412371164"
+              },
+              "id": "1195775716",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Changing the amount of solid substances has no effect on the equilibrium position."
+                      }
+                    ],
+                    "id": "r1132au90u3p6a8",
+                    "type": "p"
+                  }
+                ],
+                "id": "655404568"
+              },
+              "id": "2138931415",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "paf7teciswjko0x",
+                    "type": "p"
+                  }
+                ],
+                "id": "2901759379"
+              },
+              "id": "247678271",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1213881375"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1195775716"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2138931415"
+            ]
+          ]
+        }
+      ],
+      "previewText": "The following reversible reaction occurs in a rigid flask at a fixed temperature: For each of the following changes, indicate the direction in which the equilibrium will shift.Increasing the amount of C(s)",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1213881375"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1195775716"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2138931415"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will shift to the right."
+              }
+            ],
+            "id": "o4c6ywdqkvm9cof",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will shift to the left."
+              }
+            ],
+            "id": "aif7r093r526bbz",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No shift will occur."
+              }
+            ],
+            "id": "v1r2hicevq3252q",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The following reversible reaction occurs in a rigid flask at a fixed temperature:"
+            }
+          ],
+          "id": "o686p84xx7lqfxt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "lwardcmxifthr31",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "xe633yx695f2ial",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm C(s)\\;+\\;2\\;\\mathrm S(g)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{CS}}_2(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "For each of the following changes, indicate the direction in which the equilibrium will shift."
+            }
+          ],
+          "id": "cuaj0ot600r22a7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Increasing the amount of C("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ")"
+            }
+          ],
+          "id": "hlh7vu23t5t2xay",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1318243373": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

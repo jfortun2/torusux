@@ -1,0 +1,205 @@
+{
+  "id": "79572",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "binding_nucleon_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{Binding}\\;\\mathrm{energy}\\;\\mathrm{per}\\;\\mathrm{nucleon}\\;=\\;\\frac{148.42\\;\\mathrm{MeV}}{19\\;\\mathrm{nucleons}}\\;=\\;7.811\\;{\\textstyle\\frac{\\mathrm{MeV}}{\\mathrm{nucleon}}}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "5yp8rgf6cvx3spg",
+                "type": "p"
+              }
+            ],
+            "id": "431440444"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7zpe8liwnio5twv",
+                  "type": "p"
+                }
+              ],
+              "id": "2747179604"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "d8aqjvko9qk6etx",
+                  "type": "p"
+                }
+              ],
+              "id": "3920705968"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m9jyyqn5qezcq0n",
+                  "type": "p"
+                }
+              ],
+              "id": "3994844487"
+            }
+          ],
+          "id": "1603510581",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Binding}\\;\\mathrm{energy}\\;\\mathrm{per}\\;\\mathrm{nucleon}\\;=\\;\\frac{148.4\\;\\mathrm{MeV}}{19\\;\\mathrm{nucleons}}\\;=\\;7.811\\;\\frac{\\mathrm{MeV}}{\\mathrm{nucleon}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "u7xnnowxe5aol5m",
+                    "type": "p"
+                  }
+                ],
+                "id": "737972728"
+              },
+              "id": "2286541827",
+              "legacyMatch": "[7.8,7.9]",
+              "rule": "input = {[7.8,7.9]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The binding energy per nucleon is the binding energy of F-19 divided by the number of nucleons."
+                      }
+                    ],
+                    "id": "ex1u7hvf4ogpkpn",
+                    "type": "p"
+                  }
+                ],
+                "id": "2457145157"
+              },
+              "id": "461076337",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "On the previous page, you calculated the binding energy of F-19 to be 148.4 MeV per atom. Calculate the binding energy of F-19 per nucleon.  MeV/nucleon ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1603510581",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "On the previous page, you calculated the binding energy of F-19 to be 148.4 MeV per atom. Calculate the binding energy of F-19 per nucleon. "
+            }
+          ],
+          "id": "ftvv0a1zu2h5a8h",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " MeV/nucleon "
+            }
+          ],
+          "id": "o8qa5y1sb0wvphw",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1603510581": [
+      "78533"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

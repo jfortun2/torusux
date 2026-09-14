@@ -1,0 +1,398 @@
+{
+  "id": "78676",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78203"
+  ],
+  "title": "pool06_uranium_problem_pool-pool06_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "952522144",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the amount of "
+                  },
+                  {
+                    "sup": true,
+                    "text": "238"
+                  },
+                  {
+                    "text": "U initially in the ore from the "
+                  },
+                  {
+                    "sup": true,
+                    "text": "238"
+                  },
+                  {
+                    "text": "U left and the "
+                  },
+                  {
+                    "sup": true,
+                    "text": "238"
+                  },
+                  {
+                    "text": "U that decayed into "
+                  },
+                  {
+                    "sup": true,
+                    "text": "206"
+                  },
+                  {
+                    "text": "Pb: "
+                  }
+                ],
+                "id": "1540788989",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "au5f43j87ux4i59",
+                    "text": ""
+                  }
+                ],
+                "id": "2128668299",
+                "src": "\\begin{array}{c}\\left(@@\\mathrm{amtU}@@\\times10^{-3}\\;\\mathrm g\\;{}^{238}\\mathrm U\\;\\right)\\left(\\dfrac{1\\;\\mathrm{mol}\\;{}^{238}\\mathrm U}{238\\;\\mathrm g\\;{}^{238}\\mathrm U}\\right)=\\;@@molUsf@@\\;\\mathrm{mol}\\;{}^{238}\\mathrm U\\;\\mathrm{left}\\\\\\underline{\\left(@@\\mathrm{amtPb}@@\\times10^{-3}\\;\\mathrm g\\;{}^{206}\\mathrm{Pb}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}\\;{}^{206}\\mathrm{Pb}}{206\\;\\mathrm g\\;{}^{206}\\mathrm{Pb}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}\\;{}^{238}\\mathrm U}{1\\;\\mathrm{mol}\\;{}^{206}\\mathrm{Pb}}\\right)\\;=\\;@@molPbsf@@\\;\\mathrm{mol}\\;{}^{238}\\mathrm U\\;\\mathrm{decayed}}\\\\@@molUsf@@\\;\\mathrm{mol}\\;+\\;@@molPbsf@@\\;\\mathrm{mol}\\;=\\;@@initialUsf@@\\;\\mathrm{mol}\\;{}^{238}\\mathrm U\\;\\mathrm{initial}\\;\\;\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Then, the age of the ore is: "
+                  }
+                ],
+                "id": "2730828827",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "gbjuetrxg8qu3z1",
+                    "text": ""
+                  }
+                ],
+                "id": "1976790311",
+                "src": "\\begin{array}{l}t\\;=\\;-\\dfrac1{\\mathrm\\lambda}\\;\\ln\\;\\left(\\dfrac{N_t}{N_0}\\right)\\;=\\;-\\dfrac{t_{1/2}}{\\ln(2)}\\;\\ln\\;\\left(\\dfrac{N_t}{N_0}\\right)\\;\\\\\\;\\;\\;=\\;-\\dfrac{4.5\\times10^9\\;\\mathrm y}{0.693}\\;\\ln\\left(\\dfrac{@@molUsf@@\\;\\mathrm{mol}}{@@initialUsf@@\\;\\mathrm{mol}}\\right)\\;\\\\\\;\\;\\;=\\;@@ansCoeffsf@@\\times10^9\\;\\mathrm y\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1399449326",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "1144401182",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ei83uoi91opvybx",
+                  "type": "p"
+                }
+              ],
+              "id": "3801409054"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hehah20ztgtq7tj",
+                  "type": "p"
+                }
+              ],
+              "id": "2349276960"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cz8aoe824z1qohf",
+                  "type": "p"
+                }
+              ],
+              "id": "2176765405"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Determine the amount of "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U initially in the ore from the "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U left and the "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U that decayed into "
+                      },
+                      {
+                        "sup": true,
+                        "text": "206"
+                      },
+                      {
+                        "text": "Pb: "
+                      }
+                    ],
+                    "id": "ff15aad62c2641dc87bc45d052a059fb",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "x408o12pfybp1rs",
+                        "text": ""
+                      }
+                    ],
+                    "id": "3174801028",
+                    "src": "\\begin{array}{c}\\left(@@\\mathrm{amtU}@@\\times10^{-3}\\;\\mathrm g\\;{}^{238}\\mathrm U\\;\\right)\\left(\\dfrac{1\\;\\mathrm{mol}\\;{}^{238}\\mathrm U}{238\\;\\mathrm g\\;{}^{238}\\mathrm U}\\right)=\\;@@molUsf@@\\;\\mathrm{mol}\\;{}^{238}\\mathrm U\\;\\mathrm{left}\\\\\\underline{\\left(@@\\mathrm{amtPb}@@\\times10^{-3}\\;\\mathrm g\\;{}^{206}\\mathrm{Pb}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}\\;{}^{206}\\mathrm{Pb}}{206\\;\\mathrm g\\;{}^{206}\\mathrm{Pb}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}\\;{}^{238}\\mathrm U}{1\\;\\mathrm{mol}\\;{}^{206}\\mathrm{Pb}}\\right)\\;=\\;@@molPbsf@@\\;\\mathrm{mol}\\;{}^{238}\\mathrm U\\;\\mathrm{decayed}}\\\\@@molUsf@@\\;\\mathrm{mol}\\;+\\;@@molPbsf@@\\;\\mathrm{mol}\\;=\\;@@initialUsf@@\\;\\mathrm{mol}\\;{}^{238}\\mathrm U\\;\\mathrm{initial}\\;\\;\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Then, the age of the ore is: "
+                      }
+                    ],
+                    "id": "3172050125",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "0i56lfirzwumyll",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1728610512",
+                    "src": "\\begin{array}{l}t\\;=\\;-\\dfrac1{\\mathrm\\lambda}\\;\\ln\\;\\left(\\dfrac{N_t}{N_0}\\right)\\;=\\;-\\dfrac{t_{1/2}}{\\ln(2)}\\;\\ln\\;\\left(\\dfrac{N_t}{N_0}\\right)\\;\\\\\\;\\;\\;=\\;-\\dfrac{4.5\\times10^9\\;\\mathrm y}{0.693}\\;\\ln\\left(\\dfrac{@@molUsf@@\\;\\mathrm{mol}}{@@initialUsf@@\\;\\mathrm{mol}}\\right)\\;\\\\\\;\\;\\;=\\;@@ansCoeffsf@@\\times10^9\\;\\mathrm y\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "1271240898",
+                    "type": "p"
+                  }
+                ],
+                "id": "1411151074"
+              },
+              "id": "460561006",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Determine the amount of "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U initially in the ore from the "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U left and the "
+                      },
+                      {
+                        "sup": true,
+                        "text": "238"
+                      },
+                      {
+                        "text": "U that decayed into "
+                      },
+                      {
+                        "sup": true,
+                        "text": "206"
+                      },
+                      {
+                        "text": "Pb. Use the decay reaction stoichiometry and be consistent and careful with units. Then calculate the age of the ore using: "
+                      }
+                    ],
+                    "id": "c185b4cd72854f3f8354d1a09b67d5c1",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "tey6wiqp1v1knc8",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4197887319",
+                    "src": "\\mathrm\\lambda\\;=\\;-\\frac1{t_{1/2}}\\;\\;\\;\\mathrm{and}\\;\\;\\;t\\;=\\;-\\frac1{\\mathrm\\lambda}\\;\\ln\\left(\\frac{N_t}{N_0}\\right)",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2467236435",
+                    "type": "p"
+                  }
+                ],
+                "id": "4261817201"
+              },
+              "id": "321196728",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "A laboratory investigation shows that a sample of uranium ore contains @@amtU@@ mg U-238 and @@amtPb@@ mg of Pb-206. Calculate the age of the ore. The half-life of U-238 is 4.5×109 y. y",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst amtU = OLI.random(1.18,7.99,2) .toFixed(2);\nconst amtPb = OLI.random(1.25,3.32,2) .toFixed(2);\nconst amtUGram = amtU/1000;\nconst amtPbGram = amtPb/1000;\nconst amtUMol = amtUGram/238;\nconst molUsf = amtUMol .toPrecision(3); \nconst amtPbMol = amtPbGram/206;\nconst molPbsf = amtPbMol .toPrecision(3);\nconst amtUInitial = amtUMol+amtPbMol;\nconst initialUsf = amtUInitial .toPrecision(3);\nconst URatio = amtUMol/amtUInitial;\nconst logRatio = Math.log(URatio);\nconst correct = -6493506493*logRatio;\nconst ansCoeff = correct/1000000000 \nconst ansCoeffsf = ansCoeff .toPrecision(3);\nconst corLow = correct*0.98;\nconst corHigh = correct*1.02;\n\n// Expose variables to OLI\nmodule.exports = {\n  amtU,\n  amtPb,\n  amtUGram,\n  amtPbGram,\n  amtUMol,\n  molUsf,\n  amtPbMol,\n  molPbsf,\n  amtUInitial,\n  initialUsf,\n  URatio,\n  logRatio,\n  correct,\n  ansCoeff,\n  ansCoeffsf,\n  corLow,\n  corHigh\n};\n",
+              "id": "a57055a9342b45ffbe12fd7060267388",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A laboratory investigation shows that a sample of uranium ore contains @@amtU@@ mg U-238 and @@amtPb@@ mg of Pb-206. Calculate the age of the ore. The half-life of U-238 is 4.5×10"
+            },
+            {
+              "sup": true,
+              "text": "9"
+            },
+            {
+              "text": " y."
+            }
+          ],
+          "id": "eed5c611f1454ad7ac97b841854bb664",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " y"
+            }
+          ],
+          "id": "df4e5c44969e44a4abfc31df0aca91d9",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

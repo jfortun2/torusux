@@ -1,0 +1,210 @@
+{
+  "id": "79230",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "inline_pre_student_survey3-income",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6t19uyz4i5cjhct",
+                  "type": "p"
+                }
+              ],
+              "id": "2156359181"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "swnt5ay4lchp40u",
+                  "type": "p"
+                }
+              ],
+              "id": "682679539"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lvt3n4evl0oupab",
+                  "type": "p"
+                }
+              ],
+              "id": "1049155885"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you for your input. "
+                      }
+                    ],
+                    "id": "b7ds7afxx6j5z2b",
+                    "type": "p"
+                  }
+                ],
+                "id": "3519981785"
+              },
+              "id": "1469688022",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "x3mlo05772rv8zk",
+            "text": "less than $25,000"
+          }
+        ],
+        "id": "one_25"
+      },
+      {
+        "content": [
+          {
+            "id": "bn6cstn7spewdr1",
+            "text": "$25,000 - $49,999"
+          }
+        ],
+        "id": "one_50"
+      },
+      {
+        "content": [
+          {
+            "id": "5a2gtf3ugycn5li",
+            "text": "$50,000 - $74,999"
+          }
+        ],
+        "id": "one_75"
+      },
+      {
+        "content": [
+          {
+            "id": "u6mhdiehajdf3r1",
+            "text": "$75,000 - $99,999"
+          }
+        ],
+        "id": "one_100"
+      },
+      {
+        "content": [
+          {
+            "id": "8nuyuy7o9tseadj",
+            "text": "$100,000 - $124,999"
+          }
+        ],
+        "id": "one_125"
+      },
+      {
+        "content": [
+          {
+            "id": "hwvuyn4hndclwk3",
+            "text": "$125,000 - $149,999"
+          }
+        ],
+        "id": "one_150"
+      },
+      {
+        "content": [
+          {
+            "id": "wteeyiyb7fsi0ba",
+            "text": "$150,00 or more"
+          }
+        ],
+        "id": "one_151"
+      },
+      {
+        "content": [
+          {
+            "id": "ecj237mltvxcrm3",
+            "text": "prefer not to answer"
+          }
+        ],
+        "id": "one_n_a"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_25",
+          "one_50",
+          "one_75",
+          "one_100",
+          "one_125",
+          "one_150",
+          "one_151",
+          "one_n_a"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which category best describes your family's yearly household income before taxes? Do not give the dollar amount, just give the category. Include income from all sources, including employment, welfare, etc."
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "j3g729mq0ir0eod",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

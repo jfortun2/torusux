@@ -1,0 +1,492 @@
+{
+  "id": "79158",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "activation_energy_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yo5tqr77i7em31f",
+                  "type": "p"
+                }
+              ],
+              "id": "803015720"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7vskxb7hkmzyucw",
+                  "type": "p"
+                }
+              ],
+              "id": "1085905803"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q09c8u3zgshnk6n",
+                  "type": "p"
+                }
+              ],
+              "id": "621910164"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the average kinetic energy is much less than the activation energy, most particles will not have enough energy to react. However, the kinetic energy of the individual particles varies greatly, and some may have enough energy to react."
+                      }
+                    ],
+                    "id": "mtumzp1z947sf6h",
+                    "type": "p"
+                  }
+                ],
+                "id": "1829346817"
+              },
+              "id": "677661010",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If the average kinetic energy is much less than the activation energy, very few of the particles will have enough energy to react, so the reaction will occur slowly."
+                      }
+                    ],
+                    "id": "9ilwpz6p2zytcqv",
+                    "type": "p"
+                  }
+                ],
+                "id": "239047836"
+              },
+              "id": "758879440",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the average kinetic energy is much less than the activation energy, most particles will not have enough energy to react, so the reaction will not occur rapidly."
+                      }
+                    ],
+                    "id": "rg847uyjd8peice",
+                    "type": "p"
+                  }
+                ],
+                "id": "2842524266"
+              },
+              "id": "2466189155",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "iiuskk8tb40q6kc",
+                    "type": "p"
+                  }
+                ],
+                "id": "1966935003"
+              },
+              "id": "3180340655",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "x1n4fegw1s8xoh2",
+                  "type": "p"
+                }
+              ],
+              "id": "4043196698"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dcew6ynm9gmego1",
+                  "type": "p"
+                }
+              ],
+              "id": "3394847323"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5wzv8abfa0el4r8",
+                  "type": "p"
+                }
+              ],
+              "id": "1020531212"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The kinetic energy of two particles colliding has to be equal to or greater than the activation energy in order for those particles to react."
+                      }
+                    ],
+                    "id": "0pow05i78wwtili",
+                    "type": "p"
+                  }
+                ],
+                "id": "2327174106"
+              },
+              "id": "1826274339",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The kinetic energy of two particles colliding has to be equal to or greater than the activation energy in order for those particles to react, even if the orientation of the particles is correct."
+                      }
+                    ],
+                    "id": "i30yc7z3fiktgd9",
+                    "type": "p"
+                  }
+                ],
+                "id": "4240918741"
+              },
+              "id": "487016950",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The kinetic energy of two particles colliding has to be equal to or greater than the activation energy in order for those particles to react."
+                      }
+                    ],
+                    "id": "3pb64s9hhuwr2wb",
+                    "type": "p"
+                  }
+                ],
+                "id": "350359299"
+              },
+              "id": "1773775632",
+              "legacyMatch": "C",
+              "rule": "input like {second_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "hue4cum43szq4hc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2750795172"
+              },
+              "id": "1297816951",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "In this reaction:  1 mol of A is mixed with 1 mol of B. If the activation energy for the reaction is much greater than the average kinetic energy of the particles of A and B, . If the activation energy for the reaction is much greater than the kinetic energy of an individual particle of A and an individual particle of B that collide, .",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "677661010"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "758879440"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "2466189155"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "1826274339"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "487016950"
+        ],
+        [
+          [
+            "second_C"
+          ],
+          "1773775632"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "198151558",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "1324661056",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "rjihizxu5yexfu3",
+            "text": "no reaction can occur "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "q6xzceec7e9gie1",
+            "text": "the reaction will occur slowly"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "qzmyuuvxy7ztovo",
+            "text": "the reaction will occur rapidly"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "zzqf531jlizlzdy",
+            "text": "no reaction can occur between these two particles"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "q7getm1rp1imyzt",
+            "text": "a reaction may occur if the orientation of the particles is correct"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "h35o6ssi0tklm8y",
+            "text": "a reaction will occur, but it will be very slow"
+          }
+        ],
+        "id": "second_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "second_C"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In this reaction: "
+            }
+          ],
+          "id": "u594f0uzn398wcl",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "gf7abyq41axrref",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "iixki9k45oq04i2",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm A(g)\\;+\\;\\mathrm B(g)\\;\\;\\rightarrow\\;\\;\\mathrm C(g)\\;+\\;\\mathrm D(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "1 mol of A is mixed with 1 mol of B. If the activation energy for the reaction is much greater than the average kinetic energy of the particles of A and B, "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "ybphbk7ajueahau",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "If the activation energy for the reaction is much greater than the kinetic energy of an individual particle of A and an individual particle of B that collide, "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "tl1nldav42g7b45",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78481"
+    ],
+    "second": [
+      "78481"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

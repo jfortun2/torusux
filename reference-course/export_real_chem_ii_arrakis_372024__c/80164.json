@@ -1,0 +1,378 @@
+{
+  "id": "80164",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_acidic_2lbd-q3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "C",
+          "D",
+          "F"
+        ],
+        "3152128995"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "asfsunw62k68rzm",
+                  "type": "p"
+                }
+              ],
+              "id": "712412659"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pd87npcjycr4uqb",
+                  "type": "p"
+                }
+              ],
+              "id": "3251942902"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ulix573enlydqzx",
+                  "type": "p"
+                }
+              ],
+              "id": "2017277734"
+            }
+          ],
+          "id": "1757316533",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "a4ftcvfcfrbz4fn",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Add two H"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "text": "O to the right to balance O."
+                              }
+                            ],
+                            "id": "2501638021",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4jk0nx0186ll6yp",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Add four H"
+                              },
+                              {
+                                "sup": true,
+                                "text": "+"
+                              },
+                              {
+                                "text": " to the left to balance H."
+                              }
+                            ],
+                            "id": "2999113445",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "g6bjsfz1daff5k3",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "Add three e"
+                              },
+                              {
+                                "sup": true,
+                                "text": "−"
+                              },
+                              {
+                                "text": " to the left to balance charge."
+                              }
+                            ],
+                            "id": "2628765299",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1n79v0grtpzahhv",
+                        "type": "li"
+                      }
+                    ],
+                    "id": "o0o9ga6ct20um85",
+                    "type": "ol"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "269941278",
+                    "type": "p"
+                  }
+                ],
+                "id": "2019488085"
+              },
+              "id": "3152128995",
+              "legacyMatch": "C,D,F",
+              "rule": "(!(input like {G})) && ((!(input like {E})) && ((!(input like {B})) && ((!(input like {A})) && (input like {F} && (input like {D} && (input like {C}))))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. There are three things that need to be done to balance this half-reaction."
+                      }
+                    ],
+                    "id": "lssg5it3h2tic5w",
+                    "type": "p"
+                  }
+                ],
+                "id": "271589207"
+              },
+              "id": "3283538943",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Half-Reactions What needs to be done to the reduction half-reaction to balance it? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Change a coefficient to balance an element other than H or O."
+              }
+            ],
+            "id": "z472g2o6pkbmipp",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O to the left side of the equation."
+              }
+            ],
+            "id": "gvds5hvh4xsf4jx",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O to the right side of the equation."
+              }
+            ],
+            "id": "9xd97vk2kata0fs",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " to the left side of the equation."
+              }
+            ],
+            "id": "1tsoijbboja250d",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " to the right side of the equation."
+              }
+            ],
+            "id": "ehtkvqlabuyj9yj",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add electrons to the left side of the equation."
+              }
+            ],
+            "id": "o0puobkwpqlrzgy",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add electrons to the right side of the equation."
+              }
+            ],
+            "id": "8eycc72rw8lt3wm",
+            "type": "p"
+          }
+        ],
+        "id": "G"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Half-Reactions"
+            }
+          ],
+          "id": "mnxhu8lho37oo69",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "ro173tw3fl2cpsv",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "05th507bxinbn7s",
+          "legacyBlockRendered": "true",
+          "src": "\\begin{array}{l}\\mathrm{Oxidation}\\;(\\mathrm{balanced}):\\;\\;\\;\\;{\\mathrm P}_2{\\mathrm O}_3(s)\\; +\\;5\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightarrow\\;\\;2\\;{\\mathrm H}_3{\\mathrm{PO}}_4(aq)\\;+\\;4\\;\\mathrm H^+(aq)\\; +\\;4\\;\\mathrm e^-\\\\\\mathrm{Reduction}\\;(\\mathrm{unbalanced}):\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{NO}_3^-(aq) \\;\\;\\rightarrow\\;\\;\\mathrm{NO}(g)\\end{array}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What needs to be done to the reduction half-reaction to balance it? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "5gz0yjombqhi07p",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "1757316533": [
+      "78507"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

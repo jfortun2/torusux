@@ -1,0 +1,829 @@
+{
+  "id": "79569",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78199"
+  ],
+  "title": "calc_molar_solubility_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": "  "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm{Ag}^+\\rbrack}^2\\lbrack{\\mathrm{CrO}}_4^{2-}\\rbrack\\\\1.12\\times10^{-12}\\;=\\;{(2x)}^2(x)\\\\4x^3\\;=\\;1.12\\times10^{-12}\\\\x\\;=\\;\\sqrt[3]{\\frac{1.12\\times10^{-12}}4\\;}=\\;6.54\\times10^{-5}\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "4exb4xq3w6em1fn",
+                "type": "p"
+              }
+            ],
+            "id": "3560038763"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6t6lrua0pob7l8p",
+                  "type": "p"
+                }
+              ],
+              "id": "1386754066"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6quhjg9bb3ejzg3",
+                  "type": "p"
+                }
+              ],
+              "id": "3113378783"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hfmdybzmb2wvhgt",
+                  "type": "p"
+                }
+              ],
+              "id": "3685808736"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct.  "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm{Ag}^+\\rbrack}^2\\lbrack{\\mathrm{CrO}}_4^{2-}\\rbrack\\\\1.12\\times10^{-12}\\;=\\;{(2x)}^2(x)\\\\4x^3\\;=\\;1.12\\times10^{-12}\\\\x\\;=\\;\\sqrt[3]{\\frac{1.12\\times10^{-12}}4\\;}=\\;6.54\\times10^{-5}\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "yowj0rjuv6cn14x",
+                    "type": "p"
+                  }
+                ],
+                "id": "956286637"
+              },
+              "id": "381874585",
+              "legacyMatch": "[@@sol1_low@@,@@sol1_high@@]",
+              "rule": "input = {[@@sol1_low@@,@@sol1_high@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Calculate the moles of solid that will dissolve in a solution (molar solubility) by determining the equilibrium concentration of dissolved solute. A solution that contains the maximum amount of dissolved solute is a saturated solution in which an equilibrium exists between dissolved and undissolved solute. The equilibrium constant for solubility equilibria is called the solubility product constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". In order to calculate equilibrium concentrations, the most common approach is to use the equilibrium constant, equilibrium expression, and the I-C-E (Initial-Change-Equilibrium) table of concentrations (or similar algebraic calculation) to calculate equilibrium concentrations. When writing the equilibrium expression, be sure to write the correct chemical equation for the solubility equilibrium (the dissolving of a substance) and consider the phase of the different substances and stoichiometric coefficients."
+                      }
+                    ],
+                    "id": "e2bdeeb577ca4e7c8caaccf2e73bfa67",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the initial concentrations, identify the initial concentration of all reactants and products that appear in the equilibrium expression, and remember that some or all of the initial concentrations may be zero. If none of the substances in the equilibrium expression are already dissolved in solution, then all of the initial concentrations will be zero. If some of the substances in the equilibrium expression are already dissolved in solution, such as from another dissolved substance, then the initial concentration of those substances, this case chromate ion "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "text{CrO}_4^{2-}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ", will not be zero."
+                      }
+                    ],
+                    "id": "fa86586431a5404b8f2ec2a987959b73",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the change in concentration required to reach equilibrium concentration, the change is usually shown as -"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " for reactants and +"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " for products. Be sure to consider the stoichiometric coefficients again. Finally, use algebra to solve for changes in concentrations and final equilibrium concentrations. Remember simplified algebra may be used in some cases."
+                      }
+                    ],
+                    "id": "fb1adc9961834e85ba659edc3330e954",
+                    "type": "p"
+                  }
+                ],
+                "id": "453071906"
+              },
+              "id": "3023776051",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rgikkimctqfhuqq",
+                  "type": "p"
+                }
+              ],
+              "id": "4148127368"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7u74eyccdd4cqi9",
+                  "type": "p"
+                }
+              ],
+              "id": "3900017225"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "167sfk4cm3p7dca",
+                  "type": "p"
+                }
+              ],
+              "id": "126926385"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "f4b05c938f4f465c91f00a91692e28fc",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "___selfClosing___": true,
+                            "children": [
+                              {
+                                "id": "43g9w6sc7idf0uq",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "exo9e2n7uws5qng",
+                            "type": "td"
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "856lijcykugdk1d",
+                                "text": "    Ag"
+                              },
+                              {
+                                "id": "fcx1iyse11fripa",
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "id": "olhdshjo4vw9s7b",
+                                "text": "CrO"
+                              },
+                              {
+                                "id": "4qamjxuzy1mgqzj",
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "id": "9rw2lsijav19o4q",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "a9tqt50ugq5clzm",
+                                "text": "s"
+                              },
+                              {
+                                "id": "hpp7z2u37ysjw3y",
+                                "text": ")          ⇌       2 Ag"
+                              },
+                              {
+                                "id": "a6rkqzh04yb8ann",
+                                "sup": true,
+                                "text": "+"
+                              },
+                              {
+                                "id": "23txn8537i4a4uf",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "gdjcbe134gwmw3e",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "3nb1589nh86cq0g",
+                                "text": ")          +      CrO"
+                              },
+                              {
+                                "id": "b3l13aomcqvlvce",
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "id": "px11pixru5jp8l2",
+                                "sup": true,
+                                "text": "2-"
+                              },
+                              {
+                                "id": "mgncutemq3fvs5k",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "30s48767opmn61i",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "nrrkq74gh11pdtd",
+                                "text": ")   "
+                              }
+                            ],
+                            "colspan": 3,
+                            "id": "ehqirg3x04yvruc",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "ippidpcap12a3ag",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "fnps0k4bi6hgdkz",
+                                "text": "Initial"
+                              }
+                            ],
+                            "id": "jymy2sb3v49806q",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "59b7qjq3tbgmdxb",
+                                "text": " ---------- "
+                              }
+                            ],
+                            "id": "z99api78bsijudv",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "u27zfqfwq7qdvug",
+                                "text": " 0 "
+                              }
+                            ],
+                            "id": "bzw4iw7lo24e6kh",
+                            "type": "td"
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "5oellxn05tv34tj",
+                                "text": "       @@c@@ M M      "
+                              }
+                            ],
+                            "id": "uwvkh7pyzgw4wwa",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "1r1r2awl9em5pee",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "f0tj65kcrrcllx3",
+                                "text": "Change"
+                              }
+                            ],
+                            "id": "boj22vnslurqa8x",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "rtedzuev4hlth1r",
+                                "text": " ---------- "
+                              }
+                            ],
+                            "id": "wf9x9ftrb7klw53",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "vfkgkhvjq7d8zym",
+                                "text": " + 2"
+                              },
+                              {
+                                "em": true,
+                                "id": "n0h4mvfjettdqj7",
+                                "text": "x"
+                              },
+                              {
+                                "id": "k8ef1vmyhjag5o0",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "i6drginixmjrngb",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "aq3v03bnlyulype",
+                                "text": " + "
+                              },
+                              {
+                                "em": true,
+                                "id": "752qmqki7zmjxp6",
+                                "text": "x"
+                              },
+                              {
+                                "id": "j7b9npcn1t5zbtz",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "jvg6y6o9nbvzi0k",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "p9oun9k73r032st",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "e8sb3d3hrb2c0o9",
+                                "text": "Equilibrium"
+                              }
+                            ],
+                            "id": "i6y98aeitswzzza",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "0nosbz5b2sfz0wu",
+                                "text": " ---------- "
+                              }
+                            ],
+                            "id": "jpovg916z7d4i78",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "1f7v5sbpgjz6pko",
+                                "text": " 2"
+                              },
+                              {
+                                "em": true,
+                                "id": "85m5xnbrbzxdeqi",
+                                "text": "x"
+                              },
+                              {
+                                "id": "u0bcdqmukoj3dx4",
+                                "text": " "
+                              }
+                            ],
+                            "id": "lsjsyx6q6re7k0j",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "ap20ed1yjnlq2tz",
+                                "text": " @@c@@ M + "
+                              },
+                              {
+                                "em": true,
+                                "id": "ggoj75c2227ra9d",
+                                "text": "x"
+                              },
+                              {
+                                "id": "orc89wjuntt2dlb",
+                                "text": " "
+                              }
+                            ],
+                            "id": "9o9o1nxzz6idy1y",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "0knzm35jget111z",
+                        "type": "tr"
+                      }
+                    ],
+                    "id": "bte7t974ikr60t4",
+                    "type": "table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm{Ag}^+\\rbrack}^2\\lbrack{\\mathrm{CrO}}_4^{2-}\\rbrack\\;\\;\\\\1.12\\times10^{-12}\\;=\\;{(2x)}^2\\cdot(@@c@@\\;+\\;x)\\;\\;\\;\\;\\mathrm{assume}\\;x\\;\\mathrm{is}\\;\\mathrm{negligible}\\;\\mathrm{compared}\\;\\mathrm{to}\\;@@c@@\\\\1.12\\times10^{-12}\\;=\\;4x^2\\cdot@@c@@\\\\\\mathrm{solving}\\;\\mathrm{for}\\;x\\\\x\\;=\\;\\sqrt{\\frac{1.12\\times10^{-12}}{4\\cdot@@c@@}}\\;=\\;@@sol_chromate@@\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "xqjdh2xaob6mayy",
+                    "type": "p"
+                  }
+                ],
+                "id": "514430104"
+              },
+              "id": "2261256978",
+              "legacyMatch": "[@@sol2_low@@,@@sol2_high@@]",
+              "rule": "input = {[@@sol2_low@@,@@sol2_high@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Calculate the moles of solid that will dissolve in a solution (molar solubility) by determining the equilibrium concentration of dissolved solute. A solution that contains the maximum amount of dissolved solute is a saturated solution in which an equilibrium exists between dissolved and undissolved solute. The equilibrium constant for solubility equilibria is called the solubility product constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". In order to calculate equilibrium concentrations, the most common approach is to use the equilibrium constant, equilibrium expression, and the I-C-E (Initial-Change-Equilibrium) table of concentrations (or similar algebraic calculation) to calculate equilibrium concentrations. When writing the equilibrium expression, be sure to write the correct chemical equation for the solubility equilibrium (the dissolving of a substance) and consider the phase of the different substances and stoichiometric coefficients."
+                      }
+                    ],
+                    "id": "bb12977204f146f89dc1028c81b78dcc",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the initial concentrations, identify the initial concentration of all reactants and products that appear in the equilibrium expression, and remember that some or all of the initial concentrations may be zero. If none of the substances in the equilibrium expression are already dissolved in solution, then all of the initial concentrations will be zero. If some of the substances in the equilibrium expression are already dissolved in solution, such as from another dissolved substance, then the initial concentration of those substances, this case chromate ion "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\text{CrO}_4^{2-}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ", will not be zero."
+                      }
+                    ],
+                    "id": "e04ec33186f0498fb1207d94e5eb264b",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the change in concentration required to reach equilibrium concentration, the change is usually shown as "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "-x",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " for reactants and "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "+x",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " for products. Be sure to consider the stoichiometric coefficients again. Finally, use algebra to solve for changes in concentrations and final equilibrium concentrations. Remember simplified algebra may be used in some cases."
+                      }
+                    ],
+                    "id": "c547a0ecaf2447e1a3754df9f0a05b9c",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "b432c17ce4344b4c89e2483df42c5774",
+                    "type": "p"
+                  }
+                ],
+                "id": "975100250"
+              },
+              "id": "2311474722",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "const vols = [750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500]\nconst v = OLI.randomArrayItem(vols);\n// const v1 = OLI.random(1,15,0);\n// const v = v1*100; // vl in mL\n// const c1 = OLI.random(10,90,1) .toPrecision(3);\n// const c = c1/100;\n\nconst conc = [.100, .150, .200, .250, .300, .350, .400, 0.450, 0.500, 0.550, 0.6, 0.65, 0.7, 0.75, 0.8, 0.95, 0.9, 0.95];\nconst c = OLI.randomArrayItem(conc) .toPrecision(3);\nconst ksp = 1.12e-12;\n\n// solubility in pure water\nconst sol_water = ((ksp/4)**(1/3)) .toPrecision(3);\nconst sol1_low = 0.99*sol_water;\nconst sol1_high = 1.01*sol_water;\n\n// solubility in chromate ion solution\nconst sol_chromate = ((ksp/4/c)**.5) .toPrecision(3);\nconst sol2_low = 0.99*sol_chromate;\nconst sol2_high = 1.01*sol_chromate;\n\n// Expose variables to OLI\nmodule.exports = {\n  v, c, sol_water, sol_chromate, sol1_low, sol1_high, sol2_low, sol2_high\n};\n",
+              "id": "fce0ec8f3e464d9ab922a9d8de7e164a",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the molar solubility of Ag"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "CrO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": " ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " = 1.12×10"
+            },
+            {
+              "sup": true,
+              "text": "-12"
+            },
+            {
+              "text": ") in"
+            }
+          ],
+          "id": "a8a91e9040e647e3b6a2eb7f2b5b44b8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "(a) Pure water: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "c035bbea5e2f43d6a32b3a8f835e53ab",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "(b) In a @@v@@ mL solution containing @@c@@ M K"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "CrO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            }
+          ],
+          "id": "d2780da17b7c4ccb8c15249c81691e2f",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

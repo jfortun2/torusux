@@ -1,0 +1,130 @@
+{
+  "id": "79706",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "inline_pre_student_survey3-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ym7sy2r9kd0ins7",
+                  "type": "p"
+                }
+              ],
+              "id": "3288185781"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fu8nntvmv2rb1t7",
+                  "type": "p"
+                }
+              ],
+              "id": "790042169"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6zburjrpz94iuaw",
+                  "type": "p"
+                }
+              ],
+              "id": "1112096605"
+            }
+          ],
+          "id": "287670743",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "c9x6l3jbm3c6mkk",
+                    "type": "p"
+                  }
+                ],
+                "id": "4058623506"
+              },
+              "id": "3913709952",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1txt",
+        "inputType": "text",
+        "partId": "287670743",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "How do you currently describe your gender identity? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1txt",
+              "input": "q1txt",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "kgssdhuyim3i9pd",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "287670743": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,267 @@
+{
+  "id": "80033",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_basic_lbd-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "C"
+        ],
+        "2901781913"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. After balancing as if in acidic solution, there will be H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O and H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " on the left side of the equation."
+                  }
+                ],
+                "id": "mi6sddrq09r9lxt",
+                "type": "p"
+              }
+            ],
+            "id": "2246371298"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e6rxf3j2wpub1ye",
+                  "type": "p"
+                }
+              ],
+              "id": "2972350065"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "033f2rfwqsburuc",
+                  "type": "p"
+                }
+              ],
+              "id": "3828596540"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jn3h47xvhj42mua",
+                  "type": "p"
+                }
+              ],
+              "id": "2422017417"
+            }
+          ],
+          "id": "2446338222",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "5zsawns8taiplij",
+                    "type": "p"
+                  }
+                ],
+                "id": "1291164387"
+              },
+              "id": "2901781913",
+              "legacyMatch": "A,C",
+              "rule": "(!(input like {D})) && ((!(input like {B})) && (input like {C} && (input like {A})))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are two correct choices."
+                      }
+                    ],
+                    "id": "i49z4m1bal4s3r2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3418783113"
+              },
+              "id": "1107992899",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "The following activities take you through the steps for balancing the above equation in basic solution.First, balance the equation as if in acidic solution on a separate sheet of paper. Which of the following statements are true of the balanced overall equation after balancing as if in acidic solution? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " on the left side of the equation."
+              }
+            ],
+            "id": "ah9ias7lbk0fh4h",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " on the right side of the equation."
+              }
+            ],
+            "id": "e6ojio2w2rejzsr",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O on the left side of the equation."
+              }
+            ],
+            "id": "6rz2v66daqqosfw",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There is H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O on the right side of the equation."
+              }
+            ],
+            "id": "6pdmbaen0xd9liq",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The following activities take you through the steps for balancing the above equation in basic solution."
+            }
+          ],
+          "id": "brobut1io9mku6p",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "First, balance the equation as if in acidic solution on a separate sheet of paper. Which of the following statements are true of the balanced overall equation after balancing as if in acidic solution? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "zzysorteh3g94pm",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2446338222": [
+      "78507"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

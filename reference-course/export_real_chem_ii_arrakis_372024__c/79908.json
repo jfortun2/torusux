@@ -1,0 +1,463 @@
+{
+  "id": "79908",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "strong_strong3750_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "At the equivalence point, moles of (added) OH"
+                    },
+                    {
+                      "sup": true,
+                      "text": "−"
+                    },
+                    {
+                      "text": " = (initial) moles of H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "3"
+                    },
+                    {
+                      "text": "O"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "id": "m0ihicxpymldte5",
+                  "type": "p"
+                }
+              ],
+              "id": "1831643024"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The HCl and NaOH solutions have the same concentration, but the volume of NaOH is greater than the volume of HCl at this point."
+                    }
+                  ],
+                  "id": "4l7s80yajkkxp0e",
+                  "type": "p"
+                }
+              ],
+              "id": "3212663542"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Both solutions have the same concentration and the volume of NaOH is greater than the volume of HCl, so this is after the equivalence point."
+                      }
+                    ],
+                    "id": "bvtar4q2tzj3hjh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2848390336"
+              },
+              "id": "211336086",
+              "legacyMatch": "C",
+              "rule": "input like {one_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Both solutions have the same concentration and the volume of NaOH is greater than the volume of HCl."
+                      }
+                    ],
+                    "id": "91719z4rldo74ld",
+                    "type": "p"
+                  }
+                ],
+                "id": "2697068612"
+              },
+              "id": "299559034",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": " "
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "1272971907",
+                      "src": "M\\cdot V\\;=\\;\\left(\\dfrac nV\\right)\\cdot V\\;=\\;n",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "93rz7ij4bc0t9r4",
+                  "type": "p"
+                }
+              ],
+              "id": "302695956"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Molarity times volume (in liters) equals number of moles"
+                    }
+                  ],
+                  "id": "1ai04r950zbt321",
+                  "type": "p"
+                }
+              ],
+              "id": "4147442188"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hints and try again."
+                      }
+                    ],
+                    "id": "agsjbabhod9s8yj",
+                    "type": "p"
+                  }
+                ],
+                "id": "2597427328"
+              },
+              "id": "2056723350",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hints and try again."
+                      }
+                    ],
+                    "id": "bpqhv6k67q99u99",
+                    "type": "p"
+                  }
+                ],
+                "id": "1280710643"
+              },
+              "id": "796901790",
+              "legacyMatch": "B",
+              "rule": "input like {two_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Since both solutions have the same concentration and NaOH has the larger volume, the moles of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " are greater than the moles of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "gpiemme9dvoh1d5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3823044264"
+              },
+              "id": "4217190703",
+              "legacyMatch": "C",
+              "rule": "input like {two_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Both solutions have the same concentration and NaOH has the larger volume, and "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "879579539",
+                        "src": "M\\cdot V\\;=\\;\\left(\\dfrac nV\\right)\\cdot V\\;=\\;n",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " ."
+                      }
+                    ],
+                    "id": "8r5qbu58s8qgx95",
+                    "type": "p"
+                  }
+                ],
+                "id": "1854006526"
+              },
+              "id": "466520525",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "During the titration in the Example above, 37.50 mL of 0.100 M NaOH are added to 25.00 mL of 0.100 M HCl.This is  the equivalence point, so moles of added OH− are  initial moles of H3O+.",
+      "targeted": [
+        [
+          [
+            "one_C"
+          ],
+          "211336086"
+        ],
+        [
+          [
+            "two_A"
+          ],
+          "2056723350"
+        ],
+        [
+          [
+            "two_B"
+          ],
+          "796901790"
+        ],
+        [
+          [
+            "two_C"
+          ],
+          "4217190703"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "epidfsaxd9hy5l7",
+            "text": "before"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "pbkqsnh3kul8uzt",
+            "text": "at"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "hvfaomyrry7w0sp",
+            "text": "after"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "ia7p2h2mv6thbs2",
+            "text": "less than"
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "skcscj682ufli1z",
+            "text": "equal to"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "d5wocdv5o290t32",
+            "text": "greater than"
+          }
+        ],
+        "id": "two_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "During the titration in the Example above, 37.50 mL of 0.100 M NaOH are added to 25.00 mL of 0.100 M HCl."
+            }
+          ],
+          "id": "xo6907kfoh1bxit",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "This is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " the equivalence point, so moles of added OH"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": " are "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " initial moles of H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "wg6169bsv1uhj0h",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

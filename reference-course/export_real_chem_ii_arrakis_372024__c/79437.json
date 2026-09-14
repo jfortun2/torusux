@@ -1,0 +1,218 @@
+{
+  "id": "79437",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_digt-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cqc20ey8sfte78k",
+                  "type": "p"
+                }
+              ],
+              "id": "2790418963"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uxv0mcc43qi4778",
+                  "type": "p"
+                }
+              ],
+              "id": "2653020322"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sqt35fz9s2zr77q",
+                  "type": "p"
+                }
+              ],
+              "id": "3732961229"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Reactants are still forming products, but products are \"unforming\" to make reactants at the same rate."
+                      }
+                    ],
+                    "id": "v79fpmo17kdehvs",
+                    "type": "p"
+                  }
+                ],
+                "id": "3369845080"
+              },
+              "id": "688532971",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Reactants are still forming products, but products are \"unforming\" to make reactants at the same rate."
+                      }
+                    ],
+                    "id": "ffyg1f956hklpgj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1762823886"
+              },
+              "id": "3332761166",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "4aeywxz17mgip5f",
+                    "type": "p"
+                  }
+                ],
+                "id": "4146861983"
+              },
+              "id": "4191648113",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The reaction products are no longer being formed in a system at equilibrium. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "688532971"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3332761166"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "1685470611",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "2390650525",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The reaction products are no longer being formed in a system at equilibrium. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "av1acs091anzgpt",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

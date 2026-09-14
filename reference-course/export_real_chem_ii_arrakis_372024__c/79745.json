@@ -1,0 +1,239 @@
+{
+  "id": "79745",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "g_equil_lbd_equil_first-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kftpbzmt2xyphza",
+                  "type": "p"
+                }
+              ],
+              "id": "1737528786"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hmfwb1xjyj8mozp",
+                  "type": "p"
+                }
+              ],
+              "id": "234972000"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uarauxl5r2fxrvi",
+                  "type": "p"
+                }
+              ],
+              "id": "1107924566"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " is positive, the reaction is not spontaneous."
+                      }
+                    ],
+                    "id": "hu70npb7biak2mi",
+                    "type": "p"
+                  }
+                ],
+                "id": "1304568716"
+              },
+              "id": "2485588330",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " is positive, the reaction is not spontaneous."
+                      }
+                    ],
+                    "id": "zx2odf150pfj1y1",
+                    "type": "p"
+                  }
+                ],
+                "id": "3654049669"
+              },
+              "id": "1463016733",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "sno0urzuqtsq5bh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2547661871"
+              },
+              "id": "3256847131",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Is the evaporation of water under standard thermodynamic conditions spontaneous?   ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2485588330"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1463016733"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1284185650",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes"
+              }
+            ],
+            "id": "63154969",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "116125087",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Is the evaporation of water under standard thermodynamic conditions spontaneous?   "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "bectwwm6timp138",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78307"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

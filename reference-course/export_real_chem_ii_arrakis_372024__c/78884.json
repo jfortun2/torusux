@@ -1,0 +1,377 @@
+{
+  "id": "78884",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_equil_digt1-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2534480036",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "6h1gy9mx5s1n34z",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "hwchwq9xbevb9xe",
+                  "legacyBlockRendered": "true",
+                  "src": "\\mathrm\\Delta G\\;=\\;\\mathrm\\Delta G^\\circ\\;+\\;RT\\ln Q",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2943039904",
+                  "type": "p"
+                }
+              ],
+              "id": "603937195"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2542683390",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "et1rtxaif03i1fe",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "h4bfsld3dca9rau",
+                  "legacyBlockRendered": "true",
+                  "src": "Q\\;=\\;\\frac{\\left(P_{{\\mathrm N}_2}\\right)\\left(P_{{\\mathrm N}_2}\\right)^3} {\\left(P_{{\\mathrm{NH}}_3}\\right)^2}",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4051398391",
+                  "type": "p"
+                }
+              ],
+              "id": "4167051939"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Make sure to convert "
+                    },
+                    {
+                      "em": true,
+                      "text": "T"
+                    },
+                    {
+                      "text": " to K and "
+                    },
+                    {
+                      "em": true,
+                      "text": "R"
+                    },
+                    {
+                      "text": " to kJ."
+                    }
+                  ],
+                  "id": "4bri01sgogxhfgk",
+                  "type": "p"
+                }
+              ],
+              "id": "2326671009"
+            }
+          ],
+          "id": "411845865",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta G\\;=\\;\\mathrm\\Delta G^\\circ\\;+\\;RT\\ln\\left(\\frac{\\left(P_{{\\mathrm N}_2}\\right) \\left(P_{{\\mathrm N}_2}\\right)^3}{\\left(P_{{\\mathrm{NH}}_3}\\right)^2}\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta G\\;=\\;32.8\\;\\mathrm{kJ}\\;+\\;\\left(0.008314\\;\\frac{\\mathrm{kJ}}{\\mathrm K}\\right) \\left(748\\;\\mathrm K\\right)\\ln\\left(\\frac{(1.35){(0.500)}^3}{{(3.12)}^2}\\right)\\;=\\;7.6\\;\\mathrm{kJ}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "kb6gp2ia2h1n0wk",
+                    "type": "p"
+                  }
+                ],
+                "id": "4173283489"
+              },
+              "id": "2971021258",
+              "legacyMatch": "[7,8]",
+              "rule": "input = {[7,8]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again."
+                      }
+                    ],
+                    "id": "8lmeyuk7oxu675o",
+                    "type": "p"
+                  }
+                ],
+                "id": "3067644193"
+              },
+              "id": "3745351468",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta G\\;=\\;\\mathrm\\Delta G^\\circ\\;+\\;RT\\ln\\left(\\frac{\\left(P_{{\\mathrm N}_2}\\right) \\left(P_{{\\mathrm N}_2}\\right)^3}{\\left(P_{{\\mathrm{NH}}_3}\\right)^2}\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta G\\;=\\;32.8\\;\\mathrm{kJ}\\;+\\;\\left(0.008314\\;\\frac{\\mathrm{kJ}}{\\mathrm K}\\right) \\left(748\\;\\mathrm K\\right)\\ln\\left(\\frac{(1.35){(0.500)}^3}{{(3.12)}^2}\\right)\\;=\\;7.6\\;\\mathrm{kJ}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "pip4fdcmxxuinnk",
+                    "type": "p"
+                  }
+                ],
+                "id": "2313080449"
+              },
+              "id": "2144407083",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Given the same reaction as in the example above: calculate the free energy change at 475 °C when the partial pressures are PN2 = 1.35 atm, PH2 = 0.500 atm, and PNH3 = 3.12 atm.ΔG =  kJ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "411845865",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the same reaction as in the example above:"
+            }
+          ],
+          "id": "xuvo07fvyo7plaq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "iwmkuwvl0b67c96",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "r59mchad2jauzm8",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{NH}}_3(g)\\;\\;\\longrightarrow\\;\\;3\\;{\\mathrm H}_2(g)\\;+\\;{\\mathrm N}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\mathrm\\Delta G^\\circ\\;=\\;32.8\\;\\mathrm{kJ}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "calculate the free energy change at 475 °C when the partial pressures are "
+            },
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "N"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "text": " = 1.35 atm, "
+            },
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "H"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "text": " = 0.500 atm, and "
+            },
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "NH"
+            },
+            {
+              "doublesub": true,
+              "text": "3"
+            },
+            {
+              "text": " = 3.12 atm."
+            }
+          ],
+          "id": "16uj5muh5l3wk1c",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ"
+            }
+          ],
+          "id": "ylkj9l7wloej14e",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "411845865": [
+      "78307"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

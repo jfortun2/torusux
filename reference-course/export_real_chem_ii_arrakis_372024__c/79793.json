@@ -1,0 +1,258 @@
+{
+  "id": "79793",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_lbd-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "If the concentrations of the reactants increase, the rate of the forward reaction increases."
+                    }
+                  ],
+                  "id": "0ucmousm6osq8fw",
+                  "type": "p"
+                }
+              ],
+              "id": "3051757307"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "40hneae14jro4np",
+                  "type": "p"
+                }
+              ],
+              "id": "2558445640"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m9mqse6afy6qhph",
+                  "type": "p"
+                }
+              ],
+              "id": "2088333475"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate of the forward reaction has not increased."
+                      }
+                    ],
+                    "id": "o5w9n5yll4z31lt",
+                    "type": "p"
+                  }
+                ],
+                "id": "3828146784"
+              },
+              "id": "351953837",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. As the concentrations of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and I"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " decrease, the rate of the forward reaction decreases."
+                      }
+                    ],
+                    "id": "35azrl0b9n6nska",
+                    "type": "p"
+                  }
+                ],
+                "id": "2070365069"
+              },
+              "id": "1502682962",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate of the forward reaction has changed."
+                      }
+                    ],
+                    "id": "y5036c3xudeka0w",
+                    "type": "p"
+                  }
+                ],
+                "id": "151494497"
+              },
+              "id": "3271429567",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ud3odxgitid9im9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1466566536"
+              },
+              "id": "4018028054",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "At point C, the rate of the forward reaction has  from its initial rate.",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "351953837"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1502682962"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "3271429567"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "afo2d3p49bhge11",
+            "text": "increased"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ockio11rrekrk4o",
+            "text": "decreased"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "p3wc9wk8mw6ihim",
+            "text": "not changed"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At point C, the rate of the forward reaction has "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " from its initial rate."
+            }
+          ],
+          "id": "1esn1isoo8rwcna",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

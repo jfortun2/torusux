@@ -1,0 +1,223 @@
+{
+  "id": "78710",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "g_equil_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0ol68mcy46vbww6",
+                  "type": "p"
+                }
+              ],
+              "id": "124662026"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ocu0nc2lqtqk82c",
+                  "type": "p"
+                }
+              ],
+              "id": "2759692609"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pl7uo3jjycy3h4d",
+                  "type": "p"
+                }
+              ],
+              "id": "2339686992"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " is positive, the reaction is not spontaneous."
+                      }
+                    ],
+                    "id": "xvh5qrrtko30ut8",
+                    "type": "p"
+                  }
+                ],
+                "id": "3618673396"
+              },
+              "id": "3859478995",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " is positive, the reaction is not spontaneous."
+                      }
+                    ],
+                    "id": "4jp8660rnvzcyg8",
+                    "type": "p"
+                  }
+                ],
+                "id": "39150251"
+              },
+              "id": "2155602275",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "972bcdl4r5yvd2c",
+                    "type": "p"
+                  }
+                ],
+                "id": "3461177826"
+              },
+              "id": "3032040246",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3859478995"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "2155602275"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1939827730",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "yd7mh1rqf20xvlw",
+            "text": "yes"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ais2dqn4dbroqxw",
+            "text": "no"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " Is the evaporation of water under standard thermodynamic conditions spontaneous?    "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            }
+          ],
+          "id": "t5z1jmg7uz936je",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

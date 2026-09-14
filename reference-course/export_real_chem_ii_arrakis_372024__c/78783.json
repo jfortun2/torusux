@@ -1,0 +1,610 @@
+{
+  "id": "78783",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "predicting_precip_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hrcok2j52oqgit6",
+                  "type": "p"
+                }
+              ],
+              "id": "1360108896"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ufv69a17p55yg36",
+                  "type": "p"
+                }
+              ],
+              "id": "3661229917"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9fykc4e4kmo9gs2",
+                  "type": "p"
+                }
+              ],
+              "id": "4022535368"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Looking up the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": " for CaHPO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": ", you should find that it is 7 × 10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−7"
+                      },
+                      {
+                        "text": ". "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is less than "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "hxsbjktncpvbhl2",
+                    "type": "p"
+                  }
+                ],
+                "id": "1018024219"
+              },
+              "id": "1243670118",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Looking up the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": " for CaHPO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": ", you should find that it is 7 × 10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−7"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "fflqppfltrioish",
+                    "type": "p"
+                  }
+                ],
+                "id": "507405119"
+              },
+              "id": "3171598742",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Looking up the "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": " for CaHPO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": ",  you should find that it is 7 × 10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−7"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "erngfeor7xgx55f",
+                    "type": "p"
+                  }
+                ],
+                "id": "610915838"
+              },
+              "id": "3308145867",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "lhyauwhd105b2i9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1875909353"
+              },
+              "id": "4106840961",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kiozgpthntnj0ro",
+                  "type": "p"
+                }
+              ],
+              "id": "1711866538"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e3mb1h65ys94ljx",
+                  "type": "p"
+                }
+              ],
+              "id": "876822915"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "72ogn6m5m39236b",
+                  "type": "p"
+                }
+              ],
+              "id": "2039952983"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Because "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is less than "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": " the equilibrium will shift to the right, meaning that no solid precipitate of CaHPO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": " will form."
+                      }
+                    ],
+                    "id": "jdjc10mbdde52f8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2390569665"
+              },
+              "id": "1463846144",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Because "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is less than "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": " the equilibrium will shift to the right, meaning that no solid precipitate of CaHPO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": " will form."
+                      }
+                    ],
+                    "id": "p78dx7d2qly6jxx",
+                    "type": "p"
+                  }
+                ],
+                "id": "2421792633"
+              },
+              "id": "2735036147",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "qjwgwyqhgslzboe",
+                    "type": "p"
+                  }
+                ],
+                "id": "1951378348"
+              },
+              "id": "3678684460",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Look up Ksp for CaHPO4.Q is  Ksp. Therefore, a precipitate  form. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "1243670118"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3171598742"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "3308145867"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "1463846144"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "2735036147"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3090637381",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "1114707930",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "5dyanztcdwuw9kl",
+            "text": "less than "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "m8p5x6j2yk0jxu4",
+            "text": "greater than"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "jia9ayhuv6vqh05",
+            "text": "equal to"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "xvaclgc7ivlgkre",
+            "text": "will"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ctgyndt4flkld0y",
+            "text": "will NOT"
+          }
+        ],
+        "id": "second_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Look up "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " for CaHPO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "tuhafm6x1y28yl6",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": " is"
+            },
+            {
+              "em": true,
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "em": true,
+              "text": " K"
+            },
+            {
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": ". Therefore, a precipitate "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " form. "
+            }
+          ],
+          "id": "h7lays4pzlbr2wq",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78407"
+    ],
+    "second": [
+      "78407"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

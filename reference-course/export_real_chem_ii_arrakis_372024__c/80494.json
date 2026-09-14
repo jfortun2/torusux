@@ -1,0 +1,722 @@
+{
+  "id": "80494",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78071"
+  ],
+  "title": "Int_Rate_Law_Calcs_Pool_1_UA_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect.  "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "cxm3u82mhy7tkku",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Substituting values into the integrated rate law for first-order process to determine ln[cisplatin]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": ": "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\require{cancel}\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_t=\\;-k⋅t\\;+\\;\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_0\\\\=-\\left(1.87\\times10^{-3}\\;\\cancel{\\min\\nolimits^{-1}}\\right)\\cdot\\left(@@time@@.0\\;\\cancel{\\mathrm h}\\right)\\cdot\\left(\\frac{60\\;\\cancel\\min}{1\\;\\cancel{\\mathrm h}}\\right)\\;+\\;\\;\\ln\\left(@@initialConc@@\\times10^{-4}\\;\\mathrm M\\right)\\\\=\\;@@step2Rnd@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Then solving for [cisplatin]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": ": "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\lbrack\\mathrm{cisplatin}\\rbrack}_t\\;=\\;e^{@@step2Rnd@@}\\;=\\;@@cor1Rnd@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "smarsxo6z0lh645",
+                "type": "p"
+              }
+            ],
+            "id": "73924880"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9cdfiotq0yjedh9",
+                  "type": "p"
+                }
+              ],
+              "id": "3464053330"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "swjkrlb63qyghkj",
+                  "type": "p"
+                }
+              ],
+              "id": "3893897239"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2h95hp8y30un7he",
+                  "type": "p"
+                }
+              ],
+              "id": "1684362371"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "ea31cd25ddb14006aa455fe593487a87",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Substituting values into the integrated rate law for first-order process to determine ln[cisplatin]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ":"
+                      }
+                    ],
+                    "id": "a702d18e2e00443880fa84e5a18e7f61",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\require{cancel}\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_t=\\;-k⋅t\\;+\\;\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_0\\\\=-\\left(1.87\\times10^{-3}\\;\\cancel{\\min\\nolimits^{-1}}\\right)\\cdot\\left(@@time@@.0\\;\\cancel{\\mathrm h}\\right)\\cdot\\left(\\frac{60\\;\\cancel\\min}{1\\;\\cancel{\\mathrm h}}\\right)\\;+\\;\\;\\ln\\left(@@initialConc@@\\times10^{-4}\\;\\mathrm M\\right)\\\\=\\;@@step2Rnd@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ef54dd2e48db4ea48c948796a7aa043b",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Then solving for [cisplatin]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ":"
+                      }
+                    ],
+                    "id": "f70cf4ac4f6e419c862c0b705228f955",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\lbrack\\mathrm{cisplatin}\\rbrack}_t\\;=\\;e^{@@step2Rnd@@}\\;=\\;@@cor1Rnd@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "fef5b11b412443b491e22c21d1d75343",
+                    "type": "p"
+                  }
+                ],
+                "id": "3548135585"
+              },
+              "id": "2719644298",
+              "legacyMatch": "[@@cor1Low@@,@@cor1High@@]",
+              "rule": "input = {[@@cor1Low@@,@@cor1High@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The integrated rate law for a first-order process is:"
+                      }
+                    ],
+                    "id": "b8bf2640377b42d89aca01eb5b554925",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_{\\mathrm t}=\\;-k⋅t\\;+\\;\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_0",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "d01878ecdde3459f82775231066b1082",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Use the given values for the initial concentration of cisplatin, "
+                      },
+                      {
+                        "em": true,
+                        "text": "k"
+                      },
+                      {
+                        "text": " and the time (in minutes) to determine the final concentration of cisplatin. Note: Use enough digits in intermediate calculations to avoid roundoff errors."
+                      }
+                    ],
+                    "id": "c0b99ac8fdd343edb99b1f7c59f0daa7",
+                    "type": "p"
+                  }
+                ],
+                "id": "709528169"
+              },
+              "id": "3449344377",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " Using the integrated rate law for a first order process and rearranging to solve for t yields:"
+                  }
+                ],
+                "id": "5o2yz0ywtq84oyt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "t\\;=\\;-\\frac1k\\;\\ln\\;\\left(\\frac{{\\lbrack\\mathrm{cisplatin}\\rbrack}_t}{{\\lbrack\\mathrm{cisplatin}\\rbrack}_0}\\right)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "naa0dnpk23knjd9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Substituting variables:"
+                  }
+                ],
+                "id": "gk6z51vm36x1ci6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "t\\;=\\;-\\frac1{1.87\\times10^{-3}\\;\\min^{-1}}\\;\\ln\\;\\left(\\frac{@@finalConc@@\\times10^{-4}\\;\\mathrm M}{@@initialConc@@\\times10^{-4}\\;\\mathrm M}\\right)\\;=\\;@@cor2Rnd@@\\;\\min",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "pe87gblckyd7sqt",
+                "type": "p"
+              }
+            ],
+            "id": "563363970"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zibysgn10qhqcs2",
+                  "type": "p"
+                }
+              ],
+              "id": "1649329048"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hct51jq53kyu68j",
+                  "type": "p"
+                }
+              ],
+              "id": "2801333389"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1lmrua96m3fdnpd",
+                  "type": "p"
+                }
+              ],
+              "id": "3323740676"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Using the integrated rate law for a first order process and rearranging to solve for t yields:"
+                      }
+                    ],
+                    "id": "e4c9c069e38c49058ea96e0b22bd607d",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t\\;=\\;-\\frac1k\\;\\ln\\;\\left(\\frac{{\\lbrack\\mathrm{cisplatin}\\rbrack}_t}{{\\lbrack\\mathrm{cisplatin}\\rbrack}_0}\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "c48229a3894a4e41ab806b64926af39c",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Substituting variables:"
+                      }
+                    ],
+                    "id": "e829c93cc823479383c57c24e18dec58",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t\\;=\\;-\\frac1{1.87\\times10^{-3}\\;\\min^{-1}}\\;\\ln\\;\\left(\\frac{@@finalConc@@\\times10^{-4}\\;\\mathrm M}{@@initialConc@@\\times10^{-4}\\;\\mathrm M}\\right)\\;=\\;@@cor2Rnd@@\\;\\min",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "a87c38890fd54bfc8f8b43b5d81676c3",
+                    "type": "p"
+                  }
+                ],
+                "id": "4057056939"
+              },
+              "id": "32849427",
+              "legacyMatch": "[@@cor2Low@@,@@cor2High@@]",
+              "rule": "input = {[@@cor2Low@@,@@cor2High@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The integrated rate law for a first-order process is:"
+                      }
+                    ],
+                    "id": "b2d3c7de1a4545cea70e354775445dfe",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_{\\mathrm t}=\\;-k⋅t\\;+\\;\\ln{\\lbrack\\mathrm{cisplatin}\\rbrack}_0",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "e06c2e16e6f0418b907963dfccb9df76",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Rearranged to solve for "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ":"
+                      }
+                    ],
+                    "id": "a18da47851cb439d8c1a0f13fa89441b",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t\\;=\\;-\\frac1k\\;\\ln\\;\\left(\\frac{{\\lbrack\\mathrm{cisplatin}\\rbrack}_t}{{\\lbrack\\mathrm{cisplatin}\\rbrack}_0}\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "a2b22f073b654e44967f560d01fb505a",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Use the given values for the initial and final concentrations of cisplatin, and "
+                      },
+                      {
+                        "em": true,
+                        "text": "k "
+                      },
+                      {
+                        "text": "to determine the time."
+                      }
+                    ],
+                    "id": "e1b5fb1d6bba4d18937136867b3ee998",
+                    "type": "p"
+                  }
+                ],
+                "id": "2185850045"
+              },
+              "id": "747996089",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The chemotherapy drug cisplatin is found to break down in the body according to 1st order kinetics. The rate constant for this reaction at body temperature is 1.87×10-3 min-1.Starting with a cisplatin concentration in the body of @@initialConc@@×10-4 M:   What will the cisplatin concentration be after @@time@@.0 hours?  MHow long will it take for the cisplatin concentration to reach @@finalConc@@×10-4 M?  min  ",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst conc1Index = OLI.random(0, 4);\nconst conc1array = [5.00, 6.00, 7.00, 8.00, 9.00];\nconst initialConc = conc1array[conc1Index] .toFixed(2);\nconst conc2Index = OLI.random(0,3);\nconst conc2array = [1.00, 2.00, 3.00];\nconst finalConc = conc2array[conc2Index] .toFixed(2);\nconst initialConcCon = (initialConc/10000);\nconst finalConcCon = (finalConc/10000);\nconst time = OLI.random(11,18,0);\nconst timeMin = (time*60);\nconst logConc = Math.log(initialConcCon);\nconst step1 = (0.00187*timeMin*-1);\nconst step2 = (step1+logConc);\nconst step2Rnd = (step2) .toPrecision(5);\nconst correct1 = Math.pow(2.718, step2);\nconst cor1Rnd = (correct1) .toPrecision(3);\nconst cor1Low = correct1*0.98;\nconst cor1High = correct1*1.02;\nconst finalOverInitial = (finalConcCon/initialConcCon);\nconst logFinalOverInitial = Math.log(finalOverInitial);\nconst correct2 = (-534.759*logFinalOverInitial);\nconst cor2Rnd = (correct2) .toPrecision(3);\nconst cor2Low = (correct2*0.99);\nconst cor2High = (correct2*1.01);\n\n\n// Expose variables to OLI\nmodule.exports = {\n \n  initialConc,\n \n  finalConc,\n  initialConcCon,\n  finalConcCon,\n  time,\n  timeMin,\n  logConc,\n  step1,\n  step2,\n  step2Rnd,\n  correct1,\n  cor1Rnd,\n  cor1Low,\n  cor1High,\n  finalOverInitial,\n  logFinalOverInitial,\n  correct2,\n  cor2Rnd,\n  cor2Low,\n  cor2High\n};\n",
+              "id": "de9fa498366749b6902836d1535c27f2",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The chemotherapy drug cisplatin is found to break down in the body according to 1st order kinetics. The rate constant for this reaction at body temperature is 1.87×10"
+            },
+            {
+              "sup": true,
+              "text": "-3"
+            },
+            {
+              "text": " min"
+            },
+            {
+              "sup": true,
+              "text": "-1"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "a544793ca0194d21933a24b1819230a7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Starting with a cisplatin concentration in the body of @@initialConc@@×10"
+            },
+            {
+              "sup": true,
+              "text": "-4"
+            },
+            {
+              "text": " M:   "
+            }
+          ],
+          "id": "yay91zjgwnmbxei",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What will the cisplatin concentration be after @@time@@.0 hours? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "e9295a135f01459b9bf3a9f41228838b",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "How long will it take for the cisplatin concentration to reach @@finalConc@@×10"
+            },
+            {
+              "sup": true,
+              "text": "-4"
+            },
+            {
+              "text": " M? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " min"
+            }
+          ],
+          "id": "fad2142cfd554a8783078a3a8b5443cd",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "a3d6e6f90d92485db36954a405a9c52c",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "a7fde93277b2434f96c92b39c07c5e4c",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

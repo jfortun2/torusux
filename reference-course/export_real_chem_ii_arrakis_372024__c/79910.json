@@ -1,0 +1,199 @@
+{
+  "id": "79910",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "entropy_lbd2-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "If entropy increases, Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": " is positive. If entropy decreases, Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": " is negative. "
+                    }
+                  ],
+                  "id": "ra0vq964db3ofqj",
+                  "type": "p"
+                }
+              ],
+              "id": "426513887"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yx36igzscvi23xs",
+                  "type": "p"
+                }
+              ],
+              "id": "880848571"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "stna77qoys7qfwb",
+                  "type": "p"
+                }
+              ],
+              "id": "2884954379"
+            }
+          ],
+          "id": "1944898988",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Reduction in the number of ions (particles) in solution means there is a decrease in dispersal of matter, and therefore entropy has decreased."
+                      }
+                    ],
+                    "id": "wpvcolzr2pzr5ke",
+                    "type": "p"
+                  }
+                ],
+                "id": "2233554894"
+              },
+              "id": "542257178",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Reduction in the number of ions (particles) in solution means there is a decrease in dispersal of matter, and therefore entropy has decreased."
+                      }
+                    ],
+                    "id": "xxie9g9i66org60",
+                    "type": "p"
+                  }
+                ],
+                "id": "1108575507"
+              },
+              "id": "1868607811",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " ",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Positive"
+              }
+            ],
+            "id": "zst3se9gnvb52e4",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Negative"
+              }
+            ],
+            "id": "m6sj39tcv6ys1u2",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "1457190310",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "0r24k6r5xcp1ca6",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ovkmtowep5o3fre",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm{Ag}^+(aq)\\;+\\;\\mathrm{Cl}^-(aq)\\;\\;\\longrightarrow\\;\\mathrm{AgCl}(s)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "2393799627",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1944898988": [
+      "78325"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

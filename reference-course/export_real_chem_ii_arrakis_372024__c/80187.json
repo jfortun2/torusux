@@ -1,0 +1,239 @@
+{
+  "id": "80187",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "PredictReactionLBD1_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2000522118",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2663599109"
+            }
+          ],
+          "id": "3392235899",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A reaction will occur between HCl("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") and Co("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "2543087902",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1649751867"
+              },
+              "id": "2531031023",
+              "rule": "input like {530401617}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A reaction will occur between HCl("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") and Co("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "3472923362",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2417439037"
+              },
+              "id": "713076230",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Predict whether a reaction will occur when HCl(aq) and Co(s) are combined. You will need to use the Standard Reduction Potentials from the appendix.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3041444896",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2503309556",
+          "operation": "shuffle",
+          "partId": "3392235899",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes, a reaction will occur."
+              }
+            ],
+            "id": "2983112142",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "530401617"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No, a reaction will not occur. "
+              }
+            ],
+            "id": "223159430",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1010580745"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "530401617",
+          "1010580745"
+        ],
+        "id": "3590024681",
+        "inputType": "dropdown",
+        "partId": "3392235899",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Predict whether a reaction will occur when HCl("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ") and Co("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ") are combined. You will need to use the "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_mv70v",
+              "idref": "80874",
+              "target": "self",
+              "type": "a"
+            },
+            {
+              "text": " from the appendix."
+            }
+          ],
+          "id": "2171681209",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3590024681",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "3965326398",
+          "type": "p"
+        }
+      ],
+      "id": "745318287"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "3392235899": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

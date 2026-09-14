@@ -1,0 +1,322 @@
+{
+  "id": "79320",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "indicators_lbd-q7",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jmxa347u7aesgvm",
+                  "type": "p"
+                }
+              ],
+              "id": "307523468"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z3u24t189tdj32p",
+                  "type": "p"
+                }
+              ],
+              "id": "3225159438"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ma49cos10u75ee7",
+                  "type": "p"
+                }
+              ],
+              "id": "1113699615"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is approximately 3, and the final pH is approximately 12. "
+                      }
+                    ],
+                    "id": "mog27potkmuhh5z",
+                    "type": "p"
+                  }
+                ],
+                "id": "1873609794"
+              },
+              "id": "1114717483",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The initial pH of approximately 3 indicates that the starting solution is somewhat acidic, and the final pH of approximately 12 indicates that it is strongly basic. "
+                      }
+                    ],
+                    "id": "8mx8umfv4ao0w6t",
+                    "type": "p"
+                  }
+                ],
+                "id": "241059055"
+              },
+              "id": "372370551",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is approximately 3, and the final pH is approximately 12. "
+                      }
+                    ],
+                    "id": "qzxfchaogpe3b34",
+                    "type": "p"
+                  }
+                ],
+                "id": "1217209456"
+              },
+              "id": "2123617485",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is approximately 3, and the final pH is approximately 12. "
+                      }
+                    ],
+                    "id": "p00w3taj3leusl3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1436635449"
+              },
+              "id": "2178587503",
+              "legacyMatch": "D",
+              "rule": "input like {first_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "7lmli7wn5pk2tca",
+                    "type": "p"
+                  }
+                ],
+                "id": "3094293469"
+              },
+              "id": "357478190",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " Identity of analyte and titrant: ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "1114717483"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "372370551"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "2123617485"
+        ],
+        [
+          [
+            "first_D"
+          ],
+          "2178587503"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: strong acid — titrant: strong base "
+              }
+            ],
+            "id": "3413799600",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: weak acid — titrant: strong base"
+              }
+            ],
+            "id": "344735378",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: strong base — titrant: strong acid"
+              }
+            ],
+            "id": "2364222892",
+            "type": "p"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: weak base — titrant: strong acid"
+              }
+            ],
+            "id": "3801363969",
+            "type": "p"
+          }
+        ],
+        "id": "first_D"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C",
+          "first_D"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "2322127942",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "mchj9sacio8yzrj",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "tawp60x2itbntb3",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/fd/fdc0436a422137938d21cd839c70acba/TC_weak_acid.png",
+          "type": "img",
+          "width": "600"
+        },
+        {
+          "children": [
+            {
+              "text": "Identity of analyte and titrant: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "h9dgf3qj7bvya6s",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78464"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

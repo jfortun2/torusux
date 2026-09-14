@@ -1,0 +1,288 @@
+{
+  "id": "80177",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "indicators_lbd-q8",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "C",
+          "E"
+        ],
+        "140127859"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5mh1v93mcff28g8",
+                  "type": "p"
+                }
+              ],
+              "id": "1534922981"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r6n7pou8flb9k3o",
+                  "type": "p"
+                }
+              ],
+              "id": "728895281"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o2rchhq9uqog7cl",
+                  "type": "p"
+                }
+              ],
+              "id": "57618150"
+            }
+          ],
+          "id": "4064976146",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Appropriate indicators for this titration will have a color-change interval between 8 and 10."
+                      }
+                    ],
+                    "id": "8ew2mfm4xwn8m01",
+                    "type": "p"
+                  }
+                ],
+                "id": "854487441"
+              },
+              "id": "140127859",
+              "legacyMatch": "C,E",
+              "rule": "(!(input like {D})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E} && (input like {C}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Partially correct. Appropriate indicators for this titration will have a color-change interval between 8 and 10. There is one more correct answer. "
+                      }
+                    ],
+                    "id": "kh50p9of1a6cgmu",
+                    "type": "p"
+                  }
+                ],
+                "id": "294908731"
+              },
+              "id": "3201996552",
+              "legacyMatch": "C",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {B})) && ((!(input like {A})) && (input like {C}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Partially correct. Appropriate indicators for this titration will have a color-change interval between 8 and 10. There is one more correct answer."
+                      }
+                    ],
+                    "id": "08af4x55jv10kyg",
+                    "type": "p"
+                  }
+                ],
+                "id": "2757828912"
+              },
+              "id": "758624004",
+              "legacyMatch": "C",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {B})) && ((!(input like {A})) && (input like {C}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Appropriate indicators for this titration will have a color-change interval between 8 and 10. There are two correct answers."
+                      }
+                    ],
+                    "id": "n9xvdalw3b6byo9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3903337239"
+              },
+              "id": "3237346450",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Choose appropriate indicator(s) for this titration.  ",
+      "targeted": [
+        [
+          [
+            "C"
+          ],
+          "3201996552"
+        ],
+        [
+          [
+            "C"
+          ],
+          "758624004"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "methyl orange"
+              }
+            ],
+            "id": "ctnd9n6lp0d131f",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "methyl red"
+              }
+            ],
+            "id": "gsts3vw5p4et8mj",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "thymol blue"
+              }
+            ],
+            "id": "34ep45l80amdbdi",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "litmus"
+              }
+            ],
+            "id": "n5viljg9kyk5in3",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "phenolphthalein"
+              }
+            ],
+            "id": "ww9mrii67y9kwtm",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Choose appropriate indicator(s) for this titration. "
+            }
+          ],
+          "id": "anu7fw6cn50yvtr",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "cdaxgyn17g33i08",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "1gbdydjftr350i2",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/eb/eb001cc4694b8981058beafdef19c978/indicators.png",
+          "type": "img",
+          "width": "550"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "725780813",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "4064976146": [
+      "78298"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

@@ -1,0 +1,272 @@
+{
+  "id": "80126",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78153"
+  ],
+  "title": "electrolysis_skill_pool_v1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D",
+          "E"
+        ],
+        "3800974941"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "9xt01v70z9quc5t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "5pp9rkaef6f6kpm",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "jc44aaam6gdjdko",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "vv1gomo8710ljtm",
+                        "text": "When external power is applied to a rechargeable battery, the battery is an electrolytic cell."
+                      }
+                    ],
+                    "id": "nft70er35xua259",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "kfu0pjyfnh1fq3g",
+                        "text": "In both galvanic and electrolytic cells, oxidation occurs at the anode."
+                      }
+                    ],
+                    "id": "iw90uexa7y5vkof",
+                    "type": "li"
+                  }
+                ],
+                "id": "06it8i4ppbq8km6",
+                "type": "ul"
+              }
+            ],
+            "id": "1910022770"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z5r86aae2r9p474",
+                  "type": "p"
+                }
+              ],
+              "id": "2226444042"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wg8kcwi5mrmi6vz",
+                  "type": "p"
+                }
+              ],
+              "id": "3739894625"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jceailovhd4cxk6",
+                  "type": "p"
+                }
+              ],
+              "id": "2526700952"
+            }
+          ],
+          "id": "b9b3067465fe49278188ec5c5f8d478c",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A rechargeable battery operates as an electrolytic cell when it is being recharged with external power."
+                      }
+                    ],
+                    "id": "d670e2430fae4214ab0106990d719c56",
+                    "type": "p"
+                  }
+                ],
+                "id": "2104902984"
+              },
+              "id": "3800974941",
+              "legacyMatch": "D,E",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E} && (input like {D}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Electrolysis involves applying an external voltage to drive a redox reaction that would otherwise be nonspontaneous. To distinguish the nonspontaneous reaction from the spontaneous reaction that occurs in a galvanic cell, the electrolysis reaction is described as occurring in an electrolytic cell, even if both reactions occur in the same physical space. The electrolytic cell reaction is simply the reverse of the galvanic cell reaction. For example, a rechargeable battery operates as a galvanic cell when it provides power, and the battery operates as an electrolytic cell when it is being recharged with external power. When the redox process is reversed, the electrodes also have their names switched -- what was the anode for one reaction is now the cathode for the reverse reaction -- because the reaction is being forced to go in the reverse direction by the external power. Even though the electrodes switch names (anode vs. cathode) when the redox process is reversed, by definition oxidation still occurs at the anode and reduction at the cathode."
+                      }
+                    ],
+                    "id": "b1361d27692448c28c75c38ee55a6d30",
+                    "type": "p"
+                  }
+                ],
+                "id": "3947244279"
+              },
+              "id": "3933502698",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "When a galvanic cell is recharged, the same chemical reaction occurs as when the galvanic cell operates."
+              }
+            ],
+            "id": "eu1fvgnvnjhd2yd",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A galvanic cell requires external power to operate."
+              }
+            ],
+            "id": "usqeu53wsssbl1f",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A rechargeable battery can be an electrolytic cell but not a galvanic cell."
+              }
+            ],
+            "id": "x23ttww72pl3725",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "When external power is applied to a rechargeable battery, the battery is an electrolytic cell. "
+              }
+            ],
+            "id": "z5i9pvjkevpgle0",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": " In both galvanic and electrolytic cells, oxidation occurs at the anode."
+              }
+            ],
+            "id": "7ugui90x3o6k6jh",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which one of the following statements is true? Select all that apply."
+            }
+          ],
+          "id": "c8866d5303a046ca85beea3b1a3bb20c",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "b9b3067465fe49278188ec5c5f8d478c": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

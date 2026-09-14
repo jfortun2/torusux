@@ -1,0 +1,210 @@
+{
+  "id": "79595",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_ka_pH_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_{\\mathrm a}\\;=\\;\\frac{\\lbrack{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COO}^-\\rbrack\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack} {\\lbrack{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COOH}\\rbrack}\\;=\\;\\frac{(0.0014)(0.0014)}{(0.149)}\\;=\\;1.3\\times10^{-5}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "eygg3i4q58zclb1",
+                "type": "p"
+              }
+            ],
+            "id": "617572198"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "K_{\\mathrm a}\\;=\\;\\frac{\\lbrack{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COO}^-\\rbrack\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack} {\\lbrack{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COOH}\\rbrack}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lmidulgrkj2k0qg",
+                  "type": "p"
+                }
+              ],
+              "id": "885227908"
+            }
+          ],
+          "id": "1593459591",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{\\mathrm a}=\\frac{\\lbrack{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COO}^-\\rbrack\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack} {\\lbrack{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COOH}\\rbrack}=\\frac{(0.0014)(0.0014)}{(0.149)}=1.3\\times10^{-5}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "sjfsfq1do4ikx3z",
+                    "type": "p"
+                  }
+                ],
+                "id": "2017674762"
+              },
+              "id": "590390741",
+              "legacyMatch": "[1.3e-5,1.4e-5]",
+              "rule": "input = {[1.3e-5,1.4e-5]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "5dv2rbvxcpwy3fw",
+                    "type": "p"
+                  }
+                ],
+                "id": "89304348"
+              },
+              "id": "4077157199",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate the value of Ka for propionic acid. Ka = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1593459591",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the value of "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " for propionic acid. "
+            }
+          ],
+          "id": "iwcgcw29ci4wr9f",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "y9orx50cqqry2b1",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1593459591": [
+      "78292"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

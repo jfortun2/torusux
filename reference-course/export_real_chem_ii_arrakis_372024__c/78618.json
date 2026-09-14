@@ -1,0 +1,255 @@
+{
+  "id": "78618",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "survey_ins_diary09-q3a",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          ".*"
+        ],
+        "566694113"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zwjha2kpa7qiwkh",
+                  "type": "p"
+                }
+              ],
+              "id": "1777495542"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "781m8sl3di8pk0x",
+                  "type": "p"
+                }
+              ],
+              "id": "399805851"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7avjknpbbezjf6q",
+                  "type": "p"
+                }
+              ],
+              "id": "3864996144"
+            }
+          ],
+          "id": "3826444173",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you"
+                      }
+                    ],
+                    "id": "r6qqfja00m8jao2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3015518444"
+              },
+              "id": "566694113",
+              "legacyMatch": ".*",
+              "rule": "(!(input like {I})) && ((!(input like {H})) && ((!(input like {G})) && ((!(input like {F})) && ((!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {.*})))))))))",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Lecture video"
+              }
+            ],
+            "id": "jstbp788hc6epcf",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Individual problem solving activity "
+              }
+            ],
+            "id": "00avrl3rwp14v13",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Guided problem solving activity"
+              }
+            ],
+            "id": "4l2vpiovpc64r9t",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Online test, quiz or poll question"
+              }
+            ],
+            "id": "2toe59mg2mq33rv",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "OLI virtual lab or simulation activity"
+              }
+            ],
+            "id": "4zejbnxu701npdw",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Showing or conducting a non-OLI demo, video, simulation, or experiment "
+              }
+            ],
+            "id": "0d7kyou766eqdwr",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Team-based/collaborative activity or assignment "
+              }
+            ],
+            "id": "4izd9a6pmni45uc",
+            "type": "p"
+          }
+        ],
+        "id": "G"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Office hours with teaching staff "
+              }
+            ],
+            "id": "3ielvz68t2t5k5i",
+            "type": "p"
+          }
+        ],
+        "id": "H"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Other active learning techniques: Please specify below"
+              }
+            ],
+            "id": "sdzsh76nz49391d",
+            "type": "p"
+          }
+        ],
+        "id": "I"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "strong": true,
+              "text": "Asynchronous Activities"
+            }
+          ],
+          "id": "rqtejh6kupxzu4r",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Check if you provided or assigned any of the following activities to be completed independently outside of class time. "
+            }
+          ],
+          "id": "x8vhhaeoybfmsfu",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "3826444173": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

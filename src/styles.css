@@ -3505,6 +3505,14 @@ select:focus-visible,
   margin: 0 0 10px;
 }
 
+.page-text-block sup,
+.page-example-block sup,
+.page-text-block sub,
+.page-example-block sub {
+  font-size: 0.75em;
+  line-height: 0;
+}
+
 .page-example-block,
 .page-resource-card {
   background: #fff;

@@ -1,0 +1,302 @@
+{
+  "id": "80476",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "gen_equilibrium_quiz-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b638iee6kj8tf9l",
+                  "type": "p"
+                }
+              ],
+              "id": "1871990589"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mhoreuvt59iosln",
+                  "type": "p"
+                }
+              ],
+              "id": "455252009"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "g86cs2cq7rcdpfk",
+                  "type": "p"
+                }
+              ],
+              "id": "1061208215"
+            }
+          ],
+          "id": "1617133903",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. No chemical species in a reversible reaction will be 0 when the reaction is at equilibrium."
+                      }
+                    ],
+                    "id": "c4z6xaq3dmfa6eh",
+                    "type": "p"
+                  }
+                ],
+                "id": "1858255129"
+              },
+              "id": "311975899",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. At equilibrium the rate of the forward reaction is equal to the rate of the reverse reaction."
+                      }
+                    ],
+                    "id": "pleivjuxwxh9yty",
+                    "type": "p"
+                  }
+                ],
+                "id": "562177779"
+              },
+              "id": "916266645",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "8abigow9a3bi0dl",
+                    "type": "p"
+                  }
+                ],
+                "id": "716643400"
+              },
+              "id": "791454832",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Once at equilibrium a reaction will remain at equilibrium indefinitely, unless there is a change imposed on the system, i.e. a change in temperature."
+                      }
+                    ],
+                    "id": "k67h2dduxjb7obj",
+                    "type": "p"
+                  }
+                ],
+                "id": "2434157509"
+              },
+              "id": "1501063353",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ml14sfhhnf7xwbm",
+                    "type": "p"
+                  }
+                ],
+                "id": "2011473948"
+              },
+              "id": "1175473860",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "311975899"
+            ],
+            [
+              [
+                "B"
+              ],
+              "916266645"
+            ],
+            [
+              [
+                "C"
+              ],
+              "791454832"
+            ],
+            [
+              [
+                "D"
+              ],
+              "1501063353"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "311975899"
+        ],
+        [
+          [
+            "B"
+          ],
+          "916266645"
+        ],
+        [
+          [
+            "C"
+          ],
+          "791454832"
+        ],
+        [
+          [
+            "D"
+          ],
+          "1501063353"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "932395532",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "When a reaction is at equilibrium one or more of the reactants or products will have a concentration of 0 M."
+              }
+            ],
+            "id": "38ckf7je703amgb",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "At equilibrium the rate of the forward reaction is greater than the rate of the reverse reaction."
+              }
+            ],
+            "id": "1muvc2890lnnxsh",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "At equilibrium the concentrations of all species remain constant."
+              }
+            ],
+            "id": "fk62hxzp0xs7kwe",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Once at equilibrium, a reaction can spontaneously shift out of equilibrium."
+              }
+            ],
+            "id": "t2to7msdzwz6gxt",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements about chemical equilibrium is true?"
+            }
+          ],
+          "id": "0mdkj8vhmy0w4fs",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1617133903": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

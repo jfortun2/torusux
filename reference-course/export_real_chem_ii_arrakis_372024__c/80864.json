@@ -1,0 +1,663 @@
+{
+  "id": "80864",
+  "type": "Page",
+  "tags": [],
+  "title": "Ksp and Gram Solubility Calculations",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Note that solubility is not always given as a molar value. When the solubility of a compound is given in units other than moles per liter, we must convert the solubility into moles per liter (i.e., molarity) in order to use it in the solubility product expression. The following example shows how to perform those unit conversions before determining the solubility product equilibrium."
+              }
+            ],
+            "id": "ohvphxonxodamd2",
+            "type": "p"
+          }
+        ],
+        "id": "2459603328",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "365304075",
+                "type": "p"
+              },
+              {
+                "border": "hidden",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "em": true,
+                                "text": "Many of the pigments used by artists in oil-based paints are sparingly soluble in water. For example, the solubility of the artist’s pigment chrome yellow, PbCrO"
+                              },
+                              {
+                                "em": true,
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "em": true,
+                                "text": ", is 4.6 × 10"
+                              },
+                              {
+                                "em": true,
+                                "sup": true,
+                                "text": "–6"
+                              },
+                              {
+                                "em": true,
+                                "text": " g/L. Determine the value of K"
+                              },
+                              {
+                                "sub": true,
+                                "text": "sp"
+                              },
+                              {
+                                "em": true,
+                                "text": " for PbCrO"
+                              },
+                              {
+                                "em": true,
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "em": true,
+                                "text": "."
+                              }
+                            ],
+                            "id": "ybl487s56l7dona",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "fsdtxbua2zmsyej",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alt": "A photograph is shown of a portion of an oil painting which reveals colors of orange, brown, yellow, green, blue, and purple colors in its strokes. A few water droplets rest on the surface.",
+                            "caption": [
+                              {
+                                "children": [
+                                  {
+                                    "em": true,
+                                    "text": "Oil paints contain pigments that are very slightly soluble in water. In addition to chrome yellow (PbCrO"
+                                  },
+                                  {
+                                    "em": true,
+                                    "sub": true,
+                                    "text": "4"
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": "), examples include Prussian blue (Fe"
+                                  },
+                                  {
+                                    "em": true,
+                                    "sub": true,
+                                    "text": "7"
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": "(CN)"
+                                  },
+                                  {
+                                    "em": true,
+                                    "sub": true,
+                                    "text": "18"
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": "), the reddish-orange color vermilion (HgS), and green color veridian (Cr"
+                                  },
+                                  {
+                                    "em": true,
+                                    "sub": true,
+                                    "text": "2"
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": "O"
+                                  },
+                                  {
+                                    "em": true,
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": "). (Credit: Sonny Abesamis.)"
+                                  }
+                                ],
+                                "type": "p"
+                              }
+                            ],
+                            "children": [
+                              {
+                                "id": "lfumztgsq9evj8u",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "axp8ppqw18uv412",
+                            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/f5/f55b1a94fe78dd8a54bfd316645414db/CNX_Chem_15_01_OilPaints.jpg",
+                            "type": "img",
+                            "width": "375"
+                          }
+                        ],
+                        "id": "ogwxmzjzgakq0jn",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "7ck4zqdoo33d4y7",
+                    "type": "tr"
+                  }
+                ],
+                "id": "vqwhxiam3zd2yfr",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We are given the solubility of PbCrO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": " in grams per liter. If we convert this solubility into moles per liter, we can find the equilibrium concentrations of Pb"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " and CrO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2−"
+                  },
+                  {
+                    "text": ", then "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "isjun7qrzmws0rt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Use the molar mass of PbCrO"
+                          },
+                          {
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "text": " ("
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "legacyBlockRendered": false,
+                            "src": "\\frac{323.2\\;\\mathrm g}{1\\;\\mathrm{mol}})",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": " to convert the solubility of PbCrO"
+                          },
+                          {
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "text": " in grams per liter into moles per liter: "
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\lbrack{\\mathrm{PbCrO}}_4\\rbrack\\;=\\;\\frac{4.6\\times10^{-6}\\;\\mathrm g\\;{\\mathrm{PbCrO}}_4}{1\\;\\mathrm L} \\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;{\\mathrm{PbCrO}}_4}{323.2\\;\\mathrm g\\;{\\mathrm{PbCrO}}_4}\\;=\\;1.4\\times10^{-8}\\; \\frac{\\mathrm{mol}}{\\mathrm L}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": " "
+                          }
+                        ],
+                        "id": "186341326",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "8yfmbsypnaj4jy0",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "The equation for the dissolution indicates that 1 mole of PbCrO"
+                          },
+                          {
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "text": " gives 1 mole of Pb"
+                          },
+                          {
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "text": "aq"
+                          },
+                          {
+                            "text": ") and 1 mol of CrO"
+                          },
+                          {
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "sup": true,
+                            "text": "2−"
+                          },
+                          {
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "text": "aq"
+                          },
+                          {
+                            "text": "):"
+                          }
+                        ],
+                        "id": "jg1i5u555ju9nwy",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "{\\mathrm{PbCrO}}_4(s)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Pb}^{2+}(aq)\\;+\\;{\\mathrm{CrO}}_4^{2-}(aq)",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "wtmla5fxxslu7sz",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "Therefore, both [Pb"
+                          },
+                          {
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "text": "] and [CrO"
+                          },
+                          {
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "sup": true,
+                            "text": "2−"
+                          },
+                          {
+                            "text": "] are equal to the molar solubility of PbCrO"
+                          },
+                          {
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "text": ":"
+                          }
+                        ],
+                        "id": "p5tm9v85lg051mg",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\lbrack\\mathrm{Pb}^{2+}\\rbrack\\;=\\;\\lbrack{\\mathrm{CrO}}_4^{2-}\\rbrack\\;=\\;1.4\\times10^{-8}\\;\\mathrm M",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "d56egi3ftdrtkc8",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "kzzl4pzao1t9v0t",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Substitute these values into the solubility product expression to determine "
+                          },
+                          {
+                            "em": true,
+                            "text": "K"
+                          },
+                          {
+                            "sub": true,
+                            "text": "sp"
+                          },
+                          {
+                            "text": ":"
+                          }
+                        ],
+                        "id": "ehwgmn2v4xl77vd",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Pb}^{2+}\\rbrack\\lbrack\\mathrm{CrO}_4^{2-}\\rbrack\\; =\\;(1.4\\times10^{–8})(1.4\\times10^{–8})\\;=\\;2.0\\times10^{–16}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "pm3j63mv0kaofrd",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "o1fpqsjlchvhm8d",
+                    "type": "li"
+                  }
+                ],
+                "id": "xwy19gi2taua35m",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2828179405",
+                "type": "p"
+              }
+            ],
+            "id": "3845595232",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "1191898267",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 78702,
+            "id": "4061735123",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78760,
+            "id": "1856481977",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2647117826",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80032,
+            "id": "469929438",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79348,
+            "id": "2604290101",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1687094215",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "why0eb3qglfrvs8",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "3tvbqah515fr9uu",
+            "type": "p"
+          }
+        ],
+        "id": "2176677867",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78540"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

@@ -1,0 +1,273 @@
+{
+  "id": "79501",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78147"
+  ],
+  "title": "battery_fuel_cell_pool_v2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D",
+          "E"
+        ],
+        "78807145"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "r8kl0pencadmyh4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "7o6v3cfxmzulrfu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "0v996l3svyuvsy2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "339tb27bhfyhnll",
+                        "text": "Lithium ion batteries are used in many portable electronic devices, including all-electric vehicles."
+                      }
+                    ],
+                    "id": "6rurlbbi0035qrv",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "5nyixsv3265w7ar",
+                        "text": "Lithium batteries provide a large current and are lighter than comparable batteries of other types."
+                      }
+                    ],
+                    "id": "ywi2l8qp3gckfsd",
+                    "type": "li"
+                  }
+                ],
+                "id": "vyiu1ccepkrdo4c",
+                "type": "ul"
+              }
+            ],
+            "id": "3476948419"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0322y3fv3h7s5tc",
+                  "type": "p"
+                }
+              ],
+              "id": "3202120144"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lyrsvjvx25m01uq",
+                  "type": "p"
+                }
+              ],
+              "id": "697754089"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4xctzaor9aj40wg",
+                  "type": "p"
+                }
+              ],
+              "id": "82326311"
+            }
+          ],
+          "id": "fab4cc413d5d44bb955063a69dfeee90",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "fa44713ffb5d48f8bf768b0eebfcbd75",
+                    "type": "p"
+                  }
+                ],
+                "id": "2880868275"
+              },
+              "id": "78807145",
+              "legacyMatch": "D,E",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E} && (input like {D}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are two correct answers."
+                      }
+                    ],
+                    "id": "f1d73046f83d4421bddaae67abdd2927",
+                    "type": "p"
+                  }
+                ],
+                "id": "1676037627"
+              },
+              "id": "901774645",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A battery is an electrochemical cell but not a galvanic cell."
+              }
+            ],
+            "id": "6w3nowy8cuxnujn",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A fuel cell is an electrochemical cell but not a galvanic cell."
+              }
+            ],
+            "id": "ihgiko4hssen3ql",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A fuel cell requires no reactants other than the contents of the fuel cell."
+              }
+            ],
+            "id": "piwywooo3okmhwx",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Lithium ion batteries are used in many portable electronic devices, including all-electric vehicles."
+              }
+            ],
+            "id": "mv3y0rog6er70dn",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": " Lithium batteries provide a large current and are lighter than comparable batteries of other types."
+              }
+            ],
+            "id": "p3z3idf2xh9up3f",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements are true for batteries? Select all that apply."
+            }
+          ],
+          "id": "dffec3fa3082473b94832f5f6e0eed0d",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "fab4cc413d5d44bb955063a69dfeee90": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

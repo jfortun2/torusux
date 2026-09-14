@@ -1,0 +1,2055 @@
+{
+  "id": "80615",
+  "type": "Page",
+  "tags": [],
+  "title": "Determining Rate Laws from Initial Rates",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "A common experimental approach to determining rate laws is the "
+              },
+              {
+                "children": [
+                  {
+                    "text": "method of initial rates"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "A common experimental approach to determine rate law expressions by measuring reaction rates when initial reactant concentrations are systematically varied."
+                      }
+                    ],
+                    "id": "1354376874",
+                    "type": "p"
+                  }
+                ],
+                "id": "432155009",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": ". This method involves measuring reaction rates for multiple experimental trials using different initial reactant concentrations. Comparing the measured rates for these trials permits determination of the reaction orders and, subsequently, the rate constant. Together, the reaction orders and rate constant are used to formulate a rate law. This approach is illustrated in the next example and the following exercises."
+              }
+            ],
+            "id": "jzbnij8m73g3fj0",
+            "type": "p"
+          }
+        ],
+        "id": "1923061311",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Ozone in the upper atmosphere is depleted when it reacts with nitrogen oxides. The reaction rates of nitrogen oxides with ozone are important factors in determining how significant these reactions are in the formation of the ozone hole over Antarctica."
+                  }
+                ],
+                "id": "zjkij1wl6hxnk9j",
+                "type": "p"
+              },
+              {
+                "alt": "A view of Earth’s southern hemisphere is shown. A nearly circular region of approximately half the diameter of the image is shown in \n                shades of purple, with Antarctica appearing in a slightly lighter color than the surrounding ocean areas. Immediately outside this region \n                is a narrow bright blue zone followed by a bright green zone. In the top half of the figure, the purple region extends slightly outward from \n                the circle and the blue zone extends more outward to the right of the center as compared to the lower half of the image. In the upper half \n                of the image, the majority of the space outside the purple region is shaded green, with a few small strips of interspersed blue regions. \n                The lower half however shows the majority of the space outside the central purple zone in yellow, orange, and red. The red zones appear in \n                the lower central and left regions outside the purple zone. To the lower right of this image is a color scale that is labeled “Total Ozone \n                (Dobsone units).” This scale begins at 0 and increases by 100’s up to 700. At the left end of the scale, the value 0 shows a very deep purple \n                color, 100 is indigo, 200 is blue, 300 is green, 400 is a yellow-orange, 500 is red, 600 is pink, and 700 is white.",
+                "caption": [
+                  {
+                    "children": [
+                      {
+                        "em": true,
+                        "text": "Over the past several years, the atmospheric ozone concentration over Antarctica has decreased during the winter. This map shows the decreased concentration as a purple area. (Credit: Modification of work by NASA.)"
+                      }
+                    ],
+                    "type": "p"
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "34weczipwohh9th",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "n9g1666ukyrpqdo",
+                "src": "https://d2xvti2irp4c7t.cloudfront.net/media/c7/c745e749fcba4b3539c52441fac32384/CNX_Chem_12_03_OzoneHole.jpg",
+                "type": "img",
+                "width": "400"
+              },
+              {
+                "children": [
+                  {
+                    "text": "One such reaction is the combination of nitrogen monoxide, NO, with ozone, O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "puci5qp8o55lg8r",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "e7ppoozaqvkgw9s",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "67e7mx4myh08w20",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{NO}(g)\\;+\\;{\\mathrm O}_3(g)\\;\\;\\rightarrow\\;\\;{\\mathrm{NO}}_2(g)\\;+\\;{\\mathrm O}_2(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This reaction has been studied in the laboratory, and the following initial rates data were determined at 25 °C."
+                  }
+                ],
+                "id": "ix4b7ehk2bnx4ql",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "8n58vlgk39cexif",
+                            "text": "Trial"
+                          }
+                        ],
+                        "id": "k02cpf8xazudmvs",
+                        "type": "th"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "ocdbmsa8c2aaohz",
+                            "text": "[NO]"
+                          },
+                          {
+                            "id": "yrbtqgnr1wxuy7r",
+                            "sub": true,
+                            "text": "initial"
+                          },
+                          {
+                            "id": "pvb2f6n6a5tei8f",
+                            "text": " (M)"
+                          }
+                        ],
+                        "id": "x7p1593p2ad35fc",
+                        "type": "th"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "vuw4jq9pr4ro8gf",
+                            "text": "[O"
+                          },
+                          {
+                            "id": "xhlqap5m0zvxv0v",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "8xhb2fzlqkje3dy",
+                            "text": "]"
+                          },
+                          {
+                            "id": "o0319gi6dl9ru6c",
+                            "sub": true,
+                            "text": "initial"
+                          },
+                          {
+                            "id": "o6mks7hc6hhl54s",
+                            "text": " (M)"
+                          }
+                        ],
+                        "id": "u94wskce8i5x0ft",
+                        "type": "th"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "lskz7e24ngvspyk",
+                            "text": "Initial Rate (M/s)"
+                          }
+                        ],
+                        "id": "28fsbblz7r1bapu",
+                        "type": "th"
+                      }
+                    ],
+                    "id": "nq8lnrlnyhc9t7z",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "cn1tl74343lm3mv",
+                            "text": "1"
+                          }
+                        ],
+                        "id": "sp5j2sqs58hzik9",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "qr76fntj0xvxhvv",
+                            "text": "1.00 × 10"
+                          },
+                          {
+                            "id": "nm6h6dv3xmmpz8f",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "j7f5w30q0eyw9ng",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "ll2mlo70bg2ksac",
+                            "text": "3.00 × 10"
+                          },
+                          {
+                            "id": "fzpzh8bumfweozj",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "ne9e6x1zumpr6h8",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "307fila4p48bqpm",
+                            "text": "6.60 × 10"
+                          },
+                          {
+                            "id": "w50ub95rb04oq8j",
+                            "sup": true,
+                            "text": "−5"
+                          }
+                        ],
+                        "id": "hqqif31t3z8v8zk",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "5w04e3bujvxr7e4",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "3n21uh1xibtwr5c",
+                            "text": "2"
+                          }
+                        ],
+                        "id": "vngo17g3u20q4xy",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "mx4looifkkk6on9",
+                            "text": "1.00 × 10"
+                          },
+                          {
+                            "id": "ncicy86yvmhz968",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "40hignsaz49u7z6",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "jllvp6zz539syn3",
+                            "text": "6.00 × 10"
+                          },
+                          {
+                            "id": "1e8yi8mv6gsj2n2",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "ejdsm60qjtf5j39",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "o7iqt3z0udnbyx7",
+                            "text": "1.32 × 10"
+                          },
+                          {
+                            "id": "22z8f30ji6snlt4",
+                            "sup": true,
+                            "text": "−4"
+                          }
+                        ],
+                        "id": "83vn6jem1kaaq5l",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "4222oefpq5cx901",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "fr02rbdm1cxqh2w",
+                            "text": "3"
+                          }
+                        ],
+                        "id": "6zyjox94h4obyzm",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "c3ezq8ozyd9tyc2",
+                            "text": "1.00 × 10"
+                          },
+                          {
+                            "id": "1gq1w4ujiqugfkm",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "6cx2sernushbwkm",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "8k2z4xlezm7o9mj",
+                            "text": "9.00 × 10"
+                          },
+                          {
+                            "id": "hv56qfb0kkpfshd",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "jz1rl2fj5wr8xhn",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "5dlx4qabbjragc6",
+                            "text": "1.98 × 10"
+                          },
+                          {
+                            "id": "vcdal0l95s6h3ga",
+                            "sup": true,
+                            "text": "−4"
+                          }
+                        ],
+                        "id": "nlgmhjtw0skhopq",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "4z8dmj06evuj9h6",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "pdidu7v1kat42df",
+                            "text": "4"
+                          }
+                        ],
+                        "id": "y3w8zxq3incsy4k",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "nyl184m2krw8d8x",
+                            "text": "2.00 × 10"
+                          },
+                          {
+                            "id": "t8tei1xk5vzmus9",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "a53emiyz5s4vn9j",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "27ijvyj7raflv45",
+                            "text": "9.00 × 10"
+                          },
+                          {
+                            "id": "vuk66wzcbhucwo5",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "mht85c3l8i64v9g",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "8sxdwwtjazm5yjb",
+                            "text": "3.96 × 10"
+                          },
+                          {
+                            "id": "iuoszbgrfrdr3dd",
+                            "sup": true,
+                            "text": "−4"
+                          }
+                        ],
+                        "id": "04hu0s1fxyiljb7",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "nw4ndwtd2huxy7f",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "pnljx8v85jd2ts1",
+                            "text": "5"
+                          }
+                        ],
+                        "id": "lo35zi518oqtk00",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "bm7iknx24nfbj6g",
+                            "text": "3.00 × 10"
+                          },
+                          {
+                            "id": "duw7edf56p4vlfp",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "ulyxajou8w65cls",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "t3uv0h22vfj793l",
+                            "text": "9.00 × 10"
+                          },
+                          {
+                            "id": "7ja8c3nmrikdfon",
+                            "sup": true,
+                            "text": "−6"
+                          }
+                        ],
+                        "id": "dr545dyk6jxol1l",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "kzjbo6qkh619vdh",
+                            "text": "5.94 × 10"
+                          },
+                          {
+                            "id": "reysuz5f9nfukf8",
+                            "sup": true,
+                            "text": "−4"
+                          }
+                        ],
+                        "id": "003gwz1g2npwdm9",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "huxqq0zmwrtedvv",
+                    "type": "tr"
+                  }
+                ],
+                "id": "alosm7k91p925gr",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the rate law and the rate constant for the reaction at 25 °C."
+                  }
+                ],
+                "id": "ptczlpmpnsujfhl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The rate law will have the form:"
+                  }
+                ],
+                "id": "2ndy0f8ujbqorap",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "a8qtx0pul36wys9",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "0q7bcb0df0soh6i",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack^m\\lbrack{\\mathrm O}_3\\rbrack^n",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We can determine the values of "
+                  },
+                  {
+                    "em": true,
+                    "text": "m"
+                  },
+                  {
+                    "text": ", "
+                  },
+                  {
+                    "em": true,
+                    "text": "n"
+                  },
+                  {
+                    "text": ", and "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": " from the experimental data using the following three-part process:"
+                  }
+                ],
+                "id": "7voeavpug7o52ez",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Determine the value of "
+                          },
+                          {
+                            "em": true,
+                            "text": "m"
+                          },
+                          {
+                            "text": " from the data in which [NO] varies and [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "] is constant. "
+                          }
+                        ],
+                        "id": "j40ml1vtnkx88r7",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "In the final three experiments, [NO] varies and [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "] remains constant. When [NO] doubles from trial 3 to trial 4, the rate doubles; and when [NO] triples from trial 3 to trial 5, the rate also triples. Therefore, the rate is directly proportional to [NO], and "
+                          },
+                          {
+                            "em": true,
+                            "text": "m"
+                          },
+                          {
+                            "text": " in the rate law is equal to 1."
+                          }
+                        ],
+                        "id": "y7oa9hwk455w6wo",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "14hqlwi7b4ntsbz",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Determine the value of "
+                          },
+                          {
+                            "em": true,
+                            "text": "n"
+                          },
+                          {
+                            "text": " from the data in which [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "] varies and [NO] is constant. "
+                          }
+                        ],
+                        "id": "xfve81juldhdqhl",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "In the first three experiments, [NO] is constant and [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "] varies. When [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "] doubles from trial 1 to trial 2, the rate doubles; and when [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "] triples from trial 1 to trial 3, the rate also triples. Therefore, the rate is directly proportional to [O"
+                          },
+                          {
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "text": "], and "
+                          },
+                          {
+                            "em": true,
+                            "text": "n"
+                          },
+                          {
+                            "text": " is equal to 1."
+                          }
+                        ],
+                        "id": "cnmi32gzxvzg0zd",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "This means the rate law for the reaction is: "
+                          }
+                        ],
+                        "id": "zyjhlj7tgleo8gt",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\mathrm{Rate}\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack^1\\lbrack{\\mathrm O}_3\\rbrack^1\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack\\lbrack {\\mathrm O}_3\\rbrack",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "u6wjjc2e6ttj0ky",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "899mauo2f68bt6p",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Determine the value of "
+                          },
+                          {
+                            "em": true,
+                            "text": "k"
+                          },
+                          {
+                            "text": " from one set of concentrations and the corresponding rate: "
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "k=\\frac{\\mathrm{rate}}{\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_3\\rbrack}=\\frac{6.60\\times10^{-5}\\; \\mathrm M/\\mathrm s}{(1.00\\times10^{-6}\\;\\mathrm M)(3.00\\times10^{-6}\\;\\mathrm M)}=2.20\\times10^7\\;\\mathrm s^{-1}\\; \\mathrm M^{-1}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": " "
+                          }
+                        ],
+                        "id": "1432115364",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "3lrygl9i2kcecw0",
+                    "type": "li"
+                  }
+                ],
+                "id": "8tc7vzgh3i6le60",
+                "style": "decimal",
+                "type": "ol"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this example, all trials give the same value for "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": ". With most experimental results, when this is not the case, "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": " is calculated for each trial and the average value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": " is reported."
+                  }
+                ],
+                "id": "hg3kd1204xz4l98",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note: The large value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": " tells us that this is a fast reaction that could play an important role in ozone depletion if [NO] is large enough."
+                  }
+                ],
+                "id": "2q309jv1b7zqghj",
+                "type": "p"
+              }
+            ],
+            "id": "2493057672",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "4028764436",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79814,
+            "id": "2278070690",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79526,
+            "id": "2115921685",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80488,
+            "id": "997572997",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2884693980",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79533,
+            "id": "1786454005",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2935004382",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Using the initial rates method and the experimental data, determine the rate law and the value of the rate constant for the reaction:"
+                  }
+                ],
+                "id": "bwngojx7jnh1cgx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "r343zhowfvcb0g6",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ubcsgy7p5mtrn1e",
+                "legacyBlockRendered": "true",
+                "src": "2\\;\\mathrm{NO}(g)\\;+\\;{\\mathrm{Cl}}_2(g)\\;\\;\\rightarrow\\;\\;2\\;\\mathrm{NOCl}(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "n7bnxf50qf0kpjs",
+                            "text": "Trial"
+                          }
+                        ],
+                        "id": "023l5og9jwvdj8w",
+                        "type": "th"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "edvfpm1ltxmy2d0",
+                            "text": "[NO]"
+                          },
+                          {
+                            "id": "q3yiezd2hwa8cmo",
+                            "sub": true,
+                            "text": "initial"
+                          },
+                          {
+                            "id": "kyh5sbezcqzlx72",
+                            "text": " (mol/L)"
+                          }
+                        ],
+                        "id": "c5o2ghvd0ku5ab1",
+                        "type": "th"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "5savo93r3lti4j7",
+                            "text": "[Cl"
+                          },
+                          {
+                            "id": "ivv0h4nph3xs4dm",
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "s6c5ie7kitk7b6y",
+                            "text": "]"
+                          },
+                          {
+                            "id": "cqmqr86fxeyzh3l",
+                            "sub": true,
+                            "text": "initial"
+                          },
+                          {
+                            "id": "pb12k0j473rgxb9",
+                            "text": " (mol/L)"
+                          }
+                        ],
+                        "id": "69x543y9fmyv35q",
+                        "type": "th"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "1t45q8x8pw4g4in",
+                            "text": "Initial Rate (mol/L/s)"
+                          }
+                        ],
+                        "id": "ost6kn02t5bewma",
+                        "type": "th"
+                      }
+                    ],
+                    "id": "3t38hs0rp68cljm",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "ym8zry32umosch3",
+                            "text": "1"
+                          }
+                        ],
+                        "id": "r71frqa5m9x8zwa",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "l9iax6n439az59q",
+                            "text": "0.10"
+                          }
+                        ],
+                        "id": "bunv8wg2hzavije",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "35hyzn8gucf592y",
+                            "text": "0.10"
+                          }
+                        ],
+                        "id": "bz2fbbcvy5i1yz8",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "yoct3rjtlovelsi",
+                            "text": "0.00300"
+                          }
+                        ],
+                        "id": "fpejhx98rtmc9ht",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "7osb8g0cgcvvipa",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "ldacdw3xlfsdka7",
+                            "text": "2"
+                          }
+                        ],
+                        "id": "gpgyrpy442p9jvy",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "addcsfkto5n9its",
+                            "text": "0.10"
+                          }
+                        ],
+                        "id": "n2bmhd1zvjta0ay",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "wnrlv1tuvoeyxg8",
+                            "text": "0.15"
+                          }
+                        ],
+                        "id": "4mg2jeigq9dzaeg",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "rv0k17tfdbtchpr",
+                            "text": "0.00450"
+                          }
+                        ],
+                        "id": "e60hzymukvw16v2",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ytoyk3987ab0s02",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "mr8g3mnfe4c76rx",
+                            "text": "3"
+                          }
+                        ],
+                        "id": "zns1wfq5cpsc0m5",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "pgwk5evn4pstw1w",
+                            "text": "0.15"
+                          }
+                        ],
+                        "id": "35nr7b3ewg6kunr",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "nv0d5ah2t4v8w27",
+                            "text": "0.10"
+                          }
+                        ],
+                        "id": "rlbv457r73p97xu",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "ktury53gkoerxg9",
+                            "text": "0.00675"
+                          }
+                        ],
+                        "id": "a1541h1ysz2uaa0",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "lxuopf2omv7nqwi",
+                    "type": "tr"
+                  }
+                ],
+                "id": "befkic5z39bcpzu",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The rate law for this reaction has the form:"
+                  }
+                ],
+                "id": "rdo9oidrthmpy55",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "405d2da2z2nuf7g",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "vzbktiuqnyog3tx",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Rate}\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack^m\\lbrack{\\mathrm{Cl}}_2\\rbrack^n",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "As in the previous problems, we determine the rate equation in a stepwise fashion, first finding the values of "
+                  },
+                  {
+                    "em": true,
+                    "text": "m"
+                  },
+                  {
+                    "text": " and "
+                  },
+                  {
+                    "em": true,
+                    "text": "n"
+                  },
+                  {
+                    "text": " from the experimental data and then using these values to determine the value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": ". In this example, however, we use a different approach to determine the values of "
+                  },
+                  {
+                    "em": true,
+                    "text": "m"
+                  },
+                  {
+                    "text": " and "
+                  },
+                  {
+                    "em": true,
+                    "text": "n"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "cbo92van9rd1eob",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Determine the value of "
+                          },
+                          {
+                            "em": true,
+                            "text": "m"
+                          },
+                          {
+                            "text": " from the data in which [NO] varies and [Cl"
+                          },
+                          {
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "text": "] is constant. We can write the ratios with the subscripts "
+                          },
+                          {
+                            "em": true,
+                            "text": "x"
+                          },
+                          {
+                            "text": " and "
+                          },
+                          {
+                            "em": true,
+                            "text": "y"
+                          },
+                          {
+                            "text": " to indicate data from two different trials: "
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\frac{{\\mathrm{Rate}}_x}{{\\mathrm{Rate}}_y}\\;=\\;\\frac{k\\lbrack\\mathrm{NO}\\rbrack_x^m\\;\\lbrack{\\mathrm{Cl}}_2 \\rbrack_x^n}{k\\lbrack\\mathrm{NO}\\rbrack_y^m\\;\\lbrack{\\mathrm{Cl}}_2\\rbrack_y^n}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "p5ck1zgk3wdqfa2",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "Using trial 3 and trial 1, in which [Cl"
+                          },
+                          {
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "text": "] does not vary, gives:"
+                          }
+                        ],
+                        "id": "mfy9d6l00uegv77",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\frac{{\\mathrm{Rate}}_3}{{\\mathrm{Rate}}_1}\\;=\\;\\frac{0.00675}{0.00300}\\;=\\;\\frac{k(0.15)^m(0.10)^n}{k(0.10) ^m(0.10)^n}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "w6jnn1vr7n42rlu",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "After canceling equivalent terms in the numerator and denominator, we have:"
+                          }
+                        ],
+                        "id": "kcajqa0ra8vi4c2",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\frac{0.00675}{0.00300}\\;=\\;\\frac{(0.15)^m}{(0.10)^m}\\;\\;\\;\\;\\;\\;\\;\\mathrm{which}\\;\\mathrm{simplifies}\\;\\mathrm{to} \\;\\;\\;\\;\\;2.25\\;=\\;\\left(1.5\\right)^m",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": "We can use natural logs to determine the value of the exponent "
+                          },
+                          {
+                            "em": true,
+                            "text": "m"
+                          },
+                          {
+                            "text": ":"
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\ln(2.25)\\;=\\;m\\ln(1.5)\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;m\\;=\\;\\frac{\\ln(2.25)}{\\ln(1.5)}\\; =\\;\\frac{0.811}{0.405}\\;=\\;2",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": "We can confirm the result easily:"
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "1.5^2\\;=\\;2.25",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "x9xjvp9vqwg762w",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "67m6o6ktkg52v0l",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Determine the value of "
+                          },
+                          {
+                            "em": true,
+                            "text": "n"
+                          },
+                          {
+                            "text": " from data in which [Cl"
+                          },
+                          {
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "text": "] varies and [NO] is constant. Using trial 2 and trial 1:"
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\frac{{\\mathrm{Rate}}_2}{{\\mathrm{Rate}}_1}\\;=\\;\\frac{0.00450}{0.00300}\\;=\\;\\frac{k(0.10)^m(0.15)^n}{k(0.10)^m (0.10)^n}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": "Cancellation and simplification gives:"
+                          }
+                        ],
+                        "id": "05ii22084qt29js",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\frac{0.00450}{0.00300}\\;=\\;\\frac{(0.15)^n}{(0.10)^n}\\;\\;\\;\\;\\;\\;\\;\\mathrm{which}\\;\\mathrm{simplifies}\\;\\mathrm{to} \\;\\;\\;\\;\\;1.50\\;=\\;\\left(1.5\\right)^m",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": "Thus "
+                          },
+                          {
+                            "em": true,
+                            "text": "n"
+                          },
+                          {
+                            "text": " must be 1, and the form of the rate law is: "
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "\\mathrm{Rate}\\;=\\mathit\\;k\\lbrack\\mathrm{NO}\\rbrack^m\\lbrack{\\mathrm{Cl}}_2\\rbrack^n\\;=\\;k\\lbrack\\mathrm{NO}\\rbrack^2 \\lbrack{\\mathrm{Cl}}_2\\rbrack",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "k8luhw12mhz5o90",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "955ec8bzgc02kps",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Determine the numerical value of the rate constant "
+                          },
+                          {
+                            "em": true,
+                            "text": "k"
+                          },
+                          {
+                            "text": " with appropriate units."
+                          }
+                        ],
+                        "id": "5wsc20tb68dg850",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "Once the rate law expression is determined, it can be solved for "
+                          },
+                          {
+                            "em": true,
+                            "text": "k"
+                          },
+                          {
+                            "text": ". The value of "
+                          },
+                          {
+                            "em": true,
+                            "text": "k"
+                          },
+                          {
+                            "text": " is then determined by simply plugging in values from the experimental trials. The units for "
+                          },
+                          {
+                            "em": true,
+                            "text": "k"
+                          },
+                          {
+                            "text": " depend on the particular rate law and need to be carefully combined and simplified. Using the data from trial 1:"
+                          }
+                        ],
+                        "id": "ocemyrswcj4x3as",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          },
+                          {
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "legacyBlockRendered": true,
+                            "src": "k\\;=\\;\\frac{\\mathrm{Rate}}{{\\lbrack\\mathrm{NO}\\rbrack}^2\\lbrack{\\mathrm{Cl}}_2\\rbrack}\\;=\\;\\frac{0.00300\\; \\mathrm{mol}\\;\\mathrm L^{-1}\\;\\mathrm s^{-1}}{(0.10\\;\\mathrm{mol}\\;\\mathrm L^{-1})^2(0.10\\;\\mathrm{mol}\\;\\mathrm L^{-1})^1} =\\;3.0\\;\\mathrm{mol}^{-2}\\;\\mathrm L^2\\;\\mathrm s^{-1}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "bvucenatyackl4h",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "The same result is obtained using the data from trials 2 and 3. In general, "
+                          },
+                          {
+                            "em": true,
+                            "text": "k"
+                          },
+                          {
+                            "text": " is calculated for all trials, and the average value is reported."
+                          }
+                        ],
+                        "id": "84r74lmga2r7t1r",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "nai3wknu7t1i3b8",
+                    "type": "li"
+                  }
+                ],
+                "id": "41ypb509he2brwp",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3982537911",
+                "type": "p"
+              }
+            ],
+            "id": "648884097",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2730035143",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "wy6xdcoseuz0cjk",
+                "text": "Interactive Example"
+              }
+            ],
+            "id": "lz3h0zukg35lsqs",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "Derive the rate law and value for "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": " for the following reaction given the initial rates data below."
+              }
+            ],
+            "id": "36zl9kz642ukrjc",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "h66j8jbb8cnvg75",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "zccxis52rirfckx",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{OCl}^-(aq)\\;+\\;\\mathrm I^-(aq)\\;\\;\\rightarrow\\;\\;\\mathrm{OI}^-(aq)\\;+\\;\\mathrm{Cl}^-(aq)",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "73noxotslv5ncdn",
+                        "text": "Trial"
+                      }
+                    ],
+                    "id": "r9zjk8tdz6yweki",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "5ox906ikc3le2vm",
+                        "text": "[OCl"
+                      },
+                      {
+                        "id": "2e1tqoy46vc0475",
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "id": "ehspfvkbh5o94u0",
+                        "text": "]"
+                      },
+                      {
+                        "id": "qf53xdqzpd8gzjx",
+                        "sub": true,
+                        "text": "initial"
+                      },
+                      {
+                        "id": "aza2tih7u8vv4ww",
+                        "text": " (mol/L)"
+                      }
+                    ],
+                    "id": "kh307j8fr7kb37y",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "k9p1tc0en68wnvd",
+                        "text": "[I"
+                      },
+                      {
+                        "id": "3mxm3onqf7ahwmn",
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "id": "0kpy4f2pq3w42j2",
+                        "text": "]"
+                      },
+                      {
+                        "id": "umlv941nmy64wr9",
+                        "sub": true,
+                        "text": "initial"
+                      },
+                      {
+                        "id": "wbgcpgnyztsy2qx",
+                        "text": " (mol/L)"
+                      }
+                    ],
+                    "id": "1sx1jjpiazdy9q6",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "lci5czxvd9jfq20",
+                        "text": "Initial Rate (mol/L/s)"
+                      }
+                    ],
+                    "id": "2lm30t1y2qepwb8",
+                    "type": "th"
+                  }
+                ],
+                "id": "mi29fjsvi62hy17",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "9e02p8xdbh8lv6s",
+                        "text": "1"
+                      }
+                    ],
+                    "id": "a9a94ayi7gdelyj",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "olcipi82djzx1ky",
+                        "text": "0.0040"
+                      }
+                    ],
+                    "id": "m9etd70mh3wedg2",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "4fatyjj7ffcj8p8",
+                        "text": "0.0020"
+                      }
+                    ],
+                    "id": "e7p5aoacccjirll",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "v67h243bhlhkgin",
+                        "text": "0.00184"
+                      }
+                    ],
+                    "id": "wuwx51nedsmqzr9",
+                    "type": "td"
+                  }
+                ],
+                "id": "q7ebuvw50bs56e0",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "qwgrfgvznzdeete",
+                        "text": "2"
+                      }
+                    ],
+                    "id": "bnz7s3o9ypoq9db",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "05iir81g6ufs0bn",
+                        "text": "0.0020"
+                      }
+                    ],
+                    "id": "0i2qy6iypvo8w8d",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "axu5855o6wfto9i",
+                        "text": "0.0040"
+                      }
+                    ],
+                    "id": "wm728yowwuvvh6v",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "2ewjwblungn8s92",
+                        "text": "0.00092"
+                      }
+                    ],
+                    "id": "aarsuxj6enlrmyk",
+                    "type": "td"
+                  }
+                ],
+                "id": "ad52qgxlzi0r00m",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "q8ffsk4lfvmk74e",
+                        "text": "3"
+                      }
+                    ],
+                    "id": "lm9meta3d5zi94c",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "zmfij1h4v2awprh",
+                        "text": "0.0020"
+                      }
+                    ],
+                    "id": "lwv796k9h4zxuh0",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "4b8nqc8j5ko7uyd",
+                        "text": "0.0020"
+                      }
+                    ],
+                    "id": "r6l2l0i9boy2lxh",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "2xzbws46ripgrsg",
+                        "text": "0.00046"
+                      }
+                    ],
+                    "id": "nssmwnewjziskws",
+                    "type": "td"
+                  }
+                ],
+                "id": "5ksqv6t11rrxw4i",
+                "type": "tr"
+              }
+            ],
+            "id": "qzbwbq6muphwci5",
+            "rowstyle": "alternating",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": "Click through the interactive example to see the solution."
+              }
+            ],
+            "id": "mplmsu70pdscn3l",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "kwc0zy8xcpf06ov",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "height": "439",
+            "id": "p5d0jsvuc119t96",
+            "src": "https://h5p.org/h5p/embed/305851",
+            "type": "iframe",
+            "width": "750"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "1339843282",
+            "type": "p"
+          }
+        ],
+        "id": "2147609699",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79698,
+            "id": "4116633186",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80479,
+            "id": "4140208985",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79768,
+            "id": "3670763441",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2255302484",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "hjjebjbzjblhssq",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908 -8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "ck9gstuech8fupn",
+            "type": "p"
+          }
+        ],
+        "id": "1326537171",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78539"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

@@ -1,0 +1,457 @@
+{
+  "id": "79723",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "LigandDenticityLBD1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1293453711",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4056495379",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "567381502",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The heme ligand donated four lone pairs (all from N atoms) to form bonds to the central iron ion."
+                      }
+                    ],
+                    "id": "15204270",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2760071007",
+                "textDirection": "ltr"
+              },
+              "id": "276660311",
+              "rule": "input like {2445663058}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In the heme ligand (shown above), each nitrogen atom donates a lone pair of electrons to the central iron ion."
+                      }
+                    ],
+                    "id": "2899492972",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "754869614",
+                "textDirection": "ltr"
+              },
+              "id": "1551065603",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2922575431",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2414590005",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2325357926",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Since there are four connections to Fe, the heme ligand is tetradentate."
+                      }
+                    ],
+                    "id": "382372107",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1054313311",
+                "textDirection": "ltr"
+              },
+              "id": "3322077179",
+              "rule": "input like {339583879}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The denticity prefix should match the number of lone pairs donated by the ligand(s)."
+                      }
+                    ],
+                    "id": "2004688172",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "923151740",
+                "textDirection": "ltr"
+              },
+              "id": "3608296340",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "How many connections does the hemoglobin molecule make to the iron ion? The heme ligand shown above is dentate.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1017326289",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2179891249",
+          "operation": "shuffle",
+          "partId": "567381502",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "1137858108",
+          "operation": "shuffle",
+          "partId": "2325357926",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "1"
+              }
+            ],
+            "id": "1030495122",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3674656219",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "2"
+              }
+            ],
+            "id": "293326900",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3073456527",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "mono"
+              }
+            ],
+            "id": "1096310316",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2506562037",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "bi"
+              }
+            ],
+            "id": "1788776835",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1109703501",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tri"
+              }
+            ],
+            "id": "1088685820",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2549022636",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "tetra"
+              }
+            ],
+            "id": "3389695443",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "339583879",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "penta"
+              }
+            ],
+            "id": "2197640647",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "45530555",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "hexa"
+              }
+            ],
+            "id": "3173261416",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "756076501",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "3"
+              }
+            ],
+            "id": "2375050379",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3748156886",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "4"
+              }
+            ],
+            "id": "3535512492",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2445663058",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "5"
+              }
+            ],
+            "id": "2206077602",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "569377896",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "6"
+              }
+            ],
+            "id": "2774112600",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1083546282",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "3674656219",
+          "3073456527",
+          "3748156886",
+          "2445663058",
+          "569377896",
+          "1083546282"
+        ],
+        "id": "2308651620",
+        "inputType": "dropdown",
+        "partId": "567381502",
+        "size": "small"
+      },
+      {
+        "choiceIds": [
+          "2506562037",
+          "1109703501",
+          "2549022636",
+          "339583879",
+          "45530555",
+          "756076501"
+        ],
+        "id": "1323909988",
+        "inputType": "dropdown",
+        "partId": "2325357926",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "How many connections does the hemoglobin molecule make to the iron ion? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2308651620",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2102139787",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The heme ligand shown above is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1323909988",
+              "type": "input_ref"
+            },
+            {
+              "text": "dentate."
+            }
+          ],
+          "id": "3292936351",
+          "type": "p"
+        }
+      ],
+      "id": "394006671"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2325357926": [],
+    "567381502": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

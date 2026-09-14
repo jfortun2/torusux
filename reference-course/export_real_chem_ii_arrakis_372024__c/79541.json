@@ -1,0 +1,176 @@
+{
+  "id": "79541",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "mech_rate_digt1-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ughja0ecd1pfqzi",
+                  "type": "p"
+                }
+              ],
+              "id": "3711274796"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hvlh2pdok18gvqu",
+                  "type": "p"
+                }
+              ],
+              "id": "2664979068"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wvqgb5kgju4ad89",
+                  "type": "p"
+                }
+              ],
+              "id": "1252979730"
+            }
+          ],
+          "id": "2106303113",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If the first elementary step is the slowest step, which is the case here, the rate law for the overall reaction is the same as the rate law of the first step."
+                      }
+                    ],
+                    "id": "qpyl1uoz0rvqhvn",
+                    "type": "p"
+                  }
+                ],
+                "id": "795542529"
+              },
+              "id": "3029153086",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the first elementary step is the slowest step, which is the case here, the rate law for the overall reaction is the same as the rate law of the first step."
+                      }
+                    ],
+                    "id": "of39wcq7qiop1hg",
+                    "type": "p"
+                  }
+                ],
+                "id": "913261611"
+              },
+              "id": "253006633",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "The rate law for the mechanism is Rate = k[H2][ICl].",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "9g7dgzqwi1nmc6x",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "wv5dy50fujghnly",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The rate law for the mechanism is Rate = "
+            },
+            {
+              "em": true,
+              "text": "k"
+            },
+            {
+              "text": "[H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "][ICl]."
+            }
+          ],
+          "id": "2n2hh0yqqpe56wi",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2106303113": [
+      "78388"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

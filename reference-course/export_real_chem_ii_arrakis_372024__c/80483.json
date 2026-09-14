@@ -1,0 +1,205 @@
+{
+  "id": "80483",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ox_numbers_digt-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "(6\\cdot x)\\;+\\;(12\\cdot(+1))\\;+\\;(6\\cdot(-2))\\;=\\;0\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;6x\\;=\\;0\\;\\;\\;\\;\\; \\Rightarrow\\;\\;\\;\\;\\;x\\;=\\;0",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "q0bule3yu5uvh9n",
+                "type": "p"
+              }
+            ],
+            "id": "976175462"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sqd4a91v4j6jcoh",
+                  "type": "p"
+                }
+              ],
+              "id": "4197155916"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z8ufvkyqobb4zxi",
+                  "type": "p"
+                }
+              ],
+              "id": "2722898612"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rsb8ysrhy18p7tc",
+                  "type": "p"
+                }
+              ],
+              "id": "737140454"
+            }
+          ],
+          "id": "2050905291",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "(6\\cdot x)\\;+\\;(12\\cdot(+1))\\;+\\;(6\\cdot(-2))\\;=\\;0\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;6x\\;=\\;0\\;\\;\\;\\;\\; \\Rightarrow\\;\\;\\;\\;\\;x\\;=\\;0",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ar99qdwmclqenrz",
+                    "type": "p"
+                  }
+                ],
+                "id": "2983032181"
+              },
+              "id": "1890616055",
+              "legacyMatch": "0",
+              "rule": "input = {0}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "xin2c1o5ziqn2yn",
+                    "type": "p"
+                  }
+                ],
+                "id": "35270362"
+              },
+              "id": "3737196606",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2050905291",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the oxidation number for carbon in C"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "12"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            }
+          ],
+          "id": "6eaz0wz9r6wr7hm",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2050905291": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

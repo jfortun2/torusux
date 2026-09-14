@@ -1,0 +1,385 @@
+{
+  "id": "79466",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78063"
+  ],
+  "title": "oxid_agents_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1049323404",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3422864053",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "924652588",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Among these species, platinum(II) has the highest reduction potential (1.20 V). It is the most easily reduced, so it is the strongest oxidizing agent."
+                      }
+                    ],
+                    "id": "4151835158",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "622777893",
+                "textDirection": "ltr"
+              },
+              "id": "1905480753",
+              "rule": "input like {3313685086}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Among these species, platinum(II) has the highest reduction potential (1.20 V). It is the most easily reduced, so it is the strongest oxidizing agent."
+                      }
+                    ],
+                    "id": "2508828844",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2239116519",
+                "textDirection": "ltr"
+              },
+              "id": "1740826926",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1399834438",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "128690006",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "779783671",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Among these species, cadmium(II) has the lowest reduction potential (−0.40 V). It is the least easily reduced, so it is the weakest oxidizing agent."
+                      }
+                    ],
+                    "id": "4175826217",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4215755209",
+                "textDirection": "ltr"
+              },
+              "id": "1144877996",
+              "rule": "input like {3910715024}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I﻿ncorrect. The species with the lowest reduction potential is the least easily reduced, so it is the weakest oxidizing agent."
+                      }
+                    ],
+                    "id": "1141272733",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "202946778",
+                "textDirection": "ltr"
+              },
+              "id": "3628312213",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Select from cadmium(II), copper(II), and platinum(II) to answer the following. The Standard Reduction Potentials table may be useful. is the strongest oxidizing agent. is the weakest oxidizing agent.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3634465974",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "1686745659",
+          "operation": "shuffle",
+          "partId": "779783671",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3757305499",
+          "operation": "shuffle",
+          "partId": "924652588",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "cadmium(II)"
+              }
+            ],
+            "id": "2171558323",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3910715024",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "copper(II)"
+              }
+            ],
+            "id": "1458462242",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "432133609",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "cadmium(II)"
+              }
+            ],
+            "id": "1698444119",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3823764429",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "copper(II)"
+              }
+            ],
+            "id": "1545417837",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3494835907",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "platinum(II)"
+              }
+            ],
+            "id": "285523044",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3313685086",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "platinum(II)"
+              }
+            ],
+            "id": "473680240",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3628899880",
+        "textDirection": "ltr"
+      }
+    ],
+    "customScoring": true,
+    "inputs": [
+      {
+        "choiceIds": [
+          "3823764429",
+          "3494835907",
+          "3313685086"
+        ],
+        "id": "1128945716",
+        "inputType": "dropdown",
+        "partId": "924652588"
+      },
+      {
+        "choiceIds": [
+          "3910715024",
+          "432133609",
+          "3628899880"
+        ],
+        "id": "3149703223",
+        "inputType": "dropdown",
+        "partId": "779783671"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Select from cadmium(II), copper(II), and platinum(II) to answer the following. The "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_xdwka",
+              "idref": "80670",
+              "target": "self",
+              "type": "a"
+            },
+            {
+              "text": " table may be useful."
+            }
+          ],
+          "id": "3520393319",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1128945716",
+              "type": "input_ref"
+            },
+            {
+              "text": " is the strongest oxidizing agent."
+            }
+          ],
+          "id": "2864610402",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3149703223",
+              "type": "input_ref"
+            },
+            {
+              "text": " is the weakest oxidizing agent."
+            }
+          ],
+          "id": "3592853273",
+          "type": "p"
+        }
+      ],
+      "id": "2627524671"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "779783671": [
+      "78387"
+    ],
+    "924652588": [
+      "78387"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

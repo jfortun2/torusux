@@ -1,0 +1,192 @@
+{
+  "id": "80457",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "third_law_lbd1-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "An increase in the number of particles often indicates greater dispersal of matter, and a decrease corresponds to less dispersal. A change in the number of gas particles has a particularly large effect on the dispersal of matter."
+                    }
+                  ],
+                  "id": "rt3rg2zvzhlvhjh",
+                  "type": "p"
+                }
+              ],
+              "id": "441015058"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vl827kx5x1gpn7y",
+                  "type": "p"
+                }
+              ],
+              "id": "982153269"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k3wc3mwjuqntpno",
+                  "type": "p"
+                }
+              ],
+              "id": "873303081"
+            }
+          ],
+          "id": "980059359",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When this reaction occurs, 2 moles of solid form 4 moles of solid and 3 moles of gas, which corresponds to matter becoming more dispersed, so the entropy increases."
+                      }
+                    ],
+                    "id": "i3ru161f2xlbzbl",
+                    "type": "p"
+                  }
+                ],
+                "id": "2936679423"
+              },
+              "id": "1747910249",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An increase in the number of particles often indicates greater dispersal of matter, and a decrease corresponds to less dispersal. A change in the number of gas particles has a particularly large effect on the dispersal of matter."
+                      }
+                    ],
+                    "id": "yhfc6ss9stkdosw",
+                    "type": "p"
+                  }
+                ],
+                "id": "2840904693"
+              },
+              "id": "4236530294",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "For the following reaction: predict whether the sign of ΔS° will be positive or negative.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Positive"
+              }
+            ],
+            "id": "brrcjpv0hoabm3l",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Negative"
+              }
+            ],
+            "id": "gzeir6weldagjo6",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the following reaction:"
+            }
+          ],
+          "id": "4cmixzgoze8xbkf",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "9qo3hw5u169s86s",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ate80hv1hw7lp9f",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{Fe}}_2{\\mathrm O}_3(s)\\;\\;\\longrightarrow\\;\\;4\\;\\mathrm{Fe}(s)\\;+\\;3\\;{\\mathrm O}_2(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "predict whether the sign of Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": "° will be positive or negative."
+            }
+          ],
+          "id": "szpmx2uexyp17gc",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "980059359": [
+      "78409"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

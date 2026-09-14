@@ -1,0 +1,426 @@
+{
+  "id": "79422",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "rxn_quotient_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "Q_\\mathrm{c}\\;=\\;\\frac{\\left[\\mathrm{products}\\right]}{\\left[\\mathrm{reactants}\\right]}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r859v8veyvh5ker",
+                  "type": "p"
+                }
+              ],
+              "id": "3776533475"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Don't forget to include the coefficients."
+                    }
+                  ],
+                  "id": "k296eax4orroaze",
+                  "type": "p"
+                }
+              ],
+              "id": "3416916329"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qhn5fc3zkml85gy",
+                  "type": "p"
+                }
+              ],
+              "id": "2013917860"
+            }
+          ],
+          "id": "2677570177",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "so31gcu5c564g8q",
+                    "type": "p"
+                  }
+                ],
+                "id": "426056118"
+              },
+              "id": "1614231762",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Don't forget to include the coefficients."
+                      }
+                    ],
+                    "id": "reck8i64atlwril",
+                    "type": "p"
+                  }
+                ],
+                "id": "6999131"
+              },
+              "id": "888103067",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q_\\mathrm{c}\\;=\\;\\frac{\\left[\\mathrm{products}\\right]}{\\left[\\mathrm{reactants}\\right]}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Don't forget to include coefficients."
+                      }
+                    ],
+                    "id": "r9qklmz1fjjfj7j",
+                    "type": "p"
+                  }
+                ],
+                "id": "388516159"
+              },
+              "id": "2291683703",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q_\\mathrm{c}\\;=\\;\\frac{\\left[\\mathrm{products}\\right]}{\\left[\\mathrm{reactants}\\right]}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "hrcdzpwc75ukxvh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2359819154"
+              },
+              "id": "1379454874",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "zl2d6e49ui5t20i",
+                    "type": "p"
+                  }
+                ],
+                "id": "824871336"
+              },
+              "id": "2641786461",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1614231762"
+            ],
+            [
+              [
+                "B"
+              ],
+              "888103067"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2291683703"
+            ],
+            [
+              [
+                "D"
+              ],
+              "1379454874"
+            ]
+          ]
+        }
+      ],
+      "previewText": " ",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1614231762"
+        ],
+        [
+          [
+            "B"
+          ],
+          "888103067"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2291683703"
+        ],
+        [
+          [
+            "D"
+          ],
+          "1379454874"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "4101959343",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "Q_\\mathrm{c}\\;=\\;\\dfrac{\\lbrack{\\mathrm{NO}}_2\\rbrack^4\\lbrack{\\mathrm H}_2\\mathrm O\\rbrack^6}{\\lbrack {\\mathrm{NH}}_3\\rbrack^4 \\lbrack{\\mathrm O}_2\\rbrack^7}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "1kr4n2sfbb1vx72",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "Q_\\mathrm{c}\\;=\\;\\dfrac{\\lbrack{\\mathrm{NO}}_2\\rbrack\\lbrack{\\mathrm H}_2\\mathrm O\\rbrack}{\\lbrack{\\mathrm{NH}}_3 \\rbrack\\lbrack{\\mathrm O}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "lapnd2pyl09rkg6",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "Q_\\mathrm{c}\\;=\\;\\dfrac{\\lbrack{\\mathrm O}_2\\rbrack\\lbrack{\\mathrm{NH}}_3\\rbrack}{\\lbrack{\\mathrm{NO}}_2 \\rbrack\\lbrack{\\mathrm H}_2\\mathrm O\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "r9pbb07142ekyyg",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "Q_\\mathrm{c}\\;=\\;\\dfrac{\\lbrack{\\mathrm O}_2\\rbrack^7\\lbrack{\\mathrm{NH}}_3\\rbrack^4}{\\lbrack{\\mathrm{NO}}_2 \\rbrack^4 \\lbrack{\\mathrm H}_2\\mathrm O\\rbrack^6}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "m41lmoyl5iezig6",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "1550674073",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "ve0e6pgyo3ztu28",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "dng91f01hmk6n68",
+          "legacyBlockRendered": "true",
+          "src": "4\\;{\\mathrm{NH}}_3(g)\\;+\\;7\\;{\\mathrm O}_2(g)\\;\\rightleftharpoons\\;4\\;{\\mathrm{NO}}_2(g)\\;+\\;6\\;{\\mathrm H}_2 \\mathrm O(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "431018445",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2677570177": [
+      "78461"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

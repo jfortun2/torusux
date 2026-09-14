@@ -1,0 +1,309 @@
+{
+  "id": "78592",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78185"
+  ],
+  "title": "given_conc_ions_calc_ksp_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "atsk28s8laknwgx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "0x9uzre01izzfvr",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The equilibrium equation is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\mathrm M}_2{\\mathrm{SO}}_4(s)\\;\\;\\rightleftharpoons\\;2\\;\\mathrm M^+(aq)\\;+\\;{\\mathrm{SO}}_4^{2-}(aq)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm M^+\\rbrack}^2\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack\\;=\\;{(@@m_conc@@)}^2(@@s_conc@@)\\;=\\;@@ksp@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "5clwfuif5cenfnw",
+                "type": "p"
+              }
+            ],
+            "id": "1236282891"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u14f6zhul3ls2nt",
+                  "type": "p"
+                }
+              ],
+              "id": "318753581"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "focikovbylg998l",
+                  "type": "p"
+                }
+              ],
+              "id": "3783337195"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "unjkhy063rrq5nv",
+                  "type": "p"
+                }
+              ],
+              "id": "2918813372"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The equilibrium equation is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\mathrm M}_2{\\mathrm{SO}}_4(s)\\;\\;\\rightleftharpoons\\;2\\;\\mathrm M^+(aq)\\;+\\;{\\mathrm{SO}}_4^{2-}(aq)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm M^+\\rbrack}^2\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack\\;=\\;{(@@m_conc@@)}^2(@@s_conc@@)\\;=\\;@@ksp@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "fd45ujb60x110c3",
+                    "type": "p"
+                  }
+                ],
+                "id": "4040740924"
+              },
+              "id": "2629723181",
+              "legacyMatch": "[@@low@@,@@high@@]",
+              "rule": "input = {[@@low@@,@@high@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. To calculate "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ", use the equilibrium expression, which includes the equilibrium concentrations and the equilibrium constant. When writing the equilibrium expression, be sure to write the correct chemical equation for the solubility equilibrium (the dissolving of a substance) and consider the phase of the different substances and stoichiometric coefficients. Then use the equilibrium concentrations in the equilibrium expression to calculate "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "a3def3bda5ea464cb897f0e825cb7583",
+                    "type": "p"
+                  }
+                ],
+                "id": "2238529257"
+              },
+              "id": "24051930",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "const m_conc = OLI.random(1e-5,1e-3,6);\nconst s_conc = m_conc/2 .toPrecision(3);\n\nconst ksp = (m_conc**2*s_conc) .toPrecision(3);\nconst low = 0.97*ksp;\nconst high = 1.03*ksp;\n\n\n// Expose variables to OLI\nmodule.exports = {\n  m_conc, s_conc, ksp, low, high\n};\n",
+              "id": "d9c70e7eafa54e74a523caca13bd8de5",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "An unknown metal, M, makes a precipitate with sulfate having the chemical formula M"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ". At equilibrium, the concentration of the metal ion is @@m_conc@@ M and the sulfate ion concentration is @@s_conc@@ M. What is the "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " of the metal sulfate?"
+            }
+          ],
+          "id": "daff5cd6bfba4147a8ad274585718477",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "fc7d283b66a84a0482b0de2201c733f2",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

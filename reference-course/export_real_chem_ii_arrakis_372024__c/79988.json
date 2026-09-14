@@ -1,0 +1,199 @@
+{
+  "id": "79988",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "entropy_lbd2-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "If entropy increases, Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": " is positive. If entropy decreases, Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": " is negative."
+                    }
+                  ],
+                  "id": "6jq8a7v141l09ko",
+                  "type": "p"
+                }
+              ],
+              "id": "638785159"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "x3vr7f7od74e2lw",
+                  "type": "p"
+                }
+              ],
+              "id": "1442492893"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3qwi63a4kh7qd6i",
+                  "type": "p"
+                }
+              ],
+              "id": "258016505"
+            }
+          ],
+          "id": "2640208681",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A phase transition from solid to liquid means there is a net increase in dispersal of matter. Therefore, entropy is increasing. "
+                      }
+                    ],
+                    "id": "ctu4rf3wr84bskl",
+                    "type": "p"
+                  }
+                ],
+                "id": "2623841842"
+              },
+              "id": "3389837611",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A phase transition from solid to liquid means there is a net increase in dispersal of matter. Therefore, entropy is increasing."
+                      }
+                    ],
+                    "id": "mk83jbcdbztber0",
+                    "type": "p"
+                  }
+                ],
+                "id": "4174707729"
+              },
+              "id": "4035468274",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " ",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Positive"
+              }
+            ],
+            "id": "rzxl2cstlehorka",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Negative"
+              }
+            ],
+            "id": "y2ny71jvitm0351",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "3290026114",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "qzu59iq4wj62t58",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "paftacner65gamu",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{NH}}_3(s)\\;\\longrightarrow\\;{\\mathrm{NH}}_3(l)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "3060302174",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2640208681": [
+      "78325"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

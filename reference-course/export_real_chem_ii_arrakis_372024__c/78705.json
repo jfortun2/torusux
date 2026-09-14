@@ -1,0 +1,261 @@
+{
+  "id": "78705",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "lechat_temp_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "In the above reaction, when the concentration of NO"
+                    },
+                    {
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "text": " decreased as heat was applied, in which direction did the reaction shift?"
+                    }
+                  ],
+                  "id": "ftu1zbubesrnx58",
+                  "type": "p"
+                }
+              ],
+              "id": "3185504021"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Decreased [NO"
+                    },
+                    {
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "text": "] means the reaction shifted to the left when heat was applied."
+                    }
+                  ],
+                  "id": "jl8tumm2v41x8ks",
+                  "type": "p"
+                }
+              ],
+              "id": "2018021435"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vioboqszkx6lqf9",
+                  "type": "p"
+                }
+              ],
+              "id": "3601309733"
+            }
+          ],
+          "id": "3684163601",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An exothermic reaction has heat as a product. When heat is applied, the reaction will shift to the left to \"use up\" heat to relieve the stress. This corresponds to an increase in the concentrations of the reactants and a decrease in the concentration of the product, NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "pjfrnoaxjws5au0",
+                    "type": "p"
+                  }
+                ],
+                "id": "3916982033"
+              },
+              "id": "1556932481",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An exothermic reaction has heat as a product. When heat is applied, the reaction will shift to the left to \"use up\" heat to relieve the stress. This corresponds to an increase in the concentrations of the reactants and a decrease in the concentration of the product, NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "zoek3ffn5h1l0zk",
+                    "type": "p"
+                  }
+                ],
+                "id": "3977881718"
+              },
+              "id": "1065578260",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Consider the following reaction:  When a rigid flask containing NO(g), O2(g), and NO2 (g) is heated, [NO2] decreases. Is this reaction endothermic or exothermic? (Assume the above reaction is the only one that takes place in the flask.)",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "4206810279",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Exothermic"
+              }
+            ],
+            "id": "x52ofktduwhi5hm",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Endothermic"
+              }
+            ],
+            "id": "repszfofb5x25gc",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the following reaction: "
+            }
+          ],
+          "id": "ope2q5woas9jkv9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "e28gi9w9ohkm7ga",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "rbgve3r9hiydobl",
+          "legacyBlockRendered": "true",
+          "src": "2\\;\\mathrm{NO}(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{NO}}_2(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "When a rigid flask containing NO("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": "), O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": "), and NO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " ("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": ") is heated, [NO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] decreases. Is this reaction endothermic or exothermic? (Assume the above reaction is the only one that takes place in the flask.)"
+            }
+          ],
+          "id": "0byat0ijita4w46",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3684163601": [
+      "78280"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

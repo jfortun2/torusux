@@ -1,0 +1,796 @@
+{
+  "id": "80021",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_3lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\frac{x^2}{0.010}\\;=\\;2.5\\times10^{-4}\\\\x^2\\;=\\;2.5\\times10^{-6}\\\\x\\;=\\;0.0016\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "ipnsjaag0i35zz0",
+                "type": "p"
+              }
+            ],
+            "id": "191144506"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Assuming "
+                    },
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " << 0.010 means we can ignore "
+                    },
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " in the denominator, resulting in: "
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "\\frac{x^2}{0.010}\\;=\\;2.5\\times10^{-4}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ldyid9q6hbdobjy",
+                  "type": "p"
+                }
+              ],
+              "id": "4103961392"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4k8p0bfinofkhpl",
+                  "type": "p"
+                }
+              ],
+              "id": "228147014"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dios9qru08vwrxh",
+                  "type": "p"
+                }
+              ],
+              "id": "462417860"
+            }
+          ],
+          "id": "3618728500",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\frac{x^2}{0.010}\\;=\\;2.5\\times10^{-4}\\\\x^2\\;=\\;2.5\\times10^{-6}\\\\x\\;=\\;0.0016\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2j35zgieis73cds",
+                    "type": "p"
+                  }
+                ],
+                "id": "2212472488"
+              },
+              "id": "14431679",
+              "legacyMatch": "[0.0015,0.0016]",
+              "rule": "input = {[0.0015,0.0016]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "8937rj2hodqa1pf",
+                    "type": "p"
+                  }
+                ],
+                "id": "1514988511"
+              },
+              "id": "913101674",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " C8H10N4O2 + H2O ⇌ C8H10N4O2H+ + OH−C8H10N4O2H2OC8H10N4O2H+OH−Initial0.010 M-----0 M0 MChange−x-----+x+xEquilibrium0.010 − x-----x x  Calculate x, assuming x << 0.010. ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3618728500",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "2142691286",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "___selfClosing___": true,
+                  "children": [
+                    {
+                      "id": "v2g6i7jc9pnxthl",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "s15c6sp7hefpm92",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "jlolw7sonz7bprb",
+                      "strong": true,
+                      "text": "C"
+                    },
+                    {
+                      "id": "zge8j5a80lcrpse",
+                      "strong": true,
+                      "sub": true,
+                      "text": "8"
+                    },
+                    {
+                      "id": "fkadlestdi5psac",
+                      "strong": true,
+                      "text": "H"
+                    },
+                    {
+                      "id": "lgldr7vqloh77do",
+                      "strong": true,
+                      "sub": true,
+                      "text": "10"
+                    },
+                    {
+                      "id": "0uiz1kc4n6rzk8n",
+                      "strong": true,
+                      "text": "N"
+                    },
+                    {
+                      "id": "dujx0w10t4i0o6k",
+                      "strong": true,
+                      "sub": true,
+                      "text": "4"
+                    },
+                    {
+                      "id": "dr7yotzq00v0j0r",
+                      "strong": true,
+                      "text": "O"
+                    },
+                    {
+                      "id": "hpu6tjm4jtkev7j",
+                      "strong": true,
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "id": "oef03hqzoz6c8x4",
+                      "strong": true,
+                      "text": " + H"
+                    },
+                    {
+                      "id": "7sxdg33m9djfj1w",
+                      "strong": true,
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "id": "j450kkfp0og34vt",
+                      "strong": true,
+                      "text": "O ⇌ C"
+                    },
+                    {
+                      "id": "64s9mjgv39jt6uv",
+                      "strong": true,
+                      "sub": true,
+                      "text": "8"
+                    },
+                    {
+                      "id": "imws1235962z17u",
+                      "strong": true,
+                      "text": "H"
+                    },
+                    {
+                      "id": "2u74w18or328561",
+                      "strong": true,
+                      "sub": true,
+                      "text": "10"
+                    },
+                    {
+                      "id": "k492rcm11pidg6j",
+                      "strong": true,
+                      "text": "N"
+                    },
+                    {
+                      "id": "iga4059zkp2b49u",
+                      "strong": true,
+                      "sub": true,
+                      "text": "4"
+                    },
+                    {
+                      "id": "qrba0grluvf4c62",
+                      "strong": true,
+                      "text": "O"
+                    },
+                    {
+                      "id": "b4m04xbk9cnpmwn",
+                      "strong": true,
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "id": "tc46c1h7uu4rqe8",
+                      "strong": true,
+                      "text": "H"
+                    },
+                    {
+                      "id": "12y7xm72d919zym",
+                      "strong": true,
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "id": "hk4gyji5ok28vny",
+                      "strong": true,
+                      "text": " + OH"
+                    },
+                    {
+                      "id": "jxj2tpgdo090jlo",
+                      "strong": true,
+                      "sup": true,
+                      "text": "−"
+                    }
+                  ],
+                  "colspan": 4,
+                  "id": "x6pc6pkbmdhf1b4",
+                  "type": "td"
+                }
+              ],
+              "id": "pjf7x9wt2gx9v2g",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "1246627487",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "3420675372",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "strong": true,
+                          "text": "C"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "8"
+                        },
+                        {
+                          "strong": true,
+                          "text": "H"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "10"
+                        },
+                        {
+                          "strong": true,
+                          "text": "N"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "4"
+                        },
+                        {
+                          "strong": true,
+                          "text": "O"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "2"
+                        }
+                      ],
+                      "id": "1207803587",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "1902937926",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "strong": true,
+                          "text": "H"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "2"
+                        },
+                        {
+                          "strong": true,
+                          "text": "O"
+                        }
+                      ],
+                      "id": "3264452117",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "3545179403",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "strong": true,
+                          "text": "C"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "8"
+                        },
+                        {
+                          "strong": true,
+                          "text": "H"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "10"
+                        },
+                        {
+                          "strong": true,
+                          "text": "N"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "4"
+                        },
+                        {
+                          "strong": true,
+                          "text": "O"
+                        },
+                        {
+                          "strong": true,
+                          "sub": true,
+                          "text": "2"
+                        },
+                        {
+                          "strong": true,
+                          "text": "H"
+                        },
+                        {
+                          "strong": true,
+                          "sup": true,
+                          "text": "+"
+                        }
+                      ],
+                      "id": "2660703118",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "3881498826",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "strong": true,
+                          "text": "OH"
+                        },
+                        {
+                          "strong": true,
+                          "sup": true,
+                          "text": "−"
+                        }
+                      ],
+                      "id": "74322839",
+                      "type": "p"
+                    }
+                  ],
+                  "id": "914762698",
+                  "type": "td"
+                }
+              ],
+              "id": "657349308",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "ljwbrospz4ki4i3",
+                      "text": "Initial"
+                    }
+                  ],
+                  "id": "vkun7ulxhv4eoc5",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "r4ky97qoefldpmv",
+                      "text": "0.010 M"
+                    }
+                  ],
+                  "id": "wwqubwfygjbxicu",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "jy8fx9d0ubcf72w",
+                      "text": "-----"
+                    }
+                  ],
+                  "id": "j7swq9sakbnrltw",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "u9hm500cta9k9s7",
+                      "text": "0 M"
+                    }
+                  ],
+                  "id": "vmg0d0hke6b8hiy",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "975wzd730mt47fa",
+                      "text": "0 M"
+                    }
+                  ],
+                  "id": "ywp85f86hwjrv5m",
+                  "type": "td"
+                }
+              ],
+              "id": "cgt32uju0hdws60",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "aszv8ubog8y31je",
+                      "text": "Change"
+                    }
+                  ],
+                  "id": "tjiyj4dqb9c1vqz",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "kr4us92aoukqgvu",
+                      "text": "−"
+                    },
+                    {
+                      "em": true,
+                      "id": "dqruelsp7xkup7j",
+                      "text": "x"
+                    }
+                  ],
+                  "id": "c8cpx7jcr0wzoni",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "24d3njjiz49mdtk",
+                      "text": "-----"
+                    }
+                  ],
+                  "id": "0idulef7oucuvi5",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "myhe9gvb9t6870r",
+                      "text": "+"
+                    },
+                    {
+                      "em": true,
+                      "id": "k3emc8lm23xqswa",
+                      "text": "x"
+                    }
+                  ],
+                  "id": "k3e80h0ttqzco1c",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "rq5a46r1s06szdg",
+                      "text": "+"
+                    },
+                    {
+                      "em": true,
+                      "id": "669gru5t2mdxnb3",
+                      "text": "x"
+                    }
+                  ],
+                  "id": "2k1avdh1e5qsisw",
+                  "type": "td"
+                }
+              ],
+              "id": "pkntza5hno0za2q",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "d7c957ci2bcee4s",
+                      "text": "Equilibrium"
+                    }
+                  ],
+                  "id": "lryfrvbhopzg9q7",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "o9jn6mosplyna6x",
+                      "text": "0.010 − "
+                    },
+                    {
+                      "em": true,
+                      "id": "zm8s427vhilqp3a",
+                      "text": "x"
+                    }
+                  ],
+                  "id": "013lqd258w0ch96",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "id": "0wn0cfhb1qbhftr",
+                      "text": "-----"
+                    }
+                  ],
+                  "id": "4xtemjtc5qn1u2e",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "em": true,
+                      "id": "s3gcx3nhkg19fds",
+                      "text": "x"
+                    },
+                    {
+                      "id": "oi9ead9k63rmt6d",
+                      "text": " "
+                    }
+                  ],
+                  "id": "vd1umesue9i3ftc",
+                  "type": "td"
+                },
+                {
+                  "align": "center",
+                  "children": [
+                    {
+                      "em": true,
+                      "id": "58r9507pt9jbhc4",
+                      "text": "x"
+                    },
+                    {
+                      "id": "a1vfzowt6p2kitp",
+                      "text": " "
+                    }
+                  ],
+                  "id": "vxnkbrr7x7phkpt",
+                  "type": "td"
+                }
+              ],
+              "id": "lc8snqsqdnoj8vm",
+              "type": "tr"
+            }
+          ],
+          "id": "uog95kw3i9w8mss",
+          "rowstyle": "alternating",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": " Calculate "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": ", assuming "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " << 0.010. "
+            }
+          ],
+          "id": "yc5deu077ch8fh9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "1aqvyzdmviv9wt6",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3618728500": [
+      "78439"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

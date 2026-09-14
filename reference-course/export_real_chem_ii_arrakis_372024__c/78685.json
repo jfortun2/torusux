@@ -1,0 +1,298 @@
+{
+  "id": "78685",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "isotope_review_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fh5jkd4jwewpsdd",
+                  "type": "p"
+                }
+              ],
+              "id": "580373031"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vd718k6c6b2fg3w",
+                  "type": "p"
+                }
+              ],
+              "id": "952995539"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6hehiz49t4bvk1i",
+                  "type": "p"
+                }
+              ],
+              "id": "2412126506"
+            }
+          ],
+          "id": "2708415176",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The atomic number Z (left subscript) corresponds to the number of protons."
+                      }
+                    ],
+                    "id": "h6dgdqxs6kpi0r0",
+                    "type": "p"
+                  }
+                ],
+                "id": "1117251022"
+              },
+              "id": "77418895",
+              "legacyMatch": "36",
+              "rule": "input = {36}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The atomic number Z (left subscript) corresponds to the number of protons."
+                      }
+                    ],
+                    "id": "soi02q7wn2jq98x",
+                    "type": "p"
+                  }
+                ],
+                "id": "1945337062"
+              },
+              "id": "1123783177",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ds3vb5kkieqbcmd",
+                  "type": "p"
+                }
+              ],
+              "id": "1411064599"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hcb3dj49zdeuqah",
+                  "type": "p"
+                }
+              ],
+              "id": "2509975660"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w2o702b95rhatyi",
+                  "type": "p"
+                }
+              ],
+              "id": "2558499507"
+            }
+          ],
+          "id": "1818222518",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The mass number A (left superscript) minus the atomic number Z corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "vg8mpx8rytutgnt",
+                    "type": "p"
+                  }
+                ],
+                "id": "779939963"
+              },
+              "id": "2139940151",
+              "legacyMatch": "37",
+              "rule": "input = {37}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass number A (left superscript) minus the atomic number Z corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "a3i7y6bruby99gv",
+                    "type": "p"
+                  }
+                ],
+                "id": "4159496162"
+              },
+              "id": "676308723",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Indicate the number of protons and neutrons in the nucleus of each of the following isotopes.  Protons Neutrons ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2708415176",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "1818222518",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Indicate the number of protons and neutrons in the nucleus of each of the following isotopes. "
+            }
+          ],
+          "id": "kwhtscr92xjy6aa",
+          "type": "p"
+        },
+        {
+          "alt": "element symbol Kr with 73 over 36 to the left of the \n                    element symbol",
+          "children": [
+            {
+              "id": "tr5iyrujfnll36a",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "1cpzdnd5y7t6757",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/48/48a2fffb6b1abc881fe6dcd996012f27/kr_sym.png",
+          "type": "img"
+        },
+        {
+          "children": [
+            {
+              "text": "Protons "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "wpuza5mw0ap0uds",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Neutrons "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "to3j2hqedtrsyxy",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1818222518": [
+      "78520"
+    ],
+    "2708415176": [
+      "78520"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

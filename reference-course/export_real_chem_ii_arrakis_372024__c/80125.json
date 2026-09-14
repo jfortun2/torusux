@@ -1,0 +1,271 @@
+{
+  "id": "80125",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "acid_base_intro_quiz-q6",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "D"
+        ],
+        "3297553677"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2tnspxqhltafq31",
+                  "type": "p"
+                }
+              ],
+              "id": "1975254486"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kz2yhf8dfhq8t9z",
+                  "type": "p"
+                }
+              ],
+              "id": "573366388"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xn8erc01giajgs7",
+                  "type": "p"
+                }
+              ],
+              "id": "3466929969"
+            }
+          ],
+          "id": "4009382250",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "8nsyxnpphkgjqc2",
+                    "type": "p"
+                  }
+                ],
+                "id": "670781466"
+              },
+              "id": "3297553677",
+              "legacyMatch": "A,D",
+              "rule": "(!(input like {E})) && ((!(input like {C})) && ((!(input like {B})) && (input like {D} && (input like {A}))))",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "42urysemhba3oaa",
+                    "type": "p"
+                  }
+                ],
+                "id": "1844822386"
+              },
+              "id": "4080317983",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "] = [OH"
+              },
+              {
+                "sup": true,
+                "text": "-"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "aln4ep1wfjuoi05",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "] = 6.3 x 10"
+              },
+              {
+                "sup": true,
+                "text": "-4"
+              }
+            ],
+            "id": "jax50r4ju1qig6p",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [OH"
+              },
+              {
+                "sup": true,
+                "text": "-"
+              },
+              {
+                "text": "] = 3.8 x 10"
+              },
+              {
+                "sup": true,
+                "text": "-10"
+              }
+            ],
+            "id": "m5pxnv5ekecyxhq",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [OH"
+              },
+              {
+                "sup": true,
+                "text": "-"
+              },
+              {
+                "text": "] = 1.0 x 10"
+              },
+              {
+                "sup": true,
+                "text": "-7"
+              }
+            ],
+            "id": "gcjq5ju7b4n7fey",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with a pH of 7.5"
+              }
+            ],
+            "id": "gqxewa2jpzff3kk",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is neutral? Select all that apply."
+            }
+          ],
+          "id": "iqheygnjnvwg8nq",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "4009382250": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

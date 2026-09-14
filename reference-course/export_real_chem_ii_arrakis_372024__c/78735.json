@@ -1,0 +1,277 @@
+{
+  "id": "78735",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "last_dating_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "eeuatt1vyrf7jxz",
+                  "type": "p"
+                }
+              ],
+              "id": "1668428235"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2d8uwlicma3yaaz",
+                  "type": "p"
+                }
+              ],
+              "id": "3685939488"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xoq1uei6wuzymeq",
+                  "type": "p"
+                }
+              ],
+              "id": "3596740316"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If Pb was originally in the rock, the amount produced by radioactive decay would equal the present amount minus the initial amount. As this amount would be smaller than the amount used to calculate the age of the rock and the age is proportional to the amount of Pb, the rock would be younger. "
+                      }
+                    ],
+                    "id": "rcksebh683ayd4l",
+                    "type": "p"
+                  }
+                ],
+                "id": "2661744171"
+              },
+              "id": "2901371835",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "wmz0wgyqjmm7w8x",
+                    "type": "p"
+                  }
+                ],
+                "id": "2625417182"
+              },
+              "id": "3977332669",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "lbk6soqvpnvofzk",
+                    "type": "p"
+                  }
+                ],
+                "id": "678819381"
+              },
+              "id": "2932465086",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "mcm0n30ij13yeuw",
+                    "type": "p"
+                  }
+                ],
+                "id": "3930684081"
+              },
+              "id": "1698301137",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "(b) If some 207Pb was initially present in the rock, would the rock be younger, older, or the same age as the age calculated in (a)?  ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2901371835"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3977332669"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "2932465086"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3068867186",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Younger "
+              }
+            ],
+            "id": "2221824999",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Older"
+              }
+            ],
+            "id": "2827095865",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The same"
+              }
+            ],
+            "id": "1986882804",
+            "type": "p"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "strong": true,
+              "text": "(b)"
+            },
+            {
+              "text": " If some "
+            },
+            {
+              "sup": true,
+              "text": "207"
+            },
+            {
+              "text": "Pb was initially present in the rock, would the rock be younger, older, or the same age as the age calculated in (a)? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "aby6yxpoefgvzhr",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78545"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

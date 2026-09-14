@@ -1,0 +1,171 @@
+{
+  "id": "80502",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_conc_lbd2-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rgp2chhqqj7mls6",
+                  "type": "p"
+                }
+              ],
+              "id": "3711812915"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "17jpwapsd08htkt",
+                  "type": "p"
+                }
+              ],
+              "id": "909726774"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8l9eg2yk1dpgkmx",
+                  "type": "p"
+                }
+              ],
+              "id": "2460406514"
+            }
+          ],
+          "id": "4035624502",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This is a reversible reaction, so it has not gone to completion."
+                      }
+                    ],
+                    "id": "n999mmcd92be4cf",
+                    "type": "p"
+                  }
+                ],
+                "id": "3085508280"
+              },
+              "id": "1555917246",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This is a reversible reaction, so it has not gone to completion."
+                      }
+                    ],
+                    "id": "9z93xdrq6f4iwe1",
+                    "type": "p"
+                  }
+                ],
+                "id": "3073863475"
+              },
+              "id": "888116663",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Indicate whether the following statements are true or false regarding a solution of cobalt(II) that is blue at equilibrium.The reaction has reached completion (completely formed products).",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "zuwx32gl1w3l4im",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "yhqjp3mh3elcgb2",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Indicate whether the following statements are true or false regarding a solution of cobalt(II) that is blue at equilibrium."
+            }
+          ],
+          "id": "erh2jtxgzj89wvi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The reaction has reached completion (completely formed products)."
+            }
+          ],
+          "id": "r2ysk3yhsb86vbx",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "4035624502": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

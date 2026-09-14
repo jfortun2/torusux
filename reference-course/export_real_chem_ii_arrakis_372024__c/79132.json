@@ -1,0 +1,257 @@
+{
+  "id": "79132",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "lechat_quiz-q8",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8u5ns6gvy0plbdr",
+                  "type": "p"
+                }
+              ],
+              "id": "2334363710"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wwevc7x0aj129yc",
+                  "type": "p"
+                }
+              ],
+              "id": "3616399221"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5si6szh9gba8wvi",
+                  "type": "p"
+                }
+              ],
+              "id": "4230499136"
+            }
+          ],
+          "id": "3891731314",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For a fixed volume, the partial pressures of the species does not change when you add a non-reactive gas. So if Q = K before the addition of the Ne, Q will equal K after the addition and there is no shift needed to re-establish equilibrium."
+                      }
+                    ],
+                    "id": "loo6tu9sa62yxxm",
+                    "type": "p"
+                  }
+                ],
+                "id": "383342252"
+              },
+              "id": "3316488232",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For a fixed volume, the partial pressures of the species does not change when you add a non-reactive gas. So if Q = K before the addition of the Ne, Q will equal K after the addition and there is no shift needed to re-establish equilibrium."
+                      }
+                    ],
+                    "id": "d47szxkd4mlubiz",
+                    "type": "p"
+                  }
+                ],
+                "id": "1529402455"
+              },
+              "id": "1715093866",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. For a fixed volume, the partial pressures of the species does not change when you add a non-reactive gas. So if Q = K before the addition of the Ne, Q will equal K after the addition and there is no shift needed to re-establish equilibrium."
+                      }
+                    ],
+                    "id": "rok1fqp4u24a7vb",
+                    "type": "p"
+                  }
+                ],
+                "id": "1937618954"
+              },
+              "id": "755885088",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "057zs0fh7njpxcb",
+                    "type": "p"
+                  }
+                ],
+                "id": "58834847"
+              },
+              "id": "807482934",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3316488232"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1715093866"
+            ],
+            [
+              [
+                "C"
+              ],
+              "755885088"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3316488232"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1715093866"
+        ],
+        [
+          [
+            "C"
+          ],
+          "755885088"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "increase"
+              }
+            ],
+            "id": "fbfn7t2ee7a16t3",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "decrease"
+              }
+            ],
+            "id": "a7ulz3c7ile2yhn",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "stay the same"
+              }
+            ],
+            "id": "mp0bfaq9vveyh5b",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "If Ne is introduced into the vessel, keeping the volume constant, such that the total pressure of the vessel increases, what will happen to the amount of P"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "(s)?"
+            }
+          ],
+          "id": "x2521789v5hkxgg",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3891731314": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

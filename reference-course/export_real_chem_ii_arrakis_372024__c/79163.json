@@ -1,0 +1,292 @@
+{
+  "id": "79163",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78164"
+  ],
+  "title": "compare_ks_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o8o4xixn4t739lv",
+                  "type": "p"
+                }
+              ],
+              "id": "2758964379"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "huvas5hpg9s4vi5",
+                  "type": "p"
+                }
+              ],
+              "id": "4062339042"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lamh5us8x7bzkng",
+                  "type": "p"
+                }
+              ],
+              "id": "380769409"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The equilibrium constant is a numerical measure of the ratio between the concentrations and pressures of the products and reactants when the reaction is at equilibrium at a given temperature, and the process that has the largest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " value is the process that most favors forming products."
+                      }
+                    ],
+                    "id": "cf68c0c972af46069eeedf047bd697a9",
+                    "type": "p"
+                  }
+                ],
+                "id": "511064001"
+              },
+              "id": "739416021",
+              "legacyMatch": "e55e0bb4528a48e9b7b8745e2f433664",
+              "rule": "input like {e55e0bb4528a48e9b7b8745e2f433664}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", is a numerical measure of the ratio between the concentrations and pressures of the products and reactants when the reaction is at equilibrium at a given temperature, and "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " is often simply defined as “products over reactants.” Processes with larger values of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " favor the production of products more than processes with smaller values of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ". To identify the process that has the largest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " value, identify the process that most favors forming products."
+                      }
+                    ],
+                    "id": "b84f2f591bab402b9a157ac3de251f35",
+                    "type": "p"
+                  }
+                ],
+                "id": "2817138664"
+              },
+              "id": "1305095935",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "392352231",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Equilibrium constant for the formation of a complex ion, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              }
+            ],
+            "id": "3h1naiprryqsy5o",
+            "type": "p"
+          }
+        ],
+        "id": "e55e0bb4528a48e9b7b8745e2f433664"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Equilibrium constant for the solubility of an insoluble salt, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "sp"
+              }
+            ],
+            "id": "2wrfoyfkz4xg8o5",
+            "type": "p"
+          }
+        ],
+        "id": "d415884d12b44e69b29a8f9f5a80b479"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Second acid dissociation constant, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "a2"
+              }
+            ],
+            "id": "7p33g2dwwcn0w6d",
+            "type": "p"
+          }
+        ],
+        "id": "b006c930e8754f1ab39c73829eb4c06f"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Equilibrium constant for the dissociation of a complex ion, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "d"
+              }
+            ],
+            "id": "gh277gvil4h11bc",
+            "type": "p"
+          }
+        ],
+        "id": "b3abb06c4bea4f10ace0e5f18def7176"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Equilibrium constant for the auto-ionization of water, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "w"
+              }
+            ],
+            "id": "mbhanbqzqpbl4bq",
+            "type": "p"
+          }
+        ],
+        "id": "fc575e770e994439a7d4699e00276c3c"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In general, which of the following will have the largest value?"
+            }
+          ],
+          "id": "a26efbd62366479988e46b8b96a879ad",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

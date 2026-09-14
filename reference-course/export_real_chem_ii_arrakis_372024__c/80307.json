@@ -1,0 +1,232 @@
+{
+  "id": "80307",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [],
+  "title": "coord_comp_unpaired_elec_pool1_v1_new",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3958934042",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2430009",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "1156298062",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "761167803",
+                "textDirection": "ltr"
+              },
+              "id": "2097455142",
+              "rule": "input = {1}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2188958709",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "825732878",
+                "textDirection": "ltr"
+              },
+              "id": "648079055",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2884721974",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2575391089",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "3936914300",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "1153716992",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2029081698",
+                "textDirection": "ltr"
+              },
+              "id": "137700191",
+              "rule": "input = {1}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "3842644812",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2563103715",
+                "textDirection": "ltr"
+              },
+              "id": "2247686376",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Example question with a fill in the blank .Example question with a fill in the blank .",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "998803034",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "2353126060",
+        "inputType": "numeric",
+        "partId": "1"
+      },
+      {
+        "id": "1566366495",
+        "inputType": "numeric",
+        "partId": "3936914300"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Example question with a fill in the blank "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2353126060",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "415600399",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Example question with a fill in the blank "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1566366495",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "1764049985",
+          "type": "p"
+        }
+      ],
+      "id": "849351832"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [],
+    "3936914300": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}
