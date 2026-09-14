@@ -5,7 +5,7 @@ import {
   type ImportedPage,
 } from './imported/electrochemistry';
 
-export type PageBlockKind = 'text' | 'example' | 'question' | 'bank' | 'course-resource' | 'placeholder';
+export type PageBlockKind = 'text' | 'example' | 'image' | 'question' | 'bank' | 'course-resource' | 'placeholder';
 export type PageBlockOrigin = 'canonical' | 'instructor';
 export type PageBlockStatus = 'original' | 'added' | 'removed';
 
@@ -22,20 +22,30 @@ export type ExampleContent = {
   imageAlt?: string;
 };
 
+export type ImageContent = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
 export type QuestionChoice = {
   id: string;
   text: string;
   correct: boolean;
+  feedback?: string;
 };
 
 export type QuestionInput = {
   id: string;
   label: string;
   answer: string;
+  options?: string[];
 };
 
+export type QuestionContentKind = 'mcq' | 'multi-input' | 'multi-input-dropdown';
+
 export type QuestionContent = {
-  kind: 'mcq' | 'multi-input';
+  kind: QuestionContentKind;
   title: string;
   prompt: string;
   points: number;
@@ -50,6 +60,12 @@ export type QuestionContent = {
   imageAlt?: string;
   generatedByAi?: boolean;
 };
+
+export function questionKindLabel(kind: QuestionContentKind): string {
+  if (kind === 'mcq') return 'Multiple choice';
+  if (kind === 'multi-input') return 'Multi-input fill in the blank';
+  return 'Multi-input dropdown';
+}
 
 export type BankContent = {
   selectionId: string;
@@ -78,6 +94,7 @@ type BlockBase = {
 export type PageBlock =
   | (BlockBase & { kind: 'text'; text: TextContent })
   | (BlockBase & { kind: 'example'; example: ExampleContent })
+  | (BlockBase & { kind: 'image'; image: ImageContent })
   | (BlockBase & { kind: 'question'; question: QuestionContent })
   | (BlockBase & { kind: 'bank'; bank: BankContent })
   | (BlockBase & { kind: 'course-resource'; courseResource: CourseResourceContent })
@@ -102,6 +119,7 @@ export type ChangeSummary = {
 export const BLOCK_KIND_LABEL: Record<PageBlockKind, string> = {
   text: 'Text',
   example: 'Example',
+  image: 'Image',
   question: 'Question',
   bank: 'Activity bank',
   'course-resource': 'Course resource',
@@ -332,8 +350,86 @@ export function editorObjectiveOptions(
   return options;
 }
 
-function choiceDraft(id: string, text: string, correct: boolean): QuestionChoice {
-  return { id, text, correct };
+function choiceDraft(id: string, text: string, correct: boolean, feedback?: string): QuestionChoice {
+  return { id, text, correct, feedback };
+}
+
+export function draftChoiceFeedback(choice: QuestionChoice, allChoices: QuestionChoice[], prompt = ''): string {
+  const text = choice.text.trim() || 'this option';
+  const correct = allChoices.find((item) => item.correct)?.text.trim();
+  if (choice.correct) {
+    return prompt.trim()
+      ? `Correct. “${text}” is the right choice for this question.`
+      : `Correct. “${text}” is the right choice.`;
+  }
+  const mixup = distractorHint(text);
+  const correctClause = correct ? ` The correct answer is “${correct}”.` : '';
+  return `Incorrect. “${text}” is a common mix-up.${mixup}${correctClause}`;
+}
+
+function distractorHint(text: string): string {
+  const lower = text.toLowerCase();
+  if (/\balways\b|\bnever\b|\ball\b|\bnone\b|\bidentically\b/.test(lower)) {
+    return ' Absolute language like this is usually too broad for this concept.';
+  }
+  if (/oxidiz/.test(lower) && /reduc/.test(lower)) {
+    return ' Check which species loses electrons versus which species gains them.';
+  }
+  if (/electron|anode|cathode|cell potential/.test(lower)) {
+    return ' Revisit electron flow and which electrode is involved.';
+  }
+  if (/shield|alpha|beta|gamma/.test(lower)) {
+    return ' Match the control to the radiation type rather than using one barrier for every source.';
+  }
+  return ' Compare this option with the idea the question is actually asking for.';
+}
+
+export function draftImageAltText({
+  fileName = '',
+  title = '',
+  prompt = '',
+}: {
+  fileName?: string;
+  title?: string;
+  prompt?: string;
+}): string {
+  const topic = (title.trim() || prompt.replace(/\s+/g, ' ').trim()).replace(/[?!.]+$/, '');
+  const fromFile = fileName
+    .replace(/\.[a-z0-9]+$/i, '')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const looksGeneric = !fromFile || /^(image|img|photo|picture|screenshot|untitled|download)(\s+\d+)?$/i.test(fromFile);
+  if (topic && looksGeneric) {
+    return `Illustration: ${topic.slice(0, 120)}`;
+  }
+  if (topic && fromFile) {
+    const fileLower = fromFile.toLowerCase();
+    const topicLower = topic.toLowerCase();
+    if (fileLower.includes(topicLower) || topicLower.includes(fileLower)) {
+      return `${fromFile.charAt(0).toUpperCase()}${fromFile.slice(1)}`;
+    }
+    return `${fromFile.charAt(0).toUpperCase()}${fromFile.slice(1)} related to ${topic.slice(0, 80)}`;
+  }
+  if (fromFile) {
+    return `${fromFile.charAt(0).toUpperCase()}${fromFile.slice(1)}`;
+  }
+  return 'Illustration on this page';
+}
+
+export function applyTargetedChoiceFeedback(
+  question: QuestionContent,
+  options: { overwrite?: boolean } = {},
+): QuestionContent {
+  if (question.kind !== 'mcq') return question;
+  return {
+    ...question,
+    choices: question.choices.map((choice) => {
+      if (!choice.text.trim()) return choice;
+      if (!options.overwrite && choice.feedback?.trim()) return choice;
+      return { ...choice, feedback: draftChoiceFeedback(choice, question.choices, question.prompt) };
+    }),
+  };
 }
 
 export function generateQuestionsWithAi({
@@ -341,11 +437,13 @@ export function generateQuestionsWithAi({
   objectiveValue,
   sourceText = '',
   count = 1,
+  kind,
 }: {
   objectives: PageObjectiveOption[];
   objectiveValue: string;
   sourceText?: string;
   count?: number;
+  kind?: QuestionContentKind;
 }): QuestionContent[] {
   const objective =
     objectives.find((item) => formatObjectiveTag(item) === objectiveValue || item.label === objectiveValue) ??
@@ -567,47 +665,99 @@ export function generateQuestionsWithAi({
     );
   }
 
-  const n = Math.max(1, Math.min(count, templates.length));
-  return templates.slice(0, n).map((question, index) => ({
-    ...question,
-    title: n === 1 ? question.title : `${question.title} (${index + 1})`,
-  }));
+  let pool = templates;
+  if (kind === 'mcq') {
+    pool = templates.filter((question) => question.kind === 'mcq');
+  } else if (kind === 'multi-input') {
+    pool = templates.filter((question) => question.kind === 'multi-input');
+  } else if (kind === 'multi-input-dropdown') {
+    pool = templates.filter((question) => question.kind === 'multi-input').map(asDropdownQuestion);
+  }
+  if (pool.length === 0) pool = templates;
+
+  const n = Math.max(1, Math.min(count, pool.length));
+  return pool.slice(0, n).map((question, index) =>
+    applyTargetedChoiceFeedback(
+      {
+        ...question,
+        title: n === 1 ? question.title : `${question.title} (${index + 1})`,
+      },
+      { overwrite: true },
+    ),
+  );
 }
 
-export function exampleMcqDraft(_objectives: PageObjectiveOption[]): QuestionContent {
+function asDropdownQuestion(question: QuestionContent): QuestionContent {
+  const inputs =
+    question.inputs.length > 0
+      ? question.inputs.map((input) => {
+          const extras = ['Not applicable', 'None of these', 'Cannot determine'];
+          const options = [input.answer, ...extras].filter(
+            (option, index, all) => option.trim().length > 0 && all.findIndex((item) => item === option) === index,
+          );
+          while (options.length < 3) options.push(`Option ${options.length + 1}`);
+          return { ...input, options };
+        })
+      : blankDropdownDraft().inputs;
+  return { ...question, kind: 'multi-input-dropdown', choices: [], inputs };
+}
+
+export function blankMcqDraft(_objectives: PageObjectiveOption[] = []): QuestionContent {
   return {
     kind: 'mcq',
-    title: 'Identify the species oxidized',
-    prompt: 'In the reaction Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s), which species is oxidized?',
+    title: '',
+    prompt: '',
     points: 3,
     learningObjective: '',
     choices: [
-      { id: 'c1', text: 'Zn(s)', correct: true },
-      { id: 'c2', text: 'Cu²⁺(aq)', correct: false },
-      { id: 'c3', text: 'Zn²⁺(aq)', correct: false },
-      { id: 'c4', text: 'Cu(s)', correct: false },
+      { id: 'c1', text: '', correct: false },
+      { id: 'c2', text: '', correct: false },
+      { id: 'c3', text: '', correct: false },
+      { id: 'c4', text: '', correct: false },
     ],
     inputs: [],
-    correctFeedback: 'Correct. Zinc loses electrons and is oxidized to Zn²⁺.',
-    incorrectFeedback: 'Incorrect. Oxidation is the loss of electrons. Zinc metal is oxidized in this reaction.',
+    correctFeedback: '',
+    incorrectFeedback: '',
   };
 }
 
-export function exampleMultiInputDraft(_objectives: PageObjectiveOption[]): QuestionContent {
+export function blankMultiInputDraft(_objectives: PageObjectiveOption[] = []): QuestionContent {
   return {
     kind: 'multi-input',
-    title: 'Oxidation numbers for manganese',
-    prompt: 'Enter the oxidation number of manganese in each species.',
+    title: '',
+    prompt: '',
     points: 3,
     learningObjective: '',
     choices: [],
     inputs: [
-      { id: 'i1', label: 'Mn in MnO₄⁻', answer: '+7' },
-      { id: 'i2', label: 'Mn in Mn²⁺', answer: '+2' },
+      { id: 'i1', label: '', answer: '' },
+      { id: 'i2', label: '', answer: '' },
     ],
-    correctFeedback: 'Correct. Oxygen is −2, so Mn is +7 in permanganate and +2 after reduction.',
-    incorrectFeedback: 'Incorrect. Assign oxygen as −2 and solve for manganese in each formula.',
+    correctFeedback: '',
+    incorrectFeedback: '',
   };
+}
+
+export function blankDropdownDraft(_objectives: PageObjectiveOption[] = []): QuestionContent {
+  return {
+    kind: 'multi-input-dropdown',
+    title: '',
+    prompt: '',
+    points: 3,
+    learningObjective: '',
+    choices: [],
+    inputs: [
+      { id: 'i1', label: '', answer: '', options: ['', '', ''] },
+    ],
+    correctFeedback: '',
+    incorrectFeedback: '',
+  };
+}
+
+export function blankQuestionDraft(kind: QuestionContentKind, objectives: PageObjectiveOption[] = []): QuestionContent {
+  if (kind === 'mcq') return blankMcqDraft(objectives);
+  if (kind === 'multi-input-dropdown') return blankDropdownDraft(objectives);
+  return blankMultiInputDraft(objectives);
 }
 
 export function cannedExampleBlock(): PageBlock {
@@ -633,6 +783,23 @@ export function courseResourceBlock(resource: CourseResourceContent): PageBlock 
     status: 'added',
     title: resource.title,
     courseResource: resource,
+  };
+}
+
+export function imageBlockFromDraft(draft: ImageContent): Extract<PageBlock, { kind: 'image' }> {
+  const caption = draft.caption?.trim();
+  const alt = draft.alt.trim() || caption || 'Image';
+  return {
+    id: newPageBlockId(),
+    kind: 'image',
+    origin: 'instructor',
+    status: 'added',
+    title: caption || alt,
+    image: {
+      src: draft.src,
+      alt,
+      caption: caption || undefined,
+    },
   };
 }
 
@@ -662,12 +829,47 @@ export function questionBlockFromDraft(draft: QuestionContent): Extract<PageBloc
     question: {
       ...draft,
       title: draft.title.trim() || 'Untitled question',
-      choices: draft.choices.map((choice) => ({ ...choice, text: choice.text.trim() })),
+      choices: draft.choices.map((choice) => ({
+        ...choice,
+        text: choice.text.trim(),
+        feedback: choice.feedback?.trim() || undefined,
+      })),
       inputs: draft.inputs.map((input) => ({
         ...input,
         label: input.label.trim(),
         answer: input.answer.trim(),
+        options: input.options?.map((option) => option.trim()).filter(Boolean),
       })),
+    },
+  };
+}
+
+function copyQuestionTitle(title: string): string {
+  const trimmed = title.trim() || 'Untitled question';
+  const match = trimmed.match(/^(.*?) \(copy(?: (\d+))?\)$/);
+  if (!match) return `${trimmed} (copy)`;
+  const next = match[2] ? Number(match[2]) + 1 : 2;
+  return `${match[1]} (copy ${next})`;
+}
+
+export function duplicateQuestionBlock(
+  block: Extract<PageBlock, { kind: 'question' }>,
+): Extract<PageBlock, { kind: 'question' }> {
+  const stamp = `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+  const title = copyQuestionTitle(block.question.title);
+  return {
+    id: newPageBlockId(),
+    kind: 'question',
+    origin: 'instructor',
+    status: 'added',
+    title,
+    question: {
+      ...block.question,
+      title,
+      canonicalKey: undefined,
+      generatedByAi: undefined,
+      choices: block.question.choices.map((choice, index) => ({ ...choice, id: `c-${stamp}-${index}` })),
+      inputs: block.question.inputs.map((input, index) => ({ ...input, id: `i-${stamp}-${index}` })),
     },
   };
 }
@@ -856,6 +1058,7 @@ export function describeBlockForCompare(block: PageBlock): string {
     return excerpt ? `${block.text.heading} — ${excerpt.slice(0, 120)}${excerpt.length > 120 ? '…' : ''}` : block.text.heading;
   }
   if (block.kind === 'example') return block.example.heading;
+  if (block.kind === 'image') return block.image.caption || block.image.alt || 'Image';
   if (block.kind === 'question') return `${block.question.title}: ${block.question.prompt.slice(0, 100)}${block.question.prompt.length > 100 ? '…' : ''}`;
   if (block.kind === 'bank') return block.title;
   if (block.kind === 'placeholder') return `${block.placeholder.contentType}${block.placeholder.summary ? `: ${block.placeholder.summary}` : ''}`;

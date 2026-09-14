@@ -279,6 +279,39 @@ export function findNode(nodes: CurriculumNode[], id: string): CurriculumNode | 
   return undefined;
 }
 
+export function listCoursePages(nodes: CurriculumNode[]): CurriculumNode[] {
+  const pages: CurriculumNode[] = [];
+  const walk = (items: CurriculumNode[]) => {
+    items.forEach((node) => {
+      if (node.status === 'removed') return;
+      if (node.type === 'page') pages.push(node);
+      walk(node.children);
+    });
+  };
+  walk(nodes);
+  return pages;
+}
+
+export function adjacentCoursePages(
+  nodes: CurriculumNode[],
+  current: { pageId?: string; assessmentTitle?: string },
+): { current: CurriculumNode | null; previous: CurriculumNode | null; next: CurriculumNode | null } {
+  const pages = listCoursePages(nodes);
+  const index = pages.findIndex((page) => {
+    if (current.pageId && page.id === current.pageId) return true;
+    if (!current.pageId && current.assessmentTitle) {
+      return page.assessmentTitle === current.assessmentTitle || page.title === current.assessmentTitle;
+    }
+    return false;
+  });
+  if (index < 0) return { current: null, previous: null, next: null };
+  return {
+    current: pages[index],
+    previous: pages[index - 1] ?? null,
+    next: pages[index + 1] ?? null,
+  };
+}
+
 export function updateNodeById(
   nodes: CurriculumNode[],
   id: string,
