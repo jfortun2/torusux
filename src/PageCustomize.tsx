@@ -5,31 +5,43 @@ import {
   COURSE_RESOURCE_OPTIONS,
   courseResourceBlock,
   editorObjectiveOptions,
-  exampleMcqDraft,
-  exampleMultiInputDraft,
+  blankDropdownDraft,
+  blankMcqDraft,
+  blankMultiInputDraft,
+  blankQuestionDraft,
+  draftChoiceFeedback,
+  draftImageAltText,
   exampleTextDraft,
   formatObjectiveTag,
   generateQuestionsWithAi,
+  imageBlockFromDraft,
   questionBlockFromDraft,
+  questionKindLabel,
   resolveEditorObjectiveValue,
   sanitizeInstructorHtml,
   textBlockFromDraft,
   type ChangeSummary,
   type CourseResourceContent,
+  type ImageContent,
   type PageBlock,
   type PageObjectiveOption,
   type QuestionChoice,
   type QuestionContent,
+  type QuestionContentKind,
+  type QuestionInput,
   type TextContent,
 } from './pageCustomization';
 
 export type CustomizeDialog =
   | { type: 'chooser'; insertAt: number }
   | { type: 'text'; insertAt: number }
-  | { type: 'question'; insertAt: number }
+  | { type: 'image'; insertAt: number }
+  | { type: 'question-type'; insertAt: number }
+  | { type: 'question'; insertAt: number; questionKind: QuestionContentKind }
   | { type: 'course-resource'; insertAt: number }
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
   | { type: 'edit-example'; block: Extract<PageBlock, { kind: 'example' }> }
+  | { type: 'edit-image'; block: Extract<PageBlock, { kind: 'image' }> }
   | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
   | { type: 'ai-question'; insertAt: number }
   | { type: 'community-resources'; insertAt: number }
@@ -240,6 +252,7 @@ export function PageBlockFrame({
   onRestore,
   onRestoreOriginal,
   onEdit,
+  onDuplicate,
   onDragStart,
   onDragEnd,
   onDragOver,
@@ -263,6 +276,7 @@ export function PageBlockFrame({
   onRestore: () => void;
   onRestoreOriginal?: () => void;
   onEdit?: () => void;
+  onDuplicate?: () => void;
   onDragStart: () => void;
   onDragEnd: () => void;
   onDragOver: (event: DragEvent<HTMLElement>) => void;
@@ -344,6 +358,11 @@ export function PageBlockFrame({
               Edit
             </button>
           ) : null}
+          {onDuplicate && !removed ? (
+            <button type="button" className="button button--secondary button--small" onClick={onDuplicate}>
+              Duplicate
+            </button>
+          ) : null}
           {removed ? (
             <button type="button" className="button button--secondary button--small" onClick={onRestore}>
               Restore
@@ -408,6 +427,15 @@ export function ExampleBlockView({ block }: { block: Extract<PageBlock, { kind: 
         <img className="page-example-block__image" src={block.example.imageSrc} alt={block.example.imageAlt ?? ''} />
       ) : null}
     </section>
+  );
+}
+
+export function ImageBlockView({ block }: { block: Extract<PageBlock, { kind: 'image' }> }) {
+  return (
+    <figure className="page-image-block">
+      <img src={block.image.src} alt={block.image.alt} />
+      {block.image.caption ? <figcaption>{block.image.caption}</figcaption> : null}
+    </figure>
   );
 }
 
@@ -494,6 +522,26 @@ export function PageCustomizeDialogs({
     );
   }
 
+  if (dialog.type === 'edit-image') {
+    return (
+      <ImageBlockForm
+        initialDraft={dialog.block.image}
+        modalTitle="Edit image"
+        submitLabel="Save changes"
+        onCancel={onClose}
+        onAdd={(draft) => {
+          const updated = imageBlockFromDraft(draft);
+          onEditBlock(dialog.block.id, {
+            ...dialog.block,
+            title: updated.title,
+            image: updated.image,
+          });
+          onClose();
+        }}
+      />
+    );
+  }
+
   if (dialog.type === 'edit-question') {
     return (
       <QuestionBlockForm
@@ -522,7 +570,8 @@ export function PageCustomizeDialogs({
         onClose={onClose}
         onSelect={(kind) => {
           if (kind === 'text') onChoose({ type: 'text', insertAt: dialog.insertAt });
-          if (kind === 'question') onChoose({ type: 'question', insertAt: dialog.insertAt });
+          if (kind === 'image') onChoose({ type: 'image', insertAt: dialog.insertAt });
+          if (kind === 'question') onChoose({ type: 'question-type', insertAt: dialog.insertAt });
           if (kind === 'ai') onChoose({ type: 'ai-question', insertAt: dialog.insertAt });
           if (kind === 'community') onChoose({ type: 'community-resources', insertAt: dialog.insertAt });
         }}
@@ -543,12 +592,34 @@ export function PageCustomizeDialogs({
     );
   }
 
+  if (dialog.type === 'image') {
+    return (
+      <ImageBlockForm
+        onCancel={onClose}
+        onAdd={(draft) => {
+          onAddBlocks(dialog.insertAt, [imageBlockFromDraft(draft)]);
+          onClose();
+        }}
+      />
+    );
+  }
+
+  if (dialog.type === 'question-type') {
+    return (
+      <QuestionTypeChooser
+        onClose={() => onChoose({ type: 'chooser', insertAt: dialog.insertAt })}
+        onSelect={(questionKind) => onChoose({ type: 'question', insertAt: dialog.insertAt, questionKind })}
+      />
+    );
+  }
+
   if (dialog.type === 'question') {
     return (
       <QuestionBlockForm
         objectives={objectives}
         pageContext={pageContext}
-        onCancel={onClose}
+        initialDraft={blankQuestionDraft(dialog.questionKind, objectives)}
+        onCancel={() => onChoose({ type: 'question-type', insertAt: dialog.insertAt })}
         onAdd={(draft) => {
           onAddBlocks(dialog.insertAt, [questionBlockFromDraft(draft)]);
           onClose();
@@ -590,8 +661,8 @@ export function PageCustomizeDialogs({
     return (
       <CommunityResourcesPanel
         onCancel={onClose}
-        onAdd={(resource) => {
-          onAddBlocks(dialog.insertAt, [courseResourceBlock(resource)]);
+        onAdd={(draft) => {
+          onAddBlocks(dialog.insertAt, [questionBlockFromDraft(cloneCommunityQuestion(draft))]);
           onClose();
         }}
       />
@@ -678,7 +749,7 @@ function ChooserDialog({
   onSelect,
 }: {
   onClose: () => void;
-  onSelect: (kind: 'text' | 'question' | 'ai' | 'community') => void;
+  onSelect: (kind: 'text' | 'image' | 'question' | 'ai' | 'community') => void;
 }) {
   return (
     <ModalShell title="Add content and questions" onClose={onClose} wide={false}>
@@ -690,8 +761,13 @@ function ChooserDialog({
           onClick={() => onSelect('text')}
         />
         <ChooserOption
+          title="Image"
+          description="Add a figure, diagram, or photo for students to see on this page."
+          onClick={() => onSelect('image')}
+        />
+        <ChooserOption
           title="Question"
-          description="Write a multiple-choice or multi-input question."
+          description="Write a multiple-choice, fill-in-the-blank, or dropdown question."
           onClick={() => onSelect('question')}
         />
         <ChooserOption
@@ -701,13 +777,49 @@ function ChooserDialog({
         />
         <ChooserOption
           title="Community resources"
-          description="Browse content shared by other instructors and contributors."
+          description="Browse questions shared by other instructors and contributors."
           onClick={() => onSelect('community')}
         />
       </div>
       <div className="modal-actions">
         <button type="button" className="button button--subtle" onClick={onClose}>
           Cancel
+        </button>
+      </div>
+    </ModalShell>
+  );
+}
+
+function QuestionTypeChooser({
+  onClose,
+  onSelect,
+}: {
+  onClose: () => void;
+  onSelect: (kind: QuestionContentKind) => void;
+}) {
+  return (
+    <ModalShell title="Choose a question type" onClose={onClose} wide={false}>
+      <p>Pick how students will answer. You cannot change the question type after this.</p>
+      <div className="content-chooser">
+        <ChooserOption
+          title="Multiple choice"
+          description="Students select one correct answer from a list of choices."
+          onClick={() => onSelect('mcq')}
+        />
+        <ChooserOption
+          title="Multi-input fill in the blank"
+          description="Students type an answer into one or more blanks."
+          onClick={() => onSelect('multi-input')}
+        />
+        <ChooserOption
+          title="Multi-input dropdown"
+          description="Students choose an answer for each blank from a dropdown list."
+          onClick={() => onSelect('multi-input-dropdown')}
+        />
+      </div>
+      <div className="modal-actions">
+        <button type="button" className="button button--subtle" onClick={onClose}>
+          Back
         </button>
       </div>
     </ModalShell>
@@ -903,6 +1015,166 @@ function TextBlockForm({
   );
 }
 
+function ImageBlockForm({
+  onCancel,
+  onAdd,
+  initialDraft,
+  modalTitle,
+  submitLabel,
+}: {
+  onCancel: () => void;
+  onAdd: (draft: ImageContent) => void;
+  initialDraft?: ImageContent;
+  modalTitle?: string;
+  submitLabel?: string;
+}) {
+  const captionId = useId();
+  const altId = useId();
+  const imageInputId = useId();
+  const [draft, setDraft] = useState<ImageContent>(() => initialDraft ?? { src: '', alt: '', caption: '' });
+  const [fileName, setFileName] = useState(initialDraft?.alt ?? '');
+  const [altEdited, setAltEdited] = useState(() => Boolean(initialDraft?.alt));
+  const [preview, setPreview] = useState(false);
+  const canSave = draft.src.length > 0;
+
+  useEffect(() => {
+    if (!draft.src || altEdited) return;
+    const nextAlt = draftImageAltText({ fileName, title: draft.caption, prompt: '' });
+    setDraft((current) => (current.alt === nextAlt ? current : { ...current, alt: nextAlt }));
+  }, [altEdited, draft.caption, draft.src, fileName]);
+
+  return (
+    <ModalShell title={modalTitle ?? 'Add an image'} onClose={onCancel} wide>
+      <form
+        className="page-customize-form"
+        onSubmit={(event) => {
+          event.preventDefault();
+          if (!canSave) return;
+          onAdd(draft);
+        }}
+      >
+        <div className="page-customize-form__tabs" role="tablist" aria-label="Image editor">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={!preview}
+            className={!preview ? 'tab-strip__tab is-active' : 'tab-strip__tab'}
+            onClick={() => setPreview(false)}
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={preview}
+            className={preview ? 'tab-strip__tab is-active' : 'tab-strip__tab'}
+            onClick={() => setPreview(true)}
+            disabled={!canSave}
+          >
+            Preview
+          </button>
+        </div>
+
+        {preview && canSave ? (
+          <div className="page-customize-preview" role="tabpanel">
+            <ImageBlockView
+              block={{
+                id: 'preview',
+                kind: 'image',
+                origin: 'instructor',
+                status: 'added',
+                title: draft.caption?.trim() || draft.alt || 'Image',
+                image: draft,
+              }}
+            />
+          </div>
+        ) : (
+          <div className="page-customize-form__fields" role="tabpanel">
+            <div className="field">
+              <span>Image</span>
+              {draft.src ? (
+                <div className="image-upload image-upload--selected">
+                  <img className="image-upload__preview" src={draft.src} alt={draft.alt || ''} />
+                  <p className="image-upload__name">{fileName || draft.alt || 'Image'}</p>
+                  <button
+                    type="button"
+                    className="button button--subtle button--small"
+                    onClick={() => {
+                      setDraft({ src: '', alt: '', caption: draft.caption });
+                      setFileName('');
+                      setAltEdited(false);
+                    }}
+                  >
+                    Remove image
+                  </button>
+                </div>
+              ) : (
+                <label className="image-upload" htmlFor={imageInputId}>
+                  <input
+                    id={imageInputId}
+                    type="file"
+                    accept="image/*"
+                    className="visually-hidden"
+                    onChange={(event) => {
+                      const file = event.target.files?.[0];
+                      if (!file) return;
+                      void readImageAsDataUrl(file).then((src) => {
+                        setFileName(file.name);
+                        setAltEdited(false);
+                        setDraft((current) => ({
+                          ...current,
+                          src,
+                          alt: draftImageAltText({ fileName: file.name, title: current.caption }),
+                        }));
+                      });
+                    }}
+                  />
+                  <span className="image-upload__title">Upload an image</span>
+                  <span className="image-upload__hint">Choose a PNG, JPG, or GIF to show on this page.</span>
+                </label>
+              )}
+            </div>
+            {draft.src ? (
+              <label className="field" htmlFor={altId}>
+                <span>Alt text</span>
+                <input
+                  id={altId}
+                  value={draft.alt}
+                  onChange={(event) => {
+                    setAltEdited(true);
+                    setDraft((current) => ({ ...current, alt: event.target.value }));
+                  }}
+                />
+                <span className="page-customize-hint">
+                  Generated automatically. Edit it if students need a more specific description.
+                </span>
+              </label>
+            ) : null}
+            <label className="field" htmlFor={captionId}>
+              <span>Caption (optional)</span>
+              <input
+                id={captionId}
+                value={draft.caption ?? ''}
+                onChange={(event) => setDraft((current) => ({ ...current, caption: event.target.value }))}
+                placeholder="Shown under the image"
+              />
+            </label>
+          </div>
+        )}
+
+        <div className="modal-actions">
+          <button type="button" className="button button--subtle" onClick={onCancel}>
+            Cancel
+          </button>
+          <button type="submit" className="button button--primary" disabled={!canSave}>
+            {submitLabel ?? 'Add to page'}
+          </button>
+        </div>
+      </form>
+    </ModalShell>
+  );
+}
+
 export function CoverageImpactPanel({
   impacts,
   scope = 'this module',
@@ -952,18 +1224,73 @@ function readImageAsDataUrl(file: File): Promise<string> {
 }
 
 function initializeQuestionDraft(objectives: PageObjectiveOption[], initial?: QuestionContent): QuestionContent {
-  const base = initial ?? exampleMcqDraft(objectives);
+  const base = initial ?? blankMcqDraft(objectives);
   const learningObjective = resolveEditorObjectiveValue(base.learningObjective, objectives);
   const inputs =
     base.kind === 'multi-input' && base.inputs.length === 0
-      ? [
-          { id: 'i1', label: 'Part 1', answer: '' },
-          { id: 'i2', label: 'Part 2', answer: '' },
-        ]
-      : base.inputs;
-  const choices =
-    base.kind === 'mcq' && base.choices.length < 2 ? exampleMcqDraft(objectives).choices : base.choices;
+      ? blankMultiInputDraft(objectives).inputs
+      : base.kind === 'multi-input-dropdown'
+        ? (base.inputs.length === 0 ? blankDropdownDraft(objectives).inputs : base.inputs.map((input) => ({
+            ...input,
+            options: input.options && input.options.length >= 2 ? input.options : ['', '', ''],
+          })))
+        : base.inputs;
+  const choices = base.kind === 'mcq' && base.choices.length < 2 ? blankMcqDraft(objectives).choices : base.choices;
   return { ...base, learningObjective, inputs, choices };
+}
+
+function choiceFeedbackKey(choice: QuestionChoice, prompt: string): string {
+  return `${choice.text.trim()}|${choice.correct ? '1' : '0'}|${prompt.trim()}`;
+}
+
+function dropdownBlankReady(input: QuestionInput): boolean {
+  const options = (input.options ?? []).map((option) => option.trim()).filter(Boolean);
+  return input.label.trim().length > 0 && options.length >= 2 && options.includes(input.answer.trim());
+}
+
+function QuestionInputsPreview({
+  kind,
+  inputs,
+  showExpected = false,
+}: {
+  kind: QuestionContentKind;
+  inputs: QuestionInput[];
+  showExpected?: boolean;
+}) {
+  if (kind === 'multi-input-dropdown') {
+    return (
+      <div className="student-input-list">
+        {inputs.map((input) => (
+          <label key={input.id} className="student-input-row">
+            <span>{input.label || 'Blank'}</span>
+            <select disabled defaultValue="">
+              <option value="">Select an answer</option>
+              {(input.options ?? [])
+                .map((option) => option.trim())
+                .filter(Boolean)
+                .map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+            </select>
+            {showExpected && input.answer ? <span className="page-customize-hint">Expected: {input.answer}</span> : null}
+          </label>
+        ))}
+      </div>
+    );
+  }
+  return (
+    <div className="student-input-list">
+      {inputs.map((input) => (
+        <label key={input.id} className="student-input-row">
+          <span>{input.label || 'Input'}</span>
+          <input disabled placeholder="Student response" />
+          {showExpected && input.answer ? <span className="page-customize-hint">Expected: {input.answer}</span> : null}
+        </label>
+      ))}
+    </div>
+  );
 }
 
 export function QuestionDraftPreview({ draft }: { draft: QuestionContent }) {
@@ -971,7 +1298,7 @@ export function QuestionDraftPreview({ draft }: { draft: QuestionContent }) {
     <div className="question-draft-preview">
       {draft.generatedByAi ? <p className="question-draft-preview__ai">AI-generated draft — review before saving.</p> : null}
       <div className="student-question-card__meta">
-        {draft.kind === 'mcq' ? 'Multiple choice' : 'Multi-input'} · {draft.points} point
+        {questionKindLabel(draft.kind)} · {draft.points} point
         {draft.points === 1 ? '' : 's'}
       </div>
       <h3>{draft.title.trim() || 'Untitled question'}</h3>
@@ -986,23 +1313,20 @@ export function QuestionDraftPreview({ draft }: { draft: QuestionContent }) {
             .map((choice) => (
               <label key={choice.id} className="student-choice-row">
                 <input type="radio" name={`preview-${draft.title}`} disabled />
-                <span>
-                  {choice.text}
-                  {choice.correct ? <em className="question-draft-preview__correct"> Correct</em> : null}
+                <span className="student-choice-row__body">
+                  <span>
+                    {choice.text}
+                    {choice.correct ? <em className="question-draft-preview__correct"> Correct</em> : null}
+                  </span>
+                  {choice.feedback?.trim() ? (
+                    <span className="question-draft-preview__feedback">{choice.feedback}</span>
+                  ) : null}
                 </span>
               </label>
             ))}
         </div>
       ) : (
-        <div className="student-input-list">
-          {draft.inputs.map((input) => (
-            <label key={input.id} className="student-input-row">
-              <span>{input.label || 'Input'}</span>
-              <input disabled placeholder="Student response" />
-              {input.answer ? <span className="page-customize-hint">Expected: {input.answer}</span> : null}
-            </label>
-          ))}
-        </div>
+        <QuestionInputsPreview kind={draft.kind} inputs={draft.inputs} showExpected />
       )}
       {draft.learningObjective ? (
         <p className="learning-objective-footnote">
@@ -1020,8 +1344,6 @@ export function QuestionBlockForm({
   initialDraft,
   modalTitle,
   submitLabel,
-  pageContext = '',
-  showAiGenerate = true,
 }: {
   objectives: PageObjectiveOption[];
   onCancel: () => void;
@@ -1030,19 +1352,20 @@ export function QuestionBlockForm({
   modalTitle?: string;
   submitLabel?: string;
   pageContext?: string;
-  showAiGenerate?: boolean;
 }) {
   const [draft, setDraft] = useState<QuestionContent>(() => initializeQuestionDraft(objectives, initialDraft));
   const [confirmWithoutObjective, setConfirmWithoutObjective] = useState(false);
   const [preview, setPreview] = useState(false);
-  const [aiOpen, setAiOpen] = useState(false);
-  const [aiBusy, setAiBusy] = useState(false);
   const [imageName, setImageName] = useState(initialDraft?.imageAlt ?? '');
+  const [altEdited, setAltEdited] = useState(() => Boolean(initialDraft?.imageAlt));
+  const [feedbackSuggestions, setFeedbackSuggestions] = useState<Record<string, { text: string; key: string }>>({});
+  const [declinedFeedbackKeys, setDeclinedFeedbackKeys] = useState<Record<string, string>>({});
   const titleId = useId();
   const promptId = useId();
   const objectiveId = useId();
   const pointsId = useId();
   const imageInputId = useId();
+  const imageAltId = useId();
   const objectiveOptions = editorObjectiveOptions(objectives, draft.learningObjective);
   const objectiveValue = resolveEditorObjectiveValue(draft.learningObjective, objectives);
   const canSave =
@@ -1050,41 +1373,9 @@ export function QuestionBlockForm({
     draft.prompt.trim().length > 0 &&
     (draft.kind === 'mcq'
       ? draft.choices.filter((choice) => choice.text.trim()).length >= 2 && draft.choices.some((choice) => choice.correct)
-      : draft.inputs.some((input) => input.label.trim()));
-
-  const setKind = (kind: 'mcq' | 'multi-input') => {
-    setDraft((current) => {
-      if (kind === current.kind) return current;
-      if (kind === 'mcq') {
-        const next = exampleMcqDraft(objectives);
-        return {
-          ...next,
-          title: current.title,
-          prompt: current.prompt,
-          points: current.points,
-          learningObjective: current.learningObjective,
-          correctFeedback: current.correctFeedback,
-          incorrectFeedback: current.incorrectFeedback,
-          imageSrc: current.imageSrc,
-          imageAlt: current.imageAlt,
-          generatedByAi: current.generatedByAi,
-        };
-      }
-      const next = exampleMultiInputDraft(objectives);
-      return {
-        ...next,
-        title: current.title,
-        prompt: current.prompt,
-        points: current.points,
-        learningObjective: current.learningObjective,
-        correctFeedback: current.correctFeedback,
-        incorrectFeedback: current.incorrectFeedback,
-        imageSrc: current.imageSrc,
-        imageAlt: current.imageAlt,
-        generatedByAi: current.generatedByAi,
-      };
-    });
-  };
+      : draft.kind === 'multi-input-dropdown'
+        ? draft.inputs.length > 0 && draft.inputs.every(dropdownBlankReady)
+        : draft.inputs.some((input) => input.label.trim()));
 
   const updateChoice = (id: string, patch: Partial<QuestionChoice>) => {
     setDraft((current) => ({
@@ -1098,28 +1389,44 @@ export function QuestionBlockForm({
     }));
   };
 
-  const generateWithAi = () => {
-    setAiBusy(true);
-    window.setTimeout(() => {
-      const [generated] = generateQuestionsWithAi({
-        objectives,
-        objectiveValue: objectiveValue || formatObjectiveTag(objectives[0] ?? { code: '', label: '' }),
-        sourceText: pageContext,
-        count: 1,
+  useEffect(() => {
+    if (!draft.imageSrc || altEdited) return;
+    const nextAlt = draftImageAltText({ fileName: imageName, title: draft.title, prompt: draft.prompt });
+    setDraft((current) => (current.imageAlt === nextAlt ? current : { ...current, imageAlt: nextAlt }));
+  }, [altEdited, draft.imageSrc, draft.prompt, draft.title, imageName]);
+
+  useEffect(() => {
+    if (draft.kind !== 'mcq') return;
+    const timer = window.setTimeout(() => {
+      setFeedbackSuggestions((current) => {
+        const next = { ...current };
+        let changed = false;
+        const ids = new Set(draft.choices.map((choice) => choice.id));
+        for (const id of Object.keys(next)) {
+          if (ids.has(id)) continue;
+          delete next[id];
+          changed = true;
+        }
+        for (const choice of draft.choices) {
+          const key = choiceFeedbackKey(choice, draft.prompt);
+          if (!choice.text.trim() || choice.feedback?.trim() || declinedFeedbackKeys[choice.id] === key) {
+            if (next[choice.id]) {
+              delete next[choice.id];
+              changed = true;
+            }
+            continue;
+          }
+          const text = draftChoiceFeedback(choice, draft.choices, draft.prompt);
+          if (next[choice.id]?.text !== text || next[choice.id]?.key !== key) {
+            next[choice.id] = { text, key };
+            changed = true;
+          }
+        }
+        return changed ? next : current;
       });
-      if (generated) {
-        setDraft((current) => ({
-          ...generated,
-          imageSrc: current.imageSrc,
-          imageAlt: current.imageAlt,
-          points: current.points || generated.points,
-        }));
-        setPreview(true);
-      }
-      setAiBusy(false);
-      setAiOpen(false);
-    }, 700);
-  };
+    }, 450);
+    return () => window.clearTimeout(timer);
+  }, [declinedFeedbackKeys, draft.choices, draft.kind, draft.prompt]);
 
   if (confirmWithoutObjective) {
     return (
@@ -1183,55 +1490,10 @@ export function QuestionBlockForm({
           </div>
         ) : (
           <div className="page-customize-form__fields" role="tabpanel">
-            {showAiGenerate ? (
-              <div className="ai-generate-panel">
-                <div className="ai-generate-panel__head">
-                  <p>
-                    <strong>Generate with AI</strong> Draft a question from the learning objectives on this page.
-                  </p>
-                  <button
-                    type="button"
-                    className="button button--secondary button--small"
-                    onClick={() => setAiOpen((open) => !open)}
-                  >
-                    {aiOpen ? 'Hide' : 'Generate with AI'}
-                  </button>
-                </div>
-                {aiOpen ? (
-                  <div className="ai-generate-panel__body">
-                    <p className="page-customize-hint">
-                      Uses the selected learning objective
-                      {pageContext.trim() ? ' and visible page content as context.' : '.'} You can edit the draft before saving.
-                    </p>
-                    <button
-                      type="button"
-                      className="button button--primary button--small"
-                      onClick={generateWithAi}
-                      disabled={aiBusy || objectives.length === 0}
-                    >
-                      {aiBusy ? 'Generating…' : 'Generate a question'}
-                    </button>
-                  </div>
-                ) : null}
-              </div>
-            ) : null}
-
-            <fieldset className="page-customize-kind">
-              <legend>Question type</legend>
-              <label>
-                <input type="radio" name="question-kind" checked={draft.kind === 'mcq'} onChange={() => setKind('mcq')} />
-                Multiple choice
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="question-kind"
-                  checked={draft.kind === 'multi-input'}
-                  onChange={() => setKind('multi-input')}
-                />
-                Multi-input
-              </label>
-            </fieldset>
+            <div className="page-customize-type-lock">
+              <span>Question type</span>
+              <strong>{questionKindLabel(draft.kind)}</strong>
+            </div>
 
             <label className="field" htmlFor={titleId}>
               <span>Title</span>
@@ -1239,15 +1501,6 @@ export function QuestionBlockForm({
                 id={titleId}
                 value={draft.title}
                 onChange={(event) => setDraft((current) => ({ ...current, title: event.target.value }))}
-              />
-            </label>
-            <label className="field" htmlFor={promptId}>
-              <span>Question</span>
-              <textarea
-                id={promptId}
-                rows={3}
-                value={draft.prompt}
-                onChange={(event) => setDraft((current) => ({ ...current, prompt: event.target.value }))}
               />
             </label>
 
@@ -1263,6 +1516,7 @@ export function QuestionBlockForm({
                     onClick={() => {
                       setDraft((current) => ({ ...current, imageSrc: undefined, imageAlt: undefined }));
                       setImageName('');
+                      setAltEdited(false);
                     }}
                   >
                     Remove image
@@ -1280,7 +1534,16 @@ export function QuestionBlockForm({
                       if (!file) return;
                       void readImageAsDataUrl(file).then((src) => {
                         setImageName(file.name);
-                        setDraft((current) => ({ ...current, imageSrc: src, imageAlt: file.name }));
+                        setAltEdited(false);
+                        setDraft((current) => ({
+                          ...current,
+                          imageSrc: src,
+                          imageAlt: draftImageAltText({
+                            fileName: file.name,
+                            title: current.title,
+                            prompt: current.prompt,
+                          }),
+                        }));
                       });
                     }}
                   />
@@ -1288,41 +1551,260 @@ export function QuestionBlockForm({
                   <span className="image-upload__hint">Choose a PNG, JPG, or GIF to show with this question.</span>
                 </label>
               )}
+              {draft.imageSrc ? (
+                <label className="field page-customize-image-alt" htmlFor={imageAltId}>
+                  <span>Image alt text</span>
+                  <input
+                    id={imageAltId}
+                    value={draft.imageAlt ?? ''}
+                    onChange={(event) => {
+                      setAltEdited(true);
+                      setDraft((current) => ({ ...current, imageAlt: event.target.value }));
+                    }}
+                  />
+                  <span className="page-customize-hint">
+                    Generated automatically from the image and question. Edit it if students need a more specific
+                    description.
+                  </span>
+                </label>
+              ) : null}
             </div>
+
+            <label className="field" htmlFor={promptId}>
+              <span>Question</span>
+              <textarea
+                id={promptId}
+                rows={3}
+                value={draft.prompt}
+                onChange={(event) => setDraft((current) => ({ ...current, prompt: event.target.value }))}
+              />
+            </label>
 
             {draft.kind === 'mcq' ? (
               <fieldset className="page-customize-choices">
                 <legend>Answer choices</legend>
-                <p className="page-customize-hint">Mark one correct answer. You can add or remove choices.</p>
-                {draft.choices.map((choice, index) => (
-                  <div key={choice.id} className="page-customize-choice-row">
-                    <label className="page-customize-choice-row__correct">
+                <p className="page-customize-hint">
+                  Mark one correct answer. Targeted feedback is drafted automatically for each choice. Accept or decline
+                  the draft, or write your own.
+                </p>
+                {draft.choices.map((choice, index) => {
+                  const suggestion = feedbackSuggestions[choice.id];
+                  return (
+                    <div key={choice.id} className="page-customize-choice">
+                      <div className="page-customize-choice-row">
+                        <label className="page-customize-choice-row__correct">
+                          <input
+                            type="radio"
+                            name="correct-choice"
+                            checked={choice.correct}
+                            onChange={() => updateChoice(choice.id, { correct: true })}
+                          />
+                          <span className="visually-hidden">Correct answer</span>
+                        </label>
+                        <input
+                          aria-label={`Choice ${index + 1}`}
+                          value={choice.text}
+                          onChange={(event) => updateChoice(choice.id, { text: event.target.value })}
+                        />
+                        <button
+                          type="button"
+                          className="button button--subtle button--small"
+                          onClick={() =>
+                            setDraft((current) => ({
+                              ...current,
+                              choices: current.choices.filter((item) => item.id !== choice.id),
+                            }))
+                          }
+                          disabled={draft.choices.length <= 2}
+                        >
+                          Remove
+                        </button>
+                      </div>
+                      {suggestion ? (
+                        <div className="ai-feedback-draft" role="status">
+                          <p className="ai-feedback-draft__label">AI feedback draft</p>
+                          <p>{suggestion.text}</p>
+                          <div className="ai-feedback-draft__actions">
+                            <button
+                              type="button"
+                              className="button button--primary button--small"
+                              onClick={() => {
+                                updateChoice(choice.id, { feedback: suggestion.text });
+                                setFeedbackSuggestions((current) => {
+                                  const next = { ...current };
+                                  delete next[choice.id];
+                                  return next;
+                                });
+                              }}
+                            >
+                              Accept draft
+                            </button>
+                            <button
+                              type="button"
+                              className="button button--secondary button--small"
+                              onClick={() => {
+                                setDeclinedFeedbackKeys((current) => ({ ...current, [choice.id]: suggestion.key }));
+                                setFeedbackSuggestions((current) => {
+                                  const next = { ...current };
+                                  delete next[choice.id];
+                                  return next;
+                                });
+                              }}
+                            >
+                              Decline
+                            </button>
+                          </div>
+                        </div>
+                      ) : null}
+                      <label className="field page-customize-choice__feedback">
+                        <span>Targeted feedback {choice.correct ? '(correct choice)' : '(if selected)'}</span>
+                        <textarea
+                          rows={2}
+                          aria-label={`Targeted feedback for choice ${index + 1}`}
+                          placeholder="What students should see if they pick this choice"
+                          value={choice.feedback ?? ''}
+                          onChange={(event) => updateChoice(choice.id, { feedback: event.target.value })}
+                        />
+                      </label>
+                    </div>
+                  );
+                })}
+                <div className="page-customize-choice-actions">
+                  <button
+                    type="button"
+                    className="button button--secondary button--small"
+                    onClick={() =>
+                      setDraft((current) => ({
+                        ...current,
+                        choices: [...current.choices, { id: `c-${Date.now()}`, text: '', correct: false, feedback: '' }],
+                      }))
+                    }
+                  >
+                    Add choice
+                  </button>
+                </div>
+              </fieldset>
+            ) : draft.kind === 'multi-input-dropdown' ? (
+              <fieldset className="page-customize-choices">
+                <legend>Dropdown blanks</legend>
+                <p className="page-customize-hint">
+                  Each blank is a dropdown. Add the options students can choose and mark one correct answer per blank.
+                </p>
+                {draft.inputs.map((input, index) => (
+                  <div key={input.id} className="page-customize-blank">
+                    <div className="page-customize-blank__head">
+                      <span>Blank {index + 1}</span>
+                      <button
+                        type="button"
+                        className="button button--subtle button--small"
+                        onClick={() =>
+                          setDraft((current) => ({
+                            ...current,
+                            inputs: current.inputs.filter((item) => item.id !== input.id),
+                          }))
+                        }
+                        disabled={draft.inputs.length <= 1}
+                      >
+                        Remove blank
+                      </button>
+                    </div>
+                    <label className="field">
+                      <span>Label</span>
                       <input
-                        type="radio"
-                        name="correct-choice"
-                        checked={choice.correct}
-                        onChange={() => updateChoice(choice.id, { correct: true })}
+                        aria-label={`Blank ${index + 1} label`}
+                        placeholder="Label"
+                        value={input.label}
+                        onChange={(event) =>
+                          setDraft((current) => ({
+                            ...current,
+                            inputs: current.inputs.map((item) =>
+                              item.id === input.id ? { ...item, label: event.target.value } : item,
+                            ),
+                          }))
+                        }
                       />
-                      <span className="visually-hidden">Correct answer</span>
                     </label>
-                    <input
-                      aria-label={`Choice ${index + 1}`}
-                      value={choice.text}
-                      onChange={(event) => updateChoice(choice.id, { text: event.target.value })}
-                    />
-                    <button
-                      type="button"
-                      className="button button--subtle button--small"
-                      onClick={() =>
-                        setDraft((current) => ({
-                          ...current,
-                          choices: current.choices.filter((item) => item.id !== choice.id),
-                        }))
-                      }
-                      disabled={draft.choices.length <= 2}
-                    >
-                      Remove
-                    </button>
+                    <fieldset className="page-customize-choices">
+                      <legend>Dropdown options</legend>
+                      {(input.options ?? []).map((option, optionIndex) => (
+                        <div key={`${input.id}-opt-${optionIndex}`} className="page-customize-choice-row">
+                          <label className="page-customize-choice-row__correct">
+                            <input
+                              type="radio"
+                              name={`correct-${input.id}`}
+                              checked={option.trim().length > 0 && input.answer === option}
+                              disabled={option.trim().length === 0}
+                              onChange={() =>
+                                setDraft((current) => ({
+                                  ...current,
+                                  inputs: current.inputs.map((item) =>
+                                    item.id === input.id ? { ...item, answer: option } : item,
+                                  ),
+                                }))
+                              }
+                            />
+                            <span className="visually-hidden">Correct answer</span>
+                          </label>
+                          <input
+                            aria-label={`Blank ${index + 1} option ${optionIndex + 1}`}
+                            value={option}
+                            onChange={(event) => {
+                              const nextText = event.target.value;
+                              setDraft((current) => ({
+                                ...current,
+                                inputs: current.inputs.map((item) => {
+                                  if (item.id !== input.id) return item;
+                                  const options = [...(item.options ?? [])];
+                                  const previous = options[optionIndex] ?? '';
+                                  options[optionIndex] = nextText;
+                                  return {
+                                    ...item,
+                                    options,
+                                    answer: item.answer === previous ? nextText : item.answer,
+                                  };
+                                }),
+                              }));
+                            }}
+                          />
+                          <button
+                            type="button"
+                            className="button button--subtle button--small"
+                            onClick={() =>
+                              setDraft((current) => ({
+                                ...current,
+                                inputs: current.inputs.map((item) => {
+                                  if (item.id !== input.id) return item;
+                                  const options = (item.options ?? []).filter((_, idx) => idx !== optionIndex);
+                                  const removed = (item.options ?? [])[optionIndex] ?? '';
+                                  return {
+                                    ...item,
+                                    options,
+                                    answer: item.answer === removed ? '' : item.answer,
+                                  };
+                                }),
+                              }))
+                            }
+                            disabled={(input.options ?? []).length <= 2}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        type="button"
+                        className="button button--secondary button--small"
+                        onClick={() =>
+                          setDraft((current) => ({
+                            ...current,
+                            inputs: current.inputs.map((item) =>
+                              item.id === input.id ? { ...item, options: [...(item.options ?? []), ''] } : item,
+                            ),
+                          }))
+                        }
+                      >
+                        Add option
+                      </button>
+                    </fieldset>
                   </div>
                 ))}
                 <button
@@ -1331,14 +1813,14 @@ export function QuestionBlockForm({
                   onClick={() =>
                     setDraft((current) => ({
                       ...current,
-                      choices: [
-                        ...current.choices,
-                        { id: `c-${Date.now()}`, text: `Choice ${current.choices.length + 1}`, correct: false },
+                      inputs: [
+                        ...current.inputs,
+                        { id: `i-${Date.now()}`, label: '', answer: '', options: ['', '', ''] },
                       ],
                     }))
                   }
                 >
-                  Add choice
+                  Add blank
                 </button>
               </fieldset>
             ) : (
@@ -1394,7 +1876,7 @@ export function QuestionBlockForm({
                   onClick={() =>
                     setDraft((current) => ({
                       ...current,
-                      inputs: [...current.inputs, { id: `i-${Date.now()}`, label: `Part ${current.inputs.length + 1}`, answer: '' }],
+                      inputs: [...current.inputs, { id: `i-${Date.now()}`, label: '', answer: '' }],
                     }))
                   }
                 >
@@ -1659,42 +2141,126 @@ function CourseResourceForm({
 }
 
 type CommunityResource = {
-  title: string;
   contributor: string;
-  type: string;
   learningObjective: string;
   sectionsUsing: number;
   evidenceSignal: string | null;
   oliReviewed: boolean;
+  question: QuestionContent;
 };
+
+function cloneCommunityQuestion(draft: QuestionContent): QuestionContent {
+  const stamp = `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+  return {
+    ...draft,
+    choices: draft.choices.map((choice, index) => ({ ...choice, id: `c-${stamp}-${index}` })),
+    inputs: draft.inputs.map((input, index) => ({ ...input, id: `i-${stamp}-${index}` })),
+  };
+}
 
 const COMMUNITY_RESOURCES: CommunityResource[] = [
   {
-    title: 'Shielding Material Selection Activity',
     contributor: 'Dr. Maria Chen, Penn State',
-    type: 'Formative activity',
-    learningObjective: 'Evaluate shielding strategies for common gamma sources',
+    learningObjective: 'LO 1.4 Evaluate shielding strategies for common gamma sources',
     sectionsUsing: 14,
     evidenceSignal: 'Promising student performance',
     oliReviewed: true,
+    question: {
+      kind: 'mcq',
+      title: 'Shielding Material Selection Activity',
+      prompt:
+        'A teaching lab stores a sealed Cs-137 gamma source for a short demonstration. Which control set best reduces exposure while keeping the demo visible to students?',
+      points: 3,
+      learningObjective: 'LO 1.4 Evaluate shielding strategies for common gamma sources',
+      choices: [
+        {
+          id: 'cr-s1',
+          text: 'Wrap the source in paper and leave it on an open tray so students can see it clearly.',
+          correct: false,
+          feedback: 'Incorrect. Paper stops alpha particles, not gamma radiation from Cs-137.',
+        },
+        {
+          id: 'cr-s2',
+          text: 'Use only acrylic shielding and keep the source at arm’s length.',
+          correct: false,
+          feedback: 'Incorrect. Acrylic is useful for beta emitters, but gamma needs denser shielding and distance.',
+        },
+        {
+          id: 'cr-s3',
+          text: 'Keep the source sealed, add lead shielding, and increase distance from the audience.',
+          correct: true,
+          feedback: 'Correct. Gamma control relies on dense shielding plus distance, with the source remaining sealed.',
+        },
+        {
+          id: 'cr-s4',
+          text: 'Store the gamma source with alpha and beta emitters to shorten handling time.',
+          correct: false,
+          feedback: 'Incorrect. Grouping sources increases exposure and does not match shielding to radiation type.',
+        },
+      ],
+      inputs: [],
+      correctFeedback: 'Correct. Match shielding to radiation type and keep sources sealed.',
+      incorrectFeedback: 'Incorrect. Gamma sources need dense shielding and distance, not paper or acrylic alone.',
+    },
   },
   {
-    title: 'Inverse Square Law Worked Example',
     contributor: 'James Kowalski, University of Michigan',
-    type: 'Worked example',
-    learningObjective: 'Apply the inverse square law to estimate dose at varying distances',
+    learningObjective: 'LO 1.4 Apply the inverse square law to estimate dose at varying distances',
     sectionsUsing: 8,
     evidenceSignal: null,
     oliReviewed: true,
+    question: {
+      kind: 'multi-input',
+      title: 'Inverse Square Law Practice',
+      prompt:
+        'A sealed source produces 40 μSv/h at 1 m. Using the inverse square law, enter the expected dose rate at each distance. Include the unit μSv/h.',
+      points: 3,
+      learningObjective: 'LO 1.4 Apply the inverse square law to estimate dose at varying distances',
+      choices: [],
+      inputs: [
+        { id: 'cr-i1', label: 'Dose rate at 2 m', answer: '10 μSv/h' },
+        { id: 'cr-i2', label: 'Dose rate at 4 m', answer: '2.5 μSv/h' },
+      ],
+      correctFeedback: 'Correct. Doubling distance divides dose rate by four.',
+      incorrectFeedback: 'Incorrect. Intensity falls with the square of distance: 40 ÷ 2² = 10, and 40 ÷ 4² = 2.5.',
+    },
   },
   {
-    title: 'Contamination vs. Exposure Explanation',
     contributor: 'Dr. Anika Patel, Carnegie Mellon',
-    type: 'Text explanation',
-    learningObjective: 'Distinguish between contamination and exposure in incident response',
+    learningObjective: 'LO 1.5 Distinguish between contamination and exposure in incident response',
     sectionsUsing: 3,
     evidenceSignal: 'Promising student performance',
     oliReviewed: false,
+    question: {
+      kind: 'multi-input-dropdown',
+      title: 'Contamination vs. Exposure',
+      prompt: 'For each incident, choose whether the student experienced contamination, external exposure, or neither.',
+      points: 3,
+      learningObjective: 'LO 1.5 Distinguish between contamination and exposure in incident response',
+      choices: [],
+      inputs: [
+        {
+          id: 'cr-d1',
+          label: 'Standing 2 m from a sealed check source during a demo',
+          answer: 'External exposure',
+          options: ['Contamination', 'External exposure', 'Neither'],
+        },
+        {
+          id: 'cr-d2',
+          label: 'Radioactive powder is found on a lab coat sleeve',
+          answer: 'Contamination',
+          options: ['Contamination', 'External exposure', 'Neither'],
+        },
+        {
+          id: 'cr-d3',
+          label: 'Reading a survey meter that shows background only',
+          answer: 'Neither',
+          options: ['Contamination', 'External exposure', 'Neither'],
+        },
+      ],
+      correctFeedback: 'Correct. Contamination means material is on or in a person; exposure can occur without transfer of material.',
+      incorrectFeedback: 'Incorrect. A sealed source can cause exposure without contamination; residue on clothing is contamination.',
+    },
   },
 ];
 
@@ -1703,25 +2269,25 @@ function CommunityResourcesPanel({
   onAdd,
 }: {
   onCancel: () => void;
-  onAdd: (resource: CourseResourceContent) => void;
+  onAdd: (draft: QuestionContent) => void;
 }) {
   const [preview, setPreview] = useState<string | null>(null);
 
   return (
     <ModalShell title="Community resources" onClose={onCancel} wide>
       <p className="community-resources__intro">
-        Content shared by other instructors and contributors. Preview before adding to your page.
+        Questions shared by other instructors and contributors. Preview a question before adding it to your page.
       </p>
       <div className="community-resources__list">
         {COMMUNITY_RESOURCES.map((resource) => (
-          <div key={resource.title} className="community-resource-card">
+          <div key={resource.question.title} className="community-resource-card">
             <div className="community-resource-card__header">
-              <span className="community-resource-card__type">{resource.type}</span>
+              <span className="community-resource-card__type">{questionKindLabel(resource.question.kind)}</span>
               {resource.oliReviewed ? (
                 <span className="community-resource-card__oli-badge">Reviewed by OLI learning engineering</span>
               ) : null}
             </div>
-            <h4 className="community-resource-card__title">{resource.title}</h4>
+            <h4 className="community-resource-card__title">{resource.question.title}</h4>
             <p className="community-resource-card__contributor">Contributed by {resource.contributor}</p>
             <dl className="community-resource-card__meta">
               <div>
@@ -1740,18 +2306,9 @@ function CommunityResourcesPanel({
               ) : null}
             </dl>
 
-            {preview === resource.title ? (
+            {preview === resource.question.title ? (
               <div className="community-resource-card__preview">
-                <p className="community-resource-card__preview-note">
-                  Preview: this is a simplified representation. Full content would load in context.
-                </p>
-                <button
-                  type="button"
-                  className="button button--subtle button--small"
-                  onClick={() => setPreview(null)}
-                >
-                  Close preview
-                </button>
+                <QuestionDraftPreview draft={resource.question} />
               </div>
             ) : null}
 
@@ -1759,19 +2316,16 @@ function CommunityResourcesPanel({
               <button
                 type="button"
                 className="button button--secondary button--small"
-                onClick={() => setPreview(preview === resource.title ? null : resource.title)}
+                onClick={() =>
+                  setPreview(preview === resource.question.title ? null : resource.question.title)
+                }
               >
-                {preview === resource.title ? 'Close preview' : 'Preview'}
+                {preview === resource.question.title ? 'Close preview' : 'Preview'}
               </button>
               <button
                 type="button"
                 className="button button--primary button--small"
-                onClick={() =>
-                  onAdd({
-                    title: resource.title,
-                    sourceLabel: `Community · ${resource.contributor}`,
-                  })
-                }
+                onClick={() => onAdd(resource.question)}
               >
                 Add to page
               </button>
@@ -2006,7 +2560,7 @@ export function StudentQuestionView({
   return (
     <article className="student-question-card">
       <div className="student-question-card__meta">
-        {question.kind === 'mcq' ? 'Multiple choice' : 'Multi-input'} · {question.points} point
+        {questionKindLabel(question.kind)} · {question.points} point
         {question.points === 1 ? '' : 's'}
       </div>
       <h3>{question.title}</h3>
@@ -2024,14 +2578,7 @@ export function StudentQuestionView({
           ))}
         </div>
       ) : (
-        <div className="student-input-list">
-          {question.inputs.map((input) => (
-            <label key={input.id} className="student-input-row">
-              <span>{input.label}</span>
-              <input disabled placeholder="Student response" />
-            </label>
-          ))}
-        </div>
+        <QuestionInputsPreview kind={question.kind} inputs={question.inputs} />
       )}
     </article>
   );

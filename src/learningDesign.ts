@@ -33,7 +33,14 @@ export function classifyContentRole(
   kind: ContentBlockKind | PageBlock['kind'],
   pageTitle?: string,
 ): ContentRole | null {
-  if (kind === 'explanation' || kind === 'example' || kind === 'text' || kind === 'course-resource' || kind === 'placeholder') {
+  if (
+    kind === 'explanation' ||
+    kind === 'example' ||
+    kind === 'text' ||
+    kind === 'image' ||
+    kind === 'course-resource' ||
+    kind === 'placeholder'
+  ) {
     return 'explanation';
   }
   if (kind === 'question' || kind === 'bank') {

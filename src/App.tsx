@@ -21,6 +21,7 @@ import {
   PageCustomizeBar,
   PageCustomizeDialogs,
   PageObjectivesAttach,
+  ImageBlockView,
   PlaceholderBlockView,
   RestoreOriginalConfirm,
   QuestionBlockForm,
@@ -30,10 +31,14 @@ import {
 } from './PageCustomize';
 import {
   COURSE_LEARNING_OBJECTIVES,
+  adjacentCoursePages,
   labelsFromObjectiveCodes,
   loadCurriculum,
+  objectiveCodesFromLabels,
+  pageScoringOf,
   persistCurriculum,
   setPageObjectives,
+  type CurriculumNode,
   type PageScoring,
 } from './curriculumData';
 import { bankObjectivesById, evaluatePageBlockRemoval, type RemovalImpact } from './learningDesign';
@@ -45,6 +50,7 @@ import {
   createDefaultPageBlocks,
   extractObjectiveCode,
   formatObjectiveTag,
+  duplicateQuestionBlock,
   insertBlock,
   isUnitCheckpointPage,
   resolvePageProfile,
@@ -102,7 +108,7 @@ type Material = {
 };
 
 type BreadcrumbItem = string | { label: string; to?: string };
-type QuestionKind = 'mcq' | 'multi-input' | 'cata' | 'short-answer';
+type QuestionKind = 'mcq' | 'multi-input' | 'multi-input-dropdown' | 'cata' | 'short-answer';
 type ExampleQuestion = {
   kind: QuestionKind;
   points: number;
@@ -133,12 +139,13 @@ type BankQuestionRow = {
   showGraph?: boolean;
   removed?: boolean;
   edited?: boolean;
-  inputs?: { id: string; label: string; answer: string }[];
+  inputs?: { id: string; label: string; answer: string; options?: string[] }[];
   imageSrc?: string;
   imageAlt?: string;
   correctFeedback?: string;
   incorrectFeedback?: string;
   correctChoiceIndex?: number;
+  choiceFeedback?: string[];
 };
 
 type PageObjective = {
@@ -1004,8 +1011,38 @@ function pageDefaultBlocks(assessmentTitle: string, isInstructorCreated: boolean
   });
 }
 
+function coursePageNavigationState(
+  page: CurriculumNode,
+  breadcrumbTrail?: BreadcrumbItem[],
+): {
+  pageId: string;
+  assessmentTitle: string;
+  attemptsStarted: boolean;
+  pageScoring: PageScoring;
+  isInstructorCreated: boolean;
+  attachedObjectiveCodes: string[];
+  breadcrumbTrail: BreadcrumbItem[];
+} {
+  return {
+    pageId: page.id,
+    assessmentTitle: page.assessmentTitle ?? page.title,
+    attemptsStarted: page.attemptsStarted ?? false,
+    pageScoring: pageScoringOf(page),
+    isInstructorCreated: page.origin === 'instructor',
+    attachedObjectiveCodes: objectiveCodesFromLabels(page.learningObjectives ?? []),
+    breadcrumbTrail: breadcrumbTrail
+      ? [...breadcrumbTrail.slice(0, -1), { label: page.title }]
+      : [
+          { label: 'Manage', to: '/' },
+          { label: 'Customize Content', to: '/customize' },
+          { label: page.title },
+        ],
+  };
+}
+
 function AssessmentScreen() {
   const location = useLocation();
+  const navigate = useNavigate();
   const state = location.state as {
     removeBankId?: string;
     bulkToast?: string;
@@ -1055,6 +1092,10 @@ function AssessmentScreen() {
   const isCheckpointAssessment = isUnitCheckpointPage(assessmentTitle, pageId);
   const isStudentPreview = viewMode === 'student';
   const assessmentSelections = getAssessmentSelections(assessmentTitle, pageId);
+  const { previous: previousPage, next: nextPage } = adjacentCoursePages(loadCurriculum(), {
+    pageId,
+    assessmentTitle,
+  });
   const attemptsStarted = state?.attemptsStarted ?? false;
   const removedBanks = removedBankIds(blocks);
   const dirty = !blocksEqual(blocks, savedBlocks);
@@ -1172,6 +1213,13 @@ function AssessmentScreen() {
     return total;
   }, [assessmentSelections, removedBanks, blocks]);
 
+  const goToCoursePage = (page: CurriculumNode | null) => {
+    if (!page) return;
+    navigate('/assessment-default', {
+      state: coursePageNavigationState(page, state?.breadcrumbTrail),
+    });
+  };
+
   const showBlockToast = (blockId: string, message: string) => {
     setBlockToasts((current) => ({ ...current, [blockId]: message }));
     window.setTimeout(() => {
@@ -1199,6 +1247,7 @@ function AssessmentScreen() {
           ? state.attachedObjectiveCodes
           : getPageObjectives(assessmentTitle, pageId).map((objective) => objective.code),
     );
+    window.scrollTo(0, 0);
   }, [assessmentTitle, pageId, isInstructorCreated, state?.attachedObjectiveCodes]);
 
   useEffect(() => {
@@ -1375,6 +1424,7 @@ function AssessmentScreen() {
   const renderBlockBody = (block: PageBlock) => {
     if (block.kind === 'text') return <TextBlockView block={block} showObjective={!isStudentPreview} />;
     if (block.kind === 'example') return <ExampleBlockView block={block} />;
+    if (block.kind === 'image') return <ImageBlockView block={block} />;
     if (block.kind === 'course-resource') return <CourseResourceView block={block} />;
     if (block.kind === 'placeholder') return <PlaceholderBlockView block={block} />;
     if (block.kind === 'bank') {
@@ -1409,9 +1459,10 @@ function AssessmentScreen() {
         learningObjective={block.question.learningObjective}
         choices={block.question.choices.map((choice) => choice.text)}
         correctChoiceIndex={correctIndex >= 0 ? correctIndex : 0}
+        choiceFeedback={block.question.choices.map((choice) => choice.feedback ?? '')}
         correctFeedback={block.question.correctFeedback}
         incorrectFeedback={block.question.incorrectFeedback}
-        inputs={block.question.kind === 'multi-input' ? block.question.inputs : undefined}
+        inputs={block.question.kind === 'mcq' ? undefined : block.question.inputs}
         showGraph={block.question.showGraph}
         imageSrc={block.question.imageSrc}
         imageAlt={block.question.imageAlt}
@@ -1462,8 +1513,12 @@ function AssessmentScreen() {
                 ))}
               </div>
             ) : null}
-            {question.kind === 'multi-input' ? (
-              <p className="student-preview-dropdown-hint">Students complete this item from the activity bank.</p>
+            {question.kind === 'multi-input' || question.kind === 'multi-input-dropdown' ? (
+              <p className="student-preview-dropdown-hint">
+                {question.kind === 'multi-input-dropdown'
+                  ? 'Students choose an answer from each dropdown.'
+                  : 'Students complete this item from the activity bank.'}
+              </p>
             ) : null}
             {question.kind === 'short-answer' ? <textarea className="student-short-answer" disabled placeholder="Type your response here…" /> : null}
           </article>
@@ -1556,6 +1611,7 @@ function AssessmentScreen() {
                   .map((block) => {
                     if (block.kind === 'text') return <TextBlockView key={block.id} block={block} />;
                     if (block.kind === 'example') return <ExampleBlockView key={block.id} block={block} />;
+                    if (block.kind === 'image') return <ImageBlockView key={block.id} block={block} />;
                     if (block.kind === 'course-resource') return <CourseResourceView key={block.id} block={block} />;
                     if (block.kind === 'placeholder') return <PlaceholderBlockView key={block.id} block={block} />;
                     if (block.kind === 'bank') return renderStudentBank(block);
@@ -1610,7 +1666,10 @@ function AssessmentScreen() {
                           selected={selectedBlockId === block.id}
                           canMoveUp={canMoveBlock(blocks, block.id, 'up')}
                           canMoveDown={canMoveBlock(blocks, block.id, 'down')}
-                          canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'example' || block.kind === 'question')}
+                          canEdit={
+                            block.status !== 'removed' &&
+                            (block.kind === 'text' || block.kind === 'example' || block.kind === 'image' || block.kind === 'question')
+                          }
                           canRestoreOriginal={canRestoreOriginal}
                           dragging={draggingBlockId === block.id}
                           dropPlacement={
@@ -1625,10 +1684,27 @@ function AssessmentScreen() {
                               setCustomizeDialog({ type: 'edit-example', block });
                               return;
                             }
+                            if (block.kind === 'image') {
+                              setCustomizeDialog({ type: 'edit-image', block });
+                              return;
+                            }
                             if (block.kind === 'question') {
                               setCustomizeDialog({ type: 'edit-question', block });
                             }
                           }}
+                          onDuplicate={
+                            block.kind === 'question' && block.status !== 'removed'
+                              ? () => {
+                                  const copy = duplicateQuestionBlock(block);
+                                  setBlocks((current) => {
+                                    const index = current.findIndex((item) => item.id === block.id);
+                                    return insertBlock(current, index < 0 ? current.length : index + 1, copy);
+                                  });
+                                  setSelectedBlockId(copy.id);
+                                  setAnnouncement(`Duplicated “${block.title}”.`);
+                                }
+                              : undefined
+                          }
                           onSelect={() => setSelectedBlockId(block.id)}
                           onMoveUp={() => {
                             setBlocks((current) => moveBlock(current, block.id, 'up'));
@@ -1684,9 +1760,25 @@ function AssessmentScreen() {
                   })}
           </div>
           <div className="assessment-footer">
-            <button className="button button--secondary">Previous</button>
+            <button
+              type="button"
+              className={previousPage ? 'button button--secondary' : 'button button--disabled'}
+              onClick={() => goToCoursePage(previousPage)}
+              disabled={!previousPage}
+              title={previousPage ? previousPage.title : undefined}
+            >
+              Previous
+            </button>
             <span>{isStudentPreview ? 'Preview only' : dirty ? 'Unsaved changes on this page' : 'All changes saved'}</span>
-            <button className="button button--primary">Next</button>
+            <button
+              type="button"
+              className={nextPage ? 'button button--primary' : 'button button--disabled'}
+              onClick={() => goToCoursePage(nextPage)}
+              disabled={!nextPage}
+              title={nextPage ? nextPage.title : undefined}
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
@@ -1784,7 +1876,8 @@ function AssessmentScreen() {
 }
 
 function bankRowToQuestionDraft(row: BankQuestionRow, objectives: PageObjective[]): QuestionContent {
-  const kind: QuestionContent['kind'] = row.kind === 'multi-input' ? 'multi-input' : 'mcq';
+  const kind: QuestionContent['kind'] =
+    row.kind === 'multi-input-dropdown' ? 'multi-input-dropdown' : row.kind === 'multi-input' ? 'multi-input' : 'mcq';
   const matched = objectives.find((objective) => extractObjectiveCode(row.learningObjective) === objective.code.toUpperCase());
   const learningObjective = matched ? formatObjectiveTag(matched) : row.learningObjective;
   const correctIndex = row.correctChoiceIndex ?? 0;
@@ -1800,14 +1893,17 @@ function bankRowToQuestionDraft(row: BankQuestionRow, objectives: PageObjective[
       id: `c-${index}`,
       text,
       correct: index === correctIndex,
+      feedback: row.choiceFeedback?.[index],
     })),
     inputs:
       row.inputs && row.inputs.length > 0
         ? row.inputs
-        : [
-            { id: 'i1', label: 'Part 1', answer: '' },
-            { id: 'i2', label: 'Part 2', answer: '' },
-          ],
+        : kind === 'multi-input-dropdown'
+          ? [{ id: 'i1', label: '', answer: '', options: ['', '', ''] }]
+          : [
+              { id: 'i1', label: '', answer: '' },
+              { id: 'i2', label: '', answer: '' },
+            ],
     correctFeedback: row.correctFeedback ?? '',
     incorrectFeedback: row.incorrectFeedback ?? '',
     showGraph: row.showGraph,
@@ -1825,7 +1921,8 @@ function questionDraftToBankPatch(draft: QuestionContent): BankQuestionEditDraft
     kind: draft.kind,
     choices: draft.kind === 'mcq' ? draft.choices.map((choice) => choice.text.trim()).filter(Boolean) : undefined,
     correctChoiceIndex: draft.kind === 'mcq' ? Math.max(0, draft.choices.findIndex((choice) => choice.correct)) : undefined,
-    inputs: draft.kind === 'multi-input' ? draft.inputs : undefined,
+    choiceFeedback: draft.kind === 'mcq' ? draft.choices.map((choice) => choice.feedback ?? '') : undefined,
+    inputs: draft.kind === 'mcq' ? undefined : draft.inputs,
     showGraph: draft.showGraph,
     imageSrc: draft.imageSrc,
     imageAlt: draft.imageAlt,
@@ -2006,7 +2103,15 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   };
 
   const questionTypeLabel = (kind: QuestionKind) =>
-    kind === 'mcq' ? 'Multiple Choice' : kind === 'multi-input' ? 'Multi Input' : kind === 'cata' ? 'Check All That Apply' : 'Short Answer';
+    kind === 'mcq'
+      ? 'Multiple Choice'
+      : kind === 'multi-input'
+        ? 'Multi-input fill in the blank'
+        : kind === 'multi-input-dropdown'
+          ? 'Multi-input dropdown'
+          : kind === 'cata'
+            ? 'Check All That Apply'
+            : 'Short Answer';
 
   const learningObjectiveOptions = Array.from(new Set(questionRows.map((question) => question.learningObjective)));
   const questionTypeOptions = Array.from(new Set(questionRows.map((question) => question.kind)));
@@ -2669,11 +2774,7 @@ function AssessmentHeader({
                 {overallPageScore}
               </span>
             </div>
-          ) : (
-            <div className="assessment-page-ribbon__right">
-              <span className="assessment-page-ribbon__score-label">Not scored</span>
-            </div>
-          )}
+          ) : null}
         </div>
         <h1 className="assessment-title">{assessmentTitle}</h1>
         <p className="assessment-dates">
@@ -2887,6 +2988,7 @@ function QuestionTypeCard({
   onToggleRemove,
   studentPreview = false,
   correctChoiceIndex,
+  choiceFeedback,
   correctFeedback,
   incorrectFeedback,
   inputs,
@@ -2906,16 +3008,25 @@ function QuestionTypeCard({
   onToggleRemove?: () => void;
   studentPreview?: boolean;
   correctChoiceIndex?: number;
+  choiceFeedback?: string[];
   correctFeedback?: string;
   incorrectFeedback?: string;
-  inputs?: { id: string; label: string; answer: string }[];
+  inputs?: { id: string; label: string; answer: string; options?: string[] }[];
 }) {
   const [expanded, setExpanded] = useState(false);
   const [activeTab, setActiveTab] = useState<'answer' | 'hints' | 'explanation'>('answer');
   const [selectedDropdownPart, setSelectedDropdownPart] = useState(1);
 
   const questionTypeLabel =
-    kind === 'mcq' ? 'Multiple Choice' : kind === 'multi-input' ? 'Multi Input' : kind === 'cata' ? 'Check All That Apply' : 'Short Answer';
+    kind === 'mcq'
+      ? 'Multiple Choice'
+      : kind === 'multi-input'
+        ? 'Multi-input fill in the blank'
+        : kind === 'multi-input-dropdown'
+          ? 'Multi-input dropdown'
+          : kind === 'cata'
+            ? 'Check All That Apply'
+            : 'Short Answer';
 
   const renderAnswerKey = () => {
     if (kind === 'mcq') {
@@ -2924,7 +3035,12 @@ function QuestionTypeCard({
           {(choices ?? ['Point A', 'Point B', 'Point C', 'Point D']).map((option, idx) => (
             <label key={option} className="mcq-choice-row">
               <span className={idx === (correctChoiceIndex ?? 2) ? 'fake-radio is-selected' : 'fake-radio'} />
-              <span>{option}</span>
+              <span className="student-choice-row__body">
+                <span>{option}</span>
+                {choiceFeedback?.[idx]?.trim() ? (
+                  <span className="question-draft-preview__feedback">{choiceFeedback[idx]}</span>
+                ) : null}
+              </span>
             </label>
           ))}
           <div className="feedback-block">
@@ -2945,7 +3061,7 @@ function QuestionTypeCard({
       );
     }
 
-    if (kind === 'multi-input') {
+    if (kind === 'multi-input' || kind === 'multi-input-dropdown') {
       if (inputs && inputs.length > 0) {
         return (
           <div className="answer-key-section">
@@ -3041,7 +3157,7 @@ function QuestionTypeCard({
           <p>Hint 2: The equivalence point is where analyte and titrant moles are equal.</p>
         </>
       ) : null}
-      {kind === 'multi-input' ? (
+      {kind === 'multi-input' || kind === 'multi-input-dropdown' ? (
         <>
           <p>Hint 1: Balance non-hydrogen and non-oxygen atoms first for part {selectedDropdownPart}.</p>
           <p>Hint 2: Use H<sub>2</sub>O and H<sup>+</sup> to complete acidic balancing.</p>
@@ -3065,7 +3181,7 @@ function QuestionTypeCard({
   const renderExplanation = () => (
     <div className="tab-stack">
       {kind === 'mcq' ? <p>Point C aligns with the equivalence region where the curve transitions sharply and stoichiometric moles are equal.</p> : null}
-      {kind === 'multi-input' ? <p>The balanced equation conserves both atoms and total charge. Part {selectedDropdownPart} controls one term in the complete balanced expression.</p> : null}
+      {kind === 'multi-input' || kind === 'multi-input-dropdown' ? <p>The balanced equation conserves both atoms and total charge. Part {selectedDropdownPart} controls one term in the complete balanced expression.</p> : null}
       {kind === 'cata' ? <p>Statements 2, 3, and 4 match core electrochemistry principles. Statements 1 and 5 are not consistently true in all cases.</p> : null}
       {kind === 'short-answer' ? <p>High-quality responses explain coefficient decisions, confirm conserved mass and charge, and connect each correction to acidic-solution balancing rules.</p> : null}
     </div>
@@ -3098,6 +3214,29 @@ function QuestionTypeCard({
               <div key={option} className="answer-chip">
                 {option}
               </div>
+            ))}
+          </div>
+        </>
+      ) : null}
+      {kind === 'multi-input-dropdown' ? (
+        <>
+          <p>{prompt}</p>
+          <div className="student-input-list">
+            {(inputs ?? []).map((input) => (
+              <label key={input.id} className="student-input-row">
+                <span>{input.label}</span>
+                <select disabled defaultValue="">
+                  <option value="">Select an answer</option>
+                  {(input.options ?? [])
+                    .map((option) => option.trim())
+                    .filter(Boolean)
+                    .map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                </select>
+              </label>
             ))}
           </div>
         </>
@@ -3243,10 +3382,14 @@ export function StudentAssessmentPreview({
               ))}
             </div>
           ) : null}
-          {question.kind === 'multi-input' ? (
+          {question.kind === 'multi-input' || question.kind === 'multi-input-dropdown' ? (
             <>
               <img className="question-media question-media--small" src={formulaImage} alt="" />
-              <p className="student-preview-dropdown-hint">Students choose values from each dropdown to complete the item.</p>
+              <p className="student-preview-dropdown-hint">
+                {question.kind === 'multi-input-dropdown'
+                  ? 'Students choose an answer from each dropdown.'
+                  : 'Students choose values from each dropdown to complete the item.'}
+              </p>
               <div className="multi-input-row multi-input-row--preview">
                 <button type="button" className="dropdown-chip is-selected" disabled>
                   Dropdown

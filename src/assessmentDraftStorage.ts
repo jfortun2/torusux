@@ -15,10 +15,11 @@ export type BankQuestionEditDraft = {
   prompt?: string;
   learningObjective?: string;
   points?: number;
-  kind?: 'mcq' | 'multi-input' | 'cata' | 'short-answer';
+  kind?: 'mcq' | 'multi-input' | 'multi-input-dropdown' | 'cata' | 'short-answer';
   choices?: string[];
   correctChoiceIndex?: number;
-  inputs?: { id: string; label: string; answer: string }[];
+  choiceFeedback?: string[];
+  inputs?: { id: string; label: string; answer: string; options?: string[] }[];
   cataStatements?: string[];
   showGraph?: boolean;
   imageSrc?: string;
