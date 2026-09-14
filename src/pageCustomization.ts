@@ -1,6 +1,11 @@
 import type { PageScoring } from './curriculumData';
+import {
+  ELECTROCHEMISTRY_BANKS,
+  ELECTROCHEMISTRY_PAGES,
+  type ImportedPage,
+} from './imported/electrochemistry';
 
-export type PageBlockKind = 'text' | 'example' | 'question' | 'bank' | 'course-resource';
+export type PageBlockKind = 'text' | 'example' | 'question' | 'bank' | 'course-resource' | 'placeholder';
 export type PageBlockOrigin = 'canonical' | 'instructor';
 export type PageBlockStatus = 'original' | 'added' | 'removed';
 
@@ -48,6 +53,14 @@ export type QuestionContent = {
 
 export type BankContent = {
   selectionId: string;
+  numberToSelect?: number;
+  availableQuestions?: number;
+  criteriaTag?: string;
+};
+
+export type PlaceholderContent = {
+  contentType: string;
+  summary?: string;
 };
 
 export type CourseResourceContent = {
@@ -67,7 +80,8 @@ export type PageBlock =
   | (BlockBase & { kind: 'example'; example: ExampleContent })
   | (BlockBase & { kind: 'question'; question: QuestionContent })
   | (BlockBase & { kind: 'bank'; bank: BankContent })
-  | (BlockBase & { kind: 'course-resource'; courseResource: CourseResourceContent });
+  | (BlockBase & { kind: 'course-resource'; courseResource: CourseResourceContent })
+  | (BlockBase & { kind: 'placeholder'; placeholder: PlaceholderContent });
 
 export type PageObjectiveOption = {
   code: string;
@@ -91,6 +105,7 @@ export const BLOCK_KIND_LABEL: Record<PageBlockKind, string> = {
   question: 'Question',
   bank: 'Activity bank',
   'course-resource': 'Course resource',
+  placeholder: 'Unsupported content',
 };
 
 export const COURSE_RESOURCE_OPTIONS: CourseResourceContent[] = [
@@ -99,8 +114,8 @@ export const COURSE_RESOURCE_OPTIONS: CourseResourceContent[] = [
   { title: 'Oxidation and reduction review', sourceLabel: 'Page in this course' },
 ];
 
-const STORAGE_PREFIX = 'torusux:pageLayout:v4:';
-const META_PREFIX = 'torusux:pageMeta:v1:';
+const STORAGE_PREFIX = 'torusux:pageLayout:v5:';
+const META_PREFIX = 'torusux:pageMeta:v2:';
 
 type StoredLayout = {
   v: 1;
@@ -195,7 +210,17 @@ export function persistPageMeta(assessmentTitle: string, meta: PageMeta) {
 
 export function sanitizeInstructorHtml(html: string): string {
   if (typeof window === 'undefined') return html;
-  const allowed = new Set(['P', 'BR', 'B', 'I', 'EM', 'STRONG', 'UL', 'OL', 'LI', 'A', 'SPAN', 'SUP', 'SUB']);
+  const allowed = new Set([
+    'P', 'BR', 'B', 'I', 'EM', 'STRONG', 'U', 'UL', 'OL', 'LI', 'A', 'SPAN', 'SUP', 'SUB',
+    'H1', 'H2', 'H3', 'H4', 'H5', 'IMG', 'TABLE', 'THEAD', 'TBODY', 'TR', 'TD', 'TH', 'CAPTION',
+    'FIGURE', 'FIGCAPTION', 'ASIDE', 'DIV', 'DL', 'DT', 'DD', 'HR', 'BLOCKQUOTE', 'CODE', 'PRE',
+  ]);
+  const allowedClasses = new Set([
+    'page-keyword', 'page-popup', 'page-formula', 'page-formula--block', 'page-frac', 'page-frac-num',
+    'page-frac-den', 'page-figure', 'page-table', 'page-table-wrap', 'page-callout', 'page-placeholder',
+    'page-placeholder__type', 'page-placeholder__note', 'page-placeholder__detail', 'page-internal-link',
+    'page-dl', 'page-input-ref', 'page-overbar',
+  ]);
   const template = document.createElement('template');
   template.innerHTML = html;
   const unwrap = (el: HTMLElement) => {
@@ -204,6 +229,11 @@ export function sanitizeInstructorHtml(html: string): string {
     while (el.firstChild) parent.insertBefore(el.firstChild, el);
     parent.removeChild(el);
     walk(parent);
+  };
+  const keepClass = (el: HTMLElement) => {
+    const next = [...el.classList].filter((name) => allowedClasses.has(name));
+    [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
+    if (next.length) el.className = next.join(' ');
   };
   const walk = (node: Node) => {
     [...node.childNodes].forEach((child) => {
@@ -219,21 +249,27 @@ export function sanitizeInstructorHtml(html: string): string {
       }
       if (el.tagName === 'A') {
         const href = el.getAttribute('href') ?? '';
+        const className = [...el.classList].filter((name) => allowedClasses.has(name)).join(' ');
         [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
-        if (/^(https?:|mailto:|#)/i.test(href)) {
-          el.setAttribute('href', href);
-        }
-      } else if (el.tagName === 'SPAN') {
-        const isKeyword = el.classList.contains('page-keyword');
+        if (/^(https?:|mailto:|#)/i.test(href)) el.setAttribute('href', href);
+        if (className) el.className = className;
+      } else if (el.tagName === 'IMG') {
+        const src = el.getAttribute('src') ?? '';
+        const alt = el.getAttribute('alt') ?? '';
         [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
-        if (isKeyword) {
-          el.className = 'page-keyword';
+        if (/^https:\/\//i.test(src) && !/javascript:/i.test(src)) {
+          el.setAttribute('src', src);
+          el.setAttribute('alt', alt);
         } else {
           unwrap(el);
           return;
         }
+      } else if (el.tagName === 'SPAN' || el.tagName === 'DIV' || el.tagName === 'ASIDE' || el.tagName === 'FIGURE') {
+        keepClass(el);
       } else {
+        const className = [...el.classList].filter((name) => allowedClasses.has(name)).join(' ');
         [...el.attributes].forEach((attribute) => el.removeAttribute(attribute.name));
+        if (className) el.className = className;
       }
       walk(el);
     });
@@ -822,6 +858,7 @@ export function describeBlockForCompare(block: PageBlock): string {
   if (block.kind === 'example') return block.example.heading;
   if (block.kind === 'question') return `${block.question.title}: ${block.question.prompt.slice(0, 100)}${block.question.prompt.length > 100 ? '…' : ''}`;
   if (block.kind === 'bank') return block.title;
+  if (block.kind === 'placeholder') return `${block.placeholder.contentType}${block.placeholder.summary ? `: ${block.placeholder.summary}` : ''}`;
   return `${block.courseResource.title} · ${block.courseResource.sourceLabel}`;
 }
 
@@ -870,6 +907,7 @@ export type PageContentProfile = {
     learningObjective: string;
     beforeQuestionIndex?: number;
   }>;
+  blocks?: PageBlock[];
 };
 
 function choice(id: string, text: string, correct: boolean): QuestionChoice {
@@ -1655,8 +1693,40 @@ function energyLabProfile(): PageContentProfile {
   };
 }
 
-export function resolvePageProfile(title?: string): PageContentProfile {
+function importedPageProfile(page: ImportedPage): PageContentProfile {
+  const introBlock = page.blocks.find((block) => (block as PageBlock).kind === 'text') as Extract<PageBlock, { kind: 'text' }> | undefined;
+  return {
+    key: `imported-${page.id}`,
+    matched: true,
+    layout: page.layout,
+    objectiveCodes: [...page.objectiveCodes],
+    bankIds: [...page.bankIds],
+    intro: introBlock?.text ?? {
+      heading: page.title,
+      bodyHtml: '',
+      learningObjective: page.objectiveLabels[0] ?? '',
+    },
+    questions: [],
+    blocks: page.blocks as PageBlock[],
+  };
+}
+
+export function resourceIdFromPageId(pageId?: string): string {
+  return (pageId ?? '').replace(/^page-/, '');
+}
+
+export function resolvePageProfile(title?: string, pageId?: string): PageContentProfile {
+  const resourceId = resourceIdFromPageId(pageId);
+  if (resourceId && ELECTROCHEMISTRY_PAGES[resourceId]) {
+    return importedPageProfile(ELECTROCHEMISTRY_PAGES[resourceId]);
+  }
   const normalized = normalizePageTitle(title ?? '');
+  if (normalized) {
+    const imported = Object.values(ELECTROCHEMISTRY_PAGES).find(
+      (page) => normalizePageTitle(page.title) === normalized,
+    );
+    if (imported) return importedPageProfile(imported);
+  }
   if (!normalized) return EMPTY_PROFILE;
   if (normalized.includes('cell notation') || normalized.includes('cell diagram')) return cellNotationProfile();
   if (normalized.includes('galvanic')) return galvanicProfile();
@@ -1680,13 +1750,18 @@ export function resolvePageProfile(title?: string): PageContentProfile {
   return EMPTY_PROFILE;
 }
 
-export function isUnitCheckpointPage(title?: string): boolean {
-  const key = resolvePageProfile(title).key;
-  return key === 'electrochemistry-checkpoint' || key === 'nuclear-checkpoint' || key === 'equilibrium';
+export function isUnitCheckpointPage(title?: string, pageId?: string): boolean {
+  const profile = resolvePageProfile(title, pageId);
+  return profile.layout === 'checkpoint' || profile.key === 'nuclear-checkpoint' || profile.key === 'equilibrium';
+}
+
+export function importedBankSelection(selectionId: string) {
+  return ELECTROCHEMISTRY_BANKS[selectionId] ?? null;
 }
 
 export function createDefaultPageBlocks({
   pageTitle,
+  pageId,
   selectionIds,
   removedBanks,
   removedEmbedded,
@@ -1694,6 +1769,7 @@ export function createDefaultPageBlocks({
   origin = 'canonical',
 }: {
   pageTitle: string;
+  pageId?: string;
   selectionIds: string[];
   removedBanks: string[];
   removedEmbedded: Record<string, boolean>;
@@ -1701,8 +1777,25 @@ export function createDefaultPageBlocks({
   origin?: PageBlockOrigin;
   objectives?: PageObjectiveOption[];
 }): PageBlock[] {
-  const profile = resolvePageProfile(pageTitle);
+  const profile = resolvePageProfile(pageTitle, pageId);
   const status: PageBlockStatus = origin === 'instructor' ? 'added' : 'original';
+  if (profile.blocks) {
+    return cloneBlocks(profile.blocks).map((block) => {
+      if (block.kind === 'bank') {
+        return {
+          ...block,
+          origin,
+          status: removedBanks.includes(block.bank.selectionId) ? 'removed' : status,
+        };
+      }
+      if (block.kind === 'question') {
+        const canonicalKey = block.question.canonicalKey;
+        const removed = Boolean(canonicalKey && removedEmbedded[canonicalKey]);
+        return { ...block, origin, status: removed ? 'removed' : status };
+      }
+      return { ...block, origin, status };
+    });
+  }
   const intro: PageBlock = {
     id: 'intro-text',
     kind: 'text',

@@ -387,6 +387,18 @@ export function TextBlockView({
   );
 }
 
+export function PlaceholderBlockView({ block }: { block: Extract<PageBlock, { kind: 'placeholder' }> }) {
+  return (
+    <aside className="page-placeholder" data-content-type={block.placeholder.contentType}>
+      <p className="page-placeholder__type">{block.placeholder.contentType}</p>
+      {block.placeholder.summary ? <p className="page-placeholder__detail">{block.placeholder.summary}</p> : null}
+      <p className="page-placeholder__note">
+        This {block.placeholder.contentType.toLowerCase()} is not interactive in the prototype.
+      </p>
+    </aside>
+  );
+}
+
 export function ExampleBlockView({ block }: { block: Extract<PageBlock, { kind: 'example' }> }) {
   return (
     <section className="page-example-block" aria-label={block.example.heading}>

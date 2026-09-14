@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "import:electrochemistry": "node scripts/import-electrochemistry.mjs"
   },
   "dependencies": {
     "react": "^19.1.0",

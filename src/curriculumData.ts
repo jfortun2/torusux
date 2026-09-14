@@ -1,3 +1,5 @@
+import { ELECTROCHEMISTRY_LEARNING_OBJECTIVES, ELECTROCHEMISTRY_UNIT } from './imported/electrochemistry';
+
 export type CurriculumStatus = 'original' | 'modified' | 'added' | 'removed';
 export type CurriculumOrigin = 'canonical' | 'instructor';
 export type CurriculumNodeType = 'unit' | 'module' | 'section' | 'page' | 'block';
@@ -27,12 +29,8 @@ export type CurriculumNode = {
   pageScoring?: PageScoring;
 };
 
-const LO_REDOX = 'LO 1.1 Balance redox equations and construct half-reactions.';
-const LO_CELL = 'LO 1.2 Predict electrochemical behavior and cell trends.';
-const LO_APPS = 'LO 1.3 Evaluate electrochemistry applications in real systems.';
-const LO_NOTATION = 'LO 1.2 Use cell notation to describe galvanic cells.';
-const LO_EQUILIBRIUM = 'Explain equilibrium shifts';
-const LO_CORROSION = 'Explain electrochemical causes of corrosion';
+const LO_CELL = 'LO 1.13 Describe the basic components of galvanic cells.';
+const LO_APPS = 'LO 1.7 Describe batteries and fuel cells.';
 const LO_RAD = 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.';
 const LO_BIO = 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.';
 
@@ -51,14 +49,15 @@ export const NODE_TYPE_LABEL: Record<StructuralNodeType, string> = {
 };
 
 export const COURSE_LEARNING_OBJECTIVES: CourseLearningObjective[] = [
-  { code: 'LO 1.1', label: 'L1 Balance redox equations and construct half-reactions.' },
-  { code: 'LO 1.2', label: 'L2 Predict electrochemical behavior and cell trends.' },
-  { code: 'LO 1.3', label: 'L3 Evaluate electrochemistry applications in real systems.' },
-  { code: 'LO 1.4', label: 'L4 Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
-  { code: 'LO 1.5', label: 'L5 Explain how pathway and tissue sensitivity influence biological effects.' },
+  ...ELECTROCHEMISTRY_LEARNING_OBJECTIVES.map((objective) => ({
+    code: objective.code,
+    label: objective.label,
+  })),
+  { code: 'LO 1.4', label: 'Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
+  { code: 'LO 1.5', label: 'Explain how pathway and tissue sensitivity influence biological effects.' },
 ];
 
-const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v3';
+const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v4';
 
 const item = (
   node: Omit<CurriculumNode, 'children' | 'originalTitle' | 'origin' | 'status'> &
@@ -74,325 +73,7 @@ const item = (
 
 export function createInitialCurriculum(): CurriculumNode[] {
   return [
-    item({
-      id: 'unit-electrochemistry',
-      type: 'unit',
-      title: 'Electrochemistry',
-      children: [
-        item({
-          id: 'module-foundational',
-          type: 'module',
-          title: 'Foundational Concepts of Electrochemistry',
-          children: [
-            item({
-              id: 'page-foundational',
-              type: 'page',
-              title: 'Foundational Concepts of Electrochemistry',
-              learningObjectives: [LO_REDOX],
-              children: [
-                item({
-                  id: 'block-foundational-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'What is electrochemistry?',
-                  learningObjectives: [LO_REDOX],
-                }),
-                item({
-                  id: 'block-foundational-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Identifying oxidation and reduction',
-                  learningObjectives: [LO_REDOX],
-                }),
-                item({
-                  id: 'block-foundational-q',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Assign oxidation states',
-                  learningObjectives: [LO_REDOX],
-                }),
-                item({
-                  id: 'block-foundational-bank',
-                  type: 'block',
-                  blockKind: 'bank',
-                  title: 'Foundational Concepts of Electrochemistry',
-                  learningObjectives: [LO_REDOX],
-                }),
-              ],
-            }),
-            item({
-              id: 'page-redox-review',
-              type: 'page',
-              title: 'Oxidation and reduction review',
-              originalTitle: 'Redox review',
-              status: 'modified',
-              learningObjectives: [LO_REDOX],
-              children: [
-                item({
-                  id: 'block-redox-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Review of oxidation states',
-                  learningObjectives: [LO_REDOX],
-                }),
-                item({
-                  id: 'block-redox-q',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Practice: balance a simple redox pair',
-                  origin: 'instructor',
-                  status: 'added',
-                  learningObjectives: [LO_REDOX],
-                }),
-              ],
-            }),
-          ],
-        }),
-        item({
-          id: 'module-galvanic',
-          type: 'module',
-          title: 'Galvanic Cells',
-          children: [
-            item({
-              id: 'page-galvanic',
-              type: 'page',
-              title: 'Galvanic Cells',
-              learningObjectives: [LO_CELL],
-              children: [
-                item({
-                  id: 'block-galvanic-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'How galvanic cells produce current',
-                  learningObjectives: [LO_CELL],
-                }),
-                item({
-                  id: 'block-galvanic-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Zinc–copper cell',
-                  learningObjectives: [LO_CELL],
-                }),
-                item({
-                  id: 'block-galvanic-q',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Predict cell potential',
-                  learningObjectives: [LO_CELL],
-                }),
-                item({
-                  id: 'block-galvanic-bank',
-                  type: 'block',
-                  blockKind: 'bank',
-                  title: 'Galvanic Cells',
-                  learningObjectives: [LO_CELL],
-                }),
-              ],
-            }),
-            item({
-              id: 'page-cell-notation',
-              type: 'page',
-              title: 'Cell Notation',
-              pageScoring: 'practice',
-              learningObjectives: [LO_NOTATION],
-              children: [
-                item({
-                  id: 'block-notation-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Cell notation',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-example',
-                  type: 'block',
-                  blockKind: 'example',
-                  title: 'Example',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-lbd',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Learn by Doing',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-lbd-q1',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Choose the oxidation and reduction half-reactions',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-lbd-q2',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Fill in the correct coefficients for the balanced overall reaction',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-lbd-q3',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Which half-reaction occurs at the anode and the cathode?',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-lbd-q4',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Which is the correct cell notation?',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-digt',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Did I Get This',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-digt-q1',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'The oxidation and reduction half-reactions',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-digt-q2',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Which reaction occurs at the anode and the cathode?',
-                  learningObjectives: [LO_NOTATION],
-                }),
-                item({
-                  id: 'block-notation-digt-q3',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Which is the correct cell notation?',
-                  learningObjectives: [LO_NOTATION],
-                }),
-              ],
-            }),
-          ],
-        }),
-        item({
-          id: 'module-applications',
-          type: 'module',
-          title: 'Other Applications of Electrochemistry',
-          children: [
-            item({
-              id: 'page-applications',
-              type: 'page',
-              title: 'Other Applications of Electrochemistry',
-              learningObjectives: [LO_APPS],
-              children: [
-                item({
-                  id: 'block-app-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Batteries, corrosion, and electrolysis',
-                  learningObjectives: [LO_APPS, LO_CORROSION],
-                }),
-                item({
-                  id: 'block-app-bank',
-                  type: 'block',
-                  blockKind: 'bank',
-                  title: 'Other Applications of Electrochemistry',
-                  learningObjectives: [LO_APPS],
-                }),
-              ],
-            }),
-            item({
-              id: 'page-corrosion-case',
-              type: 'page',
-              title: 'Corrosion case study',
-              origin: 'instructor',
-              status: 'added',
-              learningObjectives: [LO_APPS, LO_CORROSION],
-              children: [
-                item({
-                  id: 'block-corrosion-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Local water-pipe example',
-                  origin: 'instructor',
-                  status: 'added',
-                  learningObjectives: [LO_CORROSION],
-                }),
-              ],
-            }),
-            item({
-              id: 'page-batteries-consumer',
-              type: 'page',
-              title: 'Batteries in consumer products',
-              status: 'removed',
-              learningObjectives: [LO_APPS],
-              children: [
-                item({
-                  id: 'block-batteries-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Household battery types',
-                }),
-              ],
-            }),
-          ],
-        }),
-        item({
-          id: 'module-e-chem-checkpoint',
-          type: 'module',
-          title: 'Unit checkpoint',
-          children: [
-            item({
-              id: 'page-e-chem-checkpoint',
-              type: 'page',
-              title: 'Electrochemistry Unit Checkpoint',
-              assessmentTitle: 'Electrochemistry Unit Checkpoint',
-              learningObjectives: [LO_REDOX, LO_CELL, LO_APPS],
-              children: [
-                item({
-                  id: 'block-e-check-expl',
-                  type: 'block',
-                  blockKind: 'explanation',
-                  title: 'Unit review',
-                  learningObjectives: [LO_REDOX, LO_CELL, LO_APPS, LO_EQUILIBRIUM],
-                }),
-                item({
-                  id: 'block-e-check-bank-1',
-                  type: 'block',
-                  blockKind: 'bank',
-                  title: 'Foundational Concepts of Electrochemistry',
-                  learningObjectives: [LO_REDOX],
-                }),
-                item({
-                  id: 'block-e-check-bank-2',
-                  type: 'block',
-                  blockKind: 'bank',
-                  title: 'Galvanic Cells',
-                  learningObjectives: [LO_CELL],
-                }),
-                item({
-                  id: 'block-e-check-bank-3',
-                  type: 'block',
-                  blockKind: 'bank',
-                  title: 'Other Applications of Electrochemistry',
-                  learningObjectives: [LO_APPS],
-                }),
-                item({
-                  id: 'block-e-check-q',
-                  type: 'block',
-                  blockKind: 'question',
-                  title: 'Embedded checkpoint question',
-                  learningObjectives: [LO_EQUILIBRIUM],
-                }),
-              ],
-            }),
-          ],
-        }),
-      ],
-    }),
+    ELECTROCHEMISTRY_UNIT as CurriculumNode,
     item({
       id: 'unit-nuclear',
       type: 'unit',
@@ -875,11 +556,11 @@ export function canContain(parentType: CurriculumNodeType | null, childType: Cur
 export function objectiveCodesFromLabels(labels: string[]): string[] {
   return COURSE_LEARNING_OBJECTIVES.filter((objective) =>
     labels.some((label) => {
+      const match = label.match(/LO\s*\d+(?:\.\d+)?/i);
+      const extracted = match ? match[0].replace(/\s+/g, ' ').toUpperCase() : null;
+      if (extracted) return extracted === objective.code.toUpperCase();
       const normalized = label.toLowerCase();
-      return (
-        normalized.includes(objective.code.toLowerCase()) ||
-        normalized.includes(objective.label.replace(/^L\d+\s+/i, '').toLowerCase())
-      );
+      return normalized.includes(objective.label.replace(/^(LO\s*\d+(?:\.\d+)?|L\d+)\s+/i, '').toLowerCase());
     }),
   ).map((objective) => objective.code);
 }
