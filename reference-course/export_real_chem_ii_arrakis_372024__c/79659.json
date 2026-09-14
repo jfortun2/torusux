@@ -1,0 +1,278 @@
+{
+  "id": "79659",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "acid_molec_struct_digt-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mitdwxdtb6wjcrf",
+                  "type": "p"
+                }
+              ],
+              "id": "4206141544"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8jey1x6v2m0o4vc",
+                  "type": "p"
+                }
+              ],
+              "id": "1409341642"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hxz5ei23b0ydbnp",
+                  "type": "p"
+                }
+              ],
+              "id": "3476536002"
+            }
+          ],
+          "id": "3420765386",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "o6h2wcg0hw62906",
+                    "type": "p"
+                  }
+                ],
+                "id": "4000048827"
+              },
+              "id": "486554218",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "nfexj11jmw019c5",
+                    "type": "p"
+                  }
+                ],
+                "id": "2572725024"
+              },
+              "id": "3891853603",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "y3oubtwmm8zijcd",
+                    "type": "p"
+                  }
+                ],
+                "id": "99881583"
+              },
+              "id": "2875626922",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "zlwxz36r48cqs9f",
+                    "type": "p"
+                  }
+                ],
+                "id": "2275479793"
+              },
+              "id": "809843030",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "486554218"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3891853603"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2875626922"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "486554218"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3891853603"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2875626922"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "67090280",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "HClO"
+              },
+              {
+                "sub": true,
+                "text": "4"
+              }
+            ],
+            "id": "ewcf6mvi461hfhw",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "HClO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              }
+            ],
+            "id": "g1zeftpi05ix5vx",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "SO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              }
+            ],
+            "id": "xz9t49xuoff6xpk",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following compounds is most acidic?"
+            }
+          ],
+          "id": "g6ynfjqmsavvaxg",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3420765386": [
+      "78513"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,371 @@
+{
+  "id": "80298",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "collision_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ob6pie9h0v7lbes",
+                  "type": "p"
+                }
+              ],
+              "id": "3046464571"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t2zi3k8fck2xp7w",
+                  "type": "p"
+                }
+              ],
+              "id": "2317953757"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3ak91huw32vfne6",
+                  "type": "p"
+                }
+              ],
+              "id": "2716925755"
+            }
+          ],
+          "id": "1353405134",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Increasing the temperature will increase the average kinetic energy of the particles. In the animation below, you can see that as the temperature increases, reactions between A atoms and BC molecules begin to occur. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "src": "https://d2xvti2irp4c7t.cloudfront.net/media/3a/3a909a9593409756670c36372a577caa/abc_react2.gif",
+                        "type": "img_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "oii10tw4fhto8bl",
+                    "type": "p"
+                  }
+                ],
+                "id": "1946851472"
+              },
+              "id": "2391047337",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Decreasing the temperature will decrease the average kinetic energy of the particles."
+                      }
+                    ],
+                    "id": "vpk6pk7k7hvkx20",
+                    "type": "p"
+                  }
+                ],
+                "id": "618151174"
+              },
+              "id": "3555877458",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Increasing the number of particles does not change the average kinetic energy of the particles."
+                      }
+                    ],
+                    "id": "rvtcsf4oe91qtm2",
+                    "type": "p"
+                  }
+                ],
+                "id": "2149104341"
+              },
+              "id": "3489382000",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Increasing the number of particles does not change the average kinetic energy of the particles."
+                      }
+                    ],
+                    "id": "hlevr4yhnuuf9do",
+                    "type": "p"
+                  }
+                ],
+                "id": "4214061422"
+              },
+              "id": "3434430213",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "syc8li0bai44vja",
+                    "type": "p"
+                  }
+                ],
+                "id": "1329036669"
+              },
+              "id": "1350391542",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2391047337"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3555877458"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3489382000"
+            ],
+            [
+              [
+                "D"
+              ],
+              "3434430213"
+            ]
+          ]
+        }
+      ],
+      "previewText": "The animation below shows a mixture of A atoms and BC molecules.  No reaction is taking place because the kinetic energy of the particles is not great enough.Which of the following changes to the system is most likely to increase the chance that a reaction will occur between atom A and molecule BC? ",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2391047337"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3555877458"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3489382000"
+        ],
+        [
+          [
+            "D"
+          ],
+          "3434430213"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "268582430",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increasing the temperature"
+              }
+            ],
+            "id": "7blcl69xpxmsx56",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decreasing the temperature"
+              }
+            ],
+            "id": "4qve94qq7qtlsu7",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increasing the number of BC molecules"
+              }
+            ],
+            "id": "jwt8es3c6gt756l",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increasing the number of A atoms"
+              }
+            ],
+            "id": "ghghyfju6rdc5lm",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The animation below shows a mixture of A atoms and BC molecules. "
+            }
+          ],
+          "id": "kd3yfdv74eh9o7b",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "colsb6cdep3ill3",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "190ol9lcnqlxdeg",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/09/091c0cdd2d173cf751a383fb4529792e/abc_react.gif",
+          "type": "img",
+          "width": "300"
+        },
+        {
+          "children": [
+            {
+              "text": "No reaction is taking place because the kinetic energy of the particles is not great enough."
+            }
+          ],
+          "id": "mz6z7dubnstclf5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Which of the following changes to the system is most likely to increase the chance that a reaction will occur between atom A and molecule BC?"
+            }
+          ],
+          "id": "ch67lee299avp7f",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "x2qq5zlui3i3s6t",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "2hrpsrtf6hf3ji1",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/f4/f451f1f0435d832994541ad71e7f8130/new_abc.png",
+          "type": "img",
+          "width": "300"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "1410321084",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1353405134": [
+      "78364"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

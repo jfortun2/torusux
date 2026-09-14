@@ -1,0 +1,386 @@
+{
+  "id": "79821",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78068"
+  ],
+  "title": "calc_mols_electrons_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "usqhni8cqjg4d55",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "fdf6cuzp8uaytt0",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "@@time@@.0\\;\\mathrm{hr}\\;\\times\\;\\frac{3600\\;\\sec}{1\\;\\mathrm{hr}}\\;\\times\\frac{@@amps@@\\;\\mathrm C}\\sec\\times\\frac{1\\;\\mathrm{mol}\\;\\mathrm e^-}{96,485\\;\\mathrm C}\\;=\\;@@correct@@\\;\\mathrm{mol}\\;\\mathrm e^-",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "zi3kny1i8rgdabz",
+                "type": "p"
+              }
+            ],
+            "id": "1015112375"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c1brli91h8pizym",
+                  "type": "p"
+                }
+              ],
+              "id": "1431155185"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uoisxh7c9l9b8ut",
+                  "type": "p"
+                }
+              ],
+              "id": "176054129"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "krv4phnloo3ayds",
+                  "type": "p"
+                }
+              ],
+              "id": "1834738788"
+            }
+          ],
+          "id": "aee2944e8e6948569406a36386548687",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An electrical current is defined as a rate of charge flow and usually given in units of ampere (A). To calculate the moles of electrons produced, first determine the total charge ("
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": ") transferred by the current:"
+                      }
+                    ],
+                    "id": "a0fdbd72f4fb4e1fba01c3bc537dbe7e",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q=I\\;\\times\\;t",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ya926dsq5bkgdjc",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Be sure to correctly convert units, including units of time. "
+                      }
+                    ],
+                    "id": "52yy50b0h7d23ri",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Then use the total charge transferred to calculate the total moles of electrons ("
+                      },
+                      {
+                        "em": true,
+                        "text": "n"
+                      },
+                      {
+                        "sub": true,
+                        "text": "total"
+                      },
+                      {
+                        "text": ") transferred: "
+                      }
+                    ],
+                    "id": "f3f2ae6d57ee48a59cf2428eb7b9edb1",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q=n_{total}\\;\\times\\;F",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "d95e86edcd5d4aceb68cbbead57f0d59",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "@@time@@.0\\;\\mathrm{hr}\\;\\times\\;\\frac{3600\\;\\sec}{1\\;\\mathrm{hr}}\\;\\times\\frac{@@amps@@\\;\\mathrm C}\\sec\\times\\frac{1\\;\\mathrm{mol}\\;\\mathrm e^-}{96,485\\;\\mathrm C}\\;=\\;@@correct@@\\;\\mathrm{mol}\\;\\mathrm e^-",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "90b5ji9tsa7hjnj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1031117734"
+              },
+              "id": "844108107",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An electrical current is defined as a rate of charge flow and usually given in units of ampere (A). To calculate the moles of electrons produced, first determine the total charge (Q) transferred by the current:"
+                      }
+                    ],
+                    "id": "ac9ae2d88e4c474db42f8f630c17fdfe",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q=I\\;\\times\\;t",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "m5hunhq8e92k0r4",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Be sure to correctly convert units, including units of time. "
+                      }
+                    ],
+                    "id": "058pribnjszdrt8",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Then use the total charge transferred to calculate the total moles of electrons ("
+                      },
+                      {
+                        "em": true,
+                        "text": "n"
+                      },
+                      {
+                        "sub": true,
+                        "text": "total"
+                      },
+                      {
+                        "text": ") transferred: "
+                      }
+                    ],
+                    "id": "adf41ae25e734361b15d1da6a2885b19",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Q=n_{total}\\;\\times\\;F",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "fri62tcwslw66jt",
+                    "type": "p"
+                  }
+                ],
+                "id": "3890799393"
+              },
+              "id": "1270413448",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst amps = OLI.random(3.5,15.5,1) .toFixed(1);\nconst time = OLI.random(1,5,0);\nconst timeSec = (time*3600);\nconst Q = (amps*timeSec);\nconst correct = (Q/96485) .toPrecision(3);\nconst corLow = (correct*0.98);\nconst corHigh = (correct*1.02)\n\n// Expose variables to OLI\nmodule.exports = {\n  amps,\n  time,\n  timeSec,\n  Q,\n  correct,\n  corLow,\n  corHigh\n};\n",
+              "id": "b18d4073c5ef4d078325ce1b58ea595a",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "d37c586ada1e4746b08b34e9fc13ee1c",
+        "inputType": "numeric",
+        "partId": "aee2944e8e6948569406a36386548687",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "How many moles of electrons are produced by a current of @@amps@@ A running for @@time@@.0 hour? "
+            }
+          ],
+          "id": "cf99ec48201c41b48a199f0bfe6fb2fa",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "(1 faraday = 96,485 coulombs)"
+            }
+          ],
+          "id": "a4bf985b3fc944f78cf0fb99f649dd12",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "d37c586ada1e4746b08b34e9fc13ee1c",
+              "input": "d37c586ada1e4746b08b34e9fc13ee1c",
+              "type": "input_ref"
+            },
+            {
+              "text": " mol e"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            }
+          ],
+          "id": "f8c3b2d929f347bca96ff043d53a8e01",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "aee2944e8e6948569406a36386548687": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

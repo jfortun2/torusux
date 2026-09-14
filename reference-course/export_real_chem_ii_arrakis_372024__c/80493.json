@@ -1,0 +1,468 @@
+{
+  "id": "80493",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ColorOfComplexesLBD1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "982888216",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1910826371",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1508462892",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A substance that absorbs yellow light will appear violet (the complementary color to yellow)."
+                      }
+                    ],
+                    "id": "2057307012",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "408961976",
+                "textDirection": "ltr"
+              },
+              "id": "1524646714",
+              "rule": "input like {173848461}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The perceived color of a substance is the is the complementary color of the light it absorbs."
+                      }
+                    ],
+                    "id": "2205545570",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2674402231",
+                "textDirection": "ltr"
+              },
+              "id": "466468224",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3322153576",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3475734760",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2539429257",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A substance that is blue will primarily absorb orange (the complement to blue) light."
+                      }
+                    ],
+                    "id": "2133946971",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "626947001",
+                "textDirection": "ltr"
+              },
+              "id": "1370598201",
+              "rule": "input like {658899752}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A substance absorbs the complementary color of the color it appears."
+                      }
+                    ],
+                    "id": "2940107429",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3141402386",
+                "textDirection": "ltr"
+              },
+              "id": "3552818380",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "A particular coordination complex absorbs primarily yellow light. This complex appears .An aqueous solution of CuSO4 appears blue. This solution primarily absorbs  light.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1625567416",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2476965826",
+          "operation": "shuffle",
+          "partId": "1508462892",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2954514024",
+          "operation": "shuffle",
+          "partId": "2539429257",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "red"
+              }
+            ],
+            "id": "2819215419",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2137671877",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "orange"
+              }
+            ],
+            "id": "1558637268",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "788300119",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "red"
+              }
+            ],
+            "id": "3930803069",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1993668169",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "orange"
+              }
+            ],
+            "id": "3237741628",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "658899752",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "yellow"
+              }
+            ],
+            "id": "2757240173",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1275729426",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "green"
+              }
+            ],
+            "id": "2322769894",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "642565833",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "blue"
+              }
+            ],
+            "id": "2553109273",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "665417381",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "violet"
+              }
+            ],
+            "id": "3901513309",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "173848461",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "yellow"
+              }
+            ],
+            "id": "1315684677",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1056019249",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "green"
+              }
+            ],
+            "id": "4020834162",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3836518406",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "blue"
+              }
+            ],
+            "id": "2556445908",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "4036755735",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "violet"
+              }
+            ],
+            "id": "432105913",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3901571504",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "2137671877",
+          "788300119",
+          "1275729426",
+          "642565833",
+          "665417381",
+          "173848461"
+        ],
+        "id": "1717986761",
+        "inputType": "dropdown",
+        "partId": "1508462892",
+        "size": "medium"
+      },
+      {
+        "choiceIds": [
+          "1993668169",
+          "658899752",
+          "1056019249",
+          "3836518406",
+          "4036755735",
+          "3901571504"
+        ],
+        "id": "873578026",
+        "inputType": "dropdown",
+        "partId": "2539429257",
+        "size": "medium"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A particular coordination complex absorbs primarily yellow light. This complex appears "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1717986761",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "1756780884",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "An aqueous solution of CuSO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": " appears blue. This solution primarily absorbs "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "873578026",
+              "type": "input_ref"
+            },
+            {
+              "text": " light."
+            }
+          ],
+          "id": "3621258772",
+          "type": "p"
+        }
+      ],
+      "id": "2539831509"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1508462892": [
+      "78328"
+    ],
+    "2539429257": [
+      "78328"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,1759 @@
+{
+  "id": "79634",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78217"
+  ],
+  "title": "calc_conc_from_kf_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "rryvwy5qt2ybn5q",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "c0jfngzjo3f94gm",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;2\\;\\mathrm{CN}^-(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}{(\\mathrm{CN})}_2^-(aq)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "d1gssefvoaq69di",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "lp18unbo8aate40",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "3e9iaz87w53i7s6",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "f4k4q69wtm25nhs",
+                            "text": "    Cu"
+                          },
+                          {
+                            "id": "t9cxbrjh1h5uako",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "btbvbji9amqp93j",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "i3fm1itkp78azsy",
+                            "text": "aq"
+                          },
+                          {
+                            "id": "6sg5agf1viqj9jl",
+                            "text": ")          +       2 CN"
+                          },
+                          {
+                            "id": "x3k6dye9e5ocupq",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "b21xw2uypvm18e0",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "69o49e8qjm5kzqz",
+                            "text": "aq"
+                          },
+                          {
+                            "id": "1rk68ttnim6ns1g",
+                            "text": ")          ⇌      Cu(CN)"
+                          },
+                          {
+                            "id": "vhezwy14e4ise8o",
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "hxg80bvfwmwmacr",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "z8lypfw2tdgroh9",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "9st4etymdp9z2c9",
+                            "text": "aq"
+                          },
+                          {
+                            "id": "o02fi5rtw0gc6gc",
+                            "text": ")   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "j65n9ll189z00la",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "b58fyfyhiwui2yj",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "au0lvtuust0cxr0",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "5hzb1wcgdjw1d1c",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "2m3tmahagv6y284",
+                            "text": " 0 "
+                          }
+                        ],
+                        "id": "e4zrrlshkgtet9o",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "pmz80g5e6b3g10b",
+                            "text": " 0 "
+                          }
+                        ],
+                        "id": "vx4uxuztiy38ln4",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "km9t429xdf6gc3f",
+                            "text": "      @@c@@ M      "
+                          }
+                        ],
+                        "id": "enhgi20kckixmqx",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ab8ydyutc73i4gj",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "676rfylcuaz33l7",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "2v17q3xnrpxxrw5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "m32x7v35amg1gfk",
+                            "text": "  + "
+                          },
+                          {
+                            "em": true,
+                            "id": "cn70zrq2ot6qto1",
+                            "text": "x"
+                          },
+                          {
+                            "id": "mzbfeeorh2a8x38",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "5e8l3telei6vh7y",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "jv1hqkp8czsio95",
+                            "text": "  + 2"
+                          },
+                          {
+                            "em": true,
+                            "id": "znic13azqtpqlma",
+                            "text": "x"
+                          },
+                          {
+                            "id": "f0wa22gmkwii4gq",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "t3hfz7a7gui6s78",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qla8gpmj6pocxyu",
+                            "text": "  -"
+                          },
+                          {
+                            "em": true,
+                            "id": "6i5e2gp4jk3tt76",
+                            "text": "x"
+                          },
+                          {
+                            "id": "ogwqan2uky4b06e",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "sl6servejziyv4y",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "wvkk2514d9xyy9j",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "fjot18e3lf0j0tg",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "6852470cimyo95b",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ggpns7e2qvzk0k1",
+                            "text": "  "
+                          },
+                          {
+                            "em": true,
+                            "id": "xs0iqfjx4bx16v3",
+                            "text": "x"
+                          },
+                          {
+                            "id": "erimvu3e769cmwz",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "45foxzgkchc0rd1",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "775lpbxbhn9yy1y",
+                            "text": "  2"
+                          },
+                          {
+                            "em": true,
+                            "id": "w8r5ly4uooabxpz",
+                            "text": "x"
+                          },
+                          {
+                            "id": "9gznfosh1rqz16b",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "igvs5kzy0ps6q2w",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ocxiu8krca5n7ch",
+                            "text": "  @@c@@ - "
+                          },
+                          {
+                            "em": true,
+                            "id": "xbewxc9m7eod7rv",
+                            "text": "x"
+                          },
+                          {
+                            "id": "expjx3cko6iehlr",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "cy3oxqswab0xwo1",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "tpnnezhmawc5vdp",
+                    "type": "tr"
+                  }
+                ],
+                "id": "gk2ze9vz06wveg9",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_f\\;=\\;\\frac{\\lbrack\\mathrm{Cu}{(\\mathrm{CN})}_2^-\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack{\\lbrack\\mathrm{CN}^-\\rbrack}^2}\\;\\\\1.9\\times10^{16}\\;=\\;\\frac{(@@c@@\\;-\\;x)}{(x){(2x)}^2}\\;\\;\\;\\;\\;\\mathrm{assume}\\;x\\;\\mathrm{is}\\;\\mathrm{very}\\;\\mathrm{small}\\;\\mathrm{compared}\\;\\mathrm{to}\\;@@c@@\\\\1.9\\times10^{16}\\;=\\;\\frac{@@c@@}{4x^{\\mathit3}}\\\\x\\;=\\;\\sqrt[3]{\\frac{@@c@@}{4\\cdot1.9\\times10^{16}}\\;}\\;=\\;@@sol@@\\\\\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;x\\;=\\;@@conc_cu@@\\;\\mathrm M\\\\\\lbrack\\mathrm{CN}^-\\rbrack\\;=\\;2x\\;=\\;@@conc_cn@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "2btxyhujneiv16t",
+                "type": "p"
+              }
+            ],
+            "id": "4057807659"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iwa5xxtn83bbt0t",
+                  "type": "p"
+                }
+              ],
+              "id": "3996072219"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "p2ox9pekgzod2n7",
+                  "type": "p"
+                }
+              ],
+              "id": "4218864310"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dfhiswpk4eup8rv",
+                  "type": "p"
+                }
+              ],
+              "id": "2629247763"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "lt4azfywugeevyl",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;2\\;\\mathrm{CN}^-(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}{(\\mathrm{CN})}_2^-(aq)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "0wipgbodp0ocbc0",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "___selfClosing___": true,
+                            "children": [
+                              {
+                                "id": "2kucabkzd5moddt",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "bzo7ug38xjft13r",
+                            "type": "td"
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "wtwawtewmlpl5qr",
+                                "text": "    Cu"
+                              },
+                              {
+                                "id": "8qdvwfby4sa8gfy",
+                                "sup": true,
+                                "text": "2+"
+                              },
+                              {
+                                "id": "9j04ou3thkr0bmb",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "12ccng6ntbxxhqr",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "z5x9dp6l5ovvozr",
+                                "text": ")          +       2 CN"
+                              },
+                              {
+                                "id": "d370xfwxix9q9j8",
+                                "sup": true,
+                                "text": "-"
+                              },
+                              {
+                                "id": "0n3mjkbs1bcyncd",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "ugg2efknzqm1ddv",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "fsixqaes2y1likp",
+                                "text": ")          ⇌      Cu(CN)"
+                              },
+                              {
+                                "id": "trxp5qgwsnzuj9q",
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "id": "c7kh2d5ac6lwmj6",
+                                "sup": true,
+                                "text": "-"
+                              },
+                              {
+                                "id": "1s1nheszxxuew7y",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "5628fot5agdg51e",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "lyhk5i8ppaplh9m",
+                                "text": ")   "
+                              }
+                            ],
+                            "colspan": 3,
+                            "id": "eeoxwijb80pg2uu",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "1wp5u4a3lvxmibu",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "6m5mm4vumiq24vx",
+                                "text": "Initial"
+                              }
+                            ],
+                            "id": "y5dhaxhy1qy68ob",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "6bm4nrm36idvo1n",
+                                "text": " 0 "
+                              }
+                            ],
+                            "id": "tqr8kjg49y5d2mf",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "dtrar6ojy1hk4ap",
+                                "text": " 0 "
+                              }
+                            ],
+                            "id": "1ql30k2oupt8rrp",
+                            "type": "td"
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "i2rwxdat0oseydl",
+                                "text": "      @@c@@ M      "
+                              }
+                            ],
+                            "id": "jypongv7aqoofdo",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "sn3qgkkv1irdljb",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "ibrr6pkzle9h0vv",
+                                "text": "Change"
+                              }
+                            ],
+                            "id": "pn2r21k0jf7ho2i",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "i904pev5vojdr9v",
+                                "text": "  + "
+                              },
+                              {
+                                "em": true,
+                                "id": "21htb1tgjptbtrb",
+                                "text": "x"
+                              },
+                              {
+                                "id": "u82owh1tye30x2e",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "49nu01hnn0wqnt3",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "n572u68gal7ktni",
+                                "text": "  + 2"
+                              },
+                              {
+                                "em": true,
+                                "id": "dbxaayutpm43xtu",
+                                "text": "x"
+                              },
+                              {
+                                "id": "pm6aj3sqi9payij",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "p35vfhmvt8gea1t",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "to0atbum09z37db",
+                                "text": "  -"
+                              },
+                              {
+                                "em": true,
+                                "id": "40zviqhlo9ce9k2",
+                                "text": "x"
+                              },
+                              {
+                                "id": "566q6dx7laen2aw",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "97li5dlnkkl6cob",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "duxz6di8annf0iz",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "k7gxsyqyxv03uan",
+                                "text": "Equilibrium"
+                              }
+                            ],
+                            "id": "vo5ta4xqti4etyu",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "qvfnf4pxezcawuh",
+                                "text": "  "
+                              },
+                              {
+                                "em": true,
+                                "id": "eab12evzj08mlal",
+                                "text": "x"
+                              },
+                              {
+                                "id": "unh8c10wckbihod",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "k4i2yrw3vagn53x",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "q6bhjpgwvo9a198",
+                                "text": "  2"
+                              },
+                              {
+                                "em": true,
+                                "id": "jrh1kio8xq0njl5",
+                                "text": "x"
+                              },
+                              {
+                                "id": "bw9uu3rxzgil9og",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "gfjoy1yen6ob99g",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "yr91vxoa5vdhd2f",
+                                "text": "  @@c@@ - "
+                              },
+                              {
+                                "em": true,
+                                "id": "31n0494b8qsgrmx",
+                                "text": "x"
+                              },
+                              {
+                                "id": "tg2lq04nt6tynrq",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "5hizisr70v8zhk9",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "qg46kzeq00ftpp6",
+                        "type": "tr"
+                      }
+                    ],
+                    "id": "fb5oo59xn4hf4xp",
+                    "type": "table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_f\\;=\\;\\frac{\\lbrack\\mathrm{Cu}{(\\mathrm{CN})}_2^-\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack{\\lbrack\\mathrm{CN}^-\\rbrack}^2}\\;\\\\1.9\\times10^{16}\\;=\\;\\frac{(@@c@@\\;-\\;x)}{(x){(2x)}^2}\\;\\;\\;\\;\\;\\mathrm{assume}\\;x\\;\\mathrm{is}\\;\\mathrm{very}\\;\\mathrm{small}\\;\\mathrm{compared}\\;\\mathrm{to}\\;@@c@@\\\\1.9\\times10^{16}\\;=\\;\\frac{@@c@@}{4x^{\\mathit3}}\\\\x\\;=\\;\\sqrt[3]{\\frac{@@c@@}{4\\cdot1.9\\times10^{16}}\\;}\\;=\\;@@sol@@\\\\\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;x\\;=\\;@@conc_cu@@\\;\\mathrm M\\\\\\lbrack\\mathrm{CN}^-\\rbrack\\;=\\;2x\\;=\\;@@conc_cn@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "zbe2c8uvh6sa98n",
+                    "type": "p"
+                  }
+                ],
+                "id": "1963286478"
+              },
+              "id": "948519315",
+              "legacyMatch": "[@@cu_low@@,@@cu_high@@]",
+              "rule": "input = {[@@cu_low@@,@@cu_high@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In order to calculate equilibrium concentrations, the most common approach is to use the equilibrium constant, equilibrium expression, and the I-C-E (Initial-Change-Equilibrium) table of concentrations (or similar algebraic calculation) to calculate equilibrium concentrations. When writing the equilibrium expression, be sure to write the correct chemical equation for the equilibrium, and consider the phase of the different substances and stoichiometric coefficients."
+                      }
+                    ],
+                    "id": "fdec48a9e2ac4e08a390f87874182312",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the initial concentrations, identify the initial concentration of all reactants and products that appear in the equilibrium expression, and remember that some or all of the initial concentrations may be zero. If none of the substances in the equilibrium expression are already dissolved in solution, then all of the initial concentrations will be zero. If some of the substances in the equilibrium expression are already dissolved in solution, such as from another dissolved substance, then those concentrations will not be zero and will depend on how much is already dissolved."
+                      }
+                    ],
+                    "id": "fccb6e0bea0442c7b5db712633530687",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the change in concentration required to reach equilibrium concentration, the change is usually shown as -x for reactants and +x for products. Be sure to consider the stoichiometric coefficients again. Finally, use algebra to solve for changes in concentrations and final equilibrium concentrations. Remember simplified algebra may be used in some cases. "
+                      }
+                    ],
+                    "id": "bb70233b99df41879c8183c298bfe5bb",
+                    "type": "p"
+                  }
+                ],
+                "id": "1324018730"
+              },
+              "id": "785639110",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "sh55zn0zij18suk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "t799pq0779h4wfk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;2\\;\\mathrm{CN}^-(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}{(\\mathrm{CN})}_2^-(aq)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "s2dav1zdfvzwpyv",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "uwhkasx85lr6xc1",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "ibofnu392o3g8n1",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "dbsk7t4ynst3z99",
+                            "text": "    Cu"
+                          },
+                          {
+                            "id": "lko8h0i4pvcj8lf",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "yobzf4lorzv7pkx",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "byapxv9vdoyr16l",
+                            "text": "aq"
+                          },
+                          {
+                            "id": "664dyb56raj0usx",
+                            "text": ")          +       2 CN"
+                          },
+                          {
+                            "id": "d00s16kvwmbkve8",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "l2znxzskk50ub38",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "kp1ehlhotq1o23e",
+                            "text": "aq"
+                          },
+                          {
+                            "id": "ty330mx7l3zkdbt",
+                            "text": ")          ⇌      Cu(CN)"
+                          },
+                          {
+                            "id": "49zocuton3aekr7",
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "78zgxy5nz0rxplz",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "dvnww9m7a25tzty",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "iskafuw57866j2x",
+                            "text": "aq"
+                          },
+                          {
+                            "id": "8igzjbhiiaa0w92",
+                            "text": ")   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "rl71h0zjsu452y2",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "h99vd17g7nsbcy2",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "0rulr46nfr9kvww",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "cvj3jwubt8j9kb4",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "pbymgluuajgtq11",
+                            "text": " 0 "
+                          }
+                        ],
+                        "id": "q70gxblbn10j0de",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ef0s807r3zhso46",
+                            "text": " 0 "
+                          }
+                        ],
+                        "id": "ega071jeg76joax",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "3k0qrjl73id6rxb",
+                            "text": "      @@c@@ M      "
+                          }
+                        ],
+                        "id": "qaldf4e0wbkcku7",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "2iuy9aoooe9npli",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "kw9a289865xbske",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "koi0j1fgoev76o2",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "lthqh5kg10m4uud",
+                            "text": "  + "
+                          },
+                          {
+                            "em": true,
+                            "id": "37fmpnxt6zgm0du",
+                            "text": "x"
+                          },
+                          {
+                            "id": "ad7f0xmir1mxc41",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "9i3ixlkmbkdbyki",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "rfx9amspgjftzg4",
+                            "text": "  + 2"
+                          },
+                          {
+                            "em": true,
+                            "id": "mpglukgw7u7mwad",
+                            "text": "x"
+                          },
+                          {
+                            "id": "j5a3yvgvpmz6a0v",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "lzgnca2xnwi79hd",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "h5izdwde3we6fi4",
+                            "text": "  -"
+                          },
+                          {
+                            "em": true,
+                            "id": "djrqa2txh40on34",
+                            "text": "x"
+                          },
+                          {
+                            "id": "n1kbrx3zb8t4zxg",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "6s0snglu2qmf9w7",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "nkm54fdkhrbfwgw",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "r84hixzhejw3o4a",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "nckxdbtnuwrj7kd",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ybyeptht3jwivkh",
+                            "text": "  "
+                          },
+                          {
+                            "em": true,
+                            "id": "qhfk4n9ohpnircc",
+                            "text": "x"
+                          },
+                          {
+                            "id": "2ip5pwcs6dmlu82",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "05sxhhvqwrtl88p",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "y3mfn885b9ia1ga",
+                            "text": "  2"
+                          },
+                          {
+                            "em": true,
+                            "id": "bhxoear6msj2n5l",
+                            "text": "x"
+                          },
+                          {
+                            "id": "90dbwc49x57vuga",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "tskzbgn45cld4v0",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "j5jiozrpngvmf62",
+                            "text": "  @@c@@ - "
+                          },
+                          {
+                            "em": true,
+                            "id": "ogxkhfhum5q5lox",
+                            "text": "x"
+                          },
+                          {
+                            "id": "qkl175pyxvm8gmo",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "5eeuhb1bijy8k53",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "4bk9p2agd7k31j0",
+                    "type": "tr"
+                  }
+                ],
+                "id": "g0j3yzsf90w8pp7",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_f\\;=\\;\\frac{\\lbrack\\mathrm{Cu}{(\\mathrm{CN})}_2^-\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack{\\lbrack\\mathrm{CN}^-\\rbrack}^2}\\;\\\\1.9\\times10^{16}\\;=\\;\\frac{(@@c@@\\;-\\;x)}{(x){(2x)}^2}\\;\\;\\;\\;\\;\\mathrm{assume}\\;x\\;\\mathrm{is}\\;\\mathrm{very}\\;\\mathrm{small}\\;\\mathrm{compared}\\;\\mathrm{to}\\;@@c@@\\\\1.9\\times10^{16}\\;=\\;\\frac{@@c@@}{4x^{\\mathit3}}\\\\x\\;=\\;\\sqrt[3]{\\frac{@@c@@}{4\\cdot1.9\\times10^{16}}\\;}\\;=\\;@@sol@@\\\\\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;x\\;=\\;@@conc_cu@@\\;\\mathrm M\\\\\\lbrack\\mathrm{CN}^-\\rbrack\\;=\\;2x\\;=\\;@@conc_cn@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "ht43b8rlbixj76r",
+                "type": "p"
+              }
+            ],
+            "id": "3534888626"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uqklaeeoca94hhg",
+                  "type": "p"
+                }
+              ],
+              "id": "3323869069"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xk71rfv5uatoukt",
+                  "type": "p"
+                }
+              ],
+              "id": "2671095149"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ys991ya66c3ag2n",
+                  "type": "p"
+                }
+              ],
+              "id": "340996762"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "4tgih6cyokvl5eb",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;2\\;\\mathrm{CN}^-(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}{(\\mathrm{CN})}_2^-(aq)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "cyfj077do8mia83",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "___selfClosing___": true,
+                            "children": [
+                              {
+                                "id": "fghjos57qyqkaf3",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "9dc339vmm4t6l72",
+                            "type": "td"
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "23fwg97dr87se3y",
+                                "text": "    Cu"
+                              },
+                              {
+                                "id": "rgbvg1z4efeyx3r",
+                                "sup": true,
+                                "text": "2+"
+                              },
+                              {
+                                "id": "x3mr8obc8kvovqa",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "elr3soki9625rdh",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "ds4mdmf1b3wmoay",
+                                "text": ")          +       2 CN"
+                              },
+                              {
+                                "id": "oo4fxrdtufdjmvl",
+                                "sup": true,
+                                "text": "-"
+                              },
+                              {
+                                "id": "u9vwqim1znj91tq",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "x7xr2rdskw27u81",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "3u8mvrvf3c70h0n",
+                                "text": ")          ⇌      Cu(CN)"
+                              },
+                              {
+                                "id": "cw0ncy1dx3a2p75",
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "id": "4xsbq1mbtdws0os",
+                                "sup": true,
+                                "text": "-"
+                              },
+                              {
+                                "id": "dksnlynwz0bzu7d",
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "1uvlllq4tfr9svm",
+                                "text": "aq"
+                              },
+                              {
+                                "id": "jzgb9b0wxf9gp7j",
+                                "text": ")   "
+                              }
+                            ],
+                            "colspan": 3,
+                            "id": "wppjcmhpi9uw4lh",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "me6m4ggqng6vmg0",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "6b671uhoxtsnv9y",
+                                "text": "Initial"
+                              }
+                            ],
+                            "id": "jiixpnl8c52ml8i",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "7osejxazt8xh8eh",
+                                "text": " 0 "
+                              }
+                            ],
+                            "id": "xxu87trn6airrj0",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "tmb1w1vkf67f1hi",
+                                "text": " 0 "
+                              }
+                            ],
+                            "id": "i40ofbfxm98qm7j",
+                            "type": "td"
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "afnu5eje9suwhn8",
+                                "text": "      @@c@@ M      "
+                              }
+                            ],
+                            "id": "rcqh7ke7z174wqg",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "qupzebeeb220g7u",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "tnfe8sl2as4f5df",
+                                "text": "Change"
+                              }
+                            ],
+                            "id": "w283v30ba31mnu7",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "77hhxhxofop71z5",
+                                "text": "  + "
+                              },
+                              {
+                                "em": true,
+                                "id": "11pluqg1zhl5hx9",
+                                "text": "x"
+                              },
+                              {
+                                "id": "6g03dk2uo9msikq",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "lyss55zc0srlhni",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "73k6vzqo8u8spka",
+                                "text": "  + 2"
+                              },
+                              {
+                                "em": true,
+                                "id": "56kdt3tdue2y764",
+                                "text": "x"
+                              },
+                              {
+                                "id": "5xx6v7rtjpytn81",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "tb6v9estawkatcx",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "hnmerg6pqbubfun",
+                                "text": "  -"
+                              },
+                              {
+                                "em": true,
+                                "id": "dd8euvn0j06x5eq",
+                                "text": "x"
+                              },
+                              {
+                                "id": "6eo9kldug5bkd8g",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "e56fst5sameadi4",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "7wij5n1na5jovb8",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "yyrijuc7ep0pmb0",
+                                "text": "Equilibrium"
+                              }
+                            ],
+                            "id": "g0bk4py8p7jf0mh",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "0vsb009dgo3rcpf",
+                                "text": "  "
+                              },
+                              {
+                                "em": true,
+                                "id": "8287rbjy74hkwu2",
+                                "text": "x"
+                              },
+                              {
+                                "id": "gue23s3tyjagr7s",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "2i69b47fvwg35vu",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "r40jvjk7rvcrted",
+                                "text": "  2"
+                              },
+                              {
+                                "em": true,
+                                "id": "f3gqo0c6myuc39t",
+                                "text": "x"
+                              },
+                              {
+                                "id": "4t3oopd9qiaibv8",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "qjmfuhf2bdbq7yk",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "kz8va37fwaahadd",
+                                "text": "  @@c@@ - "
+                              },
+                              {
+                                "em": true,
+                                "id": "lg47v1htttdcdpm",
+                                "text": "x"
+                              },
+                              {
+                                "id": "4tz5mcd4v3rd47j",
+                                "text": "  "
+                              }
+                            ],
+                            "id": "5frxxg63zls5t74",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "x2j05u7ky8vhwi0",
+                        "type": "tr"
+                      }
+                    ],
+                    "id": "7zl8b2qwma6cpfu",
+                    "type": "table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_f\\;=\\;\\frac{\\lbrack\\mathrm{Cu}{(\\mathrm{CN})}_2^-\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack{\\lbrack\\mathrm{CN}^-\\rbrack}^2}\\;\\\\1.9\\times10^{16}\\;=\\;\\frac{(@@c@@\\;-\\;x)}{(x){(2x)}^2}\\;\\;\\;\\;\\;\\mathrm{assume}\\;x\\;\\mathrm{is}\\;\\mathrm{very}\\;\\mathrm{small}\\;\\mathrm{compared}\\;\\mathrm{to}\\;@@c@@\\\\1.9\\times10^{16}\\;=\\;\\frac{@@c@@}{4x^{\\mathit3}}\\\\x\\;=\\;\\sqrt[3]{\\frac{@@c@@}{4\\cdot1.9\\times10^{16}}\\;}\\;=\\;@@sol@@\\\\\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;x\\;=\\;@@conc_cu@@\\;\\mathrm M\\\\\\lbrack\\mathrm{CN}^-\\rbrack\\;=\\;2x\\;=\\;@@conc_cn@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "6sn6rbdlhf9is6f",
+                    "type": "p"
+                  }
+                ],
+                "id": "16344111"
+              },
+              "id": "3869105943",
+              "legacyMatch": "[@@cn_low@@,@@cn_high@@]",
+              "rule": "input = {[@@cn_low@@,@@cn_high@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In order to calculate equilibrium concentrations, the most common approach is to use the equilibrium constant, equilibrium expression, and the I-C-E (Initial-Change-Equilibrium) table of concentrations (or similar algebraic calculation) to calculate equilibrium concentrations. When writing the equilibrium expression, be sure to write the correct chemical equation for the equilibrium, and consider the phase of the different substances and stoichiometric coefficients."
+                      }
+                    ],
+                    "id": "a293f9464b20445594d7bbbaaed86c7a",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the initial concentrations, identify the initial concentration of all reactants and products that appear in the equilibrium expression, and remember that some or all of the initial concentrations may be zero. If none of the substances in the equilibrium expression are already dissolved in solution, then all of the initial concentrations will be zero. If some of the substances in the equilibrium expression are already dissolved in solution, such as from another dissolved substance, then those concentrations will not be zero and will depend on how much is already dissolved."
+                      }
+                    ],
+                    "id": "f6fed36bc3e04bd0881ab67bf47751ab",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the change in concentration required to reach equilibrium concentration, the change is usually shown as -x for reactants and +x for products. Be sure to consider the stoichiometric coefficients again. Finally, use algebra to solve for changes in concentrations and final equilibrium concentrations. Remember simplified algebra may be used in some cases. "
+                      }
+                    ],
+                    "id": "eca1c11524974267b893c7f7d09b26aa",
+                    "type": "p"
+                  }
+                ],
+                "id": "4022417407"
+              },
+              "id": "4012547089",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "const conc = [.1, .2, .3, .4, .5, .6, .7, .8, .9];\nconst c = OLI.randomArrayItem(conc) .toPrecision(3);\n\nconst kf = 1.9e16;\nconst kd = c/kf;\nconst sol = ((kd/4)**(1/3)) .toPrecision(3);\n\nconst conc_cu = ((kd/4)**(1/3)) .toPrecision(2);\nconst cu_low = 0.95*conc_cu;\nconst cu_high = 1.05*conc_cu;\n\nconst conc_cn = (2*conc_cu) .toPrecision(2);\nconst cn_low = 0.95*conc_cn;\nconst cn_high = 1.05*conc_cn;\n\nconst check = conc_cu*(conc_cn)**2;\n\n// Expose variables to OLI\nmodule.exports = {\n  c, sol, conc_cu, conc_cn, check, cu_low, cu_high, cn_low, cn_high\n};\n",
+              "id": "ff822820c99746b193e3d47ce7ca4482",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate [Cu"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] and [CN"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "] in a @@c@@ M solution of [Cu(CN)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            }
+          ],
+          "id": "f26e26f32b03407b9887974b19053d80",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "f"
+            },
+            {
+              "text": " = 1.9×10"
+            },
+            {
+              "sup": true,
+              "text": "16"
+            },
+            {
+              "text": ") "
+            }
+          ],
+          "id": "jn71i2exgj5so8i",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " [Cu"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "a3b34352484e412db5cbbf1491ac49d5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " [CN"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "d2f36d22e3704febb244fc3f819fc099",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

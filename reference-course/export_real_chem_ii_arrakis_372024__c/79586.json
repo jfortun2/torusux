@@ -1,0 +1,288 @@
+{
+  "id": "79586",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "This reaction is observed to occur without being driven by an external influence."
+                    }
+                  ],
+                  "id": "ah76u2zzqyqzdlr",
+                  "type": "p"
+                }
+              ],
+              "id": "1420583466"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "This reaction is observed to occur spontaneously."
+                    }
+                  ],
+                  "id": "i6qbwofyk36at7b",
+                  "type": "p"
+                }
+              ],
+              "id": "260506270"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kzwq4a1k8b3sqz0",
+                  "type": "p"
+                }
+              ],
+              "id": "2825535973"
+            }
+          ],
+          "id": "340714677",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hints and try again."
+                      }
+                    ],
+                    "id": "ramu80ua5zv8dc8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2658661839"
+              },
+              "id": "3586954506",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This reaction is observed to occur without being driven by an external influence, so it is spontaneous (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " < 0)."
+                      }
+                    ],
+                    "id": "7l7p03ftitw5sny",
+                    "type": "p"
+                  }
+                ],
+                "id": "1080566911"
+              },
+              "id": "3789887315",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hints and try again."
+                      }
+                    ],
+                    "id": "lte9205slfre1w8",
+                    "type": "p"
+                  }
+                ],
+                "id": "1436722717"
+              },
+              "id": "455799669",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "i7jfbuxwp6lj10f",
+                    "type": "p"
+                  }
+                ],
+                "id": "1738620895"
+              },
+              "id": "537041167",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3586954506"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3789887315"
+            ],
+            [
+              [
+                "C"
+              ],
+              "455799669"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3586954506"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3789887315"
+        ],
+        [
+          [
+            "C"
+          ],
+          "455799669"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": " is positive."
+              }
+            ],
+            "id": "vqgo8v0hcz6pbxl",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": " is negative."
+              }
+            ],
+            "id": "n69hqueadgxyvef",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": " cannot be determined from the given information."
+              }
+            ],
+            "id": "kqhdnaw9x4i1rfi",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the sign of Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "text": " for the reaction? (Use chemical reasoning and/or observation.) "
+            }
+          ],
+          "id": "wpdxhu7p6983b3a",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "340714677": [
+      "78378"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

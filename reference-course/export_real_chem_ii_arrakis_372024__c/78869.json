@@ -1,0 +1,218 @@
+{
+  "id": "78869",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78080"
+  ],
+  "title": "entropy_equations_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "erh0mnme0ecuwgt",
+                  "type": "p"
+                }
+              ],
+              "id": "2870701766"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rvhoxixtrud6c5n",
+                  "type": "p"
+                }
+              ],
+              "id": "2727654499"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6h64n2zgdys123a",
+                  "type": "p"
+                }
+              ],
+              "id": "1769967297"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When three gaseous molecules reacting to form one gaseous molecule and two moles of liquid, matter becomes less dispersed and entropy decreases, so Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative."
+                      }
+                    ],
+                    "id": "vl3fui0v47eqdml",
+                    "type": "p"
+                  }
+                ],
+                "id": "945568082"
+              },
+              "id": "4039724371",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that entropy is a measure of the dispersal of matter, the distribution of microstates, or the disorder of a system. Consider whether the process of three gaseous molecules reacting to form one gaseous molecule and two moles of liquid increases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is positive) or decreases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative)."
+                      }
+                    ],
+                    "id": "1xk2k88qafeoc4f",
+                    "type": "p"
+                  }
+                ],
+                "id": "1629389474"
+              },
+              "id": "1005188532",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "positive"
+              }
+            ],
+            "id": "a3h9b8m2xgp8m41",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "negative"
+              }
+            ],
+            "id": "3q9tmndjd6u8qz6",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the combustion of methane."
+            }
+          ],
+          "id": "rx9bs8kv8oiexop",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm C{\\mathrm H}_4(g)\\;+\\;2\\;{\\mathrm O}_2(g)\\;\\rightarrow\\;\\mathrm C{\\mathrm O}_2(g)\\;+\\;2\\;{\\mathrm H}_2\\mathrm O(l)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "xw1mn3c4zi1bc34",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Is the value for Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " positive or negative?"
+            }
+          ],
+          "id": "1cefz0hzftd1gfs",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

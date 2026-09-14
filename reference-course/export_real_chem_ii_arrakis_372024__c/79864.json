@@ -1,0 +1,436 @@
+{
+  "id": "79864",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "mech_rate_lbd-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D"
+        ],
+        "2479802229"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The intermediate in this reaction is IO"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": ". It is produced in the first step of the mechanism and consumed in the second step."
+                  }
+                ],
+                "id": "gilijh5qf70d6ki",
+                "type": "p"
+              }
+            ],
+            "id": "303638201"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Intermediates are produced in one step and consumed in a subsequent step."
+                    }
+                  ],
+                  "id": "ncqkt1c066gt55s",
+                  "type": "p"
+                }
+              ],
+              "id": "3325655286"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "There is only one intermediate in this reaction."
+                    }
+                  ],
+                  "id": "6gzrbwdmd1f2g1w",
+                  "type": "p"
+                }
+              ],
+              "id": "2805799262"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3413935475",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4039625392",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1ef0w6jbs9gdvpi",
+                  "type": "p"
+                }
+              ],
+              "id": "3919572240"
+            }
+          ],
+          "id": "3468810773",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Intermediates are produced in one step and consumed in a subsequent step. IO"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": " is an intermediate."
+                      }
+                    ],
+                    "id": "y81gvo9bpi6m3vb",
+                    "type": "p"
+                  }
+                ],
+                "id": "4026411364"
+              },
+              "id": "2479802229",
+              "legacyMatch": "D",
+              "rule": "(!(input like {E})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {D}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is a reactant. Intermediates are produced in one step and consumed in a subsequent step."
+                      }
+                    ],
+                    "id": "2957722040",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1929085266",
+                "textDirection": "ltr"
+              },
+              "id": "2159073932",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && (input like {A}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. I"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": " is consumed in the first step and produced in the second step. Intermediates are produced in one step and consumed in a "
+                      },
+                      {
+                        "em": true,
+                        "text": "subsequent"
+                      },
+                      {
+                        "text": " step."
+                      }
+                    ],
+                    "id": "3634080720",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "890224611",
+                "textDirection": "ltr"
+              },
+              "id": "3329897909",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && ((!(input like {A})) && (input like {B}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O is a product. Intermediates are produced in one step and consumed in a subsequent step."
+                      }
+                    ],
+                    "id": "261090017",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2895390400",
+                "textDirection": "ltr"
+              },
+              "id": "2053532622",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {B})) && ((!(input like {A})) && (input like {C}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. O"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is a product. Intermediates are produced in one step and consumed in a subsequent step."
+                      }
+                    ],
+                    "id": "2073131411",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3700146380",
+                "textDirection": "ltr"
+              },
+              "id": "765838466",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E}))))",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. There is only one intermediate in this reaction."
+                      }
+                    ],
+                    "id": "p2i156wdfio1owa",
+                    "type": "p"
+                  }
+                ],
+                "id": "3462830243"
+              },
+              "id": "1938103326",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2159073932"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3329897909"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2053532622"
+        ],
+        [
+          [
+            "E"
+          ],
+          "765838466"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "0tss2efi3etgend",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "I"
+              },
+              {
+                "sup": true,
+                "text": "–"
+              }
+            ],
+            "id": "wkts41vz7p1apxv",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O"
+              }
+            ],
+            "id": "kcxkmwtf4d5llk0",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "IO"
+              },
+              {
+                "sup": true,
+                "text": "–"
+              }
+            ],
+            "id": "c2x6t2w7yd1y45j",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "z58i0k27twoy0vd",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Identify the intermediate(s) in the mechanism."
+            }
+          ],
+          "id": "7c1nou0xzzfdgj2",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "3468810773": [
+      "78465"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

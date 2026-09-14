@@ -1,0 +1,385 @@
+{
+  "id": "79474",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78063"
+  ],
+  "title": "oxid_agents_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "616004893",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1113661256",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "54999819",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Among these species, gold(III) has the highest reduction potential (1.498 V). It is the most easily reduced, so it is the strongest oxidizing agent."
+                      }
+                    ],
+                    "id": "2903793875",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2380660123",
+                "textDirection": "ltr"
+              },
+              "id": "4212728129",
+              "rule": "input like {1882192765}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I﻿ncorrect. The species with the highest reduction potential is the most easily reduced, so it is the strongest oxidizing agent."
+                      }
+                    ],
+                    "id": "1153274460",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3053423753",
+                "textDirection": "ltr"
+              },
+              "id": "1437306779",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "53072681",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2750642776",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2788343081",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Among these species, cobalt(II) has the lowest reduction potential (−0.28 V). It is the least easily reduced, so it is the weakest oxidizing agent."
+                      }
+                    ],
+                    "id": "4267478468",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "275283300",
+                "textDirection": "ltr"
+              },
+              "id": "2662532793",
+              "rule": "input like {1238430317}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I﻿ncorrect. The species with the lowest reduction potential is the least easily reduced, so it is the weakest oxidizing agent."
+                      }
+                    ],
+                    "id": "2908581792",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1005935538",
+                "textDirection": "ltr"
+              },
+              "id": "2373762018",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Select from cobalt(II), iron(III), and gold(III) to answer the following. The Standard Reduction Potentials table may be useful. is the strongest oxidizing agent. is the weakest oxidizing agent.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "4147225541",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2588486120",
+          "operation": "shuffle",
+          "partId": "54999819",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "559343256",
+          "operation": "shuffle",
+          "partId": "2788343081",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "cobalt(II)"
+              }
+            ],
+            "id": "3839723826",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1026135974",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "iron(III)"
+              }
+            ],
+            "id": "2323878334",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "298950759",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "cobalt(II)"
+              }
+            ],
+            "id": "2669296312",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1238430317",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "iron(III)"
+              }
+            ],
+            "id": "3673323539",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1745954419",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "gold(III)"
+              }
+            ],
+            "id": "1030573091",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1882192765",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "gold(III)"
+              }
+            ],
+            "id": "1281487135",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3120300862",
+        "textDirection": "ltr"
+      }
+    ],
+    "customScoring": true,
+    "inputs": [
+      {
+        "choiceIds": [
+          "1026135974",
+          "298950759",
+          "1882192765"
+        ],
+        "id": "2663960270",
+        "inputType": "dropdown",
+        "partId": "54999819"
+      },
+      {
+        "choiceIds": [
+          "1238430317",
+          "1745954419",
+          "3120300862"
+        ],
+        "id": "2630212239",
+        "inputType": "dropdown",
+        "partId": "2788343081"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Select from cobalt(II), iron(III), and gold(III) to answer the following. The "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_xdwka",
+              "idref": "80670",
+              "target": "self",
+              "type": "a"
+            },
+            {
+              "text": " table may be useful."
+            }
+          ],
+          "id": "3737420675",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2663960270",
+              "type": "input_ref"
+            },
+            {
+              "text": " is the strongest oxidizing agent."
+            }
+          ],
+          "id": "2128521355",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2630212239",
+              "type": "input_ref"
+            },
+            {
+              "text": " is the weakest oxidizing agent."
+            }
+          ],
+          "id": "3486890321",
+          "type": "p"
+        }
+      ],
+      "id": "3006276485"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2788343081": [
+      "78387"
+    ],
+    "54999819": [
+      "78387"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

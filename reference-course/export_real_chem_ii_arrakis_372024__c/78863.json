@@ -1,0 +1,809 @@
+{
+  "id": "78863",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78265"
+  ],
+  "title": "po2_UA_nuclear_be_calcs_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "6qs1csxwvbqifd8",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "tzx8nfvgmegwbcc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}(29\\times1.0073\\;\\mathrm{amu}\\;+\\;35\\times1.0087\\;\\mathrm{amu}\\;+\\;29\\times0.00055\\;\\mathrm{amu})\\;=\\;64.5322\\;\\mathrm{amu}\\\\\\mathrm{then}\\;\\;\\;64.5553\\;\\mathrm{amu}\\;–\\;63.9298\\;\\mathrm{amu}\\;=\\;0.6024\\;\\mathrm{amu}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "75tixc9ssuxkqrc",
+                "type": "p"
+              }
+            ],
+            "id": "3673329227"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8tfvkl7mn16e3tv",
+                  "type": "p"
+                }
+              ],
+              "id": "4209836798"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0bjej94k5s9c2gj",
+                  "type": "p"
+                }
+              ],
+              "id": "1055339002"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v03ke8zpb71p6x5",
+                  "type": "p"
+                }
+              ],
+              "id": "2705175241"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "16swh2osundjnuo",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}(29\\times1.0073\\;\\mathrm{amu}\\;+\\;35\\times1.0087\\;\\mathrm{amu}\\;+\\;29\\times0.00055\\;\\mathrm{amu})\\;=\\;64.5322\\;\\mathrm{amu}\\\\\\mathrm{then}\\;\\;\\;64.5553\\;\\mathrm{amu}\\;–\\;63.9298\\;\\mathrm{amu}\\;=\\;0.6024\\;\\mathrm{amu}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "mqoosd9f5tvrouc",
+                    "type": "p"
+                  }
+                ],
+                "id": "147356944"
+              },
+              "id": "4229875675",
+              "legacyMatch": "[0.625,0.626]",
+              "rule": "input = {[0.600,0.604]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect is the difference between the calculated and experimentally measured masses for an atom of Cu-64."
+                      }
+                    ],
+                    "id": "ea4c9849e216428dbf6a646bd19b1391",
+                    "type": "p"
+                  }
+                ],
+                "id": "960338203"
+              },
+              "id": "3157578897",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 5
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "jjg6wn7jfwro3z7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "ct00qemcsxahe78",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm E\\;=\\;\\mathrm m\\cdot\\mathrm c^2\\;\\\\=\\;0.6024\\;\\mathrm{amu}\\;\\cdot\\;\\dfrac{1.661\\times10^{-27}\\;\\mathrm{kg}}{1\\;\\mathrm{amu}}\\cdot\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\cdot\\dfrac{\\mathrm J}{\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\;\\\\=\\;8.993\\times10^{-11}\\;\\mathrm J\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "vle4zxbb5piupa1",
+                "type": "p"
+              }
+            ],
+            "id": "3441763640"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ipa2rq4i5wlu33c",
+                  "type": "p"
+                }
+              ],
+              "id": "2091513854"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1dzkfym6ngq9veg",
+                  "type": "p"
+                }
+              ],
+              "id": "2531211190"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c849arr460tu87h",
+                  "type": "p"
+                }
+              ],
+              "id": "3346562649"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "zevc3xnom8atyga",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm E\\;=\\;\\mathrm m\\cdot\\mathrm c^2\\;\\\\=\\;0.6024\\;\\mathrm{amu}\\;\\cdot\\;\\dfrac{1.661\\times10^{-27}\\;\\mathrm{kg}}{1\\;\\mathrm{amu}}\\cdot\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\cdot\\dfrac{\\mathrm J}{\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\;\\\\=\\;8.993\\times10^{-11}\\;\\mathrm J\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "hqvml9wh4jdma2q",
+                    "type": "p"
+                  }
+                ],
+                "id": "1765902350"
+              },
+              "id": "3034970979",
+              "legacyMatch": "[9.33e-11,9.35e-11]",
+              "rule": "input = {[8.95e-11,9.00e-11]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The binding energy in joules per atom can be calculated using the mass defect and the mass-energy equivalence equation. Be sure to use the correct units!"
+                      }
+                    ],
+                    "id": "cb74f68a3b4d4e1ab6464abe6507b935",
+                    "type": "p"
+                  }
+                ],
+                "id": "833807829"
+              },
+              "id": "2993449182",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "z3hhxsxzw41sbvc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "q072tvpfgq22nfw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}8.993\\times10^{-11}\\;\\dfrac{\\mathrm J}{\\mathrm{atom}}\\cdot\\dfrac{6.022\\times10^{23}\\;\\mathrm{atoms}}{\\mathrm{mol}}\\cdot\\dfrac{1\\;\\mathrm{kJ}}{1000\\;\\mathrm J}\\;\\\\=\\;5.415\\times10^{10}\\;\\;\\mathrm{kJ}/\\mathrm{mol}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "gveof6yc85vfci9",
+                "type": "p"
+              }
+            ],
+            "id": "2876339300"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1flydl7syhov72n",
+                  "type": "p"
+                }
+              ],
+              "id": "3367215811"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c49z1d6xk5b8s6r",
+                  "type": "p"
+                }
+              ],
+              "id": "526239677"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jbqkowk9kez6ltv",
+                  "type": "p"
+                }
+              ],
+              "id": "2262987937"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "55wd7zyi1526ew2",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}8.993\\times10^{-11}\\;\\dfrac{\\mathrm J}{\\mathrm{atom}}\\cdot\\dfrac{6.022\\times10^{23}\\;\\mathrm{atoms}}{\\mathrm{mol}}\\cdot\\dfrac{1\\;\\mathrm{kJ}}{1000\\;\\mathrm J}\\;\\\\=\\;5.415\\times10^{10}\\;\\;\\mathrm{kJ}/\\mathrm{mol}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "e11k79rbnl2c3hb",
+                    "type": "p"
+                  }
+                ],
+                "id": "3463760974"
+              },
+              "id": "619391581",
+              "legacyMatch": "[5.61e10,5.64e10]",
+              "rule": "input = {[53800000000,54400000000]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the appropriate conversion factors to convert binding energy from J/atom to kJ/mol."
+                      }
+                    ],
+                    "id": "a60863dfb2154a75a389382f40fbef75",
+                    "type": "p"
+                  }
+                ],
+                "id": "154944201"
+              },
+              "id": "2745881233",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "8p272fkmfs2jrsq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "1052ll3kaucfwpg",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}8.993\\times10^{-11}\\;\\mathrm J\\cdot\\dfrac{1\\;\\mathrm{eV}}{1.609\\times10^{-19}\\;\\mathrm J}\\cdot\\dfrac{1\\;\\mathrm{MeV}}{10^6\\;\\mathrm J}\\;=\\;561.3\\;\\mathrm{MeV}\\\\\\mathrm{then}\\;\\;\\;\\dfrac{561.3\\;\\mathrm{MeV}}{64\\;\\mathrm{nucleons}}\\;=\\;8.771\\;\\dfrac{\\mathrm{MeV}}{\\mathrm{nucleon}}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "4yyomlzyayqrb92",
+                "type": "p"
+              }
+            ],
+            "id": "1261999411"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "az3xnxyeby0hhvx",
+                  "type": "p"
+                }
+              ],
+              "id": "2251367077"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6rw3q2sdrd5ui97",
+                  "type": "p"
+                }
+              ],
+              "id": "1887325192"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cza07nxdjafildy",
+                  "type": "p"
+                }
+              ],
+              "id": "2730462889"
+            }
+          ],
+          "id": "numeric4",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "npnnrsal27vgfet",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}8.993\\times10^{-11}\\;\\mathrm J\\cdot\\dfrac{1\\;\\mathrm{eV}}{1.609\\times10^{-19}\\;\\mathrm J}\\cdot\\dfrac{1\\;\\mathrm{MeV}}{10^6\\;\\mathrm J}\\;=\\;561.3\\;\\mathrm{MeV}\\\\\\mathrm{then}\\;\\;\\;\\dfrac{561.3\\;\\mathrm{MeV}}{64\\;\\mathrm{nucleons}}\\;=\\;8.771\\;\\dfrac{\\mathrm{MeV}}{\\mathrm{nucleon}}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "n4uyxkydo0063j9",
+                    "type": "p"
+                  }
+                ],
+                "id": "2787564657"
+              },
+              "id": "878067763",
+              "legacyMatch": "[9.06,9.078]",
+              "rule": "input = {[8.72,8.79]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the appropriate conversion factors to convert binding energy from J/atom to MeV/atom. Then divide by the number of nucleons to determine the binding energy in MeV/nucleon."
+                      }
+                    ],
+                    "id": "a790531e56ac49b5bfc8dc876f8b99e0",
+                    "type": "p"
+                  }
+                ],
+                "id": "4060412644"
+              },
+              "id": "650668905",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      },
+      {
+        "id": "numeric4",
+        "inputType": "numeric",
+        "partId": "numeric4",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The mass of a Cu-64 atom is 63.9298 amu. "
+            }
+          ],
+          "id": "df52801fd58d4597b107ffa48c53bc94",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the mass defect for Cu-64 in amu. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " amu"
+            }
+          ],
+          "id": "ec7fe9f86c954950ae0e53501ee0c9f3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the binding energy for one atom of Cu-64 in J. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " J"
+            }
+          ],
+          "id": "b64e03b1a9744614bf837afe57229c45",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the binding energy for Cu-64 in kJ/mole. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ/mol"
+            }
+          ],
+          "id": "a3a3122569974410961d0e42be08658c",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the binding energy for Cu-64 in MeV/nucleon. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric4",
+              "input": "numeric4",
+              "type": "input_ref"
+            },
+            {
+              "text": " MeV/nucleon"
+            }
+          ],
+          "id": "fefd8ccb596045b3b021f6e4edd98c25",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [
+      "78533"
+    ],
+    "numeric2": [
+      "78533"
+    ],
+    "numeric3": [
+      "78533"
+    ],
+    "numeric4": [
+      "78533"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

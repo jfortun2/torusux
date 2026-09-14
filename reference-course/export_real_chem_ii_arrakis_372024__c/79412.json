@@ -1,0 +1,677 @@
+{
+  "id": "79412",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78206"
+  ],
+  "title": "pool01_mass_defect_bind_energy-pool01_v4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Correct. The total mass of the subatomic particles in Mg-26 is: "
+                  }
+                ],
+                "id": "484234552",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "5i5eg86xx8vbsv2",
+                    "text": ""
+                  }
+                ],
+                "id": "2216998530",
+                "src": "\\left(12\\times1.0073+14\\times1.0087+12\\times0.00055\\right)\\;\\mathrm{amu}\\;=\\;26.2160\\;\\mathrm{amu}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The mass defect is: "
+                  }
+                ],
+                "id": "2854047212",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "v9plxfnnfr79ecw",
+                    "text": ""
+                  }
+                ],
+                "id": "4162674558",
+                "src": "26.2160\\;-\\;25.9826\\;\\mathrm{amu}\\;=\\;0.2334\\;\\mathrm{amu}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "4234789539",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "1547825308",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sfuky1p2bx29win",
+                  "type": "p"
+                }
+              ],
+              "id": "3375191078"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "44ndkpcsvm4qs3j",
+                  "type": "p"
+                }
+              ],
+              "id": "2594063327"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f6x0wvmp5zcnkte",
+                  "type": "p"
+                }
+              ],
+              "id": "3426243902"
+            }
+          ],
+          "id": "mass_defect_v4",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Correct. The total mass of the subatomic particles in Mg-26 is: "
+                      }
+                    ],
+                    "id": "feb710211ffb4bceaa74da733625d8f0",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "y77nxuakxaij8cr",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4159814456",
+                    "src": "\\left(12\\times1.0073+14\\times1.0087+12\\times0.00055\\right)\\;\\mathrm{amu}\\;=\\;26.2160\\;\\mathrm{amu}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The mass defect is: "
+                      }
+                    ],
+                    "id": "1215206534",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "civ6duisd10kgy6",
+                        "text": ""
+                      }
+                    ],
+                    "id": "3667711074",
+                    "src": "26.2160\\;-\\;25.9826\\;\\mathrm{amu}\\;=\\;0.2334\\;\\mathrm{amu}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "781028877",
+                    "type": "p"
+                  }
+                ],
+                "id": "3117153672"
+              },
+              "id": "2485965160",
+              "legacyMatch": "[0.23,0.24]",
+              "rule": "input = {[0.232,0.234]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect is found by calculating the difference between the experimentally measured mass of the Mg-26 and the total calculated mass of its protons, neutrons, and electrons. "
+                      }
+                    ],
+                    "id": "d9d17d85b406478aa45a1615176fdb6e",
+                    "type": "p"
+                  }
+                ],
+                "id": "3159979718"
+              },
+              "id": "1727002261",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Correct. The mass defect in amu/atom is equal to the mass defect in g/mol. Then using "
+                  },
+                  {
+                    "em": true,
+                    "text": "E"
+                  },
+                  {
+                    "text": " = "
+                  },
+                  {
+                    "em": true,
+                    "text": "mc"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ": "
+                  }
+                ],
+                "id": "1160115751",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wwcmxoi25r5pkse",
+                    "text": ""
+                  }
+                ],
+                "id": "2661186830",
+                "src": "\\begin{array}{c}\\left(\\dfrac{0.2334\\;\\mathrm g}{\\mathrm{mol}}\\right)\\left(\\dfrac{\\mathrm{kg}}{10^3\\;\\mathrm g}\\right)\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\left(\\dfrac{\\mathrm J}{\\displaystyle\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\right)\\\\=\\;2.098\\times10^{13}\\;\\mathrm J/\\mathrm{mol}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2596888825",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "3035595250",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "58nkis5kywf49rk",
+                  "type": "p"
+                }
+              ],
+              "id": "443926616"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "i0a9e1logn82hyk",
+                  "type": "p"
+                }
+              ],
+              "id": "2455323203"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l3xgnvfsj7d04no",
+                  "type": "p"
+                }
+              ],
+              "id": "3862158555"
+            }
+          ],
+          "id": "binding_energy_v4",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The mass defect in amu/atom is equal to the mass defect in g/mol. Then using "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "mc"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ": "
+                      }
+                    ],
+                    "id": "ca97e3c8907b4e6cbf772121a0237021",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "smcakqau2n74f09",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4149302897",
+                    "src": "\\begin{array}{c}\\left(\\dfrac{0.2334\\;\\mathrm g}{\\mathrm{mol}}\\right)\\left(\\dfrac{\\mathrm{kg}}{10^3\\;\\mathrm g}\\right)\\left(2.998\\times10^8\\;\\dfrac{\\mathrm m}{\\mathrm s}\\right)^2\\left(\\dfrac{\\mathrm J}{\\displaystyle\\mathrm{kg}\\cdot\\mathrm m^2/\\mathrm s^2}\\right)\\\\=\\;2.098\\times10^{13}\\;\\mathrm J/\\mathrm{mol}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3174106371",
+                    "type": "p"
+                  }
+                ],
+                "id": "22668452"
+              },
+              "id": "2708367752",
+              "legacyMatch": "[2.1e13,2.3e13]",
+              "rule": "input = {[20000000000000,20200000000000]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass defect in amu/atom is equal to the mass defect in g/mol. Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "E"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "mc"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and pay attention to units."
+                      }
+                    ],
+                    "id": "pbtbdfq958qt1f1",
+                    "type": "p"
+                  }
+                ],
+                "id": "2858736750"
+              },
+              "id": "2623582328",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Correct. Converting from J/mol to MeV/atom: "
+                  }
+                ],
+                "id": "3911335783",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "4l9p7gzyj28lby1",
+                    "text": ""
+                  }
+                ],
+                "id": "2053126934",
+                "src": "\\begin{array}{c}\\left(\\dfrac{2.098\\times10^{13}\\;\\mathrm J}{\\mathrm{mol}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}}{6.022\\times10^{23}\\;\\mathrm{atoms}}\\right)\\left(\\dfrac{1\\;\\mathrm{eV}}{1.602\\times10^{-19}\\;\\mathrm J}\\right)\\left(\\dfrac{\\mathrm{MeV}}{10^6\\;\\mathrm{eV}}\\right)\\\\=\\;217.5\\;\\mathrm{MeV}/\\mathrm{atom}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2716898038",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "1483198017",
+            "textDirection": "ltr"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7tqbozaoumvv7xi",
+                  "type": "p"
+                }
+              ],
+              "id": "1922598244"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n3gsnwdynas6ycw",
+                  "type": "p"
+                }
+              ],
+              "id": "2537743261"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xlowa7b86gtlo57",
+                  "type": "p"
+                }
+              ],
+              "id": "4065951790"
+            }
+          ],
+          "id": "electron_volts_v4",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Converting from J/mol to MeV/atom: "
+                      }
+                    ],
+                    "id": "ab492ee36ca148928fd5384aee2ae0e1",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "7tlaqkjvb6njavt",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1257720997",
+                    "src": "\\begin{array}{c}\\left(\\dfrac{2.098\\times10^{13}\\;\\mathrm J}{\\mathrm{mol}}\\right)\\left(\\dfrac{1\\;\\mathrm{mol}}{6.022\\times10^{23}\\;\\mathrm{atoms}}\\right)\\left(\\dfrac{1\\;\\mathrm{eV}}{1.602\\times10^{-19}\\;\\mathrm J}\\right)\\left(\\dfrac{\\mathrm{MeV}}{10^6\\;\\mathrm{eV}}\\right)\\\\=\\;217.5\\;\\mathrm{MeV}/\\mathrm{atom}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2658485978",
+                    "type": "p"
+                  }
+                ],
+                "id": "3967987568"
+              },
+              "id": "2552309660",
+              "legacyMatch": "[216,220]",
+              "rule": "input = {[215,219]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the appropriate conversion factors to convert binding energy from J/mol to MeV/atom."
+                      }
+                    ],
+                    "id": "fdf1d374169a4a21af64006564055ea8",
+                    "type": "p"
+                  }
+                ],
+                "id": "720393816"
+              },
+              "id": "3942476603",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " The experimentally determined atomic mass of Mg-26 is 25.9826 amu. Calculate the mass defect, the binding energy in J/mol, and the binding energy in MeV/atom.  Mass Defect =  amu Binding Energy =  J/molBinding Energy =  MeV/atom",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "mass_defect_v4",
+        "inputType": "numeric",
+        "partId": "mass_defect_v4",
+        "size": "small"
+      },
+      {
+        "id": "binding_energy_v4",
+        "inputType": "numeric",
+        "partId": "binding_energy_v4",
+        "size": "small"
+      },
+      {
+        "id": "electron_volts_v4",
+        "inputType": "numeric",
+        "partId": "electron_volts_v4",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " The experimentally determined atomic mass of Mg-26 is 25.9826 amu. Calculate the mass defect, the binding energy in J/mol, and the binding energy in MeV/atom.  "
+            }
+          ],
+          "id": "be19eeb68cd740d7a678a74b3d1d0cd7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Mass Defect = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "mass_defect_v4",
+              "input": "mass_defect_v4",
+              "type": "input_ref"
+            },
+            {
+              "text": " amu "
+            }
+          ],
+          "id": "psd5zo122ld07so",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Binding Energy = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "binding_energy_v4",
+              "input": "binding_energy_v4",
+              "type": "input_ref"
+            },
+            {
+              "text": " J/mol"
+            }
+          ],
+          "id": "ugb8yrtb1md2mlc",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Binding Energy = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "electron_volts_v4",
+              "input": "electron_volts_v4",
+              "type": "input_ref"
+            },
+            {
+              "text": " MeV/atom"
+            }
+          ],
+          "id": "06ghx0niz1668z1",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "binding_energy_v4": [
+      "78444"
+    ],
+    "electron_volts_v4": [
+      "78444"
+    ],
+    "mass_defect_v4": [
+      "78324"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

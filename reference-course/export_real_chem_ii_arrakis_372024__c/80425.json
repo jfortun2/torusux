@@ -1,0 +1,331 @@
+{
+  "id": "80425",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "indicators_lbd-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "10de9w7gd4n70qv",
+                  "type": "p"
+                }
+              ],
+              "id": "3508928520"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fsq9ckght2fxkep",
+                  "type": "p"
+                }
+              ],
+              "id": "2463339082"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u89i3asphhx9e0e",
+                  "type": "p"
+                }
+              ],
+              "id": "3898521430"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is approximately 12.5, and the final pH is approximately 1. "
+                      }
+                    ],
+                    "id": "82zjs1lkrnsb07j",
+                    "type": "p"
+                  }
+                ],
+                "id": "3224360380"
+              },
+              "id": "403830781",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is approximately 12.5, and the final pH is approximately 1."
+                      }
+                    ],
+                    "id": "oul35xpw583jzsy",
+                    "type": "p"
+                  }
+                ],
+                "id": "2709865629"
+              },
+              "id": "780445677",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The initial pH of approximately 12.5 indicates that the starting solution is strongly basic, and the final pH of approximately 1 indicates that it is strongly acidic. "
+                      }
+                    ],
+                    "id": "3olria2epzjffoq",
+                    "type": "p"
+                  }
+                ],
+                "id": "543504545"
+              },
+              "id": "3514028732",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is approximately 12.5, and the final pH is approximately 1."
+                      }
+                    ],
+                    "id": "fx8qk1gzw5r1elt",
+                    "type": "p"
+                  }
+                ],
+                "id": "1714865642"
+              },
+              "id": "3015717508",
+              "legacyMatch": "D",
+              "rule": "input like {first_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "604yvucqkmtkhil",
+                    "type": "p"
+                  }
+                ],
+                "id": "3364316914"
+              },
+              "id": "1503747653",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " Identity of analyte and titrant:  Appropriate indicator(s) to be used for this titration. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "403830781"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "780445677"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "3514028732"
+        ],
+        [
+          [
+            "first_D"
+          ],
+          "3015717508"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: strong acid — titrant: strong base "
+              }
+            ],
+            "id": "3454908993",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: weak acid — titrant: strong base"
+              }
+            ],
+            "id": "1612147413",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: strong base — titrant: strong acid"
+              }
+            ],
+            "id": "1250476052",
+            "type": "p"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: weak base — titrant: strong acid"
+              }
+            ],
+            "id": "643497538",
+            "type": "p"
+          }
+        ],
+        "id": "first_D"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C",
+          "first_D"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "3245101409",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "w6n16c950rz41sn",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "qv28ewgc7q3tnhn",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/e3/e30bcc531633b980716b36cce89bbfd6/TC_strong_base.png",
+          "type": "img",
+          "width": "600"
+        },
+        {
+          "children": [
+            {
+              "text": "Identity of analyte and titrant: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "oykuvlz52h6lmum",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Appropriate indicator(s) to be used for this titration. "
+            }
+          ],
+          "id": "yst6g6b2nlbzpt1",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78464"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

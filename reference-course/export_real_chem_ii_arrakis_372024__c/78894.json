@@ -1,0 +1,234 @@
+{
+  "id": "78894",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "autoion3_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack\\mathrm H^+\\rbrack\\;=\\;\\frac{K_{\\mathrm w}}{\\lbrack\\mathrm{OH}^-\\rbrack}\\; =\\;\\frac{1.0\\times10^{-14}}{\\;0.0010}\\;=\\;1.0\\times10^{-11}\\;M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "v95m3kia3f8yw2z",
+                "type": "p"
+              }
+            ],
+            "id": "3951946777"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2ghv4ggurvo646z",
+                  "type": "p"
+                }
+              ],
+              "id": "116879617"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ivhy0bj8qxl77fj",
+                  "type": "p"
+                }
+              ],
+              "id": "3728552976"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uk1u0yqo76s67gv",
+                  "type": "p"
+                }
+              ],
+              "id": "2424124687"
+            }
+          ],
+          "id": "3845159135",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm H^+\\rbrack\\;=\\;\\frac{K_{\\mathrm w}}{\\lbrack\\mathrm{OH}^-\\rbrack}\\; =\\;\\frac{1.0\\times10^{-14}}{\\;0.0010}\\;=\\;1.0\\times10^{-11}\\;M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "yadynm4hli73ra9",
+                    "type": "p"
+                  }
+                ],
+                "id": "1762898611"
+              },
+              "id": "3590997041",
+              "legacyMatch": "1.0e-11",
+              "rule": "input = {1.0e-11}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm H^+\\rbrack\\;=\\;\\frac{K_{\\mathrm w}}{\\lbrack\\mathrm{OH}^-\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "bhvz1oqp685a2si",
+                    "type": "p"
+                  }
+                ],
+                "id": "3498031581"
+              },
+              "id": "1449709010",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3845159135",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the hydronium ion concentration in an aqueous solution with a hydroxide ion concentration of 0.0010 M at 25°C? "
+            }
+          ],
+          "id": "6o42o9evfkrjoqn",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M "
+            }
+          ],
+          "id": "wce2naago1mde3c",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3845159135": [
+      "78284"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

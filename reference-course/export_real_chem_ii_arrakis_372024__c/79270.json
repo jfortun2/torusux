@@ -1,0 +1,212 @@
+{
+  "id": "79270",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "electro_calc_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}n\\;=\\;\\frac QF\\;=\\;\\frac{{\\displaystyle\\frac{2.50\\;\\times\\;10^3\\;\\mathrm C}{\\mathrm s}}\\;\\times\\;900\\;\\mathrm s}{96,485\\;\\mathrm C/\\mathrm{mol}\\;\\mathrm e^-}\\;=\\;23.3\\;\\mathrm{mol}\\;\\mathrm e^-\\\\\\mathrm{Cathode}:\\;\\mathrm{Al}^{3+}(aq)\\;+\\;3\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm{Al}(s)\\\\\\mathrm{Mass}\\;\\mathrm{Al}\\;=\\;23.3\\;\\;\\mathrm{mol}\\;\\mathrm e^-\\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{Al}}{3\\;\\mathrm{mol}\\;\\mathrm e^-}\\;\\times\\;\\frac{26.982\\;\\mathrm g\\;\\mathrm{Al}}{1\\;\\mathrm{mol}\\;\\mathrm{Al}}\\;=\\;210\\;\\mathrm g\\;\\mathrm{Al}\\\\\\\\\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "fsae2b8ad6n4o2a",
+                "type": "p"
+              }
+            ],
+            "id": "3766413020"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k01en8l64d7o2jm",
+                  "type": "p"
+                }
+              ],
+              "id": "1750085565"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vieeo7uoewckmjk",
+                  "type": "p"
+                }
+              ],
+              "id": "981809861"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "89qgqg3s76l82cn",
+                  "type": "p"
+                }
+              ],
+              "id": "3026819532"
+            }
+          ],
+          "id": "1268043495",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}n\\;=\\;\\frac QF\\;=\\;\\frac{{\\displaystyle\\frac{2.50\\;\\times\\;10^3\\;\\mathrm C}{\\mathrm s}}\\;\\times\\;900\\;\\mathrm s}{96,485\\;\\mathrm C/\\mathrm{mol}\\;\\mathrm e-}\\;=\\;23.3\\;\\mathrm{mol}\\;\\mathrm e-\\\\\\mathrm{Cathode}:\\;\\mathrm{Al}^{3+}(aq)\\;+\\;3\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm{Al}(s)\\\\\\mathrm{Mass}\\;\\mathrm{Al}\\;=\\;23.3\\;\\;\\mathrm{mol}\\;\\mathrm e^-\\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{Al}}{3\\;\\mathrm{mol}\\;\\mathrm e^-}\\;\\times\\;\\frac{26.982\\;\\mathrm g\\;\\mathrm{Al}}{1\\;\\mathrm{mol}\\;\\mathrm{Al}}\\;=\\;210\\;\\mathrm g\\;\\mathrm{Al}\\\\\\\\\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "hhe3o9owa9yn0fx",
+                    "type": "p"
+                  }
+                ],
+                "id": "1476365732"
+              },
+              "id": "3469627507",
+              "legacyMatch": "[209,211]",
+              "rule": "input = {[209,211]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "o0h5mf3scxdzfxu",
+                    "type": "p"
+                  }
+                ],
+                "id": "809449922"
+              },
+              "id": "2258683966",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Aluminum metal can be made from aluminum ions by electrolysis. What mass of aluminum metal would be recovered if a current of 2.50 × 103 A passed through the solution for 15.0 minutes? Assume the yield is 100%.  g Al ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1268043495",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Aluminum metal can be made from aluminum ions by electrolysis. What mass of aluminum metal would be recovered if a current of 2.50 × 10"
+            },
+            {
+              "sup": true,
+              "text": "3"
+            },
+            {
+              "text": " A passed through the solution for 15.0 minutes? Assume the yield is 100%. "
+            }
+          ],
+          "id": "evkd8tq2up8t4ws",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " g Al "
+            }
+          ],
+          "id": "pf2me2yc66l8bnf",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1268043495": [
+      "78505"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

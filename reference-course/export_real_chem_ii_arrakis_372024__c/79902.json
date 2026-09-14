@@ -1,0 +1,138 @@
+{
+  "id": "79902",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Hobbies",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2302350136",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2139809023",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3001312418",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "340367593",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2000263554",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4152376231",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "161502090",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3451704277",
+                "textDirection": "ltr"
+              },
+              "id": "1162571197",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "3113879006",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4224199823",
+                "textDirection": "ltr"
+              },
+              "id": "4007928570",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "20. What are some hobbies or things you like to do outside of class? ",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "textarea",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "20. What are some hobbies or things you like to do outside of class? "
+            }
+          ],
+          "id": "472206732",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "1890188452",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

@@ -1,0 +1,152 @@
+{
+  "id": "78763",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "GeomIsomerLBD1_2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "412688788",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1955946845",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Dibromo"
+                      },
+                      {
+                        "text": "- means this complex contains two bromide ions."
+                      }
+                    ],
+                    "id": "3548377862",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "371116143",
+                "textDirection": "ltr"
+              },
+              "id": "3744624482",
+              "rule": "input = {2}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Dibromo"
+                      },
+                      {
+                        "text": "- means this complex contains two bromide ions."
+                      }
+                    ],
+                    "id": "2953952003",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2377623955",
+                "textDirection": "ltr"
+              },
+              "id": "1618795873",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "H﻿ow many bromide ions does this complex ion contain?  ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1672333516",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "424787660",
+        "inputType": "numeric",
+        "partId": "1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "H﻿ow many bromide ions does this complex ion contain?  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "424787660",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "638342039",
+          "type": "p"
+        }
+      ],
+      "id": "489641830"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78318"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

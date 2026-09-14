@@ -1,0 +1,274 @@
+{
+  "id": "79219",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "polyprotic2_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;1.0\\times10^{-14}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\frac{1.0\\times10^{-14}}{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack}\\; =\\;\\frac{1.0\\times10^{-14}}{0.0028}\\;=\\;3.6\\times10^{-12}\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "4i4qg8npinar047",
+                "type": "p"
+              }
+            ],
+            "id": "1177415257"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "[H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "3"
+                    },
+                    {
+                      "text": "O"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": "] × [OH"
+                    },
+                    {
+                      "sup": true,
+                      "text": "−"
+                    },
+                    {
+                      "text": "] = 1.0 × 10"
+                    },
+                    {
+                      "sup": true,
+                      "text": "−14"
+                    }
+                  ],
+                  "id": "9d1r05pvszipih3",
+                  "type": "p"
+                }
+              ],
+              "id": "946305592"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0ql72av1hhqmxpb",
+                  "type": "p"
+                }
+              ],
+              "id": "2666081884"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8kf272k6gpr14p8",
+                  "type": "p"
+                }
+              ],
+              "id": "4101960868"
+            }
+          ],
+          "id": "20405585",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;1.0\\times10^{-14}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\frac{1.0\\times10^{-14}}{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack}\\; =\\;\\frac{1.0\\times10^{-14}}{0.0028}\\;=\\;3.6\\times10^{-12}\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "t4ds5ehusaeujhx",
+                    "type": "p"
+                  }
+                ],
+                "id": "3141520424"
+              },
+              "id": "2928601566",
+              "legacyMatch": "[3.5e-12,4e-12]",
+              "rule": "input = {[3.5e-12,4e-12]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "difda8f5uf1h0qf",
+                    "type": "p"
+                  }
+                ],
+                "id": "2282439485"
+              },
+              "id": "2886333298",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate [OH−].[OH−] =  M",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "20405585",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate [OH"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "]."
+            }
+          ],
+          "id": "1ls5vnwjeq823oh",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[OH"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "fblvejmehd2r5wy",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "20405585": [
+      "78514"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

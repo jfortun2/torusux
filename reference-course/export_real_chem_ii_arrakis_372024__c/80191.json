@@ -1,0 +1,367 @@
+{
+  "id": "80191",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "buf_ph_add_acid_base-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "0.0100\\;\\mathrm L\\times\\frac{0.350\\;\\mathrm{mol}}{1\\;\\mathrm L}\\;=\\;0.00350\\;\\mathrm{mol} \\;\\mathrm{OH}^-",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "b745s7d1libbc8h",
+                "type": "p"
+              }
+            ],
+            "id": "722437188"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8zkvcaiydx0tin1",
+                  "type": "p"
+                }
+              ],
+              "id": "1117099608"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "47t5ujdwl65hfj5",
+                  "type": "p"
+                }
+              ],
+              "id": "202534128"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1gpkv5ayog1q87d",
+                  "type": "p"
+                }
+              ],
+              "id": "84584599"
+            }
+          ],
+          "id": "2268923070",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "0.0100\\;\\mathrm L\\times\\frac{0.350\\;\\mathrm{mol}}{1\\;\\mathrm L}\\;=\\;0.00350\\;\\mathrm{mol} \\;\\mathrm{OH}^-",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "vkjbn0fenytg6mx",
+                    "type": "p"
+                  }
+                ],
+                "id": "283001547"
+              },
+              "id": "4062591901",
+              "legacyMatch": "0.0035",
+              "rule": "input = {0.0035}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Use the volume, 10.0 mL (0.0100 L), and the concentration, 0.350 M, to calculate the number of moles of OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "penkd4grk48ag3v",
+                    "type": "p"
+                  }
+                ],
+                "id": "916774652"
+              },
+              "id": "1477714805",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "10.0 mL of 0.350 M NaOH is added to 75.0 mL of the buffer solution described above. What is the pH of the solution after the base is added?The following sequence of steps walk you through calculating the pH of the buffer solution after the strong base is added.Calculated pH of (original) buffer solution = 5.231Calculate the number of moles of OH– added from the addition of the NaOH.mol OH– = Previously calculated moles of HC2H3O2 and C2H3O2– in the buffer solution: mol HC2H3O2 = 0.0150 molmol C2H3O2– = 0.0450 mol",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2268923070",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "10.0 mL of 0.350 M NaOH is added to 75.0 mL of the buffer solution described above. What is the pH of the solution after the base is added?"
+            }
+          ],
+          "id": "bsumbprxv5x7lnw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "The following sequence of steps walk you through calculating the pH of the buffer solution after the strong base is added."
+            }
+          ],
+          "id": "3egyzm7sqr5dd24",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculated pH of (original) buffer solution = 5.231"
+            }
+          ],
+          "id": "xff8nvh4s37rot3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the number of moles of OH"
+            },
+            {
+              "sup": true,
+              "text": "–"
+            },
+            {
+              "text": " added from the addition of the NaOH."
+            }
+          ],
+          "id": "km60zk5aa9uvh8o",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "mol OH"
+            },
+            {
+              "sup": true,
+              "text": "–"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "n3xhb96vr6gpx70",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Previously calculated moles of HC"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and C"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "sup": true,
+              "text": "–"
+            },
+            {
+              "text": " in the buffer solution: "
+            }
+          ],
+          "id": "en6nm9oqgilzrgo",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "mol HC"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " = 0.0150 mol"
+            }
+          ],
+          "id": "ocw5tefjcnfoeoi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "mol C"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "sup": true,
+              "text": "–"
+            },
+            {
+              "text": " = 0.0450 mol"
+            }
+          ],
+          "id": "62kqse26jiwy1oq",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2268923070": [
+      "78368"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

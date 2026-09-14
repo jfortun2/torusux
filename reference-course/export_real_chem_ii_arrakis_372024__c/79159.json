@@ -1,0 +1,291 @@
+{
+  "id": "79159",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. If "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " << 0.698, then: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\frac{x^2}{0.698\\;-\\;x}\\;\\approx\\;\\frac{x^2}{0.698}\\;=\\;1.34\\times10^{-5}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}x^2\\;=\\;(0.698)(1.34\\times10^{-5})\\;=\\;9.35\\times10^{-6}\\\\x\\; =\\;\\sqrt{9.35\\times10^{-6}}\\;=\\;0.00306\\;\\mathrm M\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "hwmm729qpfsycy4",
+                "type": "p"
+              }
+            ],
+            "id": "3373850307"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Assuming that "
+                    },
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " << 0.698 means we can ignore "
+                    },
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " in the denominator, resulting in: "
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "\\frac{x^2}{0.698}\\;=\\;1.34\\times10^{-5}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b9s25ca6ps4huct",
+                  "type": "p"
+                }
+              ],
+              "id": "1998804846"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "glrqevfwg4tj9xq",
+                  "type": "p"
+                }
+              ],
+              "id": "2900575551"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1tjew3usgsobf5b",
+                  "type": "p"
+                }
+              ],
+              "id": "130863032"
+            }
+          ],
+          "id": "1408544043",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " << 0.698, then: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{x^2}{0.698\\;-\\;x}\\;\\approx\\;\\frac{x^2}{0.698}\\;=\\;1.34\\times10^{-5}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}x^2\\;=\\;(0.698)(1.34\\times10^{-5})\\;=\\;9.35\\times10^{-6}\\\\x\\; =\\;\\sqrt{9.35\\times10^{-6}}\\;=\\;0.00306\\;\\mathrm M\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "8ggfj8piljxromu",
+                    "type": "p"
+                  }
+                ],
+                "id": "556816199"
+              },
+              "id": "3506461390",
+              "legacyMatch": "[0.0030,0.0031]",
+              "rule": "input = {[0.0030,0.0031]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "6rhl5fgdkl1bodz",
+                    "type": "p"
+                  }
+                ],
+                "id": "2078336962"
+              },
+              "id": "3141714582",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate x, assuming that x << 0.698.  M",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1408544043",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": ", assuming that "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " << 0.698. "
+            }
+          ],
+          "id": "rvcabk64924qh5j",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "s640cpkadavok7v",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1408544043": [
+      "78439"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

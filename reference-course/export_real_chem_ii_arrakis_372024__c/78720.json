@@ -1,0 +1,203 @@
+{
+  "id": "78720",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78094"
+  ],
+  "title": "qual_entropy_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "v20y1oqlio7du3t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solution. Water vapor (a gas) is more dispersed than liquid water or solid ice. The most dispersed phase has the highest entropy."
+                  }
+                ],
+                "id": "1yktoinyjw36aup",
+                "type": "p"
+              }
+            ],
+            "id": "409949727"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "itspli3j32sdty7",
+                  "type": "p"
+                }
+              ],
+              "id": "3244360040"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dqdt7jh3zhqojbw",
+                  "type": "p"
+                }
+              ],
+              "id": "61841012"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "89pw6fif5z9tolq",
+                  "type": "p"
+                }
+              ],
+              "id": "337401261"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Water vapor (a gas) is more dispersed than liquid water or solid ice. The most dispersed phase has the highest entropy."
+                      }
+                    ],
+                    "id": "qvmaypknh1iw6h3",
+                    "type": "p"
+                  }
+                ],
+                "id": "2621898364"
+              },
+              "id": "1641643508",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Entropy can be described as a measure of the dispersal of matter, distribution of kinetic states (microstates), or disorder of a system. Matter that is least dispersed, has the lowest distribution of microstates, and is most ordered (least disordered) has the least entropy. Matter that is most dispersed, has the highest distribution of microstates, and is most disordered has the greatest entropy. Determine which phase of water is most dispersed, has the greateste number of microstates, or is most disordered."
+                      }
+                    ],
+                    "id": "38asp2y7ekhsioy",
+                    "type": "p"
+                  }
+                ],
+                "id": "4172248529"
+              },
+              "id": "2377449183",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "4260950498",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "liquid water"
+              }
+            ],
+            "id": "mmt5rtbygx4mf9e",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "ice"
+              }
+            ],
+            "id": "8o7tvsrgb55ftku",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "water vapor"
+              }
+            ],
+            "id": "des4r598e1kyo8x",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following has the greatest entropy?"
+            }
+          ],
+          "id": "nazxlgv92vj84bm",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

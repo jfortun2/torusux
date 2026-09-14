@@ -1,0 +1,252 @@
+{
+  "id": "79269",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "gen_equilibrium_quiz-q8",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vfsyi2r39dnkh9u",
+                  "type": "p"
+                }
+              ],
+              "id": "2763375178"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v0392h458fb76b7",
+                  "type": "p"
+                }
+              ],
+              "id": "3008676875"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0zz7jaw8djs7w4q",
+                  "type": "p"
+                }
+              ],
+              "id": "273247760"
+            }
+          ],
+          "id": "313970631",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "q05ul3es7t5ll4l",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Qc\\;=\\;\\frac{\\lbrack\\mathrm{NO}\\rbrack^2}{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}\\;=\\;\\frac{(1.2)^2}{(0.50)(0.80)\\;}\\;=\\;3.6",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "eiywgeg4fr8cytl",
+                    "type": "p"
+                  }
+                ],
+                "id": "4276642276"
+              },
+              "id": "514258824",
+              "legacyMatch": "3.6",
+              "rule": "input = {3.6}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "v1ygi8hirp234dw",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "Qc\\;=\\;\\frac{\\lbrack\\mathrm{NO}\\rbrack^2}{\\lbrack{\\mathrm N}_2\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "s4hmpqkgq0rmq03",
+                    "type": "p"
+                  }
+                ],
+                "id": "296580351"
+              },
+              "id": "2424897248",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "313970631"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " for the following reaction is 0.050."
+            }
+          ],
+          "id": "1q4llda8o9yzdtq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "1u03dsdziom5qyq",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "pbt1qlhw7nzx2l8",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm N}_2(g)\\;+\\;{\\mathrm O}_2(_\\mathrm g)\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{NO}(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": " when [N"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] = 0.50 M, [O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] = 0.80 M, and [NO] = 1.2 M."
+            }
+          ],
+          "id": "yhavvvjvqryyjaa",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": "="
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            }
+          ],
+          "id": "815i2daler9aef9",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "313970631": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

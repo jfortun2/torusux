@@ -1,0 +1,293 @@
+{
+  "id": "80328",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "salt_ph_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5e46vb7gywphguz",
+                  "type": "p"
+                }
+              ],
+              "id": "1983148190"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "puslqbzk6rv411m",
+                  "type": "p"
+                }
+              ],
+              "id": "3265631118"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hs9rgwgdv8kziaf",
+                  "type": "p"
+                }
+              ],
+              "id": "2996165131"
+            }
+          ],
+          "id": "1933560610",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a strong acid."
+                      }
+                    ],
+                    "id": "wnirp7tmxrrpvm9",
+                    "type": "p"
+                  }
+                ],
+                "id": "2556063487"
+              },
+              "id": "1644122604",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is the cation of a strong base."
+                      }
+                    ],
+                    "id": "zpmxedzsqi28pxq",
+                    "type": "p"
+                  }
+                ],
+                "id": "2240559319"
+              },
+              "id": "1905569039",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is the cation of a strong base and NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a strong acid."
+                      }
+                    ],
+                    "id": "j0j7qwpnukd7ms6",
+                    "type": "p"
+                  }
+                ],
+                "id": "1253574349"
+              },
+              "id": "2821681335",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "dr9cjycp511vcxo",
+                    "type": "p"
+                  }
+                ],
+                "id": "1964311414"
+              },
+              "id": "2643741540",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1644122604"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1905569039"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2821681335"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1644122604"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1905569039"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2821681335"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Basic"
+              }
+            ],
+            "id": "bk4y8swxo71z1jr",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Acidic"
+              }
+            ],
+            "id": "mll6u64cns68ihg",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Neutral"
+              }
+            ],
+            "id": "o8b36n0tqfdgvh0",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "NaNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            }
+          ],
+          "id": "w42nei8nr9bhdnd",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1933560610": [
+      "78479"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

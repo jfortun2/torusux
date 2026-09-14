@@ -1,0 +1,239 @@
+{
+  "id": "80405",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78227"
+  ],
+  "title": "pool09_type_radioactive_decay-pool09_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " With Z = 92 and A = 122, U-214 is radioactive and will go through alpha decay. Stable isotopes have a ratio of neutrons to protons that locate the isotope within the band of stability shown on a plot of number of neutrons vs. number of protons for known nuclei. Unstable isotopes above the band have a ratio of neutrons to protons that is too high to be stable, and they will decay by beta decay to reduce this ratio. Unstable isotopes below the band have a ratio of neutrons to protons that is too low, and they will decay by alpha decay, positron emission, or electron capture to increase this ratio."
+                  }
+                ],
+                "id": "njv0ifhbv3bf5zv",
+                "type": "p"
+              }
+            ],
+            "id": "3495122559"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "s1miynq2sg031t8",
+                  "type": "p"
+                }
+              ],
+              "id": "1752967925"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yfto3prgh1lj0g7",
+                  "type": "p"
+                }
+              ],
+              "id": "933376178"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8abul3kfu7f1gp4",
+                  "type": "p"
+                }
+              ],
+              "id": "3624358670"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Isotopes with Z > 83 and a relatively low n/p ratio will likely undergo α-decay. "
+                      }
+                    ],
+                    "id": "1655654067",
+                    "type": "p"
+                  }
+                ],
+                "id": "3313812463"
+              },
+              "id": "1916028960",
+              "legacyMatch": "B",
+              "rule": "input like {one_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Refer to the graph showing the decay modes of known nuclides. "
+                      }
+                    ],
+                    "id": "d908f918016a4e1e9e28d2ff255f61b6",
+                    "type": "p"
+                  }
+                ],
+                "id": "106280366"
+              },
+              "id": "349046598",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What type of radioactive decay is U-214 most likely to undergo? ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "0e6dgv9uq7m8ky5",
+            "text": "alpha decay "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "0qf9objqtib749w",
+            "text": "beta decay"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "positron emission"
+              }
+            ],
+            "id": "4289463764",
+            "type": "p"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "none; it is a stable isotope"
+              }
+            ],
+            "id": "2526799910",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2319648623",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_D",
+          "2319648623"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What type of radioactive decay is U-214 most likely to undergo? "
+            }
+          ],
+          "id": "a0bc22f8c4b845a4b4dc4e46248bba05",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "3070054815",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

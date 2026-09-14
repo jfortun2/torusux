@@ -1,0 +1,393 @@
+{
+  "id": "79837",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "equil_ml_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The solution appears purple because there is a mixture of pink and blue molecules."
+                    }
+                  ],
+                  "id": "pjhhzdyi8jhm2g9",
+                  "type": "p"
+                }
+              ],
+              "id": "1064309312"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yh1camkbgrsjl25",
+                  "type": "p"
+                }
+              ],
+              "id": "4059268283"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5zc7dbve71vqx6v",
+                  "type": "p"
+                }
+              ],
+              "id": "4225653353"
+            }
+          ],
+          "id": "2474122730",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The solution appears purple because there is a mixture of pink and blue molecules, and pink and blue combine to look purple. There are not any purple molecules."
+                      }
+                    ],
+                    "id": "fffzw2l41ay25w1",
+                    "type": "p"
+                  }
+                ],
+                "id": "2840758995"
+              },
+              "id": "2237842753",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The solution appears purple because there is a mixture of pink and blue molecules, and pink and blue combine to look purple."
+                      }
+                    ],
+                    "id": "vl2l7zsj6fapwsx",
+                    "type": "p"
+                  }
+                ],
+                "id": "1632001569"
+              },
+              "id": "3642419177",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The solution appears purple because there is a mixture of pink and blue molecules, and pink and blue combine to look purple. There are not any purple molecules."
+                      }
+                    ],
+                    "id": "tpo3yftypqu57ue",
+                    "type": "p"
+                  }
+                ],
+                "id": "1096037331"
+              },
+              "id": "3388990690",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The solution appears purple because there is a mixture of pink and blue molecules, and pink and blue combine to look purple."
+                      }
+                    ],
+                    "id": "s8cpiatcpbuuexi",
+                    "type": "p"
+                  }
+                ],
+                "id": "2209153210"
+              },
+              "id": "2678445101",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The solution appears purple because there is a mixture of pink and blue molecules, and pink and blue combine to look purple. The color comes from the presence of many pink and blue molecules, not from purple molecules."
+                      }
+                    ],
+                    "id": "utmumzrc220j6xs",
+                    "type": "p"
+                  }
+                ],
+                "id": "2357471178"
+              },
+              "id": "3932494315",
+              "legacyMatch": "E",
+              "rule": "input like {E}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "hgnyukl035oatgp",
+                    "type": "p"
+                  }
+                ],
+                "id": "3036295323"
+              },
+              "id": "16979990",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2237842753"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3642419177"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3388990690"
+            ],
+            [
+              [
+                "D"
+              ],
+              "2678445101"
+            ],
+            [
+              [
+                "E"
+              ],
+              "3932494315"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Which of the pictures best shows what is happening at the molecular level when a solution of cobalt(II) and chloride ions is purple?  Note: Water molecules are not shown.",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2237842753"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3642419177"
+        ],
+        [
+          [
+            "C"
+          ],
+          "3388990690"
+        ],
+        [
+          [
+            "D"
+          ],
+          "2678445101"
+        ],
+        [
+          [
+            "E"
+          ],
+          "3932494315"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3553554123",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "nbjf78085ul92j7",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "osxif2vjwpxotzw",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/19/197c6f1aa56f84720cab7f555b83600a/equil_ml_inc1.png",
+            "type": "img",
+            "width": "135"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "xnf6lpin52n7rn7",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "xffqvn4xt1bvjv2",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/ae/ae9680595d2406f92260d865f02b9504/equil_ml_inc2.png",
+            "type": "img",
+            "width": "150"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "dxfpbozjg14gjjg",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "aop5u1xlhjporif",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/eb/eb4ad5e6570bce60a7df2aac18013c55/equil_ml_inc3.png",
+            "type": "img",
+            "width": "150"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "l0uevk8rbhyznvk",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "lphn9hju9vor9g5",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/46/46e3b4ff0e1fd6b3bfbf10ae9e997243/equil_ml_inc4.png",
+            "type": "img",
+            "width": "135"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "id": "2ejw2jq1gybepuv",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "75zlr9drpb7yi1x",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/d6/d65c1e78cc0e80c6bb85ab3a646367e6/equil_ml_correct.png",
+            "type": "img",
+            "width": "135"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the pictures best shows what is happening at the molecular level when a solution of cobalt(II) and chloride ions is purple? "
+            }
+          ],
+          "id": "dpb75zbu8i1l0c3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "zy5cbzxx47uhahx",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "height": "300",
+          "id": "4gfxfqvl8k3lcit",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/5c/5cfdc30da16e58ffafdf938e9902327b/equil_ml_tt.png",
+          "type": "img"
+        },
+        {
+          "children": [
+            {
+              "text": "Note: Water molecules are not shown."
+            }
+          ],
+          "id": "zer0iu3z3skl3vj",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2474122730": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,346 @@
+{
+  "id": "79872",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78065"
+  ],
+  "title": "name_coord_complex_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3759316663",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3067767499",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "37538189",
+          "incorrectScore": null,
+          "outOf": 5,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. There are two NO (nitrosyl) ligands, which are named as dinitrosyl."
+                      }
+                    ],
+                    "id": "1919878858",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The charge on Fe is +2 (+2 + 2(0) = +2). This complex is a cation, so Fe"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " is named iron(II)."
+                      }
+                    ],
+                    "id": "bjy2byrmt2s2c0z",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "This complex is named dinitrosyliron(II) ion."
+                      }
+                    ],
+                    "id": "boqsung7400r5qn",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "53569182",
+                "textDirection": "ltr"
+              },
+              "id": "1226508401",
+              "rule": "input contains {dinitrosyliron(II)}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the metal ion and the ligand. Balance charges to determine the charge of the metal ion. Use the appropriate prefix to designate the number of ligands. Use a Roman numeral to specify the metal ion's charge. (Note: NO is named nitrosyl.)"
+                      }
+                    ],
+                    "id": "2784801929",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2585226622",
+                "textDirection": "ltr"
+              },
+              "id": "2181422100",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3571996549",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3544918891",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1780742731",
+          "incorrectScore": null,
+          "outOf": 5,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. There are six F"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " (fluoro) ligands, which are named as hexafluoro."
+                      }
+                    ],
+                    "id": "2576731268",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The charge on Cr is +3 (+3 + 6(−1) = −3). This complex is an anion, so Cr"
+                      },
+                      {
+                        "sup": true,
+                        "text": "3+"
+                      },
+                      {
+                        "text": " is named chromate(III)."
+                      }
+                    ],
+                    "id": "20m9f7ylhvkaig3",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "This complex is named hexafluorochromate(III) ion."
+                      }
+                    ],
+                    "id": "ivrxzab95usu78g",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3966066317",
+                "textDirection": "ltr"
+              },
+              "id": "3280071565",
+              "rule": "input contains {hexafluorochromate(III)}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the metal ion and the ligand. Balance charges to determine the charge of the metal ion. Use the appropriate prefix to designate the number of ligands. Use a Roman numeral to specify the metal ion's charge, and since this is an anion change the ending of the metal's name to -ate. "
+                      }
+                    ],
+                    "id": "2186676234",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "116889748",
+                "textDirection": "ltr"
+              },
+              "id": "2328595684",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination complex [Fe(NO)2]2+. Note: spelling matters!  ionName the coordination complex [CrF6]3−. Note: spelling matters!  ion",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1705828024",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "1246818355",
+        "inputType": "text",
+        "partId": "37538189",
+        "size": "large"
+      },
+      {
+        "id": "436857450",
+        "inputType": "text",
+        "partId": "1780742731",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination complex [Fe(NO)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": ". Note: spelling matters! "
+            }
+          ],
+          "id": "3254160102",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1246818355",
+              "type": "input_ref"
+            },
+            {
+              "text": " ion"
+            }
+          ],
+          "id": "3075020913",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Name the coordination complex [CrF"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "3−"
+            },
+            {
+              "text": ". Note: spelling matters! "
+            }
+          ],
+          "id": "gpl6mwze8p1cfdo",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "436857450",
+              "type": "input_ref"
+            },
+            {
+              "text": " ion"
+            }
+          ],
+          "id": "2251233159",
+          "type": "p"
+        }
+      ],
+      "id": "424369684"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1780742731": [
+      "78460"
+    ],
+    "37538189": [
+      "78460"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

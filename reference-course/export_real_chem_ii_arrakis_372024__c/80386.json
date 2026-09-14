@@ -1,0 +1,237 @@
+{
+  "id": "80386",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "indicators_lbd-q6",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "1300711973"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jp5amh88862kxuz",
+                  "type": "p"
+                }
+              ],
+              "id": "1948352814"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "voiwfh0kkj2ghz1",
+                  "type": "p"
+                }
+              ],
+              "id": "865203901"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "70lra90zkq5pt2w",
+                  "type": "p"
+                }
+              ],
+              "id": "3070421984"
+            }
+          ],
+          "id": "2344352047",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Like the strong acid–strong base titration, the strong base–strong acid titration has a large range of pH values for color-change intervals of appropriate indicators."
+                      }
+                    ],
+                    "id": "qk8omc07unahe8n",
+                    "type": "p"
+                  }
+                ],
+                "id": "700134878"
+              },
+              "id": "1300711973",
+              "legacyMatch": "B,C,D,E",
+              "rule": "(!(input like {A})) && (input like {E} && (input like {D} && (input like {C} && (input like {B}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Like the strong acid–strong base titration, the strong base–strong acid titration has a large range of pH values for color-change intervals of appropriate indicators. There are four correct answers."
+                      }
+                    ],
+                    "id": "qeq5nb85l3vieu8",
+                    "type": "p"
+                  }
+                ],
+                "id": "426515861"
+              },
+              "id": "4197278011",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Choose appropriate indicator(s)for this titration.  ",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Bromophenol blue"
+              }
+            ],
+            "id": "cabkkhpwc40niws",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Methyl red"
+              }
+            ],
+            "id": "0ecs8zfquzkzojs",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Mromthymol blue"
+              }
+            ],
+            "id": "s17brhivv96ca5o",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Litmus"
+              }
+            ],
+            "id": "armzx8805qws5rh",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Phenolphthalein"
+              }
+            ],
+            "id": "34uoc5vmw604c71",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Choose appropriate indicator(s)for this titration. "
+            }
+          ],
+          "id": "ni8uxkedzem3zs5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "168se61mg77ryvs",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "2suxi7ibf49ew5r",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/eb/eb001cc4694b8981058beafdef19c978/indicators.png",
+          "type": "img",
+          "width": "550"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "1215677173",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2344352047": [
+      "78298"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

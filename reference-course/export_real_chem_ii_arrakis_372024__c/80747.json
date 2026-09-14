@@ -1,0 +1,2761 @@
+{
+  "id": "80747",
+  "type": "Page",
+  "tags": [],
+  "title": "Large or Small Values for K",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Many reversible reactions have very large or very small values for their equilibrium constant, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": ". That is, one reaction (either the forward or the reverse) is much stronger than the other reaction. For instance, most acid-base reactions, precipitation reactions and redox reactions have either a very large or a very small "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "69frdyk0r5p2wps",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "For reactions with intermediate values of "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": ", determining the concentrations of the chemical species at equilibrium often leads to complex algebraic manipulations. However, when "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is very large or very small, we can use a much simpler, two-step approach described here."
+              }
+            ],
+            "id": "46s0fp6duku781z",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "The two step approach simplifies the algebra and allows us to reason qualitatively about chemical reactions and their effects on the chemical concentrations. This qualitative reasoning is essential to understanding many applications of chemical equilibrium. We will first discuss the strategy of this two-step process and then demonstrate worked examples."
+              }
+            ],
+            "id": "su3oe7s05n71u02",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Step 1: Determine the concentrations of the majority species assuming the reaction goes to completion. "
+              }
+            ],
+            "id": "6f85itjmxxpvzu6",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "We need to determine which chemical species will have large concentrations at equilibrium. If "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is very large, we can assume the reaction will progress nearly all the way to the right (mostly products). We can think of this as a forward reaction progressing to completion and assume for practical purposes that "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " = ∞."
+              }
+            ],
+            "id": "kpo90bffdabncuh",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "omtyenxqmakrv6q",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "l9odcppgl23hfqc",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{large}\\;K\\;(K\\;>>\\;1)\\;\\;\\;\\;\\;\\mathrm{Assume}\\;K\\;=\\;\\infty",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "If "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is very small, we can assume the reaction will lie nearly all the way to the left (mostly reactants). We can make the approximation that "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is not just small by infinitely small, i.e. "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " = 0. We can think of this as a reverse reaction progressing to completion. "
+              }
+            ],
+            "id": "jlf6qdwcz9c5zht",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "7wepk25jq0orraf",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "b6dg4ls7hc8fyw6",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{small}\\;K\\;(K\\;<<\\;1)\\;\\;\\;\\;\\;a\\mathrm{ssume}\\;K\\;=\\;0",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "These assumptions lead to a limiting reagent calculation. For "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " = infinity, the forward reaction goes all the way to completion, i.e. until one of the reactants runs out. For "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " = 0, the reverse reaction proceeds to completion (towards reactants) until one of the products runs out. In either case, the reaction progresses until one or more of the chemical species runs out. Under this assumption, at completion some of the chemical species have non-zero concentrations and one or more (the limiting reagent(s)) have zero concentration. "
+              }
+            ],
+            "id": "ve8pom6abrt9lt7",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "In step 1, we assume that "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is either 0 or infinity. Under these assumptions, some chemical species (the limiting reagent(s)) are completely consumed and so have zero concentration. However, in equilibrium systems both forward and reverse reactions are constantly occurring, so we know that no species will have a zero concnentration. Instead, the concentrations of the \"limiting reagents\" are present in very small amounts, and we call these the minority species. "
+              }
+            ],
+            "id": "lrgo4meq5gcuezp",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Step 2: Determine the concentration of the minority specie(s) using the determined equilibrium concentrations for all other species and the equilibrium expression."
+              }
+            ],
+            "id": "d1yk7vurys0kbl1",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "If "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is very large or very small, we can assume that the equilibrium concentrations of the majority species are very close to the values we found in step 1. In Step 2, we determine the concentrations of the minority species at equilibrium using the determined equilibrium concentrations for all other species and the equilibrium expression. "
+              }
+            ],
+            "id": "jwiq5y62gq2inms",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "This two-step procedure allows us to approximate equilibrium values when the equilibrium constant, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": ", is either very large or small. To make sure our assumptions hold for a given situation, we compare the concentrations of the minority species to that of the majority species. If our assumption is valid, the concentrations of the minority species will be much smaller than that of the majority species (e.g., less than 5% of the majority.) If this is not true, and our assumption that the reaction is near completion at equilibrium is not valid, then we must use the procedure described previously in this module for intermediate values of "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": ". "
+              }
+            ],
+            "id": "pf0so9d8fvnelsl",
+            "type": "p"
+          }
+        ],
+        "id": "4231023566",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Copper(II) ions form a complex ion in the presence of ammonia."
+                  }
+                ],
+                "id": "ko3fv7o4nvr3dkg",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "922ppp88unj37b9",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "9e55emqfqwenju9",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;4\\;{\\mathrm{NH}}_3(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "767bbcnos67a5nm",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "20u4vbznxq8ibp4",
+                "legacyBlockRendered": "true",
+                "src": "K_c\\;=\\;\\frac{\\left[\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\right]}{\\left[\\mathrm{Cu}^{2+}\\right]\\;\\left[{\\mathrm{NH}}_3\\right]^4}\\;=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "If 0.010 mol Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is added to 1.00 L of a solution that is 1.00 M NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " what are the concentrations when the system comes to equilibrium?"
+                  }
+                ],
+                "id": "0k4ul5bk4rvxefx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Step 1:Determine the concentrations of the majority species assuming the reaction goes to completion."
+                  }
+                ],
+                "id": "olwc5krbhdqvx3x",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this example "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "text": " is very large so we assume "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "text": " = ∞. This corresponds to the reaction going to completion toward the product until one or both of the reactants is completely consumed. "
+                  }
+                ],
+                "id": "yg513fcpv2gmvxx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We are told that we have initial concentrations as follows:"
+                  }
+                ],
+                "id": "43e02j1khe9nfc7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "ukntjn24kcwze6j",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "4wbj71j4gc7p2xl",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "vi4vxkzqx3w1vkq",
+                            "text": "         Cu"
+                          },
+                          {
+                            "id": "n5jiefod8t8ln80",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "wutp7oqma27vy9w",
+                            "text": "(aq)          +           4 NH"
+                          },
+                          {
+                            "id": "mwakn91cnpy8bka",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "myt1lubmq3lu6r3",
+                            "text": "(aq)          ⇌      Cu(NH"
+                          },
+                          {
+                            "id": "reoq687k8kav993",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "lzt4ujl45o2dmyn",
+                            "text": ")"
+                          },
+                          {
+                            "id": "72dy7t28yiiixeb",
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "1qiw2pq2roluuzq",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "3km7c8prs331nsr",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "7b5jsyw9a75qu4z",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "y828ee4e00fnbr1",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "0i1305x6vsyyzg4",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "fnqdcc93f6fzv7w",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "fj4j9ilwihczz15",
+                            "text": "       0.01 M       "
+                          }
+                        ],
+                        "id": "3oot48kyns9n4cm",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "e1cddbdfn81i7l3",
+                            "text": "       1.00 M       "
+                          }
+                        ],
+                        "id": "onx8c3uuqi4biqf",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "p7y8ko44w8nmluj",
+                            "text": "        0 M        "
+                          }
+                        ],
+                        "id": "e6mm9o4f0r8h5rq",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "oh6c9fnlmvr6oa1",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "bcq2li7yqxalvgy",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "7vaof88yc9cdqil",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "7ovi5gzdiy3jaik",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "kkc53hqyvm6zo94",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "zi77i3n0978nx5p",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "ey7exvv6wo7ynar",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ny5bng4i1tpqk8p",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "wstgfxiur7akz6l",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "bvuroozmucdbse3",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "z721wj9t12we42m",
+                            "text": "K"
+                          },
+                          {
+                            "id": "vl35jl24gad1fln",
+                            "text": " = ∞"
+                          }
+                        ],
+                        "id": "366outn9uqn8vmn",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "yavj0a7kj2ynnws",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "r3fep04j1rdp3vs",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "0mrd4e6ohnwf6xu",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "oau4u11q5rpm0xc",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "0twbkjklozymith",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "3dkiqdmogmugfs7",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "i3ujcb7l4ha4b76",
+                    "type": "tr"
+                  }
+                ],
+                "id": "cbvwj0z25y3usqw",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "To determine which reactant will be completely consumed, we find the limiting reactant, the minority species."
+                  }
+                ],
+                "id": "1xdz097z1bjfg5x",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "kg33j1petlwi5ms",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hhzy3fejbtdt132",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Cu}^{2+}\\;=\\;\\frac{0.01\\;\\mathrm M}1\\;=\\;0.01\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "9nyjs39sd5di54v",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "fvj5tnqvduw3qa2",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{NH}}_3\\;=\\;\\frac{1.0\\;\\mathrm M}4\\;=\\;0.25\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We identify Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " as the limiting reactant. Which means in our assumption of this reaction going to completion, Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " will be completely consumed."
+                  }
+                ],
+                "id": "986kooxurod99sf",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "qhekq4gzcszezab",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "2k4uiopfbdbuxzz",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "9chcdbusknb9rfp",
+                            "text": "         Cu"
+                          },
+                          {
+                            "id": "bh5anb4hkjohivb",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "0brmqeuu9rh2ics",
+                            "text": "(aq)          +           4 NH"
+                          },
+                          {
+                            "id": "y2idafis3rsopui",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "luobh3pjnds7t7s",
+                            "text": "(aq)          ⇌      Cu(NH"
+                          },
+                          {
+                            "id": "uxydg8lr3w1mc2r",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "3e3jv8zxkdcunni",
+                            "text": ")"
+                          },
+                          {
+                            "id": "vvgvrbcifxjjlk2",
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "e5uraouq81g3mgo",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "aea6lpe77ngkboz",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "0oecn90jd3drkc5",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "rohwc2z1rrdhhm6",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "qjlt4ldw9segg8b",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "xaiykyc8tjuwja0",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "rxka82natfbnilb",
+                            "text": "       0.01 M       "
+                          }
+                        ],
+                        "id": "dj786fewjezpwvb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "4k6lxzqgmcndbjd",
+                            "text": "       1.00 M       "
+                          }
+                        ],
+                        "id": "rur3ol7t7trh9fx",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "8ob4d8y7e1m6oxo",
+                            "text": "        0 M        "
+                          }
+                        ],
+                        "id": "duqhi8a3juqzdda",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "kymnckzg0ufaz1o",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "rru682954j62l4v",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "qa5yc0oebcxny2n",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "i9w5rxto4pxsoty",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "8qh0oj2ww8zid9j",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "rvfs1ccb8j2k6xs",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "wwruvh43pbccrwx",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "8iwzco34s3hnjmo",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "cslmtu38lozfdp3",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "zmdts90apkxl242",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "2a2x6hj8l71ykdn",
+                            "text": "K"
+                          },
+                          {
+                            "id": "u303rzx4vi0wyfd",
+                            "text": " = ∞"
+                          }
+                        ],
+                        "id": "c46l4i82ii7l78l",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qzpzg3abizog7zq",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "fzhakqbdyzk156r",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "yuq2uikf2494bta",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "4e4cerhzb6ilg55",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ooyte2itrwi0lgv",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "6pq02khx24bi1wt",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "pb2yvhpi3ox1y69",
+                    "type": "tr"
+                  }
+                ],
+                "id": "tnr420dg7ww6mpm",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This would indicate that the change in concentration for Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is 0.01 M. We use the stoichiometry of the balanced equation to determine the change in concentration for the other species and then calculate final concentrations."
+                  }
+                ],
+                "id": "1x96h46esa86fap",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "7v5enk99nwueir3",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "i43gtoxmi7kthfy",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "3hbnh74ybrxgcml",
+                            "text": "         Cu"
+                          },
+                          {
+                            "id": "dqbjaoa8b1tf2hp",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "xgvd5ult5qrvqdm",
+                            "text": "(aq)          +           4 NH"
+                          },
+                          {
+                            "id": "482bpyhpspmq8mp",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "8lp8syj1lihbkvs",
+                            "text": "(aq)          ⇌      Cu(NH"
+                          },
+                          {
+                            "id": "sr3fmo4qdfxxaxs",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "7d2rkcqmrzq5hle",
+                            "text": ")"
+                          },
+                          {
+                            "id": "foo4dwf2tp2hi7h",
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "41d1jqmek82p736",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "d7fnoi8uy522qfo",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "1mo90g01l6s010u",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "50lduknoss71y0r",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "aqvogxmhrm9i9qg",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "m56g71zth4moiia",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "vdr7rqqh60qdw39",
+                            "text": "       0.01 M       "
+                          }
+                        ],
+                        "id": "pt7oawdz18zaeyv",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "lmc7zfzybj7rxiv",
+                            "text": "       1.00 M       "
+                          }
+                        ],
+                        "id": "jklahcmjqgo0d71",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "xfszc48ql7ydkgq",
+                            "text": "        0 M        "
+                          }
+                        ],
+                        "id": "udmyuk60xgaitln",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ym4csjgu341mlmr",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "hty1vif3qgcpw1t",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "yqgqudwmcy8mujj",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "xyot1c0l54qkeur",
+                            "text": "- 0.01"
+                          }
+                        ],
+                        "id": "r8gnvlljdxkuiuj",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "iopr41qxocp9w7d",
+                            "text": "- 0.04"
+                          }
+                        ],
+                        "id": "834q1p1mws1146l",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "3wlvpdduy1o98m5",
+                            "text": "+ 0.01"
+                          }
+                        ],
+                        "id": "3eapfw59tw9ydsm",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "40htb0gfl68rd2x",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "gyo1lnn1csshac9",
+                            "text": "K"
+                          },
+                          {
+                            "id": "uhyusvh1dxtvj7k",
+                            "text": " = ∞"
+                          }
+                        ],
+                        "id": "4summzr5rswx3vq",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "5kvh0b8hb1ffu7t",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "lyf7gkuf1bn3o1h",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "rkea6iee748n3qf",
+                            "text": "0.96"
+                          }
+                        ],
+                        "id": "23l8dpub135szj8",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "93wpv7bimq8fwed",
+                            "text": "0.01"
+                          }
+                        ],
+                        "id": "g4hew96t0hoqw95",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "duecng7bbjuen9u",
+                    "type": "tr"
+                  }
+                ],
+                "id": "3sw6e4jf9op6gxw",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Step 2: Determine the concentration of the minority specie(s) using the determined equilibrium concentrations for all other species and the equilibrium expression."
+                  }
+                ],
+                "id": "x3wofyhkprupni1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We know in a reversible reaction that the equilibrium concentration will never be 0 for any species. So this approximation for Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is not entirely accurate. To find a more accurate value for the equilibrium concentration of Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " we use the equilibrium expression and the equilibrium concentrations that we determined for NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " and Cu(NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": ")"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ],
+                "id": "u8ncswzxeiehjpg",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "6b1ctqpfrvyomkv",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "z9m9jkhome06uvv",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{(0.01\\;\\mathrm M)}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;(0.96\\;\\mathrm M)^4}\\;=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "8t54dr0r9c0i7fm",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "vgu7wt8zt29v8g1",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;2.4\\times10^{-16}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Therefore, equilibrium concentrations are: [Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "] = 2.4×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-16"
+                  },
+                  {
+                    "text": " M, [NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "] = 0.96 M, and [Cu(NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": ")"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "] = 0.01 M"
+                  }
+                ],
+                "id": "xix5nkcjs89ne7f",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Finally, we must check that our assumptions that we made are valid by verifying, or not, that the concentration of the minority species is 5% or less of the majority species. [Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": "] is the minority species and [NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "] is the majority species."
+                  }
+                ],
+                "id": "pzgfx8gc3dnf5jc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "dqiazrnt1cyj932",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "op1zyfmbv4il76r",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{2.4\\times10^{-16}}{0.96}\\;\\times100\\;=\\;2.5\\times10^{-14}\\;\\%\\;\\;",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The assumption is verified."
+                  }
+                ],
+                "id": "741au4vnp3lslqp",
+                "type": "p"
+              }
+            ],
+            "id": "3368299380",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "3333880887",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "attlc53t5q5n4hp",
+                "text": "Interactive Example: Large K"
+              }
+            ],
+            "id": "75pk04ffingecam",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": " Calculate the equilibrium concentration when 0.35 M O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": " and 1.0 M HCl react according to the following equation. "
+              }
+            ],
+            "id": "qup9fdkor41usey",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "dwpc2hu59wrzbvs",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "0c7xqrzy69g7dos",
+            "legacyBlockRendered": "true",
+            "src": "4\\;\\mathrm{HCl}(g)\\;+\\;{\\mathrm O}_2(\\mathrm g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{Cl}}_2(g)\\;+\\;2\\;{\\mathrm H}_2\\mathrm O(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c=3.1\\times10^{13}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "ngyn9bc0vrxj5y0",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "height": "468",
+            "id": "aa4a5sfdktk6ygw",
+            "src": "https://h5p.org/h5p/embed/175458",
+            "type": "iframe",
+            "width": "800"
+          }
+        ],
+        "id": "1889260680",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Calculate the equilibrium concentrations of NO, O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", and NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " in a mixture at 250 °C that results from the reaction of equal volumes of 0.20 M NO and 0.10 M O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ],
+                "id": "bjolnf86lls3bt6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "3ulkzjj3fzjmw8z",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "iicatitsby0qt0b",
+                "legacyBlockRendered": "true",
+                "src": "2\\;\\mathrm{NO}(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{NO}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;2.3\\times10^5\\;\\mathrm{at}\\;250^\\circ\\mathrm C",
+                "subtype": "latex",
+                "type": "formula"
+              }
+            ],
+            "id": "3776679089",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79769,
+                "id": "784318932",
+                "type": "activity-reference"
+              },
+              {
+                "id": "1053908742",
+                "type": "break"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "fs0yu2eoy55191j",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "rjx4tzbi1zqw1hb",
+                    "legacyBlockRendered": "true",
+                    "src": "K_c\\;=\\;\\frac{\\lbrack{\\mathrm{NO}}_2\\rbrack^2}{\\lbrack\\mathrm{NO}\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  }
+                ],
+                "id": "214324732",
+                "page": "3424184827",
+                "type": "content"
+              },
+              {
+                "activity_id": 79337,
+                "id": "4266347502",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79672,
+                "id": "2133134687",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79692,
+                "id": "985101687",
+                "type": "activity-reference"
+              },
+              {
+                "id": "1797693154",
+                "type": "break"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "o03y7g91nqmepg7",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "peq1yp2hoknga8z",
+                    "legacyBlockRendered": "true",
+                    "src": "K_c\\;=\\;\\frac{\\lbrack{\\mathrm{NO}}_2\\rbrack^2}{\\lbrack\\mathrm{NO}\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  }
+                ],
+                "id": "3304411032",
+                "page": "1667595194",
+                "type": "content"
+              },
+              {
+                "activity_id": 79263,
+                "id": "2959397867",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79518,
+                "id": "1540748705",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80305,
+                "id": "974951331",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80427,
+                "id": "1854941214",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "1296175667",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "2385760698",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "What are the concentrations at equilibrium of a 0.15 M solution of HCN?"
+                  }
+                ],
+                "id": "tk2sbhzozrgvciz",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "szljs3zbfbdjou2",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "l8fdhmgpcbqc13a",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{HCN}(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm H^+(aq)\\;\\;+\\;\\;\\mathrm{CN}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;4.9\\times10^{-10}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Step 1:Determine the concentrations of the majority species assuming the reaction goes to completion."
+                  }
+                ],
+                "id": "do2hjo5pkmk4zos",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this example "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "text": " is very small so we assume "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "text": " = 0. This corresponds to the reaction going to completion toward the reactant until one or both of the products is completely consumed."
+                  }
+                ],
+                "id": "x4trjivhgjzer25",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We are told that we have initial concentrations as follows:"
+                  }
+                ],
+                "id": "3gy6oe1smaok2zk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "ded2ome7uofs0dx",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "0gb6ff36iwb9ad2",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "2hs7em9tuf0ku00",
+                            "text": "      HCN(aq)     ⇌      H"
+                          },
+                          {
+                            "id": "9ogt7q5jx5lzamo",
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "e1213r2klesq2fs",
+                            "text": "(aq)   +      CN"
+                          },
+                          {
+                            "id": "hsi497cfdkn3dig",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "2lyx0pgoqw5cma9",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "3zke21r5ojpe8za",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "66xt5rg6flnsxwj",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "8p0sf9e1qfhsaeg",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "33dvdth4mvfayq6",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ptr9jvfkzgh6g2z",
+                            "text": "       0.15 M       "
+                          }
+                        ],
+                        "id": "1buvk488uqvtslr",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "tto32zlefdgix05",
+                            "text": "       0 M       "
+                          }
+                        ],
+                        "id": "h1vf3mpzzhbvbpt",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "0gsda7drvf86ze3",
+                            "text": "        0 M        "
+                          }
+                        ],
+                        "id": "vua1da1z5n1lsi4",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "g8jf69xogvlp60d",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "t16lgpmtqmv6tq5",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "74uhxb7vgw05oti",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "nhcmbo3sznln90t",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "x4lp5taxw9irx85",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "pqrje9z5sq4hpa8",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "x0weh9sd8tqqst6",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "eac0246qrftzrd6",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "nhrh0cxq9nttjcx",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "v4vsl1ji1d40ymd",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "qxs4c9dl4ek3qif",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "nfzx3f9bdnqa8k5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "28mb8jpt12ecndl",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "013os1q7yzu7cbk",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "rf5lh0yoo76qjh4",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "dne340nr32f9c1w",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "edtdz0hyhqnxzix",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "mxtzad7qk8x3gb0",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "r2vm16d9k8btxq5",
+                    "type": "tr"
+                  }
+                ],
+                "id": "os25wt92j68hxhb",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this example both H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " are limiting reactants since they both start at 0. With the assumption that "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "text": " = 0, we say that the equilibrium concentrations of H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " are also 0, i.e. they are both completely consumed. "
+                  }
+                ],
+                "id": "f7ocb1s0qwn8plm",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "64vjjqbv8wfwg8u",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "09se5bfpn6uug1o",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "razqexbyed7lqgv",
+                            "text": "      HCN(aq)     ⇌      H"
+                          },
+                          {
+                            "id": "os02211dl2ipjbc",
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "whnk581lri6sgy6",
+                            "text": "(aq)   +      CN"
+                          },
+                          {
+                            "id": "k39rv5tl7bht9ly",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "ug76635udlmbudm",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "1v6qabhacazjlmy",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "qsmy2ygil6tm6ry",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "69ak8tgda4xk30x",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "chgp2p3ehchlzty",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "l20hke540m6vj7a",
+                            "text": "       0.15 M       "
+                          }
+                        ],
+                        "id": "izmtgpk68xn55c8",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "9qpe1wi4v1wz74x",
+                            "text": "       0 M       "
+                          }
+                        ],
+                        "id": "yikqdi7ofj9yum9",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "u8t6q4d9s1c8tsp",
+                            "text": "        0 M        "
+                          }
+                        ],
+                        "id": "0z81zzuqx69gmnz",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "r1lc922t4qxsaa5",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "drt7vli2fwn5tw6",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "x50bv94z835viaa",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "xx9u10w60qswgi1",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "f3ajyd3mxoye6gu",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "dqg2drw4d8kqhrh",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "aixygp6auvuuea4",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "13foeebd5rvfxox",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "zn5wj5ri263b425",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "wkixjqpa1jfa0ng",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "836z4kvnd37hlkp",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "y6ebsrtrnxpjdku",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "t621i14gj9z1wso",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "6k3r0rzom665uzy",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "gwqoazompg1tmjj",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "e0v9pnv4dgumukk",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "xanmfa2e6hfg23l",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "vp6dcs9nwinqn9r",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "64zk438rufu6ud6",
+                    "type": "tr"
+                  }
+                ],
+                "id": "1vcsg4p8p0iblsb",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Because this means that there is no change in the concentrations for H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": ", then we assume that there was no change in HCN."
+                  }
+                ],
+                "id": "psna2wzgv2vwuty",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "kyo63ryva15vmny",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "6ol5v1jskvj7qsl",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "74vq1jfypqvq096",
+                            "text": "      HCN(aq)     ⇌      H"
+                          },
+                          {
+                            "id": "3pagpc2r5m6pb55",
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "s1nvfjx3qb3hgk1",
+                            "text": "(aq)   +      CN"
+                          },
+                          {
+                            "id": "r9bqithi2q3s5jy",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "jz7snrtq0fowexq",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "qvv3p9mctq07023",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "mn0ywhmnav4w44h",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "tvy4nym6g0rhe3m",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "ly2u50ouzqf2j7k",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "jjviwhwlofjc19l",
+                            "text": "       0.15 M       "
+                          }
+                        ],
+                        "id": "9hmtvg3j506nktb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "9es6l4jd49jo4sw",
+                            "text": "       0 M       "
+                          }
+                        ],
+                        "id": "i4heexbzwqyudyn",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "grk0b26ssrpud3y",
+                            "text": "        0 M        "
+                          }
+                        ],
+                        "id": "0jh2vbqzoah1lyz",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "mxm4qmdojyqluqq",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "08xvzvhouje8dop",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "9ogh7x9p78cz7xd",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "m26rtx1b5kzb7zl",
+                            "text": "no change"
+                          }
+                        ],
+                        "id": "0e5sz5u6plgvmze",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "nzldvkoj1injjhr",
+                            "text": "no change"
+                          }
+                        ],
+                        "id": "yisltwhvsfgspnw",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "gnnfdwfc6mnm5wc",
+                            "text": "no change"
+                          }
+                        ],
+                        "id": "lpsk3e4jmuda037",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "scthgfcb7pmh3ub",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "acpyjbj2qsq2igg",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "ereny9rq4odfk1u",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "i0jck847w3pfepf",
+                            "text": "0.15 M"
+                          }
+                        ],
+                        "id": "m6fy2gppgmn6w1w",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "kjvgvic7zaojlub",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "nrhxig5dtqvswyj",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "aixxdxnq3o83zb9",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "5wheuoet5g7sgby",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "qq5wqk441crn4rc",
+                    "type": "tr"
+                  }
+                ],
+                "id": "b3oxemrk1aljofb",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Step 2: Determine the concentration of the minority specie(s) using the determined equilibrium concentrations for all other species and the equilibrium expression."
+                  }
+                ],
+                "id": "2ooynbtj6lzz46a",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We understand that while the [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] and [CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] will be very small at equilibrium, they are not actually zero. Based on the stoichiometry of the reaction we know that the equilibrium [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] and [CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] will be the same. Substituting these values ([CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] = [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]) into the equilibrium expression gives:"
+                  }
+                ],
+                "id": "gw2198poieo5y61",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "1bqb99crejtx5ct",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jl0fpn16ujy1ny5",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\lbrack\\mathrm H^+\\rbrack^2}{(0.15)}\\;=\\;4.9\\times10^{-10}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wf8am3qztf7214x",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "t4bw9f14eue3m5c",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\lbrack\\mathrm H^+\\rbrack^2\\;=\\;7.35\\times10^{-11}\\\\\\lbrack\\mathrm H^+\\rbrack\\;\\;=\\;8.6\\times10^{-6}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "There fore the concentrations at equilibrium for each species are: [HCN] = 0.15 M; [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] = 8.6×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-6"
+                  },
+                  {
+                    "text": "; [CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] = 8.6×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-6"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ],
+                "id": "zb3qgwn120xv8vt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Finally, we must check that our assumptions that we made are valid by verifying, or not, that the concentration of the minority species is 5% or less of the majority species. [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] and [CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] are the minority species and [HCN] is the majority species."
+                  }
+                ],
+                "id": "3tzo42zqbkuvxfh",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "90dotp05677n7d2",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "yv2x1io2u9po1ly",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{8.6\\times10^{-6}}{0.150}\\;\\times\\;100\\;=\\;5.7\\times10^{-3}\\;\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The assumption is verified."
+                  }
+                ],
+                "id": "krz44u0lhv8apf0",
+                "type": "p"
+              }
+            ],
+            "id": "4225601747",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2515781635",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Watch the video below to learn how to use the interface for the next problem."
+              },
+              {
+                "text": " "
+              }
+            ],
+            "id": "gelkvz5yfm2vb8k",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "pjhrt74v5wqt3o5",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "vbu4cdx0yn9qfjw",
+            "src": "qfrsJZk01yE",
+            "type": "youtube"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Read the question prompt and work through the following problem as described in the video."
+              }
+            ],
+            "id": "xvi34cbn47k6zp2",
+            "type": "p"
+          }
+        ],
+        "id": "1186579128",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": "Equilibrium 2"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_equilibrium_2_bgt2j",
+                    "idref": "80577",
+                    "type": "a"
+                  }
+                ],
+                "id": "8uhas4xf8qvwsl6",
+                "type": "p"
+              }
+            ],
+            "id": "2502222189",
+            "selection": {
+              "selection": {
+                "anchor": {
+                  "offset": 0,
+                  "path": [
+                    0,
+                    0
+                  ]
+                },
+                "focus": {
+                  "offset": 0,
+                  "path": [
+                    1,
+                    0
+                  ]
+                }
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "3503118352",
+        "layout": "vertical",
+        "purpose": "none",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79880,
+            "id": "1671402060",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79221,
+            "id": "3085161480",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2034077018",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "urvxpmxgsc3jo1z",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "jwf26yunee2uden",
+            "type": "p"
+          }
+        ],
+        "id": "3326301429",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78536"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

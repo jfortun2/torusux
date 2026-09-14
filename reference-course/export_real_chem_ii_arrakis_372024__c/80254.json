@@ -1,0 +1,364 @@
+{
+  "id": "80254",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "uni_bi_lbd-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "D",
+          "E"
+        ],
+        "2928357777"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The following are the reactions in which the elementary step and the overall reaction "
+                  },
+                  {
+                    "em": true,
+                    "text": "might"
+                  },
+                  {
+                    "text": " be the same. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\mathrm{PCl}}_3\\;+\\;{\\mathrm{Cl}}_2\\;\\;\\longrightarrow\\;\\;{\\mathrm{PCl}}_5\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack{\\mathrm{PCl}}_3\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "2\\;\\mathrm{NO}\\;+\\;{\\mathrm O}_2\\;\\;\\longrightarrow\\;\\;2\\;{\\mathrm{NO}}_2\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack\\mathrm{NO}\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{NO}\\;+\\;{\\mathrm O}_3\\;\\;\\longrightarrow\\;\\;{\\mathrm{NO}}_2\\;+\\;{\\mathrm O}_2\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_3\\rbrack",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "7tkkw3z4b09izu7",
+                "type": "p"
+              }
+            ],
+            "id": "1003760845"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The rate law for an elementary step is based directly on its molecularity (stoichiometry). The rate law for an overall reaction is determined by experiment (not from the stoichiometry)."
+                    }
+                  ],
+                  "id": "xmzrnvq5quj3pr5",
+                  "type": "p"
+                }
+              ],
+              "id": "3649169931"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Compare the known rate law for the overall reaction with the rate law that would result if the reaction occurred as an elementary step."
+                    }
+                  ],
+                  "id": "uj7dszce8ej09k0",
+                  "type": "p"
+                }
+              ],
+              "id": "1675413460"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "If the known rate law for the overall reaction is the same as the rate law that would result if the reaction occurred as an elementary step, then the reaction "
+                    },
+                    {
+                      "em": true,
+                      "text": "might"
+                    },
+                    {
+                      "text": " occur via an elementary step that is the same as the overall reaction."
+                    }
+                  ],
+                  "id": "50ctwg7tx486qhu",
+                  "type": "p"
+                }
+              ],
+              "id": "1057554186"
+            }
+          ],
+          "id": "1595795447",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. For each of these reactions, the known (experimental) rate law is the same as the rate law that would result if the reaction occurred via an elementary step. That means each of these reactions "
+                      },
+                      {
+                        "em": true,
+                        "text": "might"
+                      },
+                      {
+                        "text": " occur by an elementary step that is the same as the overall reaction."
+                      }
+                    ],
+                    "id": "2ry20pqybolzznf",
+                    "type": "p"
+                  }
+                ],
+                "id": "194768372"
+              },
+              "id": "2928357777",
+              "legacyMatch": "B,D,E",
+              "rule": "(!(input like {C})) && ((!(input like {A})) && (input like {E} && (input like {D} && (input like {B}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. There are three correct answers."
+                      }
+                    ],
+                    "id": "maus8x2xignyjmk",
+                    "type": "p"
+                  }
+                ],
+                "id": "1346055592"
+              },
+              "id": "2413887573",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Consider the following reactions and their corresponding rate laws. Which of these reactions might occur by an elementary step that is the same as the overall reaction? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\;\\;{\\mathrm{Cl}}_2\\;+\\;\\mathrm{CO}\\;\\;\\longrightarrow\\;\\;{\\mathrm{Cl}}_2\\mathrm{CO}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack{\\mathrm{Cl}}_2\\rbrack^\\frac32\\lbrack\\mathrm{CO}\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "hzy6l0vhdpxfve2",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\;\\;{\\mathrm{PCl}}_3\\;+\\;{\\mathrm{Cl}}_2\\;\\;\\longrightarrow\\;\\;{\\mathrm{PCl}}_5\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack{\\mathrm{PCl}}_3\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "n0ctz86o2l0pop4",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\;\\;2\\;\\mathrm{NO}\\;+\\;{\\mathrm{Cl}}_2\\;\\;\\longrightarrow\\;\\;2\\;\\mathrm{NOCl}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm{Cl}}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "7bh6wx3smljmppw",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\;\\;2\\;\\mathrm{NO}\\;+\\;{\\mathrm O}_2\\;\\;\\longrightarrow\\;\\;2\\;{\\mathrm{NO}}_2\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack\\mathrm{NO}\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "telzkb3f9dbf3pd",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": ""
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\;\\;\\mathrm{NO}\\;+\\;{\\mathrm O}_3\\;\\;\\longrightarrow\\;\\;{\\mathrm{NO}}_2\\;+\\;{\\mathrm O}_2\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{Rate}\\; =\\;k\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_3\\rbrack",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "4banurebexfv0pd",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the following reactions and their corresponding rate laws. Which of these reactions might occur by an elementary step that is the same as the overall reaction? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "8qc5ocz06l0j9ua",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "1595795447": [
+      "78282"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

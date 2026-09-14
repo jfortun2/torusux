@@ -1,0 +1,234 @@
+{
+  "id": "79156",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "collision_digt-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B"
+        ],
+        "2376474819"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "984v6t6beg90x6w",
+                  "type": "p"
+                }
+              ],
+              "id": "2534455351"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8r4m5zd4yp1km3c",
+                  "type": "p"
+                }
+              ],
+              "id": "362584723"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z4rxg2qxq8s6ut9",
+                  "type": "p"
+                }
+              ],
+              "id": "4180066550"
+            }
+          ],
+          "id": "2585069216",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reacting species must collide with enough energy and in the correct orientation for the reaction to occur."
+                      }
+                    ],
+                    "id": "tixjawt5a199c5a",
+                    "type": "p"
+                  }
+                ],
+                "id": "1621639405"
+              },
+              "id": "2376474819",
+              "legacyMatch": "A,B",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && (input like {B} && (input like {A})))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reacting species must collide with enough energy and in the correct orientation for the reaction to occur. "
+                      }
+                    ],
+                    "id": "ywekdqe9i0wibdk",
+                    "type": "p"
+                  }
+                ],
+                "id": "3414051286"
+              },
+              "id": "1078901594",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " The image above illustrates the reaction between atom A and molecule BC.What must happen in order for the reaction to occur? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The molecules must possess sufficient kinetic energy that they collide with enough force to cause the reaction to occur."
+              }
+            ],
+            "id": "vowv4rxjmdn3eg8",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The molecules must collide in the proper orientation that will enable the reaction to occur."
+              }
+            ],
+            "id": "htwnzdbtln8j98o",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There must be a certain number of each type of molecule in order for the reaction to occur."
+              }
+            ],
+            "id": "kqtz9xvnxg4owu2",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The pressure of the system must be high enough for the molecules to react."
+              }
+            ],
+            "id": "owk7bykxmjxx7ak",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "856079573",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "v0pwuc1916x9zay",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "5mqphbyiebfgvm1",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/f4/f451f1f0435d832994541ad71e7f8130/new_abc.png",
+          "type": "img",
+          "width": "300"
+        },
+        {
+          "children": [
+            {
+              "text": "The image above illustrates the reaction between atom A and molecule BC."
+            }
+          ],
+          "id": "y02hn34gxxrit3y",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What must happen in order for the reaction to occur? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "gc1s3oweqq3lph0",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2585069216": [
+      "78364"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

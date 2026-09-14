@@ -1,0 +1,413 @@
+{
+  "id": "78813",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78102"
+  ],
+  "title": "hydronium_hydroxide_pool2_v1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "D",
+          "E"
+        ],
+        "1848294143"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Neutral solutions have equal concentrations of hydronium (H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": ") and hydroxide (OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "). There are two solutions that are neutral:  a solution with [OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] = [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] a solution with [OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": "] = 1.0×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-7"
+                  },
+                  {
+                    "text": ".  "
+                  }
+                ],
+                "id": "lo4sbv8n3k2zmdl",
+                "type": "p"
+              }
+            ],
+            "id": "707791154"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nrqucs47bs42pu2",
+                  "type": "p"
+                }
+              ],
+              "id": "802544004"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "56q8fc3peq51k04",
+                  "type": "p"
+                }
+              ],
+              "id": "3646507510"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ix1kaw49eqod9p6",
+                  "type": "p"
+                }
+              ],
+              "id": "1793184056"
+            }
+          ],
+          "id": "ms1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Neutral solutions have equal concentrations of hydronium (H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") and hydroxide (OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "mizf8fr8lvje6yi",
+                    "type": "p"
+                  }
+                ],
+                "id": "1409531743"
+              },
+              "id": "1848294143",
+              "legacyMatch": "D,E",
+              "rule": "(!(input like {C})) && ((!(input like {B})) && ((!(input like {A})) && (input like {E} && (input like {D}))))",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Acidic solutions have a higher concentration of hydronium (H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") ions than hydroxide (OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ") ions, basic solutions have a higher concentration of hydroxide ions than hydronium ions, and neutral solutions have equal concentrations of both species. Also remember that when given the concentration of hydronium or hydroxide for an aqueous solution, use the equilibrium expression and equilibrium constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "w"
+                      },
+                      {
+                        "text": ", for the autoionization of water to calculate the concentration of the other species (hydronium or hydroxide). Be sure to interpret the negative exponents correctly (larger negative exponents have smaller values) and to interpret the pH value correctly according to the definition of pH."
+                      }
+                    ],
+                    "id": "gzsvuoxmy6abaed",
+                    "type": "p"
+                  }
+                ],
+                "id": "234163059"
+              },
+              "id": "3759144371",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst D1 = OLI.random(1,9.99,1 );\nconst D2 = OLI.random(1,9.99,1);\nconst D3 = OLI.random(1,9.99,1);\nconst E1 = OLI.random(-13,-2,0);\nconst E2 = OLI.random(-13,-2,0);\nconst E3 = OLI.random(-13,-2,0);\n\n\n// Expose variables to OLI\nmodule.exports = {\n  D1,\n  D2,\n  D3,\n  E1,\n  E2,\n  E3\n};\n",
+              "id": "b90bc4dc76bc414cae28a376d9b4ba95",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [OH"
+              },
+              {
+                "sup": true,
+                "text": "-"
+              },
+              {
+                "text": "] = @@D1@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@E1@@"
+              },
+              {
+                "text": " M."
+              }
+            ],
+            "id": "v28ttyjclnecx5j",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "] = @@D2@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@E2@@"
+              },
+              {
+                "text": " M. "
+              }
+            ],
+            "id": "00ennmd2y109feu",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with pH = @@D3@@."
+              }
+            ],
+            "id": "yvepj9qw7vvjlim",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [OH"
+              },
+              {
+                "sup": true,
+                "text": "-"
+              },
+              {
+                "text": "] = [H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "] M."
+              }
+            ],
+            "id": "gxdw7xs3yqus12m",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A solution with [OH"
+              },
+              {
+                "sup": true,
+                "text": "-"
+              },
+              {
+                "text": "] = 1.0×10"
+              },
+              {
+                "sup": true,
+                "text": "-7"
+              },
+              {
+                "text": " M."
+              }
+            ],
+            "id": "ytbepjcb05y730i",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is/are neutral? Select all that apply."
+            }
+          ],
+          "id": "llwxt474goscuto",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "ms1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

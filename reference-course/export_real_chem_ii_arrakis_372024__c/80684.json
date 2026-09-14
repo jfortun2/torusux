@@ -1,0 +1,4596 @@
+{
+  "id": "80684",
+  "type": "Page",
+  "tags": [],
+  "title": "Calculating pH from Ka and Kb",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Because weak acids and bases only partially ionize, their [H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "] cannot be directly determined from the concentration of solution as it can be with strong acids and bases. To determine [H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "], we must consider the equilibrium expression that represents the concentration of all the species in solution and the ionization constant for a given reaction."
+              }
+            ],
+            "id": "fvru87cjk9v4w5r",
+            "type": "p"
+          }
+        ],
+        "id": "648045433",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3949896251",
+                "type": "p"
+              },
+              {
+                "border": "hidden",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "em": true,
+                                "text": "Formic acid, HCO"
+                              },
+                              {
+                                "em": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "em": true,
+                                "text": "H, is the irritant that causes the body’s reaction to ant stings. What are the concentration of hydronium ion and the pH in a 0.534 M solution of formic acid?"
+                              }
+                            ],
+                            "id": "g65ksatpugubnmx",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1u0ardeclx33x3l",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alt": "A photograph is shown of a large black ant on the end of a human finger.",
+                            "caption": [
+                              {
+                                "children": [
+                                  {
+                                    "em": true,
+                                    "text": "The pain of an ant’s sting is caused by formic acid. (Credit: John Tann.)"
+                                  }
+                                ],
+                                "type": "p"
+                              }
+                            ],
+                            "children": [
+                              {
+                                "id": "vr4jjf3tqnqalbf",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "0lgkbfgl185fapm",
+                            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/55/55c5eb01598463e953bcb134786c34cb/CNX_Chem_14_03_AntSting.jpg",
+                            "type": "img",
+                            "width": "300"
+                          }
+                        ],
+                        "id": "zmpo1u1sdg74nwe",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "h5y5wgma3wj40eu",
+                    "type": "tr"
+                  }
+                ],
+                "id": "cbxjkkj80udsest",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We can use the same process as for calculating "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " from pH, except we start with "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " and determine pH (rather than start with pH and find "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": ")."
+                  }
+                ],
+                "id": "a2vqj7pvjsc8nop",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Write the equilibrium reaction and "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "a"
+                          },
+                          {
+                            "strong": true,
+                            "text": " expression."
+                          }
+                        ],
+                        "id": "1928566443",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "uxxzhkdbv3qaia4",
+                    "type": "li"
+                  }
+                ],
+                "id": "xgs8fsk86hi88jo",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ajheu5kvo9f8usl",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "p91pf77s7hctruc",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{HCO}}_2\\mathrm H(aq)+{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm H}_3\\mathrm O^+(aq)+\\mathrm{HCO}_2^-(aq)\\;\\;\\;\\;\\;\r\n\\\\K_{\\mathrm a}=\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{HCO}_2^- \\rbrack}{\\lbrack{\\mathrm{HCO}}_2\\mathrm H\\rbrack}=1.8\\times10^{-4}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note: The value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " for formic acid can be found in this table: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Ionization Constants of Common Weak Acids"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_ka_values_of_common_weak_acids_8xgif",
+                    "idref": "80709",
+                    "target": "new",
+                    "type": "a"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "dgc4u5yz27frbiu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Use an ICE table to determine equilibrium concentrations in terms of "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": "."
+                          }
+                        ],
+                        "id": "2045031239",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "u70n05l4bm1899r",
+                    "type": "li"
+                  }
+                ],
+                "id": "rvmg0clnvdipp2c",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Enter initial concentrations (concentrations before the acid ionizes):"
+                  }
+                ],
+                "id": "nyj257sge8dmx8s",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "ixbawt7i9znh2xf",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "4galy5hk8o2copc",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "id9owh1lixyur5k",
+                            "strong": true,
+                            "text": "HCO"
+                          },
+                          {
+                            "id": "cnk6q6419bdb2ig",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "u8v834v6bc1tj6r",
+                            "strong": true,
+                            "text": "H + H"
+                          },
+                          {
+                            "id": "1c9kfgn3l74xnwm",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "iikbfhue4pdimi6",
+                            "strong": true,
+                            "text": "O ⇌ H"
+                          },
+                          {
+                            "id": "niewkpk3is5qkga",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "ix2efd7yyonvbmh",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "zz7krniei04a356",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "w6njmfj7ke37i5m",
+                            "strong": true,
+                            "text": " + HCO"
+                          },
+                          {
+                            "id": "atjxyz5ep9g4jnb",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "h4g6t0kai736ql2",
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "0lxfdfgp5o2f9vk",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "tl2c9hqfy4cda78",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "2702917817",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2543643827",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              }
+                            ],
+                            "id": "3853627970",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "231635181",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "392073314",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2250511552",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "326782167",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3222382633",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              }
+                            ],
+                            "id": "2881041899",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "83221105",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "134493698",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "3263oucyepoe0h4",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "fmndaudnjkidly7",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "mvs4q9d5qak0ncx",
+                            "text": "0.534 M"
+                          }
+                        ],
+                        "id": "nkwhmbp9hfnn856",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "8y6jj95elnv9k36",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "nbmx6inrt0yk3pi",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qlqug251tn83mnw",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "rus6xm019ns8hzv",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "egpuzw3406qorya",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "0uhxlve77jzraxn",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "5pl3tjg59zsvhbl",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "q1ul6vnt8lfym2c",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "9ynuw6cxj6ku3ej",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "dhfrfejoyodoxne",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "ov8uowdbjk0qaep",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "bfwrdktatwrd92c",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "wnxcr2ko19jvm5g",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "9ug46npobhugpaa",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "grtnvhu6ik7h8u6",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "7c5dwh0bqojg3ih",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "t2l3wsymw3demv7",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "85zsu7300en7vbr",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "mxcfbj7yrlaj6c7",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "1drufmtzyv12kus",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "sbbngn0bhgxtp37",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "ig09vwgxeo0axoj",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "9y3tzuq782otlh3",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "cidb4ut7bjqwmvt",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "abw9pp4l9ca6ycl",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "1mhf93lf9amz2qp",
+                        "type": "td"
+                      },
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "gs1admjfyj4gb1x",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "oi860roz6lvw23b",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "3nxdvlhqghmmvp0",
+                    "type": "tr"
+                  }
+                ],
+                "id": "us26p25wnn3wyu0",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note: The concentration of water does not appear in the expression for the equilibrium constant, so we do not consider its concentration when setting up the ICE table. "
+                  }
+                ],
+                "id": "3udhs73johschwy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " to represent the change in concentration of the species. Based on the stoichiometry of the reaction, we know that [HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "] will decrease by "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ", and [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] and [NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": "] will both increase by the same amount, "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ": "
+                  }
+                ],
+                "id": "xzzbc9f3d2s9c9y",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "1mxzlv8o7poyl2h",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "pb2rj0s5tdtcpge",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "bdoky876gcacc5n",
+                            "strong": true,
+                            "text": "HCO"
+                          },
+                          {
+                            "id": "tcn507rqysvf2rj",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "vf3pwco3fxs68o8",
+                            "strong": true,
+                            "text": "H + H"
+                          },
+                          {
+                            "id": "amzcvvcj4ukp27j",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "aarwax9ccr1me1x",
+                            "strong": true,
+                            "text": "O ⇌ H"
+                          },
+                          {
+                            "id": "1uarc07y1rqops2",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "ec7r0z7bd49mqb6",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "t58qch47b1qtqo4",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "fyngqayvaeb5lnh",
+                            "strong": true,
+                            "text": " + HCO"
+                          },
+                          {
+                            "id": "thpvr6u12nnj4vf",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "2925re06g6k1u03",
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "r9pl6smrc44f68g",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "5u82hv20lry3puj",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "3248497455",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2189896824",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              }
+                            ],
+                            "id": "1014753202",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2965080637",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "1883093957",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "246575573",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "323610081",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3832371808",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              }
+                            ],
+                            "id": "78825536",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1080180600",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "2253583646",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "3wbhsn3tprytlyr",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "radym3ujd6zelf3",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "7rpvtuha9xbcscg",
+                            "text": "0.534 M"
+                          }
+                        ],
+                        "id": "qfknldx7mgxzvbm",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "7gdcadbbrmtsa71",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "48lg8jmncaeydma",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "u95f3hcm1cw6jg7",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "rsftnmxzcd665yh",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "kl0lu75760jo21h",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "3wyp137kw7l7fzf",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "hdz6l5kwj031w3h",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "ypchg9xu9axmaft",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "bzvwco0yt9cje3d",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "haewn80aftwppqr",
+                            "text": "−"
+                          },
+                          {
+                            "em": true,
+                            "id": "uvx07uox7uvpyes",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "94wlss9634w20ny",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "5si5gse4a4eu8z5",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "iwenkkltankvdk8",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "7iugypi6emyiycc",
+                            "text": "+ "
+                          },
+                          {
+                            "em": true,
+                            "id": "ckix6wkq8xrj19e",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "z48cstt1s0bo45c",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "aosabgvtt56fsv6",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "sekztyeo1onq265",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "yuw5oodvykfk0e0",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "hlc24nc4ujqnnn2",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "gu28jyyk4bhbzpb",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "ommzkro0nfiduih",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "6bm5sfn5zdcc2jm",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "ofkd6h0t1vh25io",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "uicdfqksw6zokks",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "jkx9wjjqdooskie",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "gx7fvfjyv1ams6i",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "0r3thyfsymj5mpn",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ihb8h0kf2ysjiac",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "th6q5ztv6059p5v",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "chznotjx3gew714",
+                    "type": "tr"
+                  }
+                ],
+                "id": "d9ty7s6jg5zna9s",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Next, we fill in the equilibrium concentrations relative to "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ": "
+                  }
+                ],
+                "id": "aco3y2d3qnhtden",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "7w72z6yzijqbygj",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "hotb8gm6y43isy7",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ctarklq0ruxwxss",
+                            "strong": true,
+                            "text": "HCO"
+                          },
+                          {
+                            "id": "vbepq0g44tj125n",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "aiw5dqbr78xozxd",
+                            "strong": true,
+                            "text": "H + H"
+                          },
+                          {
+                            "id": "gz2n174g4e8uleh",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "oc7enphvltr87am",
+                            "strong": true,
+                            "text": "O ⇌ H"
+                          },
+                          {
+                            "id": "y9paralmkf4kvld",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "9v434l409skhuj6",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "wzauzr8xgry4vkj",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "3j3bui2g81v8vwb",
+                            "strong": true,
+                            "text": " + HCO"
+                          },
+                          {
+                            "id": "x098jwjb1f267f4",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "76yt2kmo9lgsl34",
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "7lz3vnncxvxjt86",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "fu2f3s8kvoahaex",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "3865064976",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3855842614",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              }
+                            ],
+                            "id": "4073645109",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3664959976",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "280789700",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4064185429",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "4287666867",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2167264528",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              }
+                            ],
+                            "id": "4156714365",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4087769793",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "3690614955",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "n0jh175h5m1r81v",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "nygcjtnesevv50p",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "iof6rpu4a6wdspl",
+                            "text": "0.534 M "
+                          }
+                        ],
+                        "id": "tp0013y6mb5ln5x",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "q4y40jhph36fslj",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "favti2y79fru3ze",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "i2utfozjt5wfqoh",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "hhtqwdbiygvd10z",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "a2j3tkv811yebcm",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "7o09bn4yoo2qox9",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "hh39ec9lkhxpdai",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "civ93blroo8vm4e",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "2df1cvn2p0u6hn6",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "i7g3vvafr9v4419",
+                            "text": "−"
+                          },
+                          {
+                            "em": true,
+                            "id": "w8oeiylmgk66ftm",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "hzt0azbdm81df0t",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "nfpoq17s7s07p5k",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "59zvtrbcenor34w",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "p5dkyjbvtyjob3q",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "rg8saemdapes0hl",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "41lreiaewm4pdwh",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ci6erw9rz0ti699",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "vsnm5fwrwovjuv2",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "cv5k735s1xvhqrm",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "839hmlxu0obfyvq",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "0bvs98bk7d5j8d7",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "5qbt9snqdy1zmqn",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "3mig4sk8jj0v9l4",
+                            "text": "0.534 M − "
+                          },
+                          {
+                            "em": true,
+                            "id": "r0dl2n5lcjp25t7",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "gui6fy8by2wq9gr",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "c2lkgjs6qg67zig",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "r428t90vsr4l620",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "wtxn1ow00qpr55t",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "2jy3mrm5m098kxe",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "39fm9mn7zzpvgm9",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "t6hvd8wvwiia4s9",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "szh7wvmisdlll7h",
+                    "type": "tr"
+                  }
+                ],
+                "id": "oyzy12ymgo3zw7m",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Substitute the equilibrium concentrations from the ICE table into the equilibrium constant expression and solve for "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": ". If "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "a"
+                          },
+                          {
+                            "strong": true,
+                            "text": " << [HA], use the small "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": " approximation."
+                          }
+                        ],
+                        "id": "3178566798",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "kjth5mzso1tyq3f",
+                    "type": "li"
+                  }
+                ],
+                "id": "qpv11lnhu77w8xv",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "id": "sl3kutanksroufo",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "s0wh9tw1cx76d7e",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm a}\\;=\\;\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{HCO}_2^-\\rbrack}{\\lbrack{\\mathrm{HCO}}_2 \\mathrm H\\rbrack}\\;=\\;\\frac{(x)(x)}{0.534-x}\\;=\\;1.8\\times10^{-4}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Because the initial concentration of acid is reasonably large and "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " is very small, we assume that "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " << 0.534, which permits us to simplify the denominator term as (0.534 − "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") = 0.534. This gives:"
+                  }
+                ],
+                "id": "6m0c25mlrdtp5dx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "gjjw8vwzjo6rdek",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "j3kaxa1v5bfsxeo",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{x^2}{0.534}\\;=\\;1.8\\times10^{-4}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We now solve for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "r6ndm6j0lbhypdq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ei9pze8o8ryfha2",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "72ougyfaz1m5xv1",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{c}x^2\\;=\\;(0.534)(1.8\\times10^{-4})\\;=\\;9.6\\times10^{-5}\\\\x\\;=\\;\\sqrt{9.6\\times10^{-5}}\\; =\\;9.8\\times10^{-3}\\;\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Verify the assumption."
+                          }
+                        ],
+                        "id": "229461209",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "wm9maii2ovdiqpz",
+                    "type": "li"
+                  }
+                ],
+                "id": "bn2sciysf5522wx",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "To check the assumption that "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is small compared to 0.534, we calculate: "
+                  }
+                ],
+                "id": "5pgbw7omr9d5528",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "394h1kdwtk1at7t",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "imapkmm5m4nm4lu",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{9.8\\times10^{-3}}{0.534}\\times100\\%\\;=\\;1.8\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is less than 5% of the initial concentration, so the assumption is valid."
+                  }
+                ],
+                "id": "zmdla2i2y506wby",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Determine pH from [H"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "strong": true,
+                            "text": "]."
+                          }
+                        ],
+                        "id": "2588041833",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "cvekm05xmvvj9ud",
+                    "type": "li"
+                  }
+                ],
+                "id": "v9zmbheej070tyx",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We find the equilibrium concentration of hydronium ion from its initial concentration and change in concentration, as indicated in the last row of the ICE table:"
+                  }
+                ],
+                "id": "tsv1qvgate41333",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "kluh8n5minfd0se",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jvgaza81374ush6",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;x\\;=\\;9.8\\times10^{-3}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The pH of the solution is then found by taking the negative log of the [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]:"
+                  }
+                ],
+                "id": "n5g0nhbv8plqvjt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "mahrstenfhif0qk",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ench666y7ffec4v",
+                "legacyBlockRendered": "true",
+                "src": "-\\log(9.8\\times10^{-3})\\;=\\;2.01",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "316007825",
+                "type": "p"
+              }
+            ],
+            "id": "3223982299",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "955808734",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "expuadvoxnrygry",
+                "text": "Interactive Example: Calculating pH from "
+              },
+              {
+                "em": true,
+                "id": "9zk8tqoq56imgqi",
+                "text": "K"
+              },
+              {
+                "id": "nk6qcme71b348fb",
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "id": "w7qwxf1zzz28j04",
+                "text": " and Initial Concentration"
+              }
+            ],
+            "id": "rwyp7l0hxoi1bf1",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "Acetic acid, CH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "COOH, is the principal ingredient in vinegar. Calculate the pH of a 0.250-M acetic acid solution."
+              }
+            ],
+            "id": "lx1uovzb95y01pm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "2hv8pela03w0kk6",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "p5r7zojibc4e2tb",
+            "legacyBlockRendered": "true",
+            "src": "{\\mathrm{CH}}_3\\mathrm{COOH}(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\; {\\mathrm H}_3\\mathrm O^+(aq)\\;+\\;{\\mathrm{CH}}_3\\mathrm{COO}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; K_{\\mathrm a}\\;=\\;1.76\\times10^{-5}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "b769lty6v0edr8x",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "height": "439",
+            "id": "hyhrekvbula74j7",
+            "src": "https://h5p.org/h5p/embed/369100",
+            "type": "iframe",
+            "width": "750"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "4227090076",
+            "type": "p"
+          }
+        ],
+        "id": "3908931100",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Propionic acid, C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "5"
+                  },
+                  {
+                    "text": "CO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H ("
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " = 1.34 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−5"
+                  },
+                  {
+                    "text": "), is used in the manufacture of calcium propionate, a food preservative. What is the pH of a 0.698-M solution of C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "5"
+                  },
+                  {
+                    "text": "CO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H?"
+                  }
+                ],
+                "id": "5xzu0sfyd003f1o",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "15dup9ljy8pq46s",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "283gke6d5w1yl79",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm a}\\;=\\;\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack{\\mathrm C}_2{\\mathrm H}_5 \\mathrm{CO}_2^-\\rbrack}{\\lbrack{\\mathrm C}_2{\\mathrm{HCO}}_2\\mathrm H\\rbrack}\\;=\\;1.34\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2233273441",
+                "type": "p"
+              }
+            ],
+            "id": "3469186507",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 80378,
+                "id": "3311462963",
+                "type": "activity-reference"
+              },
+              {
+                "id": "3656514222",
+                "type": "break"
+              },
+              {
+                "activity_id": 79065,
+                "id": "2778972274",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79159,
+                "id": "4202257716",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79432,
+                "id": "1803621480",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80054,
+                "id": "2371939384",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79121,
+                "id": "1490935164",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "2161342634",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "3447288585",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "In the next example, we look at determining the pH of a weak base solution."
+              }
+            ],
+            "id": "pqbeyn4571hwv4x",
+            "type": "p"
+          }
+        ],
+        "id": "36951112",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Find the concentration of hydroxide ion and the pH of a 0.25 M solution of trimethylamine, a weak base:"
+                  }
+                ],
+                "id": "2y6axvrjtyon8ql",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "jwra32ylaraofnk",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "oj6dqrxuytu9u9h",
+                "legacyBlockRendered": "true",
+                "src": "({\\mathrm{CH}}_3)_3\\mathrm N(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;({\\mathrm{CH}}_3)_3\\mathrm{NH}^+(aq) \\;+\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm b}\\;=\\;6.3\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "First, write the equilibrium constant expression:"
+                  }
+                ],
+                "id": "vzwsthwxpb7qxpa",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "im2hs4qrfbb4x1n",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "j5vwruitqhwqaur",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm b}\\;=\\;\\frac{\\lbrack({\\mathrm{CH}}_3)_3\\mathrm{NH}^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack}{\\lbrack({\\mathrm{CH}}_3)_3 \\mathrm N\\rbrack}\\;=\\;6.3\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Use an ICE table to determine equilibrium concentrations in terms of "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": "."
+                          }
+                        ],
+                        "id": "3438530672",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "rmi4xtrflizzy00",
+                    "type": "li"
+                  }
+                ],
+                "id": "2uzeogcbn2o5t3z",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "kifclhux5qv8oc2",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "bdhmz9t7j62jm0v",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ggabbd00v6wnmd1",
+                            "strong": true,
+                            "text": "(CH"
+                          },
+                          {
+                            "id": "9913vt1zrofzq3n",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "9j9f65v4p9wnwj5",
+                            "strong": true,
+                            "text": ")"
+                          },
+                          {
+                            "id": "e3lgykrpz92aljh",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "usvihlsx9cgad38",
+                            "strong": true,
+                            "text": "N + H"
+                          },
+                          {
+                            "id": "rsi8t9h06b4ukoh",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "7r41knacmkgzc3a",
+                            "strong": true,
+                            "text": "O ⇌ (CH"
+                          },
+                          {
+                            "id": "5yf2gxmy0ixbfb9",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "jxoqvauxz2g387w",
+                            "strong": true,
+                            "text": ")"
+                          },
+                          {
+                            "id": "7fbng43idhlea97",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "kkaiva0ppehzb8s",
+                            "strong": true,
+                            "text": "NH"
+                          },
+                          {
+                            "id": "04fobfgim6rmik6",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "4elpv70axplx2qr",
+                            "strong": true,
+                            "text": " + OH"
+                          },
+                          {
+                            "id": "s3fbgij7zzsw5tu",
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "b7dvc559oaudt1j",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "qamuwo5y5f7xiq2",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "3567748539",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3203366871",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "(CH"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "N"
+                              }
+                            ],
+                            "id": "2080604132",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "331810884",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "3181356013",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3253132119",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "(CH"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "NH"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "2439372010",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "759538862",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "OH"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              }
+                            ],
+                            "id": "3015966920",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "451235859",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "1278509708",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "wjazk900k4ck9rp",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "kk0nayesgcdzu1o",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "dz9rcaqnv5y9jly",
+                            "text": "0.25 M"
+                          }
+                        ],
+                        "id": "2k5buz4nrie2w7g",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "uyqup0yuwjt57w2",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "srgm4fsgo1eb4bf",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qajv33a205q34tv",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "utw2vtm94xxa39j",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "56lv99dn92racpe",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "tfnjfdzqixirros",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "g3zl4e6j0b5s9wm",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "kmirrpkh8e6yidj",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "hcnlwsiprb2xfoy",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "jnb23aj202no4q8",
+                            "text": "−"
+                          },
+                          {
+                            "em": true,
+                            "id": "9ptvw124dkwuedf",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "uhcivakmtxu3uo0",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "w7lj8otq86w6gvi",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "qye91rjewnfkvo5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "y4c9t4174q0adix",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "826yfvifxlqc3rv",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "cznub7wjdyvnlc5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "6iymst79rwccdax",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "4g6capp3zyhkwsb",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "i2t7oka47bjez18",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "pkt7sy9luodui7w",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "qqbv40w3mo5alf4",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "f8orz33isg0sk3o",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "2y058278b3tus0n",
+                            "text": "0.25 − "
+                          },
+                          {
+                            "em": true,
+                            "id": "tvfh7jdtkbcmep2",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "2929l7mlbpyq21n",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "arkz1qw2trbvolr",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "ho0sysodzdk98li",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "pabxtnp7whgqxuv",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "v8jtn4ixyj47d5a",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "k2n66w1s1tss4cb",
+                            "text": "x"
+                          },
+                          {
+                            "id": "znbqqq1dg5f182u",
+                            "text": " "
+                          }
+                        ],
+                        "id": "qg2rnhhh324i71w",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "227uzc7c4vqu6j3",
+                    "type": "tr"
+                  }
+                ],
+                "id": "1rr3konvuot13yn",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Substitute the equilibrium concentrations from the ICE table into the equilibrium constant expression and solve for "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": ". If "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "b"
+                          },
+                          {
+                            "strong": true,
+                            "text": " << [HA], use the small "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": " approximation."
+                          }
+                        ],
+                        "id": "4233153217",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "l8384kr611r4rr8",
+                    "type": "li"
+                  }
+                ],
+                "id": "4h3o061y4xf74d6",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The equilibrium constant expression in terms of "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is:"
+                  }
+                ],
+                "id": "p46xf77nc6cqm8x",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "n4rc5sonsu23d32",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "bktw7ab2mdp49aj",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm b}=\\frac{\\lbrack({\\mathrm{CH}}_3)_3\\mathrm{NH}^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack}{\\lbrack({\\mathrm{CH}}_3)_3 \\mathrm N\\rbrack}\\;=\\;\\frac{\\;(x)(x)}{0.25-x}\\;=\\;6.3\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "b"
+                  },
+                  {
+                    "text": " is very small compared to the initial concentration of trimethylamine, so we assume "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " << 0.25 and replace (0.25 − "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") in the preceding equation with 0.25. We then solve the simplified equation:"
+                  }
+                ],
+                "id": "obcshuavd1b6xuu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "m2vlq0o1abzaafj",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "erbm0nrimm66kek",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\;x^2}{0.25}\\;=\\;6.3\\times10^{-5}\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;x=\\sqrt{(0.25)(6.3\\times10^{-5})}\\;=\\;0.0040",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Verify the assumption."
+                          }
+                        ],
+                        "id": "1907935450",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "wt2ehgtm303zbe9",
+                    "type": "li"
+                  }
+                ],
+                "id": "g6trmfmtt5c5qah",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "id": "c8wf20jzx94ceya",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "uku1rh0yucyqwcg",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{4.0\\times10^{-3}}{0.25}\\times100\\%\\;=\\;1.6\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This change is less than 5% of the initial concentration (0.25), so the assumption is justified."
+                  }
+                ],
+                "id": "v0h9elrkkyt76ff",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Determine pH from [OH"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          },
+                          {
+                            "strong": true,
+                            "text": "]."
+                          }
+                        ],
+                        "id": "4180303785",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "d4402ahq2nn2npg",
+                    "type": "li"
+                  }
+                ],
+                "id": "kaywnsvzrpynjxy",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "From the ICE table, we see that "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is equal to the equilibrium concentration of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "t3kml2axgg2pw5t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "a3j9plicrujcg0o",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "6ynlt9asjs2ouh1",
+                "legacyBlockRendered": "true",
+                "src": "x\\;=\\;\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;4.0\\times10^{-3}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We then calculate pOH from [OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": "]:"
+                  }
+                ],
+                "id": "dhfmsofw2x1y21m",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "hf0910pda99d7dz",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "a9k7lcfso9wpyro",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{pOH}\\;=\\;-\\log(4.0\\times10^{-3})\\;=\\;2.40",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Finally, the relationship between pH and pOH is used to determine pH:"
+                  }
+                ],
+                "id": "ae7d160v5m81g0v",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "aiyvbvnfgq7t1bs",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hk85ix75c3ldzc3",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{pH}\\;=\\;14.00\\;-\\;\\mathrm{pOH}\\;=\\;14.00\\;-\\;2.40\\;=\\;11.60",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "3052180382",
+                "type": "p"
+              }
+            ],
+            "id": "1465671990",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2220115843",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Solutions of ammonia, NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " ("
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "b"
+                  },
+                  {
+                    "text": " = 1.77 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−5"
+                  },
+                  {
+                    "text": "), are used for household cleaning. What is the pH of a 0.95 M solution of NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ],
+                "id": "cnijpgxqyxc0fxm",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "3rzt24mxopl6x3d",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "yi28xazhu9dyy36",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{NH}}_3(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{NH}_4^+(aq)\\;+\\;\\mathrm{OH}^-(aq) \\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm b}\\;=\\;\\frac{\\lbrack\\mathrm{NH}_4^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack}{\\lbrack{\\mathrm{NH}}_3\\rbrack} \\;=\\;1.8\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1198672062",
+                "type": "p"
+              }
+            ],
+            "id": "1007009490",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79738,
+                "id": "947318720",
+                "type": "activity-reference"
+              },
+              {
+                "id": "3894734436",
+                "type": "break"
+              },
+              {
+                "activity_id": 79605,
+                "id": "2386566765",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78792,
+                "id": "281919309",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79209,
+                "id": "1167983029",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79748,
+                "id": "107888294",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79842,
+                "id": "2089887358",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "4192500997",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "312701479",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Some weak acids and weak bases ionize to such an extent that the simplifying assumption that "
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": " is small relative to the initial concentration of the acid or base is inappropriate. As we solve for the equilibrium concentrations in such cases, we find that we cannot neglect the change in the initial concentration of the acid or base, and we must solve the equilibrium constant equation by using the quadratic equation."
+              }
+            ],
+            "id": "ibj5mxx9xurc2iy",
+            "type": "p"
+          }
+        ],
+        "id": "2288348101",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Sodium bisulfate, NaHSO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": ", is used in some household cleansers because it contains the HSO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": " ion, a weak acid. What is the pH of a 0.50 M solution of HSO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ],
+                "id": "hqp1u768o6gvji9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "oxym7qzml6284d9",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "k5anq3am5juivcn",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{HSO}_4^-(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm H}_3\\mathrm O^+(aq)\\; +\\;\\mathrm{SO}_4^{2-}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm a}\\;=\\;1.2\\times10^{-2}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We need to determine the equilibrium concentration of the hydronium ion that results from the ionization of HSO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": " so we can use [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] to determine the pH. "
+                  }
+                ],
+                "id": "3hyqggj88f03juh",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Use an ICE table to determine equilibrium concentrations in terms of "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": "."
+                          },
+                          {
+                            "text": " "
+                          }
+                        ],
+                        "id": "1633201272",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "pl9h2eokw570vnk",
+                    "type": "li"
+                  }
+                ],
+                "id": "19um287t852t9lg",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "pzypqp0jghy2cgs",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "6xz1z149eviqjzu",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "t0clvx9m6j8bahw",
+                            "strong": true,
+                            "text": "HSO"
+                          },
+                          {
+                            "id": "rknfx7uwt2etgom",
+                            "strong": true,
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "z849vyausey00mi",
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          },
+                          {
+                            "id": "dk4ebq3fm8h3po3",
+                            "strong": true,
+                            "text": " + H"
+                          },
+                          {
+                            "id": "8ta7cu4ryawgf9s",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "uum3i78plh5mmbj",
+                            "strong": true,
+                            "text": "O ⇌ H"
+                          },
+                          {
+                            "id": "xyb4qif343re2c4",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "vzjbfvc9f5vwh2y",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "nclphnp0au2q5ib",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "nlxui5d0agf9iff",
+                            "strong": true,
+                            "text": " + SO"
+                          },
+                          {
+                            "id": "fp0fi2j3ipckjma",
+                            "strong": true,
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "k6xlnhul3ymorf4",
+                            "strong": true,
+                            "sup": true,
+                            "text": "2−"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "3g2wib201ap0def",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "cu6351s7uj6e0vf",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "396877728",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2691143266",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HSO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              }
+                            ],
+                            "id": "1773411545",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2091685012",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "203872496",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3113448128",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "1060359521",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2685940234",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "SO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "2−"
+                              }
+                            ],
+                            "id": "322955594",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3925421845",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "1322643130",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "oaaisz8xwgvsu2h",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "2816f0zxqgifpht",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "nku4z9v2v8mmxt7",
+                            "text": "0.50 M"
+                          }
+                        ],
+                        "id": "5xzgpb3fbdyzjyw",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "kpallm7r4wxbtv8",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "nld688ix0eyhr77",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "103umzk4j6zvz9h",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "wjt6e0k1olm305x",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "hidr67x789lokrp",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "ups07g65y9en3yt",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "8qv6oc46s59l2zn",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "z7p1h2vivq8wdrt",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "1xpbhlnf9ohyno1",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ovlx7xsxb3rfrdu",
+                            "text": "−"
+                          },
+                          {
+                            "em": true,
+                            "id": "8coupq5cwbsnf8u",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "47noq2t3scimkex",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "sknrjpo9ba4gzq2",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "s26zn8ap5b3qv7k",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "mvrrun96ppnt41b",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "1vq767je2uv9do0",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "qzvtbdj73jnkngj",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ab8r3hemzlkwdcj",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "usdmbceknf57iiu",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "dteuuy4liq24fss",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "77hz3o3253ndkib",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "t79kbk37h4g7790",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "95pvs2k9j4hlerb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "bxuntswhdc1p0e2",
+                            "text": "0.50 M − "
+                          },
+                          {
+                            "em": true,
+                            "id": "w2d1n5n5dc5xgyb",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "yjejo9q5c3nnhxb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "9tbb3dnv14io5f1",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "8ciakyvvujtdt0k",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "w2ex8nnlv4q0qyj",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "7ter8mi8c9nyoga",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "m1nudpt5xelwc25",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "34m7ylvtxo7gxfh",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "bpik1v14fvbph0z",
+                    "type": "tr"
+                  }
+                ],
+                "id": "fuensoo3jhz8kun",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Substitute the equilibrium concentrations from the ICE table into the equilibrium constant expression and solve for "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": ". If "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "a"
+                          },
+                          {
+                            "strong": true,
+                            "text": " << [HA], use the small "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "x"
+                          },
+                          {
+                            "strong": true,
+                            "text": " approximation."
+                          }
+                        ],
+                        "id": "3676074428",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "fxlc7subzu8ibr3",
+                    "type": "li"
+                  }
+                ],
+                "id": "sk0h0rherapffuz",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We have two approaches to solve for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ". We can (a) solve the equilibrium constant equation for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " without using the small "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " approximation, which requires solving a quadratic equation, or (b) first employ the small "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " approximation to simplify the equation-solving process, then solve the quadratic equation only if the approximation method is not valid. Use the method that works best for you, and keep in mind that the goal here is always to determine the value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "tz8j31x4wohkdax",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The equilibrium constant expression we need to solve is:"
+                  }
+                ],
+                "id": "p09opiiyh06ae2q",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "c2d5lwkzxskcxgh",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "x48ztf31go9qj3m",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm a}\\;=\\;\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{SO}_4^{2-}\\rbrack} {\\lbrack\\mathrm{HSO}_4^-\\rbrack}\\;=\\;\\frac{\\;(x)(x)}{0.50-x}\\;=\\;1.2\\times10^{-2}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this case, "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " is not much smaller than [HSO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": "], so we have reason to suspect the approximation method might work. If we assume "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is small and approximate (0.50 − "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") as 0.50, we find:"
+                  }
+                ],
+                "id": "sxwjaq0z088g40s",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "zdmvlays2rs30up",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "4v9pdn7hps47luk",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\;(x)(x)}{0.50-x}\\;\\cong\\;\\frac{\\;x^2}{0.50}\\;=\\;1.2\\times10^{-2}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "0adm26n0rxrvzga",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "7xk0xxhvhtcj2a0",
+                "legacyBlockRendered": "true",
+                "src": "\\;\\;x\\;=\\;\\sqrt{(0.50)(1.2\\times10^{-2})}\\;=\\;0.077",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "When we check the assumption, we find:"
+                  }
+                ],
+                "id": "dyqxa1uwx1bkanq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ys29wqx9pbzfg5n",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jblm35i3ca5m92e",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{0.077}{0.50}\\times100\\%\\;=\\;15\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is not less than 5% of 0.50, so the assumption is not valid. We solve the quadratic formula to find "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "xyefdwwk6htdrc7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "l0eokz82aiaobgp",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "9mtghb28yn1svz6",
+                "legacyBlockRendered": "true",
+                "src": "K\\frac{\\;(x)(x)}{0.50-x}\\;=\\;1.2\\times10^{-2}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wyzd6id3vgdxq2o",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "gm6c5x0uac4ozyl",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{c}6.0\\times10^{-3}\\;-\\;1.2\\times10^{-2}x\\;=\\;x^2\\\\x^2\\;+\\;1.2\\times10^{-2}x\\;-\\;6.0\\times10^{-3}\\; =\\;0\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solving for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " gives a negative root (which cannot be correct because concentration cannot be negative) and a positive root:"
+                  }
+                ],
+                "id": "kau20xje07w06u1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "99zlesd02b8gmwj",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "fj1v016kppc0ka0",
+                "legacyBlockRendered": "true",
+                "src": "x\\;=\\;7.2\\times10^{-2}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Determine pH from [H"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "strong": true,
+                            "text": "]."
+                          }
+                        ],
+                        "id": "401935125",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "p6wywi0q2lzj4w5",
+                    "type": "li"
+                  }
+                ],
+                "id": "31hms0wsrpoztz6",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Now determine the hydronium ion concentration and the pH:"
+                  }
+                ],
+                "id": "lagp904mv6nywu5",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wjpfr8z44hlh001",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "fyya5hwbdegs14p",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;x\\;=\\;7.2\\times10^{-2}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The pH of this solution is:"
+                  }
+                ],
+                "id": "bx0tcv85h66h7tl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "zzos2xwfx0huwpq",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "xt5mpal6h2wr0be",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{pH}\\;=\\;-\\log\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;-\\log(7.2\\times10^{-2})\\;=\\;1.14",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "588776132",
+                "type": "p"
+              }
+            ],
+            "id": "315540301",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "3424977120",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Calculate the pH of a 0.010-M solution of caffeine, a weak base:"
+                  }
+                ],
+                "id": "7l5fuds9j2r8vdt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "li0p4xby1hs16yq",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "gqkn55z1my1p1x1",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm C}_8{\\mathrm H}_{10}{\\mathrm N}_4{\\mathrm O}_2(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons \\;\\;{\\mathrm C}_8{\\mathrm H}_{10}{\\mathrm N}_4{\\mathrm O}_2\\mathrm H^+(aq)\\;+\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; K_{\\mathrm b}\\;=\\;2.5\\times10^{-4}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "60pojx68ic1xudb",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "udui6zi2zamd1o5",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm b}\\;=\\;\\frac{\\lbrack{\\mathrm C}_8{\\mathrm H}_{10}{\\mathrm N}_4{\\mathrm O}_2\\mathrm H^+\\rbrack\\lbrack \\mathrm{OH}^-\\rbrack}{\\lbrack{\\mathrm C}_8{\\mathrm H}_{10}{\\mathrm N}_4{\\mathrm O}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2221585943",
+                "type": "p"
+              }
+            ],
+            "id": "3926378208",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 78848,
+                "id": "1068190069",
+                "type": "activity-reference"
+              },
+              {
+                "id": "3317950390",
+                "type": "break"
+              },
+              {
+                "activity_id": 80021,
+                "id": "2657001647",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78834,
+                "id": "2369408089",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78585,
+                "id": "803860600",
+                "type": "activity-reference"
+              },
+              {
+                "id": "889147007",
+                "type": "break"
+              },
+              {
+                "activity_id": 79443,
+                "id": "1968022446",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80313,
+                "id": "4088887121",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79677,
+                "id": "695963998",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "3424874029",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "2294980781",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79817,
+            "id": "2493446370",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "404150401",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 78826,
+            "id": "2483708464",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78854,
+            "id": "2513662003",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1462388397",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "w0sz7o2he0cyss9",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "iczb5j3e6ia1wgu",
+            "type": "p"
+          }
+        ],
+        "id": "2427654864",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78556"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

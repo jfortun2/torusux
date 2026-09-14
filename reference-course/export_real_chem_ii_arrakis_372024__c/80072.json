@@ -1,0 +1,240 @@
+{
+  "id": "80072",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "corrosion2_digt-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B"
+        ],
+        "313154327"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0pza5k77vb4zk6p",
+                  "type": "p"
+                }
+              ],
+              "id": "767565489"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gjfnu0xmizseqw0",
+                  "type": "p"
+                }
+              ],
+              "id": "3799886321"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f6pj6wtg5wokihl",
+                  "type": "p"
+                }
+              ],
+              "id": "329414301"
+            }
+          ],
+          "id": "2690905020",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The more active metals (the ones with lower reduction potentials) could be used for the sacrificial anode. Both chromium and aluminum have lower reduction potentials than iron. "
+                      }
+                    ],
+                    "id": "qgg3u3oxtczp2hx",
+                    "type": "p"
+                  }
+                ],
+                "id": "1144282605"
+              },
+              "id": "313154327",
+              "legacyMatch": "A,B",
+              "rule": "(!(input like {E})) && ((!(input like {D})) && ((!(input like {C})) && (input like {B} && (input like {A}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. There are two correct answers. The more active metals (the ones with lower reduction potentials) could be used for the sacrificial anode. "
+                      }
+                    ],
+                    "id": "g8g55c0vyw7eq8o",
+                    "type": "p"
+                  }
+                ],
+                "id": "915086434"
+              },
+              "id": "1132463145",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Which of the following metals could be used as a sacrificial anode in the cathodic protection of an underground steel storage tank? Steel is mostly iron, so use −0.447 V as the standard reduction potential for steel. Select all that apply.Use Standard Reduction Potentials as needed.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Cr "
+              }
+            ],
+            "id": "qk2116ryqwj8tg9",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Al"
+              }
+            ],
+            "id": "6yrctaid2xci6ax",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Ag"
+              }
+            ],
+            "id": "3beji3qy2my8zlm",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Au"
+              }
+            ],
+            "id": "cyfbxb9twjsqv6i",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Ni"
+              }
+            ],
+            "id": "hb850hwx67h6vkt",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following metals could be used as a sacrificial anode in the cathodic protection of an underground steel storage tank? Steel is mostly iron, so use −0.447 V as the standard reduction potential for steel. "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "z38ooo5br7njmgp",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Use "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_mv70v",
+              "idref": "80874",
+              "target": "new",
+              "type": "a"
+            },
+            {
+              "text": " as needed."
+            }
+          ],
+          "id": "p6xs8nnwjdu1s0j",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2690905020": [
+      "78523"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

@@ -1,0 +1,3544 @@
+{
+  "id": "80592",
+  "type": "Page",
+  "tags": [],
+  "title": "Equilibrium Calculations When K Is Large or Small",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Sometimes it is possible to use chemical insight to find solutions to equilibrium problems without actually solving a quadratic (or more complicated) equation. First, however, it is useful to verify that equilibrium can be obtained starting from two extremes: all (or mostly) reactants ("
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is small) and all (or mostly) products ("
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is large). In the following example, we compare two methods for solving an equilibrium problem that has a small value for "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "5zs0s9o5t7bthgr",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Consider the ionization of 0.150 M HA, a weak acid:"
+              }
+            ],
+            "id": "xj8men2o6lk0utq",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "0mzxna4rdixulhx",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "opr7j3cmyw0sd80",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{HA}(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm H^+(aq)\\;+\\;\\mathrm A^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\;=\\;6.80\\times10^{-4}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Method 1: Solving the Quadratic Equation"
+              }
+            ],
+            "id": "7sbbdvbj2938r8p",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "The most obvious way to determine the equilibrium concentrations is to start with only reactants, considered the “all-reactant” starting point. Using "
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": " for the amount of acid ionized at equilibrium, here is the ICE table and solution:"
+              }
+            ],
+            "id": "kro0n9uqimsxuze",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "___selfClosing___": true,
+                    "children": [
+                      {
+                        "id": "ml1zj721lesmbvx",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "n4iqu98aibssqo9",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "r9hagpiucz2rjyy",
+                        "strong": true,
+                        "text": "HA("
+                      },
+                      {
+                        "em": true,
+                        "id": "6gxk504g7cbtgh1",
+                        "strong": true,
+                        "text": "aq"
+                      },
+                      {
+                        "id": "5vunz5iyta2pza8",
+                        "strong": true,
+                        "text": ") ⇌ H"
+                      },
+                      {
+                        "id": "ea6qc3nq3zlc1sn",
+                        "strong": true,
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "id": "cvhcm5a9lvq4lye",
+                        "strong": true,
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "id": "r50hehxnnavyzou",
+                        "strong": true,
+                        "text": "aq"
+                      },
+                      {
+                        "id": "uyvuqktk1vrspiy",
+                        "strong": true,
+                        "text": ") + A"
+                      },
+                      {
+                        "id": "dm8koewuvko98mg",
+                        "strong": true,
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "id": "3541yft9j8z04sm",
+                        "strong": true,
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "id": "6q3kbhqfgfvp44k",
+                        "strong": true,
+                        "text": "aq"
+                      },
+                      {
+                        "id": "8aqixj465h0hl5h",
+                        "strong": true,
+                        "text": ")"
+                      }
+                    ],
+                    "colspan": 3,
+                    "id": "0o641g5j5c6pz8l",
+                    "type": "td"
+                  }
+                ],
+                "id": "0wxq55717gmg40j",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "1829504448",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "726418621",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "HA("
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "id": "4286316835",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "1783828274",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "id": "1474250925",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "3187666291",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "A"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          },
+                          {
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "id": "4282497193",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "1632563030",
+                    "type": "td"
+                  }
+                ],
+                "id": "1532734990",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "djxz03us2dtovjw",
+                        "text": "Initial"
+                      }
+                    ],
+                    "id": "64pcp0hljq3s257",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "zxf5muws5hxa8cr",
+                        "text": "0.150"
+                      }
+                    ],
+                    "id": "ak4eneszpp7pnyj",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "13t240e0z8zds6r",
+                        "text": "0"
+                      }
+                    ],
+                    "id": "pui42c2loxp33o0",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "np23xbqlh9o9rqi",
+                        "text": "0"
+                      }
+                    ],
+                    "id": "kpc8js30d0cad9p",
+                    "type": "td"
+                  }
+                ],
+                "id": "xe0l08kxffk2o79",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "er5cp8jsspeo35d",
+                        "text": "Change"
+                      }
+                    ],
+                    "id": "smjynpfjwvnsg3b",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "6guworvjmbfpefn",
+                        "text": " −"
+                      },
+                      {
+                        "em": true,
+                        "id": "brvk2d7q542jmr2",
+                        "text": "x"
+                      },
+                      {
+                        "id": "97q555f8r604ggv",
+                        "text": "      "
+                      }
+                    ],
+                    "id": "srxxzal5519y038",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "4qx1ylfvn4rmsm2",
+                        "text": " "
+                      },
+                      {
+                        "em": true,
+                        "id": "pvq8tdty297gmt2",
+                        "text": "x"
+                      },
+                      {
+                        "id": "zkay1rakynxe100",
+                        "text": " "
+                      }
+                    ],
+                    "id": "7jzuk4zz0fbdm2e",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "qjdkrplndvola3u",
+                        "text": " "
+                      },
+                      {
+                        "em": true,
+                        "id": "8z6fihnh52lpr49",
+                        "text": "x"
+                      },
+                      {
+                        "id": "wu8rcvkrg8qbqji",
+                        "text": " "
+                      }
+                    ],
+                    "id": "1nqc7km9jlr5hz8",
+                    "type": "td"
+                  }
+                ],
+                "id": "ehrszotah6d07ma",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "r51iazsx5b6kps3",
+                        "text": "Equilibrium"
+                      }
+                    ],
+                    "id": "q1l5i839cop2bmo",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "9rxxga8gidv8htr",
+                        "text": " 0.150 − "
+                      },
+                      {
+                        "em": true,
+                        "id": "1e7zj1gqybt9akx",
+                        "text": "x"
+                      },
+                      {
+                        "id": "izxp240dyv1uicl",
+                        "text": " "
+                      }
+                    ],
+                    "id": "crc3kokjcc9ktb9",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "z1mkqn8i7g6erbb",
+                        "text": "       "
+                      },
+                      {
+                        "em": true,
+                        "id": "9bsfghv8h35kbwm",
+                        "text": "x"
+                      },
+                      {
+                        "id": "cshytx5p54lzf0k",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "94gi2rp641x8aou",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "hnvs5p5zmjhhp30",
+                        "text": "       "
+                      },
+                      {
+                        "em": true,
+                        "id": "clpf7nk5rbogbgq",
+                        "text": "x"
+                      },
+                      {
+                        "id": "hejgeivdmblucu7",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "he64kok8xow6w8h",
+                    "type": "td"
+                  }
+                ],
+                "id": "u2v9jtq6zccmjrt",
+                "type": "tr"
+              }
+            ],
+            "id": "6fjpeqljdjfsx9a",
+            "rowstyle": "alternating",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": "Setting up and solving the quadratic equation gives:"
+              }
+            ],
+            "id": "y77l0gknx0x4ndj",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "hs1h7t7g2dob3q2",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "pgjo87iny2qwhpg",
+            "legacyBlockRendered": "true",
+            "src": "K_\\mathrm{c}\\;=\\frac{\\;\\lbrack\\mathrm H^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\;\\lbrack\\mathrm{HA}\\rbrack}\\;=\\;\\frac{(x)(x)}{(0.150-x)}\\; =\\;6.80\\times10^{-4}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "esd94suugvix772",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "l4qkaz4wdvdytnk",
+            "legacyBlockRendered": "true",
+            "src": "x^2\\;+\\;6.80\\times10^{-4}x\\mathit\\;-\\;1.02\\times10^{-4}\\;\\;=\\;0",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "q3qtp1goil9v599",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "yh530ic0y9v7omn",
+            "legacyBlockRendered": "true",
+            "src": "x\\;=\\;\\frac{-6.80\\times10^{-4}\\pm\\;\\sqrt{(6.80\\times10^{-4})^2\\;-\\;(4)(1)(-1.02\\times10^{-4})}}{(2)(1)}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "nme89rrsaoiuujq",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "b1jt1z3m7n148nc",
+            "legacyBlockRendered": "true",
+            "src": "x\\;=\\;0.00977\\;\\mathrm M\\;\\;\\mathrm{or}\\;\\;-0.0104\\;\\mathrm M",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Using the positive (physically possible) root, the equilibrium concentrations are:"
+              }
+            ],
+            "id": "0gljgvz2csikrod",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "aitu0b1h6mzsgh1",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "jn2h8j2ousqe6pi",
+            "legacyBlockRendered": "true",
+            "src": "\\lbrack\\mathrm{HA}\\rbrack\\;=\\;0.150\\;-\\;x\\;=\\;0.140\\;\\mathrm M",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "ddx2m8hwjm5zwiz",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "wuwh5nsgq3qmbxr",
+            "legacyBlockRendered": "true",
+            "src": "\\lbrack\\mathrm H^+\\rbrack\\;=\\;\\lbrack\\mathrm A^-\\rbrack\\;=\\;x\\;=\\;0.00977\\;\\mathrm M",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Method 2: All-Product Starting Point"
+              }
+            ],
+            "id": "jpv3jiso5latwsr",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "A less obvious way to solve the problem is to use the \"all-product\" starting point. For this method, we assume that all the HA ionizes first, then the system comes to equilibrium, which gives:"
+              }
+            ],
+            "id": "8xlf0baujq5528u",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "mrh3a9slmzm2m5w",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "q6rin305wumvz8u",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\lbrack\\mathrm{HA}\\rbrack\\;=\\;0.150\\;-\\;0.150\\;=\\;0\\;\\mathrm M\\;\\;\\\\\\lbrack\\mathrm H^+\\rbrack\\;=\\;0\\;+\\;0.150\\; =\\;0.150\\;\\mathrm M\\;\\\\\\lbrack\\mathrm A^-\\rbrack\\;=\\;0\\;+\\;0.150\\;=\\;0.150\\;\\mathrm M\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Using these as initial concentrations and "
+              },
+              {
+                "em": true,
+                "text": "y"
+              },
+              {
+                "text": " to represent the concentration of HA at equilibrium, here is the ICE table for this starting point:"
+              }
+            ],
+            "id": "tcgt3pphglf0d8k",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "___selfClosing___": true,
+                    "children": [
+                      {
+                        "id": "gyfaflvcl1wiqy1",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "4uobh9s951w5aui",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "r8edsu74v2m0vps",
+                        "strong": true,
+                        "text": "HA("
+                      },
+                      {
+                        "em": true,
+                        "id": "48wh75yxyqgk3xn",
+                        "strong": true,
+                        "text": "aq"
+                      },
+                      {
+                        "id": "9t418mzigm1gzcd",
+                        "strong": true,
+                        "text": ") ⇌ H"
+                      },
+                      {
+                        "id": "asphm2xaad5icfz",
+                        "strong": true,
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "id": "nkas4ah4d0wfp3g",
+                        "strong": true,
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "id": "z0u7u1f8gmt4uxj",
+                        "strong": true,
+                        "text": "aq"
+                      },
+                      {
+                        "id": "4wd5aqrqep38hol",
+                        "strong": true,
+                        "text": ") + A"
+                      },
+                      {
+                        "id": "r8239qzkq3jv0go",
+                        "strong": true,
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "id": "jiirs5xl43ikftb",
+                        "strong": true,
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "id": "dhct3vtgli46hrz",
+                        "strong": true,
+                        "text": "aq"
+                      },
+                      {
+                        "id": "mocnzpjvgouzrsh",
+                        "strong": true,
+                        "text": ")"
+                      }
+                    ],
+                    "colspan": 3,
+                    "id": "uvjk74b8ig3nbrj",
+                    "type": "td"
+                  }
+                ],
+                "id": "4f3zfote04lb8sw",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "id": "2931997030",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "1909786146",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "HA("
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "id": "4081938582",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "2765703145",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "id": "275450685",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "457965493",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "A"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          },
+                          {
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "id": "1428786441",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "3885479066",
+                    "type": "td"
+                  }
+                ],
+                "id": "2228849774",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "h4p7zghcm2xhoex",
+                        "text": "Initial"
+                      }
+                    ],
+                    "id": "jjc1nlqwtfj9rck",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "qh1qfjedxn3ccw4",
+                        "text": "0"
+                      }
+                    ],
+                    "id": "cl7peong0h4x1ur",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "nag6ud0dahso18g",
+                        "text": "0.150 M"
+                      }
+                    ],
+                    "id": "kqzjewec3djhpu2",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "b1vg7q0j5b8gudb",
+                        "text": "0.150 M"
+                      }
+                    ],
+                    "id": "8elhz39541qekjv",
+                    "type": "td"
+                  }
+                ],
+                "id": "nue2557cb37dpwa",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "tcsor92zcsg2oww",
+                        "text": "Change"
+                      }
+                    ],
+                    "id": "2zqn33b6kandy97",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "s1ylheo0to3sr61",
+                        "text": "+"
+                      },
+                      {
+                        "em": true,
+                        "id": "an6b8boqv2yhtes",
+                        "text": "y"
+                      }
+                    ],
+                    "id": "pnrbxhk6s385h0s",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "it6sotaqvjcrxnu",
+                        "text": "−"
+                      },
+                      {
+                        "em": true,
+                        "id": "6s7bagpxvmpw4lp",
+                        "text": "y"
+                      }
+                    ],
+                    "id": "btbv2kf64n9x5kh",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "2c2ucxnxtno59xg",
+                        "text": "−"
+                      },
+                      {
+                        "em": true,
+                        "id": "z63f6gh5gzzb86o",
+                        "text": "y"
+                      }
+                    ],
+                    "id": "f8n3xbs81upkxru",
+                    "type": "td"
+                  }
+                ],
+                "id": "q30fhqdxzw1lz2r",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "wzuupr3myaveaaf",
+                        "text": "Equilibrium"
+                      }
+                    ],
+                    "id": "ojv8w2x3kjdi56n",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "em": true,
+                        "id": "lkzt67l9eikakwo",
+                        "text": "y"
+                      }
+                    ],
+                    "id": "imvm77qjmm2cypq",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "o3642bug6tsmiw5",
+                        "text": "0.150 − "
+                      },
+                      {
+                        "em": true,
+                        "id": "nziruspotv4yo8a",
+                        "text": "y"
+                      }
+                    ],
+                    "id": "6ogp9p74vdwqsqk",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "8vvufxp2tqt5hhn",
+                        "text": "0.150 − "
+                      },
+                      {
+                        "em": true,
+                        "id": "4bd05ad6u5czz6h",
+                        "text": "y"
+                      }
+                    ],
+                    "id": "b04xooh2hkvbe3j",
+                    "type": "td"
+                  }
+                ],
+                "id": "d3szpmje02umlz3",
+                "type": "tr"
+              }
+            ],
+            "id": "s76jxg31wrt9j8k",
+            "rowstyle": "alternating",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": "Setting up and solving the quadratic equation gives:"
+              }
+            ],
+            "id": "qt9ts9dbrfuh26w",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "yse2z3xmyvcx48h",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ys8cg68bj5st1j7",
+            "legacyBlockRendered": "true",
+            "src": "K_\\mathrm{c}\\;=\\;\\frac{\\lbrack\\mathrm H^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\;=\\;\\frac{(0.150\\;-\\;y)(0.150\\;-\\;y)}{(y)}\\; =\\;6.80\\times10^{-4}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "fx9hon2y3cf78ou",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "9uzbcmoy7nd2q8d",
+            "legacyBlockRendered": "true",
+            "src": "6.80\\times10^{-4}y\\mathit\\;=\\;0.0225\\;-\\;0.300y\\mathit\\;+\\;y^2",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Retain a few extra significant figures to minimize rounding problems:"
+              }
+            ],
+            "id": "qw7ji7plk5dmwp2",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "tgo87caelp772fn",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "q4jcwfxkcc2of51",
+            "legacyBlockRendered": "true",
+            "src": "y^2\\;-\\;0.30068y\\;+\\;0.022500\\;=\\;0",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "id": "fawgsd8otrsj9ls",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "kkdzzblxhxnp1ut",
+            "legacyBlockRendered": "true",
+            "src": "y\\;=\\;\\frac{\\;0.30068\\;\\pm\\sqrt{\\;(0.30068)^2\\;-\\;(4)(1)(0.022500)}}{(2)(1)}\\;=\\;\\frac{0.30068\\;\\pm\\;0.020210}2",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Rounding each solution to three significant figures gives:"
+              }
+            ],
+            "id": "dhgv45t9durgp3b",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "czztgc3embysyvn",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "qwsrr8m7krguypf",
+            "legacyBlockRendered": "true",
+            "src": "y\\;=\\;0.160\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{or}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;y\\;=\\;0.140\\;\\mathrm M",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "The solution "
+              },
+              {
+                "em": true,
+                "text": "y"
+              },
+              {
+                "text": " = 0.160 M gives negative values for [H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "] and [A"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "], so it is not physically possible. Using the physically significant solution (0.140 M) gives the equilibrium concentrations:"
+              }
+            ],
+            "id": "aywf1sdh48cnqk8",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "mq56z52096adhq0",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "piaspmdakvgra6u",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\lbrack\\mathrm{HA}\\rbrack\\;=\\;y\\;=\\;0.140\\;\\mathrm M\\;\\;\\\\\\lbrack\\mathrm H^+\\rbrack\\;=\\;0.150\\;-\\;y\\;=\\;0.010\\;\\mathrm M\\; \\\\\\lbrack\\mathrm A^-\\rbrack\\;=\\;0.150\\;-\\;y\\mathit\\;=\\;0.010\\;\\mathrm M\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "As you can see, the two approaches give the same results (to three decimal places) and show that both starting points lead to the same equilibrium conditions. The all-reactant starting point resulted in a relatively small change ("
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": ") because the system was close to equilibrium, while the all-product starting point had a relatively large change ("
+              },
+              {
+                "em": true,
+                "text": "y"
+              },
+              {
+                "text": ") that was nearly the size of the initial concentrations. A system that starts close to equilibrium will require only a small change in conditions ("
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": ") to reach equilibrium."
+              }
+            ],
+            "id": "ju91xnhtbshvlh8",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "A small "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "c"
+              },
+              {
+                "text": " means that very little of the reactants form products, and a large "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "c"
+              },
+              {
+                "text": " means that most of the reactants form products. If the system can be arranged so it starts close to equilibrium, then a change ("
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": ") that is small compared to any initial concentrations can be neglected. \"Small\" is usually defined as resulting in an error of less than 5%. The following two examples demonstrate this point."
+              }
+            ],
+            "id": "mvsgdcoehxs8d36",
+            "type": "p"
+          }
+        ],
+        "id": "37399792",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "What are the concentrations at equilibrium of a 0.15 M solution of HCN?"
+                  }
+                ],
+                "id": "v88nl6qehg623n2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "bst8n0h6zwbm4tc",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hy3t0jbnkzbb7s1",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{HCN}(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm H^+(aq)\\;+\\;\\mathrm{CN}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}=4.9\\times10^{-10}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " to represent the concentration of each product at equilibrium gives this ICE table."
+                  }
+                ],
+                "id": "myvhbch4v5eeo54",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "bf4nakposisklge",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "m03t617zoophty1",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "c9aqdjxqi06ov22",
+                            "strong": true,
+                            "text": "    HCN("
+                          },
+                          {
+                            "em": true,
+                            "id": "1rbkwxao1shkucg",
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "id": "oql9qpuecbbx90f",
+                            "strong": true,
+                            "text": ") ⇌ H"
+                          },
+                          {
+                            "id": "bph3zzjndcgkei3",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "lmews5aeid9theq",
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "8rbfqlm8i39d5ta",
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "id": "lh957rhwbrfv5ch",
+                            "strong": true,
+                            "text": ") + CN"
+                          },
+                          {
+                            "id": "e7ru66wksjz6j1p",
+                            "strong": true,
+                            "sup": true,
+                            "text": "−"
+                          },
+                          {
+                            "id": "fkju5h3quqrvvca",
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "bra0lnt3kqhijk3",
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "id": "v6qp2as4y9imb82",
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "xh7eb3dz4iegb5t",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "l2whlq031fh3yvo",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "1482818214",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "759224659",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HCN("
+                              },
+                              {
+                                "em": true,
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "id": "3481227257",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "723559723",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              },
+                              {
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "id": "1659026540",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1410259781",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "CN"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              },
+                              {
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "id": "3200082076",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "442286766",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "2222390122",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "khqqgu713mwfb5h",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "brlel00lhruoran",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "04sotfgsn5c4dtu",
+                            "text": "0.15"
+                          }
+                        ],
+                        "id": "hseni6ygx9nfpt5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "7bqvnkdt0hy996b",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "pmtf3fkhznihkef",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "476aj27oma5spcl",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "4rggi8j4w8q8ois",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "auw756qvbw43ibl",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "iuj24ic08jbfbaw",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "eaopzyaigilwjw9",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "t09f1mfsoemiypq",
+                            "text": "−"
+                          },
+                          {
+                            "em": true,
+                            "id": "u0yif5z2ipcqaf7",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "sy7a64r2kd2v022",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "ufq2exgcnehx1z8",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "q7q8esg7gxpke16",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "r4xpaywcpnib8xr",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "juw5ptf8n2oxg2r",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "1k802fxheds9do8",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "jmrqlhby39yvccg",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "3b1e8hv5tlf0d9p",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "6hyav71eof6nau9",
+                            "text": "0.15 − "
+                          },
+                          {
+                            "em": true,
+                            "id": "qrnc3ciaplk16zn",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "hoj2d37qlv3g2e4",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "owoi8dgvnnaeaad",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "fntyzqpn6zdiclk",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "lm84oor6h1fn3uw",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "42oy6nd0r1wonjp",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "uworot59qdmegnr",
+                    "type": "tr"
+                  }
+                ],
+                "id": "foqxa66yf439rmt",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The exact solution may be obtained using the quadratic formula with: "
+                  }
+                ],
+                "id": "bxe8gpalnlfnsas",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "8g9v7bfdu3x56gp",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "2ndvsinbmzadlgl",
+                "legacyBlockRendered": "true",
+                "src": "K_\\mathrm{c}=\\frac{\\;(x)(x)}{0.15-x}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solving this equation:"
+                  }
+                ],
+                "id": "7yxnae06zd66939",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "bb9d3u3wa23cs41",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "qmjh8jc1ijcpiyi",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}x^2\\;+\\;4.9\\times10^{-10}x\\;-\\;7.35\\times10^{-11}\\;=\\;0\\;\\;\\;\\\\\\\\x\\;=\\;8.56\\times10^{-6}\\;\\mathrm M\\;(3\\;\\mathrm{sig.\\;figs.})\\; =\\;8.6\\times10^{-6}\\mathrm M\\;(2\\;\\mathrm{sig.\\;figs.})\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Thus, [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] = [CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "] = "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " = 8.6 ×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M and [HCN] = 0.15 – "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " = 0.15 M."
+                  }
+                ],
+                "id": "7kljq5r6gmxq3ir",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this case, chemical intuition can provide a simpler solution. From the equilibrium constant and the initial conditions, "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " must be very small compared to 0.15 M. More formally, if "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " << 0.15, then 0.15 – "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " ≈ 0.15. If this assumption is true, then it simplifies the process of solving for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "6ehzqrnu9h8zm8x",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "dhj75bgb6u0dowo",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "68gkftlcy9wj43v",
+                "legacyBlockRendered": "true",
+                "src": "K_{\\mathrm c}\\;=\\frac{\\;(x)(x)}{0.15\\;-\\;x}\\;\\approx\\;\\frac{x^2}{0.15}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "scz9o02thpob7ss",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "g12jwcqpomriwqf",
+                "legacyBlockRendered": "true",
+                "src": "4.9\\times10^{-10}\\;=\\frac{\\;x^2}{0.15}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "cvnnxk7vytss20w",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "08q022z4srsta8h",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}x^2\\;=\\;(0.15)(4.9\\times10^{-10})\\;=\\;7.4\\times10^{-11}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "g39jagfziaecs6m",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "i6v9gwagzmptyhj",
+                "legacyBlockRendered": "true",
+                "src": "x\\;=\\sqrt{\\;7.4\\times10^{-11}}\\;=\\;8.6\\times10^{-6}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this example, solving the exact (quadratic) equation and using an approximation gave the same result to two significant figures. While most of the time the approximation is a bit different from the exact solution, as long as the error is less than 5%, the approximate solution is considered valid. In this case, we need to confirm that "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is small enough for our assumption, (0.15 M − "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") ≈ 0.15 M, to be valid (i.e., "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is less than 5% of 0.15 M)."
+                  }
+                ],
+                "id": "1zxk1haqv5n5buj",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "c2qv4x1thvafav5",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "tq9nge16umx4ikf",
+                "legacyBlockRendered": "true",
+                "src": "\\frac x{0.15}\\;\\times\\;100\\%\\;=\\;\\frac{8.6\\times10^{-6}}{0.15}\\;\\times\\;100\\%\\;=\\;0.006\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " is 0.006% of 0.15 M, much less than the required 5%. The assumption is warranted, and the approximate solution is a valid solution."
+                  }
+                ],
+                "id": "fiicj13vh17s0g7",
+                "type": "p"
+              }
+            ],
+            "id": "4200814649",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "3671631596",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Consider the following reaction:"
+                  }
+                ],
+                "id": "24w5if1yj1164sa",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wo9b7wiu2d1exp1",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "z2i5dxwazkamovw",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{NH}}_3(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{NH}_4^+(aq)\\;+\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; K_\\mathrm{c}=1.8\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "What are the equilibrium concentrations in a 0.25 M NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " solution?"
+                  }
+                ],
+                "id": "pvlytiemgrdvt62",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "The steps in the following activity will help you work through calculating the equilibrium concentration of each species using the approximation method for "
+                  },
+                  {
+                    "text": "x"
+                  },
+                  {
+                    "em": true,
+                    "text": "."
+                  }
+                ],
+                "id": "fdlsxaxjkair4ol",
+                "type": "p"
+              }
+            ],
+            "id": "451710405",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 80243,
+                "id": "4175593345",
+                "type": "activity-reference"
+              },
+              {
+                "id": "415404265",
+                "type": "break"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2322977055",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "___selfClosing___": true,
+                            "children": [
+                              {
+                                "id": "ay955c8f7bkf82m",
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "vkbuhkaw0l3f6h5",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "kybmznyf4m3crn8",
+                                "strong": true,
+                                "text": "NH"
+                              },
+                              {
+                                "id": "np4xka1369f92ci",
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "id": "h0le4a5agzc8x4b",
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "m8emj4nptj6plmg",
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "id": "l9x0v2k46mklf36",
+                                "strong": true,
+                                "text": ") + H"
+                              },
+                              {
+                                "id": "ro6nli68ucr6941",
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "id": "f6kv721jszmy5o0",
+                                "strong": true,
+                                "text": "O("
+                              },
+                              {
+                                "em": true,
+                                "id": "p1ba7w9r3z7yovk",
+                                "strong": true,
+                                "text": "l"
+                              },
+                              {
+                                "id": "7z8lcqe11b76p2a",
+                                "strong": true,
+                                "text": ") ⇌ NH"
+                              },
+                              {
+                                "id": "te180o21fv9sqrr",
+                                "strong": true,
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "id": "pkfp6s0ttmtlhrm",
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              },
+                              {
+                                "id": "1dcak775e3h5w8g",
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "6xsmnfbiv7wpbs4",
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "id": "v9l27k1xntidthg",
+                                "strong": true,
+                                "text": ") + OH"
+                              },
+                              {
+                                "id": "k9rv5xkzuckzcfr",
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              },
+                              {
+                                "id": "vauan1jf0vrtqpw",
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "id": "wc7ma4l5nsc7pir",
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "id": "yd5j0p1z4rv4ie8",
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "colspan": 4,
+                            "id": "g6rjhkgpacjkfk7",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "8ssgorylk0mguzf",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": ""
+                                  }
+                                ],
+                                "id": "2126463275",
+                                "type": "p"
+                              }
+                            ],
+                            "id": "1023482675",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "strong": true,
+                                    "text": "NH"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "text": "("
+                                  },
+                                  {
+                                    "em": true,
+                                    "strong": true,
+                                    "text": "aq"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "text": ")"
+                                  }
+                                ],
+                                "id": "109515899",
+                                "type": "p"
+                              }
+                            ],
+                            "id": "4287090379",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "H"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "2"
+                                  },
+                                  {
+                                    "text": "O("
+                                  },
+                                  {
+                                    "em": true,
+                                    "text": "l"
+                                  },
+                                  {
+                                    "text": ")"
+                                  }
+                                ],
+                                "id": "2262510015",
+                                "type": "p"
+                              }
+                            ],
+                            "id": "2986760846",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "strong": true,
+                                    "text": "NH"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "sub": true,
+                                    "text": "4"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "sup": true,
+                                    "text": "+"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "text": "("
+                                  },
+                                  {
+                                    "em": true,
+                                    "strong": true,
+                                    "text": "aq"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "text": ")"
+                                  }
+                                ],
+                                "id": "2167297409",
+                                "type": "p"
+                              }
+                            ],
+                            "id": "2339942",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "strong": true,
+                                    "text": "OH"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "sup": true,
+                                    "text": "−"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "text": "("
+                                  },
+                                  {
+                                    "em": true,
+                                    "strong": true,
+                                    "text": "aq"
+                                  },
+                                  {
+                                    "strong": true,
+                                    "text": ")"
+                                  }
+                                ],
+                                "id": "2730913025",
+                                "type": "p"
+                              }
+                            ],
+                            "id": "1290840713",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "4278139827",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "l1953dtu6yfjkpi",
+                                "text": "Initial"
+                              }
+                            ],
+                            "id": "kbhn9gmxk08qgak",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "pcrbtrza0qto3tl",
+                                "text": "0.25 M"
+                              }
+                            ],
+                            "id": "4m8inqbvcgjcptp",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "anjz51gyqos0p20",
+                                "text": "---"
+                              }
+                            ],
+                            "id": "2me7xgsvm5m8n6j",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "k19mzagfgz9mx5q",
+                                "text": "0 M"
+                              }
+                            ],
+                            "id": "2sumk32ppurdnhd",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "khma5mx9xm3ntzi",
+                                "text": "0 M"
+                              }
+                            ],
+                            "id": "tf4phkij84g8z8l",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "xg5wcmjshl6gadh",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "saa2q5oxkjn3pka",
+                                "text": "Change"
+                              }
+                            ],
+                            "id": "5gdi3tcvw1eiifs",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "vii58ihq0mr11j7",
+                                "text": "−"
+                              },
+                              {
+                                "em": true,
+                                "id": "wvy6i2ucx74ne10",
+                                "text": "x"
+                              }
+                            ],
+                            "id": "ybndhb4g3gedpvi",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "vpchwwpstmfyup8",
+                                "text": "---"
+                              }
+                            ],
+                            "id": "0d3et3xdkf614c3",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "v4avdgshl51hmyu",
+                                "text": " +"
+                              },
+                              {
+                                "em": true,
+                                "id": "e6lyhahxso0p8zt",
+                                "text": "x"
+                              }
+                            ],
+                            "id": "3dux7i2dq6q9noq",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "i87nmv35j7lqbtw",
+                                "text": "+"
+                              },
+                              {
+                                "em": true,
+                                "id": "941eyujtd1v51s9",
+                                "text": "x"
+                              }
+                            ],
+                            "id": "42nyh2ia6mfywkb",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "qffrkr0fnzumbbs",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "id": "6ul3fqrl37av7qy",
+                                "text": "Equilibrium"
+                              }
+                            ],
+                            "id": "9fhgoy2i1rq3ofc",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "soen7shtov26ncm",
+                                "text": "0.25 − "
+                              },
+                              {
+                                "em": true,
+                                "id": "cvc9wf7m27z5m7y",
+                                "text": "x"
+                              }
+                            ],
+                            "id": "p07ue9r68p3uu4x",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "id": "es4bx80cul6x429",
+                                "text": "---"
+                              }
+                            ],
+                            "id": "yn6juldlyjoue5m",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "em": true,
+                                "id": "v2as2zzmidn5bfq",
+                                "text": "x"
+                              }
+                            ],
+                            "id": "99ok090nj67dh4t",
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "em": true,
+                                "id": "pz9v4afc3q99qnr",
+                                "text": "x"
+                              }
+                            ],
+                            "id": "62gin7qvhxzsr9q",
+                            "type": "td"
+                          }
+                        ],
+                        "id": "1a5yphhbz40m1vc",
+                        "type": "tr"
+                      }
+                    ],
+                    "id": "12albbjqbhqcllm",
+                    "rowstyle": "alternating",
+                    "type": "table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2540463091",
+                    "type": "p"
+                  }
+                ],
+                "id": "1404403019",
+                "page": "4001573239",
+                "type": "content"
+              },
+              {
+                "activity_id": 78889,
+                "id": "1485981052",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79218,
+                "id": "3125146675",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79073,
+                "id": "2934471831",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "2699467623",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "2669366946",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Copper(II) ions form a complex ion in the presence of ammonia, according to the following equation:"
+                  }
+                ],
+                "id": "s92y3y5yu45d4qt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "yft13o4d4ttwd68",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "xhvb30kb07o0pd1",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;4\\;{\\mathrm{NH}}_3(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{c}\\;=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "If 0.010 mol Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is added to 1.00 L of a solution that is 1.00 M NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": ", what are the concentrations when the system comes to equilibrium?"
+                  }
+                ],
+                "id": "t7lc9jax0ppr1gy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "t5ehlcokqn39d5d",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "k21qf5aiwdy0r0r",
+                "legacyBlockRendered": "true",
+                "src": "K_\\mathrm{c}\\;=\\;\\frac{\\lbrack\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\lbrack{\\mathrm{NH}}_3\\rbrack^4} =\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The initial concentration of copper(II) is 0.010 M. The equilibrium constant is very large, so it is best to start with as much product as possible because all products is much closer to equilibrium than all reactants. Note that Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is the limiting reactant; if all 0.010 M of it reacts to form product, the concentrations would be: "
+                  }
+                ],
+                "id": "3xj92sl5vgoxn69",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "yvnej4pq0afbk0j",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "bfnf6z3f2it4v8k",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;0.010\\;\\mathrm M\\;-\\;0.010\\;\\mathrm M\\;=\\;0\\;\\mathrm M\\;\\\\\\\\\\lbrack\\mathrm{Cu} ({\\mathrm{NH}}_3)_4^{2+}\\rbrack\\;=\\;0.010\\;\\mathrm M\\;\\\\\\\\\\lbrack{\\mathrm{NH}}_3\\rbrack\\;=\\;1.00\\;\\mathrm M\\;-\\;(4\\times0.010\\;\\mathrm M)\\; =\\;0.96\\;\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using these “shifted” values as initial concentrations with "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " as the free copper(II) ion concentration at equilibrium gives the following ICE table:"
+                  }
+                ],
+                "id": "2d0siok8hqeckpf",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "svvgrmusubg6p4e",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "h3pq6pdb9iwr8l6",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "i5z3mpjuf2ljd8d",
+                            "strong": true,
+                            "text": "Cu"
+                          },
+                          {
+                            "id": "7d6blny118kgvnv",
+                            "strong": true,
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "c3z275m4fkz99z5",
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "ubxm9771wgytsew",
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "id": "w4q5s7q8vsfn6oc",
+                            "strong": true,
+                            "text": ") + 4 NH"
+                          },
+                          {
+                            "id": "uoqls2iqrygb77o",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "cloq5mtbx699vt3",
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "8kde0ku4xa3e72k",
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "id": "ndsyr1k9hu04dsy",
+                            "strong": true,
+                            "text": ") ⇌ Cu(NH"
+                          },
+                          {
+                            "id": "j00nek83m61i4yl",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "quycoh52t3jszi3",
+                            "strong": true,
+                            "text": ")"
+                          },
+                          {
+                            "id": "da8gtk8cfkt7n4d",
+                            "strong": true,
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "i92r2vftgwf6sw3",
+                            "strong": true,
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "3j44jxe0muchqc7",
+                            "strong": true,
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "34vtz4umcmucjqs",
+                            "strong": true,
+                            "text": "aq"
+                          },
+                          {
+                            "id": "v4g2wze1ry29tka",
+                            "strong": true,
+                            "text": ")"
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "n15ewr83ikx59tw",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "8iyy3z3avf4gsf9",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "3480640067",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "727240075",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "Cu"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "2+"
+                              },
+                              {
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "id": "1352133818",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "688610939",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "4 NH"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "id": "3806331591",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2309941980",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "Cu(NH"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "4"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "2+"
+                              },
+                              {
+                                "strong": true,
+                                "text": "("
+                              },
+                              {
+                                "em": true,
+                                "strong": true,
+                                "text": "aq"
+                              },
+                              {
+                                "strong": true,
+                                "text": ")"
+                              }
+                            ],
+                            "id": "4087968634",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1008383864",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "2538024578",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "ei1im6ikeso282z",
+                            "text": "Initial (M)"
+                          }
+                        ],
+                        "id": "hn4pgbott2ngqxv",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "18ioat198g2xic3",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "njq8dzsoyk6khh2",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "pnt5y0p359xz2bw",
+                            "text": "0.96"
+                          }
+                        ],
+                        "id": "zrh8iohm8eluvxb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "4bhgws33iyl9hqp",
+                            "text": "0.010"
+                          }
+                        ],
+                        "id": "3ddxljemqmryu87",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "zgteb35ncymx15j",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "4f7qrxk6iu88lx8",
+                            "text": "Change (M)"
+                          }
+                        ],
+                        "id": "uuepeyyeptw7ipl",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "un5mhrgvbanokbq",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "h0u80z7xxj580vg",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "oimg7qgndx8dpa8",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "dvz850pe1ujvp1y",
+                            "text": "+4"
+                          },
+                          {
+                            "em": true,
+                            "id": "k3j59e3x4i2cx40",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "f08iimwe1iatch4",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "eauy7n3aouid30x",
+                            "text": "−"
+                          },
+                          {
+                            "em": true,
+                            "id": "mov3ymt206o8mbg",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "gj8aw7nw9vvs1hh",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "kgigmdpzfz8gmf2",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "9t0aysmkqxn12h3",
+                            "text": "Equilibrium (M)"
+                          }
+                        ],
+                        "id": "z2fu0514b82ljkh",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "w0wt4ch5nkq6qcy",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "ku0mvholike4gka",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "g90xz2zetjvls5h",
+                            "text": "0.96 + 4"
+                          },
+                          {
+                            "em": true,
+                            "id": "uaxwtcsf1snbdwx",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "smu3eg3x1ozxigk",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "yziuysu0sr5pcep",
+                            "text": "0.010 − "
+                          },
+                          {
+                            "em": true,
+                            "id": "1p6hqd8une5gc92",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "80b17qcd2raz0xy",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ttjmiz53p3wrcsg",
+                    "type": "tr"
+                  }
+                ],
+                "id": "jqzw4phz99iwrro",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Because we are starting close to equilibrium, "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " should be small so that: "
+                  }
+                ],
+                "id": "bqxw7wucm3j6j36",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wif1epgmeth1zrn",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "rgft5cred1pyd7y",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}0.96\\:\\mathrm M\\;+\\;4x\\;\\approx\\;0.96\\;\\mathrm M\\;\\\\0.010\\;\\mathrm M\\;-\\mathit\\;x\\mathit\\; \\approx\\;0.010\\;\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Adjusting the "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "c"
+                  },
+                  {
+                    "text": " expression accordingly gives:"
+                  }
+                ],
+                "id": "r686ig21q06g32c",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ogfawxe615b62yf",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "uhn3c8smxfyvouc",
+                "legacyBlockRendered": "true",
+                "src": "K_\\mathrm{c}=\\frac{\\lbrack\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\lbrack{\\mathrm{NH}}_3\\rbrack^4} =\\;\\frac{(0.010-x)}{x(0.96+4x)^4}\\;\\approx\\;\\frac{(0.010)}{x(0.96)^4}\\;=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "0vl64fnjez8drb1",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "afa0g0c7ksdiju9",
+                "legacyBlockRendered": "true",
+                "src": "x\\;=\\;\\frac{(0.010)}{(5.0\\times10^{13})(0.96)^4}\\;=\\;2.4\\times10^{-16}\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Select the smallest concentration for the 5% rule:"
+                  }
+                ],
+                "id": "dn797thr14hzm8y",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "fcgbqni5wpj3djt",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jlwcuuny6ggwdp5",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{2.4\\times10^{-16}}{0.010}\\;\\times\\;100\\%\\;=\\;2\\times10^{-12}\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This concentration is much less than 5%, so the assumptions are valid. The concentrations at equilibrium are:"
+                  }
+                ],
+                "id": "yq6mi6hssaqf9l4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "s15b2c0pfpejecr",
+                    "text": ""
+                  }
+                ],
+                "id": "1296739735",
+                "src": "\\begin{array}{l}\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;x\\;=\\;2.4\\times10^{-16}\\;\\mathrm M\\\\\\lbrack{\\mathrm{NH}}_3\\rbrack\\;=\\;0.96\\;\\mathrm M\\;+\\;4x\\;=\\;0.96\\;\\mathrm M\\\\\\lbrack\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\rbrack\\;=\\;0.010\\;\\mathrm M\\;-\\;x\\;=\\;0.010\\;\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "By starting with the maximum amount of product, this system was near equilibrium and the change ("
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") was very small. With only a small change required to get to equilibrium, the equation for "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " was greatly simplified and gave a valid result well within the 5% error maximum."
+                  }
+                ],
+                "id": "qax0s9klgytk15v",
+                "type": "p"
+              }
+            ],
+            "id": "2119150397",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "346101721",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "What are the equilibrium concentrations when 0.25 mol Ni"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is added to 1.00 L of 2.00 M NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " solution?"
+                  }
+                ],
+                "id": "vy0bnzt6fz8nopl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "u22bqio5ee1wmeg",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ywcuttmi6uxmo4f",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Ni}^{2+}(aq)\\;+\\;6\\;{\\mathrm{NH}}_3(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Ni}({\\mathrm{NH}}_3)_6^{2+}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; K_\\mathrm{c}=5.5\\times10^8",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "The steps in the following activity will help you work through calculating the equilibrium concentration of each species using the approximation method for "
+                  },
+                  {
+                    "text": "x"
+                  },
+                  {
+                    "em": true,
+                    "text": "."
+                  }
+                ],
+                "id": "13xcqbvc32bocv9",
+                "type": "p"
+              }
+            ],
+            "id": "2641577971",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79048,
+                "id": "3041386869",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79452,
+                "id": "116157478",
+                "type": "activity-reference"
+              },
+              {
+                "id": "3179088295",
+                "type": "break"
+              },
+              {
+                "activity_id": 79229,
+                "id": "249570682",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78886,
+                "id": "1558180521",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80150,
+                "id": "1831172221",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79102,
+                "id": "912967694",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "329150097",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "3850253020",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 78593,
+            "id": "1090947273",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79424,
+            "id": "563990757",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3114085297",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "w4bg4vae14bnwh2",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "yl7gcgxij0f0obo",
+            "type": "p"
+          }
+        ],
+        "id": "579483011",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78536"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

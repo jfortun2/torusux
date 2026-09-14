@@ -1,0 +1,138 @@
+{
+  "id": "79798",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Single Response - employment status",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4063104732",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3048813686",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "314606630",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4267985290",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1792110844",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "361140662",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "3522578490",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3860466429",
+                "textDirection": "ltr"
+              },
+              "id": "3967443357",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2824962970",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3343854165",
+                "textDirection": "ltr"
+              },
+              "id": "3641060600",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "16a. If none of the above accurately represents your current employment status, please feel free to explain it here.",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "textarea",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "16a. If none of the above accurately represents your current employment status, please feel free to explain it here."
+            }
+          ],
+          "id": "1153506615",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "1059011232",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

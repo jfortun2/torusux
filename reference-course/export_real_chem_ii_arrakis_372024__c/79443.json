@@ -1,0 +1,292 @@
+{
+  "id": "79443",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_3lbd-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\frac{x^2}{0.010\\;-\\;x\\;}\\;=\\;2.5\\times10^{-4}\\\\x^2\\;+\\;2.5\\times10^{-4}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}x^2\\;+\\;2.5\\times10^{-4}\\;x\\;-\\;2.5\\times10^{-6}\\;=\\;0\\\\x\\;=\\;0.00146\\;\\;\\;\\mathrm{and} \\;\\;\\;x\\;=\\;-0.00171\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "xx5zu1qyhry8k08",
+                "type": "p"
+              }
+            ],
+            "id": "2114642995"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0ecombeodziilea",
+                  "type": "p"
+                }
+              ],
+              "id": "3505212390"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "okl15ue1bd7ql8r",
+                  "type": "p"
+                }
+              ],
+              "id": "731930415"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wvday186fo1s1xd",
+                  "type": "p"
+                }
+              ],
+              "id": "1280462501"
+            }
+          ],
+          "id": "2178550208",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{x^2}{0.010\\;-\\;x\\;}\\;=\\;2.5\\times10^{-4}\\\\x^2\\;+\\;2.5\\times10^{-4}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}x^2\\;+\\;2.5\\times10^{-4}\\;x\\;-\\;2.5\\times10^{-6}\\;=\\;0\\\\x\\;=\\;0.00146\\;\\;\\;\\mathrm{and} \\;\\;\\;x\\;=\\;-0.00171\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "33dneldwaqsqk9v",
+                    "type": "p"
+                  }
+                ],
+                "id": "2631247800"
+              },
+              "id": "3247648297",
+              "legacyMatch": "[0.0014,0.0015]",
+              "rule": "input = {[0.0014,0.0015]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This value is a solution to the quadratic equation, but a negative value is not physically possible. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{x^2}{0.010\\;-\\;x\\;}\\;=\\;2.5\\times10^{-4}\\\\x^2\\;+\\;2.5\\times10^{-4}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}x^2\\;+\\;2.5\\times10^{-4}\\;x\\;-\\;2.5\\times10^{-6}\\;=\\;0\\\\x\\;=\\;0.00146\\;\\;\\;\\mathrm{and} \\;\\;\\;x\\;=\\;-0.00171\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "lykl562yh0jbm40",
+                    "type": "p"
+                  }
+                ],
+                "id": "2258000853"
+              },
+              "id": "4048178007",
+              "legacyMatch": "[-0.0018,-0.0017]",
+              "rule": "input = {[-0.0018,-0.0017]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "uptu4uwq40r5hxh",
+                    "type": "p"
+                  }
+                ],
+                "id": "3149389643"
+              },
+              "id": "2564759005",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate the physically possible value of x using the quadratic formula. ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2178550208",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the physically possible value of "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " using the quadratic formula. "
+            }
+          ],
+          "id": "cpw76055cdez3nz",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "rej28qwnbxfv2s6",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2178550208": [
+      "78358"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

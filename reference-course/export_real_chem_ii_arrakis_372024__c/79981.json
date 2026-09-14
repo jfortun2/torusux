@@ -1,0 +1,231 @@
+{
+  "id": "79981",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ksp_solubility_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Mg}^{2+}\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack^2\\\\K_{\\mathrm{sp}}\\;=\\;(1.31\\times10^{-4}\\;)(2.62\\times10^{-4})^2\\;=\\;8.99\\times10^{-12}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "7tsgqu2g89lvw2j",
+                "type": "p"
+              }
+            ],
+            "id": "196043476"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Just as we did with other equilibrium expressions, given equilibrium concentrations, we can calculate the value of the equilibrium constant (in this case, "
+                    },
+                    {
+                      "em": true,
+                      "text": "K"
+                    },
+                    {
+                      "sub": true,
+                      "text": "sp"
+                    },
+                    {
+                      "text": ") by substituting the equilibrium concentrations into the equilibrium expression. Note that because two hydroxide ions form for every one magnesium ion, the concentration of hydroxide ions at equilibrium will be twice that of the magnesium ions."
+                    }
+                  ],
+                  "id": "0rlo0xg5gkxt67r",
+                  "type": "p"
+                }
+              ],
+              "id": "2830368246"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iuhbry1flz4reoq",
+                  "type": "p"
+                }
+              ],
+              "id": "894220569"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lhx81hh43yc7hjl",
+                  "type": "p"
+                }
+              ],
+              "id": "1421878162"
+            }
+          ],
+          "id": "2582101274",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_{\\mathrm{sp}}\\;=\\;\\lbrack\\mathrm{Mg}^{2+}\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack^2\\\\K_{\\mathrm{sp}}\\;=\\;(1.31\\times10^{-4}\\;)(2.62\\times10^{-4})^2\\;=\\;8.99\\times10^{-12}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "laqqlru496xqlkk",
+                    "type": "p"
+                  }
+                ],
+                "id": "4178530918"
+              },
+              "id": "1397682248",
+              "legacyMatch": "[8.85e-12,9.1e-12]",
+              "rule": "input = {[8.85e-12,9.1e-12]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again."
+                      }
+                    ],
+                    "id": "s32vfcsexa0au2j",
+                    "type": "p"
+                  }
+                ],
+                "id": "286960468"
+              },
+              "id": "1115387344",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Now, calculate the solubility product for Mg(OH)2.Ksp =  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2582101274",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Now, calculate the solubility product for Mg(OH)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "ts4fawrngphw9md",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "wbnrdsvdex7zirh",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2582101274": [
+      "78431"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

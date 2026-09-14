@@ -1,0 +1,293 @@
+{
+  "id": "80093",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "kp_calculation_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "n"
+                  },
+                  {
+                    "text": " = 2 − (2 + 1) = −1. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_\\mathrm{p}=K_\\mathrm{c}(RT)^{\\Delta n}=\\left(6.25\\times10^4\\right)\\left((0.08206)(308) \\right)^{-1}=2.47\\times10^3",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "9n3jr0m0p07dcn7",
+                "type": "p"
+              }
+            ],
+            "id": "3500009576"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h0wugw6b17rbkwj",
+                  "type": "p"
+                }
+              ],
+              "id": "1839535229"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fbicdju7oevolz1",
+                  "type": "p"
+                }
+              ],
+              "id": "1298045884"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hik8bw5l2nw8f6v",
+                  "type": "p"
+                }
+              ],
+              "id": "2835368723"
+            }
+          ],
+          "id": "1146895883",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "n"
+                      },
+                      {
+                        "text": " = 2 − (2 + 1) = −1. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{p}=K_\\mathrm{c}(RT)^{\\Delta n}=\\left(6.25\\times10^4\\right)\\left((0.08206)(308) \\right)^{-1}=2.47\\times10^3",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "92o1edrurq346vu",
+                    "type": "p"
+                  }
+                ],
+                "id": "3152258138"
+              },
+              "id": "3524354678",
+              "legacyMatch": "[2470,2472]",
+              "rule": "input = {[2470,2472]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{p}=K_\\mathrm{c}(RT)^{\\Delta n}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Remember to convert the temperature to kelvin."
+                      }
+                    ],
+                    "id": "vlz6tp8yim3l4ql",
+                    "type": "p"
+                  }
+                ],
+                "id": "4272307152"
+              },
+              "id": "2918143879",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "For the reaction below, Kc is 6.25 × 104 at 35 °C. Calculate Kp for this reaction at 35 °C.Kp = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "1146895883"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the reaction below, "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " is 6.25 × 10"
+            },
+            {
+              "sup": true,
+              "text": "4"
+            },
+            {
+              "text": " at 35 °C."
+            }
+          ],
+          "id": "vd5o08a9e957ywt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "a0dzylig9la72yl",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "p6hjkokxidk6qmi",
+          "legacyBlockRendered": "true",
+          "src": "2\\;\\mathrm{NO}(g)\\;+\\;{\\mathrm{Cl}}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{NOCl}(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " for this reaction at 35 °C."
+            }
+          ],
+          "id": "p020oitkaee0xwz",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "oq43wekiyppwreq",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1146895883": [
+      "78362"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

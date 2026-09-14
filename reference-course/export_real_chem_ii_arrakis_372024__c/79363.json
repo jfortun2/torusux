@@ -1,0 +1,744 @@
+{
+  "id": "79363",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "salt_ph_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z4ka7b5ao38v1dg",
+                  "type": "p"
+                }
+              ],
+              "id": "1257653738"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4trgxpfzlgsfa1s",
+                  "type": "p"
+                }
+              ],
+              "id": "2213782807"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3qsk4ffpxtnkm7w",
+                  "type": "p"
+                }
+              ],
+              "id": "269699506"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Ca"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " is cation of a strong base. "
+                      }
+                    ],
+                    "id": "wjxrxinf5zlrxcu",
+                    "type": "p"
+                  }
+                ],
+                "id": "1933332960"
+              },
+              "id": "2883198765",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Ca"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " is cation of a strong base. "
+                      }
+                    ],
+                    "id": "hfogbysokraukhb",
+                    "type": "p"
+                  }
+                ],
+                "id": "23487812"
+              },
+              "id": "3497648144",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Ca"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " is cation of a strong base. "
+                      }
+                    ],
+                    "id": "5g6hia9bde8r7h6",
+                    "type": "p"
+                  }
+                ],
+                "id": "1161704829"
+              },
+              "id": "4203057238",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "a5infebykkrbcxy",
+                    "type": "p"
+                  }
+                ],
+                "id": "140304231"
+              },
+              "id": "2883257455",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vff09dpvn4u1o7x",
+                  "type": "p"
+                }
+              ],
+              "id": "3518687480"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "stiwbxkhcv6h70t",
+                  "type": "p"
+                }
+              ],
+              "id": "3018530651"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ws1ye65pprt275m",
+                  "type": "p"
+                }
+              ],
+              "id": "772878488"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a strong acid."
+                      }
+                    ],
+                    "id": "4i66lr48y67euz7",
+                    "type": "p"
+                  }
+                ],
+                "id": "715844574"
+              },
+              "id": "3453487835",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a strong acid. "
+                      }
+                    ],
+                    "id": "4x4nx5ihb4wqrxr",
+                    "type": "p"
+                  }
+                ],
+                "id": "1605144112"
+              },
+              "id": "1836465939",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " is the anion of a strong acid."
+                      }
+                    ],
+                    "id": "c0wcn5gteupdc4e",
+                    "type": "p"
+                  }
+                ],
+                "id": "3424548324"
+              },
+              "id": "1634106023",
+              "legacyMatch": "C",
+              "rule": "input like {second_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "h4cjbwypardohhw",
+                    "type": "p"
+                  }
+                ],
+                "id": "602466355"
+              },
+              "id": "401109268",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "utvq2696gouqa2c",
+                  "type": "p"
+                }
+              ],
+              "id": "923904329"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w82g9sg6mu0y8vk",
+                  "type": "p"
+                }
+              ],
+              "id": "1904821525"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vmwlit6n21x8lv3",
+                  "type": "p"
+                }
+              ],
+              "id": "488177334"
+            }
+          ],
+          "id": "third",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Neither the anion nor cation affect the pH."
+                      }
+                    ],
+                    "id": "he2vcr1o08h03hn",
+                    "type": "p"
+                  }
+                ],
+                "id": "2806089222"
+              },
+              "id": "2267967845",
+              "legacyMatch": "A",
+              "rule": "input like {third_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Neither the anion nor cation affect the pH."
+                      }
+                    ],
+                    "id": "nvn6jn5bjr8ri3v",
+                    "type": "p"
+                  }
+                ],
+                "id": "1566389902"
+              },
+              "id": "3173840697",
+              "legacyMatch": "B",
+              "rule": "input like {third_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Neither the anion nor cation affect the pH. "
+                      }
+                    ],
+                    "id": "cf07by11wzia482",
+                    "type": "p"
+                  }
+                ],
+                "id": "3427954077"
+              },
+              "id": "1609591678",
+              "legacyMatch": "C",
+              "rule": "input like {third_C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "y59fx4vcj6ibsq5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3751034355"
+              },
+              "id": "951116968",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "CaCl2The cation Ca2+ will .The anion Cl− will .A CaCl2 solution is .",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2883198765"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3497648144"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "4203057238"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "3453487835"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "1836465939"
+        ],
+        [
+          [
+            "second_C"
+          ],
+          "1634106023"
+        ],
+        [
+          [
+            "third_A"
+          ],
+          "2267967845"
+        ],
+        [
+          [
+            "third_B"
+          ],
+          "3173840697"
+        ],
+        [
+          [
+            "third_C"
+          ],
+          "1609591678"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "9lghc18b9wvxa8n",
+            "text": "increase pH"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "dnnpaycm0yf3hdm",
+            "text": "decrease pH"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "c9hkihct9tdltri",
+            "text": "have no effect on pH"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "5r71a3jgrp22r9a",
+            "text": "increase pH"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "pzfs10m20f7igzs",
+            "text": "decrease pH"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "qqp1hxcr2j44rcy",
+            "text": "have no effect on pH"
+          }
+        ],
+        "id": "second_C"
+      },
+      {
+        "content": [
+          {
+            "id": "5akgv4ve2snkex0",
+            "text": "basic "
+          }
+        ],
+        "id": "third_A"
+      },
+      {
+        "content": [
+          {
+            "id": "z1zgu3eh4sncivd",
+            "text": "acidic"
+          }
+        ],
+        "id": "third_B"
+      },
+      {
+        "content": [
+          {
+            "id": "l3nvpzyen9mrbjk",
+            "text": "neutral"
+          }
+        ],
+        "id": "third_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "second_C"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "third_A",
+          "third_B",
+          "third_C"
+        ],
+        "id": "third",
+        "inputType": "dropdown",
+        "partId": "third",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "CaCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            }
+          ],
+          "id": "a6uu8iq0acqdmro",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The cation Ca"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": " will "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "akoryk5t597zx37",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The anion Cl"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": " will "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "dxw0ha5e1poisf1",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "A CaCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " solution is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "third",
+              "input": "third",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "sqq0k19y48uvva5",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78479"
+    ],
+    "second": [
+      "78479"
+    ],
+    "third": [
+      "78555"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

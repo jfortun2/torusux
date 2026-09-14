@@ -1,0 +1,567 @@
+{
+  "id": "80258",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78051"
+  ],
+  "title": "calc_instan_rate_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0aou1u5wwt17cwy",
+                  "type": "p"
+                }
+              ],
+              "id": "1917151609"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mec2jhyf9w43rj2",
+                  "type": "p"
+                }
+              ],
+              "id": "2200653823"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z6mhgxyhvzqsi3f",
+                  "type": "p"
+                }
+              ],
+              "id": "2337665267"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Graph [A] vs. time and determine the slope of the tangent line at t = 0.0 s. This is the instantaneous rate of change of [A]. From the definition of reaction rate and the reaction stoichiometry, the instantaneous rate for the reaction = "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "-\\frac{\\mathrm\\Delta\\lbrack\\mathrm A\\rbrack}{2\\;\\mathrm\\Delta t}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "68dp7i4ypoppym2",
+                    "type": "p"
+                  }
+                ],
+                "id": "988338238"
+              },
+              "id": "547763742",
+              "legacyMatch": "[0.02,0.03]",
+              "rule": "input = {[0.02,0.03]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. To find the instantaneous rate of reaction: "
+                      }
+                    ],
+                    "id": "wgkre0ts81qh1g0",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "7oq0e446oqbbo81",
+                            "text": "Carefully plot the [A] vs. t data and fit a smooth curve to the data points. The slope of the curve, which is "
+                          },
+                          {
+                            "children": [
+                              {
+                                "id": "7ejx2wf4zq9epel",
+                                "text": ""
+                              }
+                            ],
+                            "id": "c4lg53149n9klft",
+                            "legacyBlockRendered": false,
+                            "src": "\\frac{\\triangle\\mathrm [A]}{\\triangle t}",
+                            "subtype": "latex",
+                            "type": "formula_inline"
+                          },
+                          {
+                            "id": "rw3kpevyft5fjfp",
+                            "text": ", at a given time is equal to the instantaneous rate of change of [A]."
+                          }
+                        ],
+                        "id": "tlzcl1aqluzstvy",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "vhqmab6r2hsozr3",
+                            "text": "Carefully estimate the value of the slope at the given time to obtain the instantaneous rate of change of [A]."
+                          }
+                        ],
+                        "id": "jhn2d0s8xuaaezl",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "pin1gxyborbkf45",
+                            "text": "Relate the rate of change of [A] to the reaction rate using the definition of reaction rate and the stoichiometric coefficient of the reactant A."
+                          }
+                        ],
+                        "id": "qnk5tnrty09702s",
+                        "type": "li"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "oaephdbyk66iury",
+                            "text": "Solve for the reaction rate using the estimated rate of change of [A]."
+                          }
+                        ],
+                        "id": "wbw7flo38pxdx13",
+                        "type": "li"
+                      }
+                    ],
+                    "id": "3o51yb25x5dxjto",
+                    "type": "ul"
+                  }
+                ],
+                "id": "244656107"
+              },
+              "id": "3252852150",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A study of the rate of the reaction represented as 2 A → B gave the following data:"
+            }
+          ],
+          "id": "md056z1j53rtte5",
+          "type": "p"
+        },
+        {
+          "caption": [
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "id": "e19997ba178e43deb405a9a088c57b74",
+              "type": "p"
+            }
+          ],
+          "children": [
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "Time (s)"
+                        }
+                      ],
+                      "id": "yrzz4osjxemcmks",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "tvsxod6y16isrez",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.0"
+                        }
+                      ],
+                      "id": "bp1f9qk7j9p3l9i",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "o2f0uex3cqlatm9",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "5.0"
+                        }
+                      ],
+                      "id": "hip5yxw5hazt2d6",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "s0cuyelb486lmrv",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "10.0"
+                        }
+                      ],
+                      "id": "lhl83wqqw4qsalv",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "9fi0g851rmb9oyk",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "15.0"
+                        }
+                      ],
+                      "id": "3q9uzz6sv72ovbr",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "bq9u09edbw0wk1e",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "20.0"
+                        }
+                      ],
+                      "id": "ra7ma7k9612lbjr",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "id2uiw3i2jte9m0",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "25.0"
+                        }
+                      ],
+                      "id": "snkfq11nbjj4kfl",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "7nancn8s824d2gv",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "30.0"
+                        }
+                      ],
+                      "id": "ql2kp8piiqwweqm",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "1gvdbuhzlmmn9lt",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "esxhomc5pi77g0o",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "[A] (M)"
+                        }
+                      ],
+                      "id": "418k5n9lfz0bcy6",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "2yycqy3qd9iztpk",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "1.00"
+                        }
+                      ],
+                      "id": "6y82gzjumcod5hd",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "pqynpv4a2db7p1a",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.776"
+                        }
+                      ],
+                      "id": "or9ushec3j2uiya",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "h3kshpzlajp9ug7",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.603"
+                        }
+                      ],
+                      "id": "rb4mz419z35c7td",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "5k4uriqzj147q7a",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.468"
+                        }
+                      ],
+                      "id": "nhkvq111zmjoxcz",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "dtc4bi2zbgvokuj",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.363"
+                        }
+                      ],
+                      "id": "2dtp0a8a36lgfhn",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "bm5ic5wfohb1u0s",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.282"
+                        }
+                      ],
+                      "id": "vdq53a2wdp49kur",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "hvy6lm5ivtajkx4",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "0.219"
+                        }
+                      ],
+                      "id": "bl2p245lkdtdvlw",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "8dk3g5q2mjm6whw",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "3qe6xb2c6f3d94m",
+              "type": "tr"
+            }
+          ],
+          "id": "kxi9gykybeqozeo",
+          "rowstyle": "plain",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": "The instantaneous rate for the reaction at "
+            },
+            {
+              "em": true,
+              "text": "t "
+            },
+            {
+              "text": "= 0.0 s is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s."
+            }
+          ],
+          "id": "zbbg7y0q3141qom",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [
+      "78454"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

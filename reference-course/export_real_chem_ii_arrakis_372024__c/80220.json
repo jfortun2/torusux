@@ -1,0 +1,764 @@
+{
+  "id": "80220",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "nuc_decay_eq_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "How does the total mass number on the left side of the equation compare to the total mass number on the right side of the equation?"
+                    }
+                  ],
+                  "id": "n0dii8spizdki0k",
+                  "type": "p"
+                }
+              ],
+              "id": "1087331678"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ikf4sn9o1oco93d",
+                  "type": "p"
+                }
+              ],
+              "id": "3005238276"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "d3jjhl2k6i4hj6d",
+                  "type": "p"
+                }
+              ],
+              "id": "2569783508"
+            }
+          ],
+          "id": "4134074046",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 60 = A + 0, so A must equal 60."
+                      }
+                    ],
+                    "id": "i5bkdo26w13jqkj",
+                    "type": "p"
+                  }
+                ],
+                "id": "2561179908"
+              },
+              "id": "3965388596",
+              "legacyMatch": "60",
+              "rule": "input = {60}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The total mass number must be the same on each side of the equation."
+                      }
+                    ],
+                    "id": "8m131hd7ztukybf",
+                    "type": "p"
+                  }
+                ],
+                "id": "4050392813"
+              },
+              "id": "512174804",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "How does the total charge on the left side of the equation compare to the total charge on the right side of the equation?"
+                    }
+                  ],
+                  "id": "rd3yqklklgv0jk2",
+                  "type": "p"
+                }
+              ],
+              "id": "2729890540"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z1ade4ng6hep7tn",
+                  "type": "p"
+                }
+              ],
+              "id": "1416390594"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wnzfkquk8sqrn3g",
+                  "type": "p"
+                }
+              ],
+              "id": "261141490"
+            }
+          ],
+          "id": "2945395466",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 27 = Z + (–1), so Z must equal 28."
+                      }
+                    ],
+                    "id": "ge76em0jcro91f5",
+                    "type": "p"
+                  }
+                ],
+                "id": "1133490969"
+              },
+              "id": "1622257323",
+              "legacyMatch": "34",
+              "rule": "input = {28}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The total charge must be the same on each side of the equation."
+                      }
+                    ],
+                    "id": "hc2xxounkg3ft8e",
+                    "type": "p"
+                  }
+                ],
+                "id": "391805230"
+              },
+              "id": "3277173696",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The complete equation is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{}_{33}^{60}\\mathrm{Co}\\;\\;\\;\\rightarrow\\;\\;\\;{}_{32}^{60}\\mathrm{Ni}\\;\\;+\\;\\;{}_{-1}^0\\mathrm\\beta",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "s65851225hbnnoi",
+                "type": "p"
+              }
+            ],
+            "id": "655946702"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The element corresponds to the mass number (Z)."
+                    }
+                  ],
+                  "id": "rxfszcgpzgngeai",
+                  "type": "p"
+                }
+              ],
+              "id": "2723239281"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tftf9e18nl6rpk2",
+                  "type": "p"
+                }
+              ],
+              "id": "4188606404"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4pyy8jfbi6jcsak",
+                  "type": "p"
+                }
+              ],
+              "id": "970671812"
+            }
+          ],
+          "id": "3203299273",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The complete equation is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{}_{27}^{60}\\mathrm{Co}\\;\\;\\;\\rightarrow\\;\\;\\;{}_{28}^{60}\\mathrm{Ni}\\;\\;+\\;\\;{}_{-1}^0\\mathrm\\beta",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "6vypjte37jdpdzc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2472598746"
+              },
+              "id": "1076005858",
+              "legacyMatch": "Se",
+              "rule": "input iequals {Ni}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Make sure the element corresponds to the mass number."
+                      }
+                    ],
+                    "id": "8jej5nfns3yu0et",
+                    "type": "p"
+                  }
+                ],
+                "id": "3104053522"
+              },
+              "id": "2745369313",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "What type of particle is "
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "id": "2529521721",
+                      "src": "{}_{-1}^0\\mathrm\\beta",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": "?"
+                    }
+                  ],
+                  "id": "n4ac0gyy1n9kukz",
+                  "type": "p"
+                }
+              ],
+              "id": "277694355"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u44wq46grfo7opn",
+                  "type": "p"
+                }
+              ],
+              "id": "1849468552"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "llc0w2nmbxob355",
+                  "type": "p"
+                }
+              ],
+              "id": "2810176946"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "zycycalups58lza",
+                    "type": "p"
+                  }
+                ],
+                "id": "148948660"
+              },
+              "id": "2465236343",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. An electron is emitted, so this is beta decay."
+                      }
+                    ],
+                    "id": "99r3eliwdrht8eb",
+                    "type": "p"
+                  }
+                ],
+                "id": "3392302197"
+              },
+              "id": "4187286214",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "xp3vjwiwg7hzzwy",
+                    "type": "p"
+                  }
+                ],
+                "id": "1630067070"
+              },
+              "id": "343923279",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "dq9qecu4krmmu8u",
+                    "type": "p"
+                  }
+                ],
+                "id": "883343164"
+              },
+              "id": "3420112764",
+              "legacyMatch": "D",
+              "rule": "input like {first_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "gezd7wuoygvdcds",
+                    "type": "p"
+                  }
+                ],
+                "id": "976250843"
+              },
+              "id": "3816662583",
+              "legacyMatch": "E",
+              "rule": "input like {first_E}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the type of particle and whether it is emitted or captured."
+                      }
+                    ],
+                    "id": "brmn0m3gvncmycc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2158045724"
+              },
+              "id": "699703233",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "For each of the following, indicate the values of A, Z, and X for the missing substance in the equation and identify the type of nuclear reaction.  A =  Z =  X = Type of reaction: ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2465236343"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "4187286214"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "343923279"
+        ],
+        [
+          [
+            "first_D"
+          ],
+          "3420112764"
+        ],
+        [
+          [
+            "first_E"
+          ],
+          "3816662583"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "tl9bnpvcs20tivv",
+            "text": "alpha decay "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "of9z0qmh8fhn1jm",
+            "text": "beta decay"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "cgnk44dw0q3rr0z",
+            "text": "gamma emission"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "5gezb8kepj39owa",
+            "text": "positron emission"
+          }
+        ],
+        "id": "first_D"
+      },
+      {
+        "content": [
+          {
+            "id": "slenk95zebinl9o",
+            "text": "electron capture"
+          }
+        ],
+        "id": "first_E"
+      }
+    ],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "4134074046",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "2945395466",
+        "size": "small"
+      },
+      {
+        "id": "q1txt",
+        "inputType": "text",
+        "partId": "3203299273"
+      },
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C",
+          "first_D",
+          "first_E"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For each of the following, indicate the values of A, Z, and X for the missing substance in the equation and identify the type of nuclear reaction. "
+            }
+          ],
+          "id": "qytkwbi88hltwo3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "guqq1ozychfepj9",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "m4p7d7vt90u4w0v",
+          "legacyBlockRendered": "true",
+          "src": "{}_{27}^{60}\\mathrm{Co}\\;\\;\\;\\rightarrow\\;\\;\\;{}_{\\mathrm Z}^{\\mathrm A}\\mathrm X\\;\\;+\\;\\;{}_{-1}^0\\mathrm\\beta",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "A = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "tmlfldm86xd7s2t",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Z = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "t1im0sz0ejsht4a",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "X = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1txt",
+              "input": "q1txt",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "x0fo4mgnqddl7ph",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Type of reaction: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "30yfwc8x1shnttb",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2945395466": [
+      "78517"
+    ],
+    "3203299273": [
+      "78517"
+    ],
+    "4134074046": [
+      "78517"
+    ],
+    "first": [
+      "78517"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

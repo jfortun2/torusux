@@ -1,0 +1,257 @@
+{
+  "id": "79072",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "equil_calc_quiz-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4b7w34o1cp2wtmg",
+                  "type": "p"
+                }
+              ],
+              "id": "3021695632"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uzqn6gtal1ec0t6",
+                  "type": "p"
+                }
+              ],
+              "id": "654049875"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qaa4nzks8b8w0ai",
+                  "type": "p"
+                }
+              ],
+              "id": "2145142745"
+            }
+          ],
+          "id": "1415481475",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_c\\;=\\;\\frac{\\lbrack{\\mathrm{SO}}_3\\rbrack^2}{\\lbrack{\\mathrm{SO}}_2\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "4.32\\;=\\;\\frac{x^2}{(0.590\\;\\mathrm M)^2(0.0450\\;\\mathrm M)}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "svtogyhr1fymv8o",
+                    "type": "p"
+                  }
+                ],
+                "id": "2785089440"
+              },
+              "id": "573172355",
+              "legacyMatch": "[0.25,0.27]",
+              "rule": "input = {[0.25,0.27]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_c\\;=\\;\\frac{\\lbrack{\\mathrm{SO}}_3\\rbrack^2}{\\lbrack{\\mathrm{SO}}_2\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "4.32\\;=\\;\\frac{x^2}{(0.590\\;\\mathrm M)^2(0.0450\\;\\mathrm M)}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "= [SO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "] = 0.260"
+                      }
+                    ],
+                    "id": "bka2u5nwp1lkjj1",
+                    "type": "p"
+                  }
+                ],
+                "id": "3101781172"
+              },
+              "id": "1145959296",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "1415481475"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the following reaction:"
+            }
+          ],
+          "id": "pql5hozhxb7ditc",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "uooisu3e3wwtjf9",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "jrze3b35h3701t5",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{SO}}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\rightleftharpoons\\;2\\;{\\mathrm{SO}}_3(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;4.32",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "If the equilibrium concentrations of SO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " are 0.590 M and 0.0450 M, respectively, what is the equilibrium concentration of SO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "?"
+            }
+          ],
+          "id": "62wyrrnt7goizbw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            },
+            {
+              "text": "M"
+            }
+          ],
+          "id": "u93x68hnyrlccb4",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1415481475": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

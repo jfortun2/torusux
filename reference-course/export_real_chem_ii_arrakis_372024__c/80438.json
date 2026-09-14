@@ -1,0 +1,138 @@
+{
+  "id": "80438",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Single Response - reasons for taking course",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "635002715",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4210780828",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3639240623",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2694574270",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4241687463",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3904178029",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "460852052",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1166106611",
+                "textDirection": "ltr"
+              },
+              "id": "3828799496",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2694752593",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3665470385",
+                "textDirection": "ltr"
+              },
+              "id": "3243176109",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "8a. If none of the above accurately describes your reasons for taking this course, please describe it here.",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "text",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "8a. If none of the above accurately describes your reasons for taking this course, please describe it here."
+            }
+          ],
+          "id": "675141261",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "3576327229",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

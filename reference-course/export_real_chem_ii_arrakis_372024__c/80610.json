@@ -1,0 +1,2644 @@
+{
+  "id": "80610",
+  "type": "Page",
+  "tags": [],
+  "title": "Weak Acid–Strong Base Titrations: Calculations Part I",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "In the following example, we analyze a titration between a weak acid and a strong base, using the same volumes and concentrations that we used in the strong acid–strong base titration example. This page focuses on calculating the pH before the equivalence point."
+              }
+            ],
+            "id": "sk0u6k59vl19sr8",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "The video below describes this process, illustrating what occurs on the molecular level and providing an outline for the calculations that follow."
+              }
+            ],
+            "id": "zl6qnaeh48gbd71",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "55vavua27sbsvyd",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "7okc3r03rgcq4us",
+            "src": "eDXw3qmBlRI",
+            "type": "youtube"
+          },
+          {
+            "___selfClosing___": true,
+            "children": [
+              {
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "onash8idkdcwifr",
+            "type": "p"
+          }
+        ],
+        "id": "1698202830",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "25.00 mL of 0.100 M HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " (a weak acid with "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " = 1.8 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–5"
+                  },
+                  {
+                    "text": ") is titrated with 0.100 M NaOH (a strong base). Calculate the pH at these volumes of added base solution:"
+                  }
+                ],
+                "id": "hrc8dyb92zvcqoo",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "0.00 mL, 6.25 mL, 12.50 mL, 18.75 mL (to be done on this page)"
+                          }
+                        ],
+                        "id": "2934721081",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "18q2lqeqi5dhlqh",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "25.00 mL, 31.25 mL, 37.50 mL (to be done on the next page)"
+                          }
+                        ],
+                        "id": "3695560560",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "ssx2harv7wxbz7z",
+                    "type": "li"
+                  }
+                ],
+                "id": "8z09ca9oorq3v0i",
+                "style": "none",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Overview"
+                  }
+                ],
+                "id": "xq9td663pxrld90",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is a weak acid: it partially dissociates into H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": ". NaOH is a strong base: it completely dissociates into Na"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": ". (Note that Na"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " has no effect on pH.) The solution initially contains only weak acid, so at the start of the titration, the pH is low (but not as low as for a strong acid). As strong base is added, OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " reacts with HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", removing H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and converting the weak acid into its conjugate base, C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": ". The pH rises gradually until the solution is near the equivalence point. At the equivalence point, all of the weak acid has been converted into its conjugate base, so the solution is basic due to the presence of C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": ". As more NaOH is added, the solution turns even more basic and the pH becomes very high."
+                  }
+                ],
+                "id": "pf8k94br04isjgp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "At 0.00 mL NaOH added (before titrant is added)"
+                          }
+                        ],
+                        "id": "1455386491",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "joyty21tm99129l",
+                    "type": "li"
+                  }
+                ],
+                "id": "gahb1tpttffvzyr",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "To find the pH of 0.100 M HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", we use the acid-ionization reaction and the "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " expression:"
+                  }
+                ],
+                "id": "m1wyuznx1cptwhv",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "jmi1yjgv7ek0dj4",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "z2ittcoc49c3bmm",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\; {\\mathrm H}_3\\mathrm O^+(aq)\\;+\\;{\\mathrm C}_2{\\mathrm H}_3\\mathrm O_2^-(aq)\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm a}\\; =\\;\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using an ICE table, we can determine equilibrium concentrations in terms of "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "c97c0rse7la3hcu",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "9bnbzhymbm8z7n2",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "m47rqq4sp9tjxdu",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "lu8sadfus76fjwc",
+                            "strong": true,
+                            "text": "HC"
+                          },
+                          {
+                            "id": "fjyygr7s2drlc1l",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "f4ybspgmfed8s79",
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "id": "vikor4j66ep4kfl",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "3qtg5ljk2djzbqd",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "6be7zzya6e85k33",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "1exz39ix1009zme",
+                            "strong": true,
+                            "text": " + H"
+                          },
+                          {
+                            "id": "l9bo4u1bucxsi9v",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "9yj5297868pzv2y",
+                            "strong": true,
+                            "text": "O ⇌ H"
+                          },
+                          {
+                            "id": "1fuy5j0ega1o4b5",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "3zikhnr5oz5h6in",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "92v1hte4z2oz5vy",
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "kxdenye70xdqzqg",
+                            "strong": true,
+                            "text": " + C"
+                          },
+                          {
+                            "id": "rm0asx8t5eeqd7l",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "ky59yt6yr3r9jqp",
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "id": "5nbg7m1mtsmbzfi",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "iemmw7tyqftn0wf",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "k2d6bxdu9vnqgw5",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "uaqutgvqa6kywf4",
+                            "strong": true,
+                            "sup": true,
+                            "text": "–"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "og9jnbd6i7vy735",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "zqokycyhsk28agz",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "1899853859",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1179689631",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HC"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              }
+                            ],
+                            "id": "553629631",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "784288381",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "1205915115",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "947252602",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "4167695889",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3487470504",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "C"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "–"
+                              }
+                            ],
+                            "id": "643065419",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2832297692",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "1599867909",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "utt4smcjxxupqnh",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "atursdulhqjo9ap",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qiepb4b6uieyev9",
+                            "text": "0.100 M"
+                          }
+                        ],
+                        "id": "lpmptpoxzss7r5t",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "6z59all6036eza7",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "gpstzcba9w9q9ui",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qgxz8qm5urze66d",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "q8e1m9m4tdb8sm1",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "857uau4nk3z83ud",
+                            "text": ""
+                          }
+                        ],
+                        "id": "xury8pxvnj0acwn",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "01hgqij3lggozop",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "t49id61zi190slo",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "fhf595kbfvz5nkg",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "b70t9hyaihh61xk",
+                            "text": "–"
+                          },
+                          {
+                            "em": true,
+                            "id": "8475uca18wjzxc3",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "nmqgcnn3nzacb5u",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "9swe45vb8l89mbj",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "s67lysowdr5br21",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "f4movtxkhi9wh8e",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "ekedv368h6g818d",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "k69lml3beffjfcu",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "cgn1x1cu46kpblc",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "l42q3ajjyuv2ntp",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "x7dp7v3aa5jkbau",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "w2y2eubpkxbcnx6",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "4p8nrryxvouxh60",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "53abfbtqgkgjzjg",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "gp26qbaepx9a771",
+                            "text": "0.100 M – "
+                          },
+                          {
+                            "em": true,
+                            "id": "4u8mbiwdomxltxw",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "pticqlatv1zp7h0",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "svdu2utaavsldqz",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "v76nudvwftni9bp",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "cxb3kqmshofgygw",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "0g0h2oe75w07mau",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "2wdmxg7es7iy8hs",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "3nxtqjc87ujnnuj",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "pmtxhad67ux2fuz",
+                    "type": "tr"
+                  }
+                ],
+                "id": "rybeyq7z5pj3zaq",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "id": "h9cj4gukmfgd27h",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "7dsk0v94edtqdzu",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\; =\\;\\frac{x^2}{0.100-x}\\;=\\;1.8\\times10^{-5}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We solve this equation using the small "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " approximation, then calculate pH:"
+                  }
+                ],
+                "id": "95hwwhk0jhj36vw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "o1q6ga895nt4rl6",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "94k08hdgvjac50x",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{c}x\\;=\\;\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;0.00134\\;\\mathrm M\\;\\\\\\mathrm{pH}\\; =\\;-\\log\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;-\\log(0.00134)=\\;2.87\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "At 6.25 mL NaOH added (before the equivalence point)"
+                          }
+                        ],
+                        "id": "569998351",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "jf42cqk3nx2rlqf",
+                    "type": "li"
+                  }
+                ],
+                "id": "765o0s8lbihg5xu",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "As the HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is titrated with NaOH, each mole of added OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " will react with one mole of HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " according to the reaction:"
+                  }
+                ],
+                "id": "nzl9vq8mwrlkk3y",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "nexntumcyw3qb1c",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "wgu9h1qnycvx8uh",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2(aq)\\;+\\:{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\; {\\mathrm H}_3\\mathrm O^+(aq)\\:+\\:{\\mathrm C}_2{\\mathrm H}_3{\\mathrm O}_2^-(aq)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Because reactions occur on a mole-to-mole basis, concentrations need to be converted to moles."
+                  }
+                ],
+                "id": "l8nr6dst1tbrogq",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "lbb76eaouw60x0l",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "oxxa43nv75i606a",
+                "legacyBlockRendered": "true",
+                "src": "0.0250\\;\\mathrm L\\;\\cdot\\;\\frac{0.100\\;\\mathrm{mol}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2}{\\mathrm L}=0.00250\\;\\mathrm{mol}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2\\;\\;\\Rightarrow\\;\\;0.00250\\;\\mathrm{mol}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "h2px4huw5zm4vra",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jcpjpa39hi35pn2",
+                "legacyBlockRendered": "true",
+                "src": "0.00625\\;\\mathrm L\\;\\cdot\\;\\frac{0.100\\;\\mathrm{mol}\\;\\mathrm{NaOH}}{\\mathrm L}\\;=\\;0.000625\\;\\mathrm{mol} \\;\\mathrm{NaOH}\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;0.000625\\;\\mathrm{mol}\\;\\mathrm{OH}^-",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Because the moles of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " are less than the moles of HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", this point in the titration is before the equivalence point. The reaction will occur until one of the reactants runs out (OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " in this case). Preparing a table can help us keep track of the amounts of HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "slst4bejjgyonow",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "8b8g9m1kn93abgy",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "illp7fa4kyu1x47",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ddtzuqjtlm5ui4o",
+                            "strong": true,
+                            "text": "HC"
+                          },
+                          {
+                            "id": "wly4ujvt5chfedp",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "3x412yk8rkkd7p4",
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "id": "3u07fqx3j8i8k92",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "qp3sdqh6hq64pkj",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "3vwkg54rp9a9ywu",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "bi1876jjv5trum9",
+                            "strong": true,
+                            "text": " + OH"
+                          },
+                          {
+                            "id": "sia8kja9dgrt2za",
+                            "strong": true,
+                            "sup": true,
+                            "text": "–"
+                          },
+                          {
+                            "id": "xt3fcicgi75uq8o",
+                            "strong": true,
+                            "text": " → C"
+                          },
+                          {
+                            "id": "w1sertox3kbj5rh",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "wwh4nkz0k32i65t",
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "id": "5xntmpofy1bzepz",
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "9nz26pkp20hn96m",
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "id": "1v0l7igkk4stnr2",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "rz5y3t7usbl2rm3",
+                            "strong": true,
+                            "sup": true,
+                            "text": "–"
+                          },
+                          {
+                            "id": "61aetvht3fcvbq3",
+                            "strong": true,
+                            "text": " + H"
+                          },
+                          {
+                            "id": "tt287ktp1bd44oa",
+                            "strong": true,
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "8vwtqpem1mb9f0g",
+                            "strong": true,
+                            "text": "O"
+                          }
+                        ],
+                        "colspan": 4,
+                        "id": "cyi0xq2maylks3b",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "lsq2ed6ofjmceax",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "4229685544",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4238108610",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HC"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              }
+                            ],
+                            "id": "2771224780",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1044188663",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "OH"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "–"
+                              }
+                            ],
+                            "id": "3374888678",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1374103690",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "C"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "–"
+                              }
+                            ],
+                            "id": "3229524648",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3490428827",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "2020377571",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4033867715",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "598084924",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "d4bz5mm4gymkeyk",
+                            "text": "Initial (before reaction)"
+                          }
+                        ],
+                        "id": "srr8jzry4setsai",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "e7c9lfh5jvcfmb0",
+                            "text": "0.00250 mol"
+                          }
+                        ],
+                        "id": "k3rtrvomgndfwl1",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "nxvwfbr9i9ka43x",
+                            "text": "0.000625 mol"
+                          }
+                        ],
+                        "id": "lo8fyudwjh6gsgy",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "txox6aulnv060pk",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "fx12nea4ovsrbny",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "oa537wo9451cuaz",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "khz2g9kqtn6ogoc",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "yo9o2hi9pil8rcn",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "atlobybnu5yo9nw",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "8qclk4jt9g74y4i",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "xduhqkcf8wb6j5j",
+                            "text": "–0.000625 mol"
+                          }
+                        ],
+                        "id": "b3rc0ec203k8v9f",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "0qspwnjcnjgerci",
+                            "text": "–0.000625 mol"
+                          }
+                        ],
+                        "id": "pt0hka26nb620t5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "0j8w47e2rvur5h6",
+                            "text": "+0.000625 mol"
+                          }
+                        ],
+                        "id": "omt7wbbf3dm2oq5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "b7jsix8xeja8n1u",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "2ehgd0j2w0tk038",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ziygzzx356l9qo0",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "svtrmr9evzb4rfp",
+                            "text": "End (after reaction)"
+                          }
+                        ],
+                        "id": "ydq90eu54nfussf",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "l6xrg8p6xs0npda",
+                            "text": "0.001875 mol"
+                          }
+                        ],
+                        "id": "hya6z1k7s1gunau",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ht7wbxvzgq2yug8",
+                            "text": "0 mol"
+                          }
+                        ],
+                        "id": "y1u9f31mgke3naa",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "r2378rt6zroi956",
+                            "text": "0.000625 mol"
+                          }
+                        ],
+                        "id": "ogmt8fkhtcx5quy",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "71ojkycr4wdu2d2",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "m06uvppobndnnoz",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "kwieyqw8a6vpv7i",
+                    "type": "tr"
+                  }
+                ],
+                "id": "j1ht79nqw7ldw1c",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "After the reaction is complete, 0.001875 mol HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " are left and 0.000625 mol C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " have been formed. The total volume of solution is now:"
+                  }
+                ],
+                "id": "8506nfo3wl5z84e",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "7zz2vtxz3bcz5ku",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "4zj3h91t0867cwp",
+                "legacyBlockRendered": "true",
+                "src": "\\underset{\\mathrm{initial}\\;\\mathrm{volume}\\;\\mathrm{of}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2}{0.0250\\; \\mathrm L}\\;+\\;\\underset{\\mathrm{added}\\;\\mathrm{volume}\\;\\mathrm{of}\\;\\mathrm{NaOH}}{0.00625\\;\\mathrm L}\\:=\\;\\;\\;\\;\\; \\underset{\\mathrm{total}\\;\\mathrm{volume}}{0.03125\\;\\mathrm L}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use moles and volume to calculate [HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "] and [C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "]:"
+                  }
+                ],
+                "id": "esyea01nosys4oc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "f9xxrskb631bu1k",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "z3xtjttlz8enzfk",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2\\rbrack\\;=\\;\\frac{0.001875\\;\\mathrm{mol}}{0.03125\\;\\mathrm L}\\; =\\;0.0600\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "uoekn2nbjkq4rqy",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "bf9xcf61yny9n56",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm C}_2{\\mathrm H}_3{\\mathrm O}_2^-\\rbrack\\;=\\;\\frac{0.000625\\;\\mathrm{mol}}{0.03125\\;\\mathrm L}\\; =\\;0.0200\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "After the reaction, HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " are the main species in the solution. We could set up an ICE table to determine equilibrium concentrations in terms of "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ", use the acid-ionization reaction and the "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " expression to determine [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "], and then calculate pH. But if we notice that this solution has significant concentrations of a weak acid and its conjugate base, we know it is a buffer and can therefore use the Henderson-Hasselbalch equation instead:"
+                  }
+                ],
+                "id": "87l8wejoupr4dy6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "1fxbwgq4nabc66j",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "bzdu6uchif002io",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{pH}\\;=\\;\\mathrm pK_{\\mathrm a}\\;+\\:\\log\\frac{\\lbrack{\\mathrm C}_2{\\mathrm H}_3{\\mathrm O}_2^-\\rbrack} {\\lbrack{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2\\rbrack}\\;=\\;-\\log(1.8\\times10^{-5})\\;+\\:\\log\\left(\\frac{0.0200} {0.0600}\\right)\\;=\\;4.27",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "After some NaOH is added, the pH is somewhat higher than the initial pH, as expected."
+                  }
+                ],
+                "id": "2fr4j7gev97oe48",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "At 12.50 mL NaOH added (before the equivalence point)"
+                          }
+                        ],
+                        "id": "3660076064",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "d4mkd1huww7lpl7",
+                    "type": "li"
+                  }
+                ],
+                "id": "jcbz6jn6tld3oat",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This point in the titration is also before the equivalence point, so we use the same process as in the previous calculation. The added OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " ions react with HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " molecules and convert them into C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " ions:"
+                  }
+                ],
+                "id": "ys87qrtvovnwi8c",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "heu71jh6c4wqisj",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "t8gigyogsmubaiu",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2(aq)\\;+\\:{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\; {\\mathrm H}_3\\mathrm O^+(aq)\\:+\\:{\\mathrm C}_2{\\mathrm H}_3{\\mathrm O}_2^-(aq)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The initial moles of HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " have already been determined: 0.00250 mol HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ". The added moles of OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " at this point are:"
+                  }
+                ],
+                "id": "li8lt5nyo71af8b",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "8ihrcwr7qs7uc41",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "v01h87rdgnkp2l8",
+                "legacyBlockRendered": "true",
+                "src": "0.0125\\;\\mathrm L\\;\\cdot\\;\\frac{0.100\\;\\mathrm{mol}\\;\\mathrm{NaOH}}{\\mathrm L}\\;=\\;0.00125\\;\\mathrm{mol} \\;\\mathrm{NaOH}\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;0.00125\\;\\mathrm{mol}\\;\\mathrm{OH}^-",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This time, let's track the changes in amounts without using a table. Because 0.00125 mol OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " reacts with 0.00125 mol HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and converts it into 0.0125 mol C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": ", the amounts of HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " after reaction are:"
+                  }
+                ],
+                "id": "8nh0k6cr9n95s2t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "r5kjiomhlj05arl",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "7fi5aqzi95ia9x4",
+                "legacyBlockRendered": "true",
+                "src": "\\underset{\\mathrm{initial}\\;\\mathrm{moles}}{0.00250\\;\\mathrm{mol}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2}\\;-\\;\\; \\underset{\\mathrm{moles}\\;\\mathrm{that}\\;\\mathrm{react}}{0.00125\\;\\mathrm{mol}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2}\\; =\\;\\;\\underset{\\mathrm{moles}\\;\\mathrm{left}\\;\\mathrm{after}\\;\\mathrm{reaction}}{0.00125\\;\\mathrm{mol}\\;{\\mathrm{HC}}_2 {\\mathrm H}_3{\\mathrm O}_2}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "e13jxnq2d99hfts",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "1wjhopxj11lkgix",
+                "legacyBlockRendered": "true",
+                "src": "\\underset{\\mathrm{initial}\\;\\mathrm{moles}}{0\\;\\mathrm{mol}\\;{\\mathrm C}_2{\\mathrm H}_3{\\mathrm O}_2^-}\\;+\\;\\; \\underset{\\mathrm{moles}\\;\\mathrm{that}\\;\\mathrm{are}\\;\\mathrm{formed}}{0.00125\\;\\mathrm{mol}\\;{\\mathrm C}_2{\\mathrm H}_3 {\\mathrm O}_2^-}\\;=\\;\\;\\underset{\\mathrm{moles}\\;\\mathrm{after}\\;\\mathrm{reaction}}{0.00125\\;\\mathrm{mol}\\;{\\mathrm C}_2 {\\mathrm H}_3{\\mathrm O}_2^-}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The total volume of solution is:"
+                  }
+                ],
+                "id": "w2u5hb912be1aj2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "xy2rvvyiyfpwb6g",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "4whyek3bzz73wu8",
+                "legacyBlockRendered": "true",
+                "src": "\\underset{\\mathrm{initial}\\;\\mathrm{volume}\\;\\mathrm{of}\\;{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2}{0.0250\\; \\mathrm L}\\;+\\;\\underset{\\mathrm{added}\\;\\mathrm{volume}\\;\\mathrm{of}\\;\\mathrm{NaOH}}{0.0125\\;\\mathrm L}\\:=\\;\\;\\;\\;\\; \\underset{\\mathrm{total}\\;\\mathrm{volume}}{0.0375\\;\\mathrm L}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use moles and volume to calculate [HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "] and [C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "]:"
+                  }
+                ],
+                "id": "qtfrlnzaebd01d2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "rxpzubi81yy3yw7",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "gdrx3jiloi5bt82",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2\\rbrack\\;=\\;\\frac{0.00125\\;\\mathrm{mol}}{0.0375\\;\\mathrm L}\\; =\\;0.0333\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "jmtgn7g4rcw5ul7",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "xxsuudotgk6au6i",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm C}_2{\\mathrm H}_3\\mathrm O_2^-\\rbrack\\;=\\;\\frac{0.00125\\;\\mathrm{mol}}{0.0375\\;\\mathrm L}\\; =\\;0.0333\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "After the reaction, HC"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": " are the main species in the solution, and they have equal concentrations. We therefore have a buffer and can use the Henderson-Hasselbalch equation to determine the pH:"
+                  }
+                ],
+                "id": "f6t7ufrriqrvb06",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "gylvefkba56wos8",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "3lwune999wvpul3",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{pH}\\;=\\;\\mathrm pK_{\\mathrm a}\\;+\\:\\log\\frac{\\lbrack{\\mathrm C}_2{\\mathrm H}_3\\mathrm O_2^-\\rbrack} {\\lbrack{\\mathrm{HC}}_2{\\mathrm H}_3{\\mathrm O}_2\\rbrack}\\;=\\;-\\log(1.8\\times10^{-5})\\;+\\:\\log\\left(\\frac{0.0333} {0.0333}\\right)\\;=\\;4.74",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "After more NaOH is added, the pH is higher than the previous pH, as expected."
+                  }
+                ],
+                "id": "oh82gygwa75zepv",
+                "type": "p"
+              }
+            ],
+            "id": "265070519",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2059726905",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80503,
+            "id": "3530616563",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80214,
+            "id": "4128746424",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "271684712",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "25.0 mL of 0.250 M hypochlorous acid (HClO, "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " = 2.9 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−8"
+                  },
+                  {
+                    "text": ") is titrated using 0.200 M NaOH."
+                  }
+                ],
+                "id": "zppe4qztlh12g9b",
+                "type": "p"
+              }
+            ],
+            "id": "3309348190",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 78647,
+                "id": "2980420270",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78670,
+                "id": "2230546506",
+                "type": "activity-reference"
+              },
+              {
+                "id": "1660918014",
+                "type": "break"
+              },
+              {
+                "activity_id": 79611,
+                "id": "4136680838",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "680898741",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "3567639097",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "63lkl5taigke4fn",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/ 85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "zfp73rbniowpsct",
+            "type": "p"
+          }
+        ],
+        "id": "3053594872",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78518"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

@@ -1,0 +1,309 @@
+{
+  "id": "78945",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "isotope_review_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hgqnmadk6uhv39p",
+                  "type": "p"
+                }
+              ],
+              "id": "288018379"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jxnfwud6nakiy8f",
+                  "type": "p"
+                }
+              ],
+              "id": "3711773335"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mh88ktjlj1bo9bl",
+                  "type": "p"
+                }
+              ],
+              "id": "1345042232"
+            }
+          ],
+          "id": "2432466268",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The atomic number for Cu is 29."
+                      }
+                    ],
+                    "id": "ahqvegxih4uymjr",
+                    "type": "p"
+                  }
+                ],
+                "id": "1666953560"
+              },
+              "id": "1606446255",
+              "legacyMatch": "29",
+              "rule": "input = {29}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use a periodic table to determine the atomic number for Ta."
+                      }
+                    ],
+                    "id": "92l6gw5ymmj1dzh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2152427311"
+              },
+              "id": "1961530000",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "byt57d1smtki25i",
+                  "type": "p"
+                }
+              ],
+              "id": "334230552"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "us38puc3yaa97wa",
+                  "type": "p"
+                }
+              ],
+              "id": "3389517356"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "iggp8q77x35yznl",
+                  "type": "p"
+                }
+              ],
+              "id": "4074516222"
+            }
+          ],
+          "id": "3662648493",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The mass number (70) minus the atomic number (29) corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "htbo7zlbt0quo98",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass number minus the atomic number corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "1331006643",
+                    "type": "p"
+                  }
+                ],
+                "id": "4197414414"
+              },
+              "id": "668453723",
+              "legacyMatch": "41",
+              "rule": "input = {41}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The mass number minus the atomic number corresponds to the number of neutrons."
+                      }
+                    ],
+                    "id": "rdsmgz2yhg9fpz7",
+                    "type": "p"
+                  }
+                ],
+                "id": "3481873354"
+              },
+              "id": "3492684314",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Cu-70Protons Neutrons ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2432466268",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "3662648493",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "4044870199",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "Cu-70"
+                }
+              ],
+              "id": "o8wi5sl5jkdtsut",
+              "type": "p"
+            }
+          ],
+          "id": "d53lgrshrgpxuwa",
+          "type": "callout"
+        },
+        {
+          "children": [
+            {
+              "text": "Protons "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "dh5jgd4ha4v43an",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Neutrons "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "1fiq0161rx9laoy",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2432466268": [
+      "78520"
+    ],
+    "3662648493": [
+      "78520"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

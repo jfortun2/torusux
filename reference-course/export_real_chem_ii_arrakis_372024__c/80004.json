@@ -1,0 +1,136 @@
+{
+  "id": "80004",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "pre_instructor-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "na3oac4h9umjn6g",
+                  "type": "p"
+                }
+              ],
+              "id": "1528524457"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v5tt8566u5f628k",
+                  "type": "p"
+                }
+              ],
+              "id": "2302886003"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fs3jv0uhszz2pj8",
+                  "type": "p"
+                }
+              ],
+              "id": "2365368508"
+            }
+          ],
+          "id": "384110632",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "am4vo56oe1y359i",
+                    "type": "p"
+                  }
+                ],
+                "id": "3899381296"
+              },
+              "id": "3866979722",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 10
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "384110632",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " How many students are in your course? "
+            }
+          ],
+          "id": "g1hkqybvehfl5lg",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "i457bzensvnqjdq",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "384110632": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

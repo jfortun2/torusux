@@ -1,0 +1,182 @@
+{
+  "id": "80054",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_lbd-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l7nhrabmtmi4373",
+                  "type": "p"
+                }
+              ],
+              "id": "2376720062"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "npxf0ztvx2khrlb",
+                  "type": "p"
+                }
+              ],
+              "id": "9101990"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xnwubps5e1bh6oh",
+                  "type": "p"
+                }
+              ],
+              "id": "236618502"
+            }
+          ],
+          "id": "3731692938",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Because the calculated value for "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is less than 5% of the initial concentration of the weak acid, the assumption is valid."
+                      }
+                    ],
+                    "id": "ift2e5pcaeweyt2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3565619484"
+              },
+              "id": "2529197593",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Because the calculated value for "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is less than 5% of the initial concentration of the weak acid, the assumption is valid."
+                      }
+                    ],
+                    "id": "pin75lktx2t51u9",
+                    "type": "p"
+                  }
+                ],
+                "id": "210740639"
+              },
+              "id": "395588779",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "3457400192",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes"
+              }
+            ],
+            "id": "vfjuep1hlqcdcsr",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "m07qxdua7m941c3",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Is the assumption valid?"
+            }
+          ],
+          "id": "k3x3lltws81efw3",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3731692938": [
+      "78390"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

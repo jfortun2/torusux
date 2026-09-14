@@ -1,0 +1,196 @@
+{
+  "id": "79405",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "inline_post_survey3_2-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "eqnvsfw283pd0t5",
+                  "type": "p"
+                }
+              ],
+              "id": "1899351527"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qdwl48obisgzpiy",
+                  "type": "p"
+                }
+              ],
+              "id": "2385512067"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2j3qvv4bl548lja",
+                  "type": "p"
+                }
+              ],
+              "id": "924041615"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you for your feedback. "
+                      }
+                    ],
+                    "id": "0lr0717bkvdnkfe",
+                    "type": "p"
+                  }
+                ],
+                "id": "3173855242"
+              },
+              "id": "939681005",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "xdvycpfejfxenk5",
+            "text": "1 - 2 hours "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "t4vhm09tge4abah",
+            "text": "2 - 3 hours"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "ow81klmiujpxy4v",
+            "text": "3 - 4 hours"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "fhdvlijv6r5hml2",
+            "text": "4 - 5 hours"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "yvr18vjkg73rkg4",
+            "text": "5 - 6 hours"
+          }
+        ],
+        "id": "one_E"
+      },
+      {
+        "content": [
+          {
+            "id": "4kvyk7awoop2zxg",
+            "text": "over 6 hours"
+          }
+        ],
+        "id": "one_F"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D",
+          "one_E",
+          "one_F"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "On average, about how much time per week did you spend using the OLI materials, including doing readings, watching media, completing learn by doing activities, taking quizzes, and any other course-related work?"
+            }
+          ],
+          "id": "18az3dx6vmijr8h",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "qfvhyu84nz2hdll",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

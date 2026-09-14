@@ -1,0 +1,199 @@
+{
+  "id": "78684",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "entropy_lbd2-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "If entropy increases, Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": " is positive. If entropy decreases, Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": " is negative."
+                    }
+                  ],
+                  "id": "1mak37xpmi9a3jm",
+                  "type": "p"
+                }
+              ],
+              "id": "342833161"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fbr7pxr0eqznrjp",
+                  "type": "p"
+                }
+              ],
+              "id": "542674951"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "g0z7xino9g4yaql",
+                  "type": "p"
+                }
+              ],
+              "id": "282404937"
+            }
+          ],
+          "id": "938730305",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A net decrease in the amount of gaseous species means there is a decrease in entropy."
+                      }
+                    ],
+                    "id": "y050011famizoom",
+                    "type": "p"
+                  }
+                ],
+                "id": "662210227"
+              },
+              "id": "2958206616",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A net decrease in the amount of gaseous species means there is a decrease in entropy."
+                      }
+                    ],
+                    "id": "ityxf35kt71ur7e",
+                    "type": "p"
+                  }
+                ],
+                "id": "3469676775"
+              },
+              "id": "844476962",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " ",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Positive"
+              }
+            ],
+            "id": "4p5iu1prfuqwgd0",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Negative"
+              }
+            ],
+            "id": "095vyihoroji8kl",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "11707739",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "nwej9xw542lsa2h",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "uyfw4zxhmd69xcw",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm C}_6{\\mathrm H}_6(l)\\;+\\;{\\textstyle\\frac{15}2}{\\mathrm O}_2(g)\\;\\longrightarrow\\;6\\;{\\mathrm{CO}}_2(g)\\;+\\;3\\;{\\mathrm H}_2\\mathrm O(l)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "3862943220",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "938730305": [
+      "78325"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

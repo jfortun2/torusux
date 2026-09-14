@@ -1,0 +1,175 @@
+{
+  "id": "79842",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_2lbd-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. 14.00 − 2.39 = 11.61"
+                  }
+                ],
+                "id": "85euhmi6vsks6ex",
+                "type": "p"
+              }
+            ],
+            "id": "1331172535"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "pH + pOH = 14.00"
+                    }
+                  ],
+                  "id": "buu6s9qjbot8n5f",
+                  "type": "p"
+                }
+              ],
+              "id": "4265489381"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n4ix3tf3wl4dttz",
+                  "type": "p"
+                }
+              ],
+              "id": "1973559970"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "35hjl1fzsv3oa9m",
+                  "type": "p"
+                }
+              ],
+              "id": "1630102485"
+            }
+          ],
+          "id": "735316875",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 14.00 − 2.39 = 11.61"
+                      }
+                    ],
+                    "id": "phkpmacd86t2gcg",
+                    "type": "p"
+                  }
+                ],
+                "id": "2593562969"
+              },
+              "id": "475089800",
+              "legacyMatch": "[11.6,11.65]",
+              "rule": "input = {[11.6,11.65]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "bj1xdf7xd3sxj45",
+                    "type": "p"
+                  }
+                ],
+                "id": "3657796910"
+              },
+              "id": "3609387170",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate the pH of the ammonia solution.pH = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "735316875",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of the ammonia solution."
+            }
+          ],
+          "id": "4h8qx6jcvlguiww",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "awgfw04xvgcn63t",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "735316875": [
+      "78435"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

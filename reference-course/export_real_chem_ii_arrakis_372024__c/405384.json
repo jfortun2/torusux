@@ -1,0 +1,139 @@
+{
+  "id": "405384",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Single Response",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "manual",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2198786213",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2079842139",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2857049610",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3067694463",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3313250642",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3367415814",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "1527388847",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4193756742",
+                "textDirection": "ltr"
+              },
+              "id": "2487030498",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2938687719",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "4210256009",
+                "textDirection": "ltr"
+              },
+              "id": "2673104758",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What is your favorite color?",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "text",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is your favorite color?"
+            }
+          ],
+          "id": "295725234",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "55805626",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

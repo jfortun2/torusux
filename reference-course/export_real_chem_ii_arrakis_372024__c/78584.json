@@ -1,0 +1,168 @@
+{
+  "id": "78584",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "avg_rate_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bnimyb9hr64yqep",
+                  "type": "p"
+                }
+              ],
+              "id": "4037748376"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8un59jixat343h9",
+                  "type": "p"
+                }
+              ],
+              "id": "2865187474"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cibf1ix7a6tkpcu",
+                  "type": "p"
+                }
+              ],
+              "id": "1962865244"
+            }
+          ],
+          "id": "333655313",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. As time elapses, the concentration of the reactant decreases and so does the rate of the reaction."
+                      }
+                    ],
+                    "id": "e642yph91baeslb",
+                    "type": "p"
+                  }
+                ],
+                "id": "2952100511"
+              },
+              "id": "888005958",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. As time elapses, the concentration of the reactant decreases and so does the rate of the reaction."
+                      }
+                    ],
+                    "id": "oj1ipcylg0gdheh",
+                    "type": "p"
+                  }
+                ],
+                "id": "3407297093"
+              },
+              "id": "1550454515",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "98417079",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Faster"
+              }
+            ],
+            "id": "4wb9pybwr9psbgt",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Slower"
+              }
+            ],
+            "id": "z1df6g6b3ekchxs",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Without doing any calculations, will the average rate for this reaction from 1.5 to 2 min be faster or slower than the average rate between 0.5 and 1 min?"
+            }
+          ],
+          "id": "xzibmkxgon68f8q",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "333655313": [
+      "78302"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

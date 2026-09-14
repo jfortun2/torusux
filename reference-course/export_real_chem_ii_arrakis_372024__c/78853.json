@@ -1,0 +1,223 @@
+{
+  "id": "78853",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78117"
+  ],
+  "title": "name_coord_compound_pool2_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3629863159",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3034689420",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "755598322",
+          "incorrectScore": null,
+          "outOf": 5,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The neutral compound contains 2 Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and 4 Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ", so Fe has a +2 charge. Since the complex is an anion, Fe"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": " is named with the suffix -ate. The cation (Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "3033742392",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The name of the compound is sodium tetrabromoferrate(II)."
+                      }
+                    ],
+                    "id": "7lhna69vohph60u",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3770782259",
+                "textDirection": "ltr"
+              },
+              "id": "921523764",
+              "rule": "input iequals {sodium tetrabromoferrate(II)}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Determine the charge of the central metal (Fe) from the charges of the ligand (Br) and the counterion (Na). The complex is an anion, so use -ate to name Fe. The cation (Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "2856344194",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "287369668",
+                "textDirection": "ltr"
+              },
+              "id": "2398968654",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination compound Na2[FeBr4]. Note: spelling matters! ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "510787613",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "2521876796",
+        "inputType": "text",
+        "partId": "755598322",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination compound Na"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "[FeBr"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "]. Note: spelling matters! "
+            }
+          ],
+          "id": "2438536634",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2521876796",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "4114168717",
+          "type": "p"
+        }
+      ],
+      "id": "4138918104"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "755598322": [
+      "78445"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,286 @@
+{
+  "id": "80158",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_lbd-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Look at the number of particles of each substance at F in the image."
+                    }
+                  ],
+                  "id": "llgedmcftprjsz0",
+                  "type": "p"
+                }
+              ],
+              "id": "3746545089"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Since the substances are in the same container, their concentrations are proportional to the numbers of their particles."
+                    }
+                  ],
+                  "id": "avvav7bk69xwey7",
+                  "type": "p"
+                }
+              ],
+              "id": "1716487821"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "702f9etawoe5ikh",
+                  "type": "p"
+                }
+              ],
+              "id": "3548554964"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The concentration of HI is not lower than the concentrations of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and I"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "y96yhwjdkkewkx3",
+                    "type": "p"
+                  }
+                ],
+                "id": "2470099086"
+              },
+              "id": "2492675609",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The concentration of HI is higher than the concentrations of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and I"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "bivuupdniz83oe1",
+                    "type": "p"
+                  }
+                ],
+                "id": "698851609"
+              },
+              "id": "933055072",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The concentration of HI is not equal to the concentrations of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and I"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "jysq7z1ipylhhs4",
+                    "type": "p"
+                  }
+                ],
+                "id": "4292986926"
+              },
+              "id": "3246837182",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "var0sliys9i8x6s",
+                    "type": "p"
+                  }
+                ],
+                "id": "1362125467"
+              },
+              "id": "3477565172",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "At point F, the concentrations of products are  the concentrations of reactants.",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2492675609"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "933055072"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "3246837182"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "oi9lrlaz9yoyx1n",
+            "text": "lower than"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ui6skdej1p8jlau",
+            "text": "higher than"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "sbnsjnl05a9p831",
+            "text": "equal to"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At point F, the concentrations of products are "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the concentrations of reactants."
+            }
+          ],
+          "id": "b904beszrrlcd8m",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

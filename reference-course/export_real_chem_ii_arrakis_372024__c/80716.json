@@ -1,0 +1,1060 @@
+{
+  "id": "80716",
+  "type": "Page",
+  "tags": [],
+  "title": "Average Reaction Rate",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "A rate is a measure of how some property varies with time. Speed is a familiar rate that expresses the distance an object travels in a given amount of time. Wage is a rate that represents the amount of money a person earns by working for a given amount of time. Likewise, the rate of a chemical reaction—its "
+              },
+              {
+                "children": [
+                  {
+                    "text": "reaction rate"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Measure of the speed at which a chemical reaction takes place."
+                      }
+                    ],
+                    "id": "2459481011",
+                    "type": "p"
+                  }
+                ],
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": "—is a measure of how much reactant is consumed or how much product is produced by the reaction in a given amount of time."
+              }
+            ],
+            "id": "s95y7i509akskuj",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Reaction rates are determined by measuring the time dependence of some property that can be related to "
+              },
+              {
+                "children": [
+                  {
+                    "text": "reactant"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Substance undergoing a chemical or physical change; shown on the left side of the arrow in a chemical equation."
+                      }
+                    ],
+                    "id": "1198111054",
+                    "type": "p"
+                  }
+                ],
+                "id": "3049743138",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " or "
+              },
+              {
+                "children": [
+                  {
+                    "text": "product"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Substance formed by a chemical or physical change; shown on the right side of the arrow in a chemical equation. "
+                      }
+                    ],
+                    "id": "2014122047",
+                    "type": "p"
+                  }
+                ],
+                "id": "1580957654",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " concentrations. For example, the rates of reactions that consume or produce gaseous substances are determined by measuring changes in volume or pressure. If a reaction involves aqueous electrolytes, rates can be measured by changes in a solution’s conductivity. For reactions involving one or more colored substances, such as in the following example, rates can be determined by measuring light absorption at intervals over a given period of time."
+              }
+            ],
+            "id": "obundtiao0erxay",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Let’s consider how the reactant and product concentrations change over time for the general reaction A "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\rightarrow",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": " B. As the reaction proceeds, we see that the color of the solution fades as the concentration of the violet-colored reactant A decreases. Although we cannot see it, the concentration of the colorless product B increases."
+              }
+            ],
+            "id": "pdssj07y6g055ka",
+            "type": "p"
+          },
+          {
+            "alt": "The reaction A arrow pointing right B is shown on the left. violet is under A and colorless is under B. On the right a graph is shown with \n            the label, “Time ( min ),” appearing on the x-axis and “Concentration ( capital M )” on the y-axis. The x-axis markings begin at 0 and end at 2. \n            The markings are labeled at intervals of 0.5. The y-axis begins at 0 and includes markings every 0.02, up to 0.10. A decreasing, concave up, \n            non-linear curve is shown in violet, which begins at 0.10 on the y-axis and reaches a value near 0 at the far right of the graph. An increasing, \n            concave down, non-linear curve is shown in gray, which begins at 0.0 on the y-axis and reaches a value near 0.10 at the far right of the graph. \n            Five beakers containing small violet and gray circles are shown above the graph. The beaker above 0 min contains 24 violet circles. The beaker \n            above 0.5 min contains 12 violet and 12 gray circles. The beaker above 1.0 min contains 6 violet and 18 gray circles. The beaker above 1.5 min \n            contains 3 violet and 21 gray circles. The beaker above 2.0 min contains 1 violet and 23 gray circles.",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "As the reaction proceeds, the concentration of reactant A (violet) decreases and the concentration of product B (colorless) increases, causing color of the solution to fade. "
+                  }
+                ],
+                "id": "3228227791",
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "xlciwrmhca2rjml",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "2lvmwtp9yqqr21g",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/bb/bb3c7d4dd01bd9764ee676f509b0bb03/A_B_graph.png",
+            "type": "img",
+            "width": "700"
+          },
+          {
+            "children": [
+              {
+                "text": "The reaction rate at any point during the reaction can be expressed in terms of the change of either A or B with respect to time. The average rate of change of the product B, given over a particular time interval, is:"
+              }
+            ],
+            "id": "fp4smbg0d5pfs8t",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "gp3mw26z4em0mii",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "glhz4ldlt4dldm8",
+            "legacyBlockRendered": "true",
+            "src": "\\frac{\\mathrm{change}\\;\\mathrm{in}\\;\\mathrm{concentration}\\;\\mathrm{of}\\;\\mathrm B}{\\mathrm{change}\\;\\mathrm{in}\\;\\mathrm{time}}\\; =\\;\\frac{{\\left[\\mathrm B\\right]}_{\\mathrm{final}}\\;-\\;{\\left[\\mathrm B\\right]}_{\\mathrm{initial}}}{t_{\\mathrm{final}}\\;-\\;t_{\\mathrm{initial}}} =\\;\\frac{{\\left[\\mathrm B\\right]}_{t_2}\\;-\\;{\\left[\\mathrm B\\right]}_{t_1}}{t_2\\;-\\;t_1}\\;=\\;\\frac{\\mathrm\\Delta\\left[\\mathrm B\\right]} {\\mathrm\\Delta t}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "The brackets indicate concentration, which is usually in units of molarity. [B]"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "t"
+              },
+              {
+                "doublesub": true,
+                "text": "1"
+              },
+              {
+                "text": " represents the concentration of B at some time "
+              },
+              {
+                "em": true,
+                "text": "t"
+              },
+              {
+                "sub": true,
+                "text": "1"
+              },
+              {
+                "text": ", and [B]"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "t"
+              },
+              {
+                "doublesub": true,
+                "text": "2"
+              },
+              {
+                "text": " is the concentration at a later time "
+              },
+              {
+                "em": true,
+                "text": "t"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": ". The symbol delta (Δ) indicates “change in.” Note that B is being produced, and its rate of appearance is positive:"
+              }
+            ],
+            "id": "b28pts5233s2mkr",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "0xlv6bgx23ftwj2",
+                "text": ""
+              }
+            ],
+            "id": "40769665",
+            "src": "\\mathrm{Rate}\\;\\mathrm{of}\\;\\mathrm{appearance}\\;\\mathrm{of}\\;\\mathrm B\\;=\\;\\frac{\\mathrm\\Delta\\lbrack\\mathrm B\\rbrack}{\\mathrm\\Delta t}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Similarly, the average rate of change of the reactant A is:"
+              }
+            ],
+            "id": "p5xasl6mzfy90n7",
+            "src": "\\frac{\\mathrm{change}\\;\\mathrm{in}\\;\\mathrm{concentration}\\;\\mathrm{of}\\;\\mathrm A}{\\mathrm{change}\\;\\mathrm{in}\\;\\mathrm{time}}\\;\\; =\\;\\frac{{\\left[\\mathrm A\\right]}_{\\mathrm{final}}\\;-\\;{\\left[\\mathrm A\\right]}_{\\mathrm{initial}}}{t_{\\mathrm{final}}\\;-\\;t_{\\mathrm{initial}}} =\\;\\frac{{\\lbrack\\mathrm A\\rbrack}_{t_2}\\;-\\;{\\lbrack\\mathrm A\\rbrack}_{t_1}}{t_2\\;-\\;t_1}\\;=\\;\\frac{\\mathrm\\Delta\\lbrack\\mathrm A\\rbrack} {\\mathrm\\Delta t}",
+            "subtype": "latex",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "bp57a41lf1b4e6z",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "l8khc9uo6avd07r",
+            "legacyBlockRendered": "true",
+            "src": "\\frac{\\mathrm{change}\\;\\mathrm{in}\\;\\mathrm{concentration}\\;\\mathrm{of}\\;\\mathrm A}{\\mathrm{change}\\;\\mathrm{in}\\;\\mathrm{time}}\\;\\; =\\;\\frac{{\\left[\\mathrm A\\right]}_{\\mathrm{final}}\\;-\\;{\\left[\\mathrm A\\right]}_{\\mathrm{initial}}}{t_{\\mathrm{final}}\\;-\\;t_{\\mathrm{initial}}} =\\;\\frac{{\\lbrack\\mathrm A\\rbrack}_{t_2}\\;-\\;{\\lbrack\\mathrm A\\rbrack}_{t_1}}{t_2\\;-\\;t_1}\\;=\\;\\frac{\\mathrm\\Delta\\lbrack\\mathrm A\\rbrack} {\\mathrm\\Delta t}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Because the concentration of the reactant A decreases as the reaction proceeds, Δ[A] is a negative quantity, and the rate of change of A is a negative number. Rates of reaction are, by convention, expressed as positive quantities: "
+              }
+            ],
+            "id": "gxyg9pai0lcp921",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "g6d0ngsdg835mi9",
+                "text": ""
+              }
+            ],
+            "id": "3938781395",
+            "src": "\\mathrm{Rate}\\;\\mathrm{of}\\;\\mathrm{disappearance}\\;\\mathrm{of}\\;\\mathrm A\\;=\\;-\\frac{\\mathrm\\Delta\\lbrack\\mathrm A\\rbrack}{\\mathrm\\Delta t}\\;=\\;\\left|\\frac{\\mathrm\\Delta\\lbrack\\mathrm A\\rbrack}{\\mathrm\\Delta t}\\right|",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "3409858583",
+            "type": "p"
+          }
+        ],
+        "id": "1594922741",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Data collected for the reaction A "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "3377863512",
+                    "src": "\\rightarrow",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " B at 25 °C are shown in the table below."
+                  }
+                ],
+                "id": "bh062lwc3ro1sii",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "Time (min)"
+                              }
+                            ],
+                            "id": "3173105428",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2816424905",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0000"
+                              }
+                            ],
+                            "id": "948365989",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "610387875",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.500"
+                              }
+                            ],
+                            "id": "3715110427",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3659318687",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "1.000"
+                              }
+                            ],
+                            "id": "1913299996",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2715477866",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "1.500"
+                              }
+                            ],
+                            "id": "3237974028",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3976012971",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "2.000"
+                              }
+                            ],
+                            "id": "604577485",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2909771417",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "203638035",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "[A] (M)"
+                              }
+                            ],
+                            "id": "2326358558",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1377094832",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.1000"
+                              }
+                            ],
+                            "id": "3367200463",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4085519536",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0500"
+                              }
+                            ],
+                            "id": "47972376",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2543759017",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0250"
+                              }
+                            ],
+                            "id": "699687474",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "309745822",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0125"
+                              }
+                            ],
+                            "id": "1541204417",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "656958004",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0063"
+                              }
+                            ],
+                            "id": "1002287937",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3700491071",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "2713027957",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "[B] (M)"
+                              }
+                            ],
+                            "id": "1034727605",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4203374894",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0000"
+                              }
+                            ],
+                            "id": "1982304226",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3458713990",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0500"
+                              }
+                            ],
+                            "id": "1048864981",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2105983930",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0750"
+                              }
+                            ],
+                            "id": "1719316477",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "797058962",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0875"
+                              }
+                            ],
+                            "id": "1178738691",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2686760789",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "0.0937"
+                              }
+                            ],
+                            "id": "3827669580",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1981276852",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "3319260063",
+                    "type": "tr"
+                  }
+                ],
+                "id": "2439739474",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Use this data to calculate the average reaction rate for both A and B during the time interval from 1.000 to 1.500 min."
+                  }
+                ],
+                "id": "739796938",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The average rate of appearance of B from 1.000 min to 1.500 min is:"
+                  }
+                ],
+                "id": "vjbl04z09qni1jk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ii45s50l9seuzag",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "xmbz1ouydf6i5yv",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\Delta\\left[\\mathrm B\\right]}{\\Delta t}\\;=\\;\\frac{(0.0875\\;\\mathrm M\\;-\\;0.0750\\;\\mathrm M)}{(1.500\\;\\min\\;-\\;1.000\\;\\min)}\\; =\\;0.0250\\;\\mathrm M/\\min",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "During the same time interval, the average rate of disappearance of A is:"
+                  }
+                ],
+                "id": "8ptsu1d2lt21f93",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "m1oska6wt6a1v56",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "vz7gvgl6tn3fjdc",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\Delta\\left[\\mathrm A\\right]}{\\Delta t}=-\\frac{(0.0125\\;\\mathrm M-0.0250\\;\\mathrm M)}{(1.500\\;\\min-1.000\\;\\min)}=-\\left(-\\;0.0250\\;\\mathrm M/\\min\\right)=\\;0.0250\\;\\mathrm M/\\min",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The rate of change of A is negative. We place a negative sign in front of this expression because reaction rates are expressed as positive quantities. Note that because this reaction has 1:1 "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "stoichiometry"
+                      }
+                    ],
+                    "content": [
+                      {
+                        "children": [
+                          {
+                            "text": "Relationships between the amounts of reactants and products of a chemical reaction. "
+                          }
+                        ],
+                        "id": "1666178130",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "258390598",
+                    "trigger": "hover",
+                    "type": "popup"
+                  },
+                  {
+                    "text": ", A and B have the same magnitude for their rates of change."
+                  }
+                ],
+                "id": "gyoo135ys0mejpz",
+                "type": "p"
+              }
+            ],
+            "id": "3138279247",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2293246853",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80119,
+            "id": "3073591665",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3016161185",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Sucrose (C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "12"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "22"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "11"
+                  },
+                  {
+                    "text": ") breaks down into glucose (C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "6"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "12"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "6"
+                  },
+                  {
+                    "text": ") and fructose (C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "6"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "12"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "6"
+                  },
+                  {
+                    "text": ") in acidic solution. (Glucose and fructose have the same chemical formula but different structures.)"
+                  }
+                ],
+                "id": "lcstnuzlqibup6p",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "31rzgum2c6eburr",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "dw1hcctcettyo4l",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm C}_{12}{\\mathrm H}_{22}{\\mathrm O}_{11}\\left(aq\\right)\\;+\\;{\\mathrm H}_2\\mathrm O\\left(l\\right)\\;\\;\\xrightarrow {\\left[\\mathrm H^+\\right]}\\;\\;{\\mathrm C}_6{\\mathrm H}_{12}{\\mathrm O}_6\\left(aq\\right)\\;+\\;{\\mathrm C}_6{\\mathrm H}_{12}{\\mathrm O}_6 \\left(aq\\right)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The animation below illustrates the changes occurring on both the molecular and macroscopic levels while this reaction takes place at specific temperature and pH conditions. On the left is a visualization of sucrose molecules forming glucose and fructose molecules. On the right is a graph of the concentration changes for all three species. The actual experiment takes place over 12 hours; the animation was sped up to show this process in about 12 seconds. Watch the video and then answer the questions that follow."
+                  }
+                ],
+                "id": "zqzj8pemqaqjs7d",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ok4l8fv2pr59kkg",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "7pu9dnnvx3qbpx5",
+                "src": "6z1Di7HsI0U",
+                "type": "youtube"
+              },
+              {
+                "___selfClosing___": true,
+                "children": [
+                  {
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "nepcwx6mpi1d5hz",
+                "type": "p"
+              }
+            ],
+            "id": "3075028268",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 78724,
+                "id": "964228730",
+                "type": "activity-reference"
+              },
+              {
+                "id": "2768550659",
+                "type": "break"
+              },
+              {
+                "activity_id": 79534,
+                "id": "1542054818",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "185947346",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "2909254380",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79328,
+            "id": "2148884897",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78584,
+            "id": "3636340390",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1247370789",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "o3brava7p140xz0",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "nm7raybpatf6f2w",
+            "type": "p"
+          }
+        ],
+        "id": "3625589671",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78524"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

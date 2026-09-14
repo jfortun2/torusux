@@ -1,0 +1,542 @@
+{
+  "id": "79233",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78133"
+  ],
+  "title": "po11_UA_max_min_entropy_pool-v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qtb67s2chpvxlpw",
+                  "type": "p"
+                }
+              ],
+              "id": "2213671185"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hie5xiaus56pgrs",
+                  "type": "p"
+                }
+              ],
+              "id": "3299685915"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ifc1sibe1orbcjv",
+                  "type": "p"
+                }
+              ],
+              "id": "3496901421"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The state with the most evenly distributed molecules has the highest entropy, and the one with the least even distribution has the lowest entropy."
+                      }
+                    ],
+                    "id": "6ce9ebh41xsr1wh",
+                    "type": "p"
+                  }
+                ],
+                "id": "181081978"
+              },
+              "id": "1240016868",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This state has the least evenly distributed molecules, so it has the lowest entropy."
+                      }
+                    ],
+                    "id": "rwsn13k0v17qth4",
+                    "type": "p"
+                  }
+                ],
+                "id": "360628430"
+              },
+              "id": "2029672567",
+              "legacyMatch": "B",
+              "rule": "input like {one_B}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The state with the most evenly distributed molecules has the highest entropy, and the one with the least even distribution has the lowest entropy."
+                      }
+                    ],
+                    "id": "bwycvo5d1v2zkdd",
+                    "type": "p"
+                  }
+                ],
+                "id": "2795504620"
+              },
+              "id": "1164482129",
+              "legacyMatch": "C",
+              "rule": "input like {one_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The state with the most evenly distributed molecules has the highest entropy, and the one with the least even distribution has the lowest entropy."
+                      }
+                    ],
+                    "id": "vmwvjv83p1o3o37",
+                    "type": "p"
+                  }
+                ],
+                "id": "3093191401"
+              },
+              "id": "1806171408",
+              "legacyMatch": "D",
+              "rule": "input like {one_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "izewopfz619bgsc",
+                    "type": "p"
+                  }
+                ],
+                "id": "1093679086"
+              },
+              "id": "1711781093",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0y3k8nuwvjz6vyn",
+                  "type": "p"
+                }
+              ],
+              "id": "3183419584"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l670e3c2a0xrjml",
+                  "type": "p"
+                }
+              ],
+              "id": "1417880324"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v7039gsujfdgg7x",
+                  "type": "p"
+                }
+              ],
+              "id": "4117767735"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "g1zguxkq3wptadh",
+                    "type": "p"
+                  }
+                ],
+                "id": "3897307586"
+              },
+              "id": "1218078431",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "d1cr6biy1wjkor1",
+                    "type": "p"
+                  }
+                ],
+                "id": "3088546207"
+              },
+              "id": "2680045694",
+              "legacyMatch": "B",
+              "rule": "input like {two_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "3qf7r478lijmq27",
+                    "type": "p"
+                  }
+                ],
+                "id": "754198626"
+              },
+              "id": "2775725829",
+              "legacyMatch": "C",
+              "rule": "input like {two_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This state has the most evenly distributed molecules, so it has the highest entropy."
+                      }
+                    ],
+                    "id": "ru8hj66jw7v3r60",
+                    "type": "p"
+                  }
+                ],
+                "id": "1795535843"
+              },
+              "id": "3057614974",
+              "legacyMatch": "D",
+              "rule": "input like {two_D}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "0ojznhwarisk72t",
+                    "type": "p"
+                  }
+                ],
+                "id": "1642102640"
+              },
+              "id": "751723802",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "one_A"
+          ],
+          "1240016868"
+        ],
+        [
+          [
+            "one_B"
+          ],
+          "2029672567"
+        ],
+        [
+          [
+            "one_C"
+          ],
+          "1164482129"
+        ],
+        [
+          [
+            "one_D"
+          ],
+          "1806171408"
+        ],
+        [
+          [
+            "two_A"
+          ],
+          "1218078431"
+        ],
+        [
+          [
+            "two_B"
+          ],
+          "2680045694"
+        ],
+        [
+          [
+            "two_C"
+          ],
+          "2775725829"
+        ],
+        [
+          [
+            "two_D"
+          ],
+          "3057614974"
+        ]
+      ],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "cgipcnk8eel3j2d",
+            "text": "A"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "31gksxlmzwn1y8c",
+            "text": "B"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "7gglqsepzi0h5iy",
+            "text": "C"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "c6n5atloewt4z4d",
+            "text": "D"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "12wppki5wtrd9ud",
+            "text": "A"
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "1og94mppycgpvbl",
+            "text": "B"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "cpieh54q8z403hp",
+            "text": "C"
+          }
+        ],
+        "id": "two_C"
+      },
+      {
+        "content": [
+          {
+            "id": "gb6bchmnw2sxd0a",
+            "text": "D"
+          }
+        ],
+        "id": "two_D"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C",
+          "two_D"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "These images represent distributions of gas molecules between two flasks connected by a valve."
+            }
+          ],
+          "id": "pcvg62695bbmn9h",
+          "type": "p"
+        },
+        {
+          "alt": "   ",
+          "children": [
+            {
+              "id": "biheeq8ny2d7dyc",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "j5pdyqkure3ht9j",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/b7/b7f8ac0debcc6bddf977294af8587552/gas_distrib_v_3.png",
+          "type": "img",
+          "width": "600"
+        },
+        {
+          "children": [
+            {
+              "text": "Which corresponds to the lowest entropy? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "l2uiqt6b9rtyjyo",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Which corresponds to the highest entropy? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            }
+          ],
+          "id": "kcoxwonc9qvr013",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

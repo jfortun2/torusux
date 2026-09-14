@@ -1,0 +1,270 @@
+{
+  "id": "78628",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "diprotic_digt-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "D"
+        ],
+        "597469074"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gu9xayuqmquw3qs",
+                  "type": "p"
+                }
+              ],
+              "id": "357478540"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xw8qkkli8czbuna",
+                  "type": "p"
+                }
+              ],
+              "id": "1442003100"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bflcp49a2eexcmb",
+                  "type": "p"
+                }
+              ],
+              "id": "450721972"
+            }
+          ],
+          "id": "3192021941",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "5r1wcpd0mdy1e05",
+                    "type": "p"
+                  }
+                ],
+                "id": "2541406228"
+              },
+              "id": "597469074",
+              "legacyMatch": "A,D",
+              "rule": "(!(input like {E})) && ((!(input like {C})) && ((!(input like {B})) && (input like {D} && (input like {A}))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "d495v9yhvu30del",
+                    "type": "p"
+                  }
+                ],
+                "id": "249304456"
+              },
+              "id": "1570323922",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "s9qpepg8zmk0amt",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "k1xmqhlo1d91nb3",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "a5ffki5j7wnx91m",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[HCO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "0szokbxyxex19pa",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "2−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "cnbz8oya50m5qfw",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following concentrations would be practically equal at equilibrium?"
+            }
+          ],
+          "id": "rbruantp8pblbx4",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "3192021941": [
+      "78511"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

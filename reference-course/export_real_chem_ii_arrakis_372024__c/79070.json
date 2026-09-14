@@ -1,0 +1,732 @@
+{
+  "id": "79070",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78118"
+  ],
+  "title": "AE_Graph_Determination_Pool_UA_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " The rate constant is given by: "
+                  }
+                ],
+                "id": "4xlmqn78rxcsrm4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "k=A\\mathrm e^{\\mathit-\\frac{{\\mathit E}_{\\mathit a}}{\\mathit R\\mathit\\cdot\\mathit T}}\\;\\;\\xrightarrow{\\mathrm{which}\\;\\mathrm{in}\\;\\mathrm{linear}\\;\\mathrm{form}\\;\\mathrm{is}}\\;\\;\\;ln\\;k\\;=-\\frac{E_a}R\\cdot\\frac1T\\;+\\;ln\\;A\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "76x656e63dljvxl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "so a graph of "
+                  },
+                  {
+                    "em": true,
+                    "text": "ln k"
+                  },
+                  {
+                    "text": " (on the "
+                  },
+                  {
+                    "em": true,
+                    "text": "y"
+                  },
+                  {
+                    "text": "-axis) vs. 1/T (on the "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": "-axis, with "
+                  },
+                  {
+                    "em": true,
+                    "text": "T"
+                  },
+                  {
+                    "text": " in Kelvin) will give a straight line with slope = -E"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": "/R."
+                  }
+                ],
+                "id": "bfupuqg3hq4bl4f",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using the given data, the graph of "
+                  },
+                  {
+                    "em": true,
+                    "text": "ln k"
+                  },
+                  {
+                    "text": " vs. 1/T gives a straight line with slope = -26,470 K. Then:"
+                  }
+                ],
+                "id": "in35jwhogh37i1e",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\require{cancel}E_a=\\;-slope\\cdot\\mathrm R\\;=\\;-\\left(26,470\\;\\cancel{\\mathrm K}\\right)\\cdot\\left(8.314\\;\\frac{\\cancel{\\mathrm J}}{\\mathrm{mol}\\cdot\\cancel{\\mathrm K}}\\right)\\cdot\\left(\\frac{1\\;\\mathrm{kJ}}{1000\\;\\cancel{\\mathrm J}}\\right)\\;=\\;220.\\;\\frac{\\mathrm{kJ}}{\\mathrm{mol}}\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "c20hneuixidbo1w",
+                "type": "p"
+              }
+            ],
+            "id": "622805117"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dgdjgby39ynfb34",
+                  "type": "p"
+                }
+              ],
+              "id": "1131040299"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "codhqt8f9818zs7",
+                  "type": "p"
+                }
+              ],
+              "id": "1452792450"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y1jgezjakheij5k",
+                  "type": "p"
+                }
+              ],
+              "id": "1293731505"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate constant is given by: "
+                      }
+                    ],
+                    "id": "n6k49mp7f8xus1p",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "k=A\\mathrm e^{\\mathit-\\frac{{\\mathit E}_{\\mathit a}}{\\mathit R\\mathit\\cdot\\mathit T}}\\;\\;\\xrightarrow{\\mathrm{which}\\;\\mathrm{in}\\;\\mathrm{linear}\\;\\mathrm{form}\\;\\mathrm{is}}\\;\\;\\;ln\\;k\\;=-\\frac{E_a}R\\cdot\\frac1T\\;+\\;ln\\;A\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "l429n5rzn1q8uzw",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "so a graph of "
+                      },
+                      {
+                        "em": true,
+                        "text": "ln k"
+                      },
+                      {
+                        "text": " (on the "
+                      },
+                      {
+                        "em": true,
+                        "text": "y"
+                      },
+                      {
+                        "text": "-axis) vs. 1/T (on the "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "-axis, with "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": " in Kelvin) will give a straight line with slope = -E"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": "/R."
+                      }
+                    ],
+                    "id": "znkmg0mqj35pp1a",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Using the given data, the graph of "
+                      },
+                      {
+                        "em": true,
+                        "text": "ln k"
+                      },
+                      {
+                        "text": " vs. 1/T gives a straight line with slope = -26,470 K. Then:"
+                      }
+                    ],
+                    "id": "9l7fgfc7wwy0bas",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\require{cancel}E_a=\\;-slope\\cdot\\mathrm R\\;=\\;-\\left(26,470\\;\\cancel{\\mathrm K}\\right)\\cdot\\left(8.314\\;\\frac{\\cancel{\\mathrm J}}{\\mathrm{mol}\\cdot\\cancel{\\mathrm K}}\\right)\\cdot\\left(\\frac{1\\;\\mathrm{kJ}}{1000\\;\\cancel{\\mathrm J}}\\right)\\;=\\;220.\\;\\frac{\\mathrm{kJ}}{\\mathrm{mol}}\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "qj7arffc7y6hr2i",
+                    "type": "p"
+                  }
+                ],
+                "id": "2425477125"
+              },
+              "id": "317677946",
+              "legacyMatch": "[215,225]",
+              "rule": "input = {[215,225]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that the rate constant is given by: "
+                      }
+                    ],
+                    "id": "b41053d9609948658aa86d14b2b818aa",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "k=A\\mathrm e^{\\mathit-\\frac{{\\mathit E}_{\\mathit a}}{\\mathit R\\mathit\\cdot\\mathit T}}\\;\\;\\xrightarrow{\\mathrm{which}\\;\\mathrm{in}\\;\\mathrm{linear}\\;\\mathrm{form}\\;\\mathrm{is}}\\;\\;\\;ln\\;k\\;=-\\frac{E_a}R\\cdot\\frac1T\\;+\\;ln\\;A\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "f98fe1f0aa0e4da6885dd188e3bd0b35",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Graph "
+                      },
+                      {
+                        "em": true,
+                        "text": "ln k"
+                      },
+                      {
+                        "text": " (on the "
+                      },
+                      {
+                        "em": true,
+                        "text": "y"
+                      },
+                      {
+                        "text": "-axis) vs. 1/T (on the "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": "-axis, with "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": " in Kelvin), which will give a straight line with slope = -E"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": "/R. Then use the slope and R to determine E"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "e575b545dc5b452ea532c5e3526035b7",
+                    "type": "p"
+                  }
+                ],
+                "id": "1420670860"
+              },
+              "id": "33769728",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Dr. Kathryn (Kat) Y. List investigates the decomposition of azomethane: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm{CH}}_3{\\mathrm N}_2{\\mathrm{CH}}_3\\;\\rightarrow\\;2\\;{\\mathrm{CH}}_3\\;+\\;{\\mathrm N}_2",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "dfc79e9e6aa1405f905d1a01d5f88b16",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "and determines values for the rate constant at several different temperatures, as shown in the table below."
+            }
+          ],
+          "id": "cc7cca60fde94417a52243b089df9417",
+          "type": "p"
+        },
+        {
+          "caption": [
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "id": "e80e7c1c7faf4d48a3fac7a4399a13c6",
+              "type": "p"
+            }
+          ],
+          "children": [
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "T ("
+                        },
+                        {
+                          "sup": true,
+                          "text": "o"
+                        },
+                        {
+                          "text": "C)"
+                        }
+                      ],
+                      "id": "a39764fb69fc4eac9e69059c50cc4478",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "3v1m7arv11ac434",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "270"
+                        }
+                      ],
+                      "id": "b06ee481ddcd4e6b8925279169ae7b3c",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "m85c6p3rrco8hag",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "280"
+                        }
+                      ],
+                      "id": "aa985b2192f548b8ac7d65e03fe5dd1b",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "00jbgu01kuw5xlq",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "290"
+                        }
+                      ],
+                      "id": "c3fd179adc614e699decef436b6e7e29",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "pc209e30kaws78l",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "300"
+                        }
+                      ],
+                      "id": "ffb836d254a242deb101039d11088247",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "lcafrez00rmn0a9",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "ao1ppnljmjhkhn0",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "em": true,
+                          "text": "k"
+                        },
+                        {
+                          "text": " (s"
+                        },
+                        {
+                          "sup": true,
+                          "text": "-1"
+                        },
+                        {
+                          "text": ")"
+                        }
+                      ],
+                      "id": "d54eb3021f174d539b32cae34030ddb3",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "lactg2vkzzf0dns",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "1.34×10"
+                        },
+                        {
+                          "sup": true,
+                          "text": "-5"
+                        }
+                      ],
+                      "id": "a62f216186024743b010f71798a23abe",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "ua3bzfqcsa9rbeq",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "3.24×10"
+                        },
+                        {
+                          "sup": true,
+                          "text": "-5"
+                        }
+                      ],
+                      "id": "eb9a903c579b4561b1ff298ff4c159e3",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "u9ngtc4rmn1h8qn",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "7.58×10"
+                        },
+                        {
+                          "sup": true,
+                          "text": "-5"
+                        }
+                      ],
+                      "id": "c17245d14c72438c8bb2ab4f9cb27d5e",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "fpct9rft676yvo0",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "text": "1.72×10"
+                        },
+                        {
+                          "sup": true,
+                          "text": "-4"
+                        }
+                      ],
+                      "id": "b6cf071763f84866aa68262fc5a54154",
+                      "type": "p"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "xbupjf5cpzixusi",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "4tn0lvtsza23697",
+              "type": "tr"
+            }
+          ],
+          "id": "ce6540e2d95b49d79db0668ada5d4f85",
+          "rowstyle": "plain",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": "Use Dr. List's data to determine the activation energy, "
+            },
+            {
+              "em": true,
+              "text": "E"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": ", for this reaction. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ/mol"
+            }
+          ],
+          "id": "cefaccc10585405b941116ec13a2f52f",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

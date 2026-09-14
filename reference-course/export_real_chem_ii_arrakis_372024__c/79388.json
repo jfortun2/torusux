@@ -1,0 +1,264 @@
+{
+  "id": "79388",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "pre_instructor-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rdnvrn7tujaww8n",
+                  "type": "p"
+                }
+              ],
+              "id": "1032916690"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gcfctibekz4t4yg",
+                  "type": "p"
+                }
+              ],
+              "id": "1480404966"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "eznqab1yj770ahq",
+                  "type": "p"
+                }
+              ],
+              "id": "2975771561"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "whpjch47hkzhem3",
+                    "type": "p"
+                  }
+                ],
+                "id": "2531272412"
+              },
+              "id": "3255988409",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9lzry7yx553sdwk",
+                  "type": "p"
+                }
+              ],
+              "id": "1403344037"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jhcq7obv3qewxec",
+                  "type": "p"
+                }
+              ],
+              "id": "3280043992"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bja0kagolrfzxzv",
+                  "type": "p"
+                }
+              ],
+              "id": "3587078282"
+            }
+          ],
+          "id": "1634040591",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "vc9uv3fvgiil62w",
+                    "type": "p"
+                  }
+                ],
+                "id": "2086196415"
+              },
+              "id": "2098219865",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "ckdy7opjz01nvve",
+            "text": "traditional"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "cek3r5s2wpmxmng",
+            "text": "flipped"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "6gdx8mgclafg8wa",
+            "text": "other, please specify below"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "id": "q1txt",
+        "inputType": "text",
+        "partId": "1634040591",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Are you planning to use a flipped or traditional lecture structure for your course? "
+            }
+          ],
+          "id": "9qd39ngrm6gm7jm",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            }
+          ],
+          "id": "9knt3gori9oj145",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1txt",
+              "input": "q1txt",
+              "type": "input_ref"
+            }
+          ],
+          "id": "cpk3nwvg4aude09",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1634040591": [],
+    "first": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

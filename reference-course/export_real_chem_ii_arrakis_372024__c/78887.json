@@ -1,0 +1,209 @@
+{
+  "id": "78887",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78080"
+  ],
+  "title": "entropy_equations_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y1tjw1b6i0mc1te",
+                  "type": "p"
+                }
+              ],
+              "id": "661935576"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4fy3zxf3a78yfx0",
+                  "type": "p"
+                }
+              ],
+              "id": "3928141913"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b7eaqt26qw4dykf",
+                  "type": "p"
+                }
+              ],
+              "id": "193439629"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When four gaseous molecules react to form two gaseous molecules, matter becomes less dispersed and entropy decreases, so Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative."
+                      }
+                    ],
+                    "id": "6thzekkbq4f0iw4",
+                    "type": "p"
+                  }
+                ],
+                "id": "3766224185"
+              },
+              "id": "725631015",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that entropy is a measure of the dispersal of matter, the distribution of microstates, or the disorder of a system. Consider whether the process of four gaseous molecules reacting to form two gaseous molecules increases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is positive) or decreases entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative)."
+                      }
+                    ],
+                    "id": "0kvzlqbeneiwwfp",
+                    "type": "p"
+                  }
+                ],
+                "id": "1443568784"
+              },
+              "id": "1861172475",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "positive"
+              }
+            ],
+            "id": "o3nn9sfqi0y39we",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "negative"
+              }
+            ],
+            "id": "cpjnetycwbt05yr",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Determine the sign of Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " for the following process. "
+            }
+          ],
+          "id": "h9p65u6rrf4wokk",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm N}_2\\left(g\\right)\\;+\\;3\\;{\\mathrm H}_2\\left(g\\right)\\;\\rightarrow\\;2\\;{\\mathrm{NH}}_2\\left(g\\right)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "lgglxw85p9dl0v8",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

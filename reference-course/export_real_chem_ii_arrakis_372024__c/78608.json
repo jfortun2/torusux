@@ -1,0 +1,138 @@
+{
+  "id": "78608",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Single Response - gender identity",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2253847147",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "943907762",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2981367444",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2179945070",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3320922868",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "4283882301",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "1088317641",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1470258167",
+                "textDirection": "ltr"
+              },
+              "id": "299762845",
+              "rule": "input contains {answer}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "1235171162",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3709007642",
+                "textDirection": "ltr"
+              },
+              "id": "1982319983",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "10a. If none of the above accurately represents your gender identity, please feel free to describe yourself here.",
+      "transformations": []
+    },
+    "bibrefs": [],
+    "inputType": "textarea",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "10a. If none of the above accurately represents your gender identity, please feel free to describe yourself here."
+            }
+          ],
+          "id": "1467515066",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "3992445241",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_short_answer"
+}

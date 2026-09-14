@@ -1,0 +1,408 @@
+{
+  "id": "79479",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "diprotic_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tv30pchzho6as21",
+                  "type": "p"
+                }
+              ],
+              "id": "2979726506"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3afrwaj4hu5fpe2",
+                  "type": "p"
+                }
+              ],
+              "id": "1768335941"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8vpuxp6i87c1uqb",
+                  "type": "p"
+                }
+              ],
+              "id": "2180843185"
+            }
+          ],
+          "id": "4194937339",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "5etjep4h4iyudzc",
+                    "type": "p"
+                  }
+                ],
+                "id": "1778176901"
+              },
+              "id": "2811001018",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "v7kvsf7y0iy1x2p",
+                    "type": "p"
+                  }
+                ],
+                "id": "1297193627"
+              },
+              "id": "1766227790",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "s7rz4xznm8kjv92",
+                    "type": "p"
+                  }
+                ],
+                "id": "3383742430"
+              },
+              "id": "1801466526",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect "
+                      }
+                    ],
+                    "id": "gq9fehvc17yuf0s",
+                    "type": "p"
+                  }
+                ],
+                "id": "1065808341"
+              },
+              "id": "489005439",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect "
+                      }
+                    ],
+                    "id": "5sefpmeb4xfh3ct",
+                    "type": "p"
+                  }
+                ],
+                "id": "503615095"
+              },
+              "id": "437394033",
+              "legacyMatch": "E",
+              "rule": "input like {E}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "h8d5l1hak7qoe9q",
+                    "type": "p"
+                  }
+                ],
+                "id": "3487448399"
+              },
+              "id": "3859576860",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2811001018"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1766227790"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1801466526"
+            ],
+            [
+              [
+                "D"
+              ],
+              "489005439"
+            ],
+            [
+              [
+                "E"
+              ],
+              "437394033"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2811001018"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1766227790"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1801466526"
+        ],
+        [
+          [
+            "D"
+          ],
+          "489005439"
+        ],
+        [
+          [
+            "E"
+          ],
+          "437394033"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "2656854894",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[H"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "p1s1l1jodt3yj5s",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "xhhm6iuii1p3bh8",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "cjfk9bfhroyatb7",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[HCO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "c045j0qyywvf0y8",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "[CO"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              },
+              {
+                "text": "−]"
+              }
+            ],
+            "id": "p32mi2fzei8ac5a",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following would be present in the highest concentration?"
+            }
+          ],
+          "id": "j8y4h7rjxmx5sx6",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "4194937339": [
+      "78511"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

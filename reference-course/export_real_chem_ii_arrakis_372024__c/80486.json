@@ -1,0 +1,296 @@
+{
+  "id": "80486",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78049"
+  ],
+  "title": "conc_species_weak_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "\\text{CH}_3\\text{CH}_2\\text{NH}_2",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " is a weak base, which means the reactant base is in the highest concentration with little product being formed (weak) and the hydroxide concentration is higher than the hydronium concentration (base)."
+                  }
+                ],
+                "id": "s4rib1huo64z8f1",
+                "type": "p"
+              }
+            ],
+            "id": "1162892418"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pk73ql9s4dkx5g7",
+                  "type": "p"
+                }
+              ],
+              "id": "112401825"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7eo60127y8k4tww",
+                  "type": "p"
+                }
+              ],
+              "id": "3750703518"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5ramkvrilkgq5oi",
+                  "type": "p"
+                }
+              ],
+              "id": "3686171140"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "\\text{CH}_3\\text{CH}_2\\text{NH}_2",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " is a weak base, which means the reactant base is in the highest concentration with little product being formed (weak) and the hydroxide concentration is higher than the hydronium concentration (base)."
+                      }
+                    ],
+                    "id": "kzhxjp4ij9lc6d2",
+                    "type": "p"
+                  }
+                ],
+                "id": "1040934089"
+              },
+              "id": "346112498",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. To determine the concentration of different species in aqueous solution, determine:  whether the species is an electrolyte (dissolves in water) or a non-electrolyte (does not dissolve in water) based on its solubility,  whether the species is an acid, base, or neither based on its ability to donate or accept protons, and whether the species is a strong or weak acid or base.  Strong acids or bases in solution ionize completely, which means only the forward reaction to form products will occur. Weak acids and bases ionize partially, which means only a small extent of forward reaction to form products will occur and the reverse reaction will occur to a much larger extent. Be sure to apply the stoichiometric ratio of cations to anions in the species to determine the relative concentrations of cations and anions in solution."
+                      }
+                    ],
+                    "id": "f975767f835f484dabd011bf9428ce8c",
+                    "type": "p"
+                  }
+                ],
+                "id": "385384399"
+              },
+              "id": "3237041107",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "1339624866",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\text{CH}_3\\text{CH}_2\\text{NH}_2",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "hp2tkcz7v8aftq0",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\text{CH}_3\\text{CH}_2\\text{NH}_3^+",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "6t1ahsr89b6rg9i",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\text H_3\\text O^+",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "ia0k50lba7doqil",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\text{OH}^-",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "lo2im1b6tjydhxn",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "In a solution of 0.150 M CH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "CH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "NH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": ", what species is in the highest concentration?"
+            }
+          ],
+          "id": "c4a46e65b98e4580a6c4ffa89473bdad",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

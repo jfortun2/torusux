@@ -1,0 +1,925 @@
+{
+  "id": "79251",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_kb_from_pH_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. [OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "eq"
+                  },
+                  {
+                    "text": " = [NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "eq"
+                  },
+                  {
+                    "text": " = 0.00409 M"
+                  }
+                ],
+                "id": "i6qoggdcv27x6uy",
+                "type": "p"
+              }
+            ],
+            "id": "1154677298"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "[OH"
+                    },
+                    {
+                      "sup": true,
+                      "text": "–"
+                    },
+                    {
+                      "text": "]"
+                    },
+                    {
+                      "sub": true,
+                      "text": "eq"
+                    },
+                    {
+                      "text": " = [NH"
+                    },
+                    {
+                      "sub": true,
+                      "text": "4"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": "]"
+                    },
+                    {
+                      "sub": true,
+                      "text": "eq"
+                    }
+                  ],
+                  "id": "455mfzhi3qu4268",
+                  "type": "p"
+                }
+              ],
+              "id": "2443910256"
+            }
+          ],
+          "id": "1592551731",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": "]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "eq"
+                      },
+                      {
+                        "text": " = [NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "eq"
+                      },
+                      {
+                        "text": " = 0.00409 M"
+                      }
+                    ],
+                    "id": "782w6m4kgkcqha4",
+                    "type": "p"
+                  }
+                ],
+                "id": "2710268497"
+              },
+              "id": "3616619629",
+              "legacyMatch": "[0.004, 0.0041]",
+              "rule": "input = {[0.004, 0.0041]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "4r6me9zd9lrwfml",
+                    "type": "p"
+                  }
+                ],
+                "id": "2641406480"
+              },
+              "id": "876649092",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "9gnsf2no3x45vit",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "[NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "i"
+                  },
+                  {
+                    "text": " − [NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "change"
+                  },
+                  {
+                    "text": " = [NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "eq"
+                  }
+                ],
+                "id": "sibl346sas7c6ue",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "0.950 M − 0.00409 M = 0.946 M"
+                  }
+                ],
+                "id": "v5ru1rd3lyp16n9",
+                "type": "p"
+              }
+            ],
+            "id": "4099901618"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "You can use an ICE table to help determine [NH"
+                    },
+                    {
+                      "sub": true,
+                      "text": "3"
+                    },
+                    {
+                      "text": "]"
+                    },
+                    {
+                      "sub": true,
+                      "text": "eq"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "id": "cbhnt27tpl6uitb",
+                  "type": "p"
+                }
+              ],
+              "id": "3962287262"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "234065378",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "___selfClosing___": true,
+                          "children": [
+                            {
+                              "id": "xgo0dl6osz9z9od",
+                              "text": " ",
+                              "type": "text"
+                            }
+                          ],
+                          "id": "3vz5rbikjm88ua2",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "a9ckiaeoj9z5pgn",
+                              "strong": true,
+                              "text": "NH"
+                            },
+                            {
+                              "id": "tzmgjqwzv9py4a1",
+                              "strong": true,
+                              "sub": true,
+                              "text": "3"
+                            },
+                            {
+                              "id": "cg8a7l0bbhm3f2b",
+                              "strong": true,
+                              "text": " + H"
+                            },
+                            {
+                              "id": "21lsnpsvtb1aheu",
+                              "strong": true,
+                              "sub": true,
+                              "text": "2"
+                            },
+                            {
+                              "id": "23eovuwbesqz91b",
+                              "strong": true,
+                              "text": "O ⇌ NH"
+                            },
+                            {
+                              "id": "6ybypet2m2y4vzd",
+                              "strong": true,
+                              "sub": true,
+                              "text": "4"
+                            },
+                            {
+                              "id": "k8tk7tyaxpvvs1o",
+                              "strong": true,
+                              "sup": true,
+                              "text": "+"
+                            },
+                            {
+                              "id": "ze2lnyz4ignjuzn",
+                              "strong": true,
+                              "text": " + OH"
+                            },
+                            {
+                              "id": "oiyo1hq0dii2scl",
+                              "strong": true,
+                              "sup": true,
+                              "text": "−"
+                            }
+                          ],
+                          "colspan": 4,
+                          "id": "gvqyf3gzvf6kw93",
+                          "type": "td"
+                        }
+                      ],
+                      "id": "mns6uipakypqstz",
+                      "type": "tr"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "text": ""
+                                }
+                              ],
+                              "id": "2368376276",
+                              "type": "p"
+                            }
+                          ],
+                          "id": "3628405357",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "strong": true,
+                                  "text": "NH"
+                                },
+                                {
+                                  "strong": true,
+                                  "sub": true,
+                                  "text": "3"
+                                }
+                              ],
+                              "id": "3000423545",
+                              "type": "p"
+                            }
+                          ],
+                          "id": "1481614513",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "strong": true,
+                                  "text": "H"
+                                },
+                                {
+                                  "strong": true,
+                                  "sub": true,
+                                  "text": "2"
+                                },
+                                {
+                                  "strong": true,
+                                  "text": "O"
+                                }
+                              ],
+                              "id": "4204171042",
+                              "type": "p"
+                            }
+                          ],
+                          "id": "1174064334",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "strong": true,
+                                  "text": "NH"
+                                },
+                                {
+                                  "strong": true,
+                                  "sub": true,
+                                  "text": "4"
+                                },
+                                {
+                                  "strong": true,
+                                  "sup": true,
+                                  "text": "+"
+                                }
+                              ],
+                              "id": "2224767999",
+                              "type": "p"
+                            }
+                          ],
+                          "id": "1868258563",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "strong": true,
+                                  "text": "OH"
+                                },
+                                {
+                                  "strong": true,
+                                  "sup": true,
+                                  "text": "−"
+                                }
+                              ],
+                              "id": "2234562385",
+                              "type": "p"
+                            }
+                          ],
+                          "id": "1006116158",
+                          "type": "td"
+                        }
+                      ],
+                      "id": "1352473227",
+                      "type": "tr"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "jttvdyvwuk9jnnn",
+                              "text": "Initial"
+                            }
+                          ],
+                          "id": "upubnj9xgzv26ek",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "mucyg6x2gtoonwr",
+                              "text": "0.950 M"
+                            }
+                          ],
+                          "id": "jx6rgg3wtnic9l4",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "kgld4c17wvf4zk6",
+                              "text": "-----"
+                            }
+                          ],
+                          "id": "bxxfu6re3qmqpun",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "mclau44e9l31fao",
+                              "text": "0"
+                            }
+                          ],
+                          "id": "srsvivawbg0v73y",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "csi0rqdnsol1hh6",
+                              "text": "0"
+                            }
+                          ],
+                          "id": "on7c7wg3igwawhp",
+                          "type": "td"
+                        }
+                      ],
+                      "id": "7bdpbfp8moxc7jn",
+                      "type": "tr"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "jhuaq31kpmhl3uu",
+                              "text": "Change"
+                            }
+                          ],
+                          "id": "4l3h4p2pc3ndyb8",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "ljcjyxj1hrmx05u",
+                              "text": "0.950 − x (0.00409)"
+                            }
+                          ],
+                          "id": "gkylfnij8gpoojt",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "i6xceqe0okwc50f",
+                              "text": "-----"
+                            }
+                          ],
+                          "id": "72jkwuapv0wj7io",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "iakx02u3a9hgm1m",
+                              "text": "x = 0.00409"
+                            }
+                          ],
+                          "id": "hos211vl49k46ki",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "89pqhg6vp54nvkm",
+                              "text": "x = 0.00409"
+                            }
+                          ],
+                          "id": "vse04f1pglp03dk",
+                          "type": "td"
+                        }
+                      ],
+                      "id": "fh6nvogvx44pgk6",
+                      "type": "tr"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "11xkj5vkz7vcu4h",
+                              "text": "Equilibrium"
+                            }
+                          ],
+                          "id": "ear11keepj5pqxs",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "r2vj3m1lll4rt8w",
+                              "text": "???"
+                            }
+                          ],
+                          "id": "rtk7jmi8k713wc3",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "fpv4s722a8ugite",
+                              "text": "-----"
+                            }
+                          ],
+                          "id": "xcsg09zqkaxt9ym",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "0w4e4xletiideca",
+                              "text": "0.00409 M"
+                            }
+                          ],
+                          "id": "h0v80q31zy1hblc",
+                          "type": "td"
+                        },
+                        {
+                          "align": "center",
+                          "children": [
+                            {
+                              "id": "iu6384vmltd5or2",
+                              "text": "0.00409 M"
+                            }
+                          ],
+                          "id": "lr38fgxn9h9yh4f",
+                          "type": "td"
+                        }
+                      ],
+                      "id": "2249ktdtfdkvz23",
+                      "type": "tr"
+                    }
+                  ],
+                  "id": "b5im2pc1sp5yarm",
+                  "type": "table"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "622851878",
+                  "type": "p"
+                }
+              ],
+              "id": "3787042687"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7x9rhtgaa5rydeu",
+                  "type": "p"
+                }
+              ],
+              "id": "4175618025"
+            }
+          ],
+          "id": "3020387566",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "jw4h2w6djxxi5k5",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "[NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "i"
+                      },
+                      {
+                        "text": " − [NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "change"
+                      },
+                      {
+                        "text": " = [NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "]"
+                      },
+                      {
+                        "sub": true,
+                        "text": "eq"
+                      }
+                    ],
+                    "id": "z5hpbzy2lnybb57",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "0.950 M − 0.00409 M = 0.946 M"
+                      }
+                    ],
+                    "id": "820dwuv3gskq1rm",
+                    "type": "p"
+                  }
+                ],
+                "id": "2555881816"
+              },
+              "id": "2161276127",
+              "legacyMatch": "[0.94,0.946]",
+              "rule": "input = {[0.94,0.946]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "3izr7x5lgbcj158",
+                    "type": "p"
+                  }
+                ],
+                "id": "3452748407"
+              },
+              "id": "1853678317",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1592551731",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "3020387566",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What are the equilibrium concentrations of each of the other species? "
+            }
+          ],
+          "id": "vj9qr1s67gglvox",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[NH"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sub": true,
+              "text": "eq"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "whcnvvhjm6c35d9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sub": true,
+              "text": "eq"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "d7jsbf78vt76jve",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1592551731": [
+      "78475"
+    ],
+    "3020387566": [
+      "78475"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

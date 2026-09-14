@@ -1,0 +1,329 @@
+{
+  "id": "78988",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78180"
+  ],
+  "title": "spontaneous_at_temp_pool_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cvjv86hokie8p7t",
+                  "type": "p"
+                }
+              ],
+              "id": "3912494647"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "opm5orbhwuodl8x",
+                  "type": "p"
+                }
+              ],
+              "id": "1455451648"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6jo1k0mhu1xe221",
+                  "type": "p"
+                }
+              ],
+              "id": "3773466301"
+            }
+          ],
+          "id": "3211419565",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A spontaneous reaction is one in which ΔG<0. Given that "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta G\\;=\\;\\Delta H\\;-\\;T\\Delta S\\;\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " When Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": " is positive and Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative, Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " will be positive regardless of the temperature. Such a process is nonspontaneous at all temperatures."
+                      }
+                    ],
+                    "id": "bpee3ixxeqnejkz",
+                    "type": "p"
+                  }
+                ],
+                "id": "1085888175"
+              },
+              "id": "2234151080",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A spontaneous reaction is one in which ΔG<0. Given that "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\Delta G\\;=\\;\\Delta H\\;-\\;T\\Delta S\\;\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " When Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": " is positive and Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative, Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " will be positive regardless of the temperature. Such a process is nonspontaneous at all temperatures. "
+                      }
+                    ],
+                    "id": "c6r998vv0l8yn1f",
+                    "type": "p"
+                  }
+                ],
+                "id": "1247632977"
+              },
+              "id": "571476430",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Both Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " are positive."
+              }
+            ],
+            "id": "0oujde6ea8irisl",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Both Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " are negative."
+              }
+            ],
+            "id": "c3qo4zz66squuvj",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " is positive and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " is negative. "
+              }
+            ],
+            "id": "19fqfuzzbu65j75",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " is negative and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " is positive."
+              }
+            ],
+            "id": "ns35yfikm4fbtqz",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following combinations of values for Δ"
+            },
+            {
+              "em": true,
+              "text": "H"
+            },
+            {
+              "text": " and Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " for a given process, indicate that the process is not spontaneous at any temperatures?"
+            }
+          ],
+          "id": "zlnwl10wd5gogck",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3211419565": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

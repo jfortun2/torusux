@@ -1,0 +1,230 @@
+{
+  "id": "79895",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "gen_equilibrium_quiz-q7",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0c9m8uhx1sfcyg7",
+                  "type": "p"
+                }
+              ],
+              "id": "3795497223"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "345fprkf38ifxiw",
+                  "type": "p"
+                }
+              ],
+              "id": "1546872900"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ehwxjs3enwaard3",
+                  "type": "p"
+                }
+              ],
+              "id": "970814223"
+            }
+          ],
+          "id": "1003015234",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "erv8m3jlwbm1j8i",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_c\\;=\\;\\frac{K_P}{(RT)^{\\triangle n}}\\;=\\;\\frac{0.416}{(0.0821\\;\\times\\;373)^1}\\\\\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "8u4akf2v7qqiycp",
+                    "type": "p"
+                  }
+                ],
+                "id": "3848553590"
+              },
+              "id": "3844165987",
+              "legacyMatch": "[0.0133,0.0138]",
+              "rule": "input = {[0.0133,0.0138]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "0o1pxq3uvwi003g",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_c\\;=\\;\\frac{K_P}{(RT)^{\\triangle n}}\\;=\\;\\frac{0.416}{(0.0821\\;\\times\\;373)^1}\\\\\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "aabw7gwmes3qmp0",
+                    "type": "p"
+                  }
+                ],
+                "id": "2621586181"
+              },
+              "id": "4201311219",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "1003015234"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " for the following reaction:"
+            }
+          ],
+          "id": "ujd4l0aa1x7akds",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "7shxzx767xulhs7",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "t5kz032w5rtgp2c",
+          "legacyBlockRendered": "true",
+          "src": "2\\;\\mathrm{NOBr}(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{NO}(g)\\;+\\;{\\mathrm{Br}}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_P\\;=\\;0.416\\;\\;\\mathrm{at}\\;100.0\\;^\\circ\\mathrm C",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": "="
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            }
+          ],
+          "id": "9h504imkwwogtiv",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1003015234": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,325 @@
+{
+  "id": "79685",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78148"
+  ],
+  "title": "strength_acid_base_skill_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": " Incorrect. "
+                  }
+                ],
+                "id": "v94vhmgkiortdp1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "iktzf9nj5p6g0wb",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " Although these substances are all weak acids, as identified by having equilibrium constants that indicate only partial ionization, the strongest acid is the one that ionizes the most, as identified by having the largest equilibrium constant. The acid with the largest equilibrium constant and therefore the strongest acid is @@d@@, "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " = @@decd@@×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "@@expd@@"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ],
+                "id": "iy6gl6q1p8q7tca",
+                "type": "p"
+              }
+            ],
+            "id": "2528978130"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2lqk68zo48zx24f",
+                  "type": "p"
+                }
+              ],
+              "id": "3593804158"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h5gmdw5pj96wwgq",
+                  "type": "p"
+                }
+              ],
+              "id": "1574361320"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "x66qipt8i41itme",
+                  "type": "p"
+                }
+              ],
+              "id": "2733925969"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Although these substances are all weak acids, as identified by having equilibrium constants that indicate only partial ionization, the strongest acid is the one that ionizes the most, as identified by having the largest equilibrium constant."
+                      }
+                    ],
+                    "id": "fd11a2dbd9c24fef97d73a9411ac00b1",
+                    "type": "p"
+                  }
+                ],
+                "id": "799038685"
+              },
+              "id": "2045889695",
+              "legacyMatch": "d78d2667851d40ccab7c57befe2e5247",
+              "rule": "input like {d78d2667851d40ccab7c57befe2e5247}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant is a numerical measure of the ratio of “products over reactants” that indicates the extent to which the reaction favors products or reactants. Reactions with larger equilibrium constants favor more products than reactants compared to reactions with smaller equilibrium constants. Be sure to interpret the negative exponents correctly (larger negative exponents have smaller values)."
+                      }
+                    ],
+                    "id": "fz13tm0j5shgg52",
+                    "type": "p"
+                  }
+                ],
+                "id": "4287880843"
+              },
+              "id": "2523979135",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "3270450156",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst weakest = [\"hypoiodous acid\", \"boric acid\", \"hydrocyanic acid\", \"hypobromous acid\", \"hypochlorous acid\"];\nconst d1 = [3.2, 5.4, 6.2, 2.8, 4.0];\nconst e1 = [-11, -10, -10, -9, -8];\nconst list2 = [\"propanoic acid\", \"butanoic acid\", \"pentanoic acid\", \"acetic acid\", \"hydrazoic acid\"];\nconst d2 = [1.3, 1.5, 1.5, 1.8, 2.5];\nconst e2 = [-5, -5, -5, -5, -5];\n\nconst list3 = [\"benzoic acid\", \"formic acid\", \"cyanic acid\", \"nitrous acid\", \"hydrofluoric acid\"];\nconst d3 = [6.3, 1.8, 3.5, 5.6, 6.3];\nconst e3 = [-5, -4, -4, -4, -4];\nconst strongest = [\"chloroacetic acid\", \"aresenic acid\", \"chlorous acid\", \"periodic acid\", \"iodic acid\", \"trichloroacetic acid\"]\nconst const1 = OLI.random(0,4);\nconst d4 = [1.4, 5.5, 1.1, 7.3, 1.7, 2.2];\nconst e4 = [-3, -3, -2, -2, -1];\nconst const2 = OLI.random(0,4);\nconst const3 = OLI.random(0,4);\nconst const4 = OLI.random(0,5);\nconst a = weakest[const1];\nconst deca = d1[const1];\nconst expa = e1[const1];\nconst b = list2[const2];\nconst decb = d2[const2];\nconst expb = e2[const2];\nconst c = list3[const3];\nconst decc = d3[const3];\nconst expc = e3[const3];\nconst d = strongest[const4];\nconst decd = d4[const4];\nconst expd = e4[const4];\n// Expose variables to OLI\nmodule.exports = {\n  const1,\n  const2,\n  const3,\n  const4,\n  a, deca, expa,\n  b, decb, expb,\n  c, decc, expc,\n  d, decd, expd\n};\n",
+              "id": "a7211f95bc914a688b997b54b0338d09",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@a@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@deca@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expa@@"
+              }
+            ],
+            "id": "dhz73khxg60qgd0",
+            "type": "p"
+          }
+        ],
+        "id": "ff6a06efcdd64c80a3ca7bcadf342032"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@b@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@decb@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expb@@"
+              }
+            ],
+            "id": "9n6xtv8y9m3fd1a",
+            "type": "p"
+          }
+        ],
+        "id": "d5e86a3a1d594fbc884e09e62dedd577"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@c@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@decc@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expc@@"
+              }
+            ],
+            "id": "9ixmelur58ombro",
+            "type": "p"
+          }
+        ],
+        "id": "c9ee060ca5844b0289187cfa347160c9"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "@@d@@, "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " = @@decd@@×10"
+              },
+              {
+                "sup": true,
+                "text": "@@expd@@"
+              }
+            ],
+            "id": "8cz54128gxktneq",
+            "type": "p"
+          }
+        ],
+        "id": "d78d2667851d40ccab7c57befe2e5247"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is the strongest acid? "
+            }
+          ],
+          "id": "b5f4116e79164adaad687b73cbf8e1d0",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

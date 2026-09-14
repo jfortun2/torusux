@@ -1,0 +1,322 @@
+{
+  "id": "80306",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9xesycrqkpxav49",
+                  "type": "p"
+                }
+              ],
+              "id": "4128433953"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h4fs0usikae5g77",
+                  "type": "p"
+                }
+              ],
+              "id": "236136666"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gaob30dny9c65zv",
+                  "type": "p"
+                }
+              ],
+              "id": "3086910111"
+            }
+          ],
+          "id": "2504353817",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This particular reaction involves a decrease in entropy due to the accompanying decrease in the amount of gaseous species."
+                      }
+                    ],
+                    "id": "jyyxy01ec3d4y2r",
+                    "type": "p"
+                  }
+                ],
+                "id": "111030486"
+              },
+              "id": "2464503157",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This is an exothermic reaction, as evidenced by the generation of heat."
+                      }
+                    ],
+                    "id": "zb2kvquzw09qd3b",
+                    "type": "p"
+                  }
+                ],
+                "id": "182118064"
+              },
+              "id": "1412113280",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This is an exothermic reaction, as evidenced by the generation of heat. This particular reaction involves a decrease in entropy due to the accompanying decrease in the amount of gaseous species."
+                      }
+                    ],
+                    "id": "vjqfggvewbfm1lw",
+                    "type": "p"
+                  }
+                ],
+                "id": "2906006871"
+              },
+              "id": "204567717",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This is an exothermic reaction, as evidenced by the generation of heat. This particular reaction involves a decrease in entropy due to the accompanying decrease in the amount of gaseous species. "
+                      }
+                    ],
+                    "id": "lib90ogu9g3lqup",
+                    "type": "p"
+                  }
+                ],
+                "id": "4067885161"
+              },
+              "id": "1780955541",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "g4d2xuk73y2bcq7",
+                    "type": "p"
+                  }
+                ],
+                "id": "3667829223"
+              },
+              "id": "2570495553",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2464503157"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1412113280"
+            ],
+            [
+              [
+                "C"
+              ],
+              "204567717"
+            ],
+            [
+              [
+                "D"
+              ],
+              "1780955541"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2464503157"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1412113280"
+        ],
+        [
+          [
+            "C"
+          ],
+          "204567717"
+        ],
+        [
+          [
+            "D"
+          ],
+          "1780955541"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is spontaneous at all temperatures."
+              }
+            ],
+            "id": "vz3r46el805s0gc",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is nonspontaneous at all temperatures."
+              }
+            ],
+            "id": "uceg6zk5f1ajrxo",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is spontaneous at high temperatures."
+              }
+            ],
+            "id": "ybkjo4b8m1i6i72",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is spontaneous at low temperatures."
+              }
+            ],
+            "id": "wbsjx61ofo325ci",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Popular chemical hand warmers generate heat by the air-oxidation of iron: "
+            }
+          ],
+          "id": "9o32zlks3t4m1tp",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "aipguiuzqqkime6",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "64u2mx5l8rrvib1",
+          "legacyBlockRendered": "true",
+          "src": "4\\;\\mathrm{Fe}(s)\\;+\\;3\\;{\\mathrm O}_2(g)\\;\\longrightarrow\\;2\\;{\\mathrm{Fe}}_2{\\mathrm O}_3(s)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Which of the following correctly describes this process?"
+            }
+          ],
+          "id": "d93fe8b92y5kd7h",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2504353817": [
+      "78483"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,423 @@
+{
+  "id": "79526",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "initial_rate_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "For a gas at a constant temperature, pressure is directly proportional to concentration. Decreasing the pressure by half is equivalent to decreasing the concentration by half."
+                    }
+                  ],
+                  "id": "j35r8uu38xg9u02",
+                  "type": "p"
+                }
+              ],
+              "id": "586219635"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The reaction is second order with respect to NO"
+                    },
+                    {
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ],
+                  "id": "xyjmf7lbw86hjzd",
+                  "type": "p"
+                }
+              ],
+              "id": "1850275682"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2v2pr2qdzfbke7o",
+                  "type": "p"
+                }
+              ],
+              "id": "3285843741"
+            }
+          ],
+          "id": "4245458302",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For a gas at a constant temperature, pressure is directly proportional to concentration. When the concentration decreases, the rate will decrease."
+                      }
+                    ],
+                    "id": "figy6fl0jsdw43x",
+                    "type": "p"
+                  }
+                ],
+                "id": "1998139657"
+              },
+              "id": "3117899532",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For a gas at a constant temperature, pressure is directly proportional to concentration. When the concentration decreases, the rate will decrease."
+                      }
+                    ],
+                    "id": "g4i11jolofx44l2",
+                    "type": "p"
+                  }
+                ],
+                "id": "1967409179"
+              },
+              "id": "261449602",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. For a gas at a constant temperature, pressure is directly proportional to concentration. When the pressure decreases by a factor of 2, the concentration also decreases by a factor of 2. Because the reaction is second order with respect to NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ", decreasing the concentration by a factor of 2 will cause the rate to decrease by a factor of 2"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " = 4."
+                      }
+                    ],
+                    "id": "fmtruesj2p1x7tm",
+                    "type": "p"
+                  }
+                ],
+                "id": "2423432646"
+              },
+              "id": "105770233",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For a gas at a constant temperature, pressure is directly proportional to concentration. Because the reaction is second order with respect to NO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ", decreasing the concentration by a factor of 2 will cause the rate to decrease by a factor of 2"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " = 4."
+                      }
+                    ],
+                    "id": "bb3zwtz0l0p4czr",
+                    "type": "p"
+                  }
+                ],
+                "id": "2071710694"
+              },
+              "id": "408883484",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. For a gas at a constant temperature, pressure is directly proportional to concentration. Only zero-order reactions have no effect on the rate when the concentration is changed."
+                      }
+                    ],
+                    "id": "5gykcrvy05v9l35",
+                    "type": "p"
+                  }
+                ],
+                "id": "3860934770"
+              },
+              "id": "2763876238",
+              "legacyMatch": "E",
+              "rule": "input like {E}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "0gn5seyy3nrif1d",
+                    "type": "p"
+                  }
+                ],
+                "id": "701597508"
+              },
+              "id": "1216789449",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3117899532"
+            ],
+            [
+              [
+                "B"
+              ],
+              "261449602"
+            ],
+            [
+              [
+                "C"
+              ],
+              "105770233"
+            ],
+            [
+              [
+                "D"
+              ],
+              "408883484"
+            ],
+            [
+              [
+                "E"
+              ],
+              "2763876238"
+            ]
+          ]
+        }
+      ],
+      "previewText": "For the reaction:  the rate law is:  If the pressure of the NO2 is decreased from 0.500 atm to 0.250 atm, what effect will this have on the rate?",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3117899532"
+        ],
+        [
+          [
+            "B"
+          ],
+          "261449602"
+        ],
+        [
+          [
+            "C"
+          ],
+          "105770233"
+        ],
+        [
+          [
+            "D"
+          ],
+          "408883484"
+        ],
+        [
+          [
+            "E"
+          ],
+          "2763876238"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1807160341",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would increase by a factor of 4."
+              }
+            ],
+            "id": "65ziw2xr5wk4vre",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would double."
+              }
+            ],
+            "id": "vu3ec19w5oj19k4",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would decrease by a factor of 4."
+              }
+            ],
+            "id": "ienfo7h2wolf6ae",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would be halved."
+              }
+            ],
+            "id": "yyabepmx4d3xtld",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There would be no effect on the rate."
+              }
+            ],
+            "id": "foylwdflmhc974l",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the reaction: "
+            },
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm{CO}(g)\\;+\\;{\\mathrm{NO}}_2(g)\\;\\;\\rightarrow\\;\\;{\\mathrm{CO}}_2(g)\\;+\\;\\mathrm{NO}(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": "the rate law is: "
+            },
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm{Rate}\\;=\\;k\\lbrack{\\mathrm{NO}}_2\\rbrack^2",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": "If the pressure of the NO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " is decreased from 0.500 atm to 0.250 atm, what effect will this have on the rate?"
+            }
+          ],
+          "id": "i66akyn5m8rs6f7",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "4245458302": [
+      "78353"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

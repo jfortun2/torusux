@@ -1,0 +1,159 @@
+{
+  "id": "79668",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "GeomIsomerLBD1_q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2705588950",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2069376748",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1557012453",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Water is neutral, chloride and bromide have –1 charge, and cobalt has +2 charge. The overall charge is 2(0) + 2(–1) + 2(–1) = –2."
+                      }
+                    ],
+                    "id": "1325896173",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "361503134",
+                "textDirection": "ltr"
+              },
+              "id": "357798659",
+              "rule": "input equals {-2}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "2-"
+                      }
+                    ],
+                    "id": "1696927485",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "764486467",
+                "textDirection": "ltr"
+              },
+              "id": "3657483211",
+              "rule": "input equals {Correct. Water is neutral, chloride and bromide have –1 charge, and cobalt has +2 charge. The overall charge is 2(0) + 2(–1) + 2(–1) = –2.}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Water is neutral, chloride and bromide have –1 charge, and cobalt has +2 charge. The overall charge is 2(0) + 2(–1) + 2(–1) = –2."
+                      }
+                    ],
+                    "id": "2819267645",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1039908793",
+                "textDirection": "ltr"
+              },
+              "id": "2619948763",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "What is the overall charge of the complex ion? ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3017689047",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "3510538333",
+        "inputType": "text",
+        "partId": "1557012453",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the overall charge of the complex ion? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3510538333",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2783568826",
+          "type": "p"
+        }
+      ],
+      "id": "3198615381"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1557012453": [
+      "78438"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

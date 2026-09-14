@@ -1,0 +1,216 @@
+{
+  "id": "80009",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "half_life_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. 1000 years is 0.04 half-lives. The fraction that remains after 0.04 half-lives is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{({\\textstyle\\frac12})}^{0.04}\\;=\\;0.973\\;\\;\\;\\mathrm{or}\\;97.3\\%",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "ckd9aebtmc2g63m",
+                "type": "p"
+              }
+            ],
+            "id": "6748036"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "oghbrm8gczm7d2p",
+                  "type": "p"
+                }
+              ],
+              "id": "2369544356"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "75c6x718za4wix2",
+                  "type": "p"
+                }
+              ],
+              "id": "426772572"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cvurna3ec26w8b0",
+                  "type": "p"
+                }
+              ],
+              "id": "3675052701"
+            }
+          ],
+          "id": "747997087",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 1000 years is 0.04 half-lives. The fraction that remains after 0.04 half-lives is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{({\\textstyle\\frac12})}^{0.04}\\;=\\;0.973\\;\\;\\;\\mathrm{or}\\;97.3\\%",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "oorpxzx4rsha2po",
+                    "type": "p"
+                  }
+                ],
+                "id": "2159414202"
+              },
+              "id": "1900408489",
+              "legacyMatch": "[97,98]",
+              "rule": "input = {[97,98]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "gjwsu60q1av0ia0",
+                    "type": "p"
+                  }
+                ],
+                "id": "3123717821"
+              },
+              "id": "1705145128",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "239Pu is a nuclear waste byproduct with a half-life of 24,000 y. What percentage of the 239Pu present today will be present in 1000 y?  % ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "747997087",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "sup": true,
+              "text": "239"
+            },
+            {
+              "text": "Pu is a nuclear waste byproduct with a half-life of 24,000 y. What percentage of the "
+            },
+            {
+              "sup": true,
+              "text": "239"
+            },
+            {
+              "text": "Pu present today will be present in 1000 y? "
+            }
+          ],
+          "id": "5sbc60vl6wx1nxt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " % "
+            }
+          ],
+          "id": "pi10oeiro5rzrib",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "747997087": [
+      "78502"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

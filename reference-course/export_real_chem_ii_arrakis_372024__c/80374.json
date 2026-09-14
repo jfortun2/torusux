@@ -1,0 +1,267 @@
+{
+  "id": "80374",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5fr32u81167mw76",
+                  "type": "p"
+                }
+              ],
+              "id": "4008786103"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ql2xlaimlhr5vst",
+                  "type": "p"
+                }
+              ],
+              "id": "1263979178"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rmd39dl4nnt0emf",
+                  "type": "p"
+                }
+              ],
+              "id": "4066163887"
+            }
+          ],
+          "id": "4035548637",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When the volume of the container is increased, the concentrations and partial pressures of all species and the total pressure all increase. In response to the decrease in total pressure, the the reaction will shift in the direction with the greater number of gas molecules, to the left."
+                      }
+                    ],
+                    "id": "3ksxab1s3363rmr",
+                    "type": "p"
+                  }
+                ],
+                "id": "144911126"
+              },
+              "id": "2395450337",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When the volume of the container is increased, the concentrations and partial pressures of all species and the total pressure all decrease. In response to the decrease in total pressure, the the reaction will shift in the direction with the greater number of gas molecules, to the left, further decreasing the concentration of N"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "r74u8wvgfp2k1gj",
+                    "type": "p"
+                  }
+                ],
+                "id": "2463746345"
+              },
+              "id": "257102610",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When the volume of the container is increased, the concentrations and partial pressures of all species and the total pressure all increase. In response to the decrease in total pressure, the the reaction will shift in the direction with the greater number of gas molecules, to the left."
+                      }
+                    ],
+                    "id": "c7dlsz1xkdqeqsv",
+                    "type": "p"
+                  }
+                ],
+                "id": "1166126361"
+              },
+              "id": "1542814092",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "yfj76we08he57fu",
+                    "type": "p"
+                  }
+                ],
+                "id": "830035043"
+              },
+              "id": "4068484758",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2395450337"
+            ],
+            [
+              [
+                "B"
+              ],
+              "257102610"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1542814092"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2395450337"
+        ],
+        [
+          [
+            "B"
+          ],
+          "257102610"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1542814092"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increase"
+              }
+            ],
+            "id": "owhx8c86byhg3c5",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decrease"
+              }
+            ],
+            "id": "mfvcab005hlp2iv",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Stay the same"
+              }
+            ],
+            "id": "uaqhse056kujwhi",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Increasing the volume of the container in which the reaction occurs"
+            }
+          ],
+          "id": "95v00fdc2b9ivve",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "4035548637": [
+      "78441"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

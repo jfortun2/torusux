@@ -1,0 +1,296 @@
+{
+  "id": "78803",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_conc_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "idkmr51hyjgvvwl",
+                  "type": "p"
+                }
+              ],
+              "id": "4169402088"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q3zcxi9etwte9hv",
+                  "type": "p"
+                }
+              ],
+              "id": "813585319"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3x6gv0o330n7s6q",
+                  "type": "p"
+                }
+              ],
+              "id": "1414621497"
+            }
+          ],
+          "id": "453059974",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the concentration of a product is increased, the reaction will shift in the direction of the reverse reaction (to the left)."
+                      }
+                    ],
+                    "id": "0aifbha9sbzbhu5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3883391607"
+              },
+              "id": "4190898714",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If the concentration of a product is increased, the reaction will shift in the direction of the reverse reaction (to the left)."
+                      }
+                    ],
+                    "id": "mmcbcxsu29ms2s6",
+                    "type": "p"
+                  }
+                ],
+                "id": "817501331"
+              },
+              "id": "2652950784",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the concentration of a product is increased, the reaction will shift in the direction of the reverse reaction (to the left)."
+                      }
+                    ],
+                    "id": "27qwpq3vovnomto",
+                    "type": "p"
+                  }
+                ],
+                "id": "2541074896"
+              },
+              "id": "1332496835",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "o0y69q8vn3066nr",
+                    "type": "p"
+                  }
+                ],
+                "id": "3028247693"
+              },
+              "id": "2797771653",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "4190898714"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2652950784"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1332496835"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "4190898714"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2652950784"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1332496835"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1060485210",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will shift to the right (forward)."
+              }
+            ],
+            "id": "dbgy39hgef9isi3",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will shift to the left (reverse)."
+              }
+            ],
+            "id": "fnj702ifg3v7758",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "It will not change direction."
+              }
+            ],
+            "id": "6tz6yl3yz3ocnsp",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the following reversible reaction:"
+            }
+          ],
+          "id": "4owk2vrm0ekhc07",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "5nqhyaao2vmp3ti",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "qxseiuevvgctyc6",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{NH}}_3(g)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm N}_2\\left(g\\right)\\;+\\;3\\;{\\mathrm H}_2(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "If N"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": ") is added to the reaction vessel, in which direction will the equilibrium shift?"
+            }
+          ],
+          "id": "uxbmmlo0u0o63rr",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "453059974": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

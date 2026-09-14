@@ -1,0 +1,222 @@
+{
+  "id": "79509",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78095"
+  ],
+  "title": "titration_sa_sb_pool_v3_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "js8sgs3gf3t5zct",
+                  "type": "p"
+                }
+              ],
+              "id": "3325633390"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ntbdao1fux3gd29",
+                  "type": "p"
+                }
+              ],
+              "id": "926096834"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dbcd10g05j0oqsb",
+                  "type": "p"
+                }
+              ],
+              "id": "1682972458"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If there are more moles of base than acid in a titration, the solution is basic with a relatively high pH."
+                      }
+                    ],
+                    "id": "b6c85cb4f33a4f39b63e20fd286bb9e2",
+                    "type": "p"
+                  }
+                ],
+                "id": "668336763"
+              },
+              "id": "3104929338",
+              "legacyMatch": "f5356f19f2964fb7a4346fa3c2fed239",
+              "rule": "input like {f5356f19f2964fb7a4346fa3c2fed239}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Remember that in titration there are generally four stages to consider: the initial point before the titration begins, the portion before the equivalence point is reached, the equivalence point where the number of moles acid and moles of base are equal, and the portion after the equivalence point is passed. Based on the type of titration (acid being titrated by base, or base being titrated by acid), identify the stage at which there are more moles of base than acid, which means the solution is basic with a relatively high pH."
+                      }
+                    ],
+                    "id": "deedd9790d844ca5bc61ee7d225b16ca",
+                    "type": "p"
+                  }
+                ],
+                "id": "272693420"
+              },
+              "id": "1643494910",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "343166094",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Point A"
+              }
+            ],
+            "id": "vm2t9nhenv6b79w",
+            "type": "p"
+          }
+        ],
+        "id": "f18157e2011546afac3dbb0a18c77ea0"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Point B"
+              }
+            ],
+            "id": "m0f0kvrpo79ujw9",
+            "type": "p"
+          }
+        ],
+        "id": "a464d361003d423b84a65f927786613f"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Point C"
+              }
+            ],
+            "id": "5cn9agnech3ntmy",
+            "type": "p"
+          }
+        ],
+        "id": "f7c37eab0a95444aaa8a68f628536315"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Point D"
+              }
+            ],
+            "id": "pgucyj8w55p4uq6",
+            "type": "p"
+          }
+        ],
+        "id": "f5356f19f2964fb7a4346fa3c2fed239"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At which point in the titration curve shown below is the number of moles of base greater than the moles of acid?"
+            }
+          ],
+          "id": "b3f47d7bd9994191b5dd92f76d27cf32",
+          "type": "p"
+        },
+        {
+          "caption": [
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "id": "c1cddddb4dfa463dae9ebf11eaa4a174",
+              "type": "p"
+            }
+          ],
+          "children": [
+            {
+              "id": "l6gsyjmfk5142hm",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "cd33ec0244b94a5abcdb88a198be1302",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/ed/ed60347bdd316ff35622f0a6aa7250a8/wa_sb.png",
+          "style": "inline",
+          "type": "img",
+          "vertical-align": "middle"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

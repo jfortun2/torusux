@@ -1,0 +1,483 @@
+{
+  "id": "80070",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "nernst_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}{E_\\mathrm{cell}^\\circ}\\;=\\;0.153\\;\\mathrm V\\;-\\;(-0.1375\\;\\mathrm V)\\; =\\;0.291\\;\\mathrm V\\\\\\mathrm\\Delta G^\\circ=\\;-nF{E_\\mathrm{cell}^\\circ}\\; =\\;-\\left(2\\;\\mathrm{mol}\\right)(96,485\\;\\mathrm C/\\mathrm{mol})(0.291\\;\\mathrm J/\\mathrm C)\\; =\\;-56.1\\;\\mathrm{kJ}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "6vtj18xff88nezh",
+                "type": "p"
+              }
+            ],
+            "id": "3951944833"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "First E°"
+                    },
+                    {
+                      "sub": true,
+                      "text": "cell"
+                    },
+                    {
+                      "text": " needs to be calculated. The reduction reaction is Cu"
+                    },
+                    {
+                      "sup": true,
+                      "text": "2+"
+                    },
+                    {
+                      "text": " + 1 e"
+                    },
+                    {
+                      "sup": true,
+                      "text": "−"
+                    },
+                    {
+                      "text": " "
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": false,
+                      "src": "\\rightarrow",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": " Cu"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": ". "
+                    }
+                  ],
+                  "id": "28yg58uq7idowls",
+                  "type": "p"
+                }
+              ],
+              "id": "3780499998"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2632359340",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "gkpds4dlcfgw4dw",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "xewyl4m71cl16im",
+                  "legacyBlockRendered": "true",
+                  "src": "\\Delta G^\\circ\\;=\\;-nF{E_\\mathrm{cell}^\\circ}",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "409958177",
+                  "type": "p"
+                }
+              ],
+              "id": "3286042974"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "em": true,
+                      "text": "n"
+                    },
+                    {
+                      "text": " is the number of electrons transferred, which in this example is 2."
+                    }
+                  ],
+                  "id": "0wh7m2b1clrkjwy",
+                  "type": "p"
+                }
+              ],
+              "id": "1763273878"
+            }
+          ],
+          "id": "987780514",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}{E_\\mathrm{cell}^\\circ}\\;=\\;0.153\\;\\mathrm V\\;-\\;(-0.1375\\;\\mathrm V)\\; =\\;0.291\\;\\mathrm V\\\\\\mathrm\\Delta G^\\circ=\\;-nF{E_\\mathrm{cell}^\\circ}\\; =\\;-\\left(2\\;\\mathrm{mol}\\right)(96,485\\;\\mathrm C/\\mathrm{mol})(0.291\\;\\mathrm J/\\mathrm C)\\; =\\;-56.1\\;\\mathrm{kJ}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "ls0aom0bxxqifoc",
+                    "type": "p"
+                  }
+                ],
+                "id": "3409819165"
+              },
+              "id": "4274118776",
+              "legacyMatch": "[-57,-56]",
+              "rule": "input = {[-57,-56]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "ccsgl27wjblzj2a",
+                    "type": "p"
+                  }
+                ],
+                "id": "2381782603"
+              },
+              "id": "1663683245",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}E_{\\mathrm{cell}}^{\\circ}\\;=\\;\\frac{\\;0.0592\\;\\mathrm{V}}{n\\;}\\log K\\;\\;\\;\\; \\Rightarrow\\;\\;\\;\\;K\\;=\\;10^{(nE_\r\n\\mathrm{cell}^\\circ/0.0592\\;\\mathrm{V})}\\\\K\\;=\\;10^{(2\\times0.291\\;\\mathrm V/0.0592\\; \\mathrm V)\\;}\\;=\\;10^{9.831}\\;=\\;6.78\\times10^9\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2y04rqwjun9ejw8",
+                "type": "p"
+              }
+            ],
+            "id": "2319298942"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "{E_\\mathrm{cell}^\\circ}\\;=\\;\\frac{0.0592\\;\\mathrm V}n\\;\\log\\;K",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6jaxod510lahwgt",
+                  "type": "p"
+                }
+              ],
+              "id": "701575910"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "em": true,
+                      "text": "n"
+                    },
+                    {
+                      "text": " = 2 because two electrons are transferred."
+                    }
+                  ],
+                  "id": "iuozdkmrjogxfx0",
+                  "type": "p"
+                }
+              ],
+              "id": "1566451912"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8jqnnajwxyqrzvz",
+                  "type": "p"
+                }
+              ],
+              "id": "1760381496"
+            }
+          ],
+          "id": "2523338281",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}E_{\\mathrm{cell}}^{\\circ}\\;=\\;\\frac{\\;0.0592\\;\\mathrm{V}}{n\\;}\\log K\\;\\;\\;\\; \\Rightarrow\\;\\;\\;\\;K\\;=\\;10^{(nE_\r\n\\mathrm{cell}^\\circ/0.0592\\;\\mathrm{V})}\\\\K\\;=\\;10^{(2\\times0.291\\;\\mathrm V/0.0592\\; \\mathrm V)\\;}\\;=\\;10^{9.831}\\;=\\;6.78\\times10^9\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "ips55g1azpl0jli",
+                    "type": "p"
+                  }
+                ],
+                "id": "1363472981"
+              },
+              "id": "3962338082",
+              "legacyMatch": "[6.7e9,6.9e9]",
+              "rule": "input = {[6.7e9,6.9e9]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "qd40bhdo7y3f8c6",
+                    "type": "p"
+                  }
+                ],
+                "id": "270762007"
+              },
+              "id": "1252714991",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "987780514",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "2523338281",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What are the standard free energy change and the equilibrium constant for the following reaction at room temperature? "
+            }
+          ],
+          "id": "58e3dys6oz3tdpv",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "3p7694jd392vsy5",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "w94b0i2bwepwfvy",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm{Sn}(s)\\;+\\;2\\;\\mathrm{Cu}^{2+}(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Sn}^{2+}(aq)\\;+\\;2\\;\\mathrm{Cu}^+(aq)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ"
+            },
+            {
+              "em": true,
+              "text": "G"
+            },
+            {
+              "text": "° = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ "
+            }
+          ],
+          "id": "qw41pu9zmltx6wz",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "x22k95an6vvbp8f",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2523338281": [
+      "78529"
+    ],
+    "987780514": [
+      "78529"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

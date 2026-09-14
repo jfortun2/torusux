@@ -1,0 +1,292 @@
+{
+  "id": "79057",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_2digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v7bbnrm9tpotgdj",
+                  "type": "p"
+                }
+              ],
+              "id": "3471608380"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vdd8qbkbpj7z9qj",
+                  "type": "p"
+                }
+              ],
+              "id": "4194884213"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "moltafzj95rduiz",
+                  "type": "p"
+                }
+              ],
+              "id": "456117855"
+            }
+          ],
+          "id": "266478210",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Removing a product will cause the reaction to shift to the right to replace the product."
+                      }
+                    ],
+                    "id": "y9sv8f7bmkt83lr",
+                    "type": "p"
+                  }
+                ],
+                "id": "345763513"
+              },
+              "id": "3276678716",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Removing a product will cause the reaction to shift to the right to replace the product. "
+                      }
+                    ],
+                    "id": "cv86p6v91p1cczf",
+                    "type": "p"
+                  }
+                ],
+                "id": "1264076680"
+              },
+              "id": "2609558680",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Removing a product will cause the reaction to shift to the right to replace the product. "
+                      }
+                    ],
+                    "id": "mwfebn2tomwauqr",
+                    "type": "p"
+                  }
+                ],
+                "id": "3754576906"
+              },
+              "id": "2440905858",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "hhbgdls9gxu76pk",
+                    "type": "p"
+                  }
+                ],
+                "id": "944774126"
+              },
+              "id": "3562923114",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3276678716"
+            ],
+            [
+              [
+                "B"
+              ],
+              "2609558680"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2440905858"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Given the following reversible reaction: indicate whether each change will cause a shift to the right, cause a shift to the left, or have no effect.Removing H2O",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3276678716"
+        ],
+        [
+          [
+            "B"
+          ],
+          "2609558680"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2440905858"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Shift to the right"
+              }
+            ],
+            "id": "7wbredrqmmwc7od",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Shift to the left"
+              }
+            ],
+            "id": "13pqeszymh2q2u0",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No effect on equilibrium"
+              }
+            ],
+            "id": "57z4izamz49mg1i",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the following reversible reaction:"
+            }
+          ],
+          "id": "t12188kvj1giryi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "2sf080kalor0poi",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "q9onn6bpwlhwyhk",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{Fe}}_2{\\mathrm O}_3(s)\\;+\\;3\\;{\\mathrm H}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{Fe}(s)\\;+\\;3\\;{\\mathrm H}_2\\mathrm O(g) \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm\\Delta H\\;=\\;98.7\\;\\mathrm{kJ}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "indicate whether each change will cause a shift to the right, cause a shift to the left, or have no effect."
+            }
+          ],
+          "id": "y8jom3xx6py0f8w",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Removing H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O"
+            }
+          ],
+          "id": "jeba3vc141ytlc7",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "266478210": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

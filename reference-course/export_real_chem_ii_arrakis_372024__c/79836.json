@@ -1,0 +1,200 @@
+{
+  "id": "79836",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "entropy_lbd2-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "An increase in temperature causes an increase in average kinetic energy of particles. "
+                    }
+                  ],
+                  "id": "ejmvjf7zu4ap68l",
+                  "type": "p"
+                }
+              ],
+              "id": "514808262"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8qay15ynvnhv8pr",
+                  "type": "p"
+                }
+              ],
+              "id": "3129195643"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "70fuvobbt3k9aq5",
+                  "type": "p"
+                }
+              ],
+              "id": "1783602076"
+            }
+          ],
+          "id": "2586414840",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. At higher temperatures, the distribution of kinetic energies among the atoms or molecules of the substance is also broader (more dispersed) than at lower temperatures. "
+                      }
+                    ],
+                    "id": "u6f2j37u2h0uv3q",
+                    "type": "p"
+                  }
+                ],
+                "id": "348365057"
+              },
+              "id": "3407948778",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. At higher temperatures, the distribution of kinetic energies among the atoms or molecules of the substance is also broader (more dispersed) than at lower temperatures. "
+                      }
+                    ],
+                    "id": "1502qtmgvzr4liv",
+                    "type": "p"
+                  }
+                ],
+                "id": "1744042980"
+              },
+              "id": "2169964732",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "For each of the following processes, determine whether the change in entropy is positive or negative.One mole liquid water at room temperature  one mole liquid water at 50  °C",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Positive"
+              }
+            ],
+            "id": "xrsl5dff83hyj0t",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Negative"
+              }
+            ],
+            "id": "fk99x5lq7g2cqrp",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For each of the following processes, determine whether the change in entropy is positive or negative."
+            }
+          ],
+          "id": "glha2w35t7limyl",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": "One mole liquid water at room temperature "
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "legacyBlockRendered": false,
+                  "src": "\\longrightarrow",
+                  "subtype": "latex",
+                  "type": "formula_inline"
+                },
+                {
+                  "text": " one mole liquid water at 50  °C"
+                }
+              ],
+              "id": "e20yk9rtpolkkcw",
+              "type": "p"
+            }
+          ],
+          "id": "w9wrvno2cjua10u",
+          "type": "callout"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "2103805359",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2586414840": [
+      "78325"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

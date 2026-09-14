@@ -1,0 +1,271 @@
+{
+  "id": "80101",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "CoordNumberFromDenticityDIGT_q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1163350312",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3507951564",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is ethylenediamine, (en), a bidentate ligand, so each (en) contributes two bonds to the metal through the N atoms. There are two bidentate (en) ligands in the complex. There are also two monodentate aqua ligands (OH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "), each contributing 1 bond. The total number of connections is 4 bonds to N in the two (en) ligands and 2 bonds to O in the two (OH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ") ligands, which is a total coordination number of 6."
+                      }
+                    ],
+                    "id": "2529968949",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "550016202",
+                "textDirection": "ltr"
+              },
+              "id": "1231632729",
+              "rule": "input contains {6}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is ethylenediamine, (en), a bidentate ligand, so each (en) contributes two bonds to the metal through the N atoms. There are two bidentate (en) ligands in the complex. There are also two monodentate aqua ligands (OH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "), each contributing 1 bond. The total number of connections is 4 bonds to N in the two (en) ligands and 2 bonds to O in the two (OH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ") ligands, which is a total coordination number of 6."
+                      }
+                    ],
+                    "id": "1805003388",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3082057892",
+                "textDirection": "ltr"
+              },
+              "id": "3350701083",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "[Ni(NH2CH2CH2NH2)2(OH2)2]  ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3724445832",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "1617935191",
+        "inputType": "text",
+        "partId": "1"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "[Ni(NH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "CH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "CH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "NH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "(OH"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1617935191",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "391563162",
+          "type": "p"
+        }
+      ],
+      "id": "3183284897"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78487",
+      "78400"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,385 @@
+{
+  "id": "79521",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78063"
+  ],
+  "title": "oxid_agents_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1259044032",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3029184333",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1900014430",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Among these species, silver(I) has the highest reduction potential (0.7996 V). It is the most easily reduced, so it is the strongest oxidizing agent."
+                      }
+                    ],
+                    "id": "1956931559",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2303368925",
+                "textDirection": "ltr"
+              },
+              "id": "2344662878",
+              "rule": "input like {541123322}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I﻿ncorrect. The species with the highest reduction potential is the most easily reduced, so it is the strongest oxidizing agent."
+                      }
+                    ],
+                    "id": "1421807121",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1531728983",
+                "textDirection": "ltr"
+              },
+              "id": "864475037",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1293210766",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1051805857",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "4089147138",
+          "incorrectScore": null,
+          "outOf": 4,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Among these species, chromium(III) has the lowest reduction potential (−0.744 V). It is the least easily reduced, so it is the weakest oxidizing agent."
+                      }
+                    ],
+                    "id": "2433816281",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2461880358",
+                "textDirection": "ltr"
+              },
+              "id": "3091362996",
+              "rule": "input like {2599984643}",
+              "score": 4
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I﻿ncorrect. The species with the lowest reduction potential is the least easily reduced, so it is the weakest oxidizing agent."
+                      }
+                    ],
+                    "id": "3559816960",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3891477762",
+                "textDirection": "ltr"
+              },
+              "id": "4015123045",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Select from chromium(III), nickel(II), and silver(I) to answer the following. The Standard Reduction Potentials table may be useful. is the strongest oxidizing agent. is the weakest oxidizing agent.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3599597121",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "1334342145",
+          "operation": "shuffle",
+          "partId": "4089147138",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2678793616",
+          "operation": "shuffle",
+          "partId": "1900014430",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "chromium(III)"
+              }
+            ],
+            "id": "3801463540",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2599984643",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "nickel(II)"
+              }
+            ],
+            "id": "3078645224",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1245828620",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "chromium(III)"
+              }
+            ],
+            "id": "3047274298",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "196834111",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "nickel(II)"
+              }
+            ],
+            "id": "3235461504",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2618886243",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "silver(I)"
+              }
+            ],
+            "id": "4194220952",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "541123322",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "silver(I)"
+              }
+            ],
+            "id": "3300582812",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2083897230",
+        "textDirection": "ltr"
+      }
+    ],
+    "customScoring": true,
+    "inputs": [
+      {
+        "choiceIds": [
+          "196834111",
+          "2618886243",
+          "541123322"
+        ],
+        "id": "2378750572",
+        "inputType": "dropdown",
+        "partId": "1900014430"
+      },
+      {
+        "choiceIds": [
+          "2599984643",
+          "1245828620",
+          "2083897230"
+        ],
+        "id": "3986796922",
+        "inputType": "dropdown",
+        "partId": "4089147138"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Select from chromium(III), nickel(II), and silver(I) to answer the following. The "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_xdwka",
+              "idref": "80670",
+              "target": "self",
+              "type": "a"
+            },
+            {
+              "text": " table may be useful."
+            }
+          ],
+          "id": "2704446223",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2378750572",
+              "type": "input_ref"
+            },
+            {
+              "text": " is the strongest oxidizing agent."
+            }
+          ],
+          "id": "2844889841",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3986796922",
+              "type": "input_ref"
+            },
+            {
+              "text": " is the weakest oxidizing agent."
+            }
+          ],
+          "id": "2640690708",
+          "type": "p"
+        }
+      ],
+      "id": "1205848700"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1900014430": [
+      "78387"
+    ],
+    "4089147138": [
+      "78387"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,267 @@
+{
+  "id": "78889",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "small_k_lbd_default-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}K_\\mathrm{c}=\\frac{\\;(x)(x)}{0.25}=1.8\\times10^{-5}\\\\x=\\sqrt{\\left(1.8\\times10^{-5}\\right) \\left(0.25\\right)}=0.0021\\;\\mathrm M\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "z2rhjot5zddmpyz",
+                "type": "p"
+              }
+            ],
+            "id": "3395261016"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "With the assumption that "
+                    },
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " is much smaller than 0.25 and can be neglected in comparison, the "
+                    },
+                    {
+                      "em": true,
+                      "text": "K"
+                    },
+                    {
+                      "sub": true,
+                      "text": "c"
+                    },
+                    {
+                      "text": " expression is: "
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": " ",
+                          "type": "text"
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "K_\\mathrm{c}=\\frac{\\;(x)(x)}{0.25}=1.8\\times10^{-5}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ml7wnenx8i6dsjo",
+                  "type": "p"
+                }
+              ],
+              "id": "809689223"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h5o1uw6agry30lp",
+                  "type": "p"
+                }
+              ],
+              "id": "3031645905"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l2ytl8htpfjkzjn",
+                  "type": "p"
+                }
+              ],
+              "id": "1378726829"
+            }
+          ],
+          "id": "3410726124",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_\\mathrm{c}=\\frac{\\;(x)(x)}{0.25}=1.8\\times10^{-5}\\\\x=\\sqrt{\\left(1.8\\times10^{-5}\\right) \\left(0.25\\right)}=\\;0.0021\\;\\mathrm M\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "5vgly3pjswz7me2",
+                    "type": "p"
+                  }
+                ],
+                "id": "1863293240"
+              },
+              "id": "943492929",
+              "legacyMatch": "[0.002,0.0022]",
+              "rule": "input = {[0.002,0.0022]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "mesxj7xitvhx2lf",
+                    "type": "p"
+                  }
+                ],
+                "id": "3991161909"
+              },
+              "id": "2578194844",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Assume that x is much less than 0.25. Adjust the Kc expression according to this assumption and solve for x.x = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3410726124",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Assume that "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " is much less than 0.25. Adjust the "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " expression according to this assumption and solve for "
+            },
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "ygy7w523qgqik1i",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "x"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "zhkq97tbt9k2f1w",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3410726124": [
+      "78390"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

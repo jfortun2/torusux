@@ -1,0 +1,313 @@
+{
+  "id": "79095",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78104"
+  ],
+  "title": "cell_notation_pool_v1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "D",
+          "F"
+        ],
+        "1848953418"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "m8x3j8yc2kq10v6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "p4km3im54ytfiae",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Copper is reduced and zinc is oxidized, the electrons flow from zinc to copper, and copper is the cathode and zinc is the anode."
+                  }
+                ],
+                "id": "4ysag86r3w0llj8",
+                "type": "p"
+              }
+            ],
+            "id": "3025961950"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jq8w1m3wxf1rvwm",
+                  "type": "p"
+                }
+              ],
+              "id": "2714247846"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "07bisa0r3m3wzfp",
+                  "type": "p"
+                }
+              ],
+              "id": "2291490304"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rkc5bp9tlydvoj4",
+                  "type": "p"
+                }
+              ],
+              "id": "3550583797"
+            }
+          ],
+          "id": "4038326670",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Copper is reduced and zinc is oxidized, the electrons flow from zinc to copper, and copper is the cathode and zinc is the anode."
+                      }
+                    ],
+                    "id": "oiil5rbs9pa0ewr",
+                    "type": "p"
+                  }
+                ],
+                "id": "1845578208"
+              },
+              "id": "1848953418",
+              "legacyMatch": "B,D,F",
+              "rule": "(!(input like {E})) && ((!(input like {C})) && ((!(input like {A})) && (input like {F} && (input like {D} && (input like {B})))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In cell notation, the oxidation half-reaction is on the left and the reduction half-reaction is on the right. Recall the meaning of oxidation and reduction in terms of loss or gain of electrons, and the definition of anode and cathode in terms of oxidation and reduction."
+                      }
+                    ],
+                    "id": "mi6wjyylvpenlj2",
+                    "type": "p"
+                  }
+                ],
+                "id": "690767161"
+              },
+              "id": "3686166966",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is oxidized and zinc is reduced."
+              }
+            ],
+            "id": "b5bsn80mflfvh93",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is reduced and zinc is oxidized."
+              }
+            ],
+            "id": "9hizmwfl9dbl6wc",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The electrons flow from copper to zinc."
+              }
+            ],
+            "id": "4f0bqytzg6143q5",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The electrons flow from zinc to copper."
+              }
+            ],
+            "id": "u78nex9z5ltqoxz",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is the anode and zinc is the cathode."
+              }
+            ],
+            "id": "t19epz14gzl4l86",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is the cathode and zinc is the anode."
+              }
+            ],
+            "id": "tl7v6xjqm2no0wo",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following are true for the cell below? Select all that apply."
+            }
+          ],
+          "id": "al2a4yr3a17nkz9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Zn("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ")|Zn"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ")||Cu"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ")| Cu("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ")"
+            }
+          ],
+          "id": "a9p2u9084v1xe5e",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "4038326670": [
+      "78395"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

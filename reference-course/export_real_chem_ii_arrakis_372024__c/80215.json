@@ -1,0 +1,240 @@
+{
+  "id": "80215",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78268"
+  ],
+  "title": "sa_sb_calc_ph_different_points_pool_v1_q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n8u0u95bqxl1drn",
+                  "type": "p"
+                }
+              ],
+              "id": "2573807418"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gff8awtfngry43t",
+                  "type": "p"
+                }
+              ],
+              "id": "3168973548"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ofjhu7ifpqbe6yl",
+                  "type": "p"
+                }
+              ],
+              "id": "1965821088"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Of the choices of answers, litmus paper has a well-defined color change at the equivalence point (with pH 7) of the titration involving a strong acid and strong base."
+                      }
+                    ],
+                    "id": "mxsillahu96lhmt",
+                    "type": "p"
+                  }
+                ],
+                "id": "1274652355"
+              },
+              "id": "2932600655",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In order to observe an accurate end point of a titration, the indicator must have a well-defined color change at the equivalence point of the titration, which is when the moles of acid and base are equal. Determine the pH at the equivalence point, and then choose the indicator that changes color at this pH."
+                      }
+                    ],
+                    "id": "e6si97x99h5hw84",
+                    "type": "p"
+                  }
+                ],
+                "id": "1394505375"
+              },
+              "id": "1463390051",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "t1grf7pxpkpzkkq",
+            "text": "litmus"
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "oynpem93fwbilhd",
+            "text": "Alizarin yellow R"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "0r9q4ziu64rhey3",
+            "text": "Bromophenol blue"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "ubenaa0yn1ofvl3",
+            "text": "methyl orange"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "yem8blmxfintlsy",
+            "text": "methyl red"
+          }
+        ],
+        "id": "one_E"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D",
+          "one_E"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Use the table of indicators below to choose the most appropriate indicator to use when titrating HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " with KOH as described in the previous problem. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "ndsfxxc38y1sv9q",
+          "type": "p"
+        },
+        {
+          "caption": [
+            {
+              "children": [
+                {
+                  "text": " ",
+                  "type": "text"
+                }
+              ],
+              "id": "e62c5f4320e84701a3cc79a901b94bd8",
+              "type": "p"
+            }
+          ],
+          "children": [
+            {
+              "id": "ddn7edeb4t34uqf",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "c578d389a6f64019b91e2bae76e4bb39",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/eb/eb001cc4694b8981058beafdef19c978/indicators.png",
+          "style": "inline",
+          "type": "img",
+          "vertical-align": "middle",
+          "width": "550"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,310 @@
+{
+  "id": "80316",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "indicators_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Notice that the initial pH is just over 8. The final pH is approximately 1. "
+                    }
+                  ],
+                  "id": "4v74lwydw0fbgly",
+                  "type": "p"
+                }
+              ],
+              "id": "1630640621"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "v04tx4mh6aqaocr",
+                  "type": "p"
+                }
+              ],
+              "id": "4169761608"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ez7yh5d1rbkvsl0",
+                  "type": "p"
+                }
+              ],
+              "id": "867672403"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is just over 8. The final pH is approximately 1. "
+                      }
+                    ],
+                    "id": "j9vlan4h59wv5b5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3942912774"
+              },
+              "id": "2143238642",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is just over 8. The final pH is approximately 1."
+                      }
+                    ],
+                    "id": "uxiyadnlkr6hycb",
+                    "type": "p"
+                  }
+                ],
+                "id": "1112617528"
+              },
+              "id": "3050426946",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The initial pH is just over 8. The final pH is approximately 1."
+                      }
+                    ],
+                    "id": "9tz4lys3s8fr0qr",
+                    "type": "p"
+                  }
+                ],
+                "id": "2208138666"
+              },
+              "id": "344455621",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The initial pH of 8 indicates that the starting solution is slightly basic, and the final pH of approximately 1 indicates that it is strongly acidic."
+                      }
+                    ],
+                    "id": "7l02fvdoedmq78y",
+                    "type": "p"
+                  }
+                ],
+                "id": "1025472040"
+              },
+              "id": "2868195451",
+              "legacyMatch": "D",
+              "rule": "input like {first_D}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "kftgywtzb07f52i",
+                    "type": "p"
+                  }
+                ],
+                "id": "1627702432"
+              },
+              "id": "36857234",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2143238642"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3050426946"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "344455621"
+        ],
+        [
+          [
+            "first_D"
+          ],
+          "2868195451"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: strong acid — titrant: strong base "
+              }
+            ],
+            "id": "1298579113",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: weak acid — titrant: strong base"
+              }
+            ],
+            "id": "397916794",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: strong base — titrant: strong acid"
+              }
+            ],
+            "id": "3039655785",
+            "type": "p"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "analyte: weak base — titrant: strong acid"
+              }
+            ],
+            "id": "1281893211",
+            "type": "p"
+          }
+        ],
+        "id": "first_D"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C",
+          "first_D"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "id": "p1leongtd5mhezs",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "18f86qvoiwlsb4k",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/75/75c9fb34f0896712245447af8bcdfd93/TC_weak_base.png",
+          "type": "img",
+          "width": "700"
+        },
+        {
+          "children": [
+            {
+              "text": "Identity of analyte and titrant: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            }
+          ],
+          "id": "15hq64niza5pd95",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78464"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

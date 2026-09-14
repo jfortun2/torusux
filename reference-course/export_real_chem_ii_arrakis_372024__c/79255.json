@@ -1,0 +1,218 @@
+{
+  "id": "79255",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "g5a2ph6tl959pgb",
+                  "type": "p"
+                }
+              ],
+              "id": "1636406436"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2zzr5l9vezntj0p",
+                  "type": "p"
+                }
+              ],
+              "id": "4155144430"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0g1sjjxhkiu5qob",
+                  "type": "p"
+                }
+              ],
+              "id": "541762305"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rates of the forward and reverse reactions are equal at equilibrium."
+                      }
+                    ],
+                    "id": "mox92hcb5fhpafk",
+                    "type": "p"
+                  }
+                ],
+                "id": "2298499329"
+              },
+              "id": "3391211177",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rates of the forward and reverse reactions are equal at equilibrium."
+                      }
+                    ],
+                    "id": "tvj9341his3fo4y",
+                    "type": "p"
+                  }
+                ],
+                "id": "3790197108"
+              },
+              "id": "3523238689",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "nuk09dsntfz3w4q",
+                    "type": "p"
+                  }
+                ],
+                "id": "3476535137"
+              },
+              "id": "1580120579",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "At equilibrium, the rate of the forward reaction is equal to the rate of the reverse reaction. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3391211177"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3523238689"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True "
+              }
+            ],
+            "id": "2421291289",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "1000751897",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At equilibrium, the rate of the forward reaction is equal to the rate of the reverse reaction. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "lzzotzp9tlfml6b",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,194 @@
+{
+  "id": "79083",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "CoordNumberFromDenticityDIGT_q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1479525508",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1815123016",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. All of the ligands in this complex are monodentate, so the coordination number = the number of ligands. There are four NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " ligands and 2 Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ligands, which gives a coordination number of 6."
+                      }
+                    ],
+                    "id": "218554084",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1274376867",
+                "textDirection": "ltr"
+              },
+              "id": "516553696",
+              "rule": "input contains {6}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. All of the ligands in this complex are monodentate, so the coordination number = the number of ligands. There are four NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " ligands and 2 Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ligands, which gives a coordination number of 6."
+                      }
+                    ],
+                    "id": "860763402",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "683375421",
+                "textDirection": "ltr"
+              },
+              "id": "4095739836",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "[Pt(NH3)4Cl2]2+  ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3668870893",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "1902895456",
+        "inputType": "text",
+        "partId": "1"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "[Pt(NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "Cl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1902895456",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "866341274",
+          "type": "p"
+        }
+      ],
+      "id": "2387766006"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78487",
+      "78400"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

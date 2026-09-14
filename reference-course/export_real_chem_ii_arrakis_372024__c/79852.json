@@ -1,0 +1,202 @@
+{
+  "id": "79852",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ox_numbers_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "(2\\cdot x)\\;+\\;(4\\cdot(-2))\\;=\\;-2\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;x\\;=\\;\\frac{(-2\\;+\\;8)}2\\;=\\;+3",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "3u1il7tfk5pu9e1",
+                "type": "p"
+              }
+            ],
+            "id": "1765926699"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ftfp0xxgll1h0sa",
+                  "type": "p"
+                }
+              ],
+              "id": "2384815193"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mhvz7262xz50uf8",
+                  "type": "p"
+                }
+              ],
+              "id": "2487178920"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3x9zej2o47vy54w",
+                  "type": "p"
+                }
+              ],
+              "id": "1802619106"
+            }
+          ],
+          "id": "3752849359",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "(2\\cdot x)\\;+\\;(4\\cdot(-2))\\;=\\;-2\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;x\\;=\\;\\frac{(-2\\;+\\;8)}2\\;=\\;+3",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "xbszwvwas6tquni",
+                    "type": "p"
+                  }
+                ],
+                "id": "1424661528"
+              },
+              "id": "2278331326",
+              "legacyMatch": "3",
+              "rule": "input = {3}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "fxjdj8078w95pea",
+                    "type": "p"
+                  }
+                ],
+                "id": "1315760111"
+              },
+              "id": "3983625339",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3752849359",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the oxidation number for carbon in C"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "2−"
+            },
+            {
+              "text": "? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            }
+          ],
+          "id": "yhp3h9g8mx4a5oo",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3752849359": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

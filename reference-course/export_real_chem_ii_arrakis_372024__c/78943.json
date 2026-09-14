@@ -1,0 +1,387 @@
+{
+  "id": "78943",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78166"
+  ],
+  "title": "calc_conc_equil_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "yeirmrv4uio6pcz",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "vhurofvecjpvnig",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "3.0\\times10^{-2}\\;=\\;\\frac{\\lbrack{\\mathrm{CH}}_4\\rbrack{\\lbrack{\\mathrm H}_2\\mathrm S\\rbrack}^2}{{\\lbrack{\\mathrm H}_2\\rbrack}^4\\lbrack{\\mathrm{CS}}_2\\rbrack}\\\\\\lbrack{\\mathrm H}_2\\mathrm S\\rbrack\\;=\\;\\sqrt{\\frac{(3.0\\times10^{-2})\\;{(@@concH2@@)}^4\\;(@@concCS2@@)}{(0.0015)}}\\;=\\;@@correct@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "1hjwbq4bhb3bkk7",
+                "type": "p"
+              }
+            ],
+            "id": "2231978642"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wkvb88taq2pv5ke",
+                  "type": "p"
+                }
+              ],
+              "id": "671591686"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mgryxptshyvcwdd",
+                  "type": "p"
+                }
+              ],
+              "id": "255361266"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4xm4pksd1iun7xh",
+                  "type": "p"
+                }
+              ],
+              "id": "3277807047"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "b8ffa04057c44ae086435dc5b01a41c5",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "3.0\\times10^{-2}\\;=\\;\\frac{\\lbrack{\\mathrm{CH}}_4\\rbrack{\\lbrack{\\mathrm H}_2\\mathrm S\\rbrack}^2}{{\\lbrack{\\mathrm H}_2\\rbrack}^4\\lbrack{\\mathrm{CS}}_2\\rbrack}\\\\\\lbrack{\\mathrm H}_2\\mathrm S\\rbrack\\;=\\;\\sqrt{\\frac{(3.0\\times10^{-2})\\;{(@@concH2@@)}^4\\;(@@concCS2@@)}{(0.0015)}}\\;=\\;@@correct@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "bd7239f7a1d94f82bac17b566fb15661",
+                    "type": "p"
+                  }
+                ],
+                "id": "986415406"
+              },
+              "id": "573705577",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the equilibrium expression. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "3.0\\times10^{-2}\\;=\\;\\frac{\\lbrack{\\mathrm{CH}}_4\\rbrack{\\lbrack{\\mathrm H}_2\\mathrm S\\rbrack}^2}{{\\lbrack{\\mathrm H}_2\\rbrack}^4\\lbrack{\\mathrm{CS}}_2\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ceff93438ed940dca8248dc6bfd5b316",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Rearrange to solve for [H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "S], substitute variables and calculate."
+                      }
+                    ],
+                    "id": "cad92800df15496db7e3360455895899",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "cd973e3220444ea7ac09f32b1f971193",
+                    "type": "p"
+                  }
+                ],
+                "id": "1589141795"
+              },
+              "id": "4123707353",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst concIndex1 = OLI.random(1, 4);\nconst array1 = [0.10,0.15,0.20,0.25,0.30]\nconst concCS2 = array1[concIndex1] .toFixed(2);\nconst concIndex2 = OLI.random(1, 4);\nconst array2 = [0.35,0.40,0.45,0.50,0.55]\nconst concH2 = array2[concIndex2] .toFixed(2);\nconst H2to4 = (concH2*concH2*concH2*concH2);\nconst corSt1 = ((0.03*H2to4*concCS2)/0.0015);\nconst correct = Math.sqrt(corSt1) .toPrecision(2);\nconst corLow = correct*0.98;\nconst corHigh = correct*1.02;\n\n// Expose variables to OLI\nmodule.exports = {\n concIndex1,\n array1,\n concCS2,\n concH2,\n corSt1,\n correct,\n corLow,\n corHigh\n};\n",
+              "id": "a409069fee16431d8f984a086d51143e",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The equilibrium constant ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": ") is 3.0×10"
+            },
+            {
+              "sup": true,
+              "text": "-2 "
+            },
+            {
+              "text": " for the following reaction: "
+            }
+          ],
+          "id": "efc2e91995624f5191b7b21718c677e1",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm{CS}}_2(g)\\;+\\;\\;4\\;{\\mathrm H}_2(g)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{CH}}_4(g)\\;+\\;2\\;{\\mathrm H}_2\\mathrm S(g)\\;\\;\\;",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "bc207e141f7c4fdfadb61d8b6fcd4208",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the partial pressure of H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "S at equilibrium, if the concentrations of the other species are determined to be:"
+            }
+          ],
+          "id": "a74e0a726a3b4767bae232b1fed4cde5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[CS"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] = @@concCS2@@ atm"
+            }
+          ],
+          "id": "e31f645e3be34e06b52facec1469fcde",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "] = @@concH2@@ atm"
+            }
+          ],
+          "id": "a04a65880f0b4124b2c455faa73e4fe5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[CH"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "] = 0.0015 atm"
+            }
+          ],
+          "id": "a9400363c5424f7cb26b86ef1bc54d48",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "S] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " atm"
+            }
+          ],
+          "id": "a65c833d05dc4e1ba22310ab59feecbf",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

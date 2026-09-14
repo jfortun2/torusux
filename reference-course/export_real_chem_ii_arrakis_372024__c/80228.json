@@ -1,0 +1,206 @@
+{
+  "id": "80228",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "isotope_review_digt-q5",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. With an atomic number of 50, the element is tin."
+                  }
+                ],
+                "id": "sk2fb9nk1ufu0j3",
+                "type": "p"
+              }
+            ],
+            "id": "2675420802"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zpitnabtzm09dma",
+                  "type": "p"
+                }
+              ],
+              "id": "1132337947"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dfv1p5s91oz8egt",
+                  "type": "p"
+                }
+              ],
+              "id": "2649367822"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "osr120pkx5vt5hy",
+                  "type": "p"
+                }
+              ],
+              "id": "1126188347"
+            }
+          ],
+          "id": "4024529945",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. With an atomic number of 50, the element is Sn."
+                      }
+                    ],
+                    "id": "1j2pp3ev892g75k",
+                    "type": "p"
+                  }
+                ],
+                "id": "777877760"
+              },
+              "id": "1107014510",
+              "legacyMatch": "tin",
+              "rule": "input iequals {tin}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. With an atomic number of 50, the element is tin."
+                      }
+                    ],
+                    "id": "8nvh3l4mmx8bv8v",
+                    "type": "p"
+                  }
+                ],
+                "id": "4059344517"
+              },
+              "id": "2626258917",
+              "legacyMatch": "Sn",
+              "rule": "input iequals {Sn}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The element's identity is given by its atomic number Z (left subscript)."
+                      }
+                    ],
+                    "id": "20rneyjhs94ax7s",
+                    "type": "p"
+                  }
+                ],
+                "id": "1508515454"
+              },
+              "id": "2536554996",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1txt",
+        "inputType": "text",
+        "partId": "4024529945"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "677145798",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "z1648acvesuusd4",
+              "text": ""
+            }
+          ],
+          "id": "2929984666",
+          "src": "{}_{\\;50}^{121}\\mathrm X",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1txt",
+              "input": "q1txt",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "u3g8ngt7a0rftre",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "4024529945": [
+      "78520"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,295 @@
+{
+  "id": "79049",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78147"
+  ],
+  "title": "battery_fuel_cell_pool_v3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "3962289231"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "qef7yue8kpw8nn2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "xl5ne6qxvgkm9a6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "ebjkow3e545lta8",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "nyks1qqlesfckib",
+                        "text": "Single-use batteries cannot be recharged and are referred to as primary batteries."
+                      }
+                    ],
+                    "id": "bg0jbodiiy20fi6",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "k00uquckabncifd",
+                        "text": "A zinc-carbon battery, the dry cell, is a common primary battery."
+                      }
+                    ],
+                    "id": "zsjlwf16o0l41em",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "j0gs595g9wcpdjz",
+                        "text": "Rechargeable batteries are referred to as secondary batteries."
+                      }
+                    ],
+                    "id": "60oshlprgikwc54",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ak4zgdq4ssdu7ik",
+                        "text": "Lithium ion batteries are one of the most popular rechargeable batteries."
+                      }
+                    ],
+                    "id": "iesce68qnlfz5dp",
+                    "type": "li"
+                  }
+                ],
+                "id": "nftymh17xzy6mvl",
+                "type": "ul"
+              }
+            ],
+            "id": "886312984"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bn8sgcvu61d2ozu",
+                  "type": "p"
+                }
+              ],
+              "id": "3189573115"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yssovvd8xa4z5s5",
+                  "type": "p"
+                }
+              ],
+              "id": "979892876"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4wpkcdtwpbukz0s",
+                  "type": "p"
+                }
+              ],
+              "id": "47237901"
+            }
+          ],
+          "id": "d4ac22472a7848e8bcc38e8687f6a11e",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "dd34b5598b0c40edaf0a569a7df0a4ad",
+                    "type": "p"
+                  }
+                ],
+                "id": "3458465753"
+              },
+              "id": "3962289231",
+              "legacyMatch": "A,B,C,D",
+              "rule": "(!(input like {E})) && (input like {D} && (input like {C} && (input like {B} && (input like {A}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are four correct answers."
+                      }
+                    ],
+                    "id": "c4c13030e753499686a308fd3902ea17",
+                    "type": "p"
+                  }
+                ],
+                "id": "3259262235"
+              },
+              "id": "2187787584",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Single-use batteries cannot be recharged and are referred to as primary batteries."
+              }
+            ],
+            "id": "9ocole8heitpmux",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A zinc-carbon battery, the dry cell, is a common primary battery. "
+              }
+            ],
+            "id": "o5z6ndk3ae7rimv",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rechargeable batteries are referred to as secondary batteries. "
+              }
+            ],
+            "id": "9dx13hj9g5yloyq",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Lithium ion batteries are one of the most popular rechargeable batteries. "
+              }
+            ],
+            "id": "dp7ud7y1d6l4lzg",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "For different-sized batteries of the same type, the larger the battery the higher the voltage. "
+              }
+            ],
+            "id": "evsskhqt33ez61q",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements are true for batteries? Select all that apply."
+            }
+          ],
+          "id": "c2b35a261ca64375a99c06823e956468",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "d4ac22472a7848e8bcc38e8687f6a11e": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

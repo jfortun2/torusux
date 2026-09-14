@@ -1,0 +1,247 @@
+{
+  "id": "80219",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78069"
+  ],
+  "title": "calc_pH_strong_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "@@m@@\\;\\mathrm g\\;\\mathrm{NaOH}\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{NaOH}}{40.0\\;\\mathrm g\\;\\mathrm{NaOH}}\\;=\\;@@mass2Mol@@\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\\\\\lbrack\\mathrm{NaOH}\\rbrack\\;=\\;\\frac{@@mass2Mol@@\\;\\mathrm{mol}\\;\\mathrm{NaOH}}{@@volInLiter@@\\;\\mathrm L\\;\\mathrm{solution}}\\;=\\;@@conc@@\\;\\mathrm M\\\\\\lbrack\\mathrm{NaOH}\\rbrack\\;=\\;\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log(@@conc@@)\\;=\\;@@pOH@@\\;\\\\\\mathrm{pH}\\;=\\;14\\;-\\;\\mathrm{pOH}\\;=\\;14\\;-\\;@@pOH@@\\;=\\;@@pH@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " This substance is a strong base, which means the species ionizes completely, and the pOH is calculated directly from the hydroxide concentration and pH + pOH = 14."
+                  }
+                ],
+                "id": "5t4age69zz4hgzl",
+                "type": "p"
+              }
+            ],
+            "id": "956181165"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fvw5so73w5hadv7",
+                  "type": "p"
+                }
+              ],
+              "id": "1490969902"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j1bd55foym03n3z",
+                  "type": "p"
+                }
+              ],
+              "id": "2135763351"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gt5l5umcf50v310",
+                  "type": "p"
+                }
+              ],
+              "id": "286741100"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "@@m@@\\;\\mathrm g\\;\\mathrm{NaOH}\\times\\;\\frac{1\\;\\mathrm{mol}\\;\\mathrm{NaOH}}{40.0\\;\\mathrm g\\;\\mathrm{NaOH}}\\;=\\;@@mass2Mol@@\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\\\\\lbrack\\mathrm{NaOH}\\rbrack\\;=\\;\\frac{@@mass2Mol@@\\;\\mathrm{mol}\\;\\mathrm{NaOH}}{@@volInLiter@@\\;\\mathrm L\\;\\mathrm{solution}}\\;=\\;@@conc@@\\;\\mathrm M\\\\\\lbrack\\mathrm{NaOH}\\rbrack\\;=\\;\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;-\\log(@@conc@@)\\;=\\;@@pOH@@\\;\\\\\\mathrm{pH}\\;=\\;14\\;-\\;\\mathrm{pOH}\\;=\\;14\\;-\\;@@pOH@@\\;=\\;@@pH@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " This substance is a strong base, which means the species ionizes completely, and the pOH is calculated directly from the hydroxide concentration and pH + pOH = 14."
+                      }
+                    ],
+                    "id": "a0aa425ca4fd42f9a081091396bf85d3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1582274179"
+              },
+              "id": "2482593488",
+              "legacyMatch": "[@@pHlow@@,@@pHhigh@@]",
+              "rule": "input = {[@@pHlow@@,@@pHhigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the given mass and volume to determine the concentration of the NaOH solution. NaOH is a strong base with a cation:anion of 1:1 meaning that the [OH-] is equal to the concentration of the NaOH solution. Use the following formulas to calculate the pH. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\text{pOH} = -\\log_{10}[\\text{OH}^-]",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "pH + pOH = 14"
+                          }
+                        ],
+                        "type": "callout_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "e8554dd639e04868aa0cd36c185e8fd8",
+                    "type": "p"
+                  }
+                ],
+                "id": "3967279905"
+              },
+              "id": "587376605",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst m = OLI.random(0.1,5,2) .toFixed(3);\nconst mass2Mol = (m/40) .toPrecision(4);\nconst array = [100.0, 150.0, 200.0, 250.0, 300.0, 250.0, 400.0, 450.0, 500.0];\nconst rand = OLI.random(0,8);\nconst vol = array[rand] .toPrecision(4);\nconst volInLiter = (vol/1000) .toPrecision(3);\nconst conc = (m/40/vol*1000) .toPrecision(3);\nconst pOH = -Math.log10(conc) .toPrecision(4);\nconst pH = 14 - pOH .toPrecision(3);\nconst pHlow = 0.98*pH;\nconst pHhigh = 1.02*pH;\n// Expose variables to OLI\nmodule.exports = {\n  m,\n  mass2Mol,\n  volInLiter,\n  array,\n  rand,\n  vol,\n  conc,\n  pOH,\n  pH,\n  pHlow,\n  pHhigh\n};\n",
+              "id": "c5fcae249ecf40e281331db6594fa26c",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of a solution made by dissolving @@m@@ g of NaOH in @@vol@@ mL of water."
+            }
+          ],
+          "id": "fdcc56074c934d9298284043cf2c71c6",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "c7cf5bcc9d204356a1c45d9391f58b9e",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

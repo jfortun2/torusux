@@ -1,0 +1,684 @@
+{
+  "id": "78708",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78262"
+  ],
+  "title": "po6_UA_nuclear_kinetics_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "t_{1/2}\\;=\\;\\frac{\\ln\\;2}{\\lambda\\;}\\;=\\;\\frac{0.693}{0.0456\\;\\min^{-1}}\\;=\\;15.2\\;\\min",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "tzeo0ofeyv843v4",
+                "type": "p"
+              }
+            ],
+            "id": "3221484053"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vff698lz3o5vbgq",
+                  "type": "p"
+                }
+              ],
+              "id": "2336998871"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w3pcv2pxiu5t8d6",
+                  "type": "p"
+                }
+              ],
+              "id": "1586701032"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mpe09wvthbdkg6y",
+                  "type": "p"
+                }
+              ],
+              "id": "2508444800"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t_{1/2}\\;=\\;\\frac{\\ln\\;2}{\\lambda\\;}\\;=\\;\\frac{0.693}{0.0456\\;\\min^{-1}}\\;=\\;15.2\\;\\min",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "fzwr3xl0a96rwjh",
+                    "type": "p"
+                  }
+                ],
+                "id": "2244326359"
+              },
+              "id": "2894447147",
+              "legacyMatch": "[15.1,15.3]",
+              "rule": "input = {[15.1,15.3]}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the relationship between decay constant ("
+                      },
+                      {
+                        "em": true,
+                        "text": "λ"
+                      },
+                      {
+                        "text": ") and half-life ("
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "1/2"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "ldpq6ifwgzftt3m",
+                    "type": "p"
+                  }
+                ],
+                "id": "2706293044"
+              },
+              "id": "3804550550",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "1phdb4noef2j4jh",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "When @@PerDecaysf@@% has decayed, @@PerLeftsf@@% is left. Then:"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "t\\;=\\;-\\;\\frac1\\lambda\\ln\\left(\\frac{N_t}{N_0}\\right)\\\\=\\;-\\;\\left(\\frac1{0.0456\\;\\min^{-1}}\\right)\\cdot\\ln\\left(\\frac{@@PerLeftsf@@\\%}{100.0\\%}\\right)\\\\=\\;@@Timesf@@\\;\\min",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2779627763",
+                "type": "p"
+              }
+            ],
+            "id": "1754819387"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t8qtgh5f8ynuq51",
+                  "type": "p"
+                }
+              ],
+              "id": "1858829170"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yvw3xijqjpg2t92",
+                  "type": "p"
+                }
+              ],
+              "id": "3177604979"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "omf7w6u1n95par7",
+                  "type": "p"
+                }
+              ],
+              "id": "1271844144"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When @@PerDecaysf@@% has decayed, @@PerLeftsf@@% is left. Then:"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t\\;=\\;-\\;\\frac1\\lambda\\ln\\left(\\frac{N_t}{N_0}\\right)\\\\=\\;-\\;\\left(\\frac1{0.0456\\;\\min^{-1}}\\right)\\cdot\\ln\\left(\\frac{@@PerLeftsf@@\\%}{100.0\\%}\\right)\\\\=\\;@@Timesf@@\\;\\min",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "i1hxwmgvb07zl49",
+                    "type": "p"
+                  }
+                ],
+                "id": "3758236920"
+              },
+              "id": "593850974",
+              "legacyMatch": "[@@TimeLow@@,@@TimeHigh@@]",
+              "rule": "input = {[@@TimeLow@@,@@TimeHigh@@]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the relationship between time ("
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": "), initial amount ("
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "sub": true,
+                        "text": "0"
+                      },
+                      {
+                        "text": "), and amount remaining at time "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " ("
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": "). Note that when @@PerDecaysf@@% has decayed, @@PerLeftsf@@% is left. "
+                      }
+                    ],
+                    "id": "6xbt8n74jea8nhn",
+                    "type": "p"
+                  }
+                ],
+                "id": "1773732974"
+              },
+              "id": "3202811130",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "activity\\;=\\;decay\\;rate\\;\\left(\\mathrm{in}\\;\\frac{\\mathrm{decays}}{\\mathrm s}\\right)\\;=\\;\\lambda\\cdot N\\\\ =\\;\\left(\\frac{0.0456}\\min\\right)\\cdot\\left(\\frac{1\\;\\min}{60\\;\\mathrm s}\\right)\\cdot\\left(@@Masssf@@\\;\\mathrm{mg}\\right)\\cdot\\left(\\frac{1\\;\\mathrm g} {1000\\;\\mathrm{mg}}\\right)\\cdot\\left(\\frac{1\\;\\mathrm{mol}\\;{}^{65}\\mathrm{Ga}}{65\\;\\mathrm g}\\right)\\cdot\\left(\\frac{6.022\\times10^{23}\\;\\mathrm{Ga}\\;\\mathrm{atoms}} {1\\;\\mathrm{mol}\\;\\mathrm{Ga}}\\right)\\cdot\\left(\\frac{1\\;\\mathrm{decay}}{1\\;\\mathrm{Ga}\\;\\mathrm{atom}}\\right)\\\\=@@Activitysf@@\\;\\frac{\\mathrm{decays}}{\\mathrm s}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "e7adkvzlrj0hl0p",
+                "type": "p"
+              }
+            ],
+            "id": "3217020759"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u63nqstupbtttb3",
+                  "type": "p"
+                }
+              ],
+              "id": "1920143797"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tmrlh21tg87xbk7",
+                  "type": "p"
+                }
+              ],
+              "id": "2689746057"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q5dyqo5gmxku0b4",
+                  "type": "p"
+                }
+              ],
+              "id": "3014611138"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Use Activity = λ"
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "text": ", with λ in /s and "
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "text": " in decays:"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "activity\\;=\\;decay\\;rate\\;\\left(\\mathrm{in}\\;\\frac{\\mathrm{decays}}{\\mathrm s}\\right)\\;=\\;\\lambda\\cdot N\\\\ =\\;\\left(\\frac{0.0456}\\min\\right)\\cdot\\left(\\frac{1\\;\\min}{60\\;\\mathrm s}\\right)\\cdot\\left(@@Masssf@@\\;\\mathrm{mg}\\right)\\cdot\\left(\\frac{1\\;\\mathrm g} {1000\\;\\mathrm{mg}}\\right)\\cdot\\left(\\frac{1\\;\\mathrm{mol}\\;{}^{65}\\mathrm{Ga}}{65\\;\\mathrm g}\\right)\\cdot\\left(\\frac{6.022\\times10^{23}\\;\\mathrm{Ga}\\;\\mathrm{atoms}} {1\\;\\mathrm{mol}\\;\\mathrm{Ga}}\\right)\\cdot\\left(\\frac{1\\;\\mathrm{decay}}{1\\;\\mathrm{Ga}\\;\\mathrm{atom}}\\right)\\\\=@@Activitysf@@\\;\\frac{\\mathrm{decays}}{\\mathrm s}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "kwy8r6202008dhw",
+                    "type": "p"
+                  }
+                ],
+                "id": "211518506"
+              },
+              "id": "3642479384",
+              "legacyMatch": "[@@ActLow@@,@@ActHigh@@]",
+              "rule": "input = {[@@ActLow@@,@@ActHigh@@]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that activity is the nuclear decay rate. Use the relationship between the activity, the decay constant ("
+                      },
+                      {
+                        "em": true,
+                        "text": "λ"
+                      },
+                      {
+                        "text": "), and the number of nuclei ("
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "text": ") along with the appropriate conversion factors."
+                      }
+                    ],
+                    "id": "5cdw7g38qs8g3kf",
+                    "type": "p"
+                  }
+                ],
+                "id": "2536836427"
+              },
+              "id": "1046022103",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The isotope 65Ga undergoes radioactive decay, with decay constant λ = 0.0456/min. What is the half-life of 65Ga?  minHow long will it take for @@PerDecaysf@@% of a sample of 65Ga to decay?  minWhat is the activity (decay rate) for @@Mass@@ mg Ga-65?  decays/s",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst PerArray = [30,35,40,45,55,60,65,70,80,85];\nconst PerIndex = OLI.random(0,9);\nconst PerDecay = PerArray[PerIndex];\nconst PerDecaysf = PerDecay .toPrecision(3);\nconst PerLeft = 100-PerDecay;\nconst PerLeftsf= PerLeft .toPrecision(3);\nconst PerRatio = (PerLeft/100);\nconst lnPart = Math.log(PerRatio);\nconst Time = -lnPart/0.0456;\nconst Timesf = Time .toPrecision(3);\nconst TimeLow = Time*0.97;\nconst TimeHigh = Time*1.03;\n\nconst MassArray = [4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5];\nconst MassIndex = OLI.random(0,10);\nconst Mass = MassArray[MassIndex];\nconst Masssf = Mass .toPrecision(3);\nconst AtomsCoeff = Mass*0.92646;\nconst AtomsCoeffsf = AtomsCoeff .toPrecision(3);\nconst Activity = Mass*7.0411e15;\nconst ActivityCoeff = Mass*0.70411;\nconst ActivityCoeffsf = ActivityCoeff .toPrecision(3);\nconst ActLow = Activity*0.97;\nconst ActHigh = Activity*1.03;\n\n// Expose variables to OLI\nmodule.exports = {\n PerArray, \n PerIndex, \n PerDecay, \n PerDecaysf, \n PerLeft, \n PerLeftsf, \n PerRatio, \n lnPart, \n Time, \n Timesf, \n TimeLow, \n TimeHigh, \n MassArray, \n MassIndex, \n Mass, \n Masssf,\n AtomsCoeff,\n AtomsCoeffsf,\n Activity, \n ActivityCoeff, \n ActivityCoeffsf, \n ActLow, \n ActHigh\n};\n",
+              "id": "b473601d79444cf2a2e2f860326c3a45",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The isotope "
+            },
+            {
+              "sup": true,
+              "text": "65"
+            },
+            {
+              "text": "Ga undergoes radioactive decay, with decay constant λ = 0.0456/min. "
+            }
+          ],
+          "id": "19k3ig7f9yunmon",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the half-life of "
+            },
+            {
+              "sup": true,
+              "text": "65"
+            },
+            {
+              "text": "Ga? "
+            }
+          ],
+          "id": "htsey3suqs9uwig",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " min"
+            }
+          ],
+          "id": "135462994",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "How long will it take for @@PerDecaysf@@% of a sample of "
+            },
+            {
+              "sup": true,
+              "text": "65"
+            },
+            {
+              "text": "Ga to decay? "
+            }
+          ],
+          "id": "9uxdsxjjlpdjurl",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " min"
+            }
+          ],
+          "id": "1420468475",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the activity (decay rate) for @@Mass@@ mg Ga-65? "
+            }
+          ],
+          "id": "01cu94r95qiqmg9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            },
+            {
+              "text": " decays/s"
+            }
+          ],
+          "id": "29863737",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

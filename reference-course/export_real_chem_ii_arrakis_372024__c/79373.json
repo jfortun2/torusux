@@ -1,0 +1,209 @@
+{
+  "id": "79373",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78207"
+  ],
+  "title": "geom_isomer_pool1_v4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "589812573",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2089045111",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "950472547",
+          "incorrectScore": null,
+          "outOf": 6,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Four NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " ligands are named tetraammine, two Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ligands are named dibromo, and these are written in alphabetical order. The central metal atom is V"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": ", written as vanadium(II). The prefix cis- is used to indicate the two Br"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ions are next to each other. "
+                      }
+                    ],
+                    "id": "232196698",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "This compound is named: cis-tetraamminedibromovanadium(II)"
+                      }
+                    ],
+                    "id": "9uyf8u0fje5eq2b",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3384501324",
+                "textDirection": "ltr"
+              },
+              "id": "2210016826",
+              "rule": "input like {cis-tetraamminedibromovanadium(II)}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the ligands and determine the charge of the metal ion. Write the names of the ligands in alphabetical order, with prefixes indicating the number of each. Write the name of the central metal next, with a Roman numeral indicating its charge. Add a prefix at the beginning of the complex name to indicate the geometric arrangement of the ligands."
+                      }
+                    ],
+                    "id": "2091152982",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3254792455",
+                "textDirection": "ltr"
+              },
+              "id": "1421864964",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Interpret the structure to write the name and chemical formula of the coordination compound shown below.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1877984594",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "2057817574",
+        "inputType": "text",
+        "partId": "950472547",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Interpret the structure to write the name and chemical formula of the coordination compound shown below."
+            }
+          ],
+          "id": "1606688883",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "fko2btxy1fugfpn",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "0hbtvmf3u9z261b",
+              "text": ""
+            }
+          ],
+          "display": "block",
+          "height": 204,
+          "id": "3003914734",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/D7/D74A1E692384317E8260CDF43CD09777/GeomIsomersV4.png",
+          "type": "img",
+          "width": 200
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2057817574",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "962763268",
+          "type": "p"
+        }
+      ],
+      "id": "3422860453"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "950472547": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

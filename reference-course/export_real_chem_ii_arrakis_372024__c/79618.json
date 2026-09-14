@@ -1,0 +1,476 @@
+{
+  "id": "79618",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "rate_law_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "s4lr9yqqxd4l2js",
+                  "type": "p"
+                }
+              ],
+              "id": "230822601"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r9fzopgfk8tjpk8",
+                  "type": "p"
+                }
+              ],
+              "id": "1012085259"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "up1m57kfv5u35lw",
+                  "type": "p"
+                }
+              ],
+              "id": "1090197730"
+            }
+          ],
+          "id": "879211079",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Because the reaction is second order in ClO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ", [ClO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "] has a superscript 2, and because the reaction is first order in OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": ", [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "] has an implied superscript 1. "
+                      }
+                    ],
+                    "id": "a4uytsspdsx9yy2",
+                    "type": "p"
+                  }
+                ],
+                "id": "3092288002"
+              },
+              "id": "1972013575",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Note that the coefficients in the balanced equation do not indicate the order of a substance in the rate law."
+                      }
+                    ],
+                    "id": "ayu6yqts5chiv57",
+                    "type": "p"
+                  }
+                ],
+                "id": "2478471735"
+              },
+              "id": "935839872",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The superscripted value next to each reactant in the rate law indicates its order."
+                      }
+                    ],
+                    "id": "l47zmbu5in5wiq5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3544733653"
+              },
+              "id": "2852130844",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The superscripted value next to each reactant in the rate law indicates its order. "
+                      }
+                    ],
+                    "id": "a4gby3d8ipjds1w",
+                    "type": "p"
+                  }
+                ],
+                "id": "1561009545"
+              },
+              "id": "1251505767",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "u9wls6iqtpi3x3x",
+                    "type": "p"
+                  }
+                ],
+                "id": "117008436"
+              },
+              "id": "1547170368",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1972013575"
+            ],
+            [
+              [
+                "B"
+              ],
+              "935839872"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2852130844"
+            ],
+            [
+              [
+                "D"
+              ],
+              "1251505767"
+            ]
+          ]
+        }
+      ],
+      "previewText": "For the following reaction: experimental data have shown that, under certain conditions, this reaction is second order with respect to ClO2 and first order with respect to OH−. Which of the following is the correct rate law for this reaction under these conditions?",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1972013575"
+        ],
+        [
+          [
+            "B"
+          ],
+          "935839872"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2852130844"
+        ],
+        [
+          [
+            "D"
+          ],
+          "1251505767"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "588707059",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[ClO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              },
+              {
+                "text": "[OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "ztyvyo0due2wgm7",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[ClO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              },
+              {
+                "text": "[OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              }
+            ],
+            "id": "wla8k8jgb1qtph3",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[ClO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "][OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              }
+            ],
+            "id": "gfiip5mf54ks42m",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[ClO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "][OH"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": "]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              }
+            ],
+            "id": "mhojfoj4l29tfuu",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the following reaction:"
+            }
+          ],
+          "id": "hdvli0mrd64azi7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "umqu045y8dv1xng",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "mphinbgrv9cmczw",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{ClO}}_2(aq)\\;+\\:2\\;\\mathrm{OH}^-(aq)\\;\\;\\rightarrow\\;\\;{\\mathrm{ClO}}_3^-(aq)\\;+\\;{\\mathrm{ClO}}_2^-(aq)\\; +\\;{\\mathrm H}_2\\mathrm O(l)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "experimental data have shown that, under certain conditions, this reaction is second order with respect to ClO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and first order with respect to OH"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": ". Which of the following is the correct rate law for this reaction under these conditions?"
+            }
+          ],
+          "id": "jqoc6oq7d68vyko",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "879211079": [
+      "78399"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,360 @@
+{
+  "id": "79278",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "gen_equilibrium_quiz-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6tgwwce1torgna6",
+                  "type": "p"
+                }
+              ],
+              "id": "712102261"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xsfh0g2nfno7ecv",
+                  "type": "p"
+                }
+              ],
+              "id": "3003499255"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "i78p73dnvwumljk",
+                  "type": "p"
+                }
+              ],
+              "id": "2073875397"
+            }
+          ],
+          "id": "3802838736",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solid substances are not included in the equilibrium expression."
+                      }
+                    ],
+                    "id": "lxaqbw1xktun5gh",
+                    "type": "p"
+                  }
+                ],
+                "id": "118021636"
+              },
+              "id": "914693026",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "8wibeda1l8e1fmf",
+                    "type": "p"
+                  }
+                ],
+                "id": "1365522269"
+              },
+              "id": "4171480977",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium expression is products/reactants."
+                      }
+                    ],
+                    "id": "algffaliak1cpta",
+                    "type": "p"
+                  }
+                ],
+                "id": "773896880"
+              },
+              "id": "657907485",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium expression is products/reactants. Also, solid substances are not included in the equilibrium expression."
+                      }
+                    ],
+                    "id": "s4ip1ky3pb6wt3e",
+                    "type": "p"
+                  }
+                ],
+                "id": "1942609735"
+              },
+              "id": "4192147424",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "94ooeawkwuz7c3y",
+                    "type": "p"
+                  }
+                ],
+                "id": "1483978535"
+              },
+              "id": "2958179056",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "914693026"
+            ],
+            [
+              [
+                "B"
+              ],
+              "4171480977"
+            ],
+            [
+              [
+                "C"
+              ],
+              "657907485"
+            ],
+            [
+              [
+                "D"
+              ],
+              "4192147424"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "914693026"
+        ],
+        [
+          [
+            "B"
+          ],
+          "4171480977"
+        ],
+        [
+          [
+            "C"
+          ],
+          "657907485"
+        ],
+        [
+          [
+            "D"
+          ],
+          "4192147424"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1462357885",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "{\\mathrm K}_\\mathrm P\\;=\\;\\;\\frac{({\\mathrm P}_\\mathrm{Ni})\\;({\\mathrm P}_\\mathrm{CO})^4}{{\\mathrm P}_{\\mathrm{Ni}(\\mathrm{CO})_4}}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "xvquuv8uvxab8lr",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "{\\mathrm K}_\\mathrm P\\;=\\;\\;\\frac{\\;({\\mathrm P}_\\mathrm{CO})^4}{{\\mathrm P}_{\\mathrm{Ni}(\\mathrm{CO})_4}}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "m62j6o8b1trvl8i",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "{\\mathrm K}_\\mathrm P\\;=\\;\\;\\frac{{\\mathrm P}_{\\mathrm{Ni}(\\mathrm{CO})_4}\\;}{({\\mathrm P}_\\mathrm{CO})^4}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "kae2c6zhh5l2l0d",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "{\\mathrm K}_\\mathrm P\\;=\\;\\;\\frac{{\\mathrm P}_{\\mathrm{Ni}(\\mathrm{CO})_4}\\;}{({\\mathrm P}_\\mathrm{CO})^4({\\mathrm P}_\\mathrm{Ni})}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "i9brngq3gqoiwb1",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is the correct equilibrium expression,"
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "P"
+            },
+            {
+              "text": ", for the following reaction:"
+            }
+          ],
+          "id": "2yz8qihp647g3i9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "gml9b2tivql11p3",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "voytj6tl7mhy3ru",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm{Ni}(\\mathrm{CO})_4(g)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Ni}(s)\\;+\\;4\\;\\mathrm{CO}(g)",
+          "subtype": "latex",
+          "type": "formula"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3802838736": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

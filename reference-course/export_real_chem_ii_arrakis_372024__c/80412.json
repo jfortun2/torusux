@@ -1,0 +1,206 @@
+{
+  "id": "80412",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "Disability or chronic condition",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "730927859",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1780988218",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3439345068",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "2084646360",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3289100832",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3914123526",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct"
+                      }
+                    ],
+                    "id": "1575460193",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2047123927",
+                "textDirection": "ltr"
+              },
+              "id": "3025004864",
+              "rule": "input like {3214893331}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect"
+                      }
+                    ],
+                    "id": "2607955117",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3991459740",
+                "textDirection": "ltr"
+              },
+              "id": "3205651115",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "11. Do you describe yourself as having a disability or chronic condition (whether sensory, physical, or mental) that substantially impacts engagement in major life activities?",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes"
+              }
+            ],
+            "id": "3642492176",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3214893331",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "480927500",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2514360257",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Prefer not to answer"
+              }
+            ],
+            "id": "2124600305",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "898102209",
+        "textDirection": "ltr"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "11. Do you describe yourself as having a "
+            },
+            {
+              "strong": true,
+              "text": "disability"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "strong": true,
+              "text": "chronic condition"
+            },
+            {
+              "text": " (whether sensory, physical, or mental) that substantially impacts engagement in major life activities?"
+            }
+          ],
+          "id": "1741934602",
+          "type": "p"
+        }
+      ],
+      "editor": "slate",
+      "id": "3366859063",
+      "textDirection": "ltr"
+    }
+  },
+  "objectives": {
+    "1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

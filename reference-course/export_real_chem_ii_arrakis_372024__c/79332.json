@@ -1,0 +1,267 @@
+{
+  "id": "79332",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "equil_calc_quiz-q7",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vyw1ldar52cbfxd",
+                  "type": "p"
+                }
+              ],
+              "id": "3358064312"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yxxzf9qnd3nl8dt",
+                  "type": "p"
+                }
+              ],
+              "id": "1918571439"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3kyo1m977df9gt1",
+                  "type": "p"
+                }
+              ],
+              "id": "395707227"
+            }
+          ],
+          "id": "992105041",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "rn3pay1n534sazn",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_P\\;=\\;(P_{{\\mathrm H}_2\\mathrm O})^{10}\\\\4.08\\times10^{-25}\\;=\\;(P_{{\\mathrm H}_2\\mathrm O}{)^{10}\\;\\;}\\\\P_{{\\mathrm H}_2\\mathrm O}\\;=\\;0.00364\\;\\mathrm{atm}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "rkecfe4roqq150w",
+                    "type": "p"
+                  }
+                ],
+                "id": "3446107796"
+              },
+              "id": "3165064904",
+              "legacyMatch": "[0.0036,0.0037]",
+              "rule": "input = {[0.0036,0.0037]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "0dg02rsfcj4euay",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_P\\;=\\;(P_{{\\mathrm H}_2\\mathrm O})^{10}\\\\4.08\\times10^{-25}\\;=\\;(P_{{\\mathrm H}_2\\mathrm O}{)^{10}\\;\\;}\\\\P_{{\\mathrm H}_2\\mathrm O}\\;=\\;0.00364\\;\\mathrm{atm}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "0odnz4ca4u0ceiw",
+                    "type": "p"
+                  }
+                ],
+                "id": "1841427122"
+              },
+              "id": "4181612305",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "ans",
+        "inputType": "numeric",
+        "partId": "992105041"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Sodium sulfate 10−hydrate, Na"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "·10H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O, dehydrates according to the equation:"
+            }
+          ],
+          "id": "10uicttv0surjln",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "hygu5qulma68yxm",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "k18nzyhy14ybem1",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm{Na}}_2{\\mathrm{SO}}_4⋅10{\\mathrm H}_2\\mathrm O(s)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{Na}}_2{\\mathrm{SO}}_4(s)\\;+\\;10\\;{\\mathrm H}_2\\mathrm O(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_P\\;=\\;4.08\\times10^{-25}\\;\\mathrm{at}\\;25^\\circ\\mathrm C",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What is the pressure of water vapor at equilibrium with a mixture of Na"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "·10H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "O and NaSO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "?"
+            }
+          ],
+          "id": "h5hdsp1n20fjcls",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "ans",
+              "input": "ans",
+              "type": "input_ref"
+            },
+            {
+              "text": "atm"
+            }
+          ],
+          "id": "mwn5w8qsqd9sire",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "992105041": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

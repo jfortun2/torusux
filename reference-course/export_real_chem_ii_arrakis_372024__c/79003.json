@@ -1,0 +1,475 @@
+{
+  "id": "79003",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "microstates_lbd1-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lcpcj82e3nhfk08",
+                  "type": "p"
+                }
+              ],
+              "id": "3806980399"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9vmevn1akyca768",
+                  "type": "p"
+                }
+              ],
+              "id": "117244759"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "73agfnq3kqv9rn8",
+                  "type": "p"
+                }
+              ],
+              "id": "1312625492"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The state with the most evenly distributed molecules has the highest entropy, and the one with the least even distribution has the lowest entropy."
+                      }
+                    ],
+                    "id": "lpimco2ri7e34qv",
+                    "type": "p"
+                  }
+                ],
+                "id": "3191519781"
+              },
+              "id": "4031866658",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This state has the most evenly distributed molecules, so it has the highest entropy. "
+                      }
+                    ],
+                    "id": "z28gzogrgznpud8",
+                    "type": "p"
+                  }
+                ],
+                "id": "1113071566"
+              },
+              "id": "454922410",
+              "legacyMatch": "B",
+              "rule": "input like {one_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The state with the most evenly distributed molecules has the highest entropy, and the one with the least even distribution has the lowest entropy."
+                      }
+                    ],
+                    "id": "8fsi3s0g8gw8e76",
+                    "type": "p"
+                  }
+                ],
+                "id": "1341623409"
+              },
+              "id": "894851287",
+              "legacyMatch": "C",
+              "rule": "input like {one_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "1wfdtz2vnavga42",
+                    "type": "p"
+                  }
+                ],
+                "id": "2932774098"
+              },
+              "id": "2306634114",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Entropy is a measure of disorder, which is related to how the particles are distributed."
+                    }
+                  ],
+                  "id": "ohdubjg5c5gu8py",
+                  "type": "p"
+                }
+              ],
+              "id": "1905551392"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The more evenly the particles are distributed, the higher the entropy; the less evenly they are distributed, the lower the entropy."
+                    }
+                  ],
+                  "id": "i5b3eyhn4xrm6kz",
+                  "type": "p"
+                }
+              ],
+              "id": "754199402"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "as0r7c4842800dr",
+                  "type": "p"
+                }
+              ],
+              "id": "855873244"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This state has the least evenly distributed molecules, so it has the lowest entropy."
+                      }
+                    ],
+                    "id": "nrbbrqphuo17r88",
+                    "type": "p"
+                  }
+                ],
+                "id": "3446505069"
+              },
+              "id": "1425530086",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "7wyrjjy77wk7keh",
+                    "type": "p"
+                  }
+                ],
+                "id": "949739509"
+              },
+              "id": "251411758",
+              "legacyMatch": "B",
+              "rule": "input like {two_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ger5nknhn8ttpwo",
+                    "type": "p"
+                  }
+                ],
+                "id": "3907358898"
+              },
+              "id": "2298631550",
+              "legacyMatch": "C",
+              "rule": "input like {two_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "pmene1xrvjlpyty",
+                    "type": "p"
+                  }
+                ],
+                "id": "2495576494"
+              },
+              "id": "1882535135",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Distributions of diatomic gas molecules between two connected containers with a hole between them are shown here: Which distribution corresponds to the maximum entropy? Which distribution corresponds to the minimum entropy? ",
+      "targeted": [
+        [
+          [
+            "one_A"
+          ],
+          "4031866658"
+        ],
+        [
+          [
+            "one_B"
+          ],
+          "454922410"
+        ],
+        [
+          [
+            "one_C"
+          ],
+          "894851287"
+        ],
+        [
+          [
+            "two_A"
+          ],
+          "1425530086"
+        ],
+        [
+          [
+            "two_B"
+          ],
+          "251411758"
+        ],
+        [
+          [
+            "two_C"
+          ],
+          "2298631550"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "5pi3cet7l5t15tq",
+            "text": "A "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "dekha12pf77zq2u",
+            "text": "B"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "lmgvxn414vty9ia",
+            "text": "C"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "1sceyf0x9br1er2",
+            "text": "A"
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "xrju3fra2miayhg",
+            "text": "B"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "e2l8b2m8eirz6rh",
+            "text": "C"
+          }
+        ],
+        "id": "two_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Distributions of diatomic gas molecules between two connected containers with a hole between them are shown here:"
+            }
+          ],
+          "id": "squik3dj1vlck0t",
+          "type": "p"
+        },
+        {
+          "alt": "   ",
+          "children": [
+            {
+              "id": "mnaoas0d5mfto2g",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "nvxp9d9cf8j4ahm",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/8c/8c8ac286c64d0a0dcc8453edfbed5a90/gas_particle_distribution_1.png",
+          "type": "img",
+          "width": "500"
+        },
+        {
+          "children": [
+            {
+              "text": "Which distribution corresponds to the maximum entropy? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "23p2kuvpum4tr3z",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Which distribution corresponds to the minimum entropy? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "ubgn6jtlcra11g3",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

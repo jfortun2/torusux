@@ -1,0 +1,334 @@
+{
+  "id": "78956",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "gen_equilibrium_quiz-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xqdzryfwwal0juu",
+                  "type": "p"
+                }
+              ],
+              "id": "4086849496"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1rg8hmwltsbpdzg",
+                  "type": "p"
+                }
+              ],
+              "id": "258656865"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u8lqvhjeeyh3p5j",
+                  "type": "p"
+                }
+              ],
+              "id": "1770862890"
+            }
+          ],
+          "id": "3424011744",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. At equilibrium the rate of the forward reaction is equal to the rate of the reverse reaction."
+                      }
+                    ],
+                    "id": "snuo3vvry0rmd31",
+                    "type": "p"
+                  }
+                ],
+                "id": "2801633056"
+              },
+              "id": "1410846721",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "pb9ekm2e6tesj72",
+                    "type": "p"
+                  }
+                ],
+                "id": "2779076614"
+              },
+              "id": "10128868",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium constant is temperature dependent."
+                      }
+                    ],
+                    "id": "fs0f0ddgu5in7vy",
+                    "type": "p"
+                  }
+                ],
+                "id": "2955808812"
+              },
+              "id": "50781004",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If △n = 0, then KP ="
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "c"
+                      }
+                    ],
+                    "id": "pwoscrsy6ztjplo",
+                    "type": "p"
+                  }
+                ],
+                "id": "3544391959"
+              },
+              "id": "4012522167",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "nvx611c6uf475s7",
+                    "type": "p"
+                  }
+                ],
+                "id": "4054891291"
+              },
+              "id": "370897633",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "1410846721"
+            ],
+            [
+              [
+                "B"
+              ],
+              "10128868"
+            ],
+            [
+              [
+                "C"
+              ],
+              "50781004"
+            ],
+            [
+              [
+                "D"
+              ],
+              "4012522167"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "1410846721"
+        ],
+        [
+          [
+            "B"
+          ],
+          "10128868"
+        ],
+        [
+          [
+            "C"
+          ],
+          "50781004"
+        ],
+        [
+          [
+            "D"
+          ],
+          "4012522167"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "831231404",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A large value for K indicates that at equilibrium the rate of the forward reaction is greater than the rate of the reverse reaction."
+              }
+            ],
+            "id": "qnx0ec10g1x1k58",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "A small value for K (less than 1) indicates that at equilibrium the concentration of reactants is greater than the concentration of products."
+              }
+            ],
+            "id": "2m0mdfn0krx0yec",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Values for the equilibrium constant are the same at all temperature."
+              }
+            ],
+            "id": "cdw5n6u91zqx5sz",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The values of"
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "c"
+              },
+              {
+                "text": "and"
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "P"
+              },
+              {
+                "text": "wil never be the same."
+              }
+            ],
+            "id": "gw9rd7wqhoimm01",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements is true with respect to the equilbrium constant (K)?"
+            }
+          ],
+          "id": "ek19wnpy72k5tln",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3424011744": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

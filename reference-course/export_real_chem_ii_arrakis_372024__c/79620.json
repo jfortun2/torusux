@@ -1,0 +1,527 @@
+{
+  "id": "79620",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "strength_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qpox1efn1ochiox",
+                  "type": "p"
+                }
+              ],
+              "id": "2459176053"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8wmq2dunaj0nx3i",
+                  "type": "p"
+                }
+              ],
+              "id": "3923363086"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w059mlouy78gc1n",
+                  "type": "p"
+                }
+              ],
+              "id": "1191887992"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      }
+                    ],
+                    "id": "ax945dr4d4weloh",
+                    "type": "p"
+                  }
+                ],
+                "id": "3726050589"
+              },
+              "id": "1570616686",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "dc19oryaciidp15",
+                    "type": "p"
+                  }
+                ],
+                "id": "4241916142"
+              },
+              "id": "1432164269",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "hn8t2exo44hv675",
+                    "type": "p"
+                  }
+                ],
+                "id": "1053224660"
+              },
+              "id": "335004538",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "sktl11fvt9xexvc",
+                  "type": "p"
+                }
+              ],
+              "id": "4181132869"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "er6blijxegz1aam",
+                  "type": "p"
+                }
+              ],
+              "id": "1468195286"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "44iiulmseof3hpy",
+                  "type": "p"
+                }
+              ],
+              "id": "1001606441"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. With the equation for the acid ionization constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": ", "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{a}=\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Because a strong acid nearly completely ionizes, the [H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] and [A"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "] are much greater than [HA], and therefore "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " is a large value. "
+                      }
+                    ],
+                    "id": "lleiw61mnxoru12",
+                    "type": "p"
+                  }
+                ],
+                "id": "1350142393"
+              },
+              "id": "2661369188",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. With the equation for the acid ionization constant, "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": ", "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{a}=\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Because a strong acid nearly completely ionizes, the [H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] and [A"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": "] are much greater than [HA], and therefore "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " is a large value. "
+                      }
+                    ],
+                    "id": "qak7zg2zrzevodo",
+                    "type": "p"
+                  }
+                ],
+                "id": "1172708628"
+              },
+              "id": "2682553505",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ni5mefi7e16d79h",
+                    "type": "p"
+                  }
+                ],
+                "id": "4193000342"
+              },
+              "id": "153096394",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " The stronger the acid, the  the value of Ka because the stronger the acid, the  it ionizes. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "1570616686"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1432164269"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "2661369188"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "2682553505"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "303021694",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "3602965579",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "orbbdmbutclzhb5",
+            "text": "greater "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "x177dq3z9h3992z",
+            "text": "lesser"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "dhnj8i7kxv8mdx9",
+            "text": "more"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "m86fmxeokqsvzj9",
+            "text": "less"
+          }
+        ],
+        "id": "second_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " The "
+            },
+            {
+              "strong": true,
+              "text": "stronger"
+            },
+            {
+              "text": " the acid, the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the value of "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "a"
+            },
+            {
+              "text": " because the "
+            },
+            {
+              "strong": true,
+              "text": "stronger"
+            },
+            {
+              "text": " the acid, the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " it ionizes. "
+            }
+          ],
+          "id": "mxob03f6zegumww",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78389"
+    ],
+    "second": [
+      "78389"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

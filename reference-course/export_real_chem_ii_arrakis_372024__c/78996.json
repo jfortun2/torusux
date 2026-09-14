@@ -1,0 +1,243 @@
+{
+  "id": "78996",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "direction_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a2uoc76u43ib26k",
+                  "type": "p"
+                }
+              ],
+              "id": "4265824853"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "k62fmb13pbm858l",
+                  "type": "p"
+                }
+              ],
+              "id": "4049334232"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qg90pjixr1kaogh",
+                  "type": "p"
+                }
+              ],
+              "id": "3107040107"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " > "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", the reaction will shift to the left to reach equilibrium. "
+                      }
+                    ],
+                    "id": "o897ajnjq7ezcen",
+                    "type": "p"
+                  }
+                ],
+                "id": "13884192"
+              },
+              "id": "1247822776",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " > "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", the reaction will shift to the left to reach equilibrium."
+                      }
+                    ],
+                    "id": "99k08fbyqxr6fi3",
+                    "type": "p"
+                  }
+                ],
+                "id": "3819236778"
+              },
+              "id": "921823480",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "gn5xvoagz2w4q2y",
+                    "type": "p"
+                  }
+                ],
+                "id": "2444624172"
+              },
+              "id": "3202249196",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "1247822776"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "921823480"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1050737187",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "bn7u32ynoucrglk",
+            "text": "shift to the right "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "t8uvqmi4hzv85zp",
+            "text": "shift to the left"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The reaction will "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " to reach equilibrium. "
+            }
+          ],
+          "id": "mfz86hr1k7w1cn0",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78472"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,210 @@
+{
+  "id": "80173",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78207"
+  ],
+  "title": "geom_isomer_pool1_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1578383892",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "385130775",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1713454430",
+          "incorrectScore": null,
+          "outOf": 6,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Four H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O ligands are named tetraaqua, two OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ligands are named dihydroxo,                            and these are written in alphabetical order. The central metal atom is Fe"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": ", written as iron(II). The prefix trans- is used to indicate the two OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ions are opposite each other."
+                      }
+                    ],
+                    "id": "3670196526",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "This compound is named: trans-tetraaquadihydroxoiron(II)"
+                      }
+                    ],
+                    "id": "iys3nst9wqwyca5",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1262672900",
+                "textDirection": "ltr"
+              },
+              "id": "2330196615",
+              "rule": "input like {trans-tetraaquadihydroxoiron(II)}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the ligands and determine the charge of the metal ion. Write the names of the ligands in alphabetical order, with prefixes indicating the number of each. Write the name of the central metal next, with a Roman numeral indicating its charge. Add a prefix at the beginning of the complex name to indicate the geometric arrangement of the ligands."
+                      }
+                    ],
+                    "id": "883494003",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1803332184",
+                "textDirection": "ltr"
+              },
+              "id": "1812486780",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Interpret the structure to write the name and chemical formula of the coordination compound shown below.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "2299620817",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "127532432",
+        "inputType": "text",
+        "partId": "1713454430",
+        "size": "large"
+      }
+    ],
+    "scoringStrategy": "average",
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Interpret the structure to write the name and chemical formula of the coordination compound shown below."
+            }
+          ],
+          "id": "4122203317",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "qwqy4cr87ryde2j",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "n1wkymximy82pku",
+              "text": ""
+            }
+          ],
+          "display": "block",
+          "height": 223.5,
+          "id": "4032827643",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/6A/6ACA1BF02293B5B063184821D7BD22EB/GeomIsomersV1.png",
+          "type": "img",
+          "width": 200
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "127532432",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "3429631531",
+          "type": "p"
+        }
+      ],
+      "id": "2233098626"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1713454430": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

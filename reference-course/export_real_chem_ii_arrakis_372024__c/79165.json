@@ -1,0 +1,216 @@
+{
+  "id": "79165",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "nonstandard_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The two balanced half-reactions and the overall reaction are: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\mathrm{Oxidation}:\\;2\\;\\mathrm{Al}(s)\\;\\;\\rightarrow\\;\\;2\\;\\mathrm{Al}^{3+}(aq)\\;+\\boxed{\\;6\\;\\mathrm e^-}\\\\\\underline{\\mathrm{Reduction}:\\;3\\;\\mathrm{Cu}^{2+}(aq)\\;+\\boxed{\\;6\\;\\mathrm e^-}\\;\\rightarrow\\;3\\;\\mathrm{Cu}(s)}\\\\\\mathrm{Overall}:\\;\\;\\;2\\;\\mathrm{Al}(s)\\;+\\;3\\;\\mathrm{Cu}^{2+}(aq)\\;\\;\\rightarrow\\;\\;2\\;\\mathrm{Al}^{3+}(aq)\\;+\\;3\\;\\mathrm{Cu}(s)\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "pie0ep1i34i57pb",
+                "type": "p"
+              }
+            ],
+            "id": "3677286265"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "22fpwdaain4dh8s",
+                  "type": "p"
+                }
+              ],
+              "id": "4024477790"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "58olo8tcccsykl2",
+                  "type": "p"
+                }
+              ],
+              "id": "3052122449"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "n0lyykiaiipgw5c",
+                  "type": "p"
+                }
+              ],
+              "id": "3554023935"
+            }
+          ],
+          "id": "807213673",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The two balanced half-reactions and the overall reaction are: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\mathrm{Oxidation}:\\;2\\;\\mathrm{Al}(s)\\;\\;\\rightarrow\\;\\;2\\;\\mathrm{Al}^{3+}(aq)\\;+\\boxed{\\;6\\;\\mathrm e^-}\\\\\\underline{\\mathrm{Reduction}:\\;3\\;\\mathrm{Cu}^{2+}(aq)\\;+\\boxed{\\;6\\;\\mathrm e^-}\\;\\rightarrow\\;3\\;\\mathrm{Cu}(s)}\\\\\\mathrm{Overall}:\\;\\;\\;2\\;\\mathrm{Al}(s)\\;+\\;3\\;\\mathrm{Cu}^{2+}(aq)\\;\\;\\rightarrow\\;\\;2\\;\\mathrm{Al}^{3+}(aq)\\;+\\;3\\;\\mathrm{Cu}(s)\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "oqv2qunglxndyj8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2385702369"
+              },
+              "id": "1325214307",
+              "legacyMatch": "6",
+              "rule": "input = {6}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Balance the overall reaction to determine the number of electrons transferred."
+                      }
+                    ],
+                    "id": "5msl775rsjijcp6",
+                    "type": "p"
+                  }
+                ],
+                "id": "910607517"
+              },
+              "id": "4141550187",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "807213673",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " First determine "
+            },
+            {
+              "em": true,
+              "text": "n"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "84u0oae0oyn6lqa",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "n"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "o744cw63n9oggux",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "807213673": [
+      "78527"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

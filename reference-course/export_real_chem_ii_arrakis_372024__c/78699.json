@@ -1,0 +1,325 @@
+{
+  "id": "78699",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "balance_acidic_lbd-q3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "C",
+          "D",
+          "F"
+        ],
+        "306372832"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "2"
+                    },
+                    {
+                      "text": "O is added to balance O, H"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": " is added to balance H, and electrons are added to balance charge."
+                    }
+                  ],
+                  "id": "eiad5xriy3ydsqn",
+                  "type": "p"
+                }
+              ],
+              "id": "2483902051"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "musxkxm6ks1cll4",
+                  "type": "p"
+                }
+              ],
+              "id": "2293303613"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xh07sjrbfv519mz",
+                  "type": "p"
+                }
+              ],
+              "id": "2762068847"
+            }
+          ],
+          "id": "49210142",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O is added to the right side to balance O, H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is added to the left to balance H, and electrons are added to the left to balance charge."
+                      }
+                    ],
+                    "id": "raq26nm5fwr2bc6",
+                    "type": "p"
+                  }
+                ],
+                "id": "3178766682"
+              },
+              "id": "306372832",
+              "legacyMatch": "C,D,F",
+              "rule": "(!(input like {G})) && ((!(input like {E})) && ((!(input like {B})) && ((!(input like {A})) && (input like {F} && (input like {D} && (input like {C}))))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Check the hint and try again."
+                      }
+                    ],
+                    "id": "az18uv63jkso039",
+                    "type": "p"
+                  }
+                ],
+                "id": "2209610800"
+              },
+              "id": "644021010",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Half-Reactions What needs to be done to the reduction half-reaction to balance it? Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Change a coefficient to balance an element other than H or O."
+              }
+            ],
+            "id": "vpr45b1jaav8sld",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O to the left side of the equation."
+              }
+            ],
+            "id": "s82861nink2lp09",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O to the right side of the equation."
+              }
+            ],
+            "id": "d78e3xaqa5gp66g",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " to the left side of the equation."
+              }
+            ],
+            "id": "ktewuyfyay4uiw5",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add H"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " to the right side of the equation."
+              }
+            ],
+            "id": "dcrq8pc16h9udew",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add electrons to the left side of the equation."
+              }
+            ],
+            "id": "eb86ap1pxdcdu9p",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Add electrons to the right side of the equation."
+              }
+            ],
+            "id": "f6suba16cxzbux8",
+            "type": "p"
+          }
+        ],
+        "id": "G"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Half-Reactions"
+            }
+          ],
+          "id": "5cpy0u8dmwb21ff",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "xz0zvpn6fxmiys9",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "q8w6pwc5mmo4m59",
+          "legacyBlockRendered": "true",
+          "src": "\\begin{array}{l}\\mathrm{Oxidation}\\;(\\mathrm{unbalanced}):\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\mathrm{Cu}(s)\\;\\;\\rightarrow\\;\\;\\mathrm{Cu}^{2+}(aq)\\\\\\mathrm{Reduction}\\;(\\mathrm{unbalanced}): \\;\\;\\;\\;{\\mathrm H}_2{\\mathrm{SO}}_3(aq)\\;\\;\\rightarrow\\;\\;\\mathrm S(s)\\end{array}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "What needs to be done to the reduction half-reaction to balance it? "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "2f4bqic5xdelw66",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "49210142": [
+      "78507"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

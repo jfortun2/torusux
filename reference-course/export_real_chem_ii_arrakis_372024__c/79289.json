@@ -1,0 +1,387 @@
+{
+  "id": "79289",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78158"
+  ],
+  "title": "form_rate_law2_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The correct rate law is: Rate = "
+                  },
+                  {
+                    "em": true,
+                    "text": "k"
+                  },
+                  {
+                    "text": "[A][B]"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "3ap3osste0yrznm",
+                "type": "p"
+              }
+            ],
+            "id": "1125989255"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "s6fgur8tshsnglf",
+                  "type": "p"
+                }
+              ],
+              "id": "1148098956"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6x9089gbsxs94zm",
+                  "type": "p"
+                }
+              ],
+              "id": "3754712308"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1e74usd53zfgz9o",
+                  "type": "p"
+                }
+              ],
+              "id": "1600698249"
+            }
+          ],
+          "id": "dfc547a8c8b04f55b09e1895d18bf2e5",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate law can be experimentally determined by changing the initial concentration of each reactant and observing the change in reaction rate. If the concentration of a reactant is doubled and the observed reaction rate also doubles, then the order of the reaction (the exponent) for that reactant must be 1: doubling the concentration means doubling the rate, 2"
+                      },
+                      {
+                        "sup": true,
+                        "text": "1"
+                      },
+                      {
+                        "text": " = 2. If the concentration of a reactant is increased by a factor of three and the observed reaction rate increases by nine, then the order of the reaction (the exponent) for that reactant must be 2, since 3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " = 9."
+                      }
+                    ],
+                    "id": "dfr66kjs5hvo846",
+                    "type": "p"
+                  }
+                ],
+                "id": "3936027014"
+              },
+              "id": "2650700871",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The rate law can be experimentally determined by changing the initial concentration of each reactant and observing the change in the reaction rate. If the concentration of a reactant is doubled and the observed reaction rate also doubles, then the order of the reaction (the exponent) for that reactant must be 1: doubling the concentration means doubling the rate, 2"
+                      },
+                      {
+                        "sup": true,
+                        "text": "1"
+                      },
+                      {
+                        "text": " = 2. If the concentration of a reactant is increased by a factor of three and the observed reaction rate increases by a factor of nine, then the order of the reaction (the exponent) for that reactant must be 2, since 3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " = 9."
+                      }
+                    ],
+                    "id": "gz7ol0yn7yvw54g",
+                    "type": "p"
+                  }
+                ],
+                "id": "3778666704"
+              },
+              "id": "1667652647",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "4266050499",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[A]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              },
+              {
+                "text": "[B]"
+              },
+              {
+                "sup": true,
+                "text": "3"
+              }
+            ],
+            "id": "a23kgwecdmiecat",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[A][B]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              }
+            ],
+            "id": "7nrg7hwa0xp5u26",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[A][B]"
+              },
+              {
+                "sup": true,
+                "text": "3"
+              }
+            ],
+            "id": "khmno84lh295ij8",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[A]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              },
+              {
+                "text": "[B]"
+              },
+              {
+                "sup": true,
+                "text": "9"
+              }
+            ],
+            "id": "ymziocxwk5smss7",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[B]"
+              },
+              {
+                "sup": true,
+                "text": "3"
+              }
+            ],
+            "id": "p7xmuks7aiwksdb",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Rate = "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": "[A]"
+              },
+              {
+                "sup": true,
+                "text": "2"
+              }
+            ],
+            "id": "grv1v4iqa2cy1dm",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For a given reaction:"
+            }
+          ],
+          "id": "pskvllnfnwn6bqw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm A\\;+\\;\\mathrm B\\;\\;\\rightarrow\\;\\;\\mathrm{products}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "8ysts0uwkvqzfat",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "experimental data show that when [A] is doubled the rate increases by a factor of 2 and when [B] is tripled the rate increases by a factor of nine. Which of the following is the correct rate law for this reaction?"
+            }
+          ],
+          "id": "ywzpaakmuqltyu0",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "dfc547a8c8b04f55b09e1895d18bf2e5": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

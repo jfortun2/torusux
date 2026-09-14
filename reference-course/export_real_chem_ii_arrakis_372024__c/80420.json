@@ -1,0 +1,190 @@
+{
+  "id": "80420",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "inline_pre_student_survey3-hours_worked",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3xpspuuyuvs811p",
+                  "type": "p"
+                }
+              ],
+              "id": "2456591421"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "oaipjivvl51lvez",
+                  "type": "p"
+                }
+              ],
+              "id": "1382461869"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "91ng43berm5hv04",
+                  "type": "p"
+                }
+              ],
+              "id": "3608990765"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you for your input. "
+                      }
+                    ],
+                    "id": "pa4o2gsea23vim7",
+                    "type": "p"
+                  }
+                ],
+                "id": "387477959"
+              },
+              "id": "2590022271",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "m0ov9fvaw40iuof",
+            "text": "5-10 hours "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "fvewmyqj4ifvy8u",
+            "text": "10-20 hours"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "3odebrg58riu5tn",
+            "text": "20-30 hours"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "jajgiljwzrgetvz",
+            "text": "30-40 hours"
+          }
+        ],
+        "id": "one_D"
+      },
+      {
+        "content": [
+          {
+            "id": "z7hu573qn9hd8li",
+            "text": "40+ hours"
+          }
+        ],
+        "id": "one_E"
+      },
+      {
+        "content": [
+          {
+            "id": "c1j6i9l55n1if8d",
+            "text": "n/a"
+          }
+        ],
+        "id": "one_F"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C",
+          "one_D",
+          "one_E",
+          "one_F"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "If you work full time or part time, approximately hours a week do you work?"
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            }
+          ],
+          "id": "ngl7h4op76gv416",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

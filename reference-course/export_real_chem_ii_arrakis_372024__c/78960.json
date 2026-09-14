@@ -1,0 +1,307 @@
+{
+  "id": "78960",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78055"
+  ],
+  "title": "equil_calc_k_conc_skill_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "l478vk2cfxxglg9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "ts6x77ac5fwrvzx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_{c\\;}=\\;\\frac{{\\lbrack{\\mathrm{SO}}_3\\rbrack}^2}{{\\lbrack{\\mathrm{SO}}_2\\rbrack}^2\\lbrack{\\mathrm O}_2\\rbrack}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;\\sqrt{{\\lbrack{\\mathrm{SO}}_2\\rbrack}^2\\;\\cdot\\;\\lbrack{\\mathrm O}_2\\rbrack\\;\\cdot\\;K_{\\mathit c}}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;\\sqrt{{(@@concSO2@@\\;\\mathrm M)}^2\\;\\cdot\\;(@@concO2@@\\;\\mathrm M)\\;\\cdot\\;4.32}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;@@corRnd@@\\;\\mathrm M",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "dzkeu3whnv1lo71",
+                "type": "p"
+              }
+            ],
+            "id": "4179320084"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "casxrjzw2q5xi0n",
+                  "type": "p"
+                }
+              ],
+              "id": "163125482"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0jjf0x4ebcy6tqk",
+                  "type": "p"
+                }
+              ],
+              "id": "3572383097"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gstmzdy7hbxmcek",
+                  "type": "p"
+                }
+              ],
+              "id": "2809668339"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{c\\;}=\\;\\frac{{\\lbrack{\\mathrm{SO}}_3\\rbrack}^2}{{\\lbrack{\\mathrm{SO}}_2\\rbrack}^2\\lbrack{\\mathrm O}_2\\rbrack}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;\\sqrt{{\\lbrack{\\mathrm{SO}}_2\\rbrack}^2\\;\\cdot\\;\\lbrack{\\mathrm O}_2\\rbrack\\;\\cdot\\;K_{\\mathit c}}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;\\sqrt{{(@@concSO2@@\\;\\mathrm M)}^2\\;\\cdot\\;(@@concO2@@\\;\\mathrm M)\\;\\cdot\\;4.32}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;@@corRnd@@\\;\\mathrm M",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "b80fdca6339d4114be84799ae265885a",
+                    "type": "p"
+                  }
+                ],
+                "id": "853966227"
+              },
+              "id": "854381864",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium expression rearranged to solve for [SO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "] is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{c\\;}=\\;\\frac{{\\lbrack{\\mathrm{SO}}_3\\rbrack}^2}{{\\lbrack{\\mathrm{SO}}_2\\rbrack}^2\\lbrack{\\mathrm O}_2\\rbrack}\\\\\\lbrack{\\mathrm{SO}}_3\\rbrack\\;=\\;\\sqrt{{\\lbrack{\\mathrm{SO}}_2\\rbrack}^2\\;\\cdot\\;\\lbrack{\\mathrm O}_2\\rbrack\\;\\cdot\\;K_{\\mathit c}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "b0cd954edb5c472f898c05701e726d2b",
+                    "type": "p"
+                  }
+                ],
+                "id": "1615223964"
+              },
+              "id": "479566393",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Given the following reaction:If the equilibrium concentrations of SO2 and O2 are @@concSO2@@ M and @@concO2@@ M, respectively, what is the equilibrium concentration of SO3?[SO3] =  M",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst concSO2 = OLI.random(0.55, 0.95, 3) .toFixed(3);\nconst concO2 = OLI.random(0.045, 0.99, 3) .toFixed(3);\nconst squareSO2 = (concSO2*concSO2);\nconst varMultiply = (squareSO2*concO2*4.32);\nconst correct = Math.sqrt(varMultiply);\nconst corRnd = (correct) .toPrecision(3);\nconst corLow = correct*0.98;\nconst corHigh = correct*1.02;\n\n// Expose variables to OLI\nmodule.exports = {\n concSO2,\n concO2,\n squareSO2,\n varMultiply,\n correct,\n corRnd,\n corLow,\n corHigh\n};\n",
+              "id": "e4cdb82eaf5d43b9bb3bbf63be5cf1fd",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the following reaction:"
+            }
+          ],
+          "id": "c9cf0a87796642ee82dde020d8c05575",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "2\\;{\\mathrm{SO}}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\rightleftharpoons\\;2\\;{\\mathrm{SO}}_3(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;4.32",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "e4c482fcd77b42ac96c3e84fd92203b2",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "If the equilibrium concentrations of SO"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " are @@concSO2@@ M and @@concO2@@ M, respectively, what is the equilibrium concentration of SO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "?"
+            }
+          ],
+          "id": "dd87e929e3894cac9b87848168ded6bb",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[SO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "c4452902f9a844ec86c72ea947cd718d",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

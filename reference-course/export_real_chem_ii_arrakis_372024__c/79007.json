@@ -1,0 +1,223 @@
+{
+  "id": "79007",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78117"
+  ],
+  "title": "name_coord_compound_pool2_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "783738990",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "701765621",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "3234110049",
+          "incorrectScore": null,
+          "outOf": 5,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The neutral compound contains 2 Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and 6 Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ", so Sn has a +4 charge. Since the complex is an anion, Sn"
+                      },
+                      {
+                        "sup": true,
+                        "text": "4+"
+                      },
+                      {
+                        "text": " is named with the suffix -ate. The cation (Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "1740525504",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The name of the compound is sodium hexachlorostannate(IV)."
+                      }
+                    ],
+                    "id": "l7qqeszlhhktdwv",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2636783130",
+                "textDirection": "ltr"
+              },
+              "id": "1027800286",
+              "rule": "input iequals {sodium hexachlorostannate(IV)}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Determine the charge of the central metal (Sn) from the charges of the ligand (Cl) and the counterion (Na). The complex is an anion, so use -ate to name Sn. The cation (Na"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "351621084",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "426489581",
+                "textDirection": "ltr"
+              },
+              "id": "1690415420",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination compound Na2[SnCl6]. Note: spelling matters! ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "979956004",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "3813775322",
+        "inputType": "text",
+        "partId": "3234110049",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination compound Na"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "[SnCl"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]. Note: spelling matters! "
+            }
+          ],
+          "id": "4143958683",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3813775322",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2883767336",
+          "type": "p"
+        }
+      ],
+      "id": "3745441445"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "3234110049": [
+      "78445"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

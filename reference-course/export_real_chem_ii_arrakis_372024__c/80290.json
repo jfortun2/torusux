@@ -1,0 +1,386 @@
+{
+  "id": "80290",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "stability_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "giakocdqx9iptfy",
+                  "type": "p"
+                }
+              ],
+              "id": "962304836"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "taxh6agmj9s8l57",
+                  "type": "p"
+                }
+              ],
+              "id": "3388488931"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q5376uyqjsiv856",
+                  "type": "p"
+                }
+              ],
+              "id": "1268728182"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Above the band of stability corresponds to more neutrons for a given number of protons."
+                      }
+                    ],
+                    "id": "l5pvqfpah7jljs0",
+                    "type": "p"
+                  }
+                ],
+                "id": "2190575232"
+              },
+              "id": "427853142",
+              "legacyMatch": "B",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Refer to the graph of number of protons vs. number of neutrons above."
+                      }
+                    ],
+                    "id": "t4iuxk3euwqi360",
+                    "type": "p"
+                  }
+                ],
+                "id": "210174385"
+              },
+              "id": "2681657914",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h15rnq9ga1hjkjy",
+                  "type": "p"
+                }
+              ],
+              "id": "3047163563"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hrz1f46ae776tr2",
+                  "type": "p"
+                }
+              ],
+              "id": "319047162"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "m18gqn6o90rerfq",
+                  "type": "p"
+                }
+              ],
+              "id": "2444753517"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Below the band of stability corresponds to fewer neutrons for a given number of protons."
+                      }
+                    ],
+                    "id": "wfcpfg3aw2gmby6",
+                    "type": "p"
+                  }
+                ],
+                "id": "3824643953"
+              },
+              "id": "2178575396",
+              "legacyMatch": "A",
+              "rule": "input like {second_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Refer to the graph of number of protons vs. number of neutrons above."
+                      }
+                    ],
+                    "id": "7rxa8f4p2q456eo",
+                    "type": "p"
+                  }
+                ],
+                "id": "618537905"
+              },
+              "id": "1841088477",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Nuclei above the band of stability tend to have  neutron to proton ratio compared to stable nuclei, and nuclei below the band of stability tend to have  neutron to proton ratio compared to stable nuclei.",
+      "targeted": [
+        [
+          [
+            "first_B"
+          ],
+          "427853142"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "2178575396"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1904502897",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "a higher"
+              }
+            ],
+            "id": "3132737896",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "a lower"
+              }
+            ],
+            "id": "1067427892",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "a higher"
+              }
+            ],
+            "id": "2261461204",
+            "type": "p"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "a lower"
+              }
+            ],
+            "id": "1698909774",
+            "type": "p"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "about the same"
+              }
+            ],
+            "id": "1905074497",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "1501416266",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "about the same"
+              }
+            ],
+            "id": "1752566517",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2523993929",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "1501416266"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "2523993929"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Nuclei above the band of stability tend to have "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " neutron to proton ratio compared to stable nuclei, and nuclei below the band of stability tend to have "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " neutron to proton ratio compared to stable nuclei."
+            }
+          ],
+          "id": "za9nf2v4b76510f",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78503"
+    ],
+    "second": [
+      "78503"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

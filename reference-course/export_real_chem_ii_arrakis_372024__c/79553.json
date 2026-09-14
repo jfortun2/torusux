@@ -1,0 +1,210 @@
+{
+  "id": "79553",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_temp_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "This can be determined from the signs of Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    },
+                    {
+                      "text": "° and Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "H"
+                    },
+                    {
+                      "text": "°."
+                    }
+                  ],
+                  "id": "5yevli211o1k9ee",
+                  "type": "p"
+                }
+              ],
+              "id": "4175698851"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "40bzg5zuy5r2xp2",
+                  "type": "p"
+                }
+              ],
+              "id": "3103309833"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tqfqptlrrghxsmx",
+                  "type": "p"
+                }
+              ],
+              "id": "1966584937"
+            }
+          ],
+          "id": "1155933241",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When both Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": "° and Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": "° are negative, the process will be spontaneous at low temperatures."
+                      }
+                    ],
+                    "id": "zta8bajbgk2cgix",
+                    "type": "p"
+                  }
+                ],
+                "id": "1847410654"
+              },
+              "id": "907765938",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When both Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": "° and Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": "° are negative, the process will be spontaneous at low temperatures."
+                      }
+                    ],
+                    "id": "vd94td2ylp6lsnq",
+                    "type": "p"
+                  }
+                ],
+                "id": "3074735060"
+              },
+              "id": "3630722404",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Is the reaction spontaneous at high temperatures or low temperatures?",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "3445124096",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "High"
+              }
+            ],
+            "id": "c9rgkzvypt72t4a",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Low"
+              }
+            ],
+            "id": "r1vz511eaws2kvc",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Is the reaction spontaneous at high temperatures or low temperatures?"
+            }
+          ],
+          "id": "47w9mwl14ixwpsg",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "1155933241": [
+      "78422"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

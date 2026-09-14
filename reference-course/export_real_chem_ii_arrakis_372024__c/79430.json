@@ -1,0 +1,311 @@
+{
+  "id": "79430",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "kp_calculation_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "n"
+                  },
+                  {
+                    "text": " = 2 − (2 + 1) = −1"
+                  }
+                ],
+                "id": "aa62jf4bl22ems4",
+                "type": "p"
+              }
+            ],
+            "id": "2363818476"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "n"
+                    },
+                    {
+                      "text": " = ("
+                    },
+                    {
+                      "em": true,
+                      "text": "c"
+                    },
+                    {
+                      "text": " + "
+                    },
+                    {
+                      "em": true,
+                      "text": "d"
+                    },
+                    {
+                      "text": ") − ("
+                    },
+                    {
+                      "em": true,
+                      "text": "a"
+                    },
+                    {
+                      "text": " + "
+                    },
+                    {
+                      "em": true,
+                      "text": "b"
+                    },
+                    {
+                      "text": ")"
+                    }
+                  ],
+                  "id": "pm8vrhosmrvjpea",
+                  "type": "p"
+                }
+              ],
+              "id": "3252389611"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "unpt1fakn7znft6",
+                  "type": "p"
+                }
+              ],
+              "id": "565838048"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0ziypxr00nrvdkp",
+                  "type": "p"
+                }
+              ],
+              "id": "1530484086"
+            }
+          ],
+          "id": "2530036917",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "n"
+                      },
+                      {
+                        "text": " = 2 − (2 + 1) = −1"
+                      }
+                    ],
+                    "id": "goscss81ugj5cyo",
+                    "type": "p"
+                  }
+                ],
+                "id": "2660334301"
+              },
+              "id": "1721970108",
+              "legacyMatch": "-1",
+              "rule": "input = {-1}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta n\\;=\\;\\left(c\\;+\\;d\\right)\\;-\\;\\left(a\\;+\\;b\\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "em": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "em": true,
+                        "text": "d"
+                      },
+                      {
+                        "text": " are the coefficients of the products, and "
+                      },
+                      {
+                        "em": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "em": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " are the coefficients of the reactants."
+                      }
+                    ],
+                    "id": "4stk783ksvhdwsg",
+                    "type": "p"
+                  }
+                ],
+                "id": "2417901138"
+              },
+              "id": "668933567",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "The following reaction has Kp = 3.42 at 727 °C:  First, calculate the value of Δn.Δn = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "2530036917"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The following reaction has "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " = 3.42 at 727 °C: "
+            }
+          ],
+          "id": "gqugnsb4t3p02gp",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "n5zy1maizk6bhh2",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "kfu7koqwkngy0xu",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{SO}}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm{SO}}_3(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "First, calculate the value of Δ"
+            },
+            {
+              "em": true,
+              "text": "n"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "bpvzinly6yj3hvh",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Δ"
+            },
+            {
+              "em": true,
+              "text": "n"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "snafcprthhkc52e",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2530036917": [
+      "78380"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

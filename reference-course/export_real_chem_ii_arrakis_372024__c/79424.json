@@ -1,0 +1,613 @@
+{
+  "id": "79424",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "large_small_k_digt_default-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}K_\\mathrm{p}\\;=\\;\\frac{(P_{{\\mathrm H}_2\\mathrm O})^2}{(P_{{\\mathrm H}_2})^2(P_{{\\mathrm O}_2})}\\; =\\;\\frac{{(0.500\\;-\\;2x)}^2}{(2x)^2\\;(0.250\\;+\\;x)}\\;\\\\x\\;\\mathrm{is}\\;\\mathrm{much}\\;\\mathrm{less}\\;\\mathrm{than}\\;0.250\\\\1.33\\times10^{20}\\; =\\;\\;\\frac{{(0.500)}^2}{(2x)^2\\;(0.250)}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\\\x\\mathit\\; =\\;4.335\\times10^{-11}\\\\P_{{\\mathrm H}_2}\\;=\\;2x\\;=\\;8.67\\times10^{-11}\\;\\mathrm{atm}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "8bhzm0pfk8rgitn",
+                "type": "p"
+              }
+            ],
+            "id": "2813823585"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dbq0zlq926pvurb",
+                  "type": "p"
+                }
+              ],
+              "id": "696476679"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "az1k5dc94v70ojx",
+                  "type": "p"
+                }
+              ],
+              "id": "4158762333"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7rhdl74ztzhjshk",
+                  "type": "p"
+                }
+              ],
+              "id": "1628903806"
+            }
+          ],
+          "id": "3113077208",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_\\mathrm{p}\\;=\\;\\dfrac{(P_{{\\mathrm H}_2\\mathrm O})^2}{(P_{{\\mathrm H}_2})^2(P_{{\\mathrm O}_2})}\\; =\\;\\dfrac{{(0.500\\;-\\;2x)}^2}{(2x)^2\\;(0.250\\;+\\;x)}\\;\\\\x\\;\\mathrm{is}\\;\\mathrm{much}\\;\\mathrm{less}\\;\\mathrm{than}\\;0.250\\\\1.33\\times10^{20}\\; =\\;\\;\\dfrac{{(0.500)}^2}{(2x)^2\\;(0.250)}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\\\x\\mathit\\; =\\;4.335\\times10^{-11}\\\\P_{{\\mathrm H}_2}\\;=\\;2x\\;=\\;8.67\\times10^{-11}\\;\\mathrm{atm}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "lpzbim6csw9dnkh",
+                    "type": "p"
+                  }
+                ],
+                "id": "1421035030"
+              },
+              "id": "3866661711",
+              "legacyMatch": "[8.6e-11,8.7e-11]",
+              "rule": "input = {[8.6e-11,8.7e-11]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}K_\\mathrm{p}\\;=\\;\\dfrac{(P_{{\\mathrm H}_2\\mathrm O})^2}{(P_{{\\mathrm H}_2})^2(P_{{\\mathrm O}_2})}\\; =\\;\\dfrac{{(0.500-2x)}^2}{(2x)^2\\;(0.250+x)}\\;\\\\x\\;\\mathrm{is}\\;\\mathrm{much}\\;\\mathrm{less}\\;\\mathrm{than}\\;0.250\\\\1.33\\times10^{20}\\; =\\;\\;\\dfrac{{(0.500)}^2}{(2x)^2\\;(0.250)}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\\\\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "bl78mzkih3ehzlh",
+                    "type": "p"
+                  }
+                ],
+                "id": "1900961009"
+              },
+              "id": "1557056475",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tyiq5fpuv363zhk",
+                  "type": "p"
+                }
+              ],
+              "id": "770506956"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ohs5lcwqq0620p1",
+                  "type": "p"
+                }
+              ],
+              "id": "1998138212"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j5p0lm33nkp4p0d",
+                  "type": "p"
+                }
+              ],
+              "id": "3509867798"
+            }
+          ],
+          "id": "4017377874",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is much less than 0.250. Therefore, 0.250 − "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is essentially equal to 0.250 atm. "
+                      }
+                    ],
+                    "id": "v4lbqmlr63tn32f",
+                    "type": "p"
+                  }
+                ],
+                "id": "2305888681"
+              },
+              "id": "2999139315",
+              "legacyMatch": "0.25",
+              "rule": "input = {0.25}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is much less than 0.250, therefore 0.250 − "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is essentially equal to 0.250 atm. "
+                      }
+                    ],
+                    "id": "nhtd2gp0ytvtm3u",
+                    "type": "p"
+                  }
+                ],
+                "id": "2668732700"
+              },
+              "id": "2550541638",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w57bmy61eijcvqe",
+                  "type": "p"
+                }
+              ],
+              "id": "2572061694"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j12cqadhq56yu1e",
+                  "type": "p"
+                }
+              ],
+              "id": "1547080597"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jzn3vnbccxruwo9",
+                  "type": "p"
+                }
+              ],
+              "id": "1042416118"
+            }
+          ],
+          "id": "3593681631",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is much less than 0.250. Therefore, 0.500 − 2"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is essentially equal to 0.500 atm. "
+                      }
+                    ],
+                    "id": "fnzyibfx8xlpd02",
+                    "type": "p"
+                  }
+                ],
+                "id": "2814109175"
+              },
+              "id": "2378702613",
+              "legacyMatch": "0.50",
+              "rule": "input = {0.50}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is much less than 0.250. Therefore, 0.500 − 2"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is essentially equal to 0.500 atm. "
+                      }
+                    ],
+                    "id": "mk36ctculz7e57i",
+                    "type": "p"
+                  }
+                ],
+                "id": "241634178"
+              },
+              "id": "1750692483",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Consider the reaction between H2 and O2 at 1000 K:  If 0.500 atm of H2 and 0.500 atm of O2 are allowed to come to equilibrium at this temperature, what are the partial pressures of the components?PH2 =  atm PO2 =  atm PH2O =  atm ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3113077208",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "4017377874",
+        "size": "small"
+      },
+      {
+        "id": "q3numeric",
+        "inputType": "numeric",
+        "partId": "3593681631",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the reaction between H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " at 1000 K: "
+            }
+          ],
+          "id": "kjjrwgcninq21d7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "3tw36ina5wv03dj",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "oc0abzi1zk4g0kq",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm H}_2(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;{\\mathrm H}_2\\mathrm O(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{p}=1.33\\times10^{20}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "If 0.500 atm of H"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " and 0.500 atm of O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " are allowed to come to equilibrium at this temperature, what are the partial pressures of the components?"
+            }
+          ],
+          "id": "5xqt7p8mcolx2gk",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "H"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " atm "
+            }
+          ],
+          "id": "yn6un3htaqoh7to",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "O"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " atm "
+            }
+          ],
+          "id": "mx78m30gkjqamqg",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "H"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "sub": true,
+              "text": "O"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q3numeric",
+              "input": "q3numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " atm "
+            }
+          ],
+          "id": "ji2gww3j2jhb37p",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3113077208": [
+      "78289"
+    ],
+    "3593681631": [
+      "78439"
+    ],
+    "4017377874": [
+      "78390"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,244 @@
+{
+  "id": "79333",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "PredictReactionLBD2_q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1943942",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "681525911"
+            }
+          ],
+          "id": "2585674295",
+          "outOf": null,
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A reaction will "
+                      },
+                      {
+                        "text": "not",
+                        "underline": true
+                      },
+                      {
+                        "text": " occur between HBr("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") and Pt("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "821728532",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "590414996"
+              },
+              "id": "398379852",
+              "rule": "input like {2580338024}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A reaction will "
+                      },
+                      {
+                        "text": "not",
+                        "underline": true
+                      },
+                      {
+                        "text": " occur between HBr("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") and Pt("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "2293501431",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "275114809"
+              },
+              "id": "513907567",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Predict whether a reaction will occur when HBr(aq) and Pt(s) are combined. You will need to use the Standard Reduction Potentials from the appendix. ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "4293551538",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3841386089",
+          "operation": "shuffle",
+          "partId": "2585674295",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes, a reaction will occur. "
+              }
+            ],
+            "id": "1775758234",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "148604138"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No, a reaction will not occur. "
+              }
+            ],
+            "id": "839246916",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2580338024"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "148604138",
+          "2580338024"
+        ],
+        "id": "3831755889",
+        "inputType": "dropdown",
+        "partId": "2585674295"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Predict whether a reaction will occur when HBr("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ") and Pt("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ") are combined. You will need to use the "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_xdwka",
+              "idref": "80670",
+              "target": "self",
+              "type": "a"
+            },
+            {
+              "text": " from the appendix. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3831755889",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "2982286492",
+          "type": "p"
+        }
+      ],
+      "id": "2644501526"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "2585674295": [
+      "78295"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

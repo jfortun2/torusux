@@ -1,0 +1,271 @@
+{
+  "id": "78903",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "g_equil_lbd_equil_first-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K\\;=\\;e^\\frac{-\\Delta G^\\circ}{RT}\\;=\\;e^{\\left(\\frac{-8580\\;\\mathrm J/\\mathrm{mol}}{(298\\; \\mathrm K)(8.314\\;\\mathrm J/\\mathrm{mol}\\;\\mathrm K)}\\right)}\\;=\\;e^{-3.463}\\;=\\;0.0313",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "uvpuh94e5izqoky",
+                "type": "p"
+              }
+            ],
+            "id": "2144044611"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "K\\;=\\;e^\\frac{-\\Delta G^\\circ}{RT}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "269sxe44sqiwccq",
+                  "type": "p"
+                }
+              ],
+              "id": "1718882413"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Make sure your units are in agreement. Either convert Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "G"
+                    },
+                    {
+                      "sup": true,
+                      "text": "∘"
+                    },
+                    {
+                      "text": " to J or "
+                    },
+                    {
+                      "em": true,
+                      "text": "R"
+                    },
+                    {
+                      "text": " to kJ."
+                    }
+                  ],
+                  "id": "hgphxbmzvmc2ehw",
+                  "type": "p"
+                }
+              ],
+              "id": "1574282678"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rdwm6zonkoh2nqo",
+                  "type": "p"
+                }
+              ],
+              "id": "1474167"
+            }
+          ],
+          "id": "197320801",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K\\;=\\;e^\\frac{-\\Delta G^\\circ}{RT}\\;=\\;e^{\\left(\\frac{-8580\\;\\mathrm J/\\mathrm{mol}}{(298\\; \\mathrm K)(8.314\\;\\mathrm J/\\mathrm{mol}\\;\\mathrm K)}\\right)}\\;=\\;e^{-3.463}\\;=\\;0.0313",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "0hoxmxwcwukuhkq",
+                    "type": "p"
+                  }
+                ],
+                "id": "2000157187"
+              },
+              "id": "2128021508",
+              "legacyMatch": "[0.031,0.0314]",
+              "rule": "input = {[0.031,0.0314]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Make sure your units are in agreement. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K\\;=\\;e^\\frac{-\\Delta G^\\circ}{RT}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "31hzq09pzc2yz97",
+                    "type": "p"
+                  }
+                ],
+                "id": "3758658635"
+              },
+              "id": "2977196912",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Determine the equilibrium constant, Kp, for this physical process. Kp = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "197320801",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Determine the equilibrium constant, "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": ", for this physical process. "
+            }
+          ],
+          "id": "j9myatwx09ji91x",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "mdhtbz18dta5lxv",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "197320801": [
+      "78307"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

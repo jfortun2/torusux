@@ -1,0 +1,1409 @@
+{
+  "id": "80549",
+  "type": "Page",
+  "tags": [],
+  "title": "Calculating Ka and Kb from pH",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Acid-dissociation constants and base-dissociation constants are determined experimentally from pH measurements. We now look at examples of calculating "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "a"
+              },
+              {
+                "text": " and "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "sub": true,
+                "text": "b"
+              },
+              {
+                "text": " values when pH is known. The process is the same as we have used for previous equilibrium calculations but with an additional step to convert pH into concentrations."
+              }
+            ],
+            "id": "yuxumjodgiurw08",
+            "type": "p"
+          }
+        ],
+        "id": "748449354",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "The pH of a 0.0516-M solution of nitrous acid, HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", is 2.34 at 25 °C. What is the "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " value for HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " at 25 °C?"
+                  }
+                ],
+                "id": "z9v0huleprernk6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Write the equilibrium reaction and "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "a"
+                          },
+                          {
+                            "strong": true,
+                            "text": " expression."
+                          }
+                        ],
+                        "id": "1514907971",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "1e8uiswqedqs8sn",
+                    "type": "li"
+                  }
+                ],
+                "id": "vuqpuw36hoz3mlh",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We first write the ionization reaction equation and acid-ionization constant expression for nitrous acid:"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\mathrm{HNO}}_2(aq)+{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm H}_3\\mathrm O^+(aq)+\\mathrm{NO}_2^-(aq)\\;\\;\\;\\;\\;\\;K_{\\mathrm a}=\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{NO}_2^- \\rbrack}{\\lbrack{\\mathrm{HNO}}_2\\rbrack}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "orwhe0kac3is46d",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Determine [H"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "strong": true,
+                            "text": "] from pH."
+                          }
+                        ],
+                        "id": "1659338726",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "a9eobkl8cvifexy",
+                    "type": "li"
+                  }
+                ],
+                "id": "z6gghycax7hmgmt",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "To determine the values in the ICE (initial, change, equilibrium) table, we need to calculate [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "equil"
+                  },
+                  {
+                    "text": ", the equilibrium concentration of hydronium ion, from the pH:"
+                  }
+                ],
+                "id": "rkxdlvfgoqp4np4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "r7atxosc91fmc8e",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "g87smvkrn52ap0e",
+                "legacyBlockRendered": "true",
+                "src": "\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;10^{-\\mathrm{pH}}\\;=\\;10^{-2.34}\\;=\\;0.0046\\;\\mathrm M",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Complete the ICE table based on initial [HA] and equilibrium [H"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "strong": true,
+                            "text": "O"
+                          },
+                          {
+                            "strong": true,
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "strong": true,
+                            "text": "]."
+                          }
+                        ],
+                        "id": "3937806243",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "m4s73le0evo6tv9",
+                    "type": "li"
+                  }
+                ],
+                "id": "nl030v8i21vy9vx",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The initial state is nonionized HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", so [HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "initial"
+                  },
+                  {
+                    "text": " = 0.0516 M and [NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "initial"
+                  },
+                  {
+                    "text": " = [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "initial"
+                  },
+                  {
+                    "text": " = 0. The initial [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] is its concentration in pure water, which is so much less than the equilibrium concentration that we approximate it as zero (~0)."
+                  }
+                ],
+                "id": "tjua49tj392r6vo",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The change in concentration of H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": ", "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ", is the difference between [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "equil"
+                  },
+                  {
+                    "text": ", which we determined from the pH, and the initial concentration, [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]"
+                  },
+                  {
+                    "sub": true,
+                    "text": "initial"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "n9zel05bhaebhed",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "For each 1 mol of HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " that ionizes, 1 mol H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and 1 mol of NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": " are formed, so the change in [NO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": "] is equal to the change in [H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "]. The equilibrium [HNO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "] is equal to its initial concentration plus the change in its concentration."
+                  }
+                ],
+                "id": "x5mw2c21jtb14b9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Now we can fill in the ICE table with the concentrations at equilibrium, as shown:"
+                  }
+                ],
+                "id": "a9rsvljupfmla81",
+                "type": "p"
+              },
+              {
+                "border": "hidden",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "3854994440",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1069155463",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "1829882491",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4249522493",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HNO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": " + H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O ⇌ H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              },
+                              {
+                                "strong": true,
+                                "text": " + NO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "−"
+                              }
+                            ],
+                            "id": "3611161291",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 2,
+                        "id": "1022007587",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "2943516265",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "1181567326",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "811463270",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": ""
+                              }
+                            ],
+                            "id": "2337173307",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3158959027",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "HNO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              }
+                            ],
+                            "id": "1611423975",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "3552895329",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              }
+                            ],
+                            "id": "3651172609",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "2489092794",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "H"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "strong": true,
+                                "text": "O"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "2552867541",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "346304498",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "strong": true,
+                                "text": "NO"
+                              },
+                              {
+                                "strong": true,
+                                "sub": true,
+                                "text": "2"
+                              },
+                              {
+                                "strong": true,
+                                "sup": true,
+                                "text": "–"
+                              }
+                            ],
+                            "id": "1898847299",
+                            "type": "p"
+                          }
+                        ],
+                        "id": "4219949244",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "1166999971",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "6zuzmsbjyf9clo1",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "0lhbjnytwg7zbt5",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "o09psjverukbu0i",
+                            "text": "0.0516 M"
+                          }
+                        ],
+                        "id": "5un4bys2i80ymol",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qmgdffte6mle6he",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "iu07waaskeqw8da",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "lkja67d03hx2obo",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "ja036b0uccecl3a",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "2oluuz6in6payn6",
+                            "text": "0 M"
+                          }
+                        ],
+                        "id": "gzno4mkfg352vy7",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "o3qe8il7d79nwen",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "14vpbmrao53bpih",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "a5m4xrud2gpr12p",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "cjniqzpa7ky6ndd",
+                            "text": "–"
+                          },
+                          {
+                            "em": true,
+                            "id": "lkmv2aswwlkl7ze",
+                            "text": "x"
+                          }
+                        ],
+                        "id": "muogvcbrmfxo3r0",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "6qsz711ihucjlv5",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "zdnx0gvwzqg4u49",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "9iyv7pxhafq2e9p",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "vt1ahlv794y5umu",
+                            "text": "x"
+                          },
+                          {
+                            "id": "t3jynr3qeseguls",
+                            "text": " = 0.0046"
+                          }
+                        ],
+                        "id": "hstbbj8copytlbb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "nnookoux3c7ct3c",
+                            "text": "+"
+                          },
+                          {
+                            "em": true,
+                            "id": "b63uuf1j73u6pvv",
+                            "text": "x"
+                          },
+                          {
+                            "id": "narzxgu273lbjqt",
+                            "text": " = 0.0046"
+                          }
+                        ],
+                        "id": "rtqv2a62iyea3rv",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "gdi8r8dl9ndos2o",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "dfi87p83ombm9sd",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "9hug8rv38yxh1ka",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "pugfhdwtths4ezo",
+                            "text": "0.0470 M"
+                          }
+                        ],
+                        "id": "8mv9h4kstbr8jg7",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "4ne596ntkof9qf5",
+                            "text": "-----"
+                          }
+                        ],
+                        "id": "1om37iugb5k0h6u",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "tajez1a946qbw7w",
+                            "text": "0.0046 M"
+                          }
+                        ],
+                        "id": "4h9bzqg61q4o90x",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "xx1dnb5xbzkdc78",
+                            "text": "0.0046 M"
+                          }
+                        ],
+                        "id": "fqpv1sbdr7kog9k",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "3w0m8szgwrbyva5",
+                    "type": "tr"
+                  }
+                ],
+                "id": "bpi25kg7z61aow9",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "strong": true,
+                            "text": "Substitute equilibrium concentrations into the "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "a"
+                          },
+                          {
+                            "strong": true,
+                            "text": " expression to calculate "
+                          },
+                          {
+                            "em": true,
+                            "strong": true,
+                            "text": "K"
+                          },
+                          {
+                            "strong": true,
+                            "sub": true,
+                            "text": "a"
+                          },
+                          {
+                            "strong": true,
+                            "text": "."
+                          }
+                        ],
+                        "id": "360167888",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "wst4yxjfnatocsa",
+                    "type": "li"
+                  }
+                ],
+                "id": "5hz63zhiwd9mwyz",
+                "type": "ul"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wen02vmdokkvz2x",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "43u2fln5s1s9cj2",
+                "legacyBlockRendered": "true",
+                "src": "K_\\mathrm{a}\\;=\\;\\frac{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{NO}_2^-\\rbrack}{\\lbrack{\\mathrm{HNO}}_2\\rbrack}\\; =\\;\\frac{(0.0046)(0.0046)}{(0.0470)}\\;=\\;4.5\\times10^{-4}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2877471883",
+                "type": "p"
+              }
+            ],
+            "id": "1428629159",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "214941417",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "A 0.150-M solution of propionic acid, C"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "5"
+                  },
+                  {
+                    "text": "COOH, has a pH of 2.85. What is the value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " for propionic acid?"
+                  }
+                ],
+                "id": "vntvhe0879zmj12",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "zmrrx88c0az9hpo",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "30rj1sbwlbebw09",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm C}_2{\\mathrm H}_5\\mathrm{COOH}(aq)\\:+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\; {\\mathrm C}_2{\\mathrm H}_5\\mathrm{COO}^-(aq)\\;+\\;{\\mathrm H}_3\\mathrm O^+(aq)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2936400982",
+                "type": "p"
+              }
+            ],
+            "id": "3835291961",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79538,
+                "id": "494784258",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80085,
+                "id": "3223532890",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79595,
+                "id": "1350929691",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "406002449",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "592368013",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "The pH of a 0.950-M solution of household ammonia, NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": ", is 11.612. What is the value of "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "b"
+                  },
+                  {
+                    "text": " for NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ],
+                "id": "b9brvpcnnuugry1",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "itgssfarbipdqwn",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "gziov1nrvv8ytah",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{NH}}_3(aq)\\;+\\;{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{NH}_4^+(aq)\\;+\\;\\mathrm{OH}^-(aq)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1339466205",
+                "type": "p"
+              }
+            ],
+            "id": "2854907446",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79384,
+                "id": "1318794764",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79251,
+                "id": "3879065954",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79542,
+                "id": "1885076403",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "1782372346",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "709233675",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 78991,
+            "id": "2253135159",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1494158186",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "nr8cpbf3yus9m8i",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/ 85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "n9wicp1jprgqj05",
+            "type": "p"
+          }
+        ],
+        "id": "2102974055",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78556"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

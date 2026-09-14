@@ -1,0 +1,191 @@
+{
+  "id": "79733",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "lechat_temp_lbd1-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rb9sig2d7i0q7aw",
+                  "type": "p"
+                }
+              ],
+              "id": "3839352367"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hqgzl7zccmu5gf8",
+                  "type": "p"
+                }
+              ],
+              "id": "2848780623"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9d3tscfu4css47m",
+                  "type": "p"
+                }
+              ],
+              "id": "662767829"
+            }
+          ],
+          "id": "3843206728",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Heat is indicated as a reactant. Therefore, this is an endothermic reaction."
+                      }
+                    ],
+                    "id": "9lr1tqe38i2vp03",
+                    "type": "p"
+                  }
+                ],
+                "id": "429891864"
+              },
+              "id": "3626308153",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Heat is indicated as a reactant. Therefore, this is an endothermic reaction."
+                      }
+                    ],
+                    "id": "g8bymz1i91mfy43",
+                    "type": "p"
+                  }
+                ],
+                "id": "1300772119"
+              },
+              "id": "3200679824",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "1696560598",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Exothermic"
+              }
+            ],
+            "id": "22hqptu6c3tsnb4",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Endothermic"
+              }
+            ],
+            "id": "0zbaf141s3hb9ht",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Let's revisit the reaction: "
+            }
+          ],
+          "id": "4vpjmfsj9yxvfst",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "riejmsslr7qjoum",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "tk5ofuhangqieyf",
+          "legacyBlockRendered": "true",
+          "src": "\\underset{\\mathrm{pink}}{\\mathrm{Co}({\\mathrm H}_2\\mathrm O)_6\\;^{2+}(aq)}\\;\\;+\\;4\\;\\mathrm{Cl}^-(aq)\\;+\\;\\mathrm{heat} \\;\\;\\rightleftharpoons\\;\\;\\underset{\\mathrm{blue}}{{\\mathrm{CoCl}}_4\\;^{2-}(aq)}\\;+\\;6\\;{\\mathrm H}_2\\mathrm O(l)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Is the reaction endothermic or exothermic?"
+            }
+          ],
+          "id": "nm02ghjhhtjbskk",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3843206728": [
+      "78280"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,351 @@
+{
+  "id": "80488",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "initial_rate_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The reaction is zero order with respect to CO."
+                    }
+                  ],
+                  "id": "drvkm1tgsin0qvi",
+                  "type": "p"
+                }
+              ],
+              "id": "278328720"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yea36rlhzxutw3d",
+                  "type": "p"
+                }
+              ],
+              "id": "3192029226"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j4auol5ifhm7496",
+                  "type": "p"
+                }
+              ],
+              "id": "2364287043"
+            }
+          ],
+          "id": "3143016186",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction is zero order with respect to CO, so changes in [CO] have no effect on the rate."
+                      }
+                    ],
+                    "id": "icebiisgdlrs4ht",
+                    "type": "p"
+                  }
+                ],
+                "id": "392215992"
+              },
+              "id": "3530838336",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction is zero order with respect to CO, so changes in [CO] have no effect on the rate. "
+                      }
+                    ],
+                    "id": "10qxwuxts5gya9l",
+                    "type": "p"
+                  }
+                ],
+                "id": "147359878"
+              },
+              "id": "1557311795",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction is zero order with respect to CO, so changes in [CO] have no effect on the rate. "
+                      }
+                    ],
+                    "id": "ad43rtlc522umbp",
+                    "type": "p"
+                  }
+                ],
+                "id": "835783782"
+              },
+              "id": "175469244",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction is zero order with respect to CO, so changes in [CO] have no effect on the rate. "
+                      }
+                    ],
+                    "id": "cuhro0hif62w875",
+                    "type": "p"
+                  }
+                ],
+                "id": "2620154356"
+              },
+              "id": "4105328029",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reaction is zero order with respect to CO, so changes in [CO] have no effect on the rate. "
+                      }
+                    ],
+                    "id": "5vxewaekt5206go",
+                    "type": "p"
+                  }
+                ],
+                "id": "1674828979"
+              },
+              "id": "2784655710",
+              "legacyMatch": "E",
+              "rule": "input like {E}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ic4osdtpp29nfh4",
+                    "type": "p"
+                  }
+                ],
+                "id": "2045311301"
+              },
+              "id": "1445316296",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3530838336"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1557311795"
+            ],
+            [
+              [
+                "C"
+              ],
+              "175469244"
+            ],
+            [
+              [
+                "D"
+              ],
+              "4105328029"
+            ],
+            [
+              [
+                "E"
+              ],
+              "2784655710"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3530838336"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1557311795"
+        ],
+        [
+          [
+            "C"
+          ],
+          "175469244"
+        ],
+        [
+          [
+            "D"
+          ],
+          "4105328029"
+        ],
+        [
+          [
+            "E"
+          ],
+          "2784655710"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "3271665624",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would increase by a factor of 9."
+              }
+            ],
+            "id": "kohjqc1diuhongx",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would decrease by a factor of 9."
+              }
+            ],
+            "id": "l8grjq8naonrttw",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would increase by a factor of 3."
+              }
+            ],
+            "id": "4k3uzp5yae4vgwx",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The rate would decrease by a factor of 3."
+              }
+            ],
+            "id": "1b1fttgv6qiey92",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "There would be no effect on the rate."
+              }
+            ],
+            "id": "nsozeahquashzfs",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "How would increasing the concentration of CO from 0.1 M to 0.3 M in the reaction above affect the rate of the reaction?"
+            }
+          ],
+          "id": "lhoy6s55a5sov5x",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3143016186": [
+      "78353"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

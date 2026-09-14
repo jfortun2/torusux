@@ -1,0 +1,179 @@
+{
+  "id": "80497",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "acid_molec_struct_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "cf9ymwk3h41alcv",
+                  "type": "p"
+                }
+              ],
+              "id": "529316902"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b6i75s6osgp88oc",
+                  "type": "p"
+                }
+              ],
+              "id": "3111100486"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b1r7ob9gld3hz2n",
+                  "type": "p"
+                }
+              ],
+              "id": "1444772833"
+            }
+          ],
+          "id": "2238744511",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "4jcn3g22qfchjsc",
+                    "type": "p"
+                  }
+                ],
+                "id": "2041643412"
+              },
+              "id": "2905933696",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "jro7z5sizmzs2xl",
+                    "type": "p"
+                  }
+                ],
+                "id": "2306368569"
+              },
+              "id": "3962138224",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "385246194",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O"
+              }
+            ],
+            "id": "zdgk03484n5evfh",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              }
+            ],
+            "id": "ygaztqc33lxtuad",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following compounds is more acidic?"
+            }
+          ],
+          "id": "vgq2v3ieqgxxzwx",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2238744511": [
+      "78513"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,253 @@
+{
+  "id": "79306",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_2digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mfi6g54nnsxvfi7",
+                  "type": "p"
+                }
+              ],
+              "id": "2319734670"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xpfppjgvhhh5wp7",
+                  "type": "p"
+                }
+              ],
+              "id": "978481930"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8uxxug9vr6m9g14",
+                  "type": "p"
+                }
+              ],
+              "id": "1834830266"
+            }
+          ],
+          "id": "889958430",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solids do not affect equilibrium."
+                      }
+                    ],
+                    "id": "9rs6yz5ts24hfmv",
+                    "type": "p"
+                  }
+                ],
+                "id": "1035980143"
+              },
+              "id": "3526132579",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Solids do not affect equilibrium"
+                      }
+                    ],
+                    "id": "scjww7bjnjdaxhz",
+                    "type": "p"
+                  }
+                ],
+                "id": "3042055287"
+              },
+              "id": "3032879285",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Solids do not affect equilibrium"
+                      }
+                    ],
+                    "id": "jxj399qtipb3r37",
+                    "type": "p"
+                  }
+                ],
+                "id": "2016825630"
+              },
+              "id": "1109076102",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "d5u411i0y5637jn",
+                    "type": "p"
+                  }
+                ],
+                "id": "4070090929"
+              },
+              "id": "3334884642",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3526132579"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3032879285"
+            ],
+            [
+              [
+                "C"
+              ],
+              "1109076102"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Adding Fe",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3526132579"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3032879285"
+        ],
+        [
+          [
+            "C"
+          ],
+          "1109076102"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Shift to the right"
+              }
+            ],
+            "id": "omohovw49f3wpvo",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Shift to the left"
+              }
+            ],
+            "id": "hjpvakgnlqclinw",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No effect on equilibrium"
+              }
+            ],
+            "id": "tygsxmvdov3v9gl",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Adding Fe"
+            }
+          ],
+          "id": "a18lohcfabsns2x",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "889958430": [
+      "78311"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

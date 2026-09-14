@@ -1,0 +1,318 @@
+{
+  "id": "80104",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "kp_calculation_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_\\mathrm{p}=K_\\mathrm{c}\\left(RT\\right)^{\\mathrm\\Delta n}=(0.0952)\\left((0.08206)(500)\\right)^2=160",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "pd7lt0poi0giqrr",
+                "type": "p"
+              }
+            ],
+            "id": "2514106579"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "em": true,
+                      "text": "K"
+                    },
+                    {
+                      "sub": true,
+                      "text": "p"
+                    },
+                    {
+                      "text": " = "
+                    },
+                    {
+                      "em": true,
+                      "text": "K"
+                    },
+                    {
+                      "sub": true,
+                      "text": "c"
+                    },
+                    {
+                      "text": "("
+                    },
+                    {
+                      "em": true,
+                      "text": "RT"
+                    },
+                    {
+                      "text": ") "
+                    },
+                    {
+                      "sup": true,
+                      "text": "Δ"
+                    },
+                    {
+                      "em": true,
+                      "sup": true,
+                      "text": "n"
+                    }
+                  ],
+                  "id": "6xr914rlab2fy36",
+                  "type": "p"
+                }
+              ],
+              "id": "3552958047"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pg9gr6ise101soo",
+                  "type": "p"
+                }
+              ],
+              "id": "3577370323"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "atxrwsxdr74gq3g",
+                  "type": "p"
+                }
+              ],
+              "id": "719788120"
+            }
+          ],
+          "id": "1965243064",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_\\mathrm{p}=K_\\mathrm{c}\\left(RT\\right)^{\\mathrm\\Delta n}=(0.0952)\\left((0.08206)(500)\\right)^2=160",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "p5j56weq84kwrb0",
+                    "type": "p"
+                  }
+                ],
+                "id": "3885249966"
+              },
+              "id": "1164250093",
+              "legacyMatch": "[160,161]",
+              "rule": "input = {[160,161]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "c88zbaz73z76cqi",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "p"
+                      },
+                      {
+                        "text": " = "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "text": "RT"
+                      },
+                      {
+                        "text": ")"
+                      },
+                      {
+                        "sup": true,
+                        "text": "Δ"
+                      },
+                      {
+                        "em": true,
+                        "sup": true,
+                        "text": "n"
+                      }
+                    ],
+                    "id": "7bp7xpjtomowrdb",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Be sure to convert the temperature to kelvin. Use "
+                      },
+                      {
+                        "em": true,
+                        "text": "R"
+                      },
+                      {
+                        "text": " = 0.08206."
+                      }
+                    ],
+                    "id": "cbe3t4svbs16d9m",
+                    "type": "p"
+                  }
+                ],
+                "id": "1824650247"
+              },
+              "id": "2405258842",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Then, calculate Kp for the reaction. Kp = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "1965243064"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Then, calculate "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " for the reaction. "
+            }
+          ],
+          "id": "c27xdthp7rbyjcr",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "p"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "env8u1a6iwdd41j",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1965243064": [
+      "78362"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

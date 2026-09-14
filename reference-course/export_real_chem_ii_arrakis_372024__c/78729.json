@@ -1,0 +1,283 @@
+{
+  "id": "78729",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78147"
+  ],
+  "title": "battery_fuel_cell_pool_v4",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "C",
+          "D"
+        ],
+        "2755055395"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "b1u4l6i7atphl6v",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "nzb0tq04wqus5c2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "totly78hclk1gbe",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "ycn1sy783gx50ou",
+                        "text": "The lead acid battery is a type of secondary battery."
+                      }
+                    ],
+                    "id": "4msrpa8xpu1nao6",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ew04oeo8grqurmj",
+                        "text": "Fuel cells are galvanic cells that convert chemical energy into electrical energy."
+                      }
+                    ],
+                    "id": "cj7hxh5kbyaoi86",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "uidhjz1ottoz2pb",
+                        "text": "Similar to batteries, fuel cells produce electricity continuously as long as the fuel is available."
+                      }
+                    ],
+                    "id": "m975za32bo6s0aj",
+                    "type": "li"
+                  }
+                ],
+                "id": "wg9ozgd0n1baxfl",
+                "type": "ul"
+              }
+            ],
+            "id": "446707470"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kc13ny6t8kdxjsx",
+                  "type": "p"
+                }
+              ],
+              "id": "3866241378"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fwh1qz146lsxfbw",
+                  "type": "p"
+                }
+              ],
+              "id": "311324305"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c87tmgtxjph4cai",
+                  "type": "p"
+                }
+              ],
+              "id": "2401309431"
+            }
+          ],
+          "id": "b6329940740f465886ef06d2468f5584",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "aeabc73901b74b03aaae622361e23b34",
+                    "type": "p"
+                  }
+                ],
+                "id": "846013764"
+              },
+              "id": "2755055395",
+              "legacyMatch": "B,C,D",
+              "rule": "(!(input like {E})) && ((!(input like {A})) && (input like {D} && (input like {C} && (input like {B}))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      }
+                    ],
+                    "id": "c23bc60f59bd4604bbce70751b23160b",
+                    "type": "p"
+                  }
+                ],
+                "id": "3158427338"
+              },
+              "id": "3953928443",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Alkaline batteries generally have worse performance than that of the dry cell. "
+              }
+            ],
+            "id": "9zjn9n2uv7hnfvk",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The lead acid battery is a type of secondary battery."
+              }
+            ],
+            "id": "p92zqpzu0p8s9o4",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Fuel cells are galvanic cells that convert chemical energy into electrical energy. "
+              }
+            ],
+            "id": "3nc5qvh02bhpth2",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Similar to batteries, fuel cells produce electricity continuously as long as the fuel is available."
+              }
+            ],
+            "id": "mrfdt3j46rp3ung",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": " Primary and secondary batteries may or may not be rechargeable, depending on the materials used in the battery."
+              }
+            ],
+            "id": "3mm32hasur0ggyk",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements are true? Select all that apply."
+            }
+          ],
+          "id": "f092853011da49d9a41f0d671e023872",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "b6329940740f465886ef06d2468f5584": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

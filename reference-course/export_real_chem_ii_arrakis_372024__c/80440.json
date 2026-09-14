@@ -1,0 +1,651 @@
+{
+  "id": "80440",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78240"
+  ],
+  "title": "pH_pOH_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_w\\;=\\;\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\frac{K_{\\mathrm w}}{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack}\\;=\\;\\frac{1.00\\times10^{-14}\\;\\mathrm M}{@@D@@\\times10^{@@E@@}\\;\\mathrm M}\\;=\\;@@HansNum@@\\times10^{@@HansExp@@}\\;\\mathrm M\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "0mqr60cf5f3pidk",
+                "type": "p"
+              }
+            ],
+            "id": "2807083102"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t3t07w8twh92q29",
+                  "type": "p"
+                }
+              ],
+              "id": "174455402"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "eowqdq7pt5mcyjq",
+                  "type": "p"
+                }
+              ],
+              "id": "750033605"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o2s1p1b30jne33o",
+                  "type": "p"
+                }
+              ],
+              "id": "2758485764"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_w\\;=\\;\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\lbrack\\mathrm{OH}^-\\rbrack\\;=\\;\\frac{K_{\\mathrm w}}{\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack}\\;=\\;\\frac{1.00\\times10^{-14}\\;\\mathrm M}{@@D@@\\times10^{@@E@@}\\;\\mathrm M}\\;=\\;@@OH@@\\;\\mathrm M\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "ij3p4mv3bch03gx",
+                    "type": "p"
+                  }
+                ],
+                "id": "3472798311"
+              },
+              "id": "3499970847",
+              "legacyMatch": "[@@OHlow@@,@@OHhigh@@]",
+              "rule": "input = {[@@OHlow@@,@@OHhigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the relationship "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_w = [\\text H_3\\text O^+][\\text{OH}^-] = 1.0 \\times 10^{-14} ",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " to determine [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": "]. "
+                      }
+                    ],
+                    "id": "gj0iqw3wh2h05dn",
+                    "type": "p"
+                  }
+                ],
+                "id": "1142988771"
+              },
+              "id": "2070976201",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "8j21ybtpbyks2sm",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "kuon9wixl7293wp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\mathrm{pOH}\\;=\\;-\\log\\lbrack@@HansNum@@\\times10^{@@HansExp@@}\\rbrack\\;=\\;@@pOH@@",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "ikk9eqoi84q41ln",
+                "type": "p"
+              }
+            ],
+            "id": "3382674036"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "np9kzxyfwu0o1bs",
+                  "type": "p"
+                }
+              ],
+              "id": "852232881"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t5ygv0r6h9pua6x",
+                  "type": "p"
+                }
+              ],
+              "id": "224374945"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2phsb5so4ag6q9c",
+                  "type": "p"
+                }
+              ],
+              "id": "4266349954"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pOH}\\;=\\;-\\log\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\mathrm{pOH}\\;=\\;-\\log\\lbrack@@HansNum@@\\times10^{@@HansExp@@}\\rbrack\\;=\\;@@pOH@@",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "esrcbwhf6t6w1bb",
+                    "type": "p"
+                  }
+                ],
+                "id": "4202269907"
+              },
+              "id": "928982632",
+              "legacyMatch": "[@@pOHlow@@,@@pOHhigh@@]",
+              "rule": "input = {[@@pOHlow@@,@@pOHhigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Use the relationship between pOH and [OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": "] to calculate pOH."
+                      }
+                    ],
+                    "id": "rrov49o65r3h9q0",
+                    "type": "p"
+                  }
+                ],
+                "id": "1855321375"
+              },
+              "id": "82631571",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": " Incorrect. "
+                  }
+                ],
+                "id": "2glcj3ptkhlihk2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "ia6bgb6qjj6744i",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{pH}\\;\\:=\\;-\\log\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\\\\\mathrm{pH}\\;=\\;-\\log(@@D@@\\times10^{@@E@@})\\;=\\;@@pH@@\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "192ol6t0tlaerd3",
+                "type": "p"
+              }
+            ],
+            "id": "2700675525"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q68albbi7x3d4tk",
+                  "type": "p"
+                }
+              ],
+              "id": "1602440060"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qn5nsak66ooztak",
+                  "type": "p"
+                }
+              ],
+              "id": "1702470406"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4iusighxksml3fo",
+                  "type": "p"
+                }
+              ],
+              "id": "646436408"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;\\:=\\;-\\log\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\\\\\mathrm{pH}\\;=\\;-\\log(@@D@@\\times10^{@@E@@})\\;=\\;@@pH@@\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "b7b70aea69e34deeb4652169b507a361",
+                    "type": "p"
+                  }
+                ],
+                "id": "817259214"
+              },
+              "id": "1851159531",
+              "legacyMatch": "[@@pHlow@@,@@pHhigh@@]",
+              "rule": "input = {[@@pHlow@@,@@pHhigh@@]}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. You can use either of the following relationships to determine the pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;+\\;\\mathrm{pOH}\\:=\\;14\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;\\:=\\;-\\log\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "cdccdfb3db8e492188b3a05076870fd5",
+                    "type": "p"
+                  }
+                ],
+                "id": "3112545697"
+              },
+              "id": "1479667725",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst D = OLI.random(2.2, 9.9,1);\nconst E = OLI.random(-13,-2,0);\nconst H = (D*10**E) .toPrecision(3);\nconst HansNum = ((1/D)*10) .toPrecision(2);\nconst HansExp = (-15-E) .toPrecision(1);\nconst pH = (-Math.log10(H)) .toFixed(2);\nconst pOH = (14-pH) .toFixed(2);\nconst OH = (10**-pOH) .toPrecision(3);\nconst pHlow = 0.98*pH;\nconst pHhigh = 1.02*pH;\nconst pOHlow = 0.98*pOH;\nconst pOHhigh = 1.02*pOH;\nconst OHlow = 0.95*OH;\nconst OHhigh = 1.05*OH;\n// Expose variables to OLI\nmodule.exports = {\n  D,\n  E,\n  H,\n  HansNum,\n  HansExp,\n  pH,\n  pOH,\n  OH,\n  pHlow,\n  pHhigh,\n  pOHlow,\n  pOHhigh,\n  OHlow,\n  OHhigh\n};\n",
+              "id": "b349c277a0144a108b83fe8d4af9388e",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A solution has a [H"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "O"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "] = @@D@@×10"
+            },
+            {
+              "sup": true,
+              "text": "@@E@@"
+            },
+            {
+              "text": " M. Calculate the following:"
+            }
+          ],
+          "id": "0nd6y87wh49d2yu",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[OH"
+            },
+            {
+              "sup": true,
+              "text": "-"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "7qg1qfis8mwln1p",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pOH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            }
+          ],
+          "id": "gr31eko4i02yo97",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            }
+          ],
+          "id": "0mmfwram1zxz0eo",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

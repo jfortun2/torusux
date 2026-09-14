@@ -1,0 +1,746 @@
+{
+  "id": "80719",
+  "type": "Page",
+  "tags": [],
+  "title": "Entropy and Microstates",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "In the late 19th century, Ludwig Boltzmann developed a molecular-scale statistical model that related the entropy of a system to the number of microstates ("
+              },
+              {
+                "em": true,
+                "text": "W"
+              },
+              {
+                "text": ") possible for the system. A "
+              },
+              {
+                "children": [
+                  {
+                    "text": "microstate"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "A specific detailed configuration of a system's particles that corresponds to a particular distribution of energy, contributing to the system's overall entropy."
+                      }
+                    ],
+                    "id": "986710271",
+                    "type": "p"
+                  }
+                ],
+                "id": "1095730036",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " is a specific configuration of all the locations and energies of the atoms or molecules that make up a system. The relationship between a system’s entropy and the number of possible microstates is:"
+              }
+            ],
+            "id": "zgo1qfkbwg9a7zc",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "33gai0n578stv79",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "k619oo3p1u0wcnt",
+            "legacyBlockRendered": "true",
+            "src": "S\\;=\\;k\\ln W",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "where "
+              },
+              {
+                "em": true,
+                "text": "k"
+              },
+              {
+                "text": " is the Boltzmann constant, 1.38 × 10"
+              },
+              {
+                "sup": true,
+                "text": "−23"
+              },
+              {
+                "text": " J/K. As with other state functions, the change in entropy for a process is the difference between its final ("
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": ") and initial ("
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "i"
+              },
+              {
+                "text": ") entropy values:"
+              }
+            ],
+            "id": "huveys8bge9pxvk",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "uprqdox8orxow2e",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "yyr3bbxwuc390xv",
+            "legacyBlockRendered": "true",
+            "src": "\\Delta S\\;=\\;S_\\mathrm{f}\\;-\\;S_\\mathrm{i}\\;=\\;k\\;\\ln W_\\mathrm{f}\\;-\\;k\\;\\ln W_\\mathrm{i}\\;=\\;k\\;\\ln\\left(\\frac{\\ln W_\\mathrm{f}}{\\ln W_\\mathrm{i}}\\right)",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "For processes involving an increase in the number of microstates ("
+              },
+              {
+                "em": true,
+                "text": "W"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": " is larger than "
+              },
+              {
+                "em": true,
+                "text": "W"
+              },
+              {
+                "sub": true,
+                "text": "i"
+              },
+              {
+                "text": "), the entropy of the system increases and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " > 0. Conversely, for processes that reduce the number of microstates ("
+              },
+              {
+                "em": true,
+                "text": "W"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": " is smaller than "
+              },
+              {
+                "em": true,
+                "text": "W"
+              },
+              {
+                "sub": true,
+                "text": "i"
+              },
+              {
+                "text": "), the system's entropy decreases and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " < 0. Microstates with equivalent particle arrangements (not considering individual particle identities) are grouped together and are called "
+              },
+              {
+                "em": true,
+                "text": "distributions"
+              },
+              {
+                "text": ". The probability that a system will exist with its components in a given distribution is proportional to the number of microstates within the distribution. Because entropy increases logarithmically with the number of microstates, the most probable distribution is therefore the one with the greatest entropy. This molecular-scale interpretation of entropy provides a link to the probability that a process will occur."
+              }
+            ],
+            "id": "9tkg4m9yn7f0uiu",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "For example, let's consider how four  particles could be distributed between two containers, as shown below. One distribution (microstate) has all four gas particles in the container on the left; another has all four in the container on the right. There are four ways (microstates) to have three particles on the left and one on the right; similarly, there are four microstates with one particle on the left and three on the right. The particles can be distributed evenly—two in each container—in eight ways, for a total of 2"
+              },
+              {
+                "sup": true,
+                "text": "4"
+              },
+              {
+                "text": " = 16 different microstates for this system."
+              }
+            ],
+            "id": "6mq4x0g1v4zbozp",
+            "type": "p"
+          },
+          {
+            "alt": "   ",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "The sixteen microstates associated with distributing four particles between two containers are shown. The microstates are collected into five distributions—(a) through (e)—based on the numbers of particles in each container."
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "vviku9sq0ob75fb",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "xxp7a2cv8o4qdq1",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/4E/4ED59E1914B3E31ED62762EE0113E3C2/16_microstates_new.png",
+            "type": "img",
+            "width": "650"
+          },
+          {
+            "children": [
+              {
+                "text": "For this system, the most likely distribution is (c), which corresponds to having the particles evenly distributed between the containers. The probability of finding the system in this configuration is "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac6{16}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ", or "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac3{8}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ". The least likely configuration is one in which all four particles are in one container, corresponding to distributions (a) and (e), each with a probability of "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac1{16}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ". The probability of finding all particles in only one container (either the left one or the right one) is then "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac1{16}+\\frac1{16}=\\frac2{16}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ", or "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac1{8}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "4ejswyii68hhkaq",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "For the general case of a system comprised of "
+              },
+              {
+                "em": true,
+                "text": "N"
+              },
+              {
+                "text": " particles distributed among "
+              },
+              {
+                "em": true,
+                "text": "n"
+              },
+              {
+                "text": " containers, the number of possible microstates is "
+              },
+              {
+                "em": true,
+                "text": "n"
+              },
+              {
+                "em": true,
+                "sup": true,
+                "text": "N"
+              },
+              {
+                "text": ". As you add more particles to the system, the number of possible microstates increases exponentially (2"
+              },
+              {
+                "em": true,
+                "sup": true,
+                "text": "N"
+              },
+              {
+                "text": "). A macroscopic (laboratory-sized) system would typically consist of moles of particles ("
+              },
+              {
+                "em": true,
+                "text": "N"
+              },
+              {
+                "text": " ~ 10"
+              },
+              {
+                "sup": true,
+                "text": "23"
+              },
+              {
+                "text": "), and the corresponding number of microstates would be staggeringly huge. Regardless of the number of particles in the system, however, the distributions in which roughly equal numbers of particles are found in each container are always the most probable configurations."
+              }
+            ],
+            "id": "g96y7l7c0sku09k",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "This matter-dispersal model of entropy is often described qualitatively in terms of the disorder of the system. By this description, microstates in which all the particles are in a single box are the most ordered, thus possessing the least entropy. Microstates in which the particles are more evenly distributed among the containers are more disordered, possessing greater entropy."
+              }
+            ],
+            "id": "o7ud4wjbac3xx1v",
+            "type": "p"
+          }
+        ],
+        "id": "3450307202",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Determination of Δ"
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "S"
+                  }
+                ],
+                "id": "6dcq6d4tv8678hv",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Two equal-volume flasks are connected with a valve between them. Initially, one flask contains four gas molecules and the other flask is empty. The valve is opened, and afterwards, each flask contains two gas molecules. Determine and interpret the entropy change for this process."
+                  }
+                ],
+                "id": "dvxzyasby3j9drl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This process corresponds to (part of) the example above. There is one way to have four gas molecules in one flask, so the initial number of microstates is 1. There are six ways to have four gas molecules evenly distributed between the two flasks (two molecules in each), so the final number of microstates is 6. This process is depicted below."
+                  }
+                ],
+                "id": "flgth4r7ya7xxrl",
+                "type": "p"
+              },
+              {
+                "alt": "   ",
+                "children": [
+                  {
+                    "id": "gprr5pdqzrjlh2o",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "3w171g0fchpf6d4",
+                "src": "https://d2xvti2irp4c7t.cloudfront.net/media/5f/5fc0fcfedf97e13382a2b26d4044e10b/o2_expansion.png",
+                "type": "img",
+                "width": "550"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using the formula relating the entropy change to the numbers of initial and final microstates gives:"
+                  }
+                ],
+                "id": "j3lriea3ymr9v7p",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "jmb3dwmc1r2jzkf",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "3ijlb9vilc9fdo3",
+                "legacyBlockRendered": "true",
+                "src": "\\Delta S\\;=\\;k\\;\\ln\\left(\\frac{W_\\mathrm{f}}{W_\\mathrm{i}}\\right)\\;=\\;\\left(1.38\\times10^{-23}\\;\\frac{\\mathrm J}{\\mathrm K}\\right)\\times \\ln\\left(\\frac61\\right)\\;=\\;2.47\\times10^{-23}\\;\\frac{\\mathrm J}{\\mathrm K}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": " is positive, so the entropy increased during this process. Because entropy corresponds to the number of possible microstates, and there are more possible microstates for the final state than for the initial state, this is the expected result. "
+                  }
+                ],
+                "id": "k6th0ljee3upvvq",
+                "type": "p"
+              }
+            ],
+            "id": "553189023",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2733861937",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79003,
+            "id": "3725462243",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1687694126",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "A similar approach may be used to describe the spontaneous flow of heat. Consider a system consisting of two objects, each containing two particles, and two units of thermal energy (each unit represented as an asterisk: *) in the image below. The hot object is comprised of particles A and B and initially contains both energy units. The cold object is comprised of particles C and D, which initially has no energy units. Distribution (a) shows the three microstates possible for the initial state of the system, with both units of energy contained within the hot object. If one of the two energy units is transferred, the result is distribution (b), consisting of four microstates. If both energy units are transferred, the result is distribution (c), consisting of three microstates. Thus, we may describe this system by a total of 10 microstates. The probability that the heat does not flow when the two objects are brought into contact—that is, the system remains in distribution (a)—is "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac3{10}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ". A more likely result is that the flow of heat yields one of the other two distributions, the combined probability being "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac7{10}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ". The most likely result is that the flow of heat yields the uniform dispersal of energy represented by distribution (b), the probability of this configuration being "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "\\frac4{10}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": ". This supports the common observation that placing hot and cold objects in contact results in spontaneous heat flow that ultimately equalizes the objects’ temperatures. Again, this spontaneous process is also characterized by an increase in system entropy."
+              }
+            ],
+            "id": "6fic1siqdcyan6e",
+            "type": "p"
+          },
+          {
+            "alt": "   ",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "A microstate model describing the flow of heat from a hot object to a cold object. "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "(a)"
+                  },
+                  {
+                    "em": true,
+                    "text": " Before the heat flow occurs, the object comprised of particles A and B contains both units of energy and is represented by a distribution of three microstates. "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "(b)"
+                  },
+                  {
+                    "em": true,
+                    "text": " If the heat flow results in an even dispersal of energy (one energy unit transferred), a distribution of four microstates results. "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "(c)"
+                  },
+                  {
+                    "em": true,
+                    "text": " If both energy units are transferred, the resulting distribution has three microstates."
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "5goey7a47dc3yq4",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "sno4ibx8hu2tmbk",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/1e/1e7b3abdd6385088aebf6a8e68e5a161/Microstates_2.png",
+            "type": "img",
+            "width": "650"
+          },
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "n40qiz7goxo5qvw",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "k5e48mbz4ezvqv3",
+            "type": "p"
+          }
+        ],
+        "id": "2472223995",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78519"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

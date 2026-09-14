@@ -1,0 +1,308 @@
+{
+  "id": "79012",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "inline_pre_student_survey3-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z2526attacalde7",
+                  "type": "p"
+                }
+              ],
+              "id": "540167066"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gay0tx0in42fyc6",
+                  "type": "p"
+                }
+              ],
+              "id": "1428497682"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xss26amc0p9id5u",
+                  "type": "p"
+                }
+              ],
+              "id": "1653114414"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "0h7p8gikbupgnt7",
+                    "type": "p"
+                  }
+                ],
+                "id": "4237218595"
+              },
+              "id": "293686925",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qrdt9bix9c621gh",
+                  "type": "p"
+                }
+              ],
+              "id": "2750774161"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wged03bezil1dcm",
+                  "type": "p"
+                }
+              ],
+              "id": "757115596"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "btt2ri8u0adk9q5",
+                  "type": "p"
+                }
+              ],
+              "id": "1649615832"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "87ilqwg9wxnek7u",
+                    "type": "p"
+                  }
+                ],
+                "id": "3903398418"
+              },
+              "id": "2208306535",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "h6s6b7txw9jpyhz",
+            "text": "yes "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "m034x61muwzmxwl",
+            "text": "no"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "cq9ixmejyayznkn",
+            "text": "prefer not to answer"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "shnu1i1xil80f4g",
+            "text": "yes"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "tbahk7zbdwr0yis",
+            "text": "no"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "gp2ate2pymxuliw",
+            "text": "prefer not to answer"
+          }
+        ],
+        "id": "second_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "second_C"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Do you have a long-lasting or chronic condition (physical, visual, auditory, cognitive or mental, emotional, or other) that substantially limits one or more of your major life activities (your ability to see, hear, or speak; to learn, remember, or concentrate)? "
+            }
+          ],
+          "id": "g1y6mmeikr9d8qe",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "gnxyj59d2evtqnm",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " Do you consider yourself a first-generation college student? (That is, you do not have a parent who attended college)? "
+            }
+          ],
+          "id": "r9gup4q4mqb0ylp",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            }
+          ],
+          "id": "idfeolh9btatlmc",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [],
+    "second": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

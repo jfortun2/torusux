@@ -1,0 +1,259 @@
+{
+  "id": "79805",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78098"
+  ],
+  "title": "concept_redox_pool_v3",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "C"
+        ],
+        "2787104693"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "j5rriru4tla9h0j",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "alz9014znvviiwv",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "xzxvfwva9wru118",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "3h4q68jjfrh483e",
+                        "text": "Oxidizing agents are reactants in reduction half-reactions and reducing agents are reactants in oxidation half-reactions."
+                      }
+                    ],
+                    "id": "zjlfhgldfax1xo2",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ngi9uxthaepqsat",
+                        "text": "The oxidation number of an oxidizing agent decreases and the oxidation number of a reducing agent increases."
+                      }
+                    ],
+                    "id": "aw4pfr75mfo1ypv",
+                    "type": "li"
+                  }
+                ],
+                "id": "p8jyfyphrjs0o53",
+                "type": "ul"
+              }
+            ],
+            "id": "423049887"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wt8hwrcmc9w1agz",
+                  "type": "p"
+                }
+              ],
+              "id": "498323108"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rdf2lg6af6fytqx",
+                  "type": "p"
+                }
+              ],
+              "id": "1967373168"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bkcbpyn00igb1yc",
+                  "type": "p"
+                }
+              ],
+              "id": "1521758820"
+            }
+          ],
+          "id": "c5c1077a04194d53a8a3619fb652604d",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Oxidizing agents gain electrons and by gaining electrons they undergo reduction (decrease in oxidation number), and reducing agents lose electrons and by losing electrons they undergo oxidation (increase in oxidation number)."
+                      }
+                    ],
+                    "id": "c2j4bqn0iazonbr",
+                    "type": "p"
+                  }
+                ],
+                "id": "1468682778"
+              },
+              "id": "2787104693",
+              "legacyMatch": "A,C",
+              "rule": "(!(input like {D})) && ((!(input like {B})) && (input like {C} && (input like {A})))",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Oxidizing agents gain electrons and by gaining electrons they undergo reduction (decrease in oxidation number), and reducing agents lose electrons and by losing electrons they undergo oxidation (increase in oxidation number)."
+                      }
+                    ],
+                    "id": "sfdnbcgjqd2c6bs",
+                    "type": "p"
+                  }
+                ],
+                "id": "3496585775"
+              },
+              "id": "2683687644",
+              "legacyMatch": ".*",
+              "namremoveSetOpse": "AUTOGEN_{A}",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidizing agents are reactants in reduction half-reactions and reducing agents are reactants in oxidation half-reactions."
+              }
+            ],
+            "id": "j0srq9e0xjg5lub",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidizing agents are reactants in oxidation half-reactions and reducing agents are reactants in reduction half-reactions."
+              }
+            ],
+            "id": "stcovk4y78v7lk7",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The oxidation number of an oxidizing agent decreases and the oxidation number of a reducing agent increases."
+              }
+            ],
+            "id": "i9tfdunjugmstpi",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The oxidation number of an oxidizing agent increases and the oxidation number of a reducing agent decreases."
+              }
+            ],
+            "id": "cvgtm6n1cz1gzbr",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements are true? Select all that apply."
+            }
+          ],
+          "id": "q3lrws5l98dumum",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "c5c1077a04194d53a8a3619fb652604d": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

@@ -1,0 +1,218 @@
+{
+  "id": "79228",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5zexfquhbms0ku9",
+                  "type": "p"
+                }
+              ],
+              "id": "696810991"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ue7ng1f1btvz2pv",
+                  "type": "p"
+                }
+              ],
+              "id": "2889125919"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9v802tyy00l2ojx",
+                  "type": "p"
+                }
+              ],
+              "id": "3293485187"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Equilibrium is dynamic. The forward and reverse reactions continue to occur."
+                      }
+                    ],
+                    "id": "ghqabem0ctg6hqe",
+                    "type": "p"
+                  }
+                ],
+                "id": "1535181547"
+              },
+              "id": "219311424",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Equilibrium is dynamic. The forward and reverse reactions continue to occur."
+                      }
+                    ],
+                    "id": "ki2ulxapre00nh2",
+                    "type": "p"
+                  }
+                ],
+                "id": "2511264522"
+              },
+              "id": "1273678394",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "mgd8xwsm6q1q1dg",
+                    "type": "p"
+                  }
+                ],
+                "id": "3277908981"
+              },
+              "id": "4229847847",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "At equilibrium, all reactions have stopped. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "219311424"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1273678394"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True "
+              }
+            ],
+            "id": "883734435",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "3325925457",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At equilibrium, all reactions have stopped. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "9jz4cbyz0sanqf6",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

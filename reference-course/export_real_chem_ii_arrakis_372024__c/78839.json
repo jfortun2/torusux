@@ -1,0 +1,650 @@
+{
+  "id": "78839",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78232"
+  ],
+  "title": "calc_avg_rate_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "tcvva1dizuay2a0",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm{Average}\\;\\mathrm{rate}\\;\\mathrm{of}\\;\\mathrm{change}\\;\\mathrm{of}\\;\\lbrack\\mathrm X\\rbrack\\;=\\;\\frac{\\triangle\\lbrack \\mathrm X\\rbrack}{\\triangle t}\\;=\\;\\frac{{\\lbrack\\mathrm X\\rbrack}_{\\mathrm f}\\;-\\;{\\lbrack\\mathrm X\\rbrack}_{\\mathrm i}\\;}{t_{\\mathrm f}\\;\\;-\\; t_{\\mathrm i}}\\\\=\\;\\frac{0.546\\;\\mathrm M\\;-\\;0.619\\;\\mathrm M}{30.0\\;\\mathrm s\\;-\\;20.0\\;\\mathrm s}\\;=\\;-\\frac{0.073\\;\\mathrm M}{10.0\\;\\mathrm s}\\;= \\;-0.00073\\;\\frac{\\mathrm M}{\\mathrm s}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Note: Because X is a reactant, [X] decreases and Δ[X]/Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": " is negative. "
+                  }
+                ],
+                "id": "aznjxhw0ujaysda",
+                "type": "p"
+              }
+            ],
+            "id": "3612468090"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zlyeg52oe1uh2ip",
+                  "type": "p"
+                }
+              ],
+              "id": "472865880"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0p1jbt4y644sy6d",
+                  "type": "p"
+                }
+              ],
+              "id": "1158916171"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o9tzavq3e2q3wx0",
+                  "type": "p"
+                }
+              ],
+              "id": "798738157"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm{Average}\\;\\mathrm{rate}\\;\\mathrm{of}\\;\\mathrm{change}\\;\\mathrm{of}\\;\\lbrack\\mathrm X\\rbrack\\;=\\;\\dfrac{\\triangle\\lbrack\\mathrm X\\rbrack}{\\triangle t}\\;=\\;\\dfrac{{\\lbrack\\mathrm X\\rbrack}_{\\mathrm f}\\;-\\;{\\lbrack\\mathrm X\\rbrack}_{\\mathrm i}\\;}{t_{\\mathrm f}\\;\\;-\\;t_{\\mathrm i}}\\\\=\\;\\dfrac{0.546\\;\\mathrm M\\;-\\;0.619\\;\\mathrm M}{30.0\\;\\mathrm s\\;-\\;20.0\\;\\mathrm s}\\;=\\;-\\dfrac{0.073\\;\\mathrm M}{10.0\\;\\mathrm s}\\;=\\;-0.0073\\;\\mathrm M/\\mathrm s\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Note: Because X is a reactant, [X] decreases and Δ[X]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " is negative. "
+                      }
+                    ],
+                    "id": "2oob86srgmmk0pg",
+                    "type": "p"
+                  }
+                ],
+                "id": "824423745"
+              },
+              "id": "1109488680",
+              "legacyMatch": "[-0.0074,-0.0072]",
+              "rule": "input = {[-0.0074,-0.0072]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{The}\\;\\mathrm{rate}\\;\\mathrm{of}\\;\\mathrm{change}\\;\\mathrm{of}\\;\\lbrack\\mathrm X\\rbrack\\;=\\;\\dfrac{\\triangle\\lbrack\\mathrm X\\rbrack}{\\triangle t}\\; =\\;\\dfrac{{\\lbrack\\mathrm X\\rbrack}_{\\mathrm f}\\;-\\;{\\lbrack\\mathrm X\\rbrack}_{\\mathrm i}}{t_{\\mathrm f}\\;\\;-\\;t_{\\mathrm i}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "4pb4km1vpyklxfr",
+                    "type": "p"
+                  }
+                ],
+                "id": "2090147841"
+              },
+              "id": "1286278271",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "mjhzoc428u6gxp9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "h1vyy6ykq98fcmy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The rate of change of [Z] can be expressed in terms of the rate of change of [X] using the stoichiometric coefficients: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{Rate}\\;=\\;-\\frac{\\triangle\\left[\\mathrm X\\right]}{\\triangle t}\\;=\\frac12\\frac{\\triangle\\left[\\mathrm Z\\right]}{\\triangle t}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": "Using the average rate of change of [X] from Part 1 to calculate the average rate of change of [Z]: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\frac{\\triangle\\left[\\mathrm Z\\right]}{\\triangle t}\\;=\\;-2\\frac{\\triangle\\left[\\mathrm X\\right]}{\\triangle t}\\;=\\;-2\\;(-0.0073\\;\\mathrm{M/s})\\; =\\;0.015\\;\\mathrm{M/s}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "hshfoi3cxy8xtha",
+                "type": "p"
+              }
+            ],
+            "id": "3178604637"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dj3wn4heywzlmco",
+                  "type": "p"
+                }
+              ],
+              "id": "3288403282"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4i4jmg0gmkkb96z",
+                  "type": "p"
+                }
+              ],
+              "id": "3470565008"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r03frcujcgclptk",
+                  "type": "p"
+                }
+              ],
+              "id": "1559898283"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate of change of [Z] can be expressed in terms of the rate of change of [X] using the stoichiometric coefficients: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{Rate}\\;=\\;-\\frac{\\triangle\\left[\\mathrm X\\right]}{\\triangle t}\\;=\\frac12\\frac{\\triangle\\left[\\mathrm Z\\right]}{\\triangle t}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Using the average rate of change of [X] from Part 1 to calculate the average rate of change of [Z]: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{\\triangle\\left[\\mathrm Z\\right]}{\\triangle t}\\;=\\;-2\\frac{\\triangle\\left[\\mathrm X\\right]}{\\triangle t}\\;=\\;-2\\;(-0.0073\\;\\mathrm{M/s})\\; =\\;0.015\\;\\mathrm{M/s}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "eo9r7pdncwwyfx7",
+                    "type": "p"
+                  }
+                ],
+                "id": "43206801"
+              },
+              "id": "2641392330",
+              "legacyMatch": "[0.014,0.015]",
+              "rule": "input = {[0.014,0.015]}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect.  Use the stoichiometric coefficients to relate Δ[X]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " to Δ[Z]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ". Use the value of Δ[X]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " from Part 1 and the stoichiometric relationship to calculate Δ[Z]/Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ".  "
+                      }
+                    ],
+                    "id": "eypnwjyqxlfxxon",
+                    "type": "p"
+                  }
+                ],
+                "id": "1112126175"
+              },
+              "id": "791503201",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "A study of the rate of the reaction represented as  gave the following data:Time (s)0.010.020.030.0[X] (M)0.8320.7120.6190.546Determine the average rate of change of [X] and the average rate of change of [Z] between 20.0 and 30.0 s.Average rate of change of [X] between 20.0 s and 30.0 s =   M/s.Average rate of change of [Z] between 20.0 s and 30.0 s =   M/s.",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      },
+      {
+        "id": "two",
+        "inputType": "numeric",
+        "partId": "two",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A study of the rate of the reaction represented as "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm X\\;+\\;\\mathrm Y\\;\\;\\rightarrow\\;\\;2\\;\\mathrm Z",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " gave the following data:"
+            }
+          ],
+          "id": "lygtbj3xl4nuqe2",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "9zv2lchtceu5kvb",
+                      "text": "Time (s)"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "oupeir8wx68d7u0",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "ysvwxuek1a4odx7",
+                      "text": "0.0"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "bxs313bxyi9p9a7",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "7oqzeoiftlgmwfq",
+                      "text": "10.0"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "03rkkx3tlc21b5s",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "hr0qm0uyhgwr4cn",
+                      "text": "20.0"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "ucs0t8ojqm8jvw7",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "a62qm14mcgovrqc",
+                      "text": "30.0"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "srffkzy4qoo9b8n",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "j7jyyrkcog26o23",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "iue54uzs35il719",
+                      "text": "[X] (M)"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "mbfzh20j5g8bqr0",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "zyrkzwmrh4sxfmh",
+                      "text": "0.832"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "v5w5cdrkqmi2b6i",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "fsd28jr2wzju4zz",
+                      "text": "0.712"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "1gbpxanxkyib5ua",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "3v8kecw72wyggvo",
+                      "text": "0.619"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "fy5p1z7du479zns",
+                  "rowspan": 1,
+                  "type": "td"
+                },
+                {
+                  "align": "left",
+                  "children": [
+                    {
+                      "id": "s4xwamwqem69nny",
+                      "text": "0.546"
+                    }
+                  ],
+                  "colspan": 1,
+                  "id": "jehtpvrv6o1cih4",
+                  "rowspan": 1,
+                  "type": "td"
+                }
+              ],
+              "id": "kfxy6kqw6ftmwop",
+              "type": "tr"
+            }
+          ],
+          "id": "pwebp9nrrhw6o58",
+          "rowstyle": "plain",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": "Determine the average rate of change of [X] and the average rate of change of [Z] between 20.0 and 30.0 s."
+            }
+          ],
+          "id": "73dt6nlow6klpnt",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Average rate of change of [X] between 20.0 s and 30.0 s =  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s."
+            }
+          ],
+          "id": "utcefzkoe4iu9bg",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Average rate of change of [Z] between 20.0 s and 30.0 s =  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/s."
+            }
+          ],
+          "id": "setp99klxtsxxr4",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

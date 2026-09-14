@@ -1,0 +1,178 @@
+{
+  "id": "80427",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "large_k_lbd-q8",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "22wzsjlv8xowon7",
+                  "type": "p"
+                }
+              ],
+              "id": "783474084"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3uwk09izrfmvhm5",
+                  "type": "p"
+                }
+              ],
+              "id": "559300822"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nb2wv6nkgogn5ga",
+                  "type": "p"
+                }
+              ],
+              "id": "509854242"
+            }
+          ],
+          "id": "4218472749",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{0.0035}{0.20}\\;\\times\\;100\\;=\\;1.8\\%",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "k3gns9l01t0ayx6",
+                    "type": "p"
+                  }
+                ],
+                "id": "263260615"
+              },
+              "id": "391228736",
+              "legacyMatch": "[1.75,1.8]",
+              "rule": "input = {[1.75,1.8]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\frac{0.0035}{0.20}\\;\\times\\;100\\;=\\;1.8\\%",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "ez0nylrch40c2d3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1691230182"
+              },
+              "id": "2553096449",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "4218472749",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "To verify the assumption, calculate the % of the minority species of the majority species. "
+            }
+          ],
+          "id": "c4x1kb72t3bdde9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " % "
+            }
+          ],
+          "id": "yqry1lgp1zaefg6",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "4218472749": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

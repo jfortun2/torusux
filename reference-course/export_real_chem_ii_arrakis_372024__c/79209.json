@@ -1,0 +1,196 @@
+{
+  "id": "79209",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_2lbd-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "qgqryoafr3s0j3h",
+                  "type": "p"
+                }
+              ],
+              "id": "1074283963"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mbzr7lbhhmrmdwl",
+                  "type": "p"
+                }
+              ],
+              "id": "180378413"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "fn64checo9wivng",
+                  "type": "p"
+                }
+              ],
+              "id": "3363711748"
+            }
+          ],
+          "id": "3695473805",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is less than 5% of the initial concentration of NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ", so the assumption is valid."
+                      }
+                    ],
+                    "id": "cu8y86kc5bw62i8",
+                    "type": "p"
+                  }
+                ],
+                "id": "2986151305"
+              },
+              "id": "1030345838",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " is less than 5% of the initial concentration of NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ", so the assumption is valid."
+                      }
+                    ],
+                    "id": "nahy9ubrf7fleot",
+                    "type": "p"
+                  }
+                ],
+                "id": "1107115093"
+              },
+              "id": "3669224107",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "1737620960",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes"
+              }
+            ],
+            "id": "wubebs0dq74lgmv",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "72u2j4osi2x7xki",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Is the assumption valid?"
+            }
+          ],
+          "id": "vh1dpmwesz7a5jq",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3695473805": [
+      "78390"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

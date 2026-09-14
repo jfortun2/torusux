@@ -1,0 +1,334 @@
+{
+  "id": "79769",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "large_k_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jny2j0ok6f8wtmb",
+                  "type": "p"
+                }
+              ],
+              "id": "391854998"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gj4weexqkwuxkh2",
+                  "type": "p"
+                }
+              ],
+              "id": "183580863"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vqopzpb6ibdsn4k",
+                  "type": "p"
+                }
+              ],
+              "id": "2913596255"
+            }
+          ],
+          "id": "356578282",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "jp7fzb80o6zouis",
+                    "type": "p"
+                  }
+                ],
+                "id": "3055194672"
+              },
+              "id": "2062830364",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. You forgot to include the coefficients in the expression."
+                      }
+                    ],
+                    "id": "hwrwfu5mzm7gu87",
+                    "type": "p"
+                  }
+                ],
+                "id": "1514004372"
+              },
+              "id": "642132949",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. You forgot to include the coefficients in the expression. Also, the equilibrium expression is products/reactants."
+                      }
+                    ],
+                    "id": "4fxbroi8j4c83fb",
+                    "type": "p"
+                  }
+                ],
+                "id": "749368774"
+              },
+              "id": "2514768338",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The equilibrium expression is products/reactants. "
+                      }
+                    ],
+                    "id": "vhrbiyacmv7ln0z",
+                    "type": "p"
+                  }
+                ],
+                "id": "2561910168"
+              },
+              "id": "2025217923",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "rq3881b0idkcijr",
+                    "type": "p"
+                  }
+                ],
+                "id": "3497133114"
+              },
+              "id": "1611135374",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2062830364"
+            ],
+            [
+              [
+                "B"
+              ],
+              "642132949"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2514768338"
+            ],
+            [
+              [
+                "D"
+              ],
+              "2025217923"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "2062830364"
+        ],
+        [
+          [
+            "B"
+          ],
+          "642132949"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2514768338"
+        ],
+        [
+          [
+            "D"
+          ],
+          "2025217923"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "2976154113",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_c\\;=\\;\\frac{\\lbrack{\\mathrm{NO}}_2\\rbrack^2}{\\lbrack\\mathrm{NO}\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "ghwlock1ndkyq4p",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_c\\;=\\;\\frac{\\lbrack{\\mathrm{NO}}_2\\rbrack}{\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "mhst4pbitm35365",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{NO}\\rbrack\\lbrack{\\mathrm O}_2\\rbrack}{\\lbrack{\\mathrm{NO}}_2\\rbrack}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "1k7ldhuszke8ng6",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{NO}\\rbrack^2\\lbrack{\\mathrm O}_2\\rbrack}{\\lbrack{\\mathrm{NO}}_2\\rbrack^2}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              }
+            ],
+            "id": "j064cm36ywyd7mb",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following is the correct equilibrium expression for this reaction?"
+            }
+          ],
+          "id": "uq4iav4ls1r998n",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "356578282": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

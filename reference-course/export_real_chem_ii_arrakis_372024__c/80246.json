@@ -1,0 +1,601 @@
+{
+  "id": "80246",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78122"
+  ],
+  "title": "int_zero2_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "vrcl0k3bt4u8pwj",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "hamo4pqir8k2ld3",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Solve the zero-order rate law for "
+                  },
+                  {
+                    "em": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": ", substitute the given values and calculate:"
+                  }
+                ],
+                "id": "z72yfl4kb8qhjtd",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\begin{array}{l}{\\lbrack\\mathrm A\\rbrack}_t\\;=\\;-kt\\;+\\;{\\lbrack\\mathrm A\\rbrack}_0\\\\t\\;=\\;\\frac{{\\lbrack\\mathrm A \\rbrack}_0\\;-\\;{\\lbrack\\mathrm A\\rbrack}_t}k\\\\\\;\\;=\\;\\frac{(@@initialRate@@\\;\\mathrm M\\;-\\;@@finalRate@@\\;\\mathrm M)}{@@k@@\\; \\mathrm M/\\mathrm s}\\\\\\;\\;=\\;@@correct@@\\;\\mathrm s\\end{array}\\\\\\\\\\;\\;\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "2ou5mzxos3k1a20",
+                "type": "p"
+              }
+            ],
+            "id": "3746208967"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9z0v38fh34wucqi",
+                  "type": "p"
+                }
+              ],
+              "id": "1823889167"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2pcxz75u88u6vwp",
+                  "type": "p"
+                }
+              ],
+              "id": "2458202645"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8iceknqjndu223x",
+                  "type": "p"
+                }
+              ],
+              "id": "698991535"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Solve the zero-order rate law for "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ", substitute the given values and calculate:"
+                      }
+                    ],
+                    "id": "clwluff1ovhc0ce",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\begin{array}{l}{\\lbrack\\mathrm A\\rbrack}_t\\;=\\;-kt\\;+\\;{\\lbrack\\mathrm A\\rbrack}_0\\\\t\\;=\\;\\frac{{\\lbrack\\mathrm A \\rbrack}_0\\;-\\;{\\lbrack\\mathrm A\\rbrack}_t}k\\\\\\;\\;=\\;\\frac{(@@initialRate@@\\;\\mathrm M\\;-\\;@@finalRate@@\\;\\mathrm M)}{@@k@@\\; \\mathrm M/\\mathrm s}\\\\\\;\\;=\\;@@correct@@\\;\\mathrm s\\end{array}\\\\\\\\\\;\\;\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "jaf4xmtg85h5z1d",
+                    "type": "p"
+                  }
+                ],
+                "id": "765084137"
+              },
+              "id": "3890614734",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 8
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The integrated rate law relates the initial concentration to the concentration at a later time. Use the integrated rate law for a zero-order reaction:"
+                      }
+                    ],
+                    "id": "2rk12btdhk9rxzj",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\lbrack\\mathrm A\\rbrack}_t\\;=\\;-kt\\;+\\;{\\lbrack\\mathrm A\\rbrack}_0",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "63iz6gvidjh48ey",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Rearrange the equation to solve for "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ", substitute the given values and calculate."
+                      }
+                    ],
+                    "id": "8lof5p7cy7ea6e9",
+                    "type": "p"
+                  }
+                ],
+                "id": "4106563985"
+              },
+              "id": "273972660",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect."
+                  }
+                ],
+                "id": "7ewkcs43oh4c7xz",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "uch23r2zcuyu6yd",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Use the zero-order rate law, substitute the given values and calculate [A]"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "3u4wkax628qabst",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\begin{array}{l}{\\lbrack\\mathrm A\\rbrack}_t\\;=\\;-kt\\;+\\;{\\lbrack A\\rbrack}_0\\\\\\;\\;\\;\\;\\;\\; =\\;-(@@k2@@\\;\\mathrm M\\;\\mathrm s^{-1})(@@time@@\\;\\mathrm s)\\;+\\;0.500\\;\\mathrm M\\;\\\\\\;\\;\\;\\;\\;\\; =\\;@@corRound@@\\;\\mathrm M\\end{array}\\\\\\\\\\;\\;\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "4lrodvpvo5oef4u",
+                "type": "p"
+              }
+            ],
+            "id": "1977282266"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uji8itwe9507kfk",
+                  "type": "p"
+                }
+              ],
+              "id": "1714066152"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "gs4k2fy4kjz90pf",
+                  "type": "p"
+                }
+              ],
+              "id": "1365362385"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "t9gvg5n1x09mzo8",
+                  "type": "p"
+                }
+              ],
+              "id": "1228910844"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Use the zero-order rate law, substitute the given values and calculate [A]"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": ":"
+                      }
+                    ],
+                    "id": "h6zvet4e12lb3s1",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\begin{array}{l}{\\lbrack\\mathrm A\\rbrack}_t\\;=\\;-kt\\;+\\;{\\lbrack A\\rbrack}_0\\\\\\;\\;\\;\\;\\;\\; =\\;-(@@k2@@\\;\\mathrm M\\;\\mathrm s^{-1})(@@time@@\\;\\mathrm s)\\;+\\;0.500\\;\\mathrm M\\;\\\\\\;\\;\\;\\;\\;\\; =\\;@@corRound@@\\;\\mathrm M\\end{array}\\\\\\\\\\;\\;\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "xbuy1upziq8nwop",
+                    "type": "p"
+                  }
+                ],
+                "id": "3110303118"
+              },
+              "id": "2706806446",
+              "legacyMatch": "[@@cor2Low@@,@@cor2High@@]",
+              "rule": "input = {[@@cor2Low@@,@@cor2High@@]}",
+              "score": 8
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The integrated rate law relates the initial concentration to the concentration at a later time. Use the integrated rate law for a zero-order reaction:"
+                      }
+                    ],
+                    "id": "m96457t8hyujpzg",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\lbrack\\mathrm A\\rbrack}_t\\;=\\;-kt\\;+\\;{\\lbrack\\mathrm A\\rbrack}_0",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "7aohbc39fsh4hgm",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Substitute the given values and calculate [A]"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "9jdwqd8f0uni4kj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1604047189"
+              },
+              "id": "1307801259",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst k = OLI.random(3.53,9.75,2) .toFixed(2);\nconst initialRateIndex = OLI.random(0 , 4);\nconst array = [0.600, 0.700, 0.800, 0.900]\nconst initialRate = array[initialRateIndex] .toFixed(3); \nconst finalRate = OLI.random(0.115,0.455,3) .toFixed(3);\nconst correct = ((initialRate - finalRate)/k) .toPrecision(3);\nconst corLow = correct*0.99;\nconst corHigh = correct*1.01;\nconst k2 = OLI.random (0.20,0.60,3) .toFixed(3);\nconst time = OLI.random (0.20,0.60,3) .toFixed(3);\nconst correct2 = ((0.500)-(k2*time));\nconst corRound = (correct2*1).toPrecision(3);\nconst cor2Low = correct2*0.98;\nconst cor2High = correct2*1.02;\n// Expose variables to OLI\nmodule.exports = {\n  k,\n  initialRateIndex,\n  initialRate,\n  finalRate,\n  correct,\n  corLow,\n  corHigh,\n  k2,\n  time,\n  correct2,\n  corRound,\n  cor2Low,\n  cor2High\n  \n};\n",
+              "id": "b7d60d5eda3548cca88f0ef38ca241d7",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the following zero-order reaction:"
+            }
+          ],
+          "id": "29dn8ere05yrvf8",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "\\mathrm A\\;\\;\\rightarrow\\;\\;\\mathrm B",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "ek1x8l37mkk5m39",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "If "
+            },
+            {
+              "em": true,
+              "text": "k"
+            },
+            {
+              "text": " = @@k@@ M/s and the initial concentration of A, [A]"
+            },
+            {
+              "sub": true,
+              "text": "0"
+            },
+            {
+              "text": " = @@initialRate@@ M, how long will it take for the concentration of A equal @@finalRate@@ M?"
+            }
+          ],
+          "id": "5yhpj7w12y1h4vo",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "t"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " s"
+            }
+          ],
+          "id": "sy8ul8dwtqluus5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "For the same reaction at a different temperature the rate constant is @@k2@@ M/s. If the initial concentration of A is 0.500 M, what will the concentration be after @@time@@ s?"
+            }
+          ],
+          "id": "yk2zbwai7fo0ga5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[A] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "3a9sd0cdnl2c2yk",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

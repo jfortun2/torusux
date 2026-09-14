@@ -1,0 +1,253 @@
+{
+  "id": "80272",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_press_digt-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "15w1c8cbukuxn2t",
+                  "type": "p"
+                }
+              ],
+              "id": "3263315735"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7ldtw4o7d3t4cgq",
+                  "type": "p"
+                }
+              ],
+              "id": "3462076774"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "my1v0km0l6jj3yz",
+                  "type": "p"
+                }
+              ],
+              "id": "2810970966"
+            }
+          ],
+          "id": "3208623045",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This is an endothermic reaction. The addition of heat will cause the reaction to shift in the direction of \"using up\" heat, to the right."
+                      }
+                    ],
+                    "id": "leioaud7685w2pe",
+                    "type": "p"
+                  }
+                ],
+                "id": "2582011000"
+              },
+              "id": "573277993",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This is an endothermic reaction. The addition of heat will cause the reaction to shift in the direction of \"using up\" heat, to the right."
+                      }
+                    ],
+                    "id": "q0gyy0fu4vblm4o",
+                    "type": "p"
+                  }
+                ],
+                "id": "462920343"
+              },
+              "id": "3385436387",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. This is an endothermic reaction. The addition of heat will cause the reaction to shift in the direction of \"using up\" heat, to the right."
+                      }
+                    ],
+                    "id": "j7ogt2ngkuqtjdc",
+                    "type": "p"
+                  }
+                ],
+                "id": "4055500942"
+              },
+              "id": "2913212159",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "34ke4z2yae1sz27",
+                    "type": "p"
+                  }
+                ],
+                "id": "768686523"
+              },
+              "id": "1469192828",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "573277993"
+            ],
+            [
+              [
+                "B"
+              ],
+              "3385436387"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2913212159"
+            ]
+          ]
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "573277993"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3385436387"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2913212159"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Increase"
+              }
+            ],
+            "id": "o1hnkne7rl59j4z",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Decrease"
+              }
+            ],
+            "id": "ktouup3psrthcvr",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Stay the same"
+              }
+            ],
+            "id": "habzw58hoptpb80",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Heating the mixture"
+            }
+          ],
+          "id": "8exlh6m01ebzdj3",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3208623045": [
+      "78280"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

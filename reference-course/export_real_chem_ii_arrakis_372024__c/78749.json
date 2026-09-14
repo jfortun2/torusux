@@ -1,0 +1,329 @@
+{
+  "id": "78749",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78275"
+  ],
+  "title": "entropy_fill_in_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a3mqm362h2exs67",
+                  "type": "p"
+                }
+              ],
+              "id": "3398602863"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "y6p9s6xjvl3v2i1",
+                  "type": "p"
+                }
+              ],
+              "id": "1255977579"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nps98y2ndx5zng3",
+                  "type": "p"
+                }
+              ],
+              "id": "983544181"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The process of ammonia gas escaping the cleaning solution increases the dispersal of matter (the entropy). "
+                      }
+                    ],
+                    "id": "42l0u7dwnheio65",
+                    "type": "p"
+                  }
+                ],
+                "id": "755010960"
+              },
+              "id": "2014382203",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Ammonia cleaning solution contains dissolved ammonia, some of which escapes the solution as a gas (which is why it can be smelled). Entropy can be described as a measure of the dispersal of matter, or disorder of a system. Matter that is least dispersed, and is most ordered (least disordered) has the least entropy. Matter that is most dispersed, and is most disordered has the greatest entropy."
+                      }
+                    ],
+                    "id": "xyzzvvlfrocdxgg",
+                    "type": "p"
+                  }
+                ],
+                "id": "3045442494"
+              },
+              "id": "1191983651",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ymr30q9sxvd01h6",
+                  "type": "p"
+                }
+              ],
+              "id": "2296759082"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vp5gyt02v16bu4r",
+                  "type": "p"
+                }
+              ],
+              "id": "2901725338"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "df1p9yf0lqlucl7",
+                  "type": "p"
+                }
+              ],
+              "id": "3375464409"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The process of ammonia gas escaping the cleaning solution increases the dispersal of matter and allows the system to occupy a greater distribution of kinetic states. "
+                      }
+                    ],
+                    "id": "vuc4ahcya2dcueg",
+                    "type": "p"
+                  }
+                ],
+                "id": "117259394"
+              },
+              "id": "2101414937",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Ammonia cleaning solution contains dissolved ammonia, some of which escapes the solution as a gas (which is why it can be smelled). Entropy can be described as a measure of the dispersal of matter or distribution of kinetic states (microstates). Matter that is least dispersed has the lowest distribution of microstates and matter that is most dispersed has the highest distribution of microstates. "
+                      }
+                    ],
+                    "id": "bkyd2e0bgabpnaq",
+                    "type": "p"
+                  }
+                ],
+                "id": "1774368822"
+              },
+              "id": "1950821919",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "f8g4w1shyd90x3a",
+            "text": "increases "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "a4h4uaxztsffstw",
+            "text": "decrease"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "9at8216r6o3ghj3",
+            "text": "stays the same"
+          }
+        ],
+        "id": "one_C"
+      },
+      {
+        "content": [
+          {
+            "id": "46uiuqe269v2pf0",
+            "text": "a greater distribution "
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "7wt12bbjw0k3bqb",
+            "text": "a smaller distribution"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "chlwtl9d52qcpwc",
+            "text": "the same distribution"
+          }
+        ],
+        "id": "two_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_C"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B",
+          "two_C"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "When an ammonia cleaning solution is opened, the smell of ammonia is soon evident throughout the room. During this process the entropy of the cleaning solution "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " and the system occupies "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": " of kinetic energy states. Treat the ammonia cleaning solution as the system. "
+            }
+          ],
+          "id": "1yzeszy5xe2kdoj",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,228 @@
+{
+  "id": "79545",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "NameIonicCompLBD1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "The cation is sodium and the anion is sulfate, so Na"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "SO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": " is named sodium sulfate."
+                  }
+                ],
+                "id": "3083862553",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "1172263081",
+            "textDirection": "ltr"
+          },
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Start by naming the cation and anion separately. Then consider the order for the ions."
+                    }
+                  ],
+                  "id": "1041888431",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3100563908",
+              "textDirection": "ltr"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Recall that number of each ion is reflected through charge balance in the formula, not prefixes in the name. "
+                    }
+                  ],
+                  "id": "88727778",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3085283026",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The cation is sodium and the anion is sulfate."
+                      }
+                    ],
+                    "id": "4209835706",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3975871723",
+                "textDirection": "ltr"
+              },
+              "id": "2886075741",
+              "rule": "input contains {sodium sulfate}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that number of ions is reflected through charge balance in the formula, not prefixes in the name. "
+                      }
+                    ],
+                    "id": "29857239",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3656213586",
+                "textDirection": "ltr"
+              },
+              "id": "141699864",
+              "rule": "input contains {disodium sulfate}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Start by naming the cation and anion separately. Consider the order for the ions. Recall that the number of each ion is reflected through charge balance in the formula, not prefixes in the name."
+                      }
+                    ],
+                    "id": "2660193585",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3068396495",
+                "textDirection": "ltr"
+              },
+              "id": "4177294100",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Write the name of Na2SO4.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3340505545",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "4293917786",
+        "inputType": "text",
+        "partId": "1",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Write the name of Na"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "560018964",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "4293917786",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "3483154235",
+          "type": "p"
+        }
+      ],
+      "id": "2462046486"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78305"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

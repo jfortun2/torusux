@@ -1,0 +1,3831 @@
+{
+  "id": "78588",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78077"
+  ],
+  "title": "calc_ph_buffer_add_acid_base_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "akp9whhd178b9rw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "emhc76mj28w6pow",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "A solution containing the weak base CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and its conjugate acid CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " is a buffer. (CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "Cl dissociates into CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and Cl"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": ", and Cl"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " is a spectator ion.) Calculate the K"
+                  },
+                  {
+                    "sub": true,
+                    "text": "a"
+                  },
+                  {
+                    "text": " of CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": ": "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_a\\;\\left({{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right)=\\;\\frac{1.0\\times10^{-14}}{K_b\\;\\;\\left({\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right)}\\; =\\;\\frac{1.0\\times10^{-14}}{4.4\\times10^{-4}}\\;=\\;2.3\\times10^{-11}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Then use the Henderson-Hasselbalch equation to determine the pH: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\\\ =\\;-\\log\\left(2.3\\times10^{-11}\\right)\\;+\\;\\log\\left(\\frac{@@baseconc@@}{@@acidconc@@}\\right)\\\\=\\;10.64\\;+@@tempsf@@\\\\=\\;@@phsf@@\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "bttwkuayzfov0k8",
+                "type": "p"
+              }
+            ],
+            "id": "1654907963"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1i5nqz6eahwherb",
+                  "type": "p"
+                }
+              ],
+              "id": "4027843492"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j08ngdgg9bxjyr6",
+                  "type": "p"
+                }
+              ],
+              "id": "2285369062"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zmgcuwd52qyghj0",
+                  "type": "p"
+                }
+              ],
+              "id": "4104098072"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A solution containing the weak base CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and its conjugate acid CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is a buffer. (CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "Cl dissociates into CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ", and Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " is a spectator ion.) Calculate the K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ": "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_a\\;\\left({{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right)=\\;\\frac{1.0\\times10^{-14}}{K_b\\;\\;\\left({\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right)}\\; =\\;\\frac{1.0\\times10^{-14}}{4.4\\times10^{-4}}\\;=\\;2.3\\times10^{-11}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Then use the Henderson-Hasselbalch equation to determine the pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\\\ =\\;-\\log\\left(2.3\\times10^{-11}\\right)\\;+\\;\\log\\left(\\frac{@@baseconc@@}{@@acidconc@@}\\right)\\\\=\\;10.64\\;+@@tempsf@@\\\\=\\;@@phsf@@\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "wi47yyzcyxqvdu8",
+                    "type": "p"
+                  }
+                ],
+                "id": "1857366910"
+              },
+              "id": "74234103",
+              "legacyMatch": "[@@phlow@@,@@phhigh@@]",
+              "rule": "input = {[@@phlow@@,@@phhigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A solution containing the weak base CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and its conjugate acid CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is a buffer. (CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "Cl dissociates into CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": ", and Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " is a spectator ion.) To calculate the pH, use the Henderson-Hasselbach equation and the relationship between K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " for the acid and K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": "for the base:"
+                      }
+                    ],
+                    "id": "n2u41goq87wtdik",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log_{10}\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\\\ \\mathrm{with}\\;\\;\\;K_a\\;\\left({{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right)\\;=\\;\\frac{1.0\\times10^{-14}}{K_b\\;\\left({\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right)}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "647lpo5jdd9vp1g",
+                    "type": "p"
+                  }
+                ],
+                "id": "190216856"
+              },
+              "id": "704077958",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "2zexkr6wzr6uoif",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "kbj5yfnlmn5zi3l",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Calculate the moles of CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " in 250.0 mL of the buffer solution, and the moles of added OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " in @@volnaoh@@ mL of @@concoh@@ M NaOH:"
+                  }
+                ],
+                "id": "hvk66iy4wg5ce2n",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@baseconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molasf@@\\;\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\\\250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@acidconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhasf@@\\;\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\\\@@volnaoh@@\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@concoh@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molohsf@@\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\;\\;\\Rightarrow\\;\\;@@molohsf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\end{array}\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "bj5ye20k080v8ab",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " reacts with CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " to form CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " until the OH"
+                  },
+                  {
+                    "sup": true,
+                    "text": "-"
+                  },
+                  {
+                    "text": " is used up: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{OH}^-(aq)\\;+\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+(aq)\\;\\rightarrow\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2(aq)\\;+\\:{\\mathrm H}_2\\mathrm O(l)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Determine the moles of each species after reaction:"
+                  }
+                ],
+                "id": "4t2jhpg9nvdvpn7",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "___selfClosing___": true,
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "ss6mzgad4sxanb4",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "0qg7gy5n8czmxxn",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "OH"
+                              },
+                              {
+                                "sup": true,
+                                "text": "-"
+                              }
+                            ],
+                            "id": "h37r0j4ww5i63lt",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "cois2bxuus0yup3",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "CH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": "NH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "9ir5komiogt0naq",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "jhggdqby61xfmyc",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "CH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": "NH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              }
+                            ],
+                            "id": "bmiyvk526kxlr2l",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "jnfguvyy696k49l",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "yr7lrceirxne3mc",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "I"
+                              }
+                            ],
+                            "id": "r8rapq9vvh16qn4",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "ncndo2lzb5fatij",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@molohsf@@ mol"
+                              }
+                            ],
+                            "id": "n5lgai822il4gwm",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "mgsaqp73w037i1t",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@molhasf@@ mol"
+                              }
+                            ],
+                            "id": "hw48edz8xbzg1ic",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "2usuaalrpdx6a9p",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@molasf@@ mol"
+                              }
+                            ],
+                            "id": "nefyabnvjj07f3z",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "ctj4dcvd1c2e2ta",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "qtr0sa2hez8hm81",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "C"
+                              }
+                            ],
+                            "id": "qco191glpluw40e",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "4ut9ol71wx6z750",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "-@@molohsf@@ mol"
+                              }
+                            ],
+                            "id": "6z4n5im8vugd8mi",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "c0r4v4txocacaun",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "-@@molohsf@@ mol"
+                              }
+                            ],
+                            "id": "nszfa9dkix55dyj",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "3ikjdn620m363c3",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "+@@molohsf@@ mol"
+                              }
+                            ],
+                            "id": "bvwnvo7k2xd30tp",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "62k06dhpn2s1iwc",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "cg29y0ehw2fdo8r",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "E"
+                              }
+                            ],
+                            "id": "kucg4gtbm2qk8me",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "rtosso11jcmc1iw",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "~0 mol"
+                              }
+                            ],
+                            "id": "qfbp59959fknwex",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "ytwavtwrbr3u3p3",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@acidsf@@ mol"
+                              }
+                            ],
+                            "id": "bvl4m9rqfgfrlbc",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "7kgmuym1wir4yz1",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@basesf@@ mol"
+                              }
+                            ],
+                            "id": "hqopt6s2m6zyi8b",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "nxqkt9b7lax4md3",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "pqp5ur7rl1vu3v0",
+                    "type": "tr"
+                  }
+                ],
+                "id": "sh477n2494rgr9u",
+                "rowstyle": "plain",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Since after reaction the solution still contains relatively similar amounts of CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": ", the solution is still a buffer, so the Henderson-Hasselbalch equation can be used to determine the pH: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\log\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\; =\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2}{\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+}\\right)\\\\ =\\;-\\log\\left(2.3\\times10^{-11}\\right)\\;+\\log\\left(\\frac{@@basesf@@\\;\\mathrm{mol}}{@@acidsf@@\\;\\mathrm{mol}}\\right)\\\\=\\;@@ph2sf@@\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Note: since the CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " are in the same volume of solution, the ratio [CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "]/[CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] is equal to the ratio (mol CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "/ mol CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "). "
+                  }
+                ],
+                "id": "zxez5t9rlev39js",
+                "type": "p"
+              }
+            ],
+            "id": "3775308186"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "r5ldn0jw6jcwbaa",
+                  "type": "p"
+                }
+              ],
+              "id": "2110133254"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f1268g26byecl1s",
+                  "type": "p"
+                }
+              ],
+              "id": "3124635302"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ay9nps8jogz9000",
+                  "type": "p"
+                }
+              ],
+              "id": "2531945633"
+            }
+          ],
+          "id": "numeric2",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Calculate the moles of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in 250.0 mL of the buffer solution, and the moles of added OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " in @@volnaoh@@ mL of @@concoh@@ M NaOH:"
+                      }
+                    ],
+                    "id": "l0qcvscw4afop91",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@baseconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molasf@@\\;\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\\\250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@acidconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhasf@@\\;\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\\\@@volnaoh@@\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@concoh@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molohsf@@\\;\\mathrm{mol}\\;\\mathrm{NaOH}\\;\\;\\Rightarrow\\;\\;@@molohsf@@\\;\\mathrm{mol}\\;\\mathrm{OH}^-\\end{array}\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "qsf0f0hy6b145wl",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " reacts with CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " to form CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " until the OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " is used up: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{OH}^-(aq)\\;+\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+(aq)\\;\\rightarrow\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2(aq)\\;+\\:{\\mathrm H}_2\\mathrm O(l)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Determine the moles of each species after reaction:"
+                      }
+                    ],
+                    "id": "pcp24edkatlco73",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "___selfClosing___": true,
+                                "children": [
+                                  {
+                                    "text": " ",
+                                    "type": "text"
+                                  }
+                                ],
+                                "id": "pzbfog86uvtxt8w",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "qvxohj9cs2fwuwt",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "OH"
+                                  },
+                                  {
+                                    "sup": true,
+                                    "text": "-"
+                                  }
+                                ],
+                                "id": "eja5n5crb38j848",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "3imw59feoukjvr9",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "CH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "text": "NH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "sup": true,
+                                    "text": "+"
+                                  }
+                                ],
+                                "id": "qg77enfizudnv91",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "x4zigkcab1h1233",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "CH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "text": "NH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "2"
+                                  }
+                                ],
+                                "id": "1wwkcpotc9x80n1",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "zcd6syilj6pgsei",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "fao1o2bo3gtvvh8",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "I"
+                                  }
+                                ],
+                                "id": "3ipduz2rojyop8k",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "q3nsioa894wso7a",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@molohsf@@ mol"
+                                  }
+                                ],
+                                "id": "mj87pj7awcgkm9z",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "ka2csnz2w4ut46a",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@molhasf@@ mol"
+                                  }
+                                ],
+                                "id": "p9lz5nsgmfmqi5e",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "c1fmjo39t7ux2p1",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@molasf@@ mol"
+                                  }
+                                ],
+                                "id": "174gbn2otyjiwxz",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "g5zr42vsaw2prmt",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "2we31eefxnxc09n",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "C"
+                                  }
+                                ],
+                                "id": "kjhteed2csydqpk",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "3duk6ganq2q7586",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "-@@molohsf@@ mol"
+                                  }
+                                ],
+                                "id": "znva9lka07zkybh",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "7vcos5jbm52nb8f",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "-@@molohsf@@ mol"
+                                  }
+                                ],
+                                "id": "4row8xcfyggx8jt",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "uhogq8tj4qv6npu",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "+@@molohsf@@ mol"
+                                  }
+                                ],
+                                "id": "7iua7pcuxo2qn6e",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "0qvkmnjpsihixzn",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "kqz2jrg4b76t69t",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "E"
+                                  }
+                                ],
+                                "id": "0ybnvguci9i5rjs",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "xsrtcn7ai20do6b",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "~0 mol"
+                                  }
+                                ],
+                                "id": "iti0r43pb26vqn5",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "qvmb5gxaabv4mk6",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@acidsf@@ mol"
+                                  }
+                                ],
+                                "id": "johzzrvxis66yp0",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "42p93tmgunhi2dz",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@basesf@@ mol"
+                                  }
+                                ],
+                                "id": "cpln6i5tbxtvsyy",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "fxrxnaz3tlarmkc",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "xsv6b1rlz583h7j",
+                        "type": "tr"
+                      }
+                    ],
+                    "id": "divr92adosbutdv",
+                    "rowstyle": "plain",
+                    "type": "table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Since after reaction the solution still contains relatively similar amounts of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ", the solution is still a buffer, so the Henderson-Hasselbalch equation can be used to determine the pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\log\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\; =\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2}{\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+}\\right)\\\\ =\\;-\\log\\left(2.3\\times10^{-11}\\right)\\;+\\log\\left(\\frac{@@basesf@@\\;\\mathrm{mol}}{@@acidsf@@\\;\\mathrm{mol}}\\right)\\\\=\\;@@ph2sf@@\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Note: since the CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " are in the same volume of solution, the ratio [CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "]/[CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] is equal to the ratio (mol CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "/ mol CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "). "
+                      }
+                    ],
+                    "id": "z7huxuwff8q5c1b",
+                    "type": "p"
+                  }
+                ],
+                "id": "3532492253"
+              },
+              "id": "1591390097",
+              "legacyMatch": "[@@ph2low@@,@@ph2high@@]",
+              "rule": "input = {[@@ph2low@@,@@ph2high@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. First calculate the moles of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in 250.0 mL of the buffer solution, and the moles of added OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " in @@volnaoh@@ mL of @@concoh@@ M NaOH. The OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " reacts with CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " to form CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " until the OH"
+                      },
+                      {
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "text": " is used up, according to the reaction: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{OH}^-(aq)\\;+\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+(aq)\\;\\rightarrow\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2(aq)\\;+\\:{\\mathrm H}_2\\mathrm O(l)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Next, use an ICE table to determine the moles of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " in the solution after reaction is complete. Finally, if the solution still contains relatively similar amounts of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ", the solution is still a buffer, so the Henderson-Hasselbalch equation can be used to determine the pH. "
+                      }
+                    ],
+                    "id": "0n9wucr6mvszgy1",
+                    "type": "p"
+                  }
+                ],
+                "id": "2491259224"
+              },
+              "id": "3929360587",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "27dqf1vlitwrtce",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "rlhneb87tznykoh",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Calculate the moles of CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " in 250.0 mL of the buffer solution, and the moles of added H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " in @@volhno3@@ mL of @@conchno3@@ M NaOH:"
+                  }
+                ],
+                "id": "yyq2gpqc8msflry",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@baseconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molasf@@\\;\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\\\250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@acidconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhasf@@\\;\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\\\@@volhno3@@\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@conchno3@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhno3sf@@\\;\\mathrm{mol}\\;{\\mathrm{HNO}}_3\\;\\;\\Rightarrow\\;\\;@@molhno3sf@@\\;\\mathrm{mol}\\;\\mathrm H^+\\end{array}\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "co6xr46mx7yhevt",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " reacts with CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " to form CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " until the H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " is used up: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm H^+(aq)\\;+\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2(aq)\\;\\rightarrow\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+(aq)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Determine the moles of each species after reaction:"
+                  }
+                ],
+                "id": "isozpplfpth1a8x",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "___selfClosing___": true,
+                            "children": [
+                              {
+                                "text": " ",
+                                "type": "text"
+                              }
+                            ],
+                            "id": "l20hq3tnsv46uf5",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "vcgepwgca2b58et",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "H"
+                              },
+                              {
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "vfp5ouc3l1ds4ry",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "sbnwsym82dxomgh",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "CH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": "NH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "2"
+                              }
+                            ],
+                            "id": "5fchmpfz95b2dz6",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "p76xfizzcjxwmvb",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "CH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "text": "NH"
+                              },
+                              {
+                                "sub": true,
+                                "text": "3"
+                              },
+                              {
+                                "sup": true,
+                                "text": "+"
+                              }
+                            ],
+                            "id": "fop6nz2f7t4j61f",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "u9cpc5q9ijy57mg",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ykbuebqhur7kq49",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "I"
+                              }
+                            ],
+                            "id": "rhi0cw7gmooblu8",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "acj434slg8xh5ft",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@molhno3sf@@ mol"
+                              }
+                            ],
+                            "id": "ig8rjjyweztj9gp",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "hhu9e3ncsm75q8u",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@molasf@@ mol"
+                              }
+                            ],
+                            "id": "aa2qsivo3gl9u4c",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "rt68r923ofcwul9",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@molhasf@@ mol"
+                              }
+                            ],
+                            "id": "2qj6n3v4uficaym",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "dt8uie41c8fkncq",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "7s07zztlja45bsa",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "C"
+                              }
+                            ],
+                            "id": "tstbu0mtvdouwcp",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "cy9nbbpv7fsfu2m",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "-@@molhno3sf@@ mol"
+                              }
+                            ],
+                            "id": "2rb3mkswz39pgoh",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "kygkddaz0bpply1",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "-@@molhno3sf@@ mol"
+                              }
+                            ],
+                            "id": "dv06al4cddzqeue",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "s9ij2vq16u30s78",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "+@@molhno3sf@@ mol"
+                              }
+                            ],
+                            "id": "0398r0i8x7nx2ok",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "9wiz7spxig4z7sl",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "v86zh0w4pu9d4hd",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "align": "left",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "E"
+                              }
+                            ],
+                            "id": "o0k5naqxzlo6yn1",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "0btj331jtqie3g6",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "~0 mol"
+                              }
+                            ],
+                            "id": "bqnw8j76ymrd3ob",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "bwoka61z3rb5xoj",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@base2sf@@ mol"
+                              }
+                            ],
+                            "id": "odcw7z9m0wrxgef",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "enkjj0yfi2frovo",
+                        "rowspan": 1,
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "@@acid2sf@@ mol"
+                              }
+                            ],
+                            "id": "g4chytb8ixcd1gk",
+                            "type": "p"
+                          }
+                        ],
+                        "colspan": 1,
+                        "id": "qvpxsl5vjsmpaqb",
+                        "rowspan": 1,
+                        "type": "td"
+                      }
+                    ],
+                    "id": "wsmxe8670cu247l",
+                    "type": "tr"
+                  }
+                ],
+                "id": "lw0iw7ltzmo17mq",
+                "rowstyle": "plain",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Since after reaction the solution still contains relatively similar amounts of CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " and CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ", the solution is still a buffer, so the Henderson-Hasselbalch equation can be used to determine the pH: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\; =\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2}{\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+}\\right)\\\\ =\\;-\\log\\left(2.3\\times10^{-11}\\right)\\;+\\log\\left(\\frac{@@base2sf@@\\;\\mathrm{mol}}{@@acid2sf@@\\;\\mathrm{mol}}\\right)\\\\=\\;@@ph3sf@@\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Note: since the CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": " are in the same volume of solution, the ratio [CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "]/[CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] is equal to the ratio (mol CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "/ mol CH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "). "
+                  }
+                ],
+                "id": "xe2mtwla1n9o5wt",
+                "type": "p"
+              }
+            ],
+            "id": "3211296477"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hx5re3mn6yqgc02",
+                  "type": "p"
+                }
+              ],
+              "id": "328445530"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kohlskhgprhbsgi",
+                  "type": "p"
+                }
+              ],
+              "id": "2402035829"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "68jngni4hna4pzc",
+                  "type": "p"
+                }
+              ],
+              "id": "1601054599"
+            }
+          ],
+          "id": "numeric3",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Calculate the moles of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in 250.0 mL of the buffer solution, and the moles of added H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in @@volhno3@@ mL of @@conchno3@@ M NaOH:"
+                      }
+                    ],
+                    "id": "zjjuby1kvw4hki7",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@baseconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molasf@@\\;\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\\\250.0\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@acidconc@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhasf@@\\;\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\\\@@volhno3@@\\;\\mathrm{mL}\\;\\times\\;\\frac{1\\;\\mathrm L}{\\;1000\\;\\mathrm{mL}}\\;\\times\\;@@conchno3@@\\;\\frac{\\mathrm{mol}}{\\mathrm L}\\; =\\;@@molhno3sf@@\\;\\mathrm{mol}\\;{\\mathrm{HNO}}_3\\;\\;\\Rightarrow\\;\\;@@molhno3sf@@\\;\\mathrm{mol}\\;\\mathrm H^+\\end{array}\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "kl8idy1077k7vc0",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " reacts with CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " to form CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " until the H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is used up: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm H^+(aq)\\;+\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2(aq)\\;\\rightarrow\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+(aq)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Determine the moles of each species after reaction:"
+                      }
+                    ],
+                    "id": "iwfe1fecopgcy9w",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "___selfClosing___": true,
+                                "children": [
+                                  {
+                                    "text": " ",
+                                    "type": "text"
+                                  }
+                                ],
+                                "id": "0j61guz91rqguyh",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "860ibgvue8upwid",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "H"
+                                  },
+                                  {
+                                    "sup": true,
+                                    "text": "+"
+                                  }
+                                ],
+                                "id": "4qm5smctxdg3fi3",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "wtxpmaw1ad4cxsz",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "CH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "text": "NH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "2"
+                                  }
+                                ],
+                                "id": "w2ko3q5ksejnxpr",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "9oet2l55eh0fdi3",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "CH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "text": "NH"
+                                  },
+                                  {
+                                    "sub": true,
+                                    "text": "3"
+                                  },
+                                  {
+                                    "sup": true,
+                                    "text": "+"
+                                  }
+                                ],
+                                "id": "iude2c1c4rgyi22",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "8qc72wfyqrporvg",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "imo9b1zh6m2ma8g",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "I"
+                                  }
+                                ],
+                                "id": "1xcher0njx6vab0",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "yfyxrgh5dkwbzog",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@molhno3sf@@ mol"
+                                  }
+                                ],
+                                "id": "q4vh10pxroviy7b",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "v20mjs3jo1qcjlq",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@molasf@@ mol"
+                                  }
+                                ],
+                                "id": "9hww3kb43yzjl2b",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "3j5ihsnejzm3jon",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@molhasf@@ mol"
+                                  }
+                                ],
+                                "id": "xdkjgwo0ne0r0qu",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "x2lw0qsjllk21d4",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "lbo17jlocwgaiob",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "C"
+                                  }
+                                ],
+                                "id": "70imwvrc0zy2zcb",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "7a4gb14ld355spz",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "-@@molhno3sf@@ mol"
+                                  }
+                                ],
+                                "id": "sghzmo7sgzuhv4n",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "3ib9i4htave0c2g",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "-@@molhno3sf@@ mol"
+                                  }
+                                ],
+                                "id": "f8gk8ruonph41oc",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "bvpg3h2wx6tkwub",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "+@@molhno3sf@@ mol"
+                                  }
+                                ],
+                                "id": "0e5fc3du835liip",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "8bkqwmx7nlfmz7b",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "sz3sfi2uff71xa4",
+                        "type": "tr"
+                      },
+                      {
+                        "children": [
+                          {
+                            "align": "left",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "E"
+                                  }
+                                ],
+                                "id": "oxqhvm3et9ubde2",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "gri3bwdtf4utrtx",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "~0 mol"
+                                  }
+                                ],
+                                "id": "get5dejeab5vij2",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "6o2unl12xfnku9b",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@base2sf@@ mol"
+                                  }
+                                ],
+                                "id": "e0d8hij4schv8ak",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "t350a4s6nrll4pe",
+                            "rowspan": 1,
+                            "type": "td"
+                          },
+                          {
+                            "align": "center",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "text": "@@acid2sf@@ mol"
+                                  }
+                                ],
+                                "id": "qpl1lc8d4b31zid",
+                                "type": "p"
+                              }
+                            ],
+                            "colspan": 1,
+                            "id": "ff8dbbpfet7i2id",
+                            "rowspan": 1,
+                            "type": "td"
+                          }
+                        ],
+                        "id": "bgb43s0diuslkv2",
+                        "type": "tr"
+                      }
+                    ],
+                    "id": "5mwvhmzv09bpgav",
+                    "rowstyle": "plain",
+                    "type": "table"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Since after reaction the solution still contains relatively similar amounts of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ", the solution is still a buffer, so the Henderson-Hasselbalch equation can be used to determine the pH: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{c}\\mathrm{pH}\\;=\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\left[{\\mathrm{CH}}_3{\\mathrm{NH}}_2\\right]}{\\left[{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+\\right]}\\right)\\; =\\;\\mathrm pK_a\\;+\\;\\log\\left(\\frac{\\mathrm{mol}\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2}{\\mathrm{mol}\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+}\\right)\\\\ =\\;-\\log\\left(2.3\\times10^{-11}\\right)\\;+\\log\\left(\\frac{@@base2sf@@\\;\\mathrm{mol}}{@@acid2sf@@\\;\\mathrm{mol}}\\right)\\\\=\\;@@ph3sf@@\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Note: since the CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " are in the same volume of solution, the ratio [CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "]/[CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "] is equal to the ratio (mol CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "/ mol CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": "). "
+                      }
+                    ],
+                    "id": "0oase8yz2fb6q2h",
+                    "type": "p"
+                  }
+                ],
+                "id": "1335901848"
+              },
+              "id": "3794050858",
+              "legacyMatch": "[@@ph3low@@,@@ph3high@@]",
+              "rule": "input = {[@@ph3low@@,@@ph3high@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. First calculate the moles of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in 250.0 mL of the buffer solution, and the moles of added H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in @@volhno3@@ mL of @@conchno3@@ M HNO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ". The H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " reacts with CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " to form CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " until the H"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " is used up, according to the reaction: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm H^+(aq)\\;+\\;{\\mathrm{CH}}_3{\\mathrm{NH}}_2(aq)\\;\\rightarrow\\;{{\\mathrm{CH}}_3{\\mathrm{NH}}_3}^+(aq)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Next, use an ICE table to determine the moles of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " in the solution after reaction is complete. Finally, if the solution still contains relatively similar amounts of CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and CH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": ", the solution is still a buffer, so the Henderson-Hasselbalch equation can be used to determine the pH. "
+                      }
+                    ],
+                    "id": "sx71mnhw55qbt93",
+                    "type": "p"
+                  }
+                ],
+                "id": "2792300497"
+              },
+              "id": "2562610134",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst conc = [0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3];\nconst c1 = OLI.random(0,12);1\nconst c2 = OLI.random(0,12);\nconst c3 = OLI.random(0,12);\nconst c4 = OLI.random(0,12);\nconst acidconc = conc[c1] .toPrecision(3);\nconst baseconc = conc[c2] .toPrecision(3);\nconst concoh = conc[c3] .toPrecision(3);\nconst conchno3 = conc[c4] .toPrecision(3);\n\nconst ka = 1e-14/4.4e-4;\nconst pka = -Math.log10(ka);\nconst ratio = baseconc/acidconc;\nconst temp= Math.log10(ratio);\nconst tempsf = temp .toPrecision(2);\nconst ph = pka + temp;\nconst phsf = ph .toPrecision(4);\nconst phlow = 0.99*ph;\nconst phhigh = 1.01*ph;\n\nconst v1 = [75, 80, 85, 90, 95];\nconst c5 = OLI.random(0,4);\nconst volnaoh = v1[c5] .toPrecision(3); \nconst c6 = OLI.random(0,4);\nconst volhno3 = v1[c6] .toPrecision(3);\n\nconst molha = acidconc*.250;\nconst molhasf = molha .toPrecision(3);\nconst mola = baseconc*.25;\nconst molasf = mola .toPrecision(3);\nconst moloh = volnaoh/1000*concoh;\nconst molohsf = moloh .toPrecision(3);\nconst molhno3 = volhno3/1000*conchno3;\nconst molhno3sf = molhno3 .toPrecision(4);\n\n// pH after adding base\nconst acid = molha-moloh;\nconst acidsf = acid .toPrecision(3);\nconst base = mola+moloh;\nconst basesf = base .toPrecision(3);\nconst ph2 = pka + Math.log10(base/acid);\nconst ph2sf = ph2 .toPrecision(4);\nconst ph2low = 0.99*ph2;\nconst ph2high = 1.01*ph2;\n\n//pH after adding HNO3\nconst base2 = mola - molhno3;\nconst base2sf = base2 .toPrecision(3);\nconst acid2 = molha + molhno3;\nconst acid2sf = acid2 .toPrecision(3);\nconst ph3 = pka + Math.log10(base2/acid2);\nconst ph3sf = ph3 .toPrecision(4);\nconst ph3low = 0.99*ph3;\nconst ph3high = 1.01*ph3;\n\n// Expose variables to OLI\nmodule.exports = {\n  acidconc, baseconc, ka, pka, ratio, temp, tempsf, ph, phsf, phlow, phhigh, volnaoh, molhasf, molasf, molohsf, molhno3sf, acidsf, basesf, ph2, ph2sf, concoh, volnaoh, ph2low, ph2high, conchno3, volhno3, base2sf, acid2sf, ph3, ph3sf, ph3low, ph3high\n};\n",
+              "id": "fa1c23b6f3f447a4863249ee2fe9abca",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      },
+      {
+        "id": "numeric2",
+        "inputType": "numeric",
+        "partId": "numeric2",
+        "size": "small"
+      },
+      {
+        "id": "numeric3",
+        "inputType": "numeric",
+        "partId": "numeric3",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "strong": true,
+              "text": "Part A"
+            }
+          ],
+          "id": "xubdxomvxex9zim",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of a buffer solution that contains @@baseconc@@ M CH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "NH"
+            },
+            {
+              "sub": true,
+              "text": "2 "
+            },
+            {
+              "text": "and @@acidconc@@ M CH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "Cl. ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "b"
+            },
+            {
+              "text": " = 4.4×10"
+            },
+            {
+              "sup": true,
+              "text": "-4"
+            },
+            {
+              "text": ")."
+            }
+          ],
+          "id": "92m9l7qd617k20t",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH of buffer = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "vqsc6g3k9xdtij0",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "strong": true,
+              "text": "Part B"
+            }
+          ],
+          "id": "uqts19ehql078yy",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "@@volnaoh@@ mL of @@concoh@@ M NaOH is added to 250.0 mL of the buffer solution described in Part A. What is the pH of the solution after the NaOH(aq) is added?"
+            }
+          ],
+          "id": "eil83myc1zgw19s",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH after NaOH added = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric2",
+              "input": "numeric2",
+              "type": "input_ref"
+            }
+          ],
+          "id": "q4dtva1o82n6edi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "strong": true,
+              "text": "Part C"
+            }
+          ],
+          "id": "vx997kimx3j2s4g",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "@@volhno3@@ mL of @@conchno3@@ M HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " is added to 250.0 mL of the buffer solution described in Part A. What is the pH of the solution after the HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " is added?"
+            }
+          ],
+          "id": "rz37s5rn7vva8b7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH after HNO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " added = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric3",
+              "input": "numeric3",
+              "type": "input_ref"
+            }
+          ],
+          "id": "09g454wyt5kojht",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": [],
+    "numeric2": [],
+    "numeric3": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,227 @@
+{
+  "id": "78589",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "what_equil_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2fjg9tss079848t",
+                  "type": "p"
+                }
+              ],
+              "id": "1706117983"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "bp0z6s39bwq7mtf",
+                  "type": "p"
+                }
+              ],
+              "id": "1235172733"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "38y5b8kddnawl28",
+                  "type": "p"
+                }
+              ],
+              "id": "3842157457"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The concentrations of all reactants and products remain constant at equilibrium."
+                      }
+                    ],
+                    "id": "5z4tdevqfucns37",
+                    "type": "p"
+                  }
+                ],
+                "id": "2443165430"
+              },
+              "id": "3309064174",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The concentrations of all reactants and products remain constant at equilibrium."
+                      }
+                    ],
+                    "id": "q8pxa5gttvpsa87",
+                    "type": "p"
+                  }
+                ],
+                "id": "2462057142"
+              },
+              "id": "1486767640",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "w5gf095wbqwtogj",
+                    "type": "p"
+                  }
+                ],
+                "id": "2377535721"
+              },
+              "id": "498808674",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Indicate whether the following statements are true or false regarding a system at equilibrium.The concentration of every species in the system remains constant at equilibrium. ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3309064174"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1486767640"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True "
+              }
+            ],
+            "id": "4167480072",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "1151056359",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Indicate whether the following statements are true or false regarding a system at equilibrium."
+            }
+          ],
+          "id": "bl4bakweteowkzl",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The concentration of every species in the system remains constant at equilibrium. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "jiceq8uo04is38r",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78480"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,216 @@
+{
+  "id": "79930",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78227"
+  ],
+  "title": "pool09_type_radioactive_decay-pool09_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": " With equal numbers of protons and neutrons Mg-24 is a stable nuclei that does not go through radioactive decay. Stable isotopes have a ratio of neutrons to protons that locate the isotope within the band of stability shown on a plot of number of neutrons vs. number of protons for known nuclei. Unstable isotopes above the band have a ratio of neutrons to protons that is too high to be stable, and they will decay by beta decay to reduce this ratio. Unstable isotopes below the band have a ratio of neutrons to protons that is too low, and they will decay by alpha decay, positron emission, or electron capture to increase this ratio."
+                  }
+                ],
+                "id": "xc4stqpp7pg3vms",
+                "type": "p"
+              }
+            ],
+            "id": "454647988"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "97jzmclgaae5mzx",
+                  "type": "p"
+                }
+              ],
+              "id": "523809832"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "69rmyqvfo6o5g86",
+                  "type": "p"
+                }
+              ],
+              "id": "2435926507"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7j73p6zxjqba4xh",
+                  "type": "p"
+                }
+              ],
+              "id": "3500789948"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. With equal numbers of protons and neutrons Mg-24 is a stable nuclei that does not go through radioactive decay. Stable isotopes have a ratio of neutrons to protons that locate the isotope within the band of stability shown on a plot of number of neutrons vs. number of protons for known nuclei. Unstable isotopes above the band have a ratio of neutrons to protons that is too high to be stable, and they will decay by beta decay to reduce this ratio. Unstable isotopes below the band have a ratio of neutrons to protons that is too low, and they will decay by alpha decay, positron emission, or electron capture to increase this ratio."
+                      }
+                    ],
+                    "id": "o2qui3bxl6xvw1x",
+                    "type": "p"
+                  }
+                ],
+                "id": "2865359733"
+              },
+              "id": "43591587",
+              "legacyMatch": "D",
+              "rule": "input like {one_D}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The stability of an isotope is based on the relative number of protons and neutrons in its nucleus. Stable nuclei of lighter elements generally have equal numbers of protons and neutrons. Stable nuclei of heavier elements generally have more neutrons than protons because the larger number of protons in heavier elements leads to greater proton-proton repulsion force so more neutrons are needed to overcome these repulsions with greater strong nuclear force. The result is that only a narrow range of nuclei are stable, and a plot of number of neutrons vs. number of protons shows that stable nuclei are found in a region known as the band of stability. The most common approach to determining if an isotope is stable or not is to calculate the number of protons and neutrons for that isotope, and then finding the location of the isotope on a plot showing the band of stability. If the isotope is not within the band of stability, then it is likely to undergo radioactive decay to move closer to the band of stability. Unstable isotopes above the band have a ratio of neutrons to protons that is too high to be stable, and they will decay by a process that reduces this ratio. Unstable isotopes below the band have a ratio of neutrons to protons that is too low, and they will decay by a process that increases this ratio."
+                      }
+                    ],
+                    "id": "f8b750701f314ad7ab88534968f0c18b",
+                    "type": "p"
+                  }
+                ],
+                "id": "2080238914"
+              },
+              "id": "1889387953",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " What type of radioactive decay is Mg-24 most likely to undergo? ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "qrzy9e3ihc6jevs",
+            "text": "alpha decay "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "4r9u3u9xnra69xp",
+            "text": "beta decay"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "ct0zd9nrwg6ph3u",
+            "text": "stable isotope"
+          }
+        ],
+        "id": "one_D"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B",
+          "one_D"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " What type of radioactive decay is Mg-24 most likely to undergo? "
+            }
+          ],
+          "id": "aec1a16f66834efd910857406c9d5e64",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "4246006691",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

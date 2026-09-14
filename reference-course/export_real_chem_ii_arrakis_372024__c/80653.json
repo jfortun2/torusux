@@ -1,0 +1,1021 @@
+{
+  "id": "80653",
+  "type": "Page",
+  "tags": [],
+  "title": "Cell Potential, Free Energy, and Equilibrium ",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "So far in this module, the relationship between the cell potential and reaction spontaneity has been described, suggesting a link to the free energy change for the reaction (see the Thrmodynamics unit). The interpretation of potentials as measures of oxidant strength was presented, bringing to mind similar measures of acid–base strength as reflected in equilibrium constants (see the Equilibrium unit). This section provides a summary of the relationships between cell potential, "
+              },
+              {
+                "em": true,
+                "text": "E"
+              },
+              {
+                "text": ", and the related properties Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": " and "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "kkprfor7lzp2qcm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "dzynqh1bcwntgoy",
+                "text": "Cell Potential and Free Energy"
+              }
+            ],
+            "id": "u2kfhvmsnke7nwk",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "The standard free energy change of a process, Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "°, is defined as the maximum work that could be performed by a system, "
+              },
+              {
+                "em": true,
+                "text": "w"
+              },
+              {
+                "sub": true,
+                "text": "max"
+              },
+              {
+                "text": ". In the case of a redox reaction taking place within a galvanic cell under standard state conditions, essentially all the work is associated with transferring the electrons from reductant to oxidant, "
+              },
+              {
+                "em": true,
+                "text": "w"
+              },
+              {
+                "sub": true,
+                "text": "elec"
+              },
+              {
+                "text": ":"
+              }
+            ],
+            "id": "19xdqsqoaqx166h",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "pzujmjm7kskkutl",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ep7foz2uq0bro50",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm\\Delta G^\\circ\\;=\\;w_\\max\\;=\\;w_{\\mathrm{elec}}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "The work associated with transferring electrons is determined by the total amount of charge (coulombs) transferred and the cell potential:"
+              }
+            ],
+            "id": "lklxz36jfu8y2mx",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "zpkabzs3s1u01kb",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ikvokyykkaotahw",
+            "legacyBlockRendered": "true",
+            "src": "\\Delta G^\\circ\\;=\\;w_{\\mathrm{elec}}\\;=\\;-nFE_{\\mathrm{cell}}^\\circ",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "where "
+              },
+              {
+                "em": true,
+                "text": "n"
+              },
+              {
+                "text": " is the number of moles of electrons transferred, "
+              },
+              {
+                "em": true,
+                "text": "F"
+              },
+              {
+                "text": " is Faraday’s constant (96,485 C/mol), and "
+              },
+              {
+                "em": true,
+                "text": "E"
+              },
+              {
+                "text": "°"
+              },
+              {
+                "sub": true,
+                "text": "cell"
+              },
+              {
+                "text": " is the standard cell potential. The relationship between the free energy change and the standard cell potential confirms the sign conventions and spontaneity criteria previously discussed for both of these properties: spontaneous redox reactions have positive cell potentials and negative free energy changes."
+              }
+            ],
+            "id": "n3ujogulz9zgmhm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "jbs75hr3bcpmkfq",
+                "text": "Cell Potential and the Equilibrium Constant"
+              }
+            ],
+            "id": "xzf3ntfsamdft31",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "Combining a previously derived relationship between Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "° and "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " and the equation above relating Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "° and "
+              },
+              {
+                "em": true,
+                "text": "E"
+              },
+              {
+                "text": "°"
+              },
+              {
+                "sub": true,
+                "text": "cell"
+              },
+              {
+                "text": " yields the following:"
+              }
+            ],
+            "id": "00syyian5mml7e9",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "j2nc20bfhiomvc5",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "g0sgia4275cn47g",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\mathrm\\Delta G^\\circ\\;=\\;-RT\\;\\ln K\\;=\\;-nFE_{\\mathrm{cell}}^\\circ\\\\\\Rightarrow\\;\\;\\; E_{\\mathrm{cell}}^\\circ\\;=\\;\\left(\\dfrac{RT}{nF}\\right)\\ln K\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "At 25 °C, this equation simplifies to:"
+              }
+            ],
+            "id": "a698c4wnuzpmbzj",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "vhvdy3x9tn7me1t",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "xsg7o4lbomytu7d",
+            "legacyBlockRendered": "true",
+            "src": "E_{\\mathrm{cell}}^{\\circ}\\;=\\;\\frac{\\;RT}{nF\\;}\\ln K\\;=\\frac{\\;(8.314\\;\\mathrm J/\\mathrm{mol}\\cdot\\mathrm K) (298.2\\;\\mathrm K)}{n(96,485\\;\\mathrm C/\\mathrm{mol})(\\mathrm J/\\mathrm C\\cdot\\mathrm V)\\;}\\ln K\\; =\\;\\frac{\\;0.0257\\;\\mathrm{V}}{n\\;}\\ln K",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Converting from the natural logarithm to log base 10, this equation can also be written as:"
+              }
+            ],
+            "id": "u9oi8w8qnzexpb6",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "nrdpsi2pckwf00e",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "8t0j5qgonxj8pag",
+            "legacyBlockRendered": "true",
+            "src": "E_{\\mathrm{cell}}^{\\circ}\\;=\\;\\frac{\\;0.0592\\;\\mathrm{V}}{n\\;}\\log K\\;\\;\\;\\; \\mathrm{at}\\;\\;25\\;^\\circ\\mathrm C",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "This equation indicates that redox reactions with large (positive) standard cell potentials will proceed far toward completion, reaching equilibrium when the majority of reactant has been converted to product. A summary of the relationships between "
+              },
+              {
+                "em": true,
+                "text": "E"
+              },
+              {
+                "text": "°, Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "°, and "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is depicted in the diagram below. "
+              }
+            ],
+            "id": "136q7zdqku9zgpz",
+            "type": "p"
+          },
+          {
+            "alt": "A diagram is shown that involves three double headed arrows positioned in the shape of an equilateral triangle. The vertices are labeled in red. The top vertex is labeled “K.“ The vertex at the lower left is labeled “delta G superscript degree symbol.” The vertex at the lower right is labeled “E superscript degree symbol subscript cell.” The right side of the triangle is labeled “E superscript degree symbol subscript cell equals ( R T divided by n  F ) l n K.” The lower side of the triangle is labeled “delta G superscript degree symbol equals negative n F E superscript degree symbol subscript cell.” The left side of the triangle is labeled “delta G superscript degree symbol equals negative R T l n K.”",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "The relationships between Δ"
+                  },
+                  {
+                    "text": "G"
+                  },
+                  {
+                    "em": true,
+                    "text": "°, "
+                  },
+                  {
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "text": ", and "
+                  },
+                  {
+                    "text": "E"
+                  },
+                  {
+                    "em": true,
+                    "text": "°"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "cell"
+                  },
+                  {
+                    "em": true,
+                    "text": ". Given any one of the three quantities, the other two can be calculated, so any of the quantities can be used to determine whether a process is spontaneous."
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "kfc0ann7nph1bt2",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ax7dit8bq40z67n",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/ea/ea919710e7ffb8965d84aafb644ef34c/CNX_Chem_17_04_Relation.jpg",
+            "type": "img",
+            "width": "600"
+          },
+          {
+            "children": [
+              {
+                "text": "The following table correlates reaction spontaneity to values of the equilibrium constant, free energy changes, and standard cell potentials. "
+              }
+            ],
+            "id": "h8nlgiwywa3a5bb",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "em": true,
+                        "id": "44g9au2r0a0tort",
+                        "text": "K"
+                      }
+                    ],
+                    "id": "zfsn4mbbfo88608",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "r0ruxcbke1avdoo",
+                        "text": "Δ"
+                      },
+                      {
+                        "em": true,
+                        "id": "nlhp09xshm4bfyv",
+                        "text": "G"
+                      },
+                      {
+                        "id": "ghcwfhov3od40wi",
+                        "text": "°"
+                      }
+                    ],
+                    "id": "7l1jlexyh2guws2",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "em": true,
+                        "id": "d4yz8ockr9kpp5u",
+                        "text": "E"
+                      },
+                      {
+                        "id": "256w2fy92wdh539",
+                        "text": "°"
+                      },
+                      {
+                        "id": "pb8duc2vyqvs7b8",
+                        "sub": true,
+                        "text": "cell"
+                      }
+                    ],
+                    "id": "43bn9i63frsmj7v",
+                    "type": "th"
+                  },
+                  {
+                    "___selfClosing___": true,
+                    "children": [
+                      {
+                        "id": "yzy77gl89g8nvcv",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "1j3r9bu0a03r3um",
+                    "type": "th"
+                  }
+                ],
+                "id": "kbem7qikl33xaz9",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "qvp65bqo52wngdc",
+                        "text": ">1"
+                      }
+                    ],
+                    "id": "dy1sbbqc970ohvk",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "jw1h9r8zxt035oq",
+                        "text": "<0"
+                      }
+                    ],
+                    "id": "u3g6gufivbwwpht",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "rrpwg7q0ctusgvw",
+                        "text": ">0"
+                      }
+                    ],
+                    "id": "zqmxp1lmr0n6i42",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "text": "Reaction is spontaneous under standard conditions"
+                          }
+                        ],
+                        "id": "ls920yehq4fixsi",
+                        "type": "p"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "Products are more abundant at equilibrium"
+                          }
+                        ],
+                        "id": "vn4w50yn1i53cnj",
+                        "type": "p"
+                      }
+                    ],
+                    "id": "za30gdi6nyx4m08",
+                    "type": "td"
+                  }
+                ],
+                "id": "6ahe5spkum4r4sw",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "26o327l7dh9cpr1",
+                        "text": "<1"
+                      }
+                    ],
+                    "id": "xjhoswpli2vj7jq",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "bwo0cqv1duvtds1",
+                        "text": ">0"
+                      }
+                    ],
+                    "id": "zovlfy08fbrlngu",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "nwwoskh60cu47yb",
+                        "text": "<0"
+                      }
+                    ],
+                    "id": "ljjdwwgcidc4euz",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "n8yyo08fasbb8k7",
+                        "text": "Reaction is not spontaneous under standard conditions   Reactants are more abundant at equilibrium"
+                      }
+                    ],
+                    "id": "x6r7v1br5hvcub9",
+                    "type": "td"
+                  }
+                ],
+                "id": "s5c9ucpw4sjk2t4",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "uqnwu2jpooztiyj",
+                        "text": "=1"
+                      }
+                    ],
+                    "id": "4dy9hm3jxndtk0m",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "04utj49u3oo8w4q",
+                        "text": "=0"
+                      }
+                    ],
+                    "id": "sgt522jm6vmhizv",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "l0tkj2vc76ns70n",
+                        "text": "=0"
+                      }
+                    ],
+                    "id": "omnfo9z4nitfqr7",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "yo7cl44a27iuqh9",
+                        "text": "Reaction is at equilibrium under standard conditions      Reactants and products are equally abundant"
+                      }
+                    ],
+                    "id": "7hvodfbmnpbnx7i",
+                    "type": "td"
+                  }
+                ],
+                "id": "dqqsthujsyb1i6d",
+                "type": "tr"
+              }
+            ],
+            "id": "xt9gkxbnb627vvq",
+            "rowstyle": "alternating",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "2779018949",
+            "type": "p"
+          }
+        ],
+        "id": "3469860551",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "What are the standard free energy change and the equilibrium constant for the following reaction at 25 °C?"
+                  }
+                ],
+                "id": "fpef2e2m9iznosr",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ckmshx1c00rf0y9",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "xqucbtlw39hmati",
+                "legacyBlockRendered": "true",
+                "src": "2\\;\\mathrm{Ag}^+(aq)\\;+\\;\\mathrm{Fe}(s)\\;\\;\\rightarrow\\;\\;2\\;\\mathrm{Ag}(s)\\;+\\;\\mathrm{Fe}^{2+}(aq)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This is an oxidation-reduction reaction, so the standard cell potential can be calculated using the data found in the "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Standard Reduction Potentials"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_standard_reduction_potentials_mv70v",
+                    "idref": "80874",
+                    "target": "new",
+                    "type": "a"
+                  },
+                  {
+                    "text": " table."
+                  }
+                ],
+                "id": "05v53bxhoovwx9h",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "qmjjfidk6tfgtup",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "g80ovlysked8yos",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm{Anode}\\;(\\mathrm{oxidation}):\\mathrm{Fe}(s)\\;\\longrightarrow\\;\\mathrm{Fe}^{2+}(aq)\\;+\\;2\\;\\mathrm e^-\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;E_{\\mathrm{Fe}^{2+}/\\mathrm{Fe}}^\\circ\\;=\\;-0.447\\;\\mathrm V\\\\\\mathrm{Cathode}\\;(\\mathrm{reduction}):\\;2\\;\\times\\;(\\mathrm{Ag}^+(aq)\\;+\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm{Ag}(s))\\;\\;\\;\\;\\;\\;\\;\\;\\;E_{\\mathrm{Ag}^+/\\mathrm{Ag}}^\\circ\\;=\\;0.7996\\;\\mathrm V\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "5i071k7zfr4e1ys",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "iukcq4o8te2v6rb",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}E_{\\mathrm{cell}}^\\circ\\;=\\;E_{\\mathrm{cathode}}^\\circ\\; -\\;E_{\\mathrm{anode}}^\\circ\\;\\\\E_{\\mathrm{Ag}^+/\\mathrm{Ag}}^\\circ\\; -\\;E_{\\mathrm{Fe}^{2+}/\\mathrm{Fe}}^\\circ\\;=\\;+1.247\\;\\;\\mathrm V\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Remember that the cell potential for the cathode is not multiplied by two when determining the standard cell potential. Using "
+                  },
+                  {
+                    "em": true,
+                    "text": "n"
+                  },
+                  {
+                    "text": " = 2, the equilibrium constant is calculated:"
+                  }
+                ],
+                "id": "uhzaiit2h25x7d2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "7y7ad18xp2wy0b0",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "5w2itarec406zno",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}E_{\\mathrm{cell}}^{\\circ}\\;=\\;\\frac{\\;0.0592\\;\\mathrm{V}}{n\\;}\\log K\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\; K\\;=\\;10^{(nE_\\mathrm{cell}^\\circ/0.0592\\;\\mathrm{V})}\\\\K\\;=\\;10^{(2\\times1.247\\;\\mathrm{V}/0.0592\\;\\mathrm{V})\\;}\\;=\\;10^{42.128}\\; =\\;1.3\\times10^{42}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The standard free energy is then:"
+                  }
+                ],
+                "id": "tjt9pg38vc0jogk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "9umfr12fft8wg8u",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "rp6zfhgsks30sce",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm\\Delta G^\\circ=-nF{E_\\mathrm{cell}^\\circ}\\;=\\;-\\left(2\\;\\mathrm{mol}\\right)\\; \\left(96,485\\;\\mathrm J/\\mathrm V\\cdot\\mathrm{mol}\\;\\right)\\left(1.247\\;\\mathrm V\\right)\\; =\\;-240.6\\;\\mathrm{kJ}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Check your answer: A positive standard cell potential means a spontaneous reaction, so the standard free energy change should be negative, and the equilibrium constant should be >1."
+                  }
+                ],
+                "id": "vq7hzf8wfqde57b",
+                "type": "p"
+              }
+            ],
+            "id": "3834886692",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "951239793",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Use the "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Standard Reduction Potentials"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_standard_reduction_potentials_mv70v",
+                    "idref": "80874",
+                    "target": "new",
+                    "type": "a"
+                  },
+                  {
+                    "text": " table as needed."
+                  }
+                ],
+                "id": "2f0flf2hyqmebls",
+                "type": "p"
+              }
+            ],
+            "id": "4175474477",
+            "page": "321819754",
+            "type": "content"
+          },
+          {
+            "activity_id": 80070,
+            "id": "3109331434",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79063,
+            "id": "2168518157",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1533547206",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Use the "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Standard Reduction Potentials"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_standard_reduction_potentials_mv70v",
+                    "idref": "80874",
+                    "target": "new",
+                    "type": "a"
+                  },
+                  {
+                    "text": " as needed."
+                  }
+                ],
+                "id": "de0sz9exgaxdwr6",
+                "type": "p"
+              }
+            ],
+            "id": "4245827016",
+            "page": "2787116779",
+            "type": "content"
+          },
+          {
+            "activity_id": 79558,
+            "id": "3876724857",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79431,
+            "id": "3023386127",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3680018192",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80069,
+            "id": "3883898639",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2751170367",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "0nltum3jc2to3nt",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "4q03o6isvonrchr",
+            "type": "p"
+          }
+        ],
+        "id": "2353488203",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78529"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

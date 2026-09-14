@@ -1,0 +1,1458 @@
+{
+  "id": "80770",
+  "type": "Page",
+  "tags": [],
+  "title": "Radioactive Half-Lives",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Radioactive decay follows first-order kinetics. First-order reactions were covered in detail in Unit 2, and we now apply those concepts to nuclear decay reactions. Each radioactive nuclide has a characteristic, constant "
+              },
+              {
+                "children": [
+                  {
+                    "text": "half-life ("
+                  },
+                  {
+                    "em": true,
+                    "text": "t"
+                  },
+                  {
+                    "sub": true,
+                    "text": "1/2"
+                  },
+                  {
+                    "text": ")"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "The time required for half of the nuclei in a sample of a radioactive substance to undergo decay, reducing the number of radioactive atoms by half. It is a measure of the rate at which a radioactive substance transforms into a more stable form."
+                      }
+                    ],
+                    "id": "62551021",
+                    "type": "p"
+                  }
+                ],
+                "id": "495991991",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": ", the time required for half of the atoms in a sample to decay. An isotope’s half-life allows us to determine how long a sample of a useful isotope will be available and how long a sample of an undesirable or dangerous isotope must be stored before it decays to a sufficiently low radiation level that is no longer a problem."
+              }
+            ],
+            "id": "5ww01i5fl6vvh6n",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "For example, cobalt-60, an isotope that emits gamma rays used to treat cancer, has a half-life of 5.27 years (as shown in the graph below). In a given cobalt-60 source, since half of the "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "{}_{27}^{60}\\mathrm{Co}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": " nuclei decay every 5.27 years, both the amount of material and the intensity of the radiation emitted is cut in half every 5.27 years. (Note that for a given substance, the intensity of radiation that it produces is directly proportional to the rate of decay of the substance and the amount of the substance.) This is as expected for a process following first-order kinetics. Thus, a cobalt-60 source that is used for cancer treatment must be replaced regularly to continue to be effective."
+              }
+            ],
+            "id": "rv8wqtyhyaie1ox",
+            "type": "p"
+          },
+          {
+            "alt": "A graph, titled “C o dash 60 Decay,” is shown where the x-axis is labeled “C o dash 60 remaining, open parenthesis, percent sign, close parenthesis” and has values of 0 to 100 in increments of 25. The y-axis is labeled “Number of half dash lives” and has values of 0 to 5 in increments of 1. The first point, at “0, 100” has a circle filled with tiny dots drawn near it labeled “10 g.” The second point, at “1, 50” has a smaller circle filled with tiny dots drawn near it labeled “5 g.” The third point, at “2, 25” has a small circle filled with tiny dots drawn near it labeled “2.5 g.” The fourth point, at “3, 12.5” has a very small circle filled with tiny dots drawn near it labeled “1.25 g.” The last point, at “4, 6.35” has a tiny circle filled with tiny dots drawn near it labeled.”625 g.”",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "For cobalt-60, which has a half-life of 5.27 years, 50% remains after 5.27 years (one half-life), 25% remains after 10.54 years (two half-lives), 12.5% remains after 15.81 years (three half-lives), and so on."
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "kxhj5b6qxy95130",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ak6v770j0cjrbz1",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/09/0979d005b0bdecb57c2f34517afc8f1d/half_life_graph.jfif",
+            "type": "img",
+            "width": "700"
+          },
+          {
+            "children": [
+              {
+                "text": "Because nuclear decay follows first-order kinetics, we can adapt the mathematical relationships used for first-order chemical reactions. We generally substitute the number of nuclei, "
+              },
+              {
+                "em": true,
+                "text": "N"
+              },
+              {
+                "text": ", for the concentration. If the rate is stated in nuclear decays per second, we refer to it as the "
+              },
+              {
+                "em": true,
+                "text": "activity"
+              },
+              {
+                "text": " of the radioactive sample. "
+              }
+            ],
+            "id": "3p8vk5sm1lnjxji",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "bxwqtcesdgy57ge",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "spzvimq1ulm9g3m",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/A3/A31F9808B584CB71B1FEA56DD0BCDE4E/green_line.png",
+            "type": "img"
+          },
+          {
+            "children": [
+              {
+                "id": "ww1au3qbuyrrc2p",
+                "text": ""
+              }
+            ],
+            "id": "sgtzneg3pkckzty",
+            "items": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "2725508853",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "strong": true,
+                        "text": "                                                          Decay rate = λ"
+                      },
+                      {
+                        "em": true,
+                        "strong": true,
+                        "text": "N"
+                      }
+                    ],
+                    "id": "1459712711",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The decay constant, λ, is the same as a rate constant discussed in the kinetics unit. It is possible to express the decay constant in terms of the half-life, "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "sub": true,
+                        "text": "1/2"
+                      },
+                      {
+                        "text": ":"
+                      }
+                    ],
+                    "id": "4053969791",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "3712395334",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": "true",
+                    "src": "\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{1/2}}\\;=\\;\\frac{0.693}{t_{1/2}}\\;\\;\\;\\;\\;\\;\\;\\mathrm{or}\\;\\;\\;\\;\\;\\;\\;{t}_{1/2}\\;=\\;\\frac{\\ln\\;2}\\lambda\\;=\\;\\frac{0.693}\\lambda",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " The first-order equations relating amount, "
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "text": ", and time are:"
+                      }
+                    ],
+                    "id": "443494946",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "2395260616",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": "true",
+                    "src": "N_t\\;=\\;N_0e^{-\\lambda t}\\;\\;\\;\\;\\;\\;\\;\\mathrm{or}\\;\\;\\;\\;\\;\\;t\\;=\\;-\\frac1\\lambda\\ln\\left(\\frac{N_t}{N_0}\\right)",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "where "
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "sub": true,
+                        "text": "0"
+                      },
+                      {
+                        "text": " is the initial number of nuclei or moles of the isotope, and "
+                      },
+                      {
+                        "em": true,
+                        "text": "N"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": " is the number of nuclei/moles remaining at time "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "863038390",
+                    "type": "p"
+                  }
+                ],
+                "type": "dd"
+              }
+            ],
+            "title": [
+              {
+                "children": [
+                  {
+                    "text": " Rate of Radioactive Decay "
+                  }
+                ],
+                "id": "1004707760",
+                "type": "p"
+              }
+            ],
+            "type": "dl"
+          },
+          {
+            "children": [
+              {
+                "id": "i8qhee80ath8wm8",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "qvgk0sqest9bdcf",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/A3/A31F9808B584CB71B1FEA56DD0BCDE4E/green_line.png",
+            "type": "img"
+          },
+          {
+            "children": [
+              {
+                "text": " The example below applies these calculations to find the rates of radioactive decay for specific nuclides."
+              }
+            ],
+            "id": "pzkfg07omg7lm0b",
+            "type": "p"
+          }
+        ],
+        "id": "544918273",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Rates of Radioactive Decay"
+                  }
+                ],
+                "id": "tml6521om4098ye",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " decays with a half-life of 5.27 years to produce "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{28}^{60}\\mathrm{Ni}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "rf3rb22hwafys0z",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "(a)"
+                  },
+                  {
+                    "text": " What is the decay constant for the radioactive disintegration of cobalt-60? "
+                  }
+                ],
+                "id": "wfam8cahg7505nc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "(b)"
+                  },
+                  {
+                    "text": " Calculate the fraction of a sample of the "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " isotope that will remain after 15 years."
+                  }
+                ],
+                "id": "q6jrxxgyaindrxa",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "(c)"
+                  },
+                  {
+                    "text": " How long does it take for a sample of "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " to disintegrate to the extent that only 2.0% of the original amount remains?"
+                  }
+                ],
+                "id": "f3rc14cscd5kqbr",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "(a)"
+                  },
+                  {
+                    "text": " The value of the rate constant is given by:"
+                  }
+                ],
+                "id": "fiq3k3sh4d68a07",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "mffqqg8k6na9uiu",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ykzoclo4bypowvl",
+                "legacyBlockRendered": "true",
+                "src": "\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{1/2}}\\;=\\;\\frac{0.693}{5.27\\;\\mathrm y}\\;=\\;0.132\\;\\mathrm y^{-1}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "(b)"
+                  },
+                  {
+                    "text": " The fraction of "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " that is left after time "
+                  },
+                  {
+                    "em": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": " is given by "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "\\frac{N_t}{N_0}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ". Rearranging the first-order relationship "
+                  },
+                  {
+                    "em": true,
+                    "text": "N"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": " = "
+                  },
+                  {
+                    "em": true,
+                    "text": "N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "0"
+                  },
+                  {
+                    "em": true,
+                    "text": "e"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−λ"
+                  },
+                  {
+                    "em": true,
+                    "sup": true,
+                    "text": "t"
+                  },
+                  {
+                    "text": " to solve for this ratio yields:"
+                  }
+                ],
+                "id": "bzsajgn67wvm0tb",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "maan1qj9791zjkz",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "1g76k16loj02zbm",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{N_t}{N_0}\\;=\\;e^{-\\lambda t}\\;=\\;e^{-(0.132/\\mathrm y)(15\\;\\mathrm y)}\\;=\\;0.138",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The fraction of "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " that will remain after 15.0 years is 0.138. Or, put another way, 13.8% of the "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " originally present will remain after 15 years."
+                  }
+                ],
+                "id": "wxjhvzc29brzh8e",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "(c)"
+                  },
+                  {
+                    "text": " 2.00% of the original amount of "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "{}_{27}^{60}\\mathrm{Co}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " is equal to 0.0200 × "
+                  },
+                  {
+                    "em": true,
+                    "text": "N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "0"
+                  },
+                  {
+                    "text": ". Substituting this into the equation for time for first-order kinetics, we have:"
+                  }
+                ],
+                "id": "8rh6t4l25fz5jci",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "1ndfwzdr7w2mz74",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "afdp6cov63qt2ei",
+                "legacyBlockRendered": "true",
+                "src": "t\\;=\\;-\\frac1\\lambda\\ln\\;\\left(\\frac{N_t}{N_0}\\right)\\;=\\;-\\frac1{0.132\\;\\mathrm y^{-1}}\\ln\\;\\left(\\frac{0.0200\\;\\times\\;N_0}{N_0}\\right)\\;=\\;29.6\\;\\mathrm y",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1097599003",
+                "type": "p"
+              }
+            ],
+            "id": "3011649140",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "155463928",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Calculating the Half-Life of an Isotope"
+                  }
+                ],
+                "id": "kfdxsemp3ui4d24",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "A sample of U-234 has an initial mass of 2.00 g. After 565,000 years, the mass of the sample is 0.4058 g. Calculate the half-life of U-234."
+                  }
+                ],
+                "id": "6qith6zrbbbozt9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The first-order equation relating amount to time can be rearranged to solve for the rate constant, λ, given the initial amount of the isotope and the amount of isotope left over after a given amount of time:"
+                  }
+                ],
+                "id": "p3neo37ck41zfx4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "t8apxmf76aube7c",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "nu1g3n807bykddl",
+                "legacyBlockRendered": "true",
+                "src": "t\\;=\\;-\\frac1{\\mathrm\\lambda}\\ln\\;\\left(\\frac{N_t}{N_0}\\right)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\Rightarrow\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\lambda\\;=\\;-\\frac1t\\ln\\;\\left(\\frac{N_t}{N_0}\\right)\\;\\;",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "m5qwahvbec2bwmz",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ov08b5e8b5z9a20",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm\\lambda\\;=\\;-\\frac1{565,000}\\;\\ln\\;\\left(\\frac{0.4058}{2.00}\\right)\\;=\\;2.823\\times10^{-6}\\;\\mathrm y^{-1}\\\\",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Then, we use the first-order equation to determine the half-life:"
+                  }
+                ],
+                "id": "2mr2zxl84yao2lc",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "y3i06ddus57m04v",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "gi3nwwl11eym44z",
+                "legacyBlockRendered": "true",
+                "src": "t_{1/2}\\;=\\;\\frac{\\ln\\;2}\\lambda\\;=\\;\\frac{0.693}{2.823\\times10^{-6}\\;\\mathrm y^{-1}}\\;=\\;245,500\\;\\mathrm y",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "2606475732",
+                "type": "p"
+              }
+            ],
+            "id": "2595310609",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "2844387727",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Because each nuclide has a specific number of nucleons, a particular balance of repulsion and attraction, and its own degree of stability, the half-lives of radioactive nuclides vary widely. For example, the half-life of "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "{}_{83}^{209}\\mathrm{Bi}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": " is 1.9 × 10"
+              },
+              {
+                "sup": true,
+                "text": "19"
+              },
+              {
+                "text": " years; "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "{}_{94}^{239}\\mathrm{Ra}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": " is 24,000 years; "
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "legacyBlockRendered": false,
+                "src": "{}_{86}^{222}\\mathrm{Rn}",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": " is 3.82 days; and element-111 (Rg for roentgenium) is 1.5 × 10"
+              },
+              {
+                "sup": true,
+                "text": "–3"
+              },
+              {
+                "text": " seconds. The half-lives of a number of radioactive isotopes important to medicine are shown in the table below."
+              }
+            ],
+            "id": "p2305xjq8gacbw8",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "5js9mkuhoixtnxk",
+                        "text": "Half-Lives of Radioactive Isotopes Important to Medicine"
+                      }
+                    ],
+                    "colspan": 4,
+                    "id": "fj0y0bbxapnw0hp",
+                    "type": "th"
+                  }
+                ],
+                "id": "gfzl3lfy76ovh3w",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "5giu70nzty4a90j",
+                        "text": "Type"
+                      }
+                    ],
+                    "id": "8jrm4m1v05bdvjz",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "y6zirfy3u3q9hfl",
+                        "text": "Decay Mode"
+                      }
+                    ],
+                    "id": "evt0lt8tnylev2n",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "o2irve3ykqm5vaq",
+                        "text": "Half-Life"
+                      }
+                    ],
+                    "id": "50jv0bm88a3riiz",
+                    "type": "th"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "n4dvikqbsvrnjrd",
+                        "text": "Uses"
+                      }
+                    ],
+                    "id": "lh222k8saisab3o",
+                    "type": "th"
+                  }
+                ],
+                "id": "4pi1g08379dlxav",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "3ngj6eum02p06en",
+                        "text": "F-18"
+                      }
+                    ],
+                    "id": "52er641katxqk3v",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "wab3rft74j5hbp5",
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "0mqfuyalf2kea2u",
+                            "text": ""
+                          }
+                        ],
+                        "id": "cmrsrs16hud83kz",
+                        "legacyBlockRendered": false,
+                        "src": "\\beta^+",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "id": "jdlbvlbmz8f3b5l",
+                        "text": " decay"
+                      }
+                    ],
+                    "id": "cqg7piehmyddqmo",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "pxxykylaxfeltwv",
+                        "text": "110. min"
+                      }
+                    ],
+                    "id": "ghv7j47cittu00x",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "loukgf525ao9cgx",
+                        "text": "PET scans"
+                      }
+                    ],
+                    "id": "loufjf00qg99oai",
+                    "type": "td"
+                  }
+                ],
+                "id": "bmxc2jpwbxkw3bo",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "5gfs48xa4uaeo38",
+                        "text": "Co-60"
+                      }
+                    ],
+                    "id": "6w19rkvrw7raakh",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "ielq4vg2qj0fv6m",
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "w9rmxkmyhat48ae",
+                            "text": ""
+                          }
+                        ],
+                        "id": "55uvm7p9rrfndsl",
+                        "legacyBlockRendered": false,
+                        "src": "\\beta",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "id": "enijan3nda3p9ss",
+                        "text": " decay, "
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "zh4esxr586ginuc",
+                            "text": ""
+                          }
+                        ],
+                        "id": "lym6zav5r78mcah",
+                        "legacyBlockRendered": false,
+                        "src": "\\gamma",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "id": "g38fvkxxe98a0vj",
+                        "text": " decay"
+                      }
+                    ],
+                    "id": "3yl1vx7vodjeffl",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "k78zc8ji8rkz6eo",
+                        "text": "5.27 y"
+                      }
+                    ],
+                    "id": "818c8wdbl9ue2y0",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "v2triwxjtb5tx39",
+                        "text": "Cancer treatment"
+                      }
+                    ],
+                    "id": "0h5f9478q97t29z",
+                    "type": "td"
+                  }
+                ],
+                "id": "2o68lp2kttls7fu",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "tyx3bapkp9zfbcy",
+                        "text": "Tc-99m"
+                      }
+                    ],
+                    "id": "aehfmp2l5fcf4w5",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "4eqttxc22c3s4ws",
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "etr5x5j5l6zpgez",
+                            "text": ""
+                          }
+                        ],
+                        "id": "ei8yjh7n0pikzbr",
+                        "legacyBlockRendered": false,
+                        "src": "\\gamma",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "id": "e21vvmvvrav5amn",
+                        "text": " decay"
+                      }
+                    ],
+                    "id": "eb3kgdihpm6tho2",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "xwf9vxcziy1lg59",
+                        "text": "8.01 hr"
+                      }
+                    ],
+                    "id": "sz9tcycg00qcocx",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "s3c5qde5p51w0fk",
+                        "text": "Scans of brain, lung, heart, bone"
+                      }
+                    ],
+                    "id": "k2ae7gap4ozpka3",
+                    "type": "td"
+                  }
+                ],
+                "id": "6mwyc415njaxe5j",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "ehcmy1irsiyq4l7",
+                        "text": "I-131"
+                      }
+                    ],
+                    "id": "e4gfxc9t01rhpdz",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "qndn4bzz9w8a5rs",
+                        "text": ""
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "odt2jcvewismo9q",
+                            "text": ""
+                          }
+                        ],
+                        "id": "7lm3o63eh06li3y",
+                        "legacyBlockRendered": false,
+                        "src": "\\beta",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "id": "q2ftkyjyb6fwtc2",
+                        "text": " decay"
+                      }
+                    ],
+                    "id": "95wuohkbmr1d0sh",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "uqogde4aoveprzs",
+                        "text": "8.02 hr"
+                      }
+                    ],
+                    "id": "pgpzwhxx7cv01oc",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "rndcteml2qpafov",
+                        "text": "Thyroid scans and treatment"
+                      }
+                    ],
+                    "id": "3c790a1nzia0alh",
+                    "type": "td"
+                  }
+                ],
+                "id": "ze5bqjanln27n4f",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "nas2os3nrel5ova",
+                        "text": "Tl-201"
+                      }
+                    ],
+                    "id": "3thf21u8rs4e41a",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "rq5n5ezc7o65qnf",
+                        "text": "electron capture"
+                      }
+                    ],
+                    "id": "y27d1fk3ros5bnz",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "1w89vhhf7tp62or",
+                        "text": "73 hr"
+                      }
+                    ],
+                    "id": "6g3j9wx98wzeox4",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "fmh0pqu4gr1ulx1",
+                        "text": "Heart and arteries scans; cardiac stress tests"
+                      }
+                    ],
+                    "id": "mw57bgwa8gc4uvb",
+                    "type": "td"
+                  }
+                ],
+                "id": "bsd9wh6pikb7eih",
+                "type": "tr"
+              }
+            ],
+            "id": "0wsr51j4k8j6dlk",
+            "rowstyle": "alternating",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "222478823",
+            "type": "p"
+          }
+        ],
+        "id": "4116672951",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79928,
+            "id": "931725720",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80009,
+            "id": "3022687681",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78868,
+            "id": "464688944",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80324,
+            "id": "4236317861",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80231,
+            "id": "678206878",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "977868253",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "5ewobp4cmp52h8h",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "5i1wx7flu46rrnt",
+            "type": "p"
+          }
+        ],
+        "id": "2889931654",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78502"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

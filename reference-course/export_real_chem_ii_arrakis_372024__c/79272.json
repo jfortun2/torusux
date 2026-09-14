@@ -1,0 +1,316 @@
+{
+  "id": "79272",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "mech_rate_2digt-q1",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "B",
+          "D"
+        ],
+        "1347045563"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " is produced in the first step and consumed in the second step, and N"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "O is produced in the second step and consumed in the third step."
+                  }
+                ],
+                "id": "hlyjnu3icmsy3qa",
+                "type": "p"
+              }
+            ],
+            "id": "1545930398"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u2g9rgrfs1umuu0",
+                  "type": "p"
+                }
+              ],
+              "id": "3211913769"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c413v6xzo7r6cob",
+                  "type": "p"
+                }
+              ],
+              "id": "3049122856"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jhbn72h28r2fva9",
+                  "type": "p"
+                }
+              ],
+              "id": "2801309527"
+            }
+          ],
+          "id": "2386221904",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. N"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": " is produced in the first step and consumed in the second step, and N"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O is produced in the second step and consumed in the third step."
+                      }
+                    ],
+                    "id": "mits6qk0slz8i30",
+                    "type": "p"
+                  }
+                ],
+                "id": "4033329243"
+              },
+              "id": "1347045563",
+              "legacyMatch": "B,D",
+              "rule": "(!(input like {F})) && ((!(input like {E})) && ((!(input like {C})) && ((!(input like {A})) && (input like {D} && (input like {B})))))",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. There are two intermediates in this mechanism."
+                      }
+                    ],
+                    "id": "lx7libeva0teue2",
+                    "type": "p"
+                  }
+                ],
+                "id": "514988727"
+              },
+              "id": "3038958121",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Identify the intermediate(s). Select all that apply.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NO"
+              }
+            ],
+            "id": "fz0s9qkkb5zg9j7",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "avk0eda52wa9iiv",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "730bjr1yppxy7dq",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "O"
+              }
+            ],
+            "id": "pwtmsh02i3ll78r",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "N"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "wgfqk5lct2zt7w2",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              }
+            ],
+            "id": "1fedjr39ly7erl5",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Identify the intermediate(s). "
+            },
+            {
+              "strong": true,
+              "text": "Select all that apply."
+            }
+          ],
+          "id": "554zmutlx0tf563",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2386221904": [
+      "78465"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

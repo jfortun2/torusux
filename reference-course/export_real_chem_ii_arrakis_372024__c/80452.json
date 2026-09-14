@@ -1,0 +1,209 @@
+{
+  "id": "80452",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78080"
+  ],
+  "title": "entropy_equations_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "z46nevlo16n242x",
+                  "type": "p"
+                }
+              ],
+              "id": "695981253"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1qh1hs4r2kh4irw",
+                  "type": "p"
+                }
+              ],
+              "id": "1619297979"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0dg23sly7yew7b7",
+                  "type": "p"
+                }
+              ],
+              "id": "1886747250"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When a solid dissolves and dissociates into aqueous ions, matter disperses and entropy increases, so Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is positive. "
+                      }
+                    ],
+                    "id": "hbqm2rayo8xqv33",
+                    "type": "p"
+                  }
+                ],
+                "id": "1465870010"
+              },
+              "id": "3274748749",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Recall that entropy is a measure of the dispersal of matter, the distribution of microstates, or the disorder of a system. Consider whether the process of a solid dissolving and dissociating into aqueous ions is likely to increase entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is positive) or decrease entropy (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " is negative)."
+                      }
+                    ],
+                    "id": "dts2meeto8m5n18",
+                    "type": "p"
+                  }
+                ],
+                "id": "400198713"
+              },
+              "id": "1549633424",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "positive"
+              }
+            ],
+            "id": "4d6xxa20f6mzfla",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "negative"
+              }
+            ],
+            "id": "a0yjiyawhcesdzq",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Determine the sign of Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " for the following process. "
+            }
+          ],
+          "id": "yyy0sh32k2h6daq",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm{KNO}}_3(s)\\;\\longrightarrow\\;\\mathrm K^+(aq)\\;+\\;\\mathrm{NO}_3^-(aq)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            }
+          ],
+          "id": "qhcuwyii019ovkm",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,313 @@
+{
+  "id": "79927",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78104"
+  ],
+  "title": "cell_notation_pool_v2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "C",
+          "E"
+        ],
+        "1909490870"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "3e2wgk69h3tjled",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "7fz2iqmdsnje9c2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Copper is reduced and magnesium is oxidized, the electrons flow from magnesium to copper, and copper is the cathode and magnesium is the anode."
+                  }
+                ],
+                "id": "zoatcjk91o5ri0i",
+                "type": "p"
+              }
+            ],
+            "id": "2966067563"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c0n2kl751g6qgr9",
+                  "type": "p"
+                }
+              ],
+              "id": "3096320456"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3ujg3p8aymxj49n",
+                  "type": "p"
+                }
+              ],
+              "id": "688066550"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4tmnknw4fayoii1",
+                  "type": "p"
+                }
+              ],
+              "id": "798742907"
+            }
+          ],
+          "id": "2651119091",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Copper is reduced and magnesium is oxidized, the electrons flow from magnesium to copper, and copper is the cathode and magnesium is the anode."
+                      }
+                    ],
+                    "id": "uu6rahv3lcq8al6",
+                    "type": "p"
+                  }
+                ],
+                "id": "1621355294"
+              },
+              "id": "1909490870",
+              "legacyMatch": "A,C,E",
+              "rule": "(!(input like {F})) && ((!(input like {D})) && ((!(input like {B})) && (input like {E} && (input like {C} && (input like {A})))))",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. In cell notation, the oxidation half-reaction is on the left and the reduction half-reaction is on the right. Recall the meaning of oxidation and reduction in terms of loss or gain of electrons, and the definition of anode and cathode in terms of oxidation and reduction."
+                      }
+                    ],
+                    "id": "7taocp8fmq108t2",
+                    "type": "p"
+                  }
+                ],
+                "id": "1779350648"
+              },
+              "id": "922620494",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is reduced and magnesium is oxidized."
+              }
+            ],
+            "id": "12n1spaec2vt81q",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is oxidized and magnesium is reduced."
+              }
+            ],
+            "id": "39695pl568track",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The electrons flow from magnesium to copper."
+              }
+            ],
+            "id": "68lh535coqx8cr4",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The electrons flow from copper to magensium."
+              }
+            ],
+            "id": "awjad9av53ve8rs",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is the cathode and magnesium is the anode."
+              }
+            ],
+            "id": "dbwbxyqp6onnjg8",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Copper is the anode and magnesium is the cathode."
+              }
+            ],
+            "id": "ixckr6lweo5igqh",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following are true for the cell below? Select all that apply."
+            }
+          ],
+          "id": "pkdiz73ma540i8o",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Mg("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ")|Mg"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ")||Cu"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "aq"
+            },
+            {
+              "text": ")| Cu("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ")"
+            }
+          ],
+          "id": "mvx42mebfpvyb3a",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "2651119091": [
+      "78395"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

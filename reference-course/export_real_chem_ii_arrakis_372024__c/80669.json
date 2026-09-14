@@ -1,0 +1,1489 @@
+{
+  "id": "80669",
+  "type": "Page",
+  "tags": [],
+  "title": "Calculating Free Energy",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Free energy is a state function, so its value depends only on the state of the system and not on how the system arrived at that state. For this reason, when a system undergoes a physical or chemical change, we can determine its "
+              },
+              {
+                "children": [
+                  {
+                    "text": "standard free energy change (Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": ")"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "The change in free energy when one set of substances  is converted into another set of substances, with all substances in their standard states (1 bar pressure for gases, 1 M concentration for solutions)."
+                      }
+                    ],
+                    "id": "2323899213",
+                    "type": "p"
+                  }
+                ],
+                "id": "1892284634",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " solely from thermodynamic information about its initial and final states. We can calculate the standard free energy change for a process at a given temperature from its standard enthalpy and entropy changes using:"
+              }
+            ],
+            "id": "1ebtk85gs71t6tu",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "obfi37k6y0enjyq",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "fkkekyw7ny6y3ei",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm\\Delta G^\\circ\\;=\\;\\mathrm\\Delta H^\\circ\\;-\\;T\\mathrm\\Delta S^\\circ",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "In some cases, we may know, or be given, the values of Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": "° and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": "°. If these values are not available, we can calculate them from standard enthalpies of formation, Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": "°, and standard entropies, "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": "°, of the reactants and products. These values are found in the table of "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Standard Thermodynamic Properties for Selected Substances"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.525:2gdkQpYU@6/Standard-Thermodynamic-Propert",
+                "linkType": "url",
+                "target": "new",
+                "type": "a"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "km1lk2x9x711vew",
+            "type": "p"
+          }
+        ],
+        "id": "1301777844",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "One step in the formation of acid rain is the oxidation of sulfur dioxide to sulfur trioxide:"
+                  }
+                ],
+                "id": "u2f3gyz6r6jyipl",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "uqnnta45kfk0tbp",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "cwa1is2bmw6gcra",
+                "legacyBlockRendered": "true",
+                "src": "2\\;{\\mathrm{SO}}_2(g)\\:+\\:{\\mathrm O}_2(g)\\;\\;\\longrightarrow\\;\\;2\\;{\\mathrm{SO}}_3(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the standard free energy change for this reaction at 25 °C, given that Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "H"
+                  },
+                  {
+                    "text": "° = −197.8 kJ and Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": "° = −188.0 J/K. What does this value tell us about the spontaneity of this reaction?"
+                  }
+                ],
+                "id": "1g3mqvo5sm82tjy",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use the standard enthalpy and entropy changes to calculate the standard free energy change:"
+                  }
+                ],
+                "id": "07hbtc7y78ozqbx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "usx8sgtnssbtgwa",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hgvnf5ja14ty82g",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm\\Delta G^\\circ\\;=\\;\\mathrm\\Delta H^\\circ\\;-\\;T\\mathrm\\Delta S^\\circ",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "kajx2hbngmu7zlx",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "mvl5a23ncmqcp05",
+                "legacyBlockRendered": "true",
+                "src": "=\\;-197.8\\;\\mathrm{kJ}\\;-\\;(298.2\\;\\mathrm K)\\left(-188.0\\;\\frac{\\mathrm J}{\\mathrm K}\\right)\\left(\\frac{1\\; \\mathrm{kJ}}{1000\\;\\mathrm J}\\right)\\;=\\;-141.7\\;\\mathrm{kJ}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": "° is negative, so the reaction is spontaneous at this temperature."
+                  }
+                ],
+                "id": "fk28rfr21vc3y77",
+                "type": "p"
+              }
+            ],
+            "id": "3542953155",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "808935803",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Iron is formed from the reduction of iron(III) oxide with hydrogen gas:"
+                  }
+                ],
+                "id": "4ifese9ut4pt2a8",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "rlpu9g1fl6a0mgg",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "luv7254fpfqhdub",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm{Fe}}_2{\\mathrm O}_3(s)\\:+\\:3\\;{\\mathrm H}_2(g)\\;\\;\\longrightarrow\\;\\;2\\;\\mathrm{Fe}(s)\\; +\\:3\\;{\\mathrm H}_2\\mathrm O(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": "° for this reaction, given the following values at 25 °C. What does the result tell us about the spontaneity of this reaction?"
+                  }
+                ],
+                "id": "cegvplsgyvgok7t",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "xovf2g1ntqwb6bl",
+                            "strong": true,
+                            "text": "Compound"
+                          }
+                        ],
+                        "id": "vsw6muq549wci9j",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "gc956dkvbyp0yma",
+                            "strong": true,
+                            "text": "Δ"
+                          },
+                          {
+                            "em": true,
+                            "id": "kv2ndz69wg7qgst",
+                            "strong": true,
+                            "text": "H"
+                          },
+                          {
+                            "id": "ozr94qp6oevipjv",
+                            "strong": true,
+                            "sup": true,
+                            "text": "∘"
+                          },
+                          {
+                            "id": "py4f5w79jnqrkxm",
+                            "strong": true,
+                            "sub": true,
+                            "text": "f"
+                          },
+                          {
+                            "id": "4p390ind8uvpeqi",
+                            "strong": true,
+                            "text": " (kJ/mol)"
+                          }
+                        ],
+                        "id": "x2gfupsu6ven0se",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "em": true,
+                            "id": "u2ecf7m3o2ek2un",
+                            "strong": true,
+                            "text": "S"
+                          },
+                          {
+                            "id": "mecsr89h1jnu7c8",
+                            "strong": true,
+                            "sup": true,
+                            "text": "∘"
+                          },
+                          {
+                            "id": "l1y770idmgdbjan",
+                            "strong": true,
+                            "text": " (J/K⋅mol)"
+                          }
+                        ],
+                        "id": "7b36p6bledmjp52",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "x1ijxn5ammr8syv",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "6iwwkntu3zcs0wc",
+                            "text": "Fe"
+                          },
+                          {
+                            "id": "zvh34ztcepolwfq",
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "r9mzjusbf9u1kan",
+                            "text": "O"
+                          },
+                          {
+                            "id": "xo268lqy1k0sudq",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "yqafrquyj6gnyl4",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "208qoynqa56vcah",
+                            "text": "s"
+                          },
+                          {
+                            "id": "vrhorukouzkjdc4",
+                            "text": ")"
+                          }
+                        ],
+                        "id": "64a2xwlsswvgyir",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "nxqeh8c9xgn16uw",
+                            "text": "−824.2"
+                          }
+                        ],
+                        "id": "ugwtw5wlk33vsjj",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "4r04ozcdd7emtnp",
+                            "text": "87.4"
+                          }
+                        ],
+                        "id": "yc5xic9to3tx1f0",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "an9a1lin0dulo10",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "0z71i55e7ilpk4t",
+                            "text": "O"
+                          },
+                          {
+                            "id": "o9it3vqdg9r9o07",
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "3sf6mhqs1hj7oxv",
+                            "text": "("
+                          },
+                          {
+                            "em": true,
+                            "id": "sdxinvpvfpxq2e1",
+                            "text": "g"
+                          },
+                          {
+                            "id": "kf3j0rxh8klrz2r",
+                            "text": ")"
+                          }
+                        ],
+                        "id": "bgf3ul0q9etioah",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "yogcpruespk7dwl",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "hdh6201bk0gdgdb",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "vmu6mjk8657kcr2",
+                            "text": "130.6"
+                          }
+                        ],
+                        "id": "gsr0f00soq7470k",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "o4go2zzsk5705fy",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "mgthn95jy2b8yxd",
+                            "text": "Fe("
+                          },
+                          {
+                            "em": true,
+                            "id": "wq9hxtht6xnngr9",
+                            "text": "s"
+                          },
+                          {
+                            "id": "qqnwfblu5iditws",
+                            "text": ")"
+                          }
+                        ],
+                        "id": "x5j20acxkh1n511",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "nfda8gk6a3tev09",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "exoglyet4k3jnii",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "aizulkh6hzhsj6r",
+                            "text": "27.3"
+                          }
+                        ],
+                        "id": "r0worf1xhlnmn9q",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "20r7l9yjvbnsn4q",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "hr4f48se2w5gh4t",
+                            "text": "H"
+                          },
+                          {
+                            "id": "q2huqcodl2i4x36",
+                            "sub": true,
+                            "text": "2"
+                          },
+                          {
+                            "id": "axf66ua8452kbnz",
+                            "text": "O("
+                          },
+                          {
+                            "em": true,
+                            "id": "nwzvqfrbjbtvz1i",
+                            "text": "g"
+                          },
+                          {
+                            "id": "z5ociz7r7a34ywq",
+                            "text": ")"
+                          }
+                        ],
+                        "id": "8uxz1mfy8jkgym3",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "80ftw7zs6hesm8t",
+                            "text": "−241.8"
+                          }
+                        ],
+                        "id": "3g2tp3k2thcemcn",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "fhm2jhow1r19hmk",
+                            "text": "188.8"
+                          }
+                        ],
+                        "id": "1n62nzb7szhk3sk",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "f6wywd80cctzkkc",
+                    "type": "tr"
+                  }
+                ],
+                "id": "bb068jgpgukr1u2",
+                "rowstyle": "alternating",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use the standard enthalpies of formation to calculate the standard enthalpy change:"
+                  }
+                ],
+                "id": "o3g639xqz8rc5oj",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "i15qlwcgf370d8n",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "vvic3yphb52w3lx",
+                "legacyBlockRendered": "true",
+                "src": "\\Delta H_{rxn}^\\circ\\;=\\;\\sum n_{\\mathrm{products}}\\Delta H_f^\\circ(\\mathrm{products})\\;-\\;\\;\\sum n_{\\mathrm{reactants}}\\Delta H_f^\\circ(\\mathrm{reactants})",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "z4wfb5fwo9ligmp",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "egkivxfn892hdco",
+                "legacyBlockRendered": "true",
+                "src": "=\\;\\lbrack2\\left(0\\;\\mathrm{kJ}\\right)\\;+\\;3(-241.8\\;\\mathrm{kJ})\\rbrack\\;-\\;\\lbrack1(-824.2\\;\\mathrm{kJ})\\; +\\;3(0\\;\\mathrm{kJ})\\rbrack\\;=\\;98.8\\;\\mathrm{kJ}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use the standard entropies to calculate the standard entropy change:"
+                  }
+                ],
+                "id": "qpxl212ljq4cfwx",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "a0oq4sdgaacgej3",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "wipj6ixvas8mw1t",
+                "legacyBlockRendered": "true",
+                "src": "\\Delta S_{rxn}^\\circ\\;=\\;\\sum n_{\\mathrm{products}}S^\\circ(\\mathrm{products})\\;-\\;\\;\\sum n_{\\mathrm{reactants}}S^\\circ(\\mathrm{reactants})",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "qegklnxgwa2zdti",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "6ezoi5hqvzuor1p",
+                "legacyBlockRendered": "true",
+                "src": "=\\;\\lbrack2\\left(27.3\\;\\mathrm J/\\mathrm K\\right)\\;+\\;3(188.8\\;\\mathrm J/\\mathrm K)\\rbrack\\; -\\;\\lbrack1(87.4\\;\\mathrm J/\\mathrm K)\\;+\\;3(130.6\\;\\mathrm J/\\mathrm K)\\rbrack\\;=\\;141.8\\:\\mathrm J/\\mathrm K",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Finally, we use the standard enthalpy and entropy changes to calculate the standard free energy change:"
+                  }
+                ],
+                "id": "0isr0gmtui0139u",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "twwuruui52avibk",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ow4blwlh1vl4720",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm\\Delta G_{rxn}^\\circ\\;=\\;\\mathrm\\Delta H_{rxn}^\\circ\\;-\\;T\\mathrm\\Delta S_{rxn}^\\circ",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "f335vx66hrlnqpy",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "f0h1cmhdnjqycr3",
+                "legacyBlockRendered": "true",
+                "src": "=\\;98.8\\;\\mathrm{kJ}\\;-\\;(298.2\\;\\mathrm K)\\left(141.8\\;\\frac{\\mathrm J}{\\mathrm K}\\right)\\left(\\frac{1\\; \\mathrm{kJ}}{1000\\;\\mathrm J}\\right)\\;=\\;56.5\\;\\mathrm{kJ}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": "° is positive, so the reaction is not spontaneous at this temperature."
+                  }
+                ],
+                "id": "ffydstspw291eyx",
+                "type": "p"
+              }
+            ],
+            "id": "107798321",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "1799433577",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80354,
+            "id": "3913107854",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1971104133",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "We can also calculate the standard free energy change (Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "°), for a given process from the "
+              },
+              {
+                "children": [
+                  {
+                    "text": "standard free energies of formation, Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": "°"
+                  },
+                  {
+                    "sub": true,
+                    "text": "f"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Change in free energy accompanying the formation of one mole of substance from its elements in their standard states."
+                      }
+                    ],
+                    "id": "2331022781",
+                    "type": "p"
+                  }
+                ],
+                "id": "4051219990",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": ", for the reactants and products. The standard free energy of formation is the free energy change that accompanies the formation of one mole of a substance from its elements in their standard states. Similar to the standard enthalpies of formation, Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "°"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": " is by definition zero for elemental substances under standard state conditions. The approach to calculating the free energy change for a reaction is the same as that done previously for enthalpy and entropy changes. Δ"
+              },
+              {
+                "em": true,
+                "text": "G"
+              },
+              {
+                "text": "°"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": " values also available at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Standard Thermodynamic Properties for Selected Substances"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.525:2gdkQpYU@6/Standard-Thermodynamic-Propert",
+                "id": "3093645419",
+                "linkType": "url",
+                "target": "self",
+                "type": "a"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "5mhqgektipgn7hu",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "buofgnpfii2gq0i",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "pg5iixdeotyamg7",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/A3/A31F9808B584CB71B1FEA56DD0BCDE4E/green_line.png",
+            "type": "img"
+          },
+          {
+            "children": [
+              {
+                "id": "ongohd4kzan6cou",
+                "text": ""
+              }
+            ],
+            "id": "k0ar8w2ienud0ns",
+            "items": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2738124979",
+                    "type": "p"
+                  }
+                ],
+                "type": "dt"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "3960812272",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the reaction:"
+                      }
+                    ],
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "3578834753",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "2780804812",
+                    "legacyBlockRendered": "true",
+                    "src": "a\\mathrm A\\;+\\;b\\mathrm B\\;\\;\\longrightarrow\\;\\;c\\mathrm C\\;+\\:d\\mathrm D",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "994452646",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "the standard free energy change at 25 °C may be calculated as:"
+                      }
+                    ],
+                    "id": "3679221525",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "1198713546",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "2655260122",
+                    "legacyBlockRendered": "true",
+                    "src": "\\Delta G_{rxn}^{\\mathrm o}\\;=\\;\\sum n_{\\mathrm{products}}\\mathrm\\Delta G_f^{\\mathrm o}(\\mathrm{products})\\;-\\;\\sum n_{\\mathrm{reactants}}\\mathrm\\Delta G_f^{\\mathrm o}(\\mathrm{reactants})",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "891100002",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "In this equation, ∑ represents summation, "
+                      },
+                      {
+                        "em": true,
+                        "text": "n"
+                      },
+                      {
+                        "text": " represents the stoichiometric coefficients in the balanced reaction equation, and Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": "°"
+                      },
+                      {
+                        "sub": true,
+                        "text": "f"
+                      },
+                      {
+                        "text": " represents the standard free energies of formation."
+                      }
+                    ],
+                    "id": "973760347",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "1926487605",
+                    "type": "p"
+                  }
+                ],
+                "type": "dd"
+              }
+            ],
+            "title": [
+              {
+                "children": [
+                  {
+                    "text": " Calculating Free Energy "
+                  }
+                ],
+                "id": "2094547083",
+                "type": "p"
+              }
+            ],
+            "type": "dl"
+          },
+          {
+            "children": [
+              {
+                "id": "d74onicsbpa17h7",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ykrmtu0ranmn11a",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/A3/A31F9808B584CB71B1FEA56DD0BCDE4E/green_line.png",
+            "type": "img"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "2003222749",
+            "type": "p"
+          }
+        ],
+        "id": "3663988253",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Ammonia and oxygen react according to:"
+                  }
+                ],
+                "id": "vz91020pa3qxldk",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ewaf8jsj6ealvfl",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "h2s6cbk9zm54uic",
+                "legacyBlockRendered": "true",
+                "src": "4\\;{\\mathrm{NH}}_3(g)\\;+\\;5\\;{\\mathrm O}_2(g)\\;\\;\\longrightarrow\\;\\;4\\;\\mathrm{NO}(g)\\;+\\;6\\;{\\mathrm H}_2\\mathrm O(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Calculate the standard free energy change, Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "sup": true,
+                    "text": "o"
+                  },
+                  {
+                    "text": ", for this reaction at 25 °C first using standard free energies of formation and then using standard enthalpies of formation and standard entropies. Is this reaction spontaneous or nonspontaneous under standard conditions? For what temperature conditions is this reaction spontaneous?"
+                  }
+                ],
+                "id": "yrsamyifs7fuwqf",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The required data are available at "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Standard Thermodynamic Properties for Selected Substances"
+                      }
+                    ],
+                    "href": "https://cnx.org/contents/havxkyvS@9.525:2gdkQpYU@6/Standard-Thermodynamic-Propert",
+                    "id": "845163383",
+                    "linkType": "url",
+                    "target": "self",
+                    "type": "a"
+                  },
+                  {
+                    "text": " and are shown below.  "
+                  }
+                ],
+                "id": "4000794471",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using standard free energies of formation: "
+                  }
+                ],
+                "id": "6fuyqo5r3vgqal6",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "dtxrao5zaz7jm6a",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jftfl7qbwnu08ei",
+                "legacyBlockRendered": "true",
+                "src": "\\Delta G_{rxn}^{\\mathrm o}\\;=\\;\\sum n_{\\mathrm{products}}\\mathrm\\Delta G_f^{\\mathrm o}(\\mathrm{products})\\;-\\;\\sum n_{\\mathrm{reactants}}\\mathrm\\Delta G_f^{\\mathrm o}(\\mathrm{reactants})",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "4hs201g0yxyfx92",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "cvsitcqi65peau4",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm\\Delta G^\\circ\\;=\\;\\lbrack4\\cdot\\mathrm\\Delta G_{\\mathrm f}^\\circ(\\mathrm{NO}(g))\\; +\\;{6\\cdot\\;}\\mathrm\\Delta G_{\\mathrm f}^\\circ(\\;{\\mathrm H}_2\\mathrm O(g))\\rbrack\\; -\\;\\lbrack4\\cdot\\mathrm\\Delta G_{\\mathrm f}^\\circ({\\mathrm{NH}}_3(g))\\; +\\;{5\\cdot\\;}\\mathrm\\Delta G_{\\mathrm f}^\\circ(\\;{\\mathrm O}_2(g)\\rbrack\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\; =\\;\\lbrack4\\cdot(87.6\\;\\mathrm{kJ})\\;+\\;6\\cdot(-228.6\\;\\mathrm{kJ})\\rbrack\\;-\\;\\lbrack4\\cdot(-16.5\\;\\mathrm{kJ})\\; +\\;5\\cdot(0\\;\\mathrm{kJ})\\rbrack\\;\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;=\\;(-1021.2\\;\\mathrm{kJ})\\;-\\;(-66.0\\;\\mathrm{kJ})\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\; =\\;-955.2\\;\\mathrm{kJ}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We use the standard enthalpies of formation to calculate the standard enthalpy change (Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "o"
+                  },
+                  {
+                    "text": ") and the standard entropies to calculate the standard entropy change (Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "sup": true,
+                    "text": "o"
+                  },
+                  {
+                    "text": "):"
+                  }
+                ],
+                "id": "fxwkb0vwyghgc0q",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "ost2ysj2l0a1pif",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "mqjzwije7z8bv58",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm\\Delta H^\\circ\\;=\\;\\lbrack4\\cdot\\mathrm\\Delta H_{\\mathrm f}^\\circ(\\mathrm{NO}(g))\\; +\\;{6\\;\\cdot\\;}\\mathrm\\Delta H_{\\mathrm f}^\\circ(\\;{\\mathrm H}_2\\mathrm O(g))\\rbrack\\; -\\;\\lbrack4\\cdot\\mathrm\\Delta H_{\\mathrm f}^\\circ({\\mathrm{NH}}_3(g))\\;+\\;{5\\;\\cdot\\;}\\mathrm\\Delta H_{\\mathrm f}^\\circ(\\;{\\mathrm O}_2(g)\\rbrack\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\; =\\;\\lbrack4\\cdot(91.3\\;\\mathrm{kJ})\\;+\\;6\\cdot(-241.8\\;\\mathrm{kJ})\\rbrack\\;-\\;\\lbrack4\\cdot(-45.9\\;\\mathrm{kJ})\\; +\\;5\\cdot(0\\;\\mathrm{kJ})\\rbrack\\;\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;=\\;(-1085.6\\;\\mathrm{kJ})\\;-\\;(-183.6\\;\\mathrm{kJ})\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\; =\\;-902.6\\;\\mathrm{kJ}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "id": "3l975szmv5bb8iy",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "6h0hhymnj1s7ege",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm\\Delta S^\\circ\\;=\\;\\lbrack4\\cdot S^\\circ(\\mathrm{NO}(g))\\; +\\;{6\\;\\cdot\\;}S^\\circ(\\;{\\mathrm H}_2\\mathrm O(g))\\rbrack\\;-\\;\\lbrack4\\cdot S^\\circ({\\mathrm{NH}}_3(g))\\; +\\;{5\\;\\cdot\\;}S^\\circ(\\;{\\mathrm O}_2(g)\\rbrack\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;=\\;\\lbrack4\\cdot(210.8\\;\\mathrm J/\\mathrm K)\\; +\\;6\\cdot(188.8\\;\\mathrm J/\\mathrm K)\\rbrack\\;-\\;\\lbrack4\\cdot(192.8\\;\\mathrm J/\\mathrm K)\\; +\\;5\\cdot(205.2\\;\\mathrm J/\\mathrm K)\\rbrack\\;\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;=\\;(1976.0\\;\\mathrm J/\\mathrm K)\\; -\\;(1797.2\\;\\mathrm J/\\mathrm K)\\\\\\;\\;\\;\\;\\;\\;\\;\\;\\;=\\;178.8\\;\\mathrm J/\\mathrm K\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "We then use the standard enthalpy and entropy changes to calculate the standard free energy change (Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "sup": true,
+                    "text": "o"
+                  },
+                  {
+                    "text": "):"
+                  }
+                ],
+                "id": "n0qpwhmi8xn1ih4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "asv12yfdn0lql1i",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "cvzpf8butp3qdgk",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\mathrm\\Delta G^\\circ=\\mathrm\\Delta H^\\circ-T\\mathrm\\Delta S^\\circ\\end{array}=-902.6\\;\\mathrm{kJ}-(298.2\\;\\mathrm K)(0.1788\\;\\mathrm{kJ}/\\mathrm K)=-955.9\\;\\mathrm{kJ}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note the close agreement in value between the two ways to calculate Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": "°."
+                  }
+                ],
+                "id": "amfxucie7a6gg2p",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "G"
+                  },
+                  {
+                    "text": "° is negative, so the reaction is spontaneous at 298 K. Because Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "H"
+                  },
+                  {
+                    "text": "° is negative and Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": "° is positive, this reaction will be spontaneous at any temperature."
+                  }
+                ],
+                "id": "jfqls5km2pn00qv",
+                "type": "p"
+              }
+            ],
+            "id": "2799214324",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "4237990222",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79056,
+            "id": "2776188529",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3601113612",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "fodchnfw5xt7zgl",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "v67bj0gqlnpghu1",
+            "type": "p"
+          }
+        ],
+        "id": "219931875",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78547"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

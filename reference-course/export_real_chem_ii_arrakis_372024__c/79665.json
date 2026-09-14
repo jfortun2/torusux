@@ -1,0 +1,274 @@
+{
+  "id": "79665",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78117"
+  ],
+  "title": "name_coord_compound_pool2_v2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "298179447",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3721396279",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "195712078",
+          "incorrectScore": null,
+          "outOf": 5,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The neutral compound contains 4 K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and 4 CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ", so Ni has a 0 charge. Since the complex is an anion, Ni is named with the suffix -ate. The cation (K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "1575532805",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The name of the compound is potassium tetracyanonickelate(0)."
+                      }
+                    ],
+                    "id": "wv9slexwnxdvt4r",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3418736403",
+                "textDirection": "ltr"
+              },
+              "id": "2263298035",
+              "rule": "input iequals {potassium tetracyanonickelate(0)}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The neutral compound contains 4 K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": " and 4 CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ", so Ni has a 0 charge. Since the complex is an anion, Ni is named with the suffix -ate. The cation (K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "3681501981",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "The name of the compound is potassium tetracyanonickelate(0)."
+                      }
+                    ],
+                    "id": "2418713494",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2338637420",
+                "textDirection": "ltr"
+              },
+              "id": "3401857850",
+              "rule": "input contains {potassium tetracyanonickelate}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Determine the charge of the central metal (Ni) from the charges of the ligand (CN) and the counterion (K). The complex is an anion, so use -ate to name Ni. The cation (K"
+                      },
+                      {
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "text": ") is named first, and a prefix is used to specify the number of ligands (CN"
+                      },
+                      {
+                        "sup": true,
+                        "text": "–"
+                      },
+                      {
+                        "text": ")."
+                      }
+                    ],
+                    "id": "484686961",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "890396873",
+                "textDirection": "ltr"
+              },
+              "id": "4017298717",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination compound  K4[Ni(CN)4]. Note: spelling matters! ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3272969537",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "2064020277",
+        "inputType": "text",
+        "partId": "195712078",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination compound  K"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "[Ni(CN)"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "]. Note: spelling matters! "
+            }
+          ],
+          "id": "1090760903",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "2064020277",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "3921363496",
+          "type": "p"
+        }
+      ],
+      "id": "2690448315"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "195712078": [
+      "78445"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

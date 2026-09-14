@@ -1,0 +1,352 @@
+{
+  "id": "80073",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "conj_strength_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jw7byaozpc9tb2y",
+                  "type": "p"
+                }
+              ],
+              "id": "531565384"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lu1vpewazm311tf",
+                  "type": "p"
+                }
+              ],
+              "id": "314942276"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ftcj4eug875guca",
+                  "type": "p"
+                }
+              ],
+              "id": "2383329030"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The higher value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " for HSO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " indicates a lower value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " for its conjugate, SO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2−"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "unp2khgfj3nh2yd",
+                    "type": "p"
+                  }
+                ],
+                "id": "3122419646"
+              },
+              "id": "2500670897",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The higher value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "a"
+                      },
+                      {
+                        "text": " for HSO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " indicates a lower value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " for its conjugate, SO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2−"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "j57cx6h124svrnt",
+                    "type": "p"
+                  }
+                ],
+                "id": "2937930243"
+              },
+              "id": "350020727",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "26dp16151qg2i8d",
+                    "type": "p"
+                  }
+                ],
+                "id": "523191318"
+              },
+              "id": "2594645516",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Without doing any calculations, fill in the following statement.The Kb value for SO42− is  the Kb for CN−.",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "2500670897"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "350020727"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "452255038",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "shyjjymre8crnmz",
+            "text": "greater than "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "zmlyuu7mccb4v4r",
+            "text": "less than"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Without doing any calculations, fill in the following statement."
+            }
+          ],
+          "id": "r5fg5i9z73fzzec",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "b"
+            },
+            {
+              "text": " value for SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "2−"
+            },
+            {
+              "text": " is "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "sub": true,
+              "text": "b"
+            },
+            {
+              "text": " for CN"
+            },
+            {
+              "sup": true,
+              "text": "−"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "us0o1heqjtjk73c",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78412"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

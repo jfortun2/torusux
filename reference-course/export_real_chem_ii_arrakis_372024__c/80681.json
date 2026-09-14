@@ -1,0 +1,2249 @@
+{
+  "id": "80681",
+  "type": "Page",
+  "tags": [],
+  "title": "Equilibrium Calculations when K is Large or Small",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Sometimes it is possible to use chemical insight to find solutions to equilibrium problems without actually solving a quadratic (or more complicated) equation. First, however, it is useful to verify that equilibrium can be obtained starting from two extremes: all (or mostly) reactants ("
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is small) and all (or mostly) products ("
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": " is large). In the following example, we will compare two different methods to solve an equilibrium problem which has a small value for "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "j8ckgebhps2mtw0",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Consider the ionization of 0.075 M HA, a weak acid."
+              }
+            ],
+            "id": "5wzxviffjybwxkm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "pl1uykvzg81xpvh",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "nvpx5w9l1k3xmom",
+            "legacyBlockRendered": "true",
+            "src": "\\mathrm{HA}(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm H^+(aq)\\;+\\;\\mathrm A^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;3.40\\times10^{-6}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Method 1: Solving the Quadratic Equation"
+              }
+            ],
+            "id": "05whd4hjkf91qpk",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "The most obvious way to determine the equilibrium concentrations would be to start with only reactants. This could be called the “all reactant” starting point. Using "
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": " for the amount of acid ionized at equilibrium, this is the ICE table and solution."
+              }
+            ],
+            "id": "5thkq7e54fg20u6",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "___selfClosing___": true,
+                    "children": [
+                      {
+                        "id": "kx7k3z8jo5t5o0p",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "v92w99efi2djc94",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "x3n4im24si6n4xr",
+                        "text": "    HA(aq)              ⇌          H"
+                      },
+                      {
+                        "id": "3i1o34ktlaz6xg7",
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "id": "ywccd3a5f7n8ezt",
+                        "text": "         +          A"
+                      },
+                      {
+                        "id": "4rppeqwwpn80tqx",
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "id": "14m2bwuxcp2bqjd",
+                        "text": "(aq)   "
+                      }
+                    ],
+                    "colspan": 3,
+                    "id": "fjiru1hsgjs3azo",
+                    "type": "td"
+                  }
+                ],
+                "id": "nr962w4vpfwt1gg",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "obfytiei1jvj234",
+                        "text": "Initial"
+                      }
+                    ],
+                    "id": "jz0hyzkdtb5og65",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "32sf3gb4jijz8iz",
+                        "text": "0.075"
+                      }
+                    ],
+                    "id": "a3032b3pzxpxoah",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "2f99qqr0jbxhhvu",
+                        "text": "0"
+                      }
+                    ],
+                    "id": "97uy1m0l37mxrhm",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "trhoq310go6uos4",
+                        "text": "0"
+                      }
+                    ],
+                    "id": "l41m3k3vgi63vd9",
+                    "type": "td"
+                  }
+                ],
+                "id": "cuqudelicowqq43",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "r83cnqc5ttpj02n",
+                        "text": "Change"
+                      }
+                    ],
+                    "id": "q9yie4k3oxxvyv6",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "96k13mqqs1zhz1l",
+                        "text": "      - "
+                      },
+                      {
+                        "em": true,
+                        "id": "un0awq7xfeqd805",
+                        "text": "x"
+                      },
+                      {
+                        "id": "obng9b0mhmh8rsg",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "6df0bau23d7b3sa",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "j6pbcku73q1o9my",
+                        "text": " "
+                      },
+                      {
+                        "em": true,
+                        "id": "tiykmegvap92w5a",
+                        "text": "x"
+                      },
+                      {
+                        "id": "3b0vndo3y002jf2",
+                        "text": " "
+                      }
+                    ],
+                    "id": "thzl08507m4at99",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "xighq5rdzd22b0q",
+                        "text": " "
+                      },
+                      {
+                        "em": true,
+                        "id": "sg6vzlhyre071eb",
+                        "text": "x"
+                      },
+                      {
+                        "id": "mubor8183kdyehl",
+                        "text": " "
+                      }
+                    ],
+                    "id": "habnd5s9dfoi19j",
+                    "type": "td"
+                  }
+                ],
+                "id": "0qdhcza3cnzahv0",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "7p9llyhvfwj8vr9",
+                        "text": "Equilibrium"
+                      }
+                    ],
+                    "id": "zcc64b4ez75pwyu",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "lovujzuu2zwpqqi",
+                        "text": " 0.075 - "
+                      },
+                      {
+                        "em": true,
+                        "id": "ipwjciizxge97b7",
+                        "text": "x"
+                      },
+                      {
+                        "id": "zi59bs7vph84rw1",
+                        "text": " "
+                      }
+                    ],
+                    "id": "onxjjwmjglrdy90",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "1g46v1i9n43fbio",
+                        "text": "       "
+                      },
+                      {
+                        "em": true,
+                        "id": "xwf5sju9nkmplv2",
+                        "text": "x"
+                      },
+                      {
+                        "id": "snowcfv8ji196qw",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "s93e6n1dt9ozgib",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "ljahnuad12ljrse",
+                        "text": "       "
+                      },
+                      {
+                        "em": true,
+                        "id": "npangm3i54gz4lo",
+                        "text": "x"
+                      },
+                      {
+                        "id": "be75fdixrdeuuyc",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "n8qz2wfv0zgso4v",
+                    "type": "td"
+                  }
+                ],
+                "id": "lfpbbac8xkaublf",
+                "type": "tr"
+              }
+            ],
+            "id": "6ynl9io2yrtmy7t",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": "Setting up and solving the quadratic equation gives:"
+              }
+            ],
+            "id": "k9g5q6bqgm1edgx",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "w9yu5dljw1w4jhn",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "qywsskvxvoipzkv",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}K_c\\;=\\frac{\\;\\lbrack\\mathrm H^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\;\\lbrack\\mathrm{HA}\\rbrack}\\;=\\;\\frac{(x)(x)}{(0.075-x)}\\;=\\;3.40\\times10^{-6}\\\\\\\\x^2\\mathit\\;+\\;3.40\\times10^{-6}x\\mathit\\;-\\;2.55\\times10^{-7}\\;\\;=\\;0\\\\\\\\x\\;=\\;\\frac{-3.40\\times10^{-6}\\pm\\;\\sqrt{(3.40\\times10^{-6})^2\\;-\\;(4)(1)(-2.55\\times10^{-7})}}{(2)(1)}\\\\\\\\x\\mathit\\;=\\;0.00050328\\;\\mathrm M\\;\\mathrm{or}\\;-0.00050668\\;\\mathrm M\\\\\\\\\\\\\\\\\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Using the positive (physical) root, the equilibrium concentrations are:"
+              }
+            ],
+            "id": "8dl3bcvetlqmvwk",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "tqli5yz71v2yiob",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "dmq6c8f8e9rcz4i",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\lbrack\\mathrm{HA}\\rbrack\\;=\\;0.075\\;-\\;x\\mathit\\;=\\;0.0745\\mathrm M\\\\\\\\\\lbrack\\mathrm H^+\\rbrack\\;=\\;\\lbrack\\mathrm A^-\\rbrack\\;=\\;x\\;=\\;0.00050\\mathrm M\\\\\\\\\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Method 2: \"All Product\" Starting Point"
+              }
+            ],
+            "id": "fhvhgivg5cqie57",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "A less obvious way to solve the problem would be to assume all the HA ionizes first, then the system comes to equilibrium. This could be called the “all product” starting point. Assuming all of the HA ionizes gives:"
+              }
+            ],
+            "id": "nmfjskf5dsfdznf",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "8yg8nd1e77nea4v",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "x6weyllrg7iaycz",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\lbrack\\mathrm{HA}\\rbrack\\;=\\;0.075\\;-\\;0.075\\;=\\;0\\;\\mathrm M\\;\\;\\\\\\lbrack\\mathrm H^+\\rbrack\\;=\\;0\\;+\\;0.075\\;=\\;0.075\\;\\mathrm M\\;\\\\\\lbrack\\mathrm A^-\\rbrack\\;=\\;0\\;+\\;0.075\\;=\\;0.075\\mathrm M\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Using these as initial concentrations and “"
+              },
+              {
+                "em": true,
+                "text": "y"
+              },
+              {
+                "text": "” to represent the concentration of HA at equilibrium, this is the ICE table for this starting point."
+              }
+            ],
+            "id": "n8fsvuymks75q5j",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "___selfClosing___": true,
+                    "children": [
+                      {
+                        "id": "118917s8ug3ub7w",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "33a1gc2ouhejwx1",
+                    "type": "td"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "sst4sj4578y9gh9",
+                        "text": "    HA(aq)              ⇌          H"
+                      },
+                      {
+                        "id": "6a6ljn3s1nlzgzb",
+                        "sup": true,
+                        "text": "+"
+                      },
+                      {
+                        "id": "jxaong9k0lg2x6m",
+                        "text": "         +          A"
+                      },
+                      {
+                        "id": "218yphidogluo8i",
+                        "sup": true,
+                        "text": "-"
+                      },
+                      {
+                        "id": "uqd36fetoaf48r5",
+                        "text": "(aq)   "
+                      }
+                    ],
+                    "colspan": 3,
+                    "id": "9k06wdm3rcniuxu",
+                    "type": "td"
+                  }
+                ],
+                "id": "tu7krgh7lddticd",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "e5xxff2bpcapl7r",
+                        "text": "Initial"
+                      }
+                    ],
+                    "id": "78hwvughcvtwznn",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "m9n21yc9qcx2trn",
+                        "text": "      0      "
+                      }
+                    ],
+                    "id": "65q7us2gvsa027p",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "ky1c0875j9lhkx6",
+                        "text": "0.075"
+                      }
+                    ],
+                    "id": "nbfnqt7r87w2jbv",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "1mxz6b7hdz5axk0",
+                        "text": "0.075"
+                      }
+                    ],
+                    "id": "58axurtgx87otyg",
+                    "type": "td"
+                  }
+                ],
+                "id": "tj48lyvm38bkycf",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "m40gnupmk85853m",
+                        "text": "Change"
+                      }
+                    ],
+                    "id": "1nw24bq4xi6tfmw",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "d7uol0r9dk3fmi2",
+                        "text": "      + "
+                      },
+                      {
+                        "em": true,
+                        "id": "m1v2rb180jotx7g",
+                        "text": "y"
+                      },
+                      {
+                        "id": "s9y90uo18p55qoh",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "nfr4xikksk7xqd8",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "9cf6yntil3nc1ap",
+                        "text": " -"
+                      },
+                      {
+                        "em": true,
+                        "id": "phrye1opon2jb68",
+                        "text": "y"
+                      },
+                      {
+                        "id": "hn83oimy7m5ytu2",
+                        "text": " "
+                      }
+                    ],
+                    "id": "a2lwa1e41wa2iuf",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "qmnzlk6igwy3t8k",
+                        "text": " -"
+                      },
+                      {
+                        "em": true,
+                        "id": "gw4v67lqmexf6bs",
+                        "text": "y"
+                      },
+                      {
+                        "id": "1aq6xo3r4789kl9",
+                        "text": " "
+                      }
+                    ],
+                    "id": "7t08spml0lqo8vn",
+                    "type": "td"
+                  }
+                ],
+                "id": "qkht5ba3krw9rsj",
+                "type": "tr"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "20263lty1vm0p1g",
+                        "text": "Equilibrium"
+                      }
+                    ],
+                    "id": "ez9icq5zrk65bh8",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "rkzek0bkie56jwd",
+                        "text": "  "
+                      },
+                      {
+                        "em": true,
+                        "id": "nntoca1hj7oob96",
+                        "text": "y"
+                      },
+                      {
+                        "id": "1rkdk6djnnmxusv",
+                        "text": " "
+                      }
+                    ],
+                    "id": "xishiy7rvh6ylkd",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "y4vdcd7ph1p00xq",
+                        "text": "       0.075 - "
+                      },
+                      {
+                        "em": true,
+                        "id": "mzowou8ocf1qe5g",
+                        "text": "y"
+                      },
+                      {
+                        "id": "h6hwyayhwskdots",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "li3xot8bn973b5e",
+                    "type": "td"
+                  },
+                  {
+                    "align": "center",
+                    "children": [
+                      {
+                        "id": "l8f8s8mfsfeci4g",
+                        "text": "       0.075 - "
+                      },
+                      {
+                        "em": true,
+                        "id": "nw849sup7k0lcvf",
+                        "text": "y"
+                      },
+                      {
+                        "id": "em0yufbhq2tg7oq",
+                        "text": "       "
+                      }
+                    ],
+                    "id": "udx2kpvoncpgx9e",
+                    "type": "td"
+                  }
+                ],
+                "id": "u4dkawa76s2qsd4",
+                "type": "tr"
+              }
+            ],
+            "id": "4k8u88zr78scwto",
+            "type": "table"
+          },
+          {
+            "children": [
+              {
+                "text": "Setting up and solving the quadratic equation gives:"
+              }
+            ],
+            "id": "dl9d1kcwampjhwj",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "lspxfdsc1nznxtp",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "eank227biiy1k18",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}K_c\\;=\\;\\frac{\\lbrack\\mathrm H^+\\rbrack\\lbrack\\mathrm A^-\\rbrack}{\\lbrack\\mathrm{HA}\\rbrack}\\;=\\;\\frac{(0.075\\;-\\;y)(0.075\\;-\\;y)}{(y)}\\;=\\;3.40\\times10^{-6}\\\\\\\\3.40\\times10^{-6}y\\mathit\\;=\\;0.005625\\;-\\;0.150y\\mathit\\;+\\;y^2\\\\\\\\\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Retain a few extra significant figures to minimize rounding problems."
+              }
+            ],
+            "id": "z7pr81mj467d51d",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "sg0t78b6l1mgqjj",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "v3uk1gkokll5ll6",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}y^2\\;-\\;0.150003y\\;+\\;0.005625\\;=\\;0\\\\\\\\y\\;=\\;\\frac{\\;0.150003\\;\\pm\\sqrt{\\;(0.150003)^2\\;-\\;(4)(1)(0.005625\\;)}}{(2)(1)}\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Rounding each solution to three significant figures gives:"
+              }
+            ],
+            "id": "6cmpqo4nz9onwtm",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "mvpt7nmufnpfgzi",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "8v5l6k2mqz2c7q1",
+            "legacyBlockRendered": "true",
+            "src": "y\\;=\\;0.0755\\;\\mathrm M\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm{or}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;y\\;=\\;0.0745\\;\\mathrm M",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Using the physically significant root (0.0745 M) gives the equilibrium concentrations as: "
+              }
+            ],
+            "id": "tm2pzc51tqp5adv",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "9jlh6ecl3y1cg32",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "b997g81a0clusc4",
+            "legacyBlockRendered": "true",
+            "src": "\\begin{array}{l}\\lbrack\\mathrm{HA}\\rbrack\\;=\\;y\\;=\\;0.0745\\;\\mathrm M\\;\\;\\\\\\lbrack\\mathrm H^+\\rbrack\\;=\\;0.075\\;-\\;y\\;=\\;0.00050\\;\\mathrm M\\;\\\\\\lbrack\\mathrm A^-\\rbrack\\;=\\;0.075\\;-\\;y\\mathit\\;=\\;0.00050\\;\\mathrm M\\end{array}",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Thus, the two approaches give the same results (to three decimal places), and show that both starting points lead to the same equilibrium conditions. The “all reactant” starting point resulted in a relatively small change ("
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": ") because the system was close to equilibrium, while the “all product” starting point had a relatively large change ("
+              },
+              {
+                "em": true,
+                "text": "y"
+              },
+              {
+                "text": ") that was nearly the size of the initial concentrations. It can be said that a system that starts “close” to equilibrium will require only a ”small” change in conditions ("
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": ") to reach equilibrium."
+              }
+            ],
+            "id": "98omtcfb6m1b9e9",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Recall that a small "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "c"
+              },
+              {
+                "text": " means that very little of the reactants form products and a large "
+              },
+              {
+                "em": true,
+                "text": "K"
+              },
+              {
+                "em": true,
+                "sub": true,
+                "text": "c"
+              },
+              {
+                "text": " means that most of the reactants form products. If the system can be arranged so it starts “close” to equilibrium, then if the change ("
+              },
+              {
+                "em": true,
+                "text": "x"
+              },
+              {
+                "text": ") is small compared to any initial concentrations, it can be neglected. Small is usually defined as resulting in an error of less than 5%. The following two examples demonstrate this."
+              }
+            ],
+            "id": "bqe4gywrtucahsx",
+            "type": "p"
+          }
+        ],
+        "id": "372977630",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "What are the concentrations at equilibrium of a 0.15 M solution of HCN?"
+                  }
+                ],
+                "id": "q0ibn6mvdqdr4it",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wzw4uz1rjx9qg7q",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "hvdw1azrs0x24v4",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{HCN}(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm H^+(aq)\\;+\\;\\mathrm{CN}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathit c}\\mathit\\;=\\;4.9\\times10^{-10}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using “"
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": "” to represent the concentration of each product at equilibrium gives this ICE table."
+                  }
+                ],
+                "id": "7xhr7s8s7uu3nz9",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "7n3whsfwt0m6o7x",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "w3ta84p3vmzht0u",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "rpbompkdevu5mbs",
+                            "text": "    HCN(aq)              ⇌          H"
+                          },
+                          {
+                            "id": "tfm6qghtdjdtbk5",
+                            "sup": true,
+                            "text": "+"
+                          },
+                          {
+                            "id": "trhj4yrj0j0ftfb",
+                            "text": "         +          CN"
+                          },
+                          {
+                            "id": "btjpbfq2k1jz3xu",
+                            "sup": true,
+                            "text": "-"
+                          },
+                          {
+                            "id": "7zurnd72cdqabw6",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "9iyfcj2yt7ypppu",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "i9xygizucol5o5f",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "57dzgii22wuvdbs",
+                            "text": "Initial"
+                          }
+                        ],
+                        "id": "pbdvpwojkbmmgkq",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "qeyy9sm59nllg4n",
+                            "text": "0.15"
+                          }
+                        ],
+                        "id": "yvip400g95e19pr",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "35v1gg8yt1qt9d7",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "6mdl7ien1ulxuhr",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "b4joh2c2t23p5hq",
+                            "text": "0"
+                          }
+                        ],
+                        "id": "h7z4ae2yh6e8fut",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ubqvu1qlj6ogbrp",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "a641fwwhv12wm2y",
+                            "text": "Change"
+                          }
+                        ],
+                        "id": "0a1v2z13ul52c88",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "o4zo38b9xd15o2s",
+                            "text": "      - "
+                          },
+                          {
+                            "em": true,
+                            "id": "1wqg0vhy81t99kf",
+                            "text": "x"
+                          },
+                          {
+                            "id": "podcbv5707uutdg",
+                            "text": "       "
+                          }
+                        ],
+                        "id": "o5j11h8varsfj56",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "8ygbzibzphc0t84",
+                            "text": " "
+                          },
+                          {
+                            "em": true,
+                            "id": "pv9e2d1jinzwyya",
+                            "text": "x"
+                          },
+                          {
+                            "id": "8w53w4ah186mnbi",
+                            "text": " "
+                          }
+                        ],
+                        "id": "daditxiat02shi6",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "66nq1i3cmy9hzty",
+                            "text": " "
+                          },
+                          {
+                            "em": true,
+                            "id": "axg7i9uwyu0znl7",
+                            "text": "x"
+                          },
+                          {
+                            "id": "48qwt8wknyfb9y7",
+                            "text": " "
+                          }
+                        ],
+                        "id": "gdk6h7mk1os8jet",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "txt6jvg6mqkewk2",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "ifwwjiax6ft1ug3",
+                            "text": "Equilibrium"
+                          }
+                        ],
+                        "id": "ufms75fd9bic5fc",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "8zn0ibbdvcz37ll",
+                            "text": " 0.15 - "
+                          },
+                          {
+                            "em": true,
+                            "id": "83i6q9q7pmdt628",
+                            "text": "x"
+                          },
+                          {
+                            "id": "a17k1oxxr2puaaz",
+                            "text": " "
+                          }
+                        ],
+                        "id": "8r30g6bzqpqe2ad",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "mflyjpoxnwyhwwz",
+                            "text": "       "
+                          },
+                          {
+                            "em": true,
+                            "id": "2uj1tj7eiollkc2",
+                            "text": "x"
+                          },
+                          {
+                            "id": "0tehn84lnpb8ek8",
+                            "text": "       "
+                          }
+                        ],
+                        "id": "ukq4yzicy03fhlb",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "127nuhef2u3shj0",
+                            "text": "       "
+                          },
+                          {
+                            "em": true,
+                            "id": "rlq7ieyx2uyheyc",
+                            "text": "x"
+                          },
+                          {
+                            "id": "k5xewvas9iv7h2d",
+                            "text": "       "
+                          }
+                        ],
+                        "id": "ilisu4d012mlru3",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "95gi51ihk5py8it",
+                    "type": "tr"
+                  }
+                ],
+                "id": "yunhh5ke08mzosk",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The exact solution may be obtained using the quadratic formula with: "
+                  }
+                ],
+                "id": "5sfbgvzyob2y8k2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "h08s7zjuzeumj2f",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "r6xuh5qmbrnvloq",
+                "legacyBlockRendered": "true",
+                "src": "K_c\\;=\\frac{\\;(x)(x)}{0.15\\;-\\;x}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "solving"
+                  }
+                ],
+                "id": "5oxbt1wtyipvyb3",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "wzhxnfo6lzuntq1",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "5lhjee8giibcw6y",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}x^2\\;+\\;4.9\\times10^{-10}x\\;-\\;7.35\\times10^{-11}\\;=\\;0\\;\\;\\;\\\\\\\\x\\;=\\;8.56\\times10^{-6}\\;\\mathrm M\\;(3\\;sig.\\;figs.)\\;=\\;8.6\\times10^{-6}\\mathrm M\\;(2\\;sig.\\;figs.)\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Thus [H"
+                  },
+                  {
+                    "sup": true,
+                    "text": "+"
+                  },
+                  {
+                    "text": "] = [CN"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–"
+                  },
+                  {
+                    "text": "] = "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " = 8.6 × 10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "–6"
+                  },
+                  {
+                    "text": " M and [HCN] = 0.15 – "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": " = 0.15 M."
+                  }
+                ],
+                "id": "u9bcimvsbvv8vtg",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "In this case, chemical intuition can provide a simpler solution. From the equilibrium constant and the initial conditions, "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "x"
+                  },
+                  {
+                    "strong": true,
+                    "text": " must be small compared to 0.15 M. More formally, if x << 0.15, then 0.15 – "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "x"
+                  },
+                  {
+                    "strong": true,
+                    "text": " ≈ 0.15. If this assumption is true, then it simplifies obtaining "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ],
+                "id": "yfuqapihqy31cvi",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "p877nfwnonudit1",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "a0y3q72knu9ztto",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}K_c\\;=\\frac{\\;(x)(x)}{0.15\\;-\\;x}\\;\\approx\\;\\frac{x^2}{0.15}\\\\\\\\4.9\\times10^{-10}\\;=\\frac{\\;x^2}{0.15}\\\\\\\\x^2\\;=\\;(0.15)(4.9\\times10^{-10})\\;=\\;7.4\\times10^{-11}\\\\\\\\x\\;=\\sqrt{\\;7.4\\times10^{-11}}\\;=\\;8.6\\times10^{-6}\\;\\mathrm M\\\\\\\\\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this example, solving the exact (quadratic) equation and using approximations gave the same result to two significant figures. While most of the time the approximation is a bit different from the exact solution, as long as the error is less than 5%, the approximate solution is considered valid. In this problem, the 5% applies to IF (0.15 – "
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") ≈ 0.15 M, so if: "
+                  }
+                ],
+                "id": "g414ewkbq0x2xvg",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "2azj2s5g665sd5s",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "g1bd52r4ygrjgjm",
+                "legacyBlockRendered": "true",
+                "src": "\\frac x{0.15}\\;\\times\\;100\\%\\;=\\;\\frac{8.6\\times10^{-6}}{0.15}\\;\\times\\;100\\;=\\;0.006\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "is less than 5%, as it is in this case, the assumption is valid. The approximate solution is thus a valid solution."
+                  }
+                ],
+                "id": "3n5svurpezrhv83",
+                "type": "p"
+              }
+            ],
+            "id": "946842607",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "1600361876",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Watch the video below to learn how to use the interface for the next problem."
+              },
+              {
+                "text": " "
+              }
+            ],
+            "id": "88prycidaif2nvj",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "hyaaibvwfzrvjql",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "2yqze4n3kun9626",
+            "src": "1Ki0G-xh5EA",
+            "type": "youtube"
+          },
+          {
+            "children": [
+              {
+                "strong": true,
+                "text": "Read the question prompt and work through the following problem as described in the video."
+              }
+            ],
+            "id": "7hbqf3qknui60e7",
+            "type": "p"
+          }
+        ],
+        "id": "4004152193",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": "Equilibrium 2"
+                      }
+                    ],
+                    "href": "/course/link/iz1ln_equilibrium_2_bgt2j",
+                    "idref": "80577",
+                    "type": "a"
+                  }
+                ],
+                "id": "3kwx9emzubg2se4",
+                "type": "p"
+              }
+            ],
+            "id": "2279321267",
+            "selection": {
+              "selection": {
+                "anchor": {
+                  "offset": 0,
+                  "path": [
+                    0,
+                    0
+                  ]
+                },
+                "focus": {
+                  "offset": 0,
+                  "path": [
+                    1,
+                    0
+                  ]
+                }
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "1535248012",
+        "layout": "vertical",
+        "purpose": "none",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Copper(II) ions form a complex ion in the presence of ammonia, according to the following equation:"
+                  }
+                ],
+                "id": "ioybbpgtef201lp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "5pmmo9drsyyrged",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "jeqszd1sjshaovm",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Cu}^{2+}(aq)\\;+\\;4\\;{\\mathrm{NH}}_3(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "If 0.010 mol Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is added to 1.00 L of a solution that is 1.00 M NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " what are the concentrations when the system comes to equilibrium?"
+                  }
+                ],
+                "id": "8lr5h3gg947uicw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "z3yttcxbo0d4ylg",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "ujfktyxkxap0oa1",
+                "legacyBlockRendered": "true",
+                "src": "K_c\\;=\\;\\frac{\\lbrack\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\rbrack}{\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\lbrack{\\mathrm{NH}}_3\\rbrack^4}=\\;5.0\\times10^{13}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "The initial concentration of copper(II) is 0.010 M. The equilibrium constant is very large so it would be better to start with as much product as possible because “all products” is much closer to equilibrium than “all reactants.” Note that Cu"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is the limiting reactant; if all 0.010 M of it reacts to form product the concentrations would be: "
+                  }
+                ],
+                "id": "jg4fdwor247qhn4",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "knbtaffm7hd7wdx",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "76h5yg8yn46z5iz",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;0.010\\;-\\;0.010\\;=\\;0\\;\\mathrm M\\;\\\\\\\\\\lbrack\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\rbrack\\;=\\;0.010\\;\\mathrm M\\;\\\\\\\\\\lbrack{\\mathrm{NH}}_3\\rbrack\\;=\\;1.00\\;-\\;(4\\times0.010)\\;=\\;0.96\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Using these “shifted” values as initial concentrations with x as the free copper(II) ion concentration at equilibrium gives the following ICE table."
+                  }
+                ],
+                "id": "xv1u4ptj4jeex00",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "___selfClosing___": true,
+                        "children": [
+                          {
+                            "id": "ve890xeiy0rq1ra",
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "vspsll3frwxs2pd",
+                        "type": "td"
+                      },
+                      {
+                        "children": [
+                          {
+                            "id": "j0147c242k7jt9a",
+                            "text": "    Cu"
+                          },
+                          {
+                            "id": "nwndhengnwktmk5",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "fu4tlugm30c7ikv",
+                            "text": "(aq)         +       4 NH"
+                          },
+                          {
+                            "id": "adiew1loouf0kv6",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "gfd5a6lhtzjj33b",
+                            "text": "(aq)          ⇌      Cu(NH"
+                          },
+                          {
+                            "id": "06igt3th3lish55",
+                            "sub": true,
+                            "text": "3"
+                          },
+                          {
+                            "id": "qzzxc8pitgez65o",
+                            "text": ")"
+                          },
+                          {
+                            "id": "pfz7d5z53j1guk2",
+                            "sub": true,
+                            "text": "4"
+                          },
+                          {
+                            "id": "lb4ni7rsb90iap5",
+                            "sup": true,
+                            "text": "2+"
+                          },
+                          {
+                            "id": "hzu19izgxsvb01m",
+                            "text": "(aq)   "
+                          }
+                        ],
+                        "colspan": 3,
+                        "id": "o7zr69kpg7enckx",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "ky5lpvm4ubsqpe6",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "guvqveqg7wksi9o",
+                            "text": "Initial (M)"
+                          }
+                        ],
+                        "id": "yohquxbzsg1zvbl",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "ybn5dbio76xdewk",
+                            "text": "    0    "
+                          }
+                        ],
+                        "id": "objwby3871rhj2m",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "fdfb8og41qn7e53",
+                            "text": "    0.96    "
+                          }
+                        ],
+                        "id": "drtyn08855xp2i7",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "z7vd2ohmpujv294",
+                            "text": "       0.010       "
+                          }
+                        ],
+                        "id": "uo9s284t86q6w2q",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "tii595jz9j0ael7",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "e2w1zfq7orq888a",
+                            "text": "Change (M)"
+                          }
+                        ],
+                        "id": "84a82ugf5pr17pz",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "vebb2vacf842f1d",
+                            "text": " + "
+                          },
+                          {
+                            "em": true,
+                            "id": "d8sh6d8hjhtyo8o",
+                            "text": "x"
+                          },
+                          {
+                            "id": "uiypk5088fq0rsy",
+                            "text": " "
+                          }
+                        ],
+                        "id": "jtkn9yh0yuykipn",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "n2dcj0b79wzajev",
+                            "text": " + 4"
+                          },
+                          {
+                            "em": true,
+                            "id": "1cvron83etb1pl4",
+                            "text": "x"
+                          },
+                          {
+                            "id": "q4598m170a6fx57",
+                            "text": " "
+                          }
+                        ],
+                        "id": "3qumtkpdc0z1lul",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "yz0udadiis0cxkl",
+                            "text": " - "
+                          },
+                          {
+                            "em": true,
+                            "id": "0h0dxltbnqox07k",
+                            "text": "x"
+                          },
+                          {
+                            "id": "ueci5eeb29qjqo1",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "etctqntgadcy595",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "i2b8vj6sbkozrh2",
+                    "type": "tr"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "id": "5vxhu3qckzj8hwv",
+                            "text": "Equilibrium (M)"
+                          }
+                        ],
+                        "id": "ykceybhsss6pzzl",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "j1ekcdegaiao458",
+                            "text": " "
+                          },
+                          {
+                            "em": true,
+                            "id": "mppvh5797jocbag",
+                            "text": "x"
+                          },
+                          {
+                            "id": "sqcttqs62rl0fhv",
+                            "text": " "
+                          }
+                        ],
+                        "id": "77ma2zjvq6mtu0u",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "mjf4yodraplq9dt",
+                            "text": " 0.96 + 4"
+                          },
+                          {
+                            "em": true,
+                            "id": "owswm55tqcbt4o4",
+                            "text": "x"
+                          },
+                          {
+                            "id": "e742ttvlv8sp2ty",
+                            "text": " "
+                          }
+                        ],
+                        "id": "a9fxq80pe3z0zuv",
+                        "type": "td"
+                      },
+                      {
+                        "align": "center",
+                        "children": [
+                          {
+                            "id": "vg40zdq2xnr1lcu",
+                            "text": " 0.010 - "
+                          },
+                          {
+                            "em": true,
+                            "id": "r9lrdz59wlimaca",
+                            "text": "x"
+                          },
+                          {
+                            "id": "kncoxzlswiistdi",
+                            "text": "  "
+                          }
+                        ],
+                        "id": "1jtu7q4t2o65okq",
+                        "type": "td"
+                      }
+                    ],
+                    "id": "1177mueufdbhzk3",
+                    "type": "tr"
+                  }
+                ],
+                "id": "6cd3uuxa24f7vu3",
+                "type": "table"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Since we are starting close to equilibrium, x should be small so that: "
+                  }
+                ],
+                "id": "qo1f9cta67azl3p",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "fyj2bxzuqk4jyoh",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "9h3bayrzafuz4wh",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}0.96\\;+\\;4x\\;\\approx\\;0.96\\mathrm M\\;\\\\0.010\\;-\\mathit\\;x\\mathit\\;\\approx\\;0.010\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Adjusting the "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "c"
+                  },
+                  {
+                    "text": " expression accordingly gives:"
+                  }
+                ],
+                "id": "z27ga0jfs3vds3w",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "u1s75t72cnld1mk",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "gpf7o2q9l3ts8f9",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}K_c\\;=\\;\\frac{(0.010\\;-\\;x)}{x(0.96\\;-\\;4x)^4}\\;\\approx\\;\\frac{(0.010)}{x(0.96)^4}\\;=\\;5.0\\times10^{13}\\\\\\\\x\\;=\\;\\frac{(0.010)}{(5.0\\times10^{13})(0.96)^4}\\;=\\;2.4\\times10^{-16}\\;\\mathrm M\\\\\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Select the smallest concentration for the 5% rule."
+                  }
+                ],
+                "id": "v0jwkb1rmmkrg9i",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "yfe9tls7yrq0tev",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "at97t9ksuguddny",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{2.4\\times10^{-16}}{0.010}\\;\\times\\;100\\%\\;=\\;2\\times10^{-12}\\%",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This is much less than 5%, so the assumptions are valid. The concentrations at equilibrium are:"
+                  }
+                ],
+                "id": "cyzbh4azr6n51vp",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "swfo54xlisc622n",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "twy7yehz4w1hwc3",
+                "legacyBlockRendered": "true",
+                "src": "\\begin{array}{l}\\lbrack\\mathrm{Cu}^{2+}\\rbrack\\;=\\;x\\;=2.4\\times10^{-16}\\;\\mathrm M\\;\\;\\;\\\\\\lbrack{\\mathrm{NH}}_3\\rbrack\\;=\\;0.96\\;-\\;4x\\;=\\;0.96\\;\\mathrm M\\;\\\\\\lbrack\\mathrm{Cu}({\\mathrm{NH}}_3)_4^{2+}\\rbrack\\;=\\;0.010\\;-\\;\\mathrm x\\;=\\;0.010\\;\\mathrm M\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "By starting with the maximum amount of product, this system was near equilibrium and the change ("
+                  },
+                  {
+                    "em": true,
+                    "text": "x"
+                  },
+                  {
+                    "text": ") was very small. With only a small change required to get to equilibrium, the equation for x was greatly simplified and gave a valid result well within the 5% error maximum."
+                  }
+                ],
+                "id": "pf4lg5ft0vsq7id",
+                "type": "p"
+              }
+            ],
+            "id": "2255650976",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "553455627",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "What are the equilibrium concentrations when 0.25 mol Ni"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": " is added to 1.00 L of 2.00 M NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " solution?"
+                  }
+                ],
+                "id": "iweaqauqd2sn5ge",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "gzy6eb9dalj9h4r",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "d3h0g6acumqfi73",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Ni}^{2+}(aq)\\;+\\;6\\;{\\mathrm{NH}}_3(aq)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{Ni}({\\mathrm{NH}}_3)_6^{2+}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_c\\;=\\;5.5\\times10^8",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "The steps in the following activity will help you work through calculating the equilibrium concentration of each species using the approximation method for x."
+                  }
+                ],
+                "id": "djuolmoc8cjagsd",
+                "type": "p"
+              }
+            ],
+            "id": "4152913725",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          },
+          {
+            "children": [
+              {
+                "activity_id": 79048,
+                "id": "2805542646",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79452,
+                "id": "3504154711",
+                "type": "activity-reference"
+              },
+              {
+                "id": "3179088295",
+                "type": "break"
+              },
+              {
+                "activity_id": 79229,
+                "id": "329536712",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 78886,
+                "id": "4152889206",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 80150,
+                "id": "3960447204",
+                "type": "activity-reference"
+              },
+              {
+                "activity_id": 79102,
+                "id": "4013706216",
+                "type": "activity-reference"
+              }
+            ],
+            "id": "3906964950",
+            "layout": "vertical",
+            "purpose": "none",
+            "type": "group"
+          }
+        ],
+        "id": "3649563979",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 78593,
+            "id": "4068804585",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79424,
+            "id": "3743091081",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3038204720",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              }
+            ],
+            "id": "ghmd739yg6v4hch",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              }
+            ],
+            "id": "vtg6y46sz6ebbbh",
+            "type": "p"
+          }
+        ],
+        "id": "665228972",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78536"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

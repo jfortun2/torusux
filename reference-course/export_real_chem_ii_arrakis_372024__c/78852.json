@@ -1,0 +1,343 @@
+{
+  "id": "78852",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "strength_digt-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "eni90r5ieo0cpv0",
+                  "type": "p"
+                }
+              ],
+              "id": "143546872"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ffz333zmhmhtzd1",
+                  "type": "p"
+                }
+              ],
+              "id": "2005839695"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lgaxfkcw3d4rg8c",
+                  "type": "p"
+                }
+              ],
+              "id": "4023831328"
+            }
+          ],
+          "id": "3638463600",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The base with the smallest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " value is the weakest base."
+                      }
+                    ],
+                    "id": "epy99sfsxd34q2j",
+                    "type": "p"
+                  }
+                ],
+                "id": "458987563"
+              },
+              "id": "2661550456",
+              "legacyMatch": "A",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The base with the smallest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " value is the weakest base."
+                      }
+                    ],
+                    "id": "ua0e1rltche7izk",
+                    "type": "p"
+                  }
+                ],
+                "id": "3701011726"
+              },
+              "id": "1081107850",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The base with the smallest "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "b"
+                      },
+                      {
+                        "text": " value is the weakest base."
+                      }
+                    ],
+                    "id": "0im47xbsg65mo15",
+                    "type": "p"
+                  }
+                ],
+                "id": "744153208"
+              },
+              "id": "3438699167",
+              "legacyMatch": "C",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "janq5npiwqa9yfo",
+                    "type": "p"
+                  }
+                ],
+                "id": "3834904736"
+              },
+              "id": "1540800390",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "2661550456"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1081107850"
+            ],
+            [
+              [
+                "C"
+              ],
+              "3438699167"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Given the following information, indicate which base is the weakest. ",
+      "targeted": [
+        [
+          [
+            "B"
+          ],
+          "2661550456"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1081107850"
+        ],
+        [
+          [
+            "B"
+          ],
+          "3438699167"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              }
+            ],
+            "id": "iz6dfpm1150u189",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "NO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              }
+            ],
+            "id": "cmtshovpbs8pbnp",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "CH"
+              },
+              {
+                "sub": true,
+                "text": "3"
+              },
+              {
+                "text": "CO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              }
+            ],
+            "id": "ltq5tndsvbo9ghy",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the following information, indicate which base is the "
+            },
+            {
+              "strong": true,
+              "text": "weakest"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "4qfbqui96h1bavd",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "aps2wev16q7sw4k",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "bdv4qm6j5unj9rj",
+          "legacyBlockRendered": "true",
+          "src": "\\begin{array}{l}{\\mathrm{NH}}_3(aq)+{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;\\mathrm{NH}_4^+(aq)+\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{b}=1.8\\times10^{-5}\\\\\\mathrm{NO}_2^-(aq)+{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{HNO}}_2(aq)\\;+\\;\\mathrm{OH}^-(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_\\mathrm{b}=2.22\\times10^{-11}\\\\{\\mathrm{CH}}_3\\mathrm{CO}_2^-(aq)+{\\mathrm H}_2\\mathrm O(l)\\;\\;\\rightleftharpoons\\;\\;{\\mathrm{CH}}_3{\\mathrm{CO}}_2\\mathrm H(aq)+\\mathrm{OH}^-(aq)\\;\\;\\;K_\\mathrm{b}=\\;5.6\\times10^{-10}\\end{array}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "4076608421",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3638463600": [
+      "78389"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

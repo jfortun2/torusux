@@ -1,0 +1,511 @@
+{
+  "id": "80297",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78128"
+  ],
+  "title": "complex_ion_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect.  "
+                  },
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  },
+                  {
+                    "text": "  *Since "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "f"
+                  },
+                  {
+                    "text": " is so large (4.5×10"
+                  },
+                  {
+                    "sup": true,
+                    "text": "33"
+                  },
+                  {
+                    "text": "), this reaction goes essentially to completion, which would result in [Co"
+                  },
+                  {
+                    "sup": true,
+                    "text": "3+"
+                  },
+                  {
+                    "text": "] = 0. However while [Co"
+                  },
+                  {
+                    "sup": true,
+                    "text": "3+"
+                  },
+                  {
+                    "text": "] is very small, it is not exactly 0 and this will be the value for which we are calculating. ** The amount of NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "("
+                  },
+                  {
+                    "em": true,
+                    "text": "aq"
+                  },
+                  {
+                    "text": ") reacted (\"change in NH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": "\") is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "@@in_mol_co@@\\;\\mathrm{mol}\\;\\mathrm{Co}^{3+}\\;\\times\\;\\frac{6\\;\\mathrm{mol}\\;{\\mathrm{NH}}_3}{1\\;\\mathrm{mol}\\;\\mathrm{Co}^{3+}}\\;=\\;@@change_nh3@@\\;\\mathrm{mol}\\;{\\mathrm{NH}}_3",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": "   The total solution volume is now @@tot_vol@@ L. At equilibrium: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack\\mathrm{Co}{({\\mathrm{NH}}_3)}_6^{3+}\\rbrack\\;=\\;\\frac{@@eq_mol_conh3@@\\;\\mathrm{mol}}{@@tot_vol@@\\;\\mathrm L}\\;=\\;@@eq_conc_conh3@@\\;\\mathrm M\\\\\\lbrack{\\mathrm{NH}}_3\\rbrack\\;=\\;\\frac{@@eq_mol_nh3@@\\;\\mathrm{mol}}{@@tot_vol@@\\;\\mathrm L}\\;=\\;@@eq_conc_nh3@@\\;\\mathrm M\\\\K_f\\;=\\;\\frac{\\lbrack\\mathrm{Co}{({\\mathrm{NH}}_3)}_6^{3+}\\rbrack}{\\lbrack\\mathrm{Co}^{3+}\\rbrack{\\lbrack{\\mathrm{NH}}_3\\rbrack}^6}\\;\\\\4.5\\times10^{33}\\;=\\;\\frac{@@eq_conc_conh3@@\\;\\mathrm M}{\\lbrack\\mathrm{Co}^{3+}\\rbrack{(@@eq_conc_nh3@@\\;\\mathrm M)}^6}\\\\\\mathrm{Solving}\\;\\mathrm{for}\\;\\lbrack\\mathrm{Co}^{3+}\\rbrack\\;(\\mathrm{it}\\;\\mathrm{is}\\;\\mathrm{very}\\;\\mathrm{small}\\;\\mathrm{but}\\;\\mathrm{not}\\;0)\\\\\\lbrack\\mathrm{Co}^{3+}\\rbrack\\;=\\;\\frac{@@eq_conc_conh3@@\\;\\mathrm M}{{(@@eq_conc_nh3@@\\;\\mathrm M)}^6(4.5\\times10^{33})}\\;=\\;@@correct@@\\;\\mathrm M\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " "
+                  }
+                ],
+                "id": "cilcdwov4oqbz3e",
+                "type": "p"
+              }
+            ],
+            "id": "202896352"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "j8siclyk68gb9eu",
+                  "type": "p"
+                }
+              ],
+              "id": "3410327086"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "u4j7yv4c5so764g",
+                  "type": "p"
+                }
+              ],
+              "id": "845333241"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "o552b7xy1yy40h4",
+                  "type": "p"
+                }
+              ],
+              "id": "3456381037"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct.  *Since "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "f"
+                      },
+                      {
+                        "text": " is so large (4.5×10"
+                      },
+                      {
+                        "sup": true,
+                        "text": "33"
+                      },
+                      {
+                        "text": "), this reaction goes essentially to completion, which would result in [Co"
+                      },
+                      {
+                        "sup": true,
+                        "text": "3+"
+                      },
+                      {
+                        "text": "] = 0. However while [Co"
+                      },
+                      {
+                        "sup": true,
+                        "text": "3+"
+                      },
+                      {
+                        "text": "] is very small, it is not exactly 0 and this will be the value for which we are calculating. ** The amount of NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "text": "aq"
+                      },
+                      {
+                        "text": ") reacted (\"change in NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": "\") is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "@@in_mol_co@@\\;\\mathrm{mol}\\;\\mathrm{Co}^{3+}\\;\\times\\;\\frac{6\\;\\mathrm{mol}\\;{\\mathrm{NH}}_3}{1\\;\\mathrm{mol}\\;\\mathrm{Co}^{3+}}\\;=\\;@@change_nh3@@\\;\\mathrm{mol}\\;{\\mathrm{NH}}_3",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "   The total solution volume is now @@tot_vol@@ L. At equilibrium: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm{Co}{({\\mathrm{NH}}_3)}_6^{3+}\\rbrack\\;=\\;\\frac{@@eq_mol_conh3@@\\;\\mathrm{mol}}{@@tot_vol@@\\;\\mathrm L}\\;=\\;@@eq_conc_conh3@@\\;\\mathrm M\\\\\\lbrack{\\mathrm{NH}}_3\\rbrack\\;=\\;\\frac{@@eq_mol_nh3@@\\;\\mathrm{mol}}{@@tot_vol@@\\;\\mathrm L}\\;=\\;@@eq_conc_nh3@@\\;\\mathrm M\\\\K_f\\;=\\;\\frac{\\lbrack\\mathrm{Co}{({\\mathrm{NH}}_3)}_6^{3+}\\rbrack}{\\lbrack\\mathrm{Co}^{3+}\\rbrack{\\lbrack{\\mathrm{NH}}_3\\rbrack}^6}\\;\\\\4.5\\times10^{33}\\;=\\;\\frac{@@eq_conc_conh3@@\\;\\mathrm M}{\\lbrack\\mathrm{Co}^{3+}\\rbrack{(@@eq_conc_nh3@@\\;\\mathrm M)}^6}\\\\\\mathrm{Solving}\\;\\mathrm{for}\\;\\lbrack\\mathrm{Co}^{3+}\\rbrack\\;(\\mathrm{it}\\;\\mathrm{is}\\;\\mathrm{very}\\;\\mathrm{small}\\;\\mathrm{but}\\;\\mathrm{not}\\;0)\\\\\\lbrack\\mathrm{Co}^{3+}\\rbrack\\;=\\;\\frac{@@eq_conc_conh3@@\\;\\mathrm M}{{(@@eq_conc_nh3@@\\;\\mathrm M)}^6(4.5\\times10^{33})}\\;=\\;@@correct@@\\;\\mathrm M\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "nsb7dk1x28b1wlj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1223921377"
+              },
+              "id": "4271370956",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are different algebraic approaches for solving for the equilibrium concentration of the cobalt (III) ion, but the most manageable approaches rely on 1) using the large "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "f"
+                      },
+                      {
+                        "text": " value to treat the cobalt ion as a limiting reactant that forms the maximum amount of the complex ion product [Co(NH"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": ")"
+                      },
+                      {
+                        "sub": true,
+                        "text": "6"
+                      },
+                      {
+                        "text": "]"
+                      },
+                      {
+                        "sup": true,
+                        "text": "3+"
+                      },
+                      {
+                        "text": " meaning the amount of product at equilibrium equals the initial amount of cobalt ion, and 2) when using the I-C-E (Initial-Change-Equilibrium) table of concentrations (or similar algebraic calculation), use moles, instead of concentration, and set the change in moles equal to the moles of product formed. When writing the equilibrium expression, be sure to write the correct chemical equation for the equilibrium, and consider the phase of the different substances and stoichiometric coefficients."
+                      }
+                    ],
+                    "id": "f2746d810a144d4998ed3fb466438565",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the initial moles of all reactants and products that appear in the equilibrium expression, use the molarity and volume to calculate the initial moles of these substances. Remember that some or all of the initial moles may be zero."
+                      }
+                    ],
+                    "id": "d374b06917904fa69637317039cd3c6b",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the change in moles required to reach equilibrium, the change is usually shown as -"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " for reactants and +"
+                      },
+                      {
+                        "em": true,
+                        "text": "x"
+                      },
+                      {
+                        "text": " for products. Remember to make the change equal to the moles of product formed, and be sure to consider the stoichiometric coefficients again."
+                      }
+                    ],
+                    "id": "e84627fdfb68450692f11a61646cc861",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "For the final equilibrium moles, use algebra to account for the change in moles from the initial moles. Then, in order to use the equilibrium expression, convert the final equilibrium moles into equilibrium concentrations by dividing by the total volume. Keep in mind that molarity is moles per liter (mol/L). As a final simplification, set the equilibrium concentration of cobalt ion to a new variable, rather than trying to account for the change in moles and total volume for the cobalt ion."
+                      }
+                    ],
+                    "id": "d8873dab7c3e4b95b6a1978604e31d90",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Finally, use algebra to solve for the equilibrium concentration of cobalt ion."
+                      }
+                    ],
+                    "id": "c9ce9ea06a3749bcb77dfed35e139209",
+                    "type": "p"
+                  }
+                ],
+                "id": "2240771879"
+              },
+              "id": "1498560990",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst vol_cono3Index = OLI.random(0,3);\nconst vol_cono3Array = [100.0, 150.0, 200.0];\nconst vol_mL_cono3 = vol_cono3Array[vol_cono3Index] .toPrecision(4);\nconst vol_nh3Index = OLI.random(0,5);\nconst vol_nh3Array = [200.0, 250.0, 300.0, 350.0, 400.0];\nconst vol_mL_nh3 = vol_nh3Array[vol_nh3Index] .toPrecision(4);\n\nconst conc_cono3 = OLI.randomArrayItem([0.3, 0.4, 0.5]) .toPrecision(3);\nconst conc_nh3 = OLI.randomArrayItem([4.0, 5.0, 6.0]) .toPrecision(3);\n\n//moles of Co and NH3\nconst in_mol_co = conc_cono3*(vol_mL_cono3/1000) .toPrecision(3);\nconst in_mol_nh3 = conc_nh3*(vol_mL_nh3/1000) .toPrecision(3);\n\n//values for ICE table\nconst change_nh3 = (6*in_mol_co) .toPrecision(3);\nconst eq_mol_nh3 = (in_mol_nh3 - change_nh3) .toPrecision(3);\nconst eq_mol_conh3 = (in_mol_co) .toPrecision(3);\n\n//new total volume of solution\nconst tot_vol_mL = parseFloat(vol_mL_cono3) + parseFloat(vol_mL_nh3);\nconst tot_vol = (tot_vol_mL/1000) .toPrecision(4);\n\n//equilibrium concs of nh3 and conc_nh3\nconst eq_conc_nh3 = (eq_mol_nh3/tot_vol) .toPrecision(3);\nconst eq_conc_conh3 = (eq_mol_conh3/tot_vol) .toPrecision(3);\n\n// values for kf expression\n\nconst kf = 4.5e33;\nconst kd=1/kf; //don't think I need this for anything\nconst conc_nh3_to_6 = (eq_conc_nh3*eq_conc_nh3*eq_conc_nh3*eq_conc_nh3*eq_conc_nh3*eq_conc_nh3) .toPrecision(3);\n\n\nconst correct = (eq_conc_conh3/(conc_nh3_to_6*kf)) .toPrecision(2);\nconst corLow = 0.95*correct;\nconst corHigh = 1.05*correct;\n// Expose variables to OLI\nmodule.exports = {vol_cono3Index, vol_cono3Array, vol_mL_cono3, vol_mL_nh3, conc_cono3, conc_nh3, in_mol_co, in_mol_nh3, change_nh3, eq_mol_nh3, eq_mol_conh3, tot_vol_mL, tot_vol, eq_conc_nh3, eq_conc_conh3, kf, conc_nh3_to_6, correct, corLow, corHigh\n};\n",
+              "id": "aaef5dfbca454797965e1b230ade3bcf",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the concentration of cobalt(III) ions in a solution formed by mixing @@vol_mL_cono3@@ mL of @@conc_cono3@@ M Co(NO"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " with @@vol_mL_nh3@@ mL of @@conc_nh3@@ M NH"
+            },
+            {
+              "sub": true,
+              "text": "3 "
+            },
+            {
+              "text": "solution given "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "f"
+            },
+            {
+              "text": " of [Co(NH"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "3+"
+            },
+            {
+              "text": " is 4.5×10"
+            },
+            {
+              "sup": true,
+              "text": "33"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "d6b027159b34442a8405d699de5509c2",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[Co"
+            },
+            {
+              "sup": true,
+              "text": "3+"
+            },
+            {
+              "text": "] = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            },
+            {
+              "text": " M"
+            }
+          ],
+          "id": "e75b24df376e45d2868788a5dc44b77a",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

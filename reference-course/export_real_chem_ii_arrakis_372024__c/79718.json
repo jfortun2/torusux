@@ -1,0 +1,184 @@
+{
+  "id": "79718",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "acid_molec_struct_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yt0g5ntmelpzf43",
+                  "type": "p"
+                }
+              ],
+              "id": "3439639289"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c9z4eadg53gj2n3",
+                  "type": "p"
+                }
+              ],
+              "id": "1076232195"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2ppf4lngnzkmj0x",
+                  "type": "p"
+                }
+              ],
+              "id": "3922925256"
+            }
+          ],
+          "id": "2357583938",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "858b1uyd8eelfit",
+                    "type": "p"
+                  }
+                ],
+                "id": "2592672290"
+              },
+              "id": "4108638921",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "vrwf8c7j2n91bwp",
+                    "type": "p"
+                  }
+                ],
+                "id": "1019628654"
+              },
+              "id": "2434780158",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "id": "4087558835",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "HSO"
+              },
+              {
+                "sub": true,
+                "text": "4"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              }
+            ],
+            "id": "liom11exeorspi0",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "HSeO"
+              },
+              {
+                "sub": true,
+                "text": "4"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              }
+            ],
+            "id": "9fhc5a8edmq1frj",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following compounds is more acidic?"
+            }
+          ],
+          "id": "c0yy4lvin367w54",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2357583938": [
+      "78513"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

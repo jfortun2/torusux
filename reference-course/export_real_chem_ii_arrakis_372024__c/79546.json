@@ -1,0 +1,317 @@
+{
+  "id": "79546",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78149"
+  ],
+  "title": "pool02_calc_halflife-pool02_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Correct. First, solving for the decay constant:  "
+                  }
+                ],
+                "id": "m6w8fdl23d3wgd2",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "bw6yz1452h42444",
+                    "text": ""
+                  }
+                ],
+                "id": "1754642220",
+                "src": "\\begin{array}{l}\\mathrm\\lambda\\;=\\;-\\dfrac1t\\;\\ln\\left(\\dfrac{N_t}{N_0}\\right)\\;\\\\\\;\\;\\;=\\;-\\dfrac1{@@time@@\\;\\mathrm y}\\;\\;\\ln\\;\\left(\\dfrac{@@mass@@\\;\\mathrm g}{1.00\\;\\mathrm g}\\right)\\\\\\;\\;\\;=\\;@@lambda@@\\;\\mathrm y^{-1}\\end{array}",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Then, the half-life is: "
+                  }
+                ],
+                "id": "2573686546",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "2i8sgc0tblv6t5u",
+                    "text": ""
+                  }
+                ],
+                "id": "674358122",
+                "src": "t_{1/2}\\;=\\;\\frac{\\ln(2)}{\\mathrm\\lambda}\\;\\;=\\;\\frac{0.693}{@@lambda@@\\;\\mathrm y^{-1}}\\;\\;=\\;@@halfLife@@\\;\\mathrm y",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "904497099",
+                "type": "p"
+              }
+            ],
+            "id": "3123166355"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "vt0619qu18b1ouo",
+                  "type": "p"
+                }
+              ],
+              "id": "1681191890"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pd4gm3dbw282rlp",
+                  "type": "p"
+                }
+              ],
+              "id": "2906080538"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9vbz5yq1lxei5r5",
+                  "type": "p"
+                }
+              ],
+              "id": "1563012391"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. First, solving for the decay constant: "
+                      }
+                    ],
+                    "id": "ac3248b69f2b463182f1796905e27cc1",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "6j4emvgsl1mnd2e",
+                        "text": ""
+                      }
+                    ],
+                    "id": "1507818331",
+                    "src": "\\begin{array}{l}\\mathrm\\lambda\\;=\\;-\\dfrac1t\\;\\ln\\left(\\dfrac{N_t}{N_0}\\right)\\;\\\\\\;\\;\\;=\\;-\\dfrac1{@@time@@\\;\\mathrm y}\\;\\;\\ln\\;\\left(\\dfrac{@@mass@@\\;\\mathrm g}{1.00\\;\\mathrm g}\\right)\\\\\\;\\;\\;=\\;@@lambda@@\\;\\mathrm y^{-1}\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Then, the half-life is: "
+                      }
+                    ],
+                    "id": "1151299520",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "5nec6lwuu0bv6il",
+                        "text": ""
+                      }
+                    ],
+                    "id": "268170931",
+                    "src": "t_{1/2}\\;=\\;\\frac{\\ln(2)}{\\mathrm\\lambda}\\;\\;=\\;\\frac{0.693}{@@lambda@@\\;\\mathrm y^{-1}}\\;\\;=\\;@@halfLife@@\\;\\mathrm y",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2558600009",
+                    "type": "p"
+                  }
+                ],
+                "id": "2319483786"
+              },
+              "id": "709565818",
+              "legacyMatch": "[@@corLow@@,@@corHigh@@]",
+              "rule": "input = {[@@corLow@@,@@corHigh@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. First, determine the decay constant λ by solving: "
+                      }
+                    ],
+                    "id": "3497129144",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "3gerotqe5s82whg",
+                        "text": ""
+                      }
+                    ],
+                    "id": "2541779480",
+                    "src": "N_t\\;=\\;N_{0\\;}\\mathrm e^{-\\mathrm\\lambda t}\\;\\;\\;\\mathrm{or}\\;\\;\\;t\\;=\\;-\\frac1{\\;\\mathrm\\lambda}\\ln\\left(\\frac{N_t}{N_0}\\right)",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Then, use the λ to determine the half-life: "
+                      }
+                    ],
+                    "id": "bd5e8ff8a19c4a27bea98499c6adc5eb",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "5r3mjcrnix4mjkw",
+                        "text": ""
+                      }
+                    ],
+                    "id": "4254899766",
+                    "src": "\\lambda\\;=\\;\\frac{\\ln(2)}{t_{1/2}}",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "800716933",
+                    "type": "p"
+                  }
+                ],
+                "id": "1150290447"
+              },
+              "id": "3375094993",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Beginning with 1.00 g of a sample of an unknown radioactive isotope, @@mass@@ g of the isotope will remain after @@time1@@,000 years. What is the half-life of the isotope? y",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst mass = OLI.random(0.03,0.08,5).toFixed(5);\nconst Index = OLI.random(0, 5);\nconst array = [115,125,145,155,175,185];\nconst time1 = array[Index];\nconst time = time1*1000;\nconst inverseTime = (-1/time);\nconst natLog = Math.log(mass);\nconst lambda = (inverseTime*natLog) .toPrecision(4);\nconst halfLife = (0.693/lambda) .toPrecision(3);\nconst corLow = halfLife*0.98;\nconst corHigh = halfLife*1.02;\n\n// Expose variables to OLI\nmodule.exports = {\n  mass,\n  Index,\n  array,\n  time1,\n  time,\n  inverseTime,\n  natLog,\n  lambda,\n  halfLife,\n  corLow,\n  corHigh\n  \n}\n",
+              "id": "b299be02a2e94676a98395a2f626ed98",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "one",
+        "inputType": "numeric",
+        "partId": "one",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Beginning with 1.00 g of a sample of an unknown radioactive isotope, @@mass@@ g of the isotope will remain after @@time1@@,000 years. What is the half-life of the isotope?"
+            }
+          ],
+          "id": "b901edda2ce4426e9cbcc606fd1474a2",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": " y"
+            }
+          ],
+          "id": "c93c3f07d30a48fea4159e3d8690b38b",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "one": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

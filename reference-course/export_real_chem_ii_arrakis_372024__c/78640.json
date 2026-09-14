@@ -1,0 +1,264 @@
+{
+  "id": "78640",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "pre_instructor-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "dfb9klnubbgo64x",
+                  "type": "p"
+                }
+              ],
+              "id": "250682088"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "exrtg7mzkv1n58x",
+                  "type": "p"
+                }
+              ],
+              "id": "3189621150"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3l9ja9tv1ierqov",
+                  "type": "p"
+                }
+              ],
+              "id": "3711527130"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "7elbxy7en0oql5w",
+                    "type": "p"
+                  }
+                ],
+                "id": "2132878108"
+              },
+              "id": "94428226",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zyfwebtjc5j2pgv",
+                  "type": "p"
+                }
+              ],
+              "id": "2014872881"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l5bje2cixks4xsq",
+                  "type": "p"
+                }
+              ],
+              "id": "435972096"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1dwklkprnz2snrg",
+                  "type": "p"
+                }
+              ],
+              "id": "2768563593"
+            }
+          ],
+          "id": "34236098",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " "
+                      }
+                    ],
+                    "id": "i0lbni7xzaz4bzw",
+                    "type": "p"
+                  }
+                ],
+                "id": "1643685318"
+              },
+              "id": "2160498879",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 1
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "f3x29af3b9bckgo",
+            "text": "yes"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "eqpjth3svarw56d",
+            "text": "no"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "1i5jvgej66qjlxl",
+            "text": "other, please specify below"
+          }
+        ],
+        "id": "first_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "id": "q1txt",
+        "inputType": "text",
+        "partId": "34236098",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Do you integrate OLI into learning management system modules? "
+            }
+          ],
+          "id": "82jvgq4pz2qow1y",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": " "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            }
+          ],
+          "id": "mfp9a1u5vewfw5a",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1txt",
+              "input": "q1txt",
+              "type": "input_ref"
+            }
+          ],
+          "id": "4bbl0cxbh946a1s",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "34236098": [],
+    "first": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

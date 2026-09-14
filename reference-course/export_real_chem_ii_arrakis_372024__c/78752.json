@@ -1,0 +1,167 @@
+{
+  "id": "78752",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ox_numbers_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The oxidation number of an atom in an elemental substance is zero. "
+                  }
+                ],
+                "id": "419wzmrizum7fsv",
+                "type": "p"
+              }
+            ],
+            "id": "3944330588"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f9qp4ylpqj80q3s",
+                  "type": "p"
+                }
+              ],
+              "id": "2222689510"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "lmz86q8sw5xqkhh",
+                  "type": "p"
+                }
+              ],
+              "id": "1098650593"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "x9d9d0he02zo21w",
+                  "type": "p"
+                }
+              ],
+              "id": "83596675"
+            }
+          ],
+          "id": "2390727898",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The oxidation number of an atom in an elemental substance is zero. "
+                      }
+                    ],
+                    "id": "4cgsdnd7h5fo3ov",
+                    "type": "p"
+                  }
+                ],
+                "id": "3038266198"
+              },
+              "id": "2427116958",
+              "legacyMatch": "0",
+              "rule": "input = {0}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "b8dgxzgasb5hhey",
+                    "type": "p"
+                  }
+                ],
+                "id": "873751683"
+              },
+              "id": "3273637836",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2390727898",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the oxidation number for sulfur in S"
+            },
+            {
+              "sub": true,
+              "text": "8"
+            },
+            {
+              "text": "? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            }
+          ],
+          "id": "6kgvcr2c3ax33t2",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2390727898": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

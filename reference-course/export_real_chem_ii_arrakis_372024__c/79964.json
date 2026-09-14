@@ -1,0 +1,259 @@
+{
+  "id": "79964",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78098"
+  ],
+  "title": "concept_redox_pool_v2",
+  "content": {
+    "authoring": {
+      "correct": [
+        [
+          "A",
+          "B"
+        ],
+        "2120321578"
+      ],
+      "incorrect": [],
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "sb28x31ep4vzcgg",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "5huk98npmlomh68",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " The correct answers are: "
+                  }
+                ],
+                "id": "3l058ez4vxb9v8w",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "id": "bhjq8j7lt8ar078",
+                        "text": "Oxidizing agents gain electrons and reducing agents lose electrons."
+                      }
+                    ],
+                    "id": "z8eh1iujasqwh5f",
+                    "type": "li"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "9dlzr7e1n2q7gtn",
+                        "text": "Oxidizing agents are reduced and reducing agents are oxidized."
+                      }
+                    ],
+                    "id": "knr649omw9c8axh",
+                    "type": "li"
+                  }
+                ],
+                "id": "r62pvojb8pgny2f",
+                "type": "ul"
+              }
+            ],
+            "id": "4240065640"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "h0d243zm046yiwb",
+                  "type": "p"
+                }
+              ],
+              "id": "3212342431"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jxjyakadb99px2p",
+                  "type": "p"
+                }
+              ],
+              "id": "1210462821"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1xeur8dpt5dsj66",
+                  "type": "p"
+                }
+              ],
+              "id": "2153773293"
+            }
+          ],
+          "id": "d56fb6c38a00448a9277b460d2b0c32f",
+          "objectives": [
+            "cd6bb81e2b0f4705ac48346f36bfda52"
+          ],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Oxidizing agents gain electrons from another chemical species, which means the oxidizing agent is reduced (gain of electrons, decrease in oxidation number) and the other chemical species is oxidized (loss of electrons, increase in oxidation number). Similarly, reducing agents lose electrons to another chemical species, which means the reducing agent is oxidized (loss of electrons, increase in oxidation number) and the other chemical species is reduced (gain of electrons, decrease in oxidation number). "
+                      }
+                    ],
+                    "id": "0qw1ifq8df7xkvg",
+                    "type": "p"
+                  }
+                ],
+                "id": "4048364446"
+              },
+              "id": "2120321578",
+              "legacyMatch": "A,B",
+              "rule": "(!(input like {D})) && ((!(input like {C})) && (input like {B} && (input like {A})))",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": " Incorrect. Oxidizing agents gain electrons from another chemical species, which means the oxidizing agent is reduced (gain of electrons, decrease in oxidation number) and the other chemical species is oxidized (loss of electrons, increase in oxidation number). Similarly, reducing agents lose electrons to another chemical species, which means the reducing agent is oxidized (loss of electrons, increase in oxidation number) and the other chemical species is reduced (gain of electrons, decrease in oxidation number). "
+                      }
+                    ],
+                    "id": "cuoxebcf6jhgdq0",
+                    "type": "p"
+                  }
+                ],
+                "id": "3316502075"
+              },
+              "id": "719283531",
+              "legacyMatch": ".*",
+              "namremoveSetOpse": "AUTOGEN_{A}",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidizing agents gain electrons and reducing agents lose electrons."
+              }
+            ],
+            "id": "4xwdr62ckwm36e8",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidizing agents are reduced and reducing agents are oxidized."
+              }
+            ],
+            "id": "zn16equnw9plv2m",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidizing agents lose electrons and reducing agents gain electrons."
+              }
+            ],
+            "id": "ferxs3zt93unrlp",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Oxidizing agents are oxidized and reducing agents are reduced."
+              }
+            ],
+            "id": "n053e5aaufrv87m",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which of the following statements are true? Select all that apply."
+            }
+          ],
+          "id": "bra91zxlm26hv6m",
+          "type": "p"
+        }
+      ]
+    },
+    "type": "TargetedCATA"
+  },
+  "objectives": {
+    "d56fb6c38a00448a9277b460d2b0c32f": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_check_all_that_apply"
+}

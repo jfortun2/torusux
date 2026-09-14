@@ -1,0 +1,367 @@
+{
+  "id": "80366",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "MetalIonNameLBD1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Check whether the metal complex is a cation or an anion. Remember that the metal complex is everything inside the brackets, regardless of the metal’s oxidation state."
+                    }
+                  ],
+                  "id": "288026873",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3839347141",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "103900465",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The metal complex is a cation, so the metal name is the element name."
+                      }
+                    ],
+                    "id": "1911354946",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1517790597",
+                "textDirection": "ltr"
+              },
+              "id": "3356683123",
+              "rule": "input like {2447390432}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The metal complex is a cation, so the metal name is the element name."
+                      }
+                    ],
+                    "id": "3990335678",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "651138537",
+                "textDirection": "ltr"
+              },
+              "id": "2088949488",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        },
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Check whether the metal complex is a cation or an anion. Remember that the metal complex is everything inside the brackets, regardless of the metal’s oxidation state."
+                    }
+                  ],
+                  "id": "2079829117",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3684675147",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "2939624030",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The metal complex is an anion, so the metal name must end in “ate”."
+                      }
+                    ],
+                    "id": "2380126718",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3451286126",
+                "textDirection": "ltr"
+              },
+              "id": "469326161",
+              "rule": "input like {2553573300}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The metal complex is an anion, so the metal name must end in “ate”."
+                      }
+                    ],
+                    "id": "3553489689",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "3864070903",
+                "textDirection": "ltr"
+              },
+              "id": "4045988111",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Identify what name should be used for the metal ion in the following complexes:[CuCl2(en)2]+   [Fe(CN)6]3−   ",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "1532640904",
+          "operation": "shuffle",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "2649594020",
+          "operation": "shuffle",
+          "partId": "103900465",
+          "path": "choices"
+        },
+        {
+          "firstAttemptOnly": true,
+          "id": "3990350523",
+          "operation": "shuffle",
+          "partId": "2939624030",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "copper"
+              }
+            ],
+            "id": "3472875701",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2447390432",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "cuprate"
+              }
+            ],
+            "id": "374556040",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "387163927",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "iron"
+              }
+            ],
+            "id": "2556668326",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "3070321937",
+        "textDirection": "ltr"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "ferrate"
+              }
+            ],
+            "id": "1515429673",
+            "type": "p"
+          }
+        ],
+        "editor": "slate",
+        "id": "2553573300",
+        "textDirection": "ltr"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "2447390432",
+          "387163927"
+        ],
+        "id": "346338873",
+        "inputType": "dropdown",
+        "partId": "103900465"
+      },
+      {
+        "choiceIds": [
+          "3070321937",
+          "2553573300"
+        ],
+        "id": "3600325751",
+        "inputType": "dropdown",
+        "partId": "2939624030"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Identify what name should be used for the metal ion in the following complexes:"
+            }
+          ],
+          "id": "264855676",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[CuCl"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "(en)"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "+"
+            },
+            {
+              "text": "   "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "346338873",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "49253804",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "[Fe(CN)"
+            },
+            {
+              "sub": true,
+              "text": "6"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "3−"
+            },
+            {
+              "text": "   "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "3600325751",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "362514233",
+          "type": "p"
+        }
+      ],
+      "id": "1279629307"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "103900465": [
+      "78460"
+    ],
+    "2939624030": [
+      "78460"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

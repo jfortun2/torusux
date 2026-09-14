@@ -1,0 +1,268 @@
+{
+  "id": "79828",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "predicting_precip_digt-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4l9e2yix95rfviy",
+                  "type": "p"
+                }
+              ],
+              "id": "1215649855"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7q5w1wwg81u7cpz",
+                  "type": "p"
+                }
+              ],
+              "id": "1576900087"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "knxzj6zft9kue8e",
+                  "type": "p"
+                }
+              ],
+              "id": "2703602940"
+            }
+          ],
+          "id": "3997557382",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}{\\mathrm{Pb}}_3({\\mathrm{PO}}_4)_2(s)\\;\\;\\rightleftharpoons\\;\\;3\\;\\mathrm{Pb}^{2+}(aq)\\;+\\;2\\;{\\mathrm{PO}}_4^{3-}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{sp}}\\;=\\;1.0\\times10^{-54}\\\\Q\\;=\\;\\lbrack\\mathrm{Pb}^{2+}\\rbrack^3\\;\\lbrack{\\mathrm{PO}}_4^{3-}\\rbrack^2\\;\\\\Q\\;=\\;(0.005\\;\\mathrm M)^3\\;(5.0\\times10^{-14})^2\\;=\\;3.1\\times10^{-34}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " > "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". Therefore, a precipitate will form."
+                      }
+                    ],
+                    "id": "u29tkjcsaedszk3",
+                    "type": "p"
+                  }
+                ],
+                "id": "4038972497"
+              },
+              "id": "2921492673",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}{\\mathrm{Pb}}_3({\\mathrm{PO}}_4)_2(s)\\;\\;\\rightleftharpoons\\;\\;3\\;\\mathrm{Pb}^{2+}(aq)\\;+\\;2\\;{\\mathrm{PO}}_4^{3-}(aq)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;K_{\\mathrm{sp}}\\;=\\;1.0\\times10^{-54}\\\\Q\\;=\\;\\lbrack\\mathrm{Pb}^{2+}\\rbrack^3\\;\\lbrack{\\mathrm{PO}}_4^{3-}\\rbrack^2\\;\\\\Q\\;=\\;(0.005\\;\\mathrm M)^3\\;(5.0\\times10^{-14})^2\\;=\\;3.1\\times10^{-34}\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " > "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". Therefore, a precipitate will form. "
+                      }
+                    ],
+                    "id": "yf3lnycg3mh9sf4",
+                    "type": "p"
+                  }
+                ],
+                "id": "2251665593"
+              },
+              "id": "732143338",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": " A solution containing 0.01 M [Pb2+] is mixed with a solution of equal volume with [PO43−] of 1.0 × 10–13 M. Will the precipitate Pb3(PO4)2 form?",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Yes"
+              }
+            ],
+            "id": "e3ggmn5z05sl2aq",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "No"
+              }
+            ],
+            "id": "99jzblm64dchftw",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " A solution containing 0.01 M [Pb"
+            },
+            {
+              "sup": true,
+              "text": "2+"
+            },
+            {
+              "text": "] is mixed with a solution of equal volume with [PO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "sup": true,
+              "text": "3−"
+            },
+            {
+              "text": "] of 1.0 × 10"
+            },
+            {
+              "sup": true,
+              "text": "–13"
+            },
+            {
+              "text": " M. Will the precipitate Pb"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "(PO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": " form?"
+            }
+          ],
+          "id": "1n9wjzdvxysbdb0",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3997557382": [
+      "78469"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

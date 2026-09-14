@@ -1,0 +1,996 @@
+{
+  "id": "80212",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78243"
+  ],
+  "title": "increasing_decreasing_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wt5tershtzy99lc",
+                  "type": "p"
+                }
+              ],
+              "id": "1663370427"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f6ntgjnirup4f5z",
+                  "type": "p"
+                }
+              ],
+              "id": "2586919060"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "chwvktpv59c8dz2",
+                  "type": "p"
+                }
+              ],
+              "id": "2524919518"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Increasing the concentration of a reactant usually increases the reaction rate."
+                      }
+                    ],
+                    "id": "3d1btivl6oc8um9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3537503599"
+              },
+              "id": "3779535921",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Increasing the concentration of a reactant usually increases the reaction rate."
+                      }
+                    ],
+                    "id": "iktr7intrhvwfvs",
+                    "type": "p"
+                  }
+                ],
+                "id": "1250276863"
+              },
+              "id": "1738146983",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Increasing the concentration of a reactant usually changes the reaction rate."
+                      }
+                    ],
+                    "id": "v9g4que636yg4u9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3008159470"
+              },
+              "id": "2386686278",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ylry7odk2mkhiod",
+                    "type": "p"
+                  }
+                ],
+                "id": "3509522051"
+              },
+              "id": "90372114",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xyyakt8r0ggl7n8",
+                  "type": "p"
+                }
+              ],
+              "id": "2943959410"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "in0xxuc9cjxiub3",
+                  "type": "p"
+                }
+              ],
+              "id": "3114027542"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3d8q2qxkpvw9yqa",
+                  "type": "p"
+                }
+              ],
+              "id": "2584791321"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Decreasing the temperature generally decreases the reaction rate."
+                      }
+                    ],
+                    "id": "czlw4tz3qntja27",
+                    "type": "p"
+                  }
+                ],
+                "id": "3856844325"
+              },
+              "id": "663969255",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Decreasing the temperature generally decreases the reaction rate."
+                      }
+                    ],
+                    "id": "pdygqxa4thbwvrn",
+                    "type": "p"
+                  }
+                ],
+                "id": "1785317838"
+              },
+              "id": "1747058004",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Decreasing the temperature generally changes the reaction rate."
+                      }
+                    ],
+                    "id": "k891m4cqjvi1jd7",
+                    "type": "p"
+                  }
+                ],
+                "id": "489138937"
+              },
+              "id": "198350355",
+              "legacyMatch": "C",
+              "rule": "input like {second_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "dyb1674fc9r3cbi",
+                    "type": "p"
+                  }
+                ],
+                "id": "3822838120"
+              },
+              "id": "3447603677",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "miv69gjozx65jay",
+                  "type": "p"
+                }
+              ],
+              "id": "1201255980"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "q5d36nh10vcvzup",
+                  "type": "p"
+                }
+              ],
+              "id": "3648037406"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2p2czkhgs8qzn5r",
+                  "type": "p"
+                }
+              ],
+              "id": "2747594873"
+            }
+          ],
+          "id": "third",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. A finely divided solid has less surface area than large chunks of S"
+                      },
+                      {
+                        "sub": true,
+                        "text": "8"
+                      },
+                      {
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": "). This corresponds to a faster reaction rate."
+                      }
+                    ],
+                    "id": "o4evh19fjojknh3",
+                    "type": "p"
+                  }
+                ],
+                "id": "1939785788"
+              },
+              "id": "2385685824",
+              "legacyMatch": "A",
+              "rule": "input like {third_A}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A finely divided solid has less surface area than large chunks of S"
+                      },
+                      {
+                        "sub": true,
+                        "text": "8"
+                      },
+                      {
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": "). "
+                      }
+                    ],
+                    "id": "kg142hdidq1ywp5",
+                    "type": "p"
+                  }
+                ],
+                "id": "4211533771"
+              },
+              "id": "1855670054",
+              "legacyMatch": "B",
+              "rule": "input like {third_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. A finely divided solid has less surface area than large chunks of S"
+                      },
+                      {
+                        "sub": true,
+                        "text": "8"
+                      },
+                      {
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "text": "s"
+                      },
+                      {
+                        "text": "). "
+                      }
+                    ],
+                    "id": "ghqa8ykvkepgf6p",
+                    "type": "p"
+                  }
+                ],
+                "id": "2433230164"
+              },
+              "id": "3233385129",
+              "legacyMatch": "C",
+              "rule": "input like {third_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "1or4kehx962c7o6",
+                    "type": "p"
+                  }
+                ],
+                "id": "5894472"
+              },
+              "id": "129729786",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3huks7cmtfi1au1",
+                  "type": "p"
+                }
+              ],
+              "id": "1772703570"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1rj6fb0ud3i7nmk",
+                  "type": "p"
+                }
+              ],
+              "id": "423581479"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "548ha44tg4lw6wo",
+                  "type": "p"
+                }
+              ],
+              "id": "2702808482"
+            }
+          ],
+          "id": "four",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction rate is faster when a catalyst "
+                      },
+                      {
+                        "text": "is",
+                        "underline": true
+                      },
+                      {
+                        "text": " used."
+                      }
+                    ],
+                    "id": "7boxesk7jedsqz6",
+                    "type": "p"
+                  }
+                ],
+                "id": "3944408950"
+              },
+              "id": "1353163950",
+              "legacyMatch": "A",
+              "rule": "input like {four_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If a catalyst is not used, the reaction rate is slower."
+                      }
+                    ],
+                    "id": "2ppkqokhpjnhiws",
+                    "type": "p"
+                  }
+                ],
+                "id": "3893016822"
+              },
+              "id": "2027193734",
+              "legacyMatch": "B",
+              "rule": "input like {four_B}",
+              "score": 3
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction rates for catalyzed and uncatalyzed reactions are different. "
+                      }
+                    ],
+                    "id": "9chtp5xcts50q09",
+                    "type": "p"
+                  }
+                ],
+                "id": "3809465424"
+              },
+              "id": "602383206",
+              "legacyMatch": "C",
+              "rule": "input like {four_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "rrrvbyfyjmaynzz",
+                    "type": "p"
+                  }
+                ],
+                "id": "1249315217"
+              },
+              "id": "577634100",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Describe the effect of the following on the rate of the reaction: Increasing the concentration of O2(g) will likely  the rate of the reaction.Decreasing the temperature will likely   the rate of the reaction.Using S8(s) in the form of a fine powder will result in  reaction rate than using S8(s) in large chunks.If no catalyst is used, the reaction rate will be  than if a catalyst is used.",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "3779535921"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "1738146983"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "2386686278"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "663969255"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "1747058004"
+        ],
+        [
+          [
+            "second_C"
+          ],
+          "198350355"
+        ],
+        [
+          [
+            "third_A"
+          ],
+          "2385685824"
+        ],
+        [
+          [
+            "third_B"
+          ],
+          "1855670054"
+        ],
+        [
+          [
+            "third_C"
+          ],
+          "3233385129"
+        ],
+        [
+          [
+            "four_A"
+          ],
+          "1353163950"
+        ],
+        [
+          [
+            "four_B"
+          ],
+          "2027193734"
+        ],
+        [
+          [
+            "four_C"
+          ],
+          "602383206"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "9zqn744i73rw2nt",
+            "text": "increase "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "h52wld6l19uoofx",
+            "text": "decrease"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "vqyksthta3uoarn",
+            "text": "not change"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "gnurftooqozx327",
+            "text": "increase "
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "2wi60xwodhdedc2",
+            "text": "decrease"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "s6nen7nd5gv2ync",
+            "text": "not change"
+          }
+        ],
+        "id": "second_C"
+      },
+      {
+        "content": [
+          {
+            "id": "i85jk31ikgk4zrm",
+            "text": "a faster "
+          }
+        ],
+        "id": "third_A"
+      },
+      {
+        "content": [
+          {
+            "id": "tcdyno7b3db5kd4",
+            "text": "a slower"
+          }
+        ],
+        "id": "third_B"
+      },
+      {
+        "content": [
+          {
+            "id": "o00xzpxxg5z9fdn",
+            "text": "the same"
+          }
+        ],
+        "id": "third_C"
+      },
+      {
+        "content": [
+          {
+            "id": "89yzm6ai5jhfkq4",
+            "text": "faster "
+          }
+        ],
+        "id": "four_A"
+      },
+      {
+        "content": [
+          {
+            "id": "a7bk9xp5utr4c5z",
+            "text": "slower"
+          }
+        ],
+        "id": "four_B"
+      },
+      {
+        "content": [
+          {
+            "id": "fgqpp5kg2mb7g7a",
+            "text": "the same"
+          }
+        ],
+        "id": "four_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "second_C"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "third_A",
+          "third_B",
+          "third_C"
+        ],
+        "id": "third",
+        "inputType": "dropdown",
+        "partId": "third",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "four_A",
+          "four_B",
+          "four_C"
+        ],
+        "id": "four",
+        "inputType": "dropdown",
+        "partId": "four",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Describe the effect of the following on the rate of the reaction: "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": true,
+              "src": "{\\mathrm S}_8(s)\\;+\\;8\\;{\\mathrm O}_2(g)\\;\\;\\rightarrow\\;\\;8\\;{\\mathrm{SO}}_2(g)",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "11unntg8t0c6ada",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Increasing the concentration of O"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "g"
+            },
+            {
+              "text": ") will likely "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " the rate of the reaction."
+            }
+          ],
+          "id": "kqigmym5d3gikv9",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Decreasing the temperature will likely  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " the rate of the reaction."
+            }
+          ],
+          "id": "1cgrvpa1ho32e4a",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Using S"
+            },
+            {
+              "sub": true,
+              "text": "8"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ") in the form of a fine powder will result in "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "third",
+              "input": "third",
+              "type": "input_ref"
+            },
+            {
+              "text": " reaction rate than using S"
+            },
+            {
+              "sub": true,
+              "text": "8"
+            },
+            {
+              "text": "("
+            },
+            {
+              "em": true,
+              "text": "s"
+            },
+            {
+              "text": ") in large chunks."
+            }
+          ],
+          "id": "gnbhjhrm44ais4p",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "If no catalyst is used, the reaction rate will be "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "four",
+              "input": "four",
+              "type": "input_ref"
+            },
+            {
+              "text": " than if a catalyst is used."
+            }
+          ],
+          "id": "11jaj51vjdnmk7j",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78417"
+    ],
+    "four": [
+      "78417"
+    ],
+    "second": [
+      "78417"
+    ],
+    "third": [
+      "78417"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

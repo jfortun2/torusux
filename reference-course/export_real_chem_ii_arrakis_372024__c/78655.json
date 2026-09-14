@@ -1,0 +1,296 @@
+{
+  "id": "78655",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "entropy_lbd_1b-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Which change produces a more significant dispersal of matter?"
+                    }
+                  ],
+                  "id": "wlvl8jw5m00p8l4",
+                  "type": "p"
+                }
+              ],
+              "id": "4030510226"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "279wmdkdumjrlez",
+                  "type": "p"
+                }
+              ],
+              "id": "3296582287"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "asz3e72wv3ct4yp",
+                  "type": "p"
+                }
+              ],
+              "id": "187538046"
+            }
+          ],
+          "id": "2087185965",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. While both changes will result in an increase in entropy, the change from liquid to gas results in a much more significant dispersal of matter and therefore has a much greater change in entropy."
+                      }
+                    ],
+                    "id": "ykchez70hrw01ul",
+                    "type": "p"
+                  }
+                ],
+                "id": "3948544244"
+              },
+              "id": "3989663683",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While both changes will result in an increase in entropy, the change from liquid to gas results in a much more significant dispersal of matter than the change from solid to liquid. "
+                      }
+                    ],
+                    "id": "smagjulff7ge1b4",
+                    "type": "p"
+                  }
+                ],
+                "id": "2297736405"
+              },
+              "id": "158376991",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. While both changes will result in an increase in entropy, the change from liquid to gas results in a much more significant dispersal of matter than the change from solid to liquid."
+                      }
+                    ],
+                    "id": "r18le64j4406s6d",
+                    "type": "p"
+                  }
+                ],
+                "id": "3321598404"
+              },
+              "id": "2942969437",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "7fmz2wmkrbhcuhx",
+                    "type": "p"
+                  }
+                ],
+                "id": "1193074765"
+              },
+              "id": "1786899787",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3989663683"
+            ],
+            [
+              [
+                "B"
+              ],
+              "158376991"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2942969437"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Consider two processes: melting of water and vaporization of water, as represented in these equations:   For which of the processes will the magnitude of the entropy change be greater?",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3989663683"
+        ],
+        [
+          [
+            "B"
+          ],
+          "158376991"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2942969437"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "691346441",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The magnitude of the entropy change will be greater for vaporization."
+              }
+            ],
+            "id": "299e2s4eega2wr9",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The magnitude of the entropy change will be greater for melting."
+              }
+            ],
+            "id": "1qkpjzhprpiskru",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "The magnitude of the entropy change will be approximately the same for melting and vaporization."
+              }
+            ],
+            "id": "h52k0r60xpy07tr",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider two processes: melting of water and vaporization of water, as represented in these equations: "
+            }
+          ],
+          "id": "fuqtdgulpmg7ryf",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "4i4meulj8v284an",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "28rq404r48tjxus",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm H}_2\\mathrm O(s)\\;\\longrightarrow\\;{\\mathrm H}_2\\mathrm O(l)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "id": "cwadnpqaqf8cyse",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "gbcjhvyk3wrwfgp",
+          "legacyBlockRendered": "true",
+          "src": "{\\mathrm H}_2\\mathrm O(l)\\;\\longrightarrow\\;{\\mathrm H}_2\\mathrm O(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "For which of the processes will the magnitude of the entropy change be greater?"
+            }
+          ],
+          "id": "400kexl1i8swqub",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2087185965": [
+      "78409"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

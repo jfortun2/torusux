@@ -1,0 +1,175 @@
+{
+  "id": "79677",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_3lbd-q7",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. 14.00 − 2.84 = 11.16. "
+                  }
+                ],
+                "id": "skoa1782c61j9e6",
+                "type": "p"
+              }
+            ],
+            "id": "1205409395"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "pH + pOH = 14.00"
+                    }
+                  ],
+                  "id": "42339mtkoe248s7",
+                  "type": "p"
+                }
+              ],
+              "id": "215853421"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rg5goolourah9i4",
+                  "type": "p"
+                }
+              ],
+              "id": "1716762524"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "24ul3roryeg5ahq",
+                  "type": "p"
+                }
+              ],
+              "id": "462820578"
+            }
+          ],
+          "id": "1779956872",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. 14.00 − 2.84 = 11.16. "
+                      }
+                    ],
+                    "id": "q0m6icf82t0rz9o",
+                    "type": "p"
+                  }
+                ],
+                "id": "2342044167"
+              },
+              "id": "3799742617",
+              "legacyMatch": "[11.14,11.2]",
+              "rule": "input = {[11.14,11.2]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hint and try again. "
+                      }
+                    ],
+                    "id": "hldfu1mo3evb15t",
+                    "type": "p"
+                  }
+                ],
+                "id": "2752272995"
+              },
+              "id": "510450927",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate the pH of the caffeine solution. pH = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1779956872",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of the caffeine solution. "
+            }
+          ],
+          "id": "20j4syxy8hl6phi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "loi6e2s4zg8yuw6",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1779956872": [
+      "78435"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

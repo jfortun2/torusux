@@ -1,0 +1,649 @@
+{
+  "id": "79534",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ave_rate_lbd-q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The rate of disappearance of sucrose is the negative of its (negative) rate of change:"
+                  }
+                ],
+                "id": "ckp7osfd1trdppb",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "btx0m7pvp3a0e1q",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "84fzueup0fd6bgo",
+                "legacyBlockRendered": "true",
+                "src": "\\mathrm{Sucrose}\\;\\mathrm{rate}\\;=\\;-\\frac{\\Delta\\left[\\mathrm{sucrose}\\right]}{\\Delta t}\\; =\\;-\\frac{(0.0500\\;\\mathrm M\\;-\\;0.0707\\;\\mathrm M)}{(3.00\\;\\mathrm h\\;-\\;1.50\\;\\mathrm h)}\\; =\\;\\;0.0138\\;\\mathrm M/\\mathrm h",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "1636505246",
+                "type": "p"
+              }
+            ],
+            "id": "4015139296"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "The rate of disappearance of sucrose is the negative of its (negative) rate of change."
+                    }
+                  ],
+                  "id": "nt6t6fy20z0vkmw",
+                  "type": "p"
+                }
+              ],
+              "id": "1452227893"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2p9cculkxth5nuq",
+                  "type": "p"
+                }
+              ],
+              "id": "2534664744"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "izeyifapur3ekii",
+                  "type": "p"
+                }
+              ],
+              "id": "2298268306"
+            }
+          ],
+          "id": "1562683564",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate of disappearance of sucrose is the negative of its (negative) rate of change:"
+                      }
+                    ],
+                    "id": "36aavv1vjmab29k",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "52pgezur7joiqkb",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "xjp21d5z3t7ti6c",
+                    "legacyBlockRendered": "true",
+                    "src": "\\mathrm{Sucrose}\\;\\mathrm{rate}\\;=\\;-\\frac{\\Delta\\left[\\mathrm{sucrose}\\right]}{\\Delta t}\\; =\\;-\\frac{(0.0500\\;\\mathrm M\\;-\\;0.0707\\;\\mathrm M)}{(3.00\\;\\mathrm h\\;-\\;1.50\\;\\mathrm h)}\\; =\\;0.0138\\;\\mathrm M/\\mathrm h",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "2187515135",
+                    "type": "p"
+                  }
+                ],
+                "id": "1031835273"
+              },
+              "id": "609586093",
+              "legacyMatch": "[0.0135, 0.014]",
+              "rule": "input = {[0.0135, 0.014]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. The rate of disappearance of sucrose is the negative of its (negative) rate of change."
+                      }
+                    ],
+                    "id": "psqpv0asb6pl82v",
+                    "type": "p"
+                  }
+                ],
+                "id": "3586273251"
+              },
+              "id": "431124480",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The rate of appearance of glucose is:"
+                  }
+                ],
+                "id": "yhucune7p173doz",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "oc7wy45casjjxrs",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "rk4yl57divb0mta",
+                "legacyBlockRendered": "true",
+                "src": "\\frac{\\Delta\\left[\\mathrm{glucose}\\right]}{\\Delta t}\\;=\\;\\frac{(0.0500\\;\\mathrm M\\;-\\;0.0293\\;\\mathrm M)}{(3.00\\;\\mathrm h\\; -\\;1.50\\;\\mathrm h)}\\;=\\;0.0138\\;\\mathrm M/\\mathrm h",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Note that this is the same as the rate of disappearance of sucrose during this time interval."
+                  }
+                ],
+                "id": "8o149dz7rou6r5h",
+                "type": "p"
+              }
+            ],
+            "id": "3006114354"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "How does the rate of appearance of glucose compare to the rate of disappearance of sucrose during this time interval?"
+                    }
+                  ],
+                  "id": "4xccxclplklazfa",
+                  "type": "p"
+                }
+              ],
+              "id": "3696152207"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xu895p7xa0f2eg5",
+                  "type": "p"
+                }
+              ],
+              "id": "2826863310"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3crnuwsn3uyswl4",
+                  "type": "p"
+                }
+              ],
+              "id": "49330413"
+            }
+          ],
+          "id": "2745551239",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The rate of appearance of glucose is:"
+                      }
+                    ],
+                    "id": "85vnbnu7f4wp6yq",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "id": "8x92us42mfv3iz8",
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "id": "tmbu0zlgqkhed13",
+                    "legacyBlockRendered": "true",
+                    "src": "\\frac{\\Delta\\left[\\mathrm{glucose}\\right]}{\\Delta t}\\;=\\;\\frac{(0.0500\\;\\mathrm M\\;-\\;0.0293\\;\\mathrm M)}{(3.00\\;\\mathrm h\\; -\\;1.50\\;\\mathrm h)}\\;=\\;0.0138\\;\\mathrm M/\\mathrm h",
+                    "subtype": "latex",
+                    "type": "formula"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "Note that this is the same as the rate of disappearance of sucrose during this time interval."
+                      }
+                    ],
+                    "id": "tcjxdgtexuniz7x",
+                    "type": "p"
+                  }
+                ],
+                "id": "2485935357"
+              },
+              "id": "1229991435",
+              "legacyMatch": "[0.0135, 0.014]",
+              "rule": "input = {[0.0135, 0.014]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again."
+                      }
+                    ],
+                    "id": "5665dwb0t42grik",
+                    "type": "p"
+                  }
+                ],
+                "id": "326102559"
+              },
+              "id": "2295949994",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Data from this experiment are shown in the table: Time (h)[Sucrose] (M)[Glucose] (M)[Fructose] (M)0.000.10000.00000.00001.500.07070.02930.02933.000.05000.05000.05004.500.03540.06460.0646Use this information to determine the following average rates during the time interval from 1.5 to 3.0 hours.The average rate of disappearance of sucrose =  M/hThe average rate of appearance of glucose =  M/h",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1562683564",
+        "size": "small"
+      },
+      {
+        "id": "q2numeric",
+        "inputType": "numeric",
+        "partId": "2745551239",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Data from this experiment are shown in the table: "
+            }
+          ],
+          "id": "ikv0xx6h841v9pr",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "0s16yu5hhd514p8",
+                      "text": "Time (h)"
+                    }
+                  ],
+                  "id": "l2roooaeg0z7nvo",
+                  "type": "th"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "pnzu9o4fr10ppai",
+                      "text": "[Sucrose] (M)"
+                    }
+                  ],
+                  "id": "llpnx5ju4m606zc",
+                  "type": "th"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "febp5h9cf3odg13",
+                      "text": "[Glucose] (M)"
+                    }
+                  ],
+                  "id": "fzqmhcewvppyo1d",
+                  "type": "th"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "q4zbp480bqzfq64",
+                      "text": "[Fructose] (M)"
+                    }
+                  ],
+                  "id": "b13jmltamjnah4r",
+                  "type": "th"
+                }
+              ],
+              "id": "qxvhw30loe0rutj",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "bnb4yxot3q2re4k",
+                      "text": "0.00"
+                    }
+                  ],
+                  "id": "1rxkbkq83lz22s0",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "q7xu9xgu0gvks01",
+                      "text": "0.1000"
+                    }
+                  ],
+                  "id": "la748umrt6ebmts",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "bxd0nwe4ff5f96g",
+                      "text": "0.0000"
+                    }
+                  ],
+                  "id": "xlk1mvdy3cf5f19",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "imu355hnn21ut3w",
+                      "text": "0.0000"
+                    }
+                  ],
+                  "id": "yr7p6e7mw8sn4vf",
+                  "type": "td"
+                }
+              ],
+              "id": "3e11en4nm6nqo7d",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "e3omjffdsp8k6mf",
+                      "text": "1.50"
+                    }
+                  ],
+                  "id": "0ljyybq0ml6eb0g",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "0ur10hkc02ap6ib",
+                      "text": "0.0707"
+                    }
+                  ],
+                  "id": "erbqvbzsfl0s75y",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "oirwnmc0v7om8yi",
+                      "text": "0.0293"
+                    }
+                  ],
+                  "id": "q2araslpl9pu5n2",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "huzdpk258qiylzn",
+                      "text": "0.0293"
+                    }
+                  ],
+                  "id": "ml9j7uglaiyz6lq",
+                  "type": "td"
+                }
+              ],
+              "id": "wunlfaqz0q7xzfl",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "nalk7de0n9fpsfi",
+                      "text": "3.00"
+                    }
+                  ],
+                  "id": "2ceq9h2oc1m3ep6",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "g2h9nfcylhh0a6t",
+                      "text": "0.0500"
+                    }
+                  ],
+                  "id": "mpmjx44cdwk9c54",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "ml4326o2lro78ds",
+                      "text": "0.0500"
+                    }
+                  ],
+                  "id": "7hoavs1k9e783pv",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "qjt9281l40jkwk1",
+                      "text": "0.0500"
+                    }
+                  ],
+                  "id": "jyrds7y1t6sga5z",
+                  "type": "td"
+                }
+              ],
+              "id": "omiq04uc1h2hbow",
+              "type": "tr"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "id": "hioiwudhowi5jh8",
+                      "text": "4.50"
+                    }
+                  ],
+                  "id": "0yhg8wt5tajn0un",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "i6p67kfd5306rga",
+                      "text": "0.0354"
+                    }
+                  ],
+                  "id": "wrx4ki31nwia5f4",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "rgwqqu7edjyr467",
+                      "text": "0.0646"
+                    }
+                  ],
+                  "id": "i52fzfwbkaesio6",
+                  "type": "td"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "p4bqeaypjm488yp",
+                      "text": "0.0646"
+                    }
+                  ],
+                  "id": "dziacwynvws7ibn",
+                  "type": "td"
+                }
+              ],
+              "id": "qf8l34cqccu8he9",
+              "type": "tr"
+            }
+          ],
+          "id": "3nhfo50yaibwnzt",
+          "rowstyle": "alternating",
+          "type": "table"
+        },
+        {
+          "children": [
+            {
+              "text": "Use this information to determine the following average rates during the time interval from 1.5 to 3.0 hours."
+            }
+          ],
+          "id": "s776s24aso86g3n",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The average rate of disappearance of sucrose = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/h"
+            }
+          ],
+          "id": "63o3n13bgvkigi5",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The average rate of appearance of glucose = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q2numeric",
+              "input": "q2numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " M/h"
+            }
+          ],
+          "id": "pnksa20q8lwf7ln",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1562683564": [
+      "78302"
+    ],
+    "2745551239": [
+      "78302"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,205 @@
+{
+  "id": "79155",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "carbon_dating_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{1/2}}\\;=\\;\\frac{\\ln\\;2}{5730\\;\\mathrm y}\\;=\\;1.21\\times10^{-4}\\;\\mathrm y^{-1}\\\\\\\\t\\;=\\;-\\frac1{\\mathrm\\lambda}\\;\\ln\\left(\\frac{{\\mathrm{Rate}}_t}{{\\mathrm{Rate}}_0}\\right)\\;=\\;-\\;\\frac1{1.21\\times10-4\\;\\mathrm y-1}\\;\\ln\\;\\left(\\frac{9.07\\;\\mathrm{dis}/\\min/\\mathrm g/\\mathrm C}{13.6\\;\\mathrm{dis}/\\min/\\mathrm g/\\mathrm C}\\right)\\;=\\;3350\\;\\mathrm{years}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "oss829jr18em2ds",
+                "type": "p"
+              }
+            ],
+            "id": "3452961542"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2f9ajpn5g4yw1n2",
+                  "type": "p"
+                }
+              ],
+              "id": "488346049"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5w9k1qofspcvlxx",
+                  "type": "p"
+                }
+              ],
+              "id": "1009422577"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "e9fwbelxiphur8n",
+                  "type": "p"
+                }
+              ],
+              "id": "1919965350"
+            }
+          ],
+          "id": "1315104916",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\lambda\\;=\\;\\frac{\\ln\\;2}{t_{1/2}}\\;=\\;\\frac{\\ln\\;2}{5730\\;\\mathrm y}\\;=\\;1.21\\times10^{-4}\\;\\mathrm y^{-1}\\\\\\\\t\\;=\\;-\\frac1{\\mathrm\\lambda}\\;\\ln\\left(\\frac{{\\mathrm{Rate}}_t}{{\\mathrm{Rate}}_0}\\right)\\;=\\;-\\;\\frac1{1.21\\times10-4\\;\\mathrm y-1}\\;\\ln\\;\\left(\\frac{9.07\\;\\mathrm{dis}/\\min/\\mathrm g/\\mathrm C}{13.6\\;\\mathrm{dis}/\\min/\\mathrm g/\\mathrm C}\\right)\\;=\\;3350\\;\\mathrm{years}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "yu2s0yl6ifxbymy",
+                    "type": "p"
+                  }
+                ],
+                "id": "3124646224"
+              },
+              "id": "1543641822",
+              "legacyMatch": "[3340,3350]",
+              "rule": "input = {[3340,3350]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. "
+                      }
+                    ],
+                    "id": "l3qfc0dwo7bmzpn",
+                    "type": "p"
+                  }
+                ],
+                "id": "1479300239"
+              },
+              "id": "2784558726",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "More accurate dates of the reigns of ancient Egyptian pharaohs have been determined recently using plants that were preserved in their tombs. Samples of seeds and plant matter from King Tutankhamun’s tomb have a C-14 decay rate of 9.07 disintegrations/min/g of C. How long ago did King Tut’s reign come to an end?  years ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "1315104916",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "More accurate dates of the reigns of ancient Egyptian pharaohs have been determined recently using plants that were preserved in their tombs. Samples of seeds and plant matter from King Tutankhamun’s tomb have a C-14 decay rate of 9.07 disintegrations/min/g of C. How long ago did King Tut’s reign come to an end? "
+            }
+          ],
+          "id": "2fasj1rpr44ejt7",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " years "
+            }
+          ],
+          "id": "lghp0ldmxsvmres",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "1315104916": [
+      "78545"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

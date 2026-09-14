@@ -1,0 +1,176 @@
+{
+  "id": "80204",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "mech_rate_digt1-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "29yj201h2u2n0ss",
+                  "type": "p"
+                }
+              ],
+              "id": "1382973981"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "w9vchpznzx3nqhx",
+                  "type": "p"
+                }
+              ],
+              "id": "1862885012"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "0qjy6yp76shgg4f",
+                  "type": "p"
+                }
+              ],
+              "id": "4205415310"
+            }
+          ],
+          "id": "2009195522",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If the experimental rate law is the same as the rate law for the mechanism, we only know that the mechanism is "
+                      },
+                      {
+                        "em": true,
+                        "text": "possible"
+                      },
+                      {
+                        "text": ", not that it is correct."
+                      }
+                    ],
+                    "id": "7rqeuqqkd0yooqw",
+                    "type": "p"
+                  }
+                ],
+                "id": "722749530"
+              },
+              "id": "1568692767",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the experimental rate law is the same as the rate law for the mechanism, we only know that the mechanism is "
+                      },
+                      {
+                        "em": true,
+                        "text": "possible"
+                      },
+                      {
+                        "text": ", not that it is correct."
+                      }
+                    ],
+                    "id": "tft8c8n4rcmti0y",
+                    "type": "p"
+                  }
+                ],
+                "id": "1536043786"
+              },
+              "id": "163637033",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "w2e3jpkdoas8apo",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "nh24p02orjb8wsq",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "If the experimental rate law is the same as the rate law for the mechanism, the mechanism is correct."
+            }
+          ],
+          "id": "kap1qi1csl6jn95",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "2009195522": [
+      "78388"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

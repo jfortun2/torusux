@@ -1,0 +1,406 @@
+{
+  "id": "78820",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "cell_notation_1lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Which process occurs at the anode, oxidation or reduction?"
+                    }
+                  ],
+                  "id": "pqkrcvq1ox1ukzw",
+                  "type": "p"
+                }
+              ],
+              "id": "3047989522"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "eftigk237ffa2sb",
+                  "type": "p"
+                }
+              ],
+              "id": "2050667286"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "52zds2chbohjs45",
+                  "type": "p"
+                }
+              ],
+              "id": "3326972434"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The oxidation half-reaction occurs at the anode."
+                      }
+                    ],
+                    "id": "gn4rp30mgomd0db",
+                    "type": "p"
+                  }
+                ],
+                "id": "1420642388"
+              },
+              "id": "978452428",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The oxidation half-reaction occurs at the anode."
+                      }
+                    ],
+                    "id": "ta9mf8kgpozmzt0",
+                    "type": "p"
+                  }
+                ],
+                "id": "1142592208"
+              },
+              "id": "2027753515",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "v92bfiznq4gl6y9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3690932302"
+              },
+              "id": "974819596",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Which process occurs at the cathode, oxidation or reduction?"
+                    }
+                  ],
+                  "id": "aua2zvid94pkaua",
+                  "type": "p"
+                }
+              ],
+              "id": "272600195"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zvvpt4liuv2tebj",
+                  "type": "p"
+                }
+              ],
+              "id": "3521995342"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ba5hftn8d0ragq4",
+                  "type": "p"
+                }
+              ],
+              "id": "839364071"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reduction half-reaction occurs at the cathode."
+                      }
+                    ],
+                    "id": "ynrds1qrbh88c1d",
+                    "type": "p"
+                  }
+                ],
+                "id": "1837030067"
+              },
+              "id": "4017747484",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reduction half-reaction occurs at the cathode."
+                      }
+                    ],
+                    "id": "jp0h1lgjoz8vxv9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3867132024"
+              },
+              "id": "3083565674",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "98p60d2knd88zrv",
+                    "type": "p"
+                  }
+                ],
+                "id": "4237374874"
+              },
+              "id": "55175617",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Which half-reaction occurs at the anode? Which half-reaction occurs at the cathode? ",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "978452428"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "2027753515"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "4017747484"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "3083565674"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Au³⁺(aq) + 3 e⁻ → Au(s)"
+              }
+            ],
+            "id": "3026181916",
+            "type": "p"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Mg(s) → Mg²⁺(aq) + 2 e⁻"
+              }
+            ],
+            "id": "1710313649",
+            "type": "p"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Au³⁺(aq) + 3 e⁻ → Au(s)"
+              }
+            ],
+            "id": "436914343",
+            "type": "p"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Mg(s) → Mg²⁺(aq) + 2 e⁻"
+              }
+            ],
+            "id": "2459108931",
+            "type": "p"
+          }
+        ],
+        "id": "second_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "false",
+        "size": "medium"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "false"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Which half-reaction occurs at the anode? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "cd5trypi4uja15d",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Which half-reaction occurs at the cathode? "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "c52b3rel7sc6zct",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78528"
+    ],
+    "second": [
+      "78528"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

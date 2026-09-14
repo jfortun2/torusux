@@ -1,0 +1,261 @@
+{
+  "id": "80221",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_equil_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm\\Delta G\\;=\\;33.0\\frac{\\mathrm{kJ}}{\\mathrm{mol}}+\\left(8.314\\;\\frac{\\mathrm J}{\\mathrm{mol}\\;\\mathrm K}\\;\\times\\;1148\\;\\mathrm K\\;\\times\\;\\ln\\frac{\\;(0.500^3)\\times1.35}{3.12^2}\\right)=\\;-5.70\\frac{\\mathrm{kJ}}{\\mathrm{mol}}\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "cpdl04s7uvhd5zn",
+                "type": "p"
+              }
+            ],
+            "id": "2506727412"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2xesy255l31qd2s",
+                  "type": "p"
+                }
+              ],
+              "id": "334732998"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "5as1l4cuuruy2i2",
+                  "type": "p"
+                }
+              ],
+              "id": "3705425453"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "rmt6gjz75bcvn83",
+                  "type": "p"
+                }
+              ],
+              "id": "3005008262"
+            }
+          ],
+          "id": "981670664",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm\\Delta G\\;=\\;33.0\\frac{\\mathrm{kJ}}{\\mathrm{mol}}+\\left(8.314\\;\\frac{\\mathrm J}{\\mathrm{mol}\\;\\mathrm K}\\;\\times\\;1148\\;\\mathrm K\\;\\times\\;\\ln\\frac{\\;(0.500^3)\\times1.35}{3.12^2}\\right)=\\;-5.70\\frac{\\mathrm{kJ}}{\\mathrm{mol}}\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "e2p5j9wk94l7xtp",
+                    "type": "p"
+                  }
+                ],
+                "id": "2806183322"
+              },
+              "id": "1348803346",
+              "legacyMatch": "[-6,-5.60]",
+              "rule": "input = {[-6,-5.60]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Be sure to include superscripts based on coefficient in the equation for the value of Q. Convert temperature to K."
+                      }
+                    ],
+                    "id": "61v1dnxv766ho2d",
+                    "type": "p"
+                  }
+                ],
+                "id": "1589120943"
+              },
+              "id": "772429746",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "981670664",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Given the same reaction as in the example above: "
+            }
+          ],
+          "id": "pkt6qu3ufzb8lcz",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "p9tmc1zdzdhdt8n",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "ts592o362vqqtao",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm{NH}}_3(g)\\;\\;\\longrightarrow\\;\\;3\\;{\\mathrm H}_2(g)\\;+\\;{\\mathrm N}_2(g)\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm\\Delta G^\\circ\\;=\\;33.0\\;\\mathrm{kJ}/\\mathrm{mol}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Calculate the free energy change at 875 °C when the partial pressures are as follows: "
+            },
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "N"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "text": " = 1.35 atm, "
+            },
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "H"
+            },
+            {
+              "doublesub": true,
+              "text": "2"
+            },
+            {
+              "text": " = 0.500 atm, and "
+            },
+            {
+              "em": true,
+              "text": "P"
+            },
+            {
+              "sub": true,
+              "text": "NH"
+            },
+            {
+              "doublesub": true,
+              "text": "3"
+            },
+            {
+              "text": " = 3.12 atm"
+            }
+          ],
+          "id": "qfr0eoqtrq2fttw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " kJ/mol "
+            }
+          ],
+          "id": "z6kw9hb1c5qwspa",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "981670664": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

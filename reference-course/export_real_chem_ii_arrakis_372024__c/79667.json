@@ -1,0 +1,209 @@
+{
+  "id": "79667",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78207"
+  ],
+  "title": "geom_isomer_pool1_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1446486759",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "3064070520",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1919951569",
+          "incorrectScore": null,
+          "outOf": 6,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Four H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O ligands are named tetraaqua, two Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ligands are named dichloro, and these are written in alphabetical order. The central metal atom is Co"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": ", written as cobalt(II). The prefix cis- is used to indicate the two Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " ions are next to each other. "
+                      }
+                    ],
+                    "id": "691814434",
+                    "type": "p"
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": "This compound is named: cis-tetraaquadichlorocobalt(II)"
+                      }
+                    ],
+                    "id": "2h84njd457enays",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "2542629152",
+                "textDirection": "ltr"
+              },
+              "id": "3789092060",
+              "rule": "input like {cis-tetraaquadichlorocobalt(II)}",
+              "score": 6
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Identify the ligands and determine the charge of the metal ion. Write the names of the ligands in alphabetical order, with prefixes indicating the number of each. Write the name of the central metal next, with a Roman numeral indicating its charge. Add a prefix at the beginning of the complex name to indicate the geometric arrangement of the ligands."
+                      }
+                    ],
+                    "id": "1572765037",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "321553953",
+                "textDirection": "ltr"
+              },
+              "id": "829810335",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Interpret the structure to write the name and chemical formula of the coordination compound shown below.",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "117240020",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "customScoring": true,
+    "inputs": [
+      {
+        "id": "1940574242",
+        "inputType": "text",
+        "partId": "1919951569",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Interpret the structure to write the name and chemical formula of the coordination compound shown below."
+            }
+          ],
+          "id": "2255619601",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            }
+          ],
+          "id": "gmudtkzkl9pgnbn",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "r6v81zbashveh03",
+              "text": ""
+            }
+          ],
+          "display": "block",
+          "height": 232,
+          "id": "3655350203",
+          "src": "https://d2xvti2irp4c7t.cloudfront.net/media/A6/A615B7BF3328360ED041235EBAD680BD/GeomIsomersV3.png",
+          "type": "img",
+          "width": 200
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1940574242",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "1213162850",
+          "type": "p"
+        }
+      ],
+      "id": "2269906893"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1919951569": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

@@ -1,0 +1,465 @@
+{
+  "id": "79827",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78146"
+  ],
+  "title": "calc_ksp_from_amt_dissolve_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  }
+                ],
+                "id": "iaqol6e1u3efmmw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "strong": true,
+                    "text": "Solution"
+                  }
+                ],
+                "id": "pu51e3qsosbnzdw",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": " First calculate the molar solubility in mol/L. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "@@m@@\\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3}{602.69\\;\\mathrm g\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3}\\;=\\;@@mol@@\\;\\mathrm{mol}\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3\\\\\\mathrm{molar}\\;\\mathrm{solubility}\\;=\\;\\frac{@@mol@@\\;\\mathrm{mol}\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3}{@@volL@@\\;\\mathrm L}\\;=\\;@@molSol@@\\;\\mathrm M\\;",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " The dissolution reaction is: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3(s)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{Gd}^{3+}(aq)\\;+\\;3\\;{\\mathrm{SO}}_4^{2-}(aq)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Resulting in a "
+                  },
+                  {
+                    "em": true,
+                    "text": "K"
+                  },
+                  {
+                    "em": true,
+                    "sub": true,
+                    "text": "sp"
+                  },
+                  {
+                    "text": " expression of: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm{Gd}^{3+}\\rbrack}^2{\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack}^3",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": " Given the molar solubility of Gd"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "(SO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "4"
+                  },
+                  {
+                    "text": ")"
+                  },
+                  {
+                    "sub": true,
+                    "text": "3"
+                  },
+                  {
+                    "text": " is @@molSol@@: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\lbrack\\mathrm{Gd}^{3+}\\rbrack\\;=\\;2\\cdot@@molSol@@\\;=\\;@@molSolGd@@\\;\\mathrm M\\\\\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack\\;=\\;3\\cdot@@molSol@@\\;=\\;@@molSolSo4@@\\;\\mathrm M\\\\K_{sp}\\;=\\;{(@@molSolGd@@)}^2\\cdot{(@@molSolSo4@@)}^3\\;=\\;@@ksp@@\\\\",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  }
+                ],
+                "id": "wzgsohmpeo78048",
+                "type": "p"
+              }
+            ],
+            "id": "2004877516"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b9esdt9qq8eswfp",
+                  "type": "p"
+                }
+              ],
+              "id": "583549450"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "c3947x71t3qs95h",
+                  "type": "p"
+                }
+              ],
+              "id": "3732971562"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3c0ba9zlc54xm3n",
+                  "type": "p"
+                }
+              ],
+              "id": "3479462501"
+            }
+          ],
+          "id": "numeric1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. First calculate the molar solubility in mol/L. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "@@m@@\\;\\times\\;\\frac{1\\;\\mathrm{mol}\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3}{602.69\\;\\mathrm g\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3}\\;=\\;@@mol@@\\;\\mathrm{mol}\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3\\\\\\mathrm{molar}\\;\\mathrm{solubility}\\;=\\;\\frac{@@mol@@\\;\\mathrm{mol}\\;{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3}{@@volL@@\\;\\mathrm L}\\;=\\;@@molSol@@\\;\\mathrm M\\;",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " The dissolution reaction is: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "{\\mathrm{Gd}}_2{({\\mathrm{SO}}_4)}_3(s)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm{Gd}^{3+}(aq)\\;+\\;3\\;{\\mathrm{SO}}_4^{2-}(aq)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Resulting in a "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": " expression of: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "K_{sp}\\;=\\;{\\lbrack\\mathrm{Gd}^{3+}\\rbrack}^2{\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack}^3",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " Given the molar solubility of Gd"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "(SO"
+                      },
+                      {
+                        "sub": true,
+                        "text": "4"
+                      },
+                      {
+                        "text": ")"
+                      },
+                      {
+                        "sub": true,
+                        "text": "3"
+                      },
+                      {
+                        "text": " is @@molSol@@: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\lbrack\\mathrm{Gd}^{3+}\\rbrack\\;=\\;2\\cdot@@molSol@@\\;=\\;@@molSolGd@@\\;\\mathrm M\\\\\\lbrack{\\mathrm{SO}}_4^{2-}\\rbrack\\;=\\;3\\cdot@@molSol@@\\;=\\;@@molSolSo4@@\\;\\mathrm M\\\\K_{sp}\\;=\\;{(@@molSolGd@@)}^2\\cdot{(@@molSolSo4@@)}^3\\;=\\;@@ksp@@\\\\",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      }
+                    ],
+                    "id": "qbw04vveftq0943",
+                    "type": "p"
+                  }
+                ],
+                "id": "1135629135"
+              },
+              "id": "3328956907",
+              "legacyMatch": "[@@ksp_low@@,@@ksp_high@@]",
+              "rule": "input = {[@@ksp_low@@,@@ksp_high@@]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. To calculate "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ", use the equilibrium expression, which includes the equilibrium concentrations and the equilibrium constant. Be sure to write the correct chemical equation for the solubility equilibrium (the dissolving of a substance) and consider the phase of the different substances and stoichiometric coefficients. To determine the equilibrium concentrations of all dissolved species, use the molar mass and volume. Consider the stoichiometry when calculating moles. Then use these values in the equilibrium expression to calculate "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "em": true,
+                        "sub": true,
+                        "text": "sp"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "ta6xrfja45l57f4",
+                    "type": "p"
+                  }
+                ],
+                "id": "3924221127"
+              },
+              "id": "3457527958",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [
+        {
+          "children": [],
+          "data": [
+            {
+              "children": [],
+              "expression": "// Two variable definitions\nconst mm = 602.69;\nconst m = OLI.random(2.5,6.5,2);\n\nconst v = [100.0, 150.0, 200.0, 250.0, 300.0];\nconst c = OLI.random(0,4,0);\nconst vol = v[c];\nconst volL = (vol/1000) .toPrecision(3);\n\n\nconst mol = m/mm;\nconst molSol = (mol/volL) .toPrecision(3);\nconst mol_gd = 2*mol;\nconst molSolGd = (2*molSol) .toPrecision(3);\nconst mol_so4 = 3*mol;\nconst molSolSo4 = (3*molSol) .toPrecision(3);\n\nconst conc_gd = mol_gd/(vol/1000);\nconst conc_so4 = mol_so4/(vol/1000);\nconst ksp = (conc_gd**2*conc_so4**3) .toPrecision(3);\n\nconst ksp_low = 0.97*ksp;\nconst ksp_high = 1.03*ksp;\n\n// Expose variables to OLI\nmodule.exports = {\n  m, vol, volL, mol, molSol, mol_gd, molSolGd, conc_gd, mol_so4, molSolSo4, conc_so4, ksp, ksp_low, ksp_high\n};\n",
+              "id": "ea830e50f35b4f009140023b8bb37a20",
+              "name": "module",
+              "type": "variable",
+              "variable": "module"
+            }
+          ],
+          "operation": "variable_substitution",
+          "type": "transformation"
+        }
+      ]
+    },
+    "choices": [],
+    "inputs": [
+      {
+        "id": "numeric1",
+        "inputType": "numeric",
+        "partId": "numeric1",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "At a particular temperature, @@m@@ g of Gd"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "(SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": " will dissolve in @@vol@@ mL of water. What is the "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " of Gd"
+            },
+            {
+              "sub": true,
+              "text": "2"
+            },
+            {
+              "text": "(SO"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": ")"
+            },
+            {
+              "sub": true,
+              "text": "3"
+            },
+            {
+              "text": "?"
+            }
+          ],
+          "id": "a980729c7fda48bfb3925406ae863871",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "em": true,
+              "sub": true,
+              "text": "sp"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "numeric1",
+              "input": "numeric1",
+              "type": "input_ref"
+            }
+          ],
+          "id": "ab819b2443aa404a9fe31063422271d7",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "numeric1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

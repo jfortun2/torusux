@@ -37,7 +37,6 @@ import {
 } from './curriculumData';
 import { bankObjectivesById, evaluatePageBlockRemoval, type RemovalImpact } from './learningDesign';
 import {
-  addedQuestionCoverage,
   blockContentDiffers,
   blocksEqual,
   canMoveBlock,
@@ -46,6 +45,8 @@ import {
   extractObjectiveCode,
   formatObjectiveTag,
   insertBlock,
+  isUnitCheckpointPage,
+  resolvePageProfile,
   loadDraftPageLayout,
   loadPageMeta,
   loadSavedPageLayout,
@@ -80,7 +81,15 @@ import instructorIcon from './assets/instructor.png';
 import studentIcon from './assets/student.png';
 import radiationMaterialsImage from './assets/radiation_materials.jpg';
 import electrolysisImage from './assets/electrolysis.jpg';
+import weldingImage from './assets/question-welding.png';
 import kittenImage from './assets/kitten.png';
+
+const PAGE_IMAGES = {
+  electrolysis: electrolysisImage,
+  radiation: radiationMaterialsImage,
+  formula: formulaImage,
+  welding: weldingImage,
+};
 
 type Material = {
   id: string;
@@ -168,14 +177,7 @@ const rotateArray = <T,>(items: T[], amount: number): T[] => {
   return [...items.slice(offset), ...items.slice(0, offset)];
 };
 
-const isElectrochemistryUnitCheckpoint = (assessmentTitle?: string) =>
-  (assessmentTitle ?? '').toLowerCase().includes('electrochemistry');
-const isNuclearUnitCheckpoint = (assessmentTitle?: string) => (assessmentTitle ?? '').toLowerCase().includes('nuclear');
-const usesTaggedVariantNaming = (assessmentTitle?: string) =>
-  isElectrochemistryUnitCheckpoint(assessmentTitle) || isNuclearUnitCheckpoint(assessmentTitle);
-
-/** Points per embedded item; must match bank totals so the header “Overall Page Score” is 30 for the default layout. */
-const ASSESSMENT_EMBEDDED_QUESTION_POINTS = 3;
+const usesTaggedVariantNaming = (assessmentTitle?: string) => isUnitCheckpointPage(assessmentTitle);
 
 export const materials: Material[] = [
   { id: 'm1', title: 'Foundational Concepts of Electrochemistry', type: 'bank' },
@@ -694,21 +696,23 @@ const nuclearSelections: AssessmentSelection[] = [
   },
 ];
 
-const getAssessmentSelections = (assessmentTitle?: string) =>
-  assessmentTitle?.toLowerCase().includes('nuclear') ? nuclearSelections : electrochemistrySelections;
+const allAssessmentSelections = (): AssessmentSelection[] => [...electrochemistrySelections, ...nuclearSelections];
+
+const getAssessmentSelections = (assessmentTitle?: string) => {
+  const bankIds = resolvePageProfile(assessmentTitle).bankIds;
+  if (bankIds.length === 0) return [];
+  const pool = allAssessmentSelections();
+  return bankIds
+    .map((id) => pool.find((selection) => selection.id === id))
+    .filter((selection): selection is AssessmentSelection => Boolean(selection));
+};
 
 const getPageObjectives = (assessmentTitle?: string): PageObjective[] => {
-  const isNuclear = assessmentTitle?.toLowerCase().includes('nuclear');
-  return isNuclear
-    ? [
-        { code: 'LO 1.4', label: 'L1 Distinguish alpha, beta, and gamma radiation by interaction with matter.' },
-        { code: 'LO 1.5', label: 'L2 Explain how dose, pathway, and tissue sensitivity influence biological effects.' },
-      ]
-    : [
-        { code: 'LO 1.1', label: 'L1 Balance redox equations and construct half-reactions.' },
-        { code: 'LO 1.2', label: 'L2 Predict electrochemical behavior and cell trends.' },
-        { code: 'LO 1.3', label: 'L3 Evaluate electrochemistry applications in real systems.' },
-      ];
+  const codes = resolvePageProfile(assessmentTitle).objectiveCodes;
+  return COURSE_LEARNING_OBJECTIVES.filter((objective) => codes.includes(objective.code)).map((objective, index) => ({
+    code: objective.code,
+    label: `L${index + 1} ${objective.label.replace(/^L\d+\s+/i, '')}`,
+  }));
 };
 
 function App() {
@@ -727,13 +731,11 @@ function computeObjectiveCoverage({
   assessmentTitle,
   selections,
   removedBanks,
-  removedEmbedded,
   extraQuestions = [],
 }: {
   assessmentTitle: string;
   selections: AssessmentSelection[];
   removedBanks: string[];
-  removedEmbedded: Record<string, boolean>;
   extraQuestions?: { learningObjective: string }[];
 }) {
   const objectives = getPageObjectives(assessmentTitle);
@@ -779,40 +781,18 @@ function computeObjectiveCoverage({
     });
   });
 
-  const embeddedQuestions = [
-    {
-      id: 'exitQuestion',
-      removed: Boolean(removedEmbedded.exitQuestion),
-      learningObjective: assessmentTitle.toLowerCase().includes('nuclear')
-        ? 'Connect exposure pathway to biological outcomes'
-        : 'Explain equilibrium shifts',
-    },
-    ...(assessmentTitle.toLowerCase().includes('nuclear')
-      ? [
-          {
-            id: 'nuclearSafety',
-            removed: Boolean(removedEmbedded.nuclearSafety),
-            learningObjective: 'LO 1.4 Compare shielding and handling strategies for common radiation types.',
-          },
-        ]
-      : []),
-  ];
-
-  [...embeddedQuestions, ...extraQuestions.map((question, index) => ({ ...question, id: `extra-${index}`, removed: false }))].forEach(
-    (question) => {
-      if (question.removed) return;
-      const code = extractObjectiveCode(question.learningObjective);
-      if (!code || !objectiveByCode.has(code)) {
-        untaggedIncluded += 1;
-        return;
-      }
-      taggedIncluded += 1;
-      const current = totals.get(code);
-      if (!current) return;
-      current.min += 1;
-      current.max += 1;
-    },
-  );
+  extraQuestions.forEach((question) => {
+    const code = extractObjectiveCode(question.learningObjective);
+    if (!code || !objectiveByCode.has(code)) {
+      untaggedIncluded += 1;
+      return;
+    }
+    taggedIncluded += 1;
+    const current = totals.get(code);
+    if (!current) return;
+    current.min += 1;
+    current.max += 1;
+  });
 
   const coverage: ObjectiveCoverage[] = objectives.map((objective) => {
     const totalsForObjective = totals.get(objective.code.toUpperCase()) ?? { min: 0, max: 0 };
@@ -984,6 +964,20 @@ function CustomizeScreen() {
   );
 }
 
+function pageDefaultBlocks(assessmentTitle: string, isInstructorCreated: boolean): PageBlock[] {
+  const profile = resolvePageProfile(assessmentTitle);
+  if (isInstructorCreated && !profile.matched) return [];
+  const draft = loadAssessmentDraft(assessmentTitle);
+  return createDefaultPageBlocks({
+    pageTitle: assessmentTitle,
+    selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
+    removedBanks: draft.removedBanks,
+    removedEmbedded: draft.removedEmbedded,
+    images: PAGE_IMAGES,
+    origin: isInstructorCreated ? 'instructor' : 'canonical',
+  });
+}
+
 function AssessmentScreen() {
   const location = useLocation();
   const state = location.state as {
@@ -1006,20 +1000,10 @@ function AssessmentScreen() {
   const catalogObjectives = getPageObjectives(assessmentTitle);
   const initialAttachedCodes = storedMeta
     ? storedMeta.attachedObjectiveCodes
-    : isInstructorCreated
-      ? (state?.attachedObjectiveCodes ?? [])
+    : state?.attachedObjectiveCodes && state.attachedObjectiveCodes.length > 0
+      ? state.attachedObjectiveCodes
       : catalogObjectives.map((objective) => objective.code);
-  const buildDefaultBlocks = () =>
-    isInstructorCreated
-      ? []
-      : createDefaultPageBlocks({
-          isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
-          selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
-          removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
-          removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
-          objectives: getPageObjectives(assessmentTitle),
-        });
+  const buildDefaultBlocks = () => pageDefaultBlocks(assessmentTitle, isInstructorCreated);
   const [blocks, setBlocks] = useState<PageBlock[]>(() => loadDraftPageLayout(assessmentTitle) ?? loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [savedBlocks, setSavedBlocks] = useState<PageBlock[]>(() => loadSavedPageLayout(assessmentTitle) ?? buildDefaultBlocks());
   const [attachedCodes, setAttachedCodes] = useState<string[]>(() => initialAttachedCodes);
@@ -1042,12 +1026,11 @@ function AssessmentScreen() {
     () => COURSE_LEARNING_OBJECTIVES.filter((objective) => attachedCodes.includes(objective.code)),
     [attachedCodes],
   );
-  const isNuclearAssessment = assessmentTitle.toLowerCase().includes('nuclear');
+  const isCheckpointAssessment = isUnitCheckpointPage(assessmentTitle);
   const isStudentPreview = viewMode === 'student';
   const assessmentSelections = getAssessmentSelections(assessmentTitle);
   const attemptsStarted = state?.attemptsStarted ?? false;
   const removedBanks = removedBankIds(blocks);
-  const removedEmbeddedQuestions = removedEmbeddedFromBlocks(blocks);
   const dirty = !blocksEqual(blocks, savedBlocks);
   const changeSummary = useMemo(() => summarizePageChanges(savedBlocks, blocks), [savedBlocks, blocks]);
   const canonicalBlocks = useMemo(
@@ -1055,31 +1038,30 @@ function AssessmentScreen() {
       isInstructorCreated
         ? []
         : createDefaultPageBlocks({
-            isNuclear: isNuclearAssessment,
+            pageTitle: assessmentTitle,
             selectionIds: assessmentSelections.map((selection) => selection.id),
             removedBanks: [],
             removedEmbedded: {},
-            images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
-            objectives: pageObjectives,
+            images: PAGE_IMAGES,
           }),
-    [isInstructorCreated, isNuclearAssessment, assessmentSelections, pageObjectives],
+    [isInstructorCreated, assessmentTitle, assessmentSelections],
   );
   const isPageCustomized = useMemo(
     () => !isInstructorCreated && pageIsCustomized(canonicalBlocks, blocks),
     [isInstructorCreated, canonicalBlocks, blocks],
   );
-  const extraQuestions = addedQuestionCoverage(blocks);
+  const extraQuestions = blocks
+    .filter((block): block is Extract<PageBlock, { kind: 'question' }> => block.kind === 'question')
+    .filter((block) => block.status !== 'removed')
+    .map((block) => ({ learningObjective: block.question.learningObjective }));
   const studentPreviewData = useMemo(() => {
     const usesVariantNaming = usesTaggedVariantNaming(assessmentTitle);
-    const isElectrochemistry = isElectrochemistryUnitCheckpoint(assessmentTitle);
-    const isNuclearCheckpoint = isNuclearUnitCheckpoint(assessmentTitle);
     const banks: StudentPreviewBank[] = assessmentSelections
       .filter((selection) => !removedBanks.includes(selection.id))
       .map((selection, index) => {
-        const candidateCount =
-          isElectrochemistry || isNuclearCheckpoint
-            ? selection.availableQuestions
-            : Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
+        const candidateCount = isCheckpointAssessment
+          ? selection.availableQuestions
+          : Math.min(selection.availableQuestions, Math.max(selection.numberToSelect * 2, selection.exampleQuestions.length + 1));
         const candidateQuestions: StudentPreviewQuestion[] = Array.from({ length: candidateCount }).map((_, questionIndex) => {
           const seeded = selection.exampleQuestions[questionIndex % selection.exampleQuestions.length];
           if (usesVariantNaming) {
@@ -1114,75 +1096,44 @@ function AssessmentScreen() {
           scenarioQuestions: candidateQuestions.slice(0, selection.numberToSelect),
         };
       });
-    const embeddedQuestions: StudentPreviewQuestion[] = [];
-    if (isNuclearAssessment && !removedEmbeddedQuestions.nuclearSafety) {
-      embeddedQuestions.push({
-        id: 'embedded-nuclear-safety-preview',
-        title: 'Radiation Materials Safety Check',
-        prompt: 'A lab stores alpha, beta, and gamma emitters for demonstrations. Which setup best reduces exposure risk while preserving visibility for students?',
-        kind: 'mcq',
-        points: ASSESSMENT_EMBEDDED_QUESTION_POINTS,
-        choices: [
-          'Use paper shielding for all sources and keep all containers open for easier viewing.',
-          'Use thick lead shielding for alpha sources only and remove barriers for beta and gamma sources.',
-          'Keep sealed containers, use acrylic shielding for beta sources, and place gamma sources behind lead shielding at distance.',
-          'Store all emitters together in one tray to simplify transport between lab benches.',
-        ],
-      });
-    }
-    if (!removedEmbeddedQuestions.exitQuestion) {
-      embeddedQuestions.push({
-        id: 'embedded-exit-preview',
-        title: isNuclearAssessment ? 'Biological Effects Exit Question' : 'Electrochemistry Exit Question',
-        prompt: isNuclearAssessment
-          ? 'Which factor most directly explains why equal absorbed doses can lead to different biological outcomes?'
-          : 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?',
-        kind: 'mcq',
-        points: ASSESSMENT_EMBEDDED_QUESTION_POINTS,
-        choices: isNuclearAssessment
-          ? [
-              'All tissues respond identically to ionizing radiation.',
-              'Biological effect varies with tissue radiosensitivity, dose rate, and exposure pathway.',
-              'Only external exposure affects biological outcome.',
-              'Shielding type has no impact once exposure begins.',
-            ]
-          : [
-              'The anode starts reducing instead of oxidizing.',
-              'Reaction quotient shifts and lowers the driving force toward equilibrium.',
-              'Electrons are no longer transferred through the external circuit.',
-              'The salt bridge blocks ion movement once products form.',
-            ],
-      });
-    }
+    const embeddedQuestions: StudentPreviewQuestion[] = blocks
+      .filter((block): block is Extract<PageBlock, { kind: 'question' }> => block.kind === 'question')
+      .filter((block) => block.status !== 'removed')
+      .map((block) => ({
+        id: `embedded-${block.id}`,
+        title: block.question.title,
+        prompt: block.question.prompt,
+        kind: block.question.kind,
+        points: block.question.points,
+        choices: block.question.choices.map((choice) => choice.text),
+        showGraph: block.question.showGraph,
+      }));
     return { banks, embeddedQuestions };
-  }, [assessmentTitle, assessmentSelections, removedBanks, removedEmbeddedQuestions, isNuclearAssessment]);
+  }, [assessmentTitle, assessmentSelections, removedBanks, isCheckpointAssessment, blocks]);
   const coverageSummary = useMemo(
     () =>
       computeObjectiveCoverage({
         assessmentTitle,
-        selections: isInstructorCreated ? [] : assessmentSelections,
+        selections: assessmentSelections,
         removedBanks,
-        removedEmbedded: removedEmbeddedQuestions,
         extraQuestions,
       }),
-    [assessmentTitle, isInstructorCreated, assessmentSelections, removedBanks, removedEmbeddedQuestions, extraQuestions],
+    [assessmentTitle, assessmentSelections, removedBanks, extraQuestions],
   );
 
   const overallPageScore = useMemo(() => {
     let total = 0;
-    if (!isInstructorCreated) {
-      assessmentSelections.forEach((selection) => {
-        if (removedBanks.includes(selection.id)) return;
-        const pointsPerQuestion = selection.exampleQuestions[0]?.points ?? 1;
-        total += selection.numberToSelect * pointsPerQuestion;
-      });
-    }
+    assessmentSelections.forEach((selection) => {
+      if (removedBanks.includes(selection.id)) return;
+      const pointsPerQuestion = selection.exampleQuestions[0]?.points ?? 1;
+      total += selection.numberToSelect * pointsPerQuestion;
+    });
     blocks.forEach((block) => {
       if (block.kind !== 'question' || block.status === 'removed') return;
       total += block.question.points;
     });
     return total;
-  }, [isInstructorCreated, assessmentSelections, removedBanks, blocks]);
+  }, [assessmentSelections, removedBanks, blocks]);
 
   const showBlockToast = (blockId: string, message: string) => {
     setBlockToasts((current) => ({ ...current, [blockId]: message }));
@@ -1196,16 +1147,7 @@ function AssessmentScreen() {
   };
 
   useLayoutEffect(() => {
-    const defaults = isInstructorCreated
-      ? []
-      : createDefaultPageBlocks({
-          isNuclear: assessmentTitle.toLowerCase().includes('nuclear'),
-          selectionIds: getAssessmentSelections(assessmentTitle).map((selection) => selection.id),
-          removedBanks: loadAssessmentDraft(assessmentTitle).removedBanks,
-          removedEmbedded: loadAssessmentDraft(assessmentTitle).removedEmbedded,
-          images: { electrolysis: electrolysisImage, radiation: radiationMaterialsImage },
-          objectives: getPageObjectives(assessmentTitle),
-        });
+    const defaults = pageDefaultBlocks(assessmentTitle, isInstructorCreated);
     const saved = loadSavedPageLayout(assessmentTitle) ?? defaults;
     const draft = loadDraftPageLayout(assessmentTitle) ?? saved;
     setSavedBlocks(saved);
@@ -1216,8 +1158,8 @@ function AssessmentScreen() {
     setAttachedCodes(
       nextMeta
         ? nextMeta.attachedObjectiveCodes
-        : isInstructorCreated
-          ? (state?.attachedObjectiveCodes ?? [])
+        : state?.attachedObjectiveCodes && state.attachedObjectiveCodes.length > 0
+          ? state.attachedObjectiveCodes
           : getPageObjectives(assessmentTitle).map((objective) => objective.code),
     );
   }, [assessmentTitle, isInstructorCreated, state?.attachedObjectiveCodes]);
@@ -1621,7 +1563,7 @@ function AssessmentScreen() {
                           selected={selectedBlockId === block.id}
                           canMoveUp={canMoveBlock(blocks, block.id, 'up')}
                           canMoveDown={canMoveBlock(blocks, block.id, 'down')}
-                          canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'question')}
+                          canEdit={block.status !== 'removed' && (block.kind === 'text' || block.kind === 'example' || block.kind === 'question')}
                           canRestoreOriginal={canRestoreOriginal}
                           dragging={draggingBlockId === block.id}
                           dropPlacement={
@@ -1630,6 +1572,10 @@ function AssessmentScreen() {
                           onEdit={() => {
                             if (block.kind === 'text') {
                               setCustomizeDialog({ type: 'edit-text', block });
+                              return;
+                            }
+                            if (block.kind === 'example') {
+                              setCustomizeDialog({ type: 'edit-example', block });
                               return;
                             }
                             if (block.kind === 'question') {
@@ -1851,8 +1797,12 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     breadcrumbTrail?: BreadcrumbItem[];
   } | null;
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
-  const assessmentSelections = getAssessmentSelections(state?.assessmentTitle);
-  const selectedBank = assessmentSelections.find((bank) => bank.id === state?.bankId) ?? assessmentSelections[0];
+  const pageSelections = getAssessmentSelections(state?.assessmentTitle);
+  const selectedBank =
+    pageSelections.find((bank) => bank.id === state?.bankId) ??
+    allAssessmentSelections().find((bank) => bank.id === state?.bankId) ??
+    pageSelections[0] ??
+    electrochemistrySelections[0];
   const attemptsStarted = state?.attemptsStarted ?? false;
 
   useLayoutEffect(() => {

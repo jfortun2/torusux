@@ -1,0 +1,213 @@
+{
+  "id": "80347",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "third_law_lbd1-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "An increase in the number of gas particles corresponds to increased dispersal of matter. A decrease in the number of gas particles corresponds to decreased dispersal of matter."
+                    }
+                  ],
+                  "id": "8pyuvh4lbedpimj",
+                  "type": "p"
+                }
+              ],
+              "id": "3288629578"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6zxk1hsh2xs6tp0",
+                  "type": "p"
+                }
+              ],
+              "id": "2662709395"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hoz1ddk9jil6heo",
+                  "type": "p"
+                }
+              ],
+              "id": "11061940"
+            }
+          ],
+          "id": "325880699",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The number of gas particles decreases during this reaction: 2 mol HCl("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") to 1 mol H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": "), which corresponds to a decrease in entropy."
+                      }
+                    ],
+                    "id": "3417fhb37icp9f7",
+                    "type": "p"
+                  }
+                ],
+                "id": "1926652726"
+              },
+              "id": "3695706787",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. An increase in the number of gas particles corresponds to increased dispersal of matter. A decrease in the number of gas particles corresponds to decreased dispersal of matter."
+                      }
+                    ],
+                    "id": "xpv7a93jq4tpl5s",
+                    "type": "p"
+                  }
+                ],
+                "id": "903169359"
+              },
+              "id": "3147288947",
+              "legacyMatch": "A",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "For the following reaction: predict whether the sign of ΔS° will be positive or negative.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Positive"
+              }
+            ],
+            "id": "wl53u0qoozw3tzk",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Negative"
+              }
+            ],
+            "id": "wozngfgspgnzbiw",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "For the following reaction:"
+            }
+          ],
+          "id": "45ritmoajsaghjk",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "2pppa9ozm31e938",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "y067gnxecp2izuc",
+          "legacyBlockRendered": "true",
+          "src": "\\mathrm{Pb}(s)\\;+\\;2\\;\\mathrm{HCl}(g)\\;\\;\\longrightarrow\\;\\;{\\mathrm{PbCl}}_2(s)\\;+\\;{\\mathrm H}_2(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "predict whether the sign of Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": "° will be positive or negative."
+            }
+          ],
+          "id": "yufzkoevhpfajq2",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "325880699": [
+      "78409"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

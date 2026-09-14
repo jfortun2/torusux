@@ -1,0 +1,224 @@
+{
+  "id": "78904",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "ph_salt2_lbd-q3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}2.04\\times10^{-5}\\;=\\;\\frac{x^2}{0.083}\\\\x\\mathit\\;=\\;0.00130\\;=\\;\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\mathrm{pOH}\\;=\\;-\\log(0.00130)\\;=\\;2.88\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "yj9ob4uu3at9c8e",
+                "type": "p"
+              }
+            ],
+            "id": "3078314144"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ],
+                      "legacyBlockRendered": true,
+                      "src": "K_\\mathrm{b}\\;=\\;\\frac{\\lbrack\\mathrm{HCN}\\rbrack\\;\\lbrack\\mathrm{OH}^-\\rbrack}{\\lbrack\\mathrm{CN}^-\\rbrack}",
+                      "subtype": "latex",
+                      "type": "formula_inline"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "s2vlpsiarxus0zf",
+                  "type": "p"
+                }
+              ],
+              "id": "248849080"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Assume "
+                    },
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " << 0.083."
+                    }
+                  ],
+                  "id": "hppm6yxlinmoj7d",
+                  "type": "p"
+                }
+              ],
+              "id": "1704580212"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xoy9dewmhhf70ud",
+                  "type": "p"
+                }
+              ],
+              "id": "2188817873"
+            }
+          ],
+          "id": "4675860",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}2.04\\times10^{-5}\\;=\\;\\frac{x^2}{0.083}\\\\x\\mathit\\;=\\;0.00130\\;=\\;\\lbrack\\mathrm{OH}^-\\rbrack\\\\\\mathrm{pOH}\\;=\\;-\\log(0.00130)\\;=\\;2.88\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "dwcvqvfjt6d0h17",
+                    "type": "p"
+                  }
+                ],
+                "id": "2587212844"
+              },
+              "id": "2363504111",
+              "legacyMatch": "[2.8,2.9]",
+              "rule": "input = {[2.8,2.9]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "a6pud7lszky8m5o",
+                    "type": "p"
+                  }
+                ],
+                "id": "1372467088"
+              },
+              "id": "56820267",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "4675860",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pOH of the solution. "
+            }
+          ],
+          "id": "pj1wfegr6hslgnl",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pOH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "i3e2keqh7pyvbsk",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "4675860": [
+      "78356"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

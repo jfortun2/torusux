@@ -1,0 +1,167 @@
+{
+  "id": "78902",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "scientific_notation-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "a6n6l26ae8efmar",
+                  "type": "p"
+                }
+              ],
+              "id": "1141723833"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uoqer0kiuu7x8je",
+                  "type": "p"
+                }
+              ],
+              "id": "12125955"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "khd8rnl3o7vmr2a",
+                  "type": "p"
+                }
+              ],
+              "id": "4281750902"
+            }
+          ],
+          "id": "3070627542",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. This is the way to enter scientific notation into numeric input answer boxes throughout the course."
+                      }
+                    ],
+                    "id": "7eezunej49ilydw",
+                    "type": "p"
+                  }
+                ],
+                "id": "3039033693"
+              },
+              "id": "2909219180",
+              "legacyMatch": "6.022e23",
+              "rule": "input = {6.022e23}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Enter 6.022e23 into the input box. "
+                      }
+                    ],
+                    "id": "crio6khydxv6wwo",
+                    "type": "p"
+                  }
+                ],
+                "id": "3312795479"
+              },
+              "id": "3699077511",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "To be sure you understand this process, enter 6.022 × 1023 in the input box below. Be sure to use the process as described above.  ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "3070627542",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "To be sure you understand this process, enter 6.022 × 10"
+            },
+            {
+              "sup": true,
+              "text": "23"
+            },
+            {
+              "text": " in the input box below. Be sure to use the process as described above. "
+            }
+          ],
+          "id": "p7661bowy06br64",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " "
+            }
+          ],
+          "id": "4d2cbgevq42cyhf",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "3070627542": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

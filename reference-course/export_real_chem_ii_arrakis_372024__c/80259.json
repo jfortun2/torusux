@@ -1,0 +1,1313 @@
+{
+  "id": "80259",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "change_pressure2_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9fu78td77pcgi6e",
+                  "type": "p"
+                }
+              ],
+              "id": "2009023764"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "nu7f08yhcyry850",
+                  "type": "p"
+                }
+              ],
+              "id": "433896443"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zxzd087kks9501r",
+                  "type": "p"
+                }
+              ],
+              "id": "722087050"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Pressure and volume are inversely proportional. Decreasing the volume causes the pressure to increase."
+                      }
+                    ],
+                    "id": "ipvn2i77fg7p84h",
+                    "type": "p"
+                  }
+                ],
+                "id": "2158997129"
+              },
+              "id": "278949002",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Pressure and volume are inversely proportional. Decreasing the volume causes the pressure to increase."
+                      }
+                    ],
+                    "id": "e5gotvx78guzllf",
+                    "type": "p"
+                  }
+                ],
+                "id": "1113386727"
+              },
+              "id": "2975606337",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Pressure and volume are inversely proportional. Decreasing the volume causes the pressure to increase."
+                      }
+                    ],
+                    "id": "iy6vscdrk6o1zxr",
+                    "type": "p"
+                  }
+                ],
+                "id": "2476996990"
+              },
+              "id": "1855009594",
+              "legacyMatch": "C",
+              "rule": "input like {first_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "torzj7efjj3y367",
+                    "type": "p"
+                  }
+                ],
+                "id": "3357655751"
+              },
+              "id": "2161041251",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "22n6vk935twftn3",
+                  "type": "p"
+                }
+              ],
+              "id": "3370712377"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "3xkzujjjtl04eyn",
+                  "type": "p"
+                }
+              ],
+              "id": "2119898182"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "jtqduubgpbhlz7c",
+                  "type": "p"
+                }
+              ],
+              "id": "595140907"
+            }
+          ],
+          "id": "second",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the stress is due to increased pressure, the system will adjust to decrease the pressure."
+                      }
+                    ],
+                    "id": "qy1llnyknbkvcyc",
+                    "type": "p"
+                  }
+                ],
+                "id": "1130612341"
+              },
+              "id": "3965919074",
+              "legacyMatch": "A",
+              "rule": "input like {second_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. If the stress is due to increased pressure, the system will adjust to decrease the pressure."
+                      }
+                    ],
+                    "id": "nzdkg0l064sjx9v",
+                    "type": "p"
+                  }
+                ],
+                "id": "1327915525"
+              },
+              "id": "250265923",
+              "legacyMatch": "B",
+              "rule": "input like {second_B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If the stress is due to increased pressure, the system will adjust to decrease the pressure."
+                      }
+                    ],
+                    "id": "utpfr8yxalljqtw",
+                    "type": "p"
+                  }
+                ],
+                "id": "2500007989"
+              },
+              "id": "3234492161",
+              "legacyMatch": "C",
+              "rule": "input like {second_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "3g0zszx99vg988k",
+                    "type": "p"
+                  }
+                ],
+                "id": "4035444507"
+              },
+              "id": "1577078277",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "g57piviw09gr9zf",
+                  "type": "p"
+                }
+              ],
+              "id": "4203887772"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "zehs9l4r0iqvlh9",
+                  "type": "p"
+                }
+              ],
+              "id": "3755263686"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "d5lzx9qxnbfqhde",
+                  "type": "p"
+                }
+              ],
+              "id": "2598988670"
+            }
+          ],
+          "id": "third",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The system shifts to the right."
+                      }
+                    ],
+                    "id": "6pui2ekgdosrecq",
+                    "type": "p"
+                  }
+                ],
+                "id": "3751029180"
+              },
+              "id": "2506073058",
+              "legacyMatch": "A",
+              "rule": "input like {third_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The system shifts to the right."
+                      }
+                    ],
+                    "id": "eqqject8okpxr20",
+                    "type": "p"
+                  }
+                ],
+                "id": "56863320"
+              },
+              "id": "4042050931",
+              "legacyMatch": "B",
+              "rule": "input like {third_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The system shifts to the right."
+                      }
+                    ],
+                    "id": "r6qbx542aa0nr5m",
+                    "type": "p"
+                  }
+                ],
+                "id": "1184671086"
+              },
+              "id": "4072991233",
+              "legacyMatch": "C",
+              "rule": "input like {third_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "bbb73cfds5laixq",
+                    "type": "p"
+                  }
+                ],
+                "id": "3407132894"
+              },
+              "id": "1047519478",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "36zhlq9zfkx38qi",
+                  "type": "p"
+                }
+              ],
+              "id": "1262996754"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4y6lllo5rn1lnij",
+                  "type": "p"
+                }
+              ],
+              "id": "2615384623"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wa6y73o22dqc50n",
+                  "type": "p"
+                }
+              ],
+              "id": "3615381006"
+            }
+          ],
+          "id": "fourth",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Because pressure is proportional to moles of gas, the system will shift in the direction of fewer moles of gas. There are 3 moles of gas on the left and 2 moles of gas on the right."
+                      }
+                    ],
+                    "id": "ipg1hmx9y2odlam",
+                    "type": "p"
+                  }
+                ],
+                "id": "3734544739"
+              },
+              "id": "3952222030",
+              "legacyMatch": "A",
+              "rule": "input like {fourth_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There are 3 moles of gas on the left and 2 moles of gas on the right."
+                      }
+                    ],
+                    "id": "6tfxj5sep8f5b8t",
+                    "type": "p"
+                  }
+                ],
+                "id": "2863470510"
+              },
+              "id": "2750816045",
+              "legacyMatch": "B",
+              "rule": "input like {fourth_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Pressure is proportional to moles of gas, not total moles."
+                      }
+                    ],
+                    "id": "l3vryqzl0zksknm",
+                    "type": "p"
+                  }
+                ],
+                "id": "3293480357"
+              },
+              "id": "3186262888",
+              "legacyMatch": "C",
+              "rule": "input like {fourth_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Pressure is proportional to moles of gas, not total moles. Also, there are 3 total moles on the left and 4 total moles on the right."
+                      }
+                    ],
+                    "id": "seheu6x6s23ovsc",
+                    "type": "p"
+                  }
+                ],
+                "id": "3343535305"
+              },
+              "id": "2050028550",
+              "legacyMatch": "D",
+              "rule": "input like {fourth_D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "yj81iu1uhhzitg4",
+                    "type": "p"
+                  }
+                ],
+                "id": "1864916740"
+              },
+              "id": "985760492",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wfd1px3tlif0cc1",
+                  "type": "p"
+                }
+              ],
+              "id": "808048303"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "pw5ar9qbxz592gr",
+                  "type": "p"
+                }
+              ],
+              "id": "2400341495"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "xm32k7gaeovzhko",
+                  "type": "p"
+                }
+              ],
+              "id": "1042025218"
+            }
+          ],
+          "id": "fifth",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The amount of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") increases and the amount of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "S("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") decreases, so the ratio "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "\\frac{P_{{\\mathrm H}_2\\mathrm O}}{P_{{\\mathrm H}_2\\mathrm S}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " will increase."
+                      }
+                    ],
+                    "id": "bvghofkjsh4sqel",
+                    "type": "p"
+                  }
+                ],
+                "id": "1416653352"
+              },
+              "id": "1921310303",
+              "legacyMatch": "A",
+              "rule": "input like {fifth_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The amount of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") increases and the amount of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "S("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") decreases, so the ratio "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "\\frac{P_{{\\mathrm H}_2\\mathrm O}}{P_{{\\mathrm H}_2\\mathrm S}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " will increase."
+                      }
+                    ],
+                    "id": "wzi0xlxkc1y3pk9",
+                    "type": "p"
+                  }
+                ],
+                "id": "882460997"
+              },
+              "id": "3260684232",
+              "legacyMatch": "B",
+              "rule": "input like {fifth_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The amount of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "O("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") increases and the amount of H"
+                      },
+                      {
+                        "sub": true,
+                        "text": "2"
+                      },
+                      {
+                        "text": "S("
+                      },
+                      {
+                        "em": true,
+                        "text": "g"
+                      },
+                      {
+                        "text": ") decreases, so the ratio "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "\\frac{P_{{\\mathrm H}_2\\mathrm O}}{P_{{\\mathrm H}_2\\mathrm S}}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " will increase."
+                      }
+                    ],
+                    "id": "ju3h25i64u9ei6u",
+                    "type": "p"
+                  }
+                ],
+                "id": "1124587705"
+              },
+              "id": "724073403",
+              "legacyMatch": "C",
+              "rule": "input like {fifth_C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "5zbeegxd1n48nel",
+                    "type": "p"
+                  }
+                ],
+                "id": "3090200652"
+              },
+              "id": "2694182434",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Consider the following reaction: Complete the following statements describing what happens if the volume of the reaction vessel is cut in half.Decreasing the volume causes  pressure in the vessel.The system responds by shifting in the direction that will  the pressure.The reaction will therefore  because there are , and the ratio  will .",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "278949002"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "2975606337"
+        ],
+        [
+          [
+            "first_C"
+          ],
+          "1855009594"
+        ],
+        [
+          [
+            "second_A"
+          ],
+          "3965919074"
+        ],
+        [
+          [
+            "second_B"
+          ],
+          "250265923"
+        ],
+        [
+          [
+            "second_C"
+          ],
+          "3234492161"
+        ],
+        [
+          [
+            "third_A"
+          ],
+          "2506073058"
+        ],
+        [
+          [
+            "third_B"
+          ],
+          "4042050931"
+        ],
+        [
+          [
+            "third_C"
+          ],
+          "4072991233"
+        ],
+        [
+          [
+            "fourth_A"
+          ],
+          "3952222030"
+        ],
+        [
+          [
+            "fourth_B"
+          ],
+          "2750816045"
+        ],
+        [
+          [
+            "fourth_C"
+          ],
+          "3186262888"
+        ],
+        [
+          [
+            "fourth_D"
+          ],
+          "2050028550"
+        ],
+        [
+          [
+            "fifth_A"
+          ],
+          "1921310303"
+        ],
+        [
+          [
+            "fifth_B"
+          ],
+          "3260684232"
+        ],
+        [
+          [
+            "fifth_C"
+          ],
+          "724073403"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "2511228345",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        },
+        {
+          "id": "2488892021",
+          "operation": "shuffle",
+          "partId": "second",
+          "path": "choices"
+        },
+        {
+          "id": "2271367907",
+          "operation": "shuffle",
+          "partId": "third",
+          "path": "choices"
+        },
+        {
+          "id": "845408462",
+          "operation": "shuffle",
+          "partId": "fourth",
+          "path": "choices"
+        },
+        {
+          "id": "3768923119",
+          "operation": "shuffle",
+          "partId": "fifth",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "7612bqgmq6jcrsm",
+            "text": "higher"
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "cqbvdyqsyrhrsgl",
+            "text": "lower"
+          }
+        ],
+        "id": "first_B"
+      },
+      {
+        "content": [
+          {
+            "id": "xsgruxiir102ad6",
+            "text": "no change in"
+          }
+        ],
+        "id": "first_C"
+      },
+      {
+        "content": [
+          {
+            "id": "xj7xuka9g9npe7r",
+            "text": "increase"
+          }
+        ],
+        "id": "second_A"
+      },
+      {
+        "content": [
+          {
+            "id": "v6208c8gnf7kjve",
+            "text": "decrease"
+          }
+        ],
+        "id": "second_B"
+      },
+      {
+        "content": [
+          {
+            "id": "bampz5kf2vfpujs",
+            "text": "not change"
+          }
+        ],
+        "id": "second_C"
+      },
+      {
+        "content": [
+          {
+            "id": "mpbefd49dh8ygfx",
+            "text": "shift to the right "
+          }
+        ],
+        "id": "third_A"
+      },
+      {
+        "content": [
+          {
+            "id": "q92nq3j0cadv9wb",
+            "text": "shift to the left"
+          }
+        ],
+        "id": "third_B"
+      },
+      {
+        "content": [
+          {
+            "id": "yn6alz56nl34ho1",
+            "text": "not shift"
+          }
+        ],
+        "id": "third_C"
+      },
+      {
+        "content": [
+          {
+            "id": "i03b1jqat6ml5cb",
+            "text": "fewer moles of gas on the right "
+          }
+        ],
+        "id": "fourth_A"
+      },
+      {
+        "content": [
+          {
+            "id": "azdedxw24p9y9ja",
+            "text": "fewer moles of gas on the left"
+          }
+        ],
+        "id": "fourth_B"
+      },
+      {
+        "content": [
+          {
+            "id": "avt2rarrft9eicd",
+            "text": "more total moles on the right"
+          }
+        ],
+        "id": "fourth_C"
+      },
+      {
+        "content": [
+          {
+            "id": "e13hh1wl568bke4",
+            "text": "more total moles on the left"
+          }
+        ],
+        "id": "fourth_D"
+      },
+      {
+        "content": [
+          {
+            "id": "7z5r16tct2x06wx",
+            "text": "increase"
+          }
+        ],
+        "id": "fifth_A"
+      },
+      {
+        "content": [
+          {
+            "id": "jcx0dr961sub15d",
+            "text": "decrease"
+          }
+        ],
+        "id": "fifth_B"
+      },
+      {
+        "content": [
+          {
+            "id": "rt76kh7vfuts0fb",
+            "text": "stay the same"
+          }
+        ],
+        "id": "fifth_C"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B",
+          "first_C"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "second_A",
+          "second_B",
+          "second_C"
+        ],
+        "id": "second",
+        "inputType": "dropdown",
+        "partId": "second",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "third_A",
+          "third_B",
+          "third_C"
+        ],
+        "id": "third",
+        "inputType": "dropdown",
+        "partId": "third",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "fourth_A",
+          "fourth_B",
+          "fourth_C",
+          "fourth_D"
+        ],
+        "id": "fourth",
+        "inputType": "dropdown",
+        "partId": "fourth",
+        "shuffle": "true"
+      },
+      {
+        "choiceIds": [
+          "fifth_A",
+          "fifth_B",
+          "fifth_C"
+        ],
+        "id": "fifth",
+        "inputType": "dropdown",
+        "partId": "fifth",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the following reaction:"
+            }
+          ],
+          "id": "dcfr94chlxw0lnw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "z9ij260g9ayvvkg",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "4v64dg2vitoibe3",
+          "legacyBlockRendered": "true",
+          "src": "2\\;{\\mathrm H}_2\\mathrm S(g)\\;+\\;{\\mathrm O}_2(g)\\;\\;\\rightleftharpoons\\;\\;2\\;\\mathrm S(s)\\;+\\;2\\;{\\mathrm H}_2\\mathrm O(g) \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\mathrm\\Delta H\\;=\\;-221\\;\\mathrm{kJ}",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Complete the following statements describing what happens if the volume of the reaction vessel is cut in half."
+            }
+          ],
+          "id": "mymvkm3ait0dajr",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Decreasing the volume causes "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " pressure in the vessel."
+            }
+          ],
+          "id": "5u7kzyq8j9jccuw",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The system responds by shifting in the direction that will "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "second",
+              "input": "second",
+              "type": "input_ref"
+            },
+            {
+              "text": " the pressure."
+            }
+          ],
+          "id": "9gvjp4fgg9nowb4",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The reaction will therefore "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "third",
+              "input": "third",
+              "type": "input_ref"
+            },
+            {
+              "text": " because there are "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "fourth",
+              "input": "fourth",
+              "type": "input_ref"
+            },
+            {
+              "text": ", and the ratio "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "legacyBlockRendered": false,
+              "src": "\\frac{P_{{\\mathrm H}_2\\mathrm O}}{P_{{\\mathrm H}_2\\mathrm S}}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " will "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "fifth",
+              "input": "fifth",
+              "type": "input_ref"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "id": "xoek2qfgvk0ag21",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "fifth": [
+      "78441"
+    ],
+    "first": [
+      "78441"
+    ],
+    "fourth": [
+      "78441"
+    ],
+    "second": [
+      "78441"
+    ],
+    "third": [
+      "78441"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

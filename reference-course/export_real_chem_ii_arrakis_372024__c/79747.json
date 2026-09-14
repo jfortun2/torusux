@@ -1,0 +1,226 @@
+{
+  "id": "79747",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "q_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ebsxpphtg3nwglm",
+                  "type": "p"
+                }
+              ],
+              "id": "757904345"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "l35h9m2zt2j5nd9",
+                  "type": "p"
+                }
+              ],
+              "id": "1547172724"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "oa4u4pvvwgb6xha",
+                  "type": "p"
+                }
+              ],
+              "id": "3328332654"
+            }
+          ],
+          "id": "3412537726",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " is the ratio of concentrations of products to concentrations of reactants, each raised to the power corresponding to its stoichiometric coefficient."
+                      }
+                    ],
+                    "id": "vnwiwfdq6jluk9v",
+                    "type": "p"
+                  }
+                ],
+                "id": "3651591823"
+              },
+              "id": "1414414243",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "sub": true,
+                        "text": "c"
+                      },
+                      {
+                        "text": " is the ratio of concentrations of products to concentrations of reactants, each raised to the power corresponding to its stoichiometric coefficient."
+                      }
+                    ],
+                    "id": "gc6he3m3lsh77a2",
+                    "type": "p"
+                  }
+                ],
+                "id": "177371482"
+              },
+              "id": "2116474855",
+              "legacyMatch": "B",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "Determine whether the following statements regarding Qc are true or false.Qc is the ratio of  for any chemical reaction.",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "True"
+              }
+            ],
+            "id": "fafplvw087qux5z",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "False"
+              }
+            ],
+            "id": "nkigytcw71ig6j7",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Determine whether the following statements regarding "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " are true or false."
+            }
+          ],
+          "id": "c823pnrtyensz4t",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "sub": true,
+              "text": "c"
+            },
+            {
+              "text": " is the ratio of "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1076504663",
+              "src": "\\frac{\\lbrack\\text{products} \\rbrack}{\\lbrack\\text{reactants}\\rbrack}",
+              "subtype": "latex",
+              "type": "formula_inline"
+            },
+            {
+              "text": " for any chemical reaction."
+            }
+          ],
+          "id": "jwiotlun7m3nxco",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "3412537726": [
+      "78394"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

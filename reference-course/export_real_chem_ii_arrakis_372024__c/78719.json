@@ -1,0 +1,244 @@
+{
+  "id": "78719",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "NameCoordComplexLBD1_q2",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "There are four Cl"
+                  },
+                  {
+                    "sup": true,
+                    "text": "−"
+                  },
+                  {
+                    "text": " (chloro) ligands, which are named as "
+                  },
+                  {
+                    "em": true,
+                    "text": "tetrachloro"
+                  },
+                  {
+                    "text": "."
+                  }
+                ],
+                "id": "4152681185",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Cl has a −1 charge, so the charge on Pt is +2 (+2 + 4(−1) = −2). This complex is an anion, so the suffix "
+                  },
+                  {
+                    "em": true,
+                    "text": "-ate"
+                  },
+                  {
+                    "text": " is added to the stem of the name of the metal. The metal ion is Pt"
+                  },
+                  {
+                    "sup": true,
+                    "text": "2+"
+                  },
+                  {
+                    "text": ", which is named as platinate(II)."
+                  }
+                ],
+                "id": "1899552062",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "This complex is named tetrachloroplatinate(II) ion."
+                  }
+                ],
+                "id": "603729059",
+                "type": "p"
+              }
+            ],
+            "editor": "slate",
+            "id": "2470269837",
+            "textDirection": "ltr"
+          },
+          "gradingApproach": "automatic",
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "2205605449",
+                  "type": "p"
+                }
+              ],
+              "editor": "slate",
+              "id": "1000232943",
+              "textDirection": "ltr"
+            }
+          ],
+          "id": "1",
+          "outOf": null,
+          "responses": [
+            {
+              "correct": true,
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The four Cl"
+                      },
+                      {
+                        "sup": true,
+                        "text": "−"
+                      },
+                      {
+                        "text": " (chloro) ligands are named as "
+                      },
+                      {
+                        "em": true,
+                        "text": "tetrachloro"
+                      },
+                      {
+                        "text": ". Cl has a −1 charge, so the charge on Pt is +2 (+2 + 4(−1) = −2). This complex is an anion, so the suffix "
+                      },
+                      {
+                        "em": true,
+                        "text": "-ate"
+                      },
+                      {
+                        "text": " is used for Pt. This complex is named tetrachloroplatinate(II) ion."
+                      }
+                    ],
+                    "id": "3963123587",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "992259955",
+                "textDirection": "ltr"
+              },
+              "id": "3420718990",
+              "rule": "input contains {tetrachloroplatinate(II)}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The ligand is named first, with a prefix indicating the number. The metal ion is named next, with a Roman numeral indicating the charge. The complex ion is an anion, so the ending is changed to -ate. The English name is clunky, so the Latin name is used instead."
+                      }
+                    ],
+                    "id": "1504392753",
+                    "type": "p"
+                  }
+                ],
+                "editor": "slate",
+                "id": "1165350934",
+                "textDirection": "ltr"
+              },
+              "id": "1355478620",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targets": []
+        }
+      ],
+      "previewText": "Name the coordination complex [PtCl4]2−.  ion",
+      "targeted": [],
+      "transformations": [
+        {
+          "firstAttemptOnly": true,
+          "id": "3551942556",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "1626876823",
+        "inputType": "text",
+        "partId": "1",
+        "size": "large"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Name the coordination complex [PtCl"
+            },
+            {
+              "sub": true,
+              "text": "4"
+            },
+            {
+              "text": "]"
+            },
+            {
+              "sup": true,
+              "text": "2−"
+            },
+            {
+              "text": ". "
+            }
+          ],
+          "id": "2468708825",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "1626876823",
+              "type": "input_ref"
+            },
+            {
+              "text": " ion"
+            }
+          ],
+          "id": "1175977647",
+          "type": "p"
+        }
+      ],
+      "id": "2037225885"
+    },
+    "submitPerPart": false
+  },
+  "objectives": {
+    "1": [
+      "78460"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

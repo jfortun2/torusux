@@ -29,6 +29,7 @@ export type CustomizeDialog =
   | { type: 'question'; insertAt: number }
   | { type: 'course-resource'; insertAt: number }
   | { type: 'edit-text'; block: Extract<PageBlock, { kind: 'text' }> }
+  | { type: 'edit-example'; block: Extract<PageBlock, { kind: 'example' }> }
   | { type: 'edit-question'; block: Extract<PageBlock, { kind: 'question' }> }
   | { type: 'ai-question'; insertAt: number }
   | { type: 'community-resources'; insertAt: number }
@@ -445,6 +446,35 @@ export function PageCustomizeDialogs({
             ...dialog.block,
             title: updated.title,
             text: updated.text,
+          });
+          onClose();
+        }}
+      />
+    );
+  }
+
+  if (dialog.type === 'edit-example') {
+    return (
+      <TextBlockForm
+        objectives={objectives}
+        initialDraft={{
+          heading: dialog.block.example.heading,
+          bodyHtml: dialog.block.example.bodyHtml,
+          learningObjective: objectives[0]?.label ?? '',
+        }}
+        modalTitle="Edit text, explanation, or example"
+        submitLabel="Save changes"
+        onCancel={onClose}
+        onAdd={(draft) => {
+          const heading = draft.heading.trim() || dialog.block.example.heading;
+          onEditBlock(dialog.block.id, {
+            ...dialog.block,
+            title: heading,
+            example: {
+              ...dialog.block.example,
+              heading,
+              bodyHtml: draft.bodyHtml,
+            },
           });
           onClose();
         }}

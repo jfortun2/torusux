@@ -1,0 +1,228 @@
+{
+  "id": "78942",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "electrolysis_nacl_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\begin{array}{l}\\begin{array}{l}\\mathrm{Anode}:\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;2\\;\\mathrm{Cl}^-(l)\\;\\;\\longrightarrow\\;\\;{\\mathrm{Cl}}_2(g)\\;+\\;2\\;\\mathrm e^{-\\;\\;}\\;\\;\\;\\;\\;\\;E_{\\mathrm{anode}}^\\circ\\;=\\;+1.358\\;\\mathrm V\\\\\\underline{\\mathrm{Cathode}:\\;\\;\\mathrm{Na}^+(\\mathrm l)\\;+\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm{Na}(\\mathrm l)}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;E_{\\mathrm{cathode}}^\\circ\\;=\\;-2.71\\;\\mathrm V\\;\\;\\;\\;\\;\\;\\;\\;\\;\\\\\\end{array}\\\\E_{\\mathrm{cell}}^\\circ\\;=\\;E_{\\mathrm{cathode}}^\\circ\\;-\\;E_{\\mathrm{anode}}^\\circ\\;=\\;-2.71\\;\\mathrm V\\;-\\;(+1.358\\;\\mathrm V)\\;=\\;-4.07\\;\\mathrm V\\end{array}",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": "Therefore, the applied voltage must be at least +4.07 for the reaction to occur. "
+                  }
+                ],
+                "id": "z60817tw9vw9unx",
+                "type": "p"
+              }
+            ],
+            "id": "4191077588"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Use the reduction potentials for the half-reactions to determine the cell potential."
+                    }
+                  ],
+                  "id": "jk4lmcdsnzfft7y",
+                  "type": "p"
+                }
+              ],
+              "id": "555935161"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "To force this reaction, a positive potential of magnitude greater than the negative cell potential must be applied to the cell."
+                    }
+                  ],
+                  "id": "13brfn4z3rdcrmn",
+                  "type": "p"
+                }
+              ],
+              "id": "331232622"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "9g75mqd6fhjs5gq",
+                  "type": "p"
+                }
+              ],
+              "id": "2162759524"
+            }
+          ],
+          "id": "2771985256",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\begin{array}{l}\\begin{array}{l}\\mathrm{Anode}:\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;2\\;\\mathrm{Cl}^-(l)\\;\\;\\longrightarrow\\;\\;{\\mathrm{Cl}}_2(g)\\;+\\;2\\;\\mathrm e^{-\\;\\;}\\;\\;\\;\\;\\;\\;E_{\\mathrm{anode}}^\\circ\\;=\\;+1.358\\;\\mathrm V\\\\\\underline{\\mathrm{Cathode}:\\;\\;\\mathrm{Na}^+(\\mathrm l)\\;+\\;\\mathrm e^-\\;\\;\\longrightarrow\\;\\;\\mathrm{Na}(\\mathrm l)}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;E_{\\mathrm{cathode}}^\\circ\\;=\\;-2.71\\;\\mathrm V\\;\\;\\;\\;\\;\\;\\;\\;\\;\\\\\\end{array}\\\\E_{\\mathrm{cell}}^\\circ\\;=\\;E_{\\mathrm{cathode}}^\\circ\\;-\\;E_{\\mathrm{anode}}^\\circ\\;=\\;-2.71\\;\\mathrm V\\;-\\;(+1.358\\;\\mathrm V)\\;=\\;-4.07\\;\\mathrm V\\end{array}",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": "Therefore, the applied voltage must be at least +4.07 in order for the reaction to occur. "
+                      }
+                    ],
+                    "id": "kroqsjwzbg97qjh",
+                    "type": "p"
+                  }
+                ],
+                "id": "823024964"
+              },
+              "id": "908886874",
+              "legacyMatch": "[4.0,4.3]",
+              "rule": "input = {[4.0,4.3]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "96r9ck1980lzzpm",
+                    "type": "p"
+                  }
+                ],
+                "id": "2233184665"
+              },
+              "id": "2028578559",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "What is the minimum voltage that must be applied in the NaCl cell described above to force the decomposition of molten NaCl? Use Standard Reduction Potentials as needed. V ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2771985256",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "What is the minimum voltage that must be applied in the NaCl cell described above to force the decomposition of molten NaCl? "
+            }
+          ],
+          "id": "ra4s332kicx01wb",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Use "
+            },
+            {
+              "children": [
+                {
+                  "text": "Standard Reduction Potentials"
+                }
+              ],
+              "href": "/course/link/iz1ln_standard_reduction_potentials_mv70v",
+              "idref": "80874",
+              "target": "new",
+              "type": "a"
+            },
+            {
+              "text": " as needed."
+            }
+          ],
+          "id": "8hq4szr4m538g7d",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": ""
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " V "
+            }
+          ],
+          "id": "5w41wuulheqxle0",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2771985256": [
+      "78530"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

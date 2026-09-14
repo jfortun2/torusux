@@ -1,0 +1,911 @@
+{
+  "id": "78931",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78081"
+  ],
+  "title": "compare_q_k_pool_v3",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "7z4dyhkgwwyck2c",
+                  "type": "p"
+                }
+              ],
+              "id": "4191408256"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1rrn90e1284fmnq",
+                  "type": "p"
+                }
+              ],
+              "id": "3428110348"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "6acgg690bscwdhp",
+                  "type": "p"
+                }
+              ],
+              "id": "1424144578"
+            }
+          ],
+          "id": "one",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. The reaction quotient, "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": ", can be calculated in order to determine whether or not a chemical reaction is at equilibrium and the possible direction in which the reaction must shift to reach equilibrium. If "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is equal to "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", then the reaction is at equilibrium and the reaction does not shift in either direction. "
+                      }
+                    ],
+                    "id": "9gf6k8zz4bfj6lj",
+                    "type": "p"
+                  }
+                ],
+                "id": "3181953697"
+              },
+              "id": "99825644",
+              "legacyMatch": "A",
+              "rule": "input like {one_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "tibfnl452y9fvvi",
+                    "type": "p"
+                  }
+                ],
+                "id": "870998024"
+              },
+              "id": "2329644644",
+              "legacyMatch": "B",
+              "rule": "input like {one_B}",
+              "score": 2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "2skx4eysvy5pxlh",
+                    "type": "p"
+                  }
+                ],
+                "id": "4068984561"
+              },
+              "id": "3742168206",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b8rs76i8d120ilx",
+                  "type": "p"
+                }
+              ],
+              "id": "969075999"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ywqjeepaqyc1yun",
+                  "type": "p"
+                }
+              ],
+              "id": "3514534002"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "hvjbhd9kn93trl8",
+                  "type": "p"
+                }
+              ],
+              "id": "2309908161"
+            }
+          ],
+          "id": "two",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. If "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is equal to "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", then the reaction is at equilibrium and the reaction does not shift in either direction. However, this doesn't tell you anything about the concentration of reactants and products at equilibrium. The value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": " indicates the concentrations of products and reactants at equilibirum. "
+                      }
+                    ],
+                    "id": "ssm1r4fz2nnqolm",
+                    "type": "p"
+                  }
+                ],
+                "id": "961334723"
+              },
+              "id": "707731983",
+              "legacyMatch": "A",
+              "rule": "input like {two_A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct."
+                      }
+                    ],
+                    "id": "76v2p548mdf2ml9",
+                    "type": "p"
+                  }
+                ],
+                "id": "3513192221"
+              },
+              "id": "1736319207",
+              "legacyMatch": "B",
+              "rule": "input like {two_B}",
+              "score": 2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "rxf6som4q796cr2",
+                    "type": "p"
+                  }
+                ],
+                "id": "4284917202"
+              },
+              "id": "2668206479",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "kutfmciyic6awjt",
+                  "type": "p"
+                }
+              ],
+              "id": "1172412580"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "be885t88x174u30",
+                  "type": "p"
+                }
+              ],
+              "id": "246801626"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4z6ofhfm1vytlba",
+                  "type": "p"
+                }
+              ],
+              "id": "2564976550"
+            }
+          ],
+          "id": "three",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reaction quotient, "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": ", can be calculated to determine whether or not a chemical reaction is at equilibrium and the possible direction in which the reaction must shift to reach equilibrium. If "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is less than "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", then the reaction shifts in the forward direction (right) to increase products and decrease reactants to reach equilibrium. If "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is greater than "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", then the reaction shifts in the reverse direction (left) to increase reactants and decrease products to reach equilibrium. If "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": " is equal to "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ", then the reaction is at equilibrium and the reaction does not shift in either direction. "
+                      }
+                    ],
+                    "id": "1iwtmey8ik6fzdt",
+                    "type": "p"
+                  }
+                ],
+                "id": "366194814"
+              },
+              "id": "3583051627",
+              "legacyMatch": "A",
+              "rule": "input like {three_A}",
+              "score": 2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "ypnwoyf0ulmgmpp",
+                    "type": "p"
+                  }
+                ],
+                "id": "640571908"
+              },
+              "id": "831922659",
+              "legacyMatch": "B",
+              "rule": "input like {three_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "3onim0krsi0nfer",
+                    "type": "p"
+                  }
+                ],
+                "id": "2237972351"
+              },
+              "id": "2722148455",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        },
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "x3u234krp5eftlz",
+                  "type": "p"
+                }
+              ],
+              "id": "1413502421"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "epdr2sv95feaw1l",
+                  "type": "p"
+                }
+              ],
+              "id": "2784500938"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "uokpl2lu19jieqb",
+                  "type": "p"
+                }
+              ],
+              "id": "2612484819"
+            }
+          ],
+          "id": "four",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The reaction quotient, "
+                      },
+                      {
+                        "em": true,
+                        "text": "Q"
+                      },
+                      {
+                        "text": ", can be calculated to determine whether or not a chemical reaction is at equilibrium and the possible direction in which the reaction must shift to reach equilibrium by comparing its value with the value of "
+                      },
+                      {
+                        "em": true,
+                        "text": "K"
+                      },
+                      {
+                        "text": ". "
+                      }
+                    ],
+                    "id": "gu8qd63pwb17b41",
+                    "type": "p"
+                  }
+                ],
+                "id": "841605767"
+              },
+              "id": "4104269734",
+              "legacyMatch": "A",
+              "rule": "input like {four_A}",
+              "score": 2
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "at7xlnl815xo9kn",
+                    "type": "p"
+                  }
+                ],
+                "id": "2483337496"
+              },
+              "id": "715895256",
+              "legacyMatch": "B",
+              "rule": "input like {four_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "dam0vmkwjjjuc7h",
+                    "type": "p"
+                  }
+                ],
+                "id": "2982096617"
+              },
+              "id": "1599721153",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": " Indicate whether the following statements are true or false concerning the reaction quotient (Q) and the equilibrium constant (K). The value of Q never equals the value of K.  If Q is equal to K, the concentration of products is greater than the concentration of reactants at equilibrium. The value of Q can be less than, greater than, or equal to the value of K. Comparing the values of Qand K allows you to determine if a system is at equilibrium. ",
+      "targeted": [
+        [
+          [
+            "one_A"
+          ],
+          "99825644"
+        ],
+        [
+          [
+            "one_B"
+          ],
+          "2329644644"
+        ],
+        [
+          [
+            "two_A"
+          ],
+          "707731983"
+        ],
+        [
+          [
+            "two_B"
+          ],
+          "1736319207"
+        ],
+        [
+          [
+            "three_A"
+          ],
+          "3583051627"
+        ],
+        [
+          [
+            "three_B"
+          ],
+          "831922659"
+        ],
+        [
+          [
+            "four_A"
+          ],
+          "4104269734"
+        ],
+        [
+          [
+            "four_B"
+          ],
+          "715895256"
+        ]
+      ],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "ulpel4tosw96goa",
+            "text": "true "
+          }
+        ],
+        "id": "one_A"
+      },
+      {
+        "content": [
+          {
+            "id": "5ao1p1emxvvfjkj",
+            "text": "false"
+          }
+        ],
+        "id": "one_B"
+      },
+      {
+        "content": [
+          {
+            "id": "ucpl364fb2y5id6",
+            "text": "true "
+          }
+        ],
+        "id": "two_A"
+      },
+      {
+        "content": [
+          {
+            "id": "uut5ty6b47j4dx1",
+            "text": "false"
+          }
+        ],
+        "id": "two_B"
+      },
+      {
+        "content": [
+          {
+            "id": "sazux2n052seu0d",
+            "text": "true "
+          }
+        ],
+        "id": "three_A"
+      },
+      {
+        "content": [
+          {
+            "id": "02immwr29mxys8j",
+            "text": "false"
+          }
+        ],
+        "id": "three_B"
+      },
+      {
+        "content": [
+          {
+            "id": "p01c8grlxnvv686",
+            "text": "true "
+          }
+        ],
+        "id": "four_A"
+      },
+      {
+        "content": [
+          {
+            "id": "ehasmecsl3kvgdf",
+            "text": "false"
+          }
+        ],
+        "id": "four_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "one_A",
+          "one_B"
+        ],
+        "id": "one",
+        "inputType": "dropdown",
+        "partId": "one",
+        "shuffle": "false"
+      },
+      {
+        "choiceIds": [
+          "two_A",
+          "two_B"
+        ],
+        "id": "two",
+        "inputType": "dropdown",
+        "partId": "two"
+      },
+      {
+        "choiceIds": [
+          "three_A",
+          "three_B"
+        ],
+        "id": "three",
+        "inputType": "dropdown",
+        "partId": "three"
+      },
+      {
+        "choiceIds": [
+          "four_A",
+          "four_B"
+        ],
+        "id": "four",
+        "inputType": "dropdown",
+        "partId": "four"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": " Indicate whether the following statements are true or false concerning the reaction quotient ("
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": ") and the equilibrium constant ("
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": "). "
+            }
+          ],
+          "id": "a3x5chpzz2ytf2c",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The value of "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": " never equals the value of "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": ".  "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "one",
+              "input": "one",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "wkxsaulh5kli6kd",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "If "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": " is equal to "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": ", the concentration of products is greater than the concentration of reactants at equilibrium. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "two",
+              "input": "two",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "y81313z8astnw03",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "The value of "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": " can be less than, greater than, or equal to the value of "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": ". "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "three",
+              "input": "three",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "v1w5cmquro65ok3",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "Comparing the values of "
+            },
+            {
+              "em": true,
+              "text": "Q"
+            },
+            {
+              "text": "and "
+            },
+            {
+              "em": true,
+              "text": "K"
+            },
+            {
+              "text": " allows you to determine if a system is at equilibrium. "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "four",
+              "input": "four",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "aan3hqjr6g590gs",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "four": [],
+    "one": [],
+    "three": [],
+    "two": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

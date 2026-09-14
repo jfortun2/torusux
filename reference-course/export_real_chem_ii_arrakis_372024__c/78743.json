@@ -1,0 +1,336 @@
+{
+  "id": "78743",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "tp4o1de7058ds1d",
+                  "type": "p"
+                }
+              ],
+              "id": "3765294164"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "f6wc627q38xos0u",
+                  "type": "p"
+                }
+              ],
+              "id": "1717898018"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wqspg2qknh6t9s6",
+                  "type": "p"
+                }
+              ],
+              "id": "3796134087"
+            }
+          ],
+          "id": "397035704",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Combustion processes are exothermic (Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": " less than 0). This particular reaction involves an increase in entropy due to the accompanying increase in the amount of gaseous species (net gain of one mole of gas, Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " greater than 0)."
+                      }
+                    ],
+                    "id": "dh0dsa8zq2232k7",
+                    "type": "p"
+                  }
+                ],
+                "id": "705819563"
+              },
+              "id": "3288273944",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Combustion processes are exothermic. There is an increase in the amount of gaseous species in this reaction."
+                      }
+                    ],
+                    "id": "c6gzu3sbx3eax5d",
+                    "type": "p"
+                  }
+                ],
+                "id": "516795988"
+              },
+              "id": "518319085",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Combustion processes are exothermic."
+                      }
+                    ],
+                    "id": "cq9pqd0jwe4wtwb",
+                    "type": "p"
+                  }
+                ],
+                "id": "528816880"
+              },
+              "id": "2043088627",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. There is an increase in the amount of gaseous species in this reaction. "
+                      }
+                    ],
+                    "id": "z7mbgwwyrumdu3n",
+                    "type": "p"
+                  }
+                ],
+                "id": "3712588455"
+              },
+              "id": "2532331488",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "sz0j9osxco0y8u6",
+                    "type": "p"
+                  }
+                ],
+                "id": "3612999672"
+              },
+              "id": "3384771738",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3288273944"
+            ],
+            [
+              [
+                "B"
+              ],
+              "518319085"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2043088627"
+            ],
+            [
+              [
+                "D"
+              ],
+              "2532331488"
+            ]
+          ]
+        }
+      ],
+      "previewText": "Consider the incomplete combustion of carbon:  Which of the following correctly describes this process?",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3288273944"
+        ],
+        [
+          [
+            "B"
+          ],
+          "518319085"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2043088627"
+        ],
+        [
+          [
+            "D"
+          ],
+          "2532331488"
+        ]
+      ],
+      "transformations": [],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is spontaneous at all temperatures."
+              }
+            ],
+            "id": "66xoe4vu55pxzfm",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is nonspontaneous at all temperatures."
+              }
+            ],
+            "id": "3zxdvns6v0wa6a5",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is spontaneous at high temperatures."
+              }
+            ],
+            "id": "u9s7yh6jr8ytcna",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "This reaction is spontaneous at low temperatures."
+              }
+            ],
+            "id": "kzhvrhwo0r2p8mb",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Consider the incomplete combustion of carbon: "
+            }
+          ],
+          "id": "jdhbmsqluw8zdnz",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "id": "2q0j0fjwmml6o87",
+              "text": " ",
+              "type": "text"
+            }
+          ],
+          "id": "wy5ptjpsh48eizc",
+          "legacyBlockRendered": "true",
+          "src": "2\\;\\mathrm C(s)\\;+\\;{\\mathrm O}_2(g)\\;\\longrightarrow\\;2\\;\\mathrm{CO}(g)",
+          "subtype": "latex",
+          "type": "formula"
+        },
+        {
+          "children": [
+            {
+              "text": "Which of the following correctly describes this process?"
+            }
+          ],
+          "id": "igs5lx063uoaga8",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "397035704": [
+      "78483"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

@@ -1,0 +1,265 @@
+{
+  "id": "78665",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "first_half_lbd-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. Solving the first-order half-life relationship for "
+                  },
+                  {
+                    "em": true,
+                    "text": "t"
+                  },
+                  {
+                    "sub": true,
+                    "text": "1/2"
+                  },
+                  {
+                    "text": ": "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "t_{1/2}\\;=\\;\\frac{0.693}k\\;=\\;\\frac{0.693}{0.138\\;\\mathrm d^{-1}}\\;=\\;5.02\\;\\mathrm d",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "mw8lwzrpfqfwxi3",
+                "type": "p"
+              }
+            ],
+            "id": "3928528470"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "574850969",
+                  "type": "p"
+                },
+                {
+                  "children": [
+                    {
+                      "id": "od5hfh1f9ajq781",
+                      "text": " ",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "whnqzo4yiza25pp",
+                  "legacyBlockRendered": "true",
+                  "src": "t_{1/2}\\;=\\;\\frac{0.693}k",
+                  "subtype": "latex",
+                  "type": "formula"
+                },
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "1607925526",
+                  "type": "p"
+                }
+              ],
+              "id": "2192834108"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "8ttahnslz67ucmu",
+                  "type": "p"
+                }
+              ],
+              "id": "3035509839"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "b7z8iibmc58ivyo",
+                  "type": "p"
+                }
+              ],
+              "id": "2994447623"
+            }
+          ],
+          "id": "831568007",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. Solving the first-order half-life relationship for "
+                      },
+                      {
+                        "em": true,
+                        "text": "t"
+                      },
+                      {
+                        "sub": true,
+                        "text": "1/2"
+                      },
+                      {
+                        "text": ": "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "t_{1/2}\\;=\\;\\frac{0.693}k\\;=\\;\\frac{0.693}{0.138\\;\\mathrm d^{-1}}\\;=\\;5.02\\;\\mathrm d",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "k9u9b6gicx4vdmx",
+                    "type": "p"
+                  }
+                ],
+                "id": "2127437369"
+              },
+              "id": "1402655330",
+              "legacyMatch": "[5,5.1]",
+              "rule": "input = {[5,5.1]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Try again. Substitute the rate constant into the first-order half-life relationship."
+                      }
+                    ],
+                    "id": "7z1b3gmrfjo6i2p",
+                    "type": "p"
+                  }
+                ],
+                "id": "295796676"
+              },
+              "id": "2371820863",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "831568007",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "The first-order radioactive decay of iodine-131 has a rate constant of 0.138 d"
+            },
+            {
+              "sup": true,
+              "text": "−1"
+            },
+            {
+              "text": ". What is the half-life for this decay? "
+            }
+          ],
+          "id": "e11buq7dyzuf25k",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "em": true,
+              "text": "t"
+            },
+            {
+              "sub": true,
+              "text": "1/2"
+            },
+            {
+              "text": " = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": " d"
+            }
+          ],
+          "id": "nckyazgfi2g598m",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "831568007": [
+      "78459"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

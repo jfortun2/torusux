@@ -1,0 +1,229 @@
+{
+  "id": "78831",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "corrosion_digt-q1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "11ovcw29td7zifo",
+                  "type": "p"
+                }
+              ],
+              "id": "830299687"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "wem6ah7bwmm0mhh",
+                  "type": "p"
+                }
+              ],
+              "id": "3768607367"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "4id3gf77d7ndi7o",
+                  "type": "p"
+                }
+              ],
+              "id": "712893943"
+            }
+          ],
+          "id": "first",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. When iron (Fe) corrodes, it oxidizes to Fe"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "6cc9c3708kx363u",
+                    "type": "p"
+                  }
+                ],
+                "id": "1536555632"
+              },
+              "id": "4104991474",
+              "legacyMatch": "A",
+              "rule": "input like {first_A}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. When iron (Fe) corrodes, it oxidizes to Fe"
+                      },
+                      {
+                        "sup": true,
+                        "text": "2+"
+                      },
+                      {
+                        "text": "."
+                      }
+                    ],
+                    "id": "htsxi1dpzva6g2q",
+                    "type": "p"
+                  }
+                ],
+                "id": "2512120049"
+              },
+              "id": "3077440047",
+              "legacyMatch": "B",
+              "rule": "input like {first_B}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "98o1kh0x3q0va5e",
+                    "type": "p"
+                  }
+                ],
+                "id": "3642716049"
+              },
+              "id": "976023521",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "",
+      "targeted": [
+        [
+          [
+            "first_A"
+          ],
+          "4104991474"
+        ],
+        [
+          [
+            "first_B"
+          ],
+          "3077440047"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "1079937862",
+          "operation": "shuffle",
+          "partId": "first",
+          "path": "choices"
+        }
+      ]
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "id": "yrxli4yxoaromo8",
+            "text": "oxidation "
+          }
+        ],
+        "id": "first_A"
+      },
+      {
+        "content": [
+          {
+            "id": "29efr639tokiw5i",
+            "text": "reduction"
+          }
+        ],
+        "id": "first_B"
+      }
+    ],
+    "inputs": [
+      {
+        "choiceIds": [
+          "first_A",
+          "first_B"
+        ],
+        "id": "first",
+        "inputType": "dropdown",
+        "partId": "first",
+        "shuffle": "true"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Corrosion involves the "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "first",
+              "input": "first",
+              "type": "input_ref"
+            },
+            {
+              "text": " of a metal. "
+            }
+          ],
+          "id": "pmek1w8x3pslwh7",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "first": [
+      "78523"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

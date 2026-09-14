@@ -1,0 +1,349 @@
+{
+  "id": "80442",
+  "scope": "banked",
+  "type": "Activity",
+  "tags": [
+    "78075"
+  ],
+  "title": "second_law_spont_pool_v1",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. The second law of thermodynamics says that a reaction is spontaneous when the entropy of the universe increases "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "legacyBlockRendered": false,
+                    "src": "\\left( \\triangle \\mathrm{S_{univ}}>0 \\right)",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ", and the law says nothing about entropy changes for a system or surroundings. △"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "sub": true,
+                    "text": "univ"
+                  },
+                  {
+                    "text": " is positive is the correct answer."
+                  }
+                ],
+                "id": "3imymmzln5uo9x4",
+                "type": "p"
+              }
+            ],
+            "id": "3032122323"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "mccmy1z45n8436r",
+                  "type": "p"
+                }
+              ],
+              "id": "3337386654"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "08oemou13uqiecx",
+                  "type": "p"
+                }
+              ],
+              "id": "486934250"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "51kg5ruwptry9r7",
+                  "type": "p"
+                }
+              ],
+              "id": "1139666223"
+            }
+          ],
+          "id": "mc1",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. The second law of thermodynamics says that a reaction is spontaneous when the entropy of the universe increases "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "\\left( \\triangle \\mathrm{S_{univ}}>0 \\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ", and the law says nothing about entropy changes for a system or surroundings."
+                      }
+                    ],
+                    "id": "ngycs9xygi3n10p",
+                    "type": "p"
+                  }
+                ],
+                "id": "1965764537"
+              },
+              "id": "2890135135",
+              "legacyMatch": "D",
+              "rule": "input like {D}",
+              "score": 5
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "The second law of thermodynamics states that the entropy of the universe always increases over time. In other words, for the universe, the change in entropy >"
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ],
+                        "legacyBlockRendered": false,
+                        "src": "\\left( \\triangle \\mathrm{S_{univ}} \\right)",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": " for the universe can never be negative."
+                      }
+                    ],
+                    "id": "c8044530fc084222bea8d1d9923d9d1e",
+                    "type": "p"
+                  }
+                ],
+                "id": "2930794999"
+              },
+              "id": "666856445",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": []
+        }
+      ],
+      "previewText": "",
+      "targeted": [],
+      "transformations": [],
+      "version": 2
+    },
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "△"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "surr"
+              },
+              {
+                "text": " is positive"
+              }
+            ],
+            "id": "6qj05fuw7iiw5dx",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "△"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "surr"
+              },
+              {
+                "text": " is negative"
+              }
+            ],
+            "id": "llgtayn6vn26vtz",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "△"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "univ"
+              },
+              {
+                "text": " is negative"
+              }
+            ],
+            "id": "2fisf63e4a1rfsy",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "△"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "univ"
+              },
+              {
+                "text": " is positive"
+              }
+            ],
+            "id": "infarnfa33cigbw",
+            "type": "p"
+          }
+        ],
+        "id": "D"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "△"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "sys"
+              },
+              {
+                "text": " is negative"
+              }
+            ],
+            "id": "iws4w1zpu6fp33v",
+            "type": "p"
+          }
+        ],
+        "id": "E"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "△"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "sys"
+              },
+              {
+                "text": " is positive"
+              }
+            ],
+            "id": "nqywwhqak0a0e71",
+            "type": "p"
+          }
+        ],
+        "id": "F"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "A reaction is always spontaneous when "
+            }
+          ],
+          "id": "ffda1a691c57414f8bf4a1999e3dc6b1",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "mc1": []
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}

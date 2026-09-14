@@ -1,0 +1,241 @@
+{
+  "id": "79121",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "calc_pH_weak_lbd-q6",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Incorrect. "
+                  },
+                  {
+                    "children": [
+                      {
+                        "text": " ",
+                        "type": "text"
+                      }
+                    ],
+                    "legacyBlockRendered": true,
+                    "src": "\\mathrm{pH}\\;=\\;-\\log\\;\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;-\\log(0.00306)\\;=\\;2.514",
+                    "subtype": "latex",
+                    "type": "formula_inline"
+                  },
+                  {
+                    "text": ""
+                  }
+                ],
+                "id": "5nzpfkgjj1oqcli",
+                "type": "p"
+              }
+            ],
+            "id": "1647029311"
+          },
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "em": true,
+                      "text": "x"
+                    },
+                    {
+                      "text": " = [H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "3"
+                    },
+                    {
+                      "text": "O"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": "]"
+                    },
+                    {
+                      "sub": true,
+                      "text": "equil"
+                    }
+                  ],
+                  "id": "mwk0lva2qdek56g",
+                  "type": "p"
+                }
+              ],
+              "id": "3641518972"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "pH = −log[H"
+                    },
+                    {
+                      "sub": true,
+                      "text": "3"
+                    },
+                    {
+                      "text": "O"
+                    },
+                    {
+                      "sup": true,
+                      "text": "+"
+                    },
+                    {
+                      "text": "]"
+                    }
+                  ],
+                  "id": "i290ly79rf9cha5",
+                  "type": "p"
+                }
+              ],
+              "id": "368450192"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "yabznzmcz3p2td7",
+                  "type": "p"
+                }
+              ],
+              "id": "1748767049"
+            }
+          ],
+          "id": "2791395490",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. "
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": " ",
+                            "type": "text"
+                          }
+                        ],
+                        "legacyBlockRendered": true,
+                        "src": "\\mathrm{pH}\\;=\\;-\\log\\;\\lbrack{\\mathrm H}_3\\mathrm O^+\\rbrack\\;=\\;-\\log(0.00306)\\;=\\;2.514",
+                        "subtype": "latex",
+                        "type": "formula_inline"
+                      },
+                      {
+                        "text": ""
+                      }
+                    ],
+                    "id": "cb57z0xgnuf37pi",
+                    "type": "p"
+                  }
+                ],
+                "id": "3530853834"
+              },
+              "id": "2445601308",
+              "legacyMatch": "[2.5,2.6]",
+              "rule": "input = {[2.5,2.6]}",
+              "score": 10
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again. "
+                      }
+                    ],
+                    "id": "j4plzxckzh08uef",
+                    "type": "p"
+                  }
+                ],
+                "id": "2225736553"
+              },
+              "id": "3822282559",
+              "legacyMatch": ".*",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average"
+        }
+      ],
+      "previewText": "Calculate the pH of the propionic acid acid solution. pH = ",
+      "targeted": [],
+      "transformations": []
+    },
+    "bibrefs": [],
+    "choices": [],
+    "inputs": [
+      {
+        "id": "q1numeric",
+        "inputType": "numeric",
+        "partId": "2791395490",
+        "size": "small"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "Calculate the pH of the propionic acid acid solution. "
+            }
+          ],
+          "id": "s5xfjzap9sizoyi",
+          "type": "p"
+        },
+        {
+          "children": [
+            {
+              "text": "pH = "
+            },
+            {
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "id": "q1numeric",
+              "input": "q1numeric",
+              "type": "input_ref"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "id": "yvodz5mutjmf3ud",
+          "type": "p"
+        }
+      ]
+    },
+    "submitPerPart": true
+  },
+  "objectives": {
+    "2791395490": [
+      "78356"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multi_input"
+}

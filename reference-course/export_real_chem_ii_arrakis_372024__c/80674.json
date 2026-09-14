@@ -1,0 +1,865 @@
+{
+  "id": "80674",
+  "type": "Page",
+  "tags": [],
+  "title": "Entropy",
+  "content": {
+    "bibrefs": [],
+    "model": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "We can reason qualitatively about the tendency of a system to go in a direction that increases the dispersal of matter and energy. One of the most powerful tools we have is the ability to make this “tendency to disperse” quantitative through a quantity named "
+              },
+              {
+                "em": true,
+                "text": "entropy"
+              },
+              {
+                "text": " and symbolized as "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": ". Entropy provides a precise, numerical value for the degree of dispersal in a system. You may have heard that "
+              },
+              {
+                "children": [
+                  {
+                    "text": "entropy ("
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": ")"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "A state function that describes the dispersal of matter and energy within a system, determined by the number of possible microstates; it quantifies the system's degree of randomness and distribution of energy."
+                      }
+                    ],
+                    "id": "31810312",
+                    "type": "p"
+                  }
+                ],
+                "id": "73126889",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": " measures the degree of “disorder” of a system. This is because systems in which matter and energy are more dispersed generally appear to be more disordered. If you disperse your clothes around your bedroom instead of putting them neatly in drawers, your bedroom is more disordered. "
+              }
+            ],
+            "id": "jqkcwaa7yjkgqok",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Entropy quantifies dispersal by considering the number of different arrangements the particles of the system can have. Let's consider ice, liquid water, and water vapor as examples. In the solid phase, the atoms or molecules are restricted to nearly fixed positions with respect to each other and are capable of only modest oscillations about these positions. In the liquid phase, the atoms or molecules are free to move over and around each other, though they remain in relatively close proximity to one another. This increased freedom of motion results in a greater variation in possible particle locations, so the number of ways in which the particles can be arranged has increased. Therefore, the liquid phase has greater entropy than the solid phase. Likewise, in the gas phase, the atoms or molecules occupy a much greater volume than in the liquid phase, so each atom or molecule can be found in many more locations than in the liquid (or solid) phase. Consequently, for any substance, "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "gas"
+              },
+              {
+                "text": " > "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "liquid"
+              },
+              {
+                "text": " > "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "solid"
+              },
+              {
+                "text": "."
+              }
+            ],
+            "id": "2nkn6nbgz4563mg",
+            "type": "p"
+          },
+          {
+            "alt": "three flask the one on \n            the left is solid, it has a cube inside the flask and a magnification that shows many spheres \n            right next to each other in a cube shape. the flask in the middle is labeled liquid. inside the \n            flask is liquid with a defined volume. the magnification shows many spheres that are somewhat close \n            together but have a small amount of space between them. the fill the magnification area. the flask \n            on the right is labeled gas. inside the flask is a hazy, somewhat opaque green colored. the magnification \n            shows many particles that are siginificantly farther apart compared to the liquid.",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "(a)"
+                  },
+                  {
+                    "em": true,
+                    "text": " Solid: Highly ordered arrangement of particles. "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "(b)"
+                  },
+                  {
+                    "em": true,
+                    "text": " Liquid: More possible arrangements of particles. Increase in entropy compared to solid. "
+                  },
+                  {
+                    "em": true,
+                    "strong": true,
+                    "text": "(c)"
+                  },
+                  {
+                    "em": true,
+                    "text": " Gas: Many more possible arrangements of particles. Increase in entropy compared to liquid. (By Yeya18 [Own work] [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons.)"
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "rvew9it7trvnth5",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "a9zihbmy2cisyer",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/b5/b558b33fe2f60e5fb31966951a190d20/Mezclas_de_la_materia.jpg",
+            "type": "img",
+            "width": "600"
+          },
+          {
+            "children": [
+              {
+                "text": "If a chemical reaction or physical process results in a greater degree of disorder (entropy), the final entropy ("
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": ") is larger than the initial entropy ("
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "i"
+              },
+              {
+                "text": "), and the value for Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " is positive. If the process results in less disorder, "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "f"
+              },
+              {
+                "text": " is smaller than "
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "sub": true,
+                "text": "i"
+              },
+              {
+                "text": " and the value for Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " is negative."
+              }
+            ],
+            "id": "s6qmey1b7t1d6w3",
+            "type": "p"
+          }
+        ],
+        "id": "4000059379",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79701,
+            "id": "2173754722",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "4080534174",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 78655,
+            "id": "1127725154",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "1376726979",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "36mb4hh136zjttv",
+                "text": "Entropy and Temperature"
+              }
+            ],
+            "id": "xwt4pwf77a0p9nd",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "According to the "
+              },
+              {
+                "children": [
+                  {
+                    "text": "kinetic molecular theory"
+                  }
+                ],
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "A model that describes the macroscopic behavior of gasses in terms of the microscopic motions of the atoms and molecules that comprise the gas."
+                      }
+                    ],
+                    "id": "1995403218",
+                    "type": "p"
+                  }
+                ],
+                "id": "1824332195",
+                "trigger": "hover",
+                "type": "popup"
+              },
+              {
+                "text": ", the temperature of a substance is proportional to the average kinetic energy of its particles. Raising the temperature of a substance results in more extensive vibrations of the particles in solids and more rapid translations of the particles in liquids and gases. At higher temperatures, the distribution of kinetic energies among the atoms or molecules of the substance is also broader (more dispersed) than at lower temperatures. Therefore, the entropy for any substance increases with temperature."
+              }
+            ],
+            "id": "42xhu2syd6cgh2i",
+            "type": "p"
+          },
+          {
+            "alt": "Two graphs are shown. The y-axis of the left \n                    graph is labeled, “Fraction of molecules,” while the x-axis is labeled, “Velocity, v ( m / s ),” and has values of \n                    0 through 1,500 along the axis with increments of 500. Four lines are plotted on this graph. The first, labeled, \n                    “100 K,” peaks around 200 m / s while the second, labeled, “200 K,” peaks near 300 m / s and is slightly lower on \n                    the y-axis than the first. The third line, labeled, “500 K,” peaks around 550 m / s and is lower than the first two \n                    on the y-axis. The fourth line, labeled, “1000 K,” peaks around 750 m / s and is the lowest of the four on the \n                    y-axis. Each line get increasingly broad. The second graph has a y-axis labeled, “Entropy, S,” with an upward-facing \n                    arrow and an x-axis labeled, “Temperature ( K ),” and a right-facing arrow. The graph has three equally spaced \n                    columns in the background, labeled, “Solid,” “Liquid,” and, “Gas,” from left to right. A line extends slightly \n                    upward through the first column in a slight upward direction, then goes straight up in the transition between the \n                    first two columns. In then progresses in a slight upward direction through the second column, then goes up \n                    dramatically between the second and third columns, then continues in a slight upward direction once more. The first \n                    vertical region of this line is labeled, “Melting,” and the second is labeled, “Boiling.”",
+            "caption": [
+              {
+                "children": [
+                  {
+                    "em": true,
+                    "text": "When the temperature of a substance is raised, its particles have a higher average kinetic energy and a greater spread of kinetic energies, which corresponds to an increase in entropy. When a substance melts or vaporizes, it experiences a significant increase in entropy. The increase in entropy for vaporization is significantly larger than the increase in entropy for melting."
+                  }
+                ],
+                "type": "p"
+              }
+            ],
+            "children": [
+              {
+                "id": "ibrfj54hdrgg74w",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "ikii2ztfk0qgwuy",
+            "src": "https://d2xvti2irp4c7t.cloudfront.net/media/75/754d75368e2caeba1f37323ed352e63d/CNX_Chem_16_02_EntGraph.jpg",
+            "type": "img",
+            "width": "700"
+          },
+          {
+            "children": [
+              {
+                "text": ""
+              }
+            ],
+            "id": "887307439",
+            "type": "p"
+          }
+        ],
+        "id": "1343115803",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 80096,
+            "id": "1754473202",
+            "type": "activity-reference"
+          },
+          {
+            "id": "2612972305",
+            "type": "break"
+          },
+          {
+            "activity_id": 79087,
+            "id": "849779728",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80433,
+            "id": "503417992",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "2264422228",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "ca7r5u876jg3tla",
+                "text": "Determining the Sign of Δ"
+              },
+              {
+                "em": true,
+                "id": "ox9yvpnp2vvtbq2",
+                "text": "S"
+              },
+              {
+                "id": "3v3im3aloabuhec",
+                "text": " for a Chemical Process"
+              }
+            ],
+            "id": "gufpzv5ak0lkebs",
+            "type": "h1"
+          },
+          {
+            "children": [
+              {
+                "text": "We can apply the concepts of entropy to qualitatively determine the entropy change of a chemical process. First, let's consider an ionic solid, such as sodium chloride, dissolving in water: "
+              },
+              {
+                "children": [
+                  {
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "legacyBlockRendered": true,
+                "src": "\\mathrm{NaCl}(s)\\;\\longrightarrow\\;\\mathrm{Na}^+(aq)\\;+\\;\\mathrm{Cl}^-(aq)",
+                "subtype": "latex",
+                "type": "formula_inline"
+              },
+              {
+                "text": "As a solid, the NaCl is confined to a much smaller volume and the ions are greatly restricted in terms of possible arrangements. When the compound is dissolved in water, the Na"
+              },
+              {
+                "sup": true,
+                "text": "+"
+              },
+              {
+                "text": " and Cl"
+              },
+              {
+                "sup": true,
+                "text": "−"
+              },
+              {
+                "text": " ions are free to move in the water, resulting in many more possible arrangements of particles and an increase in the volume occupied. Dissolving an ionic compound generally results in an increase in entropy. (Note: Not all dissolving processes have an increase in entropy. In some cases, the attractions between the ions in solution and the surrounding water molecules are strong enough that the number of possible arrangements of particles decreases.)"
+              }
+            ],
+            "id": "d1y7g7gqwo3z1mo",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Next, let's consider the combustion of ethane gas:"
+              }
+            ],
+            "id": "r9ulwnfznmfplxr",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "id": "fu5dov73d5erpjx",
+                "text": " ",
+                "type": "text"
+              }
+            ],
+            "id": "c9hlhtri8kcvud1",
+            "legacyBlockRendered": "true",
+            "src": "2\\;{\\mathrm C}_2{\\mathrm H}_6(g)\\;+\\;7\\;{\\mathrm O}_2(g)\\;\\;\\longrightarrow\\;4\\;{\\mathrm{CO}}_2(g)\\; +\\;6\\;{\\mathrm H}_2\\mathrm O(l)",
+            "subtype": "latex",
+            "type": "formula"
+          },
+          {
+            "children": [
+              {
+                "text": "Note that there are nine reactant gas molecules (2 C"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "H"
+              },
+              {
+                "sub": true,
+                "text": "6"
+              },
+              {
+                "text": " and 7 O"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": ") and only four product gas molecules (4 CO"
+              },
+              {
+                "sub": true,
+                "text": "2"
+              },
+              {
+                "text": "). When the number of gas molecules is increased as a result of a chemical reaction, there is an increase in entropy. If, as is the case in this example, there is a decrease in the number of gas molecules, there is a decrease in entropy."
+              }
+            ],
+            "id": "nu8plwfj2b1x45z",
+            "type": "p"
+          }
+        ],
+        "id": "2469950042",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "text": "Determine the sign of Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": " for the following process:"
+                  }
+                ],
+                "id": "g9oyv6cewe1wq0m",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "5zm5wzm1h460hwx",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "1y30iryx68lejkz",
+                "legacyBlockRendered": "true",
+                "src": "2\\;{\\mathrm{CO}}_2(g)\\;\\;\\longrightarrow\\;\\;2\\;\\mathrm{CO}(g)\\;+\\;{\\mathrm O}_2(g)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this reaction, two moles of gas (2 CO"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ") produce three moles of gas (2 CO and 1 O"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "). Because the number of gas particles increases when reactants are converted to products, there are more ways to arrange the particles after the reaction occurs, and Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": " is positive. "
+                  }
+                ],
+                "id": "abghmkejgv2mo8s",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "text": "Determine the sign of Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": " for the following process:"
+                  }
+                ],
+                "id": "o6bc3fsg7csuu9g",
+                "type": "p"
+              },
+              {
+                "children": [
+                  {
+                    "id": "8avc5e6cet5cray",
+                    "text": " ",
+                    "type": "text"
+                  }
+                ],
+                "id": "k5xm6r7u47ax8nc",
+                "legacyBlockRendered": "true",
+                "src": "{\\mathrm H}_2{\\mathrm{CCH}}_2(aq)\\;+\\;{\\mathrm{Br}}_2(aq)\\;\\;\\longrightarrow\\;\\;{\\mathrm H}_2{\\mathrm {BrCCBrH}}_2(aq)",
+                "subtype": "latex",
+                "type": "formula"
+              },
+              {
+                "children": [
+                  {
+                    "text": "In this reaction, two moles of particles in solution (1 H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "CCH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": " and 1 Br"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": ") produce one mole of particles in solution (1 H"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "BrCCBrH"
+                  },
+                  {
+                    "sub": true,
+                    "text": "2"
+                  },
+                  {
+                    "text": "). Because there are fewer particles in solution after the conversion of reactants to products, the number of possible arrangements of the particles has been reduced. This corresponds to a decrease in entropy, so Δ"
+                  },
+                  {
+                    "em": true,
+                    "text": "S"
+                  },
+                  {
+                    "text": " is negative."
+                  }
+                ],
+                "id": "tuxhf19efx8u61g",
+                "type": "p"
+              }
+            ],
+            "id": "2501444779",
+            "selection": {
+              "anchor": {
+                "offset": 0,
+                "path": [
+                  0,
+                  0
+                ]
+              },
+              "focus": {
+                "offset": 0,
+                "path": [
+                  1,
+                  0
+                ]
+              }
+            },
+            "type": "content"
+          }
+        ],
+        "id": "3015390987",
+        "layout": "vertical",
+        "purpose": "example",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79836,
+            "id": "1808774118",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79910,
+            "id": "1209097546",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 78684,
+            "id": "4222053295",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79988,
+            "id": "2803047976",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "3939903339",
+        "layout": "vertical",
+        "purpose": "learnbydoing",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "activity_id": 79377,
+            "id": "2600989100",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 80260,
+            "id": "3642442064",
+            "type": "activity-reference"
+          },
+          {
+            "activity_id": 79330,
+            "id": "2176125318",
+            "type": "activity-reference"
+          }
+        ],
+        "id": "770693866",
+        "layout": "vertical",
+        "purpose": "didigetthis",
+        "type": "group"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "text": "Adapted from "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Openstax Chemistry"
+                  }
+                ],
+                "href": "https://cnx.org/contents/havxkyvS@9.422:b39avmGq@29/Preface",
+                "type": "a"
+              },
+              {
+                "text": " under "
+              },
+              {
+                "children": [
+                  {
+                    "text": "Creative Commons Attribution 4.0 License."
+                  }
+                ],
+                "href": "https://creativecommons.org/licenses/by/4.0",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "p5goeo4aab8jb63",
+            "type": "p"
+          },
+          {
+            "children": [
+              {
+                "text": "Download for free at "
+              },
+              {
+                "children": [
+                  {
+                    "text": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312."
+                  }
+                ],
+                "href": "http://cnx.org/contents/85abf193-2bd2-4908-8563-90b8a7ac8df6@9.312",
+                "type": "a"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "id": "boky36iy9ynvfom",
+            "type": "p"
+          }
+        ],
+        "id": "784994385",
+        "selection": {
+          "anchor": {
+            "offset": 0,
+            "path": [
+              0,
+              0
+            ]
+          },
+          "focus": {
+            "offset": 0,
+            "path": [
+              1,
+              0
+            ]
+          }
+        },
+        "type": "content"
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "purpose": "foundation",
+  "objectives": [
+    "78519"
+  ],
+  "originalFile": "",
+  "introContent": null,
+  "introVideo": null,
+  "posterImage": null,
+  "unresolvedReferences": [],
+  "assessmentMode": "traditional",
+  "collabSpace": {
+    "status": "enabled",
+    "threaded": false,
+    "auto_accept": true,
+    "show_full_history": false,
+    "participation_min_replies": 0,
+    "participation_min_posts": 0,
+    "anonymous_posting": true
+  },
+  "durationMinutes": null,
+  "explanationStrategy": {
+    "type": "after_set_num_attempts",
+    "set_num_attempts": 2
+  },
+  "fullProgressPct": 100,
+  "isGraded": false,
+  "maxAttempts": 0,
+  "recommendedAttempts": null,
+  "relatesTo": [],
+  "retakeMode": "normal",
+  "scoringStrategyId": 2
+}

@@ -1,0 +1,411 @@
+{
+  "id": "79448",
+  "scope": "embedded",
+  "type": "Activity",
+  "tags": [],
+  "title": "free_energy_lbd2-q4",
+  "content": {
+    "authoring": {
+      "parts": [
+        {
+          "explanation": null,
+          "hints": [
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "A reaction is spontaneous if Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "G"
+                    },
+                    {
+                      "text": " is negative."
+                    }
+                  ],
+                  "id": "4txrw9xaqsbhmnq",
+                  "type": "p"
+                }
+              ],
+              "id": "2437813067"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "G"
+                    },
+                    {
+                      "text": " = Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "H"
+                    },
+                    {
+                      "text": " - "
+                    },
+                    {
+                      "em": true,
+                      "text": "T"
+                    },
+                    {
+                      "text": "Δ"
+                    },
+                    {
+                      "em": true,
+                      "text": "S"
+                    }
+                  ],
+                  "id": "93amekzxqfgnfy3",
+                  "type": "p"
+                }
+              ],
+              "id": "2864364103"
+            },
+            {
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "id": "ckt1c3u0g2xnmkd",
+                  "type": "p"
+                }
+              ],
+              "id": "4262626698"
+            }
+          ],
+          "id": "531923827",
+          "objectives": [],
+          "responses": [
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again."
+                      }
+                    ],
+                    "id": "ms400c3lp097mvj",
+                    "type": "p"
+                  }
+                ],
+                "id": "1946567805"
+              },
+              "id": "3218271013",
+              "legacyMatch": "A",
+              "rule": "input like {A}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Correct. All spontaneous reactions with a decrease in the system's entropy are enthalpy driven. (Since Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " = Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": " − "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": "Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": ", "
+                      },
+                      {
+                        "em": true,
+                        "text": "T"
+                      },
+                      {
+                        "text": "Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "S"
+                      },
+                      {
+                        "text": " must be less than Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "H"
+                      },
+                      {
+                        "text": " in order for Δ"
+                      },
+                      {
+                        "em": true,
+                        "text": "G"
+                      },
+                      {
+                        "text": " to be negative."
+                      }
+                    ],
+                    "id": "uah9atz2eslaxno",
+                    "type": "p"
+                  }
+                ],
+                "id": "2070125759"
+              },
+              "id": "1869149001",
+              "legacyMatch": "B",
+              "rule": "input like {B}",
+              "score": 1
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect. Review the hints and try again."
+                      }
+                    ],
+                    "id": "1r4jpsvlmqbq68c",
+                    "type": "p"
+                  }
+                ],
+                "id": "686355898"
+              },
+              "id": "2397089077",
+              "legacyMatch": "C",
+              "rule": "input like {C}",
+              "score": 0
+            },
+            {
+              "feedback": {
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Incorrect."
+                      }
+                    ],
+                    "id": "24lvduakneezwtu",
+                    "type": "p"
+                  }
+                ],
+                "id": "2796263231"
+              },
+              "id": "4170249047",
+              "rule": "input like {.*}",
+              "score": 0
+            }
+          ],
+          "scoringStrategy": "average",
+          "targeted": [
+            [
+              [
+                "A"
+              ],
+              "3218271013"
+            ],
+            [
+              [
+                "B"
+              ],
+              "1869149001"
+            ],
+            [
+              [
+                "C"
+              ],
+              "2397089077"
+            ]
+          ]
+        }
+      ],
+      "previewText": "You determined that the values for ΔH and ΔS are both negative. Which of the following describes why this reaction is spontaneous?",
+      "targeted": [
+        [
+          [
+            "A"
+          ],
+          "3218271013"
+        ],
+        [
+          [
+            "B"
+          ],
+          "1869149001"
+        ],
+        [
+          [
+            "C"
+          ],
+          "2397089077"
+        ]
+      ],
+      "transformations": [
+        {
+          "id": "933656275",
+          "operation": "shuffle",
+          "path": "choices"
+        }
+      ],
+      "version": 2
+    },
+    "bibrefs": [],
+    "choices": [
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Magnitude of the "
+              },
+              {
+                "em": true,
+                "text": "T"
+              },
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " term is greater than Δ"
+              },
+              {
+                "em": true,
+                "text": "H."
+              }
+            ],
+            "id": "es7knr9pshy90jm",
+            "type": "p"
+          }
+        ],
+        "id": "A"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "Magnitude of the "
+              },
+              {
+                "em": true,
+                "text": "T"
+              },
+              {
+                "text": "Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " term is less than Δ"
+              },
+              {
+                "em": true,
+                "text": "H."
+              }
+            ],
+            "id": "fm4eiao18waw74u",
+            "type": "p"
+          }
+        ],
+        "id": "B"
+      },
+      {
+        "content": [
+          {
+            "children": [
+              {
+                "text": "When Δ"
+              },
+              {
+                "em": true,
+                "text": "H"
+              },
+              {
+                "text": " and Δ"
+              },
+              {
+                "em": true,
+                "text": "S"
+              },
+              {
+                "text": " are both negative, the process is spontaneous at any temperature."
+              }
+            ],
+            "id": "oa931tiqn4cwqpy",
+            "type": "p"
+          }
+        ],
+        "id": "C"
+      }
+    ],
+    "stem": {
+      "content": [
+        {
+          "children": [
+            {
+              "text": "You determined that the values for Δ"
+            },
+            {
+              "em": true,
+              "text": "H"
+            },
+            {
+              "text": " and Δ"
+            },
+            {
+              "em": true,
+              "text": "S"
+            },
+            {
+              "text": " are both negative. Which of the following describes why this reaction is spontaneous?"
+            }
+          ],
+          "id": "vii96ac3skuiale",
+          "type": "p"
+        }
+      ]
+    }
+  },
+  "objectives": {
+    "531923827": [
+      "78341"
+    ]
+  },
+  "originalFile": "",
+  "unresolvedReferences": [],
+  "subType": "oli_multiple_choice"
+}
