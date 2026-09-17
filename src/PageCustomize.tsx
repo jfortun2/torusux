@@ -480,7 +480,7 @@ export function PageCustomizeDialogs({
           learningObjective: dialog.block.text.learningObjective,
         }}
         modalTitle="Edit text, explanation, or example"
-        submitLabel="Save changes"
+        submitLabel="Update"
         onCancel={onClose}
         onAdd={(draft) => {
           const updated = textBlockFromDraft(draft);
@@ -505,7 +505,7 @@ export function PageCustomizeDialogs({
           learningObjective: objectives[0]?.label ?? '',
         }}
         modalTitle="Edit text, explanation, or example"
-        submitLabel="Save changes"
+        submitLabel="Update"
         onCancel={onClose}
         onAdd={(draft) => {
           const heading = draft.heading.trim() || dialog.block.example.heading;
@@ -529,7 +529,7 @@ export function PageCustomizeDialogs({
       <ImageBlockForm
         initialDraft={dialog.block.image}
         modalTitle="Edit image"
-        submitLabel="Save changes"
+        submitLabel="Update"
         onCancel={onClose}
         onAdd={(draft) => {
           const updated = imageBlockFromDraft(draft);
@@ -551,7 +551,7 @@ export function PageCustomizeDialogs({
         pageContext={pageContext}
         initialDraft={dialog.block.question}
         modalTitle="Edit a question"
-        submitLabel="Save changes"
+        submitLabel="Update"
         onCancel={onClose}
         onAdd={(draft) => {
           const updated = questionBlockFromDraft(draft);
@@ -639,6 +639,7 @@ export function PageCustomizeDialogs({
         pageContext={pageContext}
         initialDraft={blankQuestionDraft(dialog.questionKind, objectives)}
         onCancel={() => onChoose({ type: 'question-type', insertAt: dialog.insertAt })}
+        submitLabel="Add to page"
         onAdd={(draft) => {
           onAddBlocks(dialog.insertAt, [questionBlockFromDraft(draft)]);
           onClose();
@@ -1401,7 +1402,7 @@ export function QuestionBlockForm({
       ? draft.choices.filter((choice) => choice.text.trim()).length >= 2 && draft.choices.some((choice) => choice.correct)
       : draft.kind === 'multi-input-dropdown'
         ? draft.inputs.length > 0 && draft.inputs.every(dropdownBlankReady)
-        : draft.inputs.some((input) => input.label.trim()));
+        : draft.inputs.length > 0);
 
   const updateChoice = (id: string, patch: Partial<QuestionChoice>) => {
     setDraft((current) => ({
@@ -1972,7 +1973,7 @@ export function QuestionBlockForm({
             Cancel
           </button>
           <button type="submit" className="button button--primary" disabled={!canSave}>
-            {submitLabel ?? 'Save to page'}
+            {submitLabel ?? 'Update'}
           </button>
         </div>
       </form>

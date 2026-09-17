@@ -380,7 +380,7 @@ const electrochemistrySelections: AssessmentSelection[] = [
         points: 1,
         title: 'energy_storage_comparison_cata',
         prompt: 'Select every statement that correctly compares battery and fuel-cell behavior.',
-        learningObjective: 'Untagged objective',
+        learningObjective: 'LO 1.7 Describe batteries and fuel cells.',
         cataStatements: [
           'Primary batteries are generally not designed for recharge cycles.',
           'Secondary batteries are intended for repeated charge-discharge use.',
@@ -709,6 +709,34 @@ const nuclearSelections: AssessmentSelection[] = [
 
 const allAssessmentSelections = (): AssessmentSelection[] => [...electrochemistrySelections, ...nuclearSelections];
 
+const importedAssessmentSelectionCache = new Map<string, AssessmentSelection>();
+
+function assessmentSelectionFromImportedBank(
+  imported: NonNullable<ReturnType<typeof importedBankSelection>>,
+): AssessmentSelection {
+  const cached = importedAssessmentSelectionCache.get(imported.id);
+  if (cached) return cached;
+  const selection: AssessmentSelection = {
+    id: imported.id,
+    availableQuestions: Math.max(imported.availableQuestions, imported.numberToSelect),
+    numberToSelect: imported.numberToSelect,
+    criteriaTag: imported.title,
+    fromQuestionBank: true,
+    exampleQuestions: [
+      {
+        kind: 'mcq',
+        points: 1,
+        title: imported.title,
+        prompt: `This page selects ${imported.numberToSelect} question${imported.numberToSelect === 1 ? '' : 's'} from the “${imported.title}” bank.`,
+        learningObjective: imported.learningObjective,
+        choices: ['Option A', 'Option B', 'Option C', 'Option D'],
+      },
+    ],
+  };
+  importedAssessmentSelectionCache.set(imported.id, selection);
+  return selection;
+}
+
 const getAssessmentSelections = (assessmentTitle?: string, pageId?: string) => {
   const bankIds = resolvePageProfile(assessmentTitle, pageId).bankIds;
   if (bankIds.length === 0) return [];
@@ -716,24 +744,7 @@ const getAssessmentSelections = (assessmentTitle?: string, pageId?: string) => {
   return bankIds
     .map((id) => {
       const imported = importedBankSelection(id);
-      if (imported) {
-        return {
-          id: imported.id,
-          availableQuestions: Math.max(imported.availableQuestions, imported.numberToSelect),
-          numberToSelect: imported.numberToSelect,
-          criteriaTag: imported.title,
-          fromQuestionBank: true,
-          exampleQuestions: [
-            {
-              kind: 'mcq' as const,
-              points: 1,
-              title: imported.title,
-              prompt: `This page selects ${imported.numberToSelect} question${imported.numberToSelect === 1 ? '' : 's'} from the “${imported.title}” bank.`,
-              learningObjective: imported.learningObjective,
-            },
-          ],
-        } satisfies AssessmentSelection;
-      }
+      if (imported) return assessmentSelectionFromImportedBank(imported);
       return pool.find((selection) => selection.id === id);
     })
     .filter((selection): selection is AssessmentSelection => Boolean(selection));
@@ -1812,7 +1823,7 @@ function AssessmentScreen() {
           onEditBlock={(blockId, nextBlock) => {
             setBlocks((current) => current.map((block) => (block.id === blockId ? nextBlock : block)));
             setSelectedBlockId(blockId);
-            setAnnouncement(`Saved changes to “${nextBlock.title}”.`);
+            setAnnouncement(`Updated “${nextBlock.title}”.`);
           }}
         />
       ) : null}
@@ -1882,7 +1893,12 @@ function bankRowToQuestionDraft(row: BankQuestionRow, objectives: PageObjective[
   const learningObjective = matched ? formatObjectiveTag(matched) : row.learningObjective;
   const correctIndex = row.correctChoiceIndex ?? 0;
   const sourceChoices =
-    row.choices && row.choices.length > 0 ? row.choices : ['Option A', 'Option B', 'Option C', 'Option D'];
+    row.kind === 'cata' && row.cataStatements && row.cataStatements.length > 0
+      ? row.cataStatements
+      : row.choices && row.choices.length > 0
+        ? row.choices
+        : ['Option A', 'Option B', 'Option C', 'Option D'];
+  const defaultDropdownOptions = ['Option A', 'Option B', 'Option C'];
   return {
     kind,
     title: row.title,
@@ -1899,11 +1915,13 @@ function bankRowToQuestionDraft(row: BankQuestionRow, objectives: PageObjective[
       row.inputs && row.inputs.length > 0
         ? row.inputs
         : kind === 'multi-input-dropdown'
-          ? [{ id: 'i1', label: '', answer: '', options: ['', '', ''] }]
-          : [
-              { id: 'i1', label: '', answer: '' },
-              { id: 'i2', label: '', answer: '' },
-            ],
+          ? [{ id: 'i1', label: 'Blank 1', answer: defaultDropdownOptions[0], options: defaultDropdownOptions }]
+          : kind === 'multi-input'
+            ? [
+                { id: 'i1', label: 'Blank 1', answer: '' },
+                { id: 'i2', label: 'Blank 2', answer: '' },
+              ]
+            : [],
     correctFeedback: row.correctFeedback ?? '',
     incorrectFeedback: row.incorrectFeedback ?? '',
     showGraph: row.showGraph,
@@ -1948,6 +1966,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
     allAssessmentSelections().find((bank) => bank.id === state?.bankId) ??
     pageSelections[0] ??
     electrochemistrySelections[0];
+  const selectedBankId = selectedBank.id;
   const attemptsStarted = state?.attemptsStarted ?? false;
 
   useLayoutEffect(() => {
@@ -1959,7 +1978,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
   const pageEditorObjectives =
     pageMeta?.attachedObjectiveCodes?.length
       ? COURSE_LEARNING_OBJECTIVES.filter((objective) => pageMeta.attachedObjectiveCodes.includes(objective.code))
-      : getPageObjectives(assessmentTitle);
+      : getPageObjectives(assessmentTitle, state?.pageId);
   const variantSuffix = [
     'with a conceptual check',
     'with a quantitative emphasis',
@@ -2003,12 +2022,12 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
         showGraph: seeded.showGraph,
       };
     });
-  }, [assessmentTitle, generatedQuestionCount, selectedBank]);
+  }, [assessmentTitle, generatedQuestionCount, selectedBankId, selectedBank.exampleQuestions, selectedBank.availableQuestions]);
   const [bankEditRevision, setBankEditRevision] = useState(0);
   const baseQuestions: BankQuestionRow[] = useMemo(() => {
     const draft = loadAssessmentDraft(assessmentTitle);
-    const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBank.id] ?? []);
-    const editedById = draft.bankEditedQuestions?.[selectedBank.id] ?? {};
+    const removedIdSet = new Set(draft.bankRemovedQuestionIds[selectedBankId] ?? []);
+    const editedById = draft.bankEditedQuestions?.[selectedBankId] ?? {};
     return seededQuestions.map((question) => {
       const edit = editedById[question.id] ?? {};
       return {
@@ -2018,7 +2037,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
         removed: removedIdSet.has(question.id),
       };
     });
-  }, [assessmentTitle, selectedBank.id, seededQuestions, bankEditRevision]);
+  }, [assessmentTitle, selectedBankId, seededQuestions, bankEditRevision]);
   const [questionRows, setQuestionRows] = useState<BankQuestionRow[]>(baseQuestions);
   const [filterMode, setFilterMode] = useState<'all' | 'included' | 'removed'>('all');
   const [searchText, setSearchText] = useState('');
@@ -2118,14 +2137,19 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
 
   useEffect(() => {
     setQuestionRows(baseQuestions);
+    setActiveQuestionId((current) => (baseQuestions.some((question) => question.id === current) ? current : baseQuestions[0]?.id ?? ''));
+  }, [baseQuestions]);
+
+  useEffect(() => {
     setFilterMode('all');
     setSearchText('');
     setLearningObjectiveFilter('all');
     setQuestionTypeFilter('all');
     setSelected(bulkEdit ? baseQuestions.filter((question) => !question.removed).slice(0, 6).map((question) => question.id) : []);
-    setActiveQuestionId(baseQuestions[0]?.id ?? '');
     setEditQuestionId(null);
-  }, [baseQuestions, bulkEdit]);
+    // Reset filters and the open editor when switching banks, not when a single question is saved.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedBankId, bulkEdit]);
 
   useEffect(() => {
     persistBankRemovedQuestionIds(
@@ -2426,7 +2450,7 @@ function ActivityBankScreen({ bulkEdit }: { bulkEdit: boolean }) {
           key={editQuestion.id}
           objectives={pageEditorObjectives.length > 0 ? pageEditorObjectives : COURSE_LEARNING_OBJECTIVES}
           modalTitle="Edit question"
-          submitLabel="Save changes"
+          submitLabel="Update"
           initialDraft={bankRowToQuestionDraft(editQuestion, pageEditorObjectives)}
           onCancel={() => setEditQuestionId(null)}
           onAdd={(draft) => {
