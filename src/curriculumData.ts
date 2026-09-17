@@ -31,8 +31,14 @@ export type CurriculumNode = {
 
 const LO_CELL = 'LO 1.13 Describe the basic components of galvanic cells.';
 const LO_APPS = 'LO 1.7 Describe batteries and fuel cells.';
+const LO_REDOX = 'LO 1.3 Produce balanced oxidation-reduction equations for reactions in acidic or basic solution.';
+const LO_CELL_POT = 'LO 1.6 Determine standard cell potentials for oxidation-reduction reactions.';
+const LO_CORROSION = 'LO 1.8 List methods used to prevent or slow corrosion.';
+const LO_NOTATION = 'LO 1.10 Use cell notation to describe galvanic cells.';
+const LO_ELECTROLYTIC = 'LO 1.12 Describe electrolytic cells and their relationship to galvanic cells.';
 const LO_RAD = 'LO 1.4 Distinguish alpha, beta, and gamma radiation by interaction with matter.';
 const LO_BIO = 'LO 1.5 Explain how pathway and tissue sensitivity influence biological effects.';
+const ELECTROCHEMISTRY_CHECKPOINT_OBJECTIVES = [LO_REDOX, LO_CELL_POT, LO_APPS, LO_CORROSION, LO_NOTATION, LO_ELECTROLYTIC, LO_CELL];
 
 export const BLOCK_KIND_LABEL: Record<ContentBlockKind, string> = {
   explanation: 'Explanation',
@@ -57,7 +63,7 @@ export const COURSE_LEARNING_OBJECTIVES: CourseLearningObjective[] = [
   { code: 'LO 1.5', label: 'Explain how pathway and tissue sensitivity influence biological effects.' },
 ];
 
-const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v4';
+const CURRICULUM_STORAGE_KEY = 'torusux:curriculum:v5';
 
 const item = (
   node: Omit<CurriculumNode, 'children' | 'originalTitle' | 'origin' | 'status'> &
@@ -71,9 +77,113 @@ const item = (
   assessmentTitle: node.type === 'page' ? node.assessmentTitle ?? node.title : node.assessmentTitle,
 });
 
+function patchElectrochemistryUnitCheckpoint(node: CurriculumNode): CurriculumNode {
+  if (node.id === 'page-80839') {
+    return item({
+      ...node,
+      learningObjectives: ELECTROCHEMISTRY_CHECKPOINT_OBJECTIVES,
+      children: [
+        item({
+          id: 'c-text-80839-intro',
+          type: 'block',
+          blockKind: 'explanation',
+          title: 'Electrochemistry unit checkpoint',
+          learningObjectives: ELECTROCHEMISTRY_CHECKPOINT_OBJECTIVES,
+        }),
+        item({
+          id: 'c-bank-80839-ab-1',
+          type: 'block',
+          blockKind: 'bank',
+          title: 'Redox in acidic media',
+          learningObjectives: [LO_REDOX],
+        }),
+        item({
+          id: 'c-bank-80839-ab-8',
+          type: 'block',
+          blockKind: 'bank',
+          title: 'Half-reactions',
+          learningObjectives: [LO_REDOX],
+        }),
+        item({
+          id: 'c-bank-80839-ab-9',
+          type: 'block',
+          blockKind: 'bank',
+          title: 'Galvanic cell behavior',
+          learningObjectives: [LO_CELL],
+        }),
+        item({
+          id: 'c-bank-80839-ab-3',
+          type: 'block',
+          blockKind: 'bank',
+          title: 'Electrolysis products',
+          learningObjectives: [LO_ELECTROLYTIC],
+        }),
+        item({
+          id: 'c-bank-80839-ab-4',
+          type: 'block',
+          blockKind: 'bank',
+          title: 'Corrosion and prevention',
+          learningObjectives: [LO_CORROSION],
+        }),
+        item({
+          id: 'c-bank-80839-ab-6',
+          type: 'block',
+          blockKind: 'bank',
+          title: 'Batteries and fuel cells',
+          learningObjectives: [LO_APPS],
+        }),
+        item({
+          id: 'c-example-80839',
+          type: 'block',
+          blockKind: 'example',
+          title: 'Electrolysis cell diagram',
+          learningObjectives: [LO_ELECTROLYTIC],
+        }),
+        item({
+          id: 'c-q-80839-galvanic',
+          type: 'block',
+          blockKind: 'question',
+          title: 'Galvanic cell electrode roles',
+          learningObjectives: [LO_CELL],
+        }),
+        item({
+          id: 'c-q-80839-notation',
+          type: 'block',
+          blockKind: 'question',
+          title: 'Cell notation for a galvanic cell',
+          learningObjectives: [LO_NOTATION],
+        }),
+        item({
+          id: 'c-q-80839-electrolytic',
+          type: 'block',
+          blockKind: 'question',
+          title: 'Galvanic versus electrolytic cells',
+          learningObjectives: [LO_ELECTROLYTIC],
+        }),
+        item({
+          id: 'c-q-80839-exit',
+          type: 'block',
+          blockKind: 'question',
+          title: 'Cell potential as the reaction proceeds',
+          learningObjectives: [LO_CELL_POT],
+        }),
+        item({
+          id: 'c-q-80839-apps',
+          type: 'block',
+          blockKind: 'question',
+          title: 'Applications: corrosion and energy devices',
+          learningObjectives: [LO_CORROSION, LO_APPS],
+        }),
+      ],
+    });
+  }
+  if (node.children.length === 0) return node;
+  return { ...node, children: node.children.map(patchElectrochemistryUnitCheckpoint) };
+}
+
 export function createInitialCurriculum(): CurriculumNode[] {
   return [
-    ELECTROCHEMISTRY_UNIT as CurriculumNode,
+    patchElectrochemistryUnitCheckpoint(ELECTROCHEMISTRY_UNIT as CurriculumNode),
     item({
       id: 'unit-nuclear',
       type: 'unit',

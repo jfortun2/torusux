@@ -166,6 +166,7 @@ function readLayout(assessmentTitle: string, slot: 'saved' | 'draft'): PageBlock
     if (!raw) return null;
     const parsed = JSON.parse(raw) as Partial<StoredLayout>;
     if (!parsed || parsed.v !== 1 || !Array.isArray(parsed.blocks)) return null;
+    if (parsed.blocks.length === 0) return null;
     return stripInjectedLayoutExamples(parsed.blocks);
   } catch {
     return null;
@@ -973,9 +974,13 @@ export function summarizePageChanges(saved: PageBlock[], draft: PageBlock[]): Ch
     if (!previous) return;
     if (previous.status !== 'removed' && block.status === 'removed') {
       items.push(`Removed “${block.title}”`);
+      return;
     }
     if (previous.status === 'removed' && block.status !== 'removed') {
       items.push(`Restored “${block.title}”`);
+    }
+    if (previous.status !== 'removed' && block.status !== 'removed' && blockContentDiffers(previous, block)) {
+      items.push(`Edited “${previous.title}”`);
     }
   });
 
@@ -989,6 +994,10 @@ export function summarizePageChanges(saved: PageBlock[], draft: PageBlock[]): Ch
   const draftSharedOrder = draft.map((block) => block.id).filter((id) => savedById.has(id));
   if (savedSharedOrder.join('|') !== draftSharedOrder.join('|')) {
     items.push('Reordered content');
+  }
+
+  if (items.length === 0 && !blocksEqual(saved, draft)) {
+    items.push('Edited page content');
   }
 
   return { count: items.length, items };
@@ -1083,6 +1092,7 @@ export const ACTIVITY_BANK_TITLES: Record<string, string> = {
 };
 
 export const ELECTROCHEMISTRY_BANK_IDS = ['ab-1', 'ab-2', 'ab-3', 'ab-4', 'ab-5', 'ab-6', 'ab-7', 'ab-8', 'ab-9', 'ab-10'];
+export const ELECTROCHEMISTRY_UNIT_CHECKPOINT_BANK_IDS = ['ab-1', 'ab-8', 'ab-9', 'ab-3', 'ab-4', 'ab-6'];
 export const NUCLEAR_BANK_IDS = ['n-ab-1', 'n-ab-2', 'n-ab-3', 'n-ab-4'];
 
 export type PageExampleImageKey = 'electrolysis' | 'radiation' | 'formula' | 'welding';
@@ -1579,45 +1589,153 @@ function batteriesProfile(): PageContentProfile {
 }
 
 function electrochemistryCheckpointProfile(): PageContentProfile {
+  const loCellPot = 'LO 1.6 Determine standard cell potentials for oxidation-reduction reactions.';
+  const loBatteries = 'LO 1.7 Describe batteries and fuel cells.';
+  const loCorrosion = 'LO 1.8 List methods used to prevent or slow corrosion.';
+  const loNotation = 'LO 1.10 Use cell notation to describe galvanic cells.';
+  const loElectrolytic = 'LO 1.12 Describe electrolytic cells and their relationship to galvanic cells.';
+  const loGalvanic = 'LO 1.13 Describe the basic components of galvanic cells.';
   return {
     key: 'electrochemistry-checkpoint',
     matched: true,
     layout: 'checkpoint',
-    objectiveCodes: ['LO 1.1', 'LO 1.2', 'LO 1.3'],
-    bankIds: ELECTROCHEMISTRY_BANK_IDS,
+    objectiveCodes: ['LO 1.3', 'LO 1.6', 'LO 1.7', 'LO 1.8', 'LO 1.10', 'LO 1.12', 'LO 1.13'],
+    bankIds: ELECTROCHEMISTRY_UNIT_CHECKPOINT_BANK_IDS,
     intro: {
-      heading: 'Electrochemistry in this checkpoint',
+      heading: 'Electrochemistry unit checkpoint',
       bodyHtml: html([
-        'Electrochemistry links electron transfer to chemical change: oxidation is loss of electrons, reduction is gain. In a galvanic cell, a spontaneous reaction drives current through an external circuit; in electrolysis, electrical work drives a nonspontaneous process. Standard reduction potentials help you compare tendencies and predict cell direction under standard conditions.',
-        'Beyond lecture-scale cells, electrochemistry shapes everyday technology—alkaline and lithium-ion batteries store portable energy, lead-acid systems support vehicles, and fuel cells convert fuel continuously while reactants are supplied. Corrosion is the same chemistry working against structures: dissimilar metals in contact with an electrolyte can accelerate material loss unless design or coatings interrupt the cell.',
-        'This checkpoint draws on those ideas so students connect definitions to graphs, half-reactions, and applications. As you review activity banks below, you are choosing which items best reinforce the learning objectives for this unit on electrochemistry and its real-world uses.',
+        'This scored checkpoint samples the unit: balancing redox half-reactions, assembling galvanic cells, forcing nonspontaneous change in electrolytic cells, and applying the same ideas to batteries, fuel cells, and corrosion.',
+        'Oxidation is loss of electrons and reduction is gain. In a galvanic cell a spontaneous reaction drives current through the external circuit; in electrolysis an external voltage drives a nonspontaneous process. Standard reduction potentials let you compare tendencies, write cell notation, and predict which electrode is the anode.',
+        'You will see a subset of items from the activity banks on this page, plus a few embedded questions. Use the banks for redox bookkeeping, cell behavior, electrolysis products, corrosion controls, and battery versus fuel-cell distinctions.',
       ]),
-      learningObjective: 'LO 1.2 Predict electrochemical behavior and cell trends.',
+      learningObjective: loGalvanic,
     },
+    extraTextBlocks: [
+      {
+        id: 'checkpoint-how-to',
+        heading: 'What this checkpoint asks you to do',
+        beforeQuestionIndex: 0,
+        learningObjective: loGalvanic,
+        bodyHtml: html([
+          'For each item, name the process (oxidation or reduction), the electrode (anode or cathode), and whether the cell is galvanic or electrolytic before you compute a potential.',
+          'Cell notation writes the anode on the left and the cathode on the right, with │ for a phase boundary and ║ for the salt bridge. A positive E°<sub>cell</sub> means the written reaction is spontaneous under standard conditions.',
+        ]),
+      },
+      {
+        id: 'checkpoint-applications',
+        heading: 'Batteries, fuel cells, and corrosion',
+        beforeQuestionIndex: 4,
+        learningObjective: loCorrosion,
+        bodyHtml: html([
+          'Primary cells are not designed to be recharged; secondary cells are. A fuel cell is a galvanic cell that keeps producing current only while fuel and oxidant are supplied. Corrosion is a galvanic process working against a structure: a more easily oxidized metal can serve as a sacrificial anode, and coatings or electrical isolation interrupt the cell.',
+        ]),
+      },
+    ],
     example: {
       id: 'example-electrolysis',
       heading: 'Electrolysis cell diagram',
-      bodyHtml: '<p>An electrolytic cell uses electrical work to drive a nonspontaneous redox process at the electrodes.</p>',
+      bodyHtml:
+        '<p>An electrolytic cell uses electrical work to drive a nonspontaneous redox process. In molten NaCl, chloride is oxidized to Cl<sub>2</sub> at the anode while Na<sup>+</sup> is reduced to sodium at the cathode. The same electrode-role thinking applies in aqueous electrolysis and electroplating, where the workpiece is the cathode.</p>',
       image: 'electrolysis',
       imageAlt: 'Electrolysis setup with electrodes and ion movement',
     },
     questions: [
       {
+        id: 'unit-galvanic-roles',
+        question: mcq({
+          title: 'Galvanic cell electrode roles',
+          prompt:
+            'In a zinc–copper galvanic cell, zinc metal is oxidized and Cu²⁺ is reduced. Which statement correctly describes the cell?',
+          points: 3,
+          learningObjective: loGalvanic,
+          choices: [
+            choice('ug-1', 'Zinc is the cathode; electrons travel through the salt bridge to copper.', false),
+            choice('ug-2', 'Zinc is the anode; electrons travel through the external wire toward the copper electrode.', true),
+            choice('ug-3', 'Copper is oxidized and zinc ions are reduced at the anode.', false),
+            choice('ug-4', 'The cell is electrolytic because no external battery is attached.', false),
+          ],
+          correctFeedback: 'Correct. Oxidation of zinc makes it the anode; electrons flow in the wire to the copper cathode.',
+          incorrectFeedback: 'Incorrect. The metal that is oxidized is the anode, and electrons move through the wire, not the salt bridge.',
+        }),
+      },
+      {
+        id: 'unit-cell-notation',
+        question: mcq({
+          title: 'Cell notation for a galvanic cell',
+          prompt: 'Which cell notation correctly represents a galvanic cell in which Cr is oxidized and Cu²⁺ is reduced?',
+          points: 3,
+          learningObjective: loNotation,
+          choices: [
+            choice('un-1', 'Cu(s)│Cu²⁺(aq)║Cr³⁺(aq)│Cr(s)', false),
+            choice('un-2', 'Cr(s)│Cr³⁺(aq)║Cu²⁺(aq)│Cu(s)', true),
+            choice('un-3', 'Cr³⁺(aq)│Cr(s)║Cu(s)│Cu²⁺(aq)', false),
+            choice('un-4', 'Cu²⁺(aq), Cr³⁺(aq)║Cr(s)│Cu(s)', false),
+          ],
+          correctFeedback: 'Correct. Anode (oxidation of Cr) is written on the left; cathode (reduction of Cu²⁺) is on the right.',
+          incorrectFeedback: 'Incorrect. Cell notation places the anode and its solution on the left of the salt-bridge symbol.',
+        }),
+      },
+      {
+        id: 'unit-electrolytic',
+        question: mcq({
+          title: 'Galvanic versus electrolytic cells',
+          prompt: 'Which statement correctly contrasts a galvanic cell with an electrolytic cell?',
+          points: 3,
+          learningObjective: loElectrolytic,
+          choices: [
+            choice('ue-1', 'Both cells have a positive cell potential and do work on the surroundings.', false),
+            choice(
+              'ue-2',
+              'A galvanic cell has a spontaneous reaction (E°cell > 0); an electrolytic cell uses an applied voltage to drive a nonspontaneous reaction.',
+              true,
+            ),
+            choice('ue-3', 'Electrolytic cells oxidize at the cathode and reduce at the anode.', false),
+            choice('ue-4', 'Galvanic cells require an external power supply; electrolytic cells do not.', false),
+          ],
+          correctFeedback: 'Correct. Galvanic cells are spontaneous; electrolytic cells apply a voltage to force the reverse process.',
+          incorrectFeedback: 'Incorrect. Oxidation still occurs at the anode; the difference is whether the reaction is spontaneous.',
+        }),
+      },
+      {
         id: 'exitQuestion',
         question: mcq({
-          title: 'Electrochemistry Exit Question',
+          title: 'Cell potential as the reaction proceeds',
           prompt: 'Which statement best explains why a galvanic cell potential decreases as reactants are consumed?',
           points: 3,
-          learningObjective: 'LO 1.2 Predict electrochemical behavior and cell trends.',
+          learningObjective: loCellPot,
           choices: [
             choice('ex-1', 'The anode starts reducing instead of oxidizing.', false),
-            choice('ex-2', 'Reaction quotient shifts and lowers the driving force toward equilibrium.', true),
+            choice('ex-2', 'The reaction quotient Q increases and the driving force falls toward equilibrium.', true),
             choice('ex-3', 'Electrons are no longer transferred through the external circuit.', false),
             choice('ex-4', 'The salt bridge blocks ion movement once products form.', false),
           ],
           correctFeedback: 'Correct. As reactants are consumed, Q increases and the cell potential falls toward equilibrium.',
           incorrectFeedback: 'Incorrect. The cell still transfers electrons; the driving force changes as concentrations change.',
           canonicalKey: 'exitQuestion',
+        }),
+      },
+      {
+        id: 'unit-corrosion-battery',
+        question: mcq({
+          title: 'Applications: corrosion and energy devices',
+          prompt:
+            'An iron pipe is joined to copper fittings in aerated water, and a separate device must supply current only while fuel is fed. Which pairing is correct?',
+          points: 3,
+          learningObjective: loBatteries,
+          choices: [
+            choice('ua-1', 'Iron is protected by being the cathode of the couple; the device is a primary alkaline cell.', false),
+            choice(
+              'ua-2',
+              'Iron is the anode of the galvanic couple unless a sacrificial metal is attached; the device is a fuel cell.',
+              true,
+            ),
+            choice('ua-3', 'Copper corrodes instead of iron; the device is a secondary lead-acid battery.', false),
+            choice('ua-4', 'Painting only the copper stops iron corrosion; the device stores all of its fuel inside a closed case.', false),
+          ],
+          correctFeedback:
+            'Correct. Iron is more readily oxidized than copper, and a fuel cell requires a continuous fuel feed.',
+          incorrectFeedback:
+            'Incorrect. Iron tends to be the anode in contact with copper, and a fuel cell is not a stored-inventory battery.',
         }),
       },
     ],
@@ -1918,9 +2036,13 @@ export function resourceIdFromPageId(pageId?: string): string {
   return (pageId ?? '').replace(/^page-/, '');
 }
 
+function importedPageHasContent(page: ImportedPage): boolean {
+  return page.blocks.length > 0 || page.bankIds.length > 0;
+}
+
 export function resolvePageProfile(title?: string, pageId?: string): PageContentProfile {
   const resourceId = resourceIdFromPageId(pageId);
-  if (resourceId && ELECTROCHEMISTRY_PAGES[resourceId]) {
+  if (resourceId && ELECTROCHEMISTRY_PAGES[resourceId] && importedPageHasContent(ELECTROCHEMISTRY_PAGES[resourceId])) {
     return importedPageProfile(ELECTROCHEMISTRY_PAGES[resourceId]);
   }
   const normalized = normalizePageTitle(title ?? '');
@@ -1928,7 +2050,7 @@ export function resolvePageProfile(title?: string, pageId?: string): PageContent
     const imported = Object.values(ELECTROCHEMISTRY_PAGES).find(
       (page) => normalizePageTitle(page.title) === normalized,
     );
-    if (imported) return importedPageProfile(imported);
+    if (imported && importedPageHasContent(imported)) return importedPageProfile(imported);
   }
   if (!normalized) return EMPTY_PROFILE;
   if (normalized.includes('cell notation') || normalized.includes('cell diagram')) return cellNotationProfile();
@@ -1982,7 +2104,7 @@ export function createDefaultPageBlocks({
 }): PageBlock[] {
   const profile = resolvePageProfile(pageTitle, pageId);
   const status: PageBlockStatus = origin === 'instructor' ? 'added' : 'original';
-  if (profile.blocks) {
+  if (profile.blocks && profile.blocks.length > 0) {
     return cloneBlocks(profile.blocks).map((block) => {
       if (block.kind === 'bank') {
         return {
