@@ -1,5 +1,5 @@
-import { useEffect, useId, useRef, useState, type DragEvent, type MutableRefObject, type ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useId, useMemo, useRef, useState, type DragEvent, type MutableRefObject, type ReactNode } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import chevronRightIcon from './assets/icon-chevron-right.svg';
 import containerIcon from './assets/icon-container.png';
 import deleteMenuIcon from './assets/icon-delete-menu.svg';
@@ -43,6 +43,7 @@ import {
   type RemovalImpact,
 } from './learningDesign';
 import { createDefaultPageBlocks, persistPageMeta, persistSavedPageLayout, resolvePageProfile } from './pageCustomization';
+import { dismissTour, useTour } from './firstRunTour';
 
 const ROOT_DESTINATION = '__root__';
 
@@ -139,6 +140,19 @@ function seedImportedPage(title: string, scoring: PageScoring, projectName: stri
   });
 }
 
+function firstOpenablePage(nodes: CurriculumNode[]): { pageId: string; ancestorIds: string[] } | null {
+  const walk = (list: CurriculumNode[], ancestors: string[]): { pageId: string; ancestorIds: string[] } | null => {
+    for (const node of list) {
+      if (node.type === 'block' || !isNodeVisible(node, false)) continue;
+      if (node.type === 'page') return { pageId: node.id, ancestorIds: ancestors };
+      const found = walk(node.children, [...ancestors, node.id]);
+      if (found) return found;
+    }
+    return null;
+  };
+  return walk(nodes, []);
+}
+
 function subtreeMatches(node: CurriculumNode, query: string): boolean {
   if (node.title.toLowerCase().includes(query)) return true;
   return node.children.some((child) => child.type !== 'block' && subtreeMatches(child, query));
@@ -146,6 +160,9 @@ function subtreeMatches(node: CurriculumNode, query: string): boolean {
 
 export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
   const navigate = useNavigate();
+  const location = useLocation();
+  const tour = useTour();
+  const fromReleaseNote = Boolean((location.state as { fromReleaseNote?: boolean } | null)?.fromReleaseNote);
   const showRemovedId = useId();
   const [editing, setEditing] = useState(false);
   const [units, setUnits] = useState<CurriculumNode[]>(() => loadCurriculum());
@@ -162,8 +179,36 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
   const draggingIdRef = useRef<string | null>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const lastMenuTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const expandedForHint = useRef(false);
+  const scrolledForHint = useRef(false);
 
   const dirty = JSON.stringify(units) !== savedSnapshot;
+  const openHintTarget = useMemo(
+    () => (tour.outline && !editing ? firstOpenablePage(units) : null),
+    [tour.outline, editing, units],
+  );
+
+  useEffect(() => {
+    if (!openHintTarget || expandedForHint.current) return;
+    expandedForHint.current = true;
+    setExpandedIds((current) => {
+      const next = new Set(current);
+      openHintTarget.ancestorIds.forEach((id) => next.add(id));
+      return next;
+    });
+  }, [openHintTarget]);
+
+  useEffect(() => {
+    if (!openHintTarget || scrolledForHint.current) return undefined;
+    const anchor = document.querySelector<HTMLElement>('[data-tour-anchor="open-page"]');
+    if (!anchor) return undefined;
+    scrolledForHint.current = true;
+    anchor.scrollIntoView({ block: 'center' });
+    if (fromReleaseNote) {
+      anchor.querySelector<HTMLButtonElement>('button')?.focus();
+    }
+    return undefined;
+  }, [openHintTarget, expandedIds, fromReleaseNote]);
 
   useEffect(() => {
     persistCurriculum(units);
@@ -289,6 +334,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
   };
 
   const openPage = (node: CurriculumNode) => {
+    dismissTour('outline');
     const scoring = pageScoringOf(node);
     navigate('/assessment-default', {
       state: {
@@ -299,8 +345,8 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
         isInstructorCreated: node.origin === 'instructor',
         attachedObjectiveCodes: objectiveCodesFromLabels(node.learningObjectives ?? []),
         breadcrumbTrail: [
-          { label: 'Overview', to: '/' },
-          { label: 'Course Content', to: '/' },
+          { label: 'Overview', to: '/overview' },
+          { label: 'Course Content', to: '/overview' },
           { label: node.title },
         ],
       },
@@ -423,6 +469,8 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
           }}
           onDropHint={setDropHint}
           onDropRow={applyDrop}
+          openHint={openHintTarget?.pageId === node.id}
+          onDismissOpenHint={() => dismissTour('outline')}
         />,
       ];
       if (isContainerType(node.type)) {
@@ -972,6 +1020,8 @@ function CurriculumRow({
   onDragEnd,
   onDropHint,
   onDropRow,
+  openHint = false,
+  onDismissOpenHint,
 }: {
   node: CurriculumNode;
   depth: number;
@@ -994,6 +1044,8 @@ function CurriculumRow({
   onDragEnd: () => void;
   onDropHint: (hint: DropHint | null) => void;
   onDropRow: (targetId: string, placement: DropPlacement) => void;
+  openHint?: boolean;
+  onDismissOpenHint?: () => void;
 }) {
   const canExpand = isContainerType(node.type);
   const rowLabel = structuralLabel(node.type);
@@ -1115,8 +1167,24 @@ function CurriculumRow({
           <button type="button" className="curriculum-title-button" onClick={onToggleExpand}>
             <span className="curriculum-title">{node.title}</span>
           </button>
-        ) : editing ? (
-          <span className="curriculum-title">{node.title}</span>
+        ) : openHint ? (
+          <span className="tour-anchor" data-tour-anchor="open-page">
+            <button
+              type="button"
+              className="curriculum-title-button curriculum-title-button--link is-tour-target"
+              onClick={onOpenPage}
+              aria-label={`Open ${node.title}`}
+              aria-describedby="open-page-hint"
+            >
+              <span className="curriculum-title">{node.title}</span>
+            </button>
+            <div className="tour-note" role="note">
+              <p id="open-page-hint">Click a page to open it.</p>
+              <button type="button" className="tour-note__dismiss" onClick={onDismissOpenHint}>
+                Dismiss
+              </button>
+            </div>
+          </span>
         ) : (
           <button
             type="button"

@@ -12,6 +12,7 @@ import {
   type BankQuestionEditDraft,
 } from './assessmentDraftStorage';
 import { CustomizeScreen as ImportedCustomizeScreen } from './CustomizeCurriculum';
+import { dismissTour, useTour } from './firstRunTour';
 import {
   AddContentGap,
   CourseResourceView,
@@ -761,9 +762,10 @@ const getPageObjectives = (assessmentTitle?: string, pageId?: string): PageObjec
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<OverviewScreen />} />
+      <Route path="/" element={<InsightsScreen />} />
+      <Route path="/overview" element={<OverviewScreen />} />
       <Route path="/manage" element={<ManageScreen />} />
-      <Route path="/customize" element={<Navigate to="/" replace />} />
+      <Route path="/customize" element={<Navigate to="/overview" replace />} />
       <Route path="/assessment-default" element={<AssessmentScreen />} />
       <Route path="/inside-bank" element={<ActivityBankScreen bulkEdit={false} />} />
       <Route path="/bulk-edit" element={<ActivityBankScreen bulkEdit />} />
@@ -872,17 +874,12 @@ function AppShell({
           <span>OLI Torus</span>
         </div>
         <nav className="topbar__nav" aria-label="Primary">
-          <NavLink to="/" end className={({ isActive }) => (isActive ? 'is-active' : undefined)}>
+          <NavLink to="/overview" className={({ isActive }) => (isActive ? 'is-active' : undefined)}>
             Overview
           </NavLink>
-          <a
-            href="#insights"
-            onClick={(event) => {
-              event.preventDefault();
-            }}
-          >
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'is-active' : undefined)}>
             Insights
-          </a>
+          </NavLink>
           <NavLink to="/manage" className={({ isActive }) => (isActive ? 'is-active' : undefined)}>
             Manage
           </NavLink>
@@ -1022,6 +1019,89 @@ function ManageScreen() {
   );
 }
 
+const INSIGHTS_PAGES = [
+  { page: 'Introduction to Electrochemistry', score: '81%', status: 'On track' },
+  { page: 'Galvanic cells', score: '62%', status: 'Needs review' },
+  { page: 'Electrochemistry Unit Checkpoint', score: '58%', status: 'Needs review' },
+];
+
+function InsightsScreen() {
+  const navigate = useNavigate();
+  const tour = useTour();
+
+  return (
+    <AppShell overview courseName="Test Course">
+      <div className="insights">
+        <h1 className="insights__title">Insights</h1>
+        <p className="insights__lead">How students are moving through Test Course this week.</p>
+        {tour.banner ? (
+          <section className="release-note" aria-labelledby="release-note-title">
+            <div className="release-note__copy">
+              <p className="release-note__eyebrow">What&apos;s new</p>
+              <h2 id="release-note-title">We&apos;ve updated course content</h2>
+              <p>Customized content is now in a new location.</p>
+            </div>
+            <div className="release-note__actions">
+              <button
+                type="button"
+                className="button button--primary"
+                onClick={() => {
+                  dismissTour('banner');
+                  navigate('/overview', { state: { fromReleaseNote: true } });
+                }}
+              >
+                Look at Course Content
+              </button>
+              <button type="button" className="button button--subtle" onClick={() => dismissTour('banner')}>
+                Dismiss
+              </button>
+            </div>
+          </section>
+        ) : null}
+        <div className="insights-stats">
+          <div className="insights-stat">
+            <span>Students enrolled</span>
+            <strong>128</strong>
+          </div>
+          <div className="insights-stat">
+            <span>Active in the last 7 days</span>
+            <strong>96</strong>
+          </div>
+          <div className="insights-stat">
+            <span>Average progress</span>
+            <strong>64%</strong>
+          </div>
+          <div className="insights-stat">
+            <span>Pages to review</span>
+            <strong>2</strong>
+          </div>
+        </div>
+        <section className="insights-panel" aria-labelledby="insights-pages-title">
+          <h2 id="insights-pages-title">Page scores</h2>
+          <table className="insights-table">
+            <thead>
+              <tr>
+                <th scope="col">Page</th>
+                <th scope="col">Average score</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {INSIGHTS_PAGES.map((row) => (
+                <tr key={row.page}>
+                  <td>{row.page}</td>
+                  <td>{row.score}</td>
+                  <td>{row.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </AppShell>
+  );
+}
+
 const OVERVIEW_TABS = [
   { id: 'content', label: 'Course Content' },
   { id: 'students', label: 'Students' },
@@ -1131,8 +1211,8 @@ function coursePageNavigationState(
     breadcrumbTrail: breadcrumbTrail
       ? [...breadcrumbTrail.slice(0, -1), { label: page.title }]
       : [
-          { label: 'Overview', to: '/' },
-          { label: 'Course Content', to: '/' },
+          { label: 'Overview', to: '/overview' },
+          { label: 'Course Content', to: '/overview' },
           { label: page.title },
         ],
   };
@@ -2805,9 +2885,11 @@ function AssessmentHeader({
   objectives: PageObjective[];
 }) {
   const location = useLocation();
+  const tour = useTour();
   const [viewMenuOpen, setViewMenuOpen] = useState(false);
   const state = location.state as { breadcrumbTrail?: BreadcrumbItem[]; assessmentTitle?: string } | null;
   const assessmentTitle = state?.assessmentTitle ?? '12. Electrochemistry Unit Checkpoint';
+  const showPreviewHint = tour.preview && viewMode === 'instructor';
 
   return (
     <>
@@ -2816,10 +2898,15 @@ function AssessmentHeader({
           <div className="view-switcher">
             <button
               type="button"
-              className="instructor-pill instructor-pill--dropdown"
+              className={
+                showPreviewHint
+                  ? 'instructor-pill instructor-pill--dropdown is-tour-target'
+                  : 'instructor-pill instructor-pill--dropdown'
+              }
               onClick={() => setViewMenuOpen((open) => !open)}
               aria-haspopup="menu"
               aria-expanded={viewMenuOpen}
+              aria-describedby={showPreviewHint && !viewMenuOpen ? 'preview-student-hint' : undefined}
             >
               <img className="instructor-pill__icon" src={viewMode === 'student' ? studentIcon : instructorIcon} alt="" aria-hidden="true" />
               <span>{viewMode === 'instructor' ? 'Instructor view' : 'Student preview'}</span>
@@ -2847,14 +2934,23 @@ function AssessmentHeader({
                   onClick={() => {
                     onViewModeChange('student');
                     setViewMenuOpen(false);
+                    dismissTour('preview');
                   }}
                 >
                   Student preview
                 </button>
               </div>
             ) : null}
+            {showPreviewHint && !viewMenuOpen ? (
+              <div className="tour-note" role="note">
+                <p id="preview-student-hint">Open this menu to preview as a student.</p>
+                <button type="button" className="tour-note__dismiss" onClick={() => dismissTour('preview')}>
+                  Dismiss
+                </button>
+              </div>
+            ) : null}
           </div>
-          <Link to="/" className="instructor-bar__return">
+          <Link to="/overview" className="instructor-bar__return">
             Return to Course Content
           </Link>
         </div>
@@ -3626,7 +3722,7 @@ function LinkSet({ label, items, danger }: { label?: string; items: string[]; da
       {label ? <div className="field-label">{label}</div> : null}
       {items.map((item) => (
         item === 'Customize Content' ? (
-          <Link to="/" key={item}>
+          <Link to="/overview" key={item}>
             {item}
           </Link>
         ) : (
