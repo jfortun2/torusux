@@ -1,9 +1,14 @@
 import { useEffect, useId, useRef, useState, type DragEvent, type MutableRefObject, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
-import chevronDownIcon from './assets/icon-chevron-down.png';
+import chevronRightIcon from './assets/icon-chevron-right.svg';
 import containerIcon from './assets/icon-container.png';
-import editIcon from './assets/icon-edit.png';
+import deleteMenuIcon from './assets/icon-delete-menu.svg';
+import editMenuIcon from './assets/icon-edit-menu.svg';
+import expandAllIcon from './assets/icon-expand-all.svg';
+import moveItemIcon from './assets/icon-move-item.png';
 import pageIcon from './assets/icon-page.png';
+import plusIcon from './assets/icon-plus.svg';
+import searchCourseIcon from './assets/icon-search-course.svg';
 import { CoverageImpactPanel } from './PageCustomize';
 import {
   addChildNode,
@@ -23,11 +28,8 @@ import {
   pageScoringOf,
   persistCurriculum,
   removeFromCourse,
-  renameNode,
   restoreOriginal,
-  setNodeHidden,
   statusDescription,
-  statusLabel,
   type CurriculumNode,
   type DropPlacement,
   type PageScoring,
@@ -45,9 +47,8 @@ import { createDefaultPageBlocks, persistPageMeta, persistSavedPageLayout, resol
 const ROOT_DESTINATION = '__root__';
 
 type DialogState =
-  | { type: 'add'; parentId: string | null; childType: StructuralNodeType }
-  | { type: 'rename'; id: string }
-  | { type: 'view-original'; id: string }
+  | { type: 'leave-edit' }
+  | { type: 'move'; id: string }
   | { type: 'remove'; id: string }
   | { type: 'remove-limited'; id: string; impact: RemovalImpact }
   | { type: 'remove-orphaned'; id: string; impact: RemovalImpact }
@@ -138,23 +139,27 @@ function seedImportedPage(title: string, scoring: PageScoring, projectName: stri
   });
 }
 
-export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
+function subtreeMatches(node: CurriculumNode, query: string): boolean {
+  if (node.title.toLowerCase().includes(query)) return true;
+  return node.children.some((child) => child.type !== 'block' && subtreeMatches(child, query));
+}
+
+export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
   const navigate = useNavigate();
   const showRemovedId = useId();
+  const [editing, setEditing] = useState(false);
   const [units, setUnits] = useState<CurriculumNode[]>(() => loadCurriculum());
   const [savedSnapshot, setSavedSnapshot] = useState(() => JSON.stringify(loadCurriculum()));
   const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set());
   const [showRemoved, setShowRemoved] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [dialog, setDialog] = useState<DialogState>(null);
-  const [draftName, setDraftName] = useState('');
-  const [draftScoring, setDraftScoring] = useState<PageScoring>('scored');
   const [toast, setToast] = useState<string | null>(null);
   const [announcement, setAnnouncement] = useState('');
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dropHint, setDropHint] = useState<DropHint | null>(null);
   const draggingIdRef = useRef<string | null>(null);
-  const nameInputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const lastMenuTriggerRef = useRef<HTMLButtonElement | null>(null);
 
@@ -172,11 +177,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
   useEffect(() => {
     if (!dialog) return undefined;
-    if (dialog.type === 'add' || dialog.type === 'rename') {
-      nameInputRef.current?.focus();
-    } else {
-      dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
-    }
+    dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -190,6 +191,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
 
   useEffect(() => {
     if (!openMenuId) return undefined;
+    document.querySelector<HTMLButtonElement>('[data-curriculum-menu] [role="menu"] button')?.focus();
     const onPointerDown = (event: PointerEvent) => {
       const target = event.target as HTMLElement | null;
       if (target?.closest('[data-curriculum-menu]')) return;
@@ -237,58 +239,6 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     announce('Expanded all units, modules, and sections.');
   };
 
-  const openAdd = (parentId: string | null, childType: StructuralNodeType) => {
-    setOpenMenuId(null);
-    setDraftName('');
-    setDraftScoring('scored');
-    setDialog({ type: 'add', parentId, childType });
-  };
-
-  const openRename = (id: string) => {
-    const node = findNode(units, id);
-    if (!node) return;
-    setOpenMenuId(null);
-    setDraftName(node.title);
-    setDialog({ type: 'rename', id });
-  };
-
-  const submitDialog = () => {
-    if (!dialog) return;
-    if (dialog.type === 'add') {
-      const name = draftName.trim();
-      if (!name) return;
-      const child = createInstructorNode(dialog.childType, name, {
-        pageScoring: dialog.childType === 'page' ? draftScoring : undefined,
-      });
-      setUnits((current) => addChildNode(current, dialog.parentId, child));
-      setExpandedIds((current) => {
-        const next = new Set(current);
-        if (dialog.parentId) next.add(dialog.parentId);
-        next.add(child.id);
-        return next;
-      });
-      if (dialog.childType === 'page') {
-        persistSavedPageLayout(name, []);
-        persistPageMeta(name, {
-          scoring: draftScoring,
-          attachedObjectiveCodes: [],
-          isInstructorCreated: true,
-        });
-      }
-      announce(`${NODE_TYPE_LABEL[dialog.childType]} “${name}” created.`);
-      setDialog(null);
-      return;
-    }
-    if (dialog.type === 'rename') {
-      const name = draftName.trim();
-      if (!name) return;
-      const node = findNode(units, dialog.id);
-      setUnits((current) => renameNode(current, dialog.id, name));
-      announce(`${node ? structuralLabel(node.type) : 'Item'} renamed to “${name}”.`);
-      setDialog(null);
-    }
-  };
-
   const confirmRemove = (reviewAffected = false) => {
     if (
       !dialog ||
@@ -331,19 +281,6 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     );
   };
 
-  const handleHide = (id: string) => {
-    const node = findNode(units, id);
-    if (!node || node.status === 'removed') return;
-    setOpenMenuId(null);
-    const nextHidden = !node.hidden;
-    setUnits((current) => setNodeHidden(current, id, nextHidden));
-    announce(
-      nextHidden
-        ? `“${node.title}” hidden from students.`
-        : `“${node.title}” shown to students.`,
-    );
-  };
-
   const handleMove = (id: string, direction: 'up' | 'down') => {
     const node = findNode(units, id);
     setOpenMenuId(null);
@@ -362,21 +299,51 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
         isInstructorCreated: node.origin === 'instructor',
         attachedObjectiveCodes: objectiveCodesFromLabels(node.learningObjectives ?? []),
         breadcrumbTrail: [
-          { label: 'Manage', to: '/' },
-          { label: 'Customize Content', to: '/customize' },
+          { label: 'Overview', to: '/' },
+          { label: 'Course Content', to: '/' },
           { label: node.title },
         ],
       },
     });
   };
 
+  const discardChanges = () => {
+    const restored = JSON.parse(savedSnapshot) as CurriculumNode[];
+    setUnits(restored);
+    persistCurriculum(restored);
+  };
+
+  const enterEditMode = () => {
+    setEditing(true);
+    announce(
+      'Customizing is on. Drag a handle to change the order. Use the more menu to move an item, remove it, or edit a page. Add materials from a project you can access. Show removed content, then restore it.',
+    );
+  };
+
+  const leaveEditMode = (discard: boolean) => {
+    if (discard) discardChanges();
+    setOpenMenuId(null);
+    setDialog(null);
+    setShowRemoved(false);
+    setEditing(false);
+    announce(discard ? 'Unsaved changes discarded. View only.' : 'View only. Expand the outline or open a page.');
+  };
+
+  const showViewMode = () => {
+    if (!editing) return;
+    if (dirty) {
+      setOpenMenuId(null);
+      setDialog({ type: 'leave-edit' });
+      return;
+    }
+    leaveEditMode(false);
+  };
+
   const handleCancel = () => {
     setOpenMenuId(null);
     setDialog(null);
     if (!dirty) return;
-    const restored = JSON.parse(savedSnapshot) as CurriculumNode[];
-    setUnits(restored);
-    persistCurriculum(restored);
+    discardChanges();
     announce('Unsaved changes discarded.');
   };
 
@@ -406,39 +373,44 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     setDropHint(null);
   };
 
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+  const removedVisible = editing && showRemoved;
+
   const renderRows = (nodes: CurriculumNode[], depth: number): ReactNode[] =>
     nodes.flatMap((node) => {
-      if (node.type === 'block' || !isNodeVisible(node, showRemoved)) return [];
-      const expanded = expandedIds.has(node.id);
+      if (node.type === 'block' || !isNodeVisible(node, removedVisible)) return [];
+      if (normalizedQuery && !subtreeMatches(node, normalizedQuery)) return [];
       const nestableChildren = node.children.filter((child) => child.type !== 'block');
+      const childMatch = normalizedQuery
+        ? nestableChildren.some((child) => isNodeVisible(child, removedVisible) && subtreeMatches(child, normalizedQuery))
+        : false;
+      const expanded = childMatch || expandedIds.has(node.id);
       const rows: ReactNode[] = [
         <CurriculumRow
           key={node.id}
           node={node}
           depth={depth}
           expanded={expanded}
-          menuOpen={openMenuId === node.id}
-          showRemoved={showRemoved}
+          editing={editing}
+          menuOpen={editing && openMenuId === node.id}
+          showRemoved={removedVisible}
           units={units}
           draggingId={draggingId}
           draggingIdRef={draggingIdRef}
           dropHint={dropHint}
           onToggleExpand={() => toggleExpanded(node.id)}
           onOpenPage={() => openPage(node)}
-          onAddChild={(childType) => openAdd(node.id, childType)}
           onOpenMenu={(trigger) => {
             lastMenuTriggerRef.current = trigger;
             setOpenMenuId((current) => (current === node.id ? null : node.id));
           }}
-          onRename={() => openRename(node.id)}
-          onMove={(direction) => handleMove(node.id, direction)}
-          onRemove={() => openRemove(node.id)}
-          onHide={() => handleHide(node.id)}
-          onRestore={() => handleRestore(node.id)}
-          onViewOriginal={() => {
+          onMove={() => {
             setOpenMenuId(null);
-            setDialog({ type: 'view-original', id: node.id });
+            setDialog({ type: 'move', id: node.id });
           }}
+          onNudge={(direction) => handleMove(node.id, direction)}
+          onRemove={() => openRemove(node.id)}
+          onRestore={() => handleRestore(node.id)}
           onDragStart={(id) => {
             setOpenMenuId(null);
             draggingIdRef.current = id;
@@ -454,7 +426,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
         />,
       ];
       if (isContainerType(node.type)) {
-        const visibleNestable = nestableChildren.filter((child) => isNodeVisible(child, showRemoved));
+        const visibleNestable = nestableChildren.filter((child) => isNodeVisible(child, removedVisible));
         if (expanded && visibleNestable.length > 0) {
           rows.push(renderRows(nestableChildren, depth + 1));
         } else if (expanded) {
@@ -477,55 +449,103 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
     });
 
   const dialogTitle =
-    dialog?.type === 'add'
-      ? `Create ${dialog.childType}`
-      : dialog?.type === 'rename'
-        ? 'Rename'
-        : dialog?.type === 'view-original'
-          ? 'Original version'
-          : dialog?.type === 'review-objectives'
-            ? 'Review affected objectives'
-            : dialog?.type === 'existing-materials'
-              ? 'Add existing materials'
-              : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
-                ? 'Remove from this course'
-                : '';
-  const dialogNode =
-    dialog && dialog.type !== 'add' && dialog.type !== 'review-objectives' && dialog.type !== 'existing-materials'
-      ? findNode(units, dialog.id)
-      : undefined;
+    dialog?.type === 'leave-edit'
+      ? 'Leave customize'
+      : dialog?.type === 'move'
+      ? 'Move'
+      : dialog?.type === 'review-objectives'
+        ? 'Review affected objectives'
+        : dialog?.type === 'existing-materials'
+          ? 'Add Materials'
+          : dialog?.type === 'remove' || dialog?.type === 'remove-limited' || dialog?.type === 'remove-orphaned'
+            ? 'Remove from this course'
+            : '';
+  const dialogNode = dialog && 'id' in dialog ? findNode(units, dialog.id) : undefined;
+  const outlineRows = renderRows(units, 0);
+  const countRenderedRows = (nodes: ReactNode[]): number =>
+    nodes.reduce<number>((total, node) => total + (Array.isArray(node) ? countRenderedRows(node) : 1), 0);
+  const renderedRowCount = countRenderedRows(outlineRows);
   const removeKindLabel = dialogNode ? structuralLabel(dialogNode.type).toLowerCase() : 'item';
 
   return (
     <>
       <div className="content-column content-column--wide customize-content">
           {breadcrumbs}
-          <div className="page-header">
-            <div>
-              <h1>Chemistry 101</h1>
-              <p>Customize your curriculum by adding, removing and rearranging course materials.</p>
+          <div className="course-heading">
+            <div className="course-heading__top">
+              <div>
+                <h1>Chemistry 101</h1>
+                <p>Browse the course as students will see it, or switch to Customize.</p>
+              </div>
+              <div className="mode-toggle" role="group" aria-label="View or customize">
+                <button
+                  type="button"
+                  className={editing ? 'mode-toggle__option' : 'mode-toggle__option is-selected'}
+                  aria-pressed={!editing}
+                  onClick={showViewMode}
+                >
+                  View
+                </button>
+                <button
+                  type="button"
+                  className={editing ? 'mode-toggle__option is-selected' : 'mode-toggle__option'}
+                  aria-pressed={editing}
+                  onClick={() => {
+                    if (!editing) enterEditMode();
+                  }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path
+                      d="M4.4 4.45H3.69c-.38 0-.74.15-1.01.42-.27.27-.42.63-.42 1.01v6.42c0 .38.15.74.42 1.01.27.27.63.42 1.01.42h6.42c.38 0 .74-.15 1.01-.42.27-.27.42-.63.42-1.01v-.71M10.83 3.03l2.14 2.14M13.96 4.16a1.16 1.16 0 0 0 0-1.64 1.16 1.16 0 0 0-1.64 0L5.84 8.02v2.14h2.14l6-6z"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  Customize
+                </button>
+              </div>
             </div>
-            <div className="button-row">
-              <button type="button" className="button button--subtle" onClick={handleCancel}>
-                Cancel
-              </button>
-              <button
-                type="button"
-                className={dirty ? 'button button--primary' : 'button button--disabled'}
-                onClick={handleSave}
-                disabled={!dirty}
-              >
-                Save
-              </button>
-            </div>
+            {editing ? (
+              <div className="edit-status">
+                <p className="edit-status__copy">
+                  <span className="edit-status__dot" aria-hidden="true" />
+                  <span>
+                    <strong>Customizing is on.</strong> Drag a handle to change the order. Use the more menu to move
+                    an item, remove it, or edit a page. Add materials from a project you can access. Show removed
+                    content, then restore it.
+                  </span>
+                </p>
+                <div className="button-row">
+                  <button type="button" className="button button--subtle" onClick={handleCancel}>
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    className={dirty ? 'button button--primary' : 'button button--disabled'}
+                    onClick={handleSave}
+                    disabled={!dirty}
+                  >
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            ) : null}
           </div>
 
           <div className="curriculum-toolbar">
-            <p className="curriculum-helper">
-              Content from the original course has no extra label. Items you added or edited are marked. Hidden items stay in
-              this outline but are not shown to students. Removed items stay restorable and appear only when shown. Drag the
-              handle to reorder units, modules, sections, and pages.
-            </p>
+            <label className="course-search">
+              <span className="visually-hidden">Search course</span>
+              <img src={searchCourseIcon} alt="" />
+              <input
+                type="search"
+                placeholder="Search course..."
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+              />
+            </label>
             <div className="curriculum-toolbar__aside">
               <button
                 type="button"
@@ -533,38 +553,47 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
                 onClick={toggleExpandAll}
                 disabled={expandableIds.length === 0}
               >
-                {allExpanded ? 'Collapse all' : 'Expand all'}
+                <img src={expandAllIcon} alt="" />
+                {allExpanded ? 'Collapse all' : 'Expand All'}
               </button>
-              <label className="check-row curriculum-show-removed" htmlFor={showRemovedId}>
-                <input
-                  id={showRemovedId}
-                  type="checkbox"
-                  checked={showRemoved}
-                  onChange={(event) => setShowRemoved(event.target.checked)}
-                />
-                Show removed content
-              </label>
+              {editing ? (
+                <label className="check-row curriculum-show-removed" htmlFor={showRemovedId}>
+                  <input
+                    id={showRemovedId}
+                    type="checkbox"
+                    checked={showRemoved}
+                    onChange={(event) => setShowRemoved(event.target.checked)}
+                  />
+                  Show removed content
+                </label>
+              ) : null}
             </div>
           </div>
 
           <div className="curriculum-tree" role="region" aria-label="Course curriculum">
-            <span className="visually-hidden" id="curriculum-drag-help">
-              Drag to a new position, or use the up and down arrow keys to reorder.
-            </span>
-            {renderRows(units, 0)}
+            {editing ? (
+              <span className="visually-hidden" id="curriculum-drag-help">
+                Drag to a new position, or use the up and down arrow keys to reorder.
+              </span>
+            ) : null}
+            {outlineRows.length > 0 ? (
+              outlineRows
+            ) : (
+              <p className="curriculum-empty">No course materials match “{searchQuery.trim()}”.</p>
+            )}
           </div>
+          <p className="visually-hidden" role="status">
+            {normalizedQuery ? `${renderedRowCount} matching rows.` : ''}
+          </p>
 
-          <div className="footer-actions footer-actions--row">
-            <button type="button" className="button button--primary" onClick={() => openAdd(null, 'unit')}>
-              Create unit
-            </button>
-            <button type="button" className="button button--secondary" onClick={() => openAdd(null, 'page')}>
-              Create page
-            </button>
-            <button type="button" className="button button--secondary" onClick={() => setDialog({ type: 'existing-materials' })}>
-              Add existing materials
-            </button>
-          </div>
+          {editing ? (
+            <div className="footer-actions">
+              <button type="button" className="button button--primary button--add-materials" onClick={() => setDialog({ type: 'existing-materials' })}>
+                <img src={plusIcon} alt="" />
+                Add Materials
+              </button>
+            </div>
+          ) : null}
         </div>
 
       <div className="visually-hidden" role="status" aria-live="polite">
@@ -587,54 +616,44 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
             onClick={(event) => event.stopPropagation()}
           >
             <h3 id="curriculum-dialog-title">{dialogTitle}</h3>
-            {dialog.type === 'add' || dialog.type === 'rename' ? (
-              <form
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  submitDialog();
-                }}
-              >
-                <label className="field">
-                  <span>Name</span>
-                  <input
-                    ref={nameInputRef}
-                    value={draftName}
-                    onChange={(event) => setDraftName(event.target.value)}
-                    aria-required="true"
-                  />
-                </label>
-                {dialog.type === 'add' && dialog.childType === 'page' ? (
-                  <fieldset className="page-scoring-fieldset">
-                    <legend>Page type</legend>
-                    <label>
-                      <input
-                        type="radio"
-                        name="page-scoring"
-                        checked={draftScoring === 'scored'}
-                        onChange={() => setDraftScoring('scored')}
-                      />
-                      Scored
-                    </label>
-                    <label>
-                      <input
-                        type="radio"
-                        name="page-scoring"
-                        checked={draftScoring === 'practice'}
-                        onChange={() => setDraftScoring('practice')}
-                      />
-                      Practice
-                    </label>
-                  </fieldset>
-                ) : null}
+            {dialog.type === 'leave-edit' ? (
+              <>
+                <p>This course has unsaved changes. Discard them to go back to view, or keep customizing.</p>
                 <div className="modal-actions">
                   <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
-                    Cancel
+                    Keep customizing
                   </button>
-                  <button type="submit" className="button button--primary" disabled={!draftName.trim()}>
-                    {dialog.type === 'add' ? 'Create' : 'Save'}
+                  <button type="button" className="button button--danger" onClick={() => leaveEditMode(true)}>
+                    Discard and view
                   </button>
                 </div>
-              </form>
+              </>
+            ) : null}
+            {dialog.type === 'move' && dialogNode ? (
+              <>
+                <p>Move “{dialogNode.title}” up or down in this course.</p>
+                <div className="modal-actions">
+                  <button
+                    type="button"
+                    className="button button--secondary"
+                    disabled={!canMoveNode(units, dialogNode.id, 'up', showRemoved)}
+                    onClick={() => handleMove(dialogNode.id, 'up')}
+                  >
+                    Move up
+                  </button>
+                  <button
+                    type="button"
+                    className="button button--secondary"
+                    disabled={!canMoveNode(units, dialogNode.id, 'down', showRemoved)}
+                    onClick={() => handleMove(dialogNode.id, 'down')}
+                  >
+                    Move down
+                  </button>
+                  <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
+                    Done
+                  </button>
+                </div>
+              </>
             ) : null}
             {dialog.type === 'existing-materials' ? (
               <ExistingMaterialsDialog
@@ -664,54 +683,11 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs: ReactNode }) {
                 }}
               />
             ) : null}
-            {dialog.type === 'view-original' && dialogNode ? (
-              <>
-                {dialogNode.origin === 'instructor' ? (
-                  <p>This item was added for your course. There is no original course version to compare.</p>
-                ) : dialogNode.title === dialogNode.originalTitle && dialogNode.status !== 'modified' ? (
-                  <p>
-                    “{dialogNode.originalTitle}” matches the original course. Unchanged content can continue to receive
-                    updates from the original course.
-                  </p>
-                ) : (
-                  <>
-                    <p>This item still belongs to your course section. The original course version is shown below.</p>
-                    <dl className="curriculum-compare">
-                      <div>
-                        <dt>Original</dt>
-                        <dd>{dialogNode.originalTitle}</dd>
-                      </div>
-                      <div>
-                        <dt>This course</dt>
-                        <dd>{dialogNode.title}</dd>
-                      </div>
-                    </dl>
-                  </>
-                )}
-                <div className="modal-actions">
-                  {dialogNode.origin === 'canonical' && (dialogNode.status === 'modified' || dialogNode.status === 'removed') ? (
-                    <button
-                      type="button"
-                      className="button button--secondary"
-                      onClick={() => {
-                        handleRestore(dialogNode.id);
-                        setDialog(null);
-                      }}
-                    >
-                      Restore original
-                    </button>
-                  ) : null}
-                  <button type="button" className="button button--primary" onClick={() => setDialog(null)}>
-                    Close
-                  </button>
-                </div>
-              </>
-            ) : null}
             {dialog.type === 'remove' && dialogNode ? (
               <>
                 <p>
-                  Remove “{dialogNode.title}” from this course? Students will not see it. You can restore it later from
-                  this curriculum view.
+                  Remove “{dialogNode.title}” from this course? Students will not see it. Turn on Show removed content
+                  to find it again and restore it.
                 </p>
                 <div className="modal-actions">
                   <button type="button" className="button button--subtle" onClick={() => setDialog(null)}>
@@ -978,6 +954,7 @@ function CurriculumRow({
   node,
   depth,
   expanded,
+  editing,
   menuOpen,
   showRemoved,
   units,
@@ -986,14 +963,11 @@ function CurriculumRow({
   dropHint,
   onToggleExpand,
   onOpenPage,
-  onAddChild,
   onOpenMenu,
-  onRename,
   onMove,
-  onHide,
+  onNudge,
   onRemove,
   onRestore,
-  onViewOriginal,
   onDragStart,
   onDragEnd,
   onDropHint,
@@ -1002,6 +976,7 @@ function CurriculumRow({
   node: CurriculumNode;
   depth: number;
   expanded: boolean;
+  editing: boolean;
   menuOpen: boolean;
   showRemoved: boolean;
   units: CurriculumNode[];
@@ -1010,28 +985,23 @@ function CurriculumRow({
   dropHint: DropHint | null;
   onToggleExpand: () => void;
   onOpenPage: () => void;
-  onAddChild: (childType: StructuralNodeType) => void;
   onOpenMenu: (trigger: HTMLButtonElement) => void;
-  onRename: () => void;
-  onMove: (direction: 'up' | 'down') => void;
-  onHide: () => void;
+  onMove: () => void;
+  onNudge: (direction: 'up' | 'down') => void;
   onRemove: () => void;
   onRestore: () => void;
-  onViewOriginal: () => void;
   onDragStart: (id: string) => void;
   onDragEnd: () => void;
   onDropHint: (hint: DropHint | null) => void;
   onDropRow: (targetId: string, placement: DropPlacement) => void;
 }) {
   const canExpand = isContainerType(node.type);
-  const childTypes = node.status === 'removed' ? [] : childTypesFor(node.type);
-  const label = statusLabel(node.status);
   const rowLabel = structuralLabel(node.type);
   const icon = node.type === 'page' ? pageIcon : containerIcon;
+  const removed = node.status === 'removed';
   const accessibleName = `${rowLabel} ${node.title}, ${statusDescription(node)}`;
   const canMoveUp = canMoveNode(units, node.id, 'up', showRemoved);
   const canMoveDown = canMoveNode(units, node.id, 'down', showRemoved);
-  const scoring = node.type === 'page' ? pageScoringOf(node) : null;
   const isDragging = draggingId === node.id;
   const hint = dropHint?.id === node.id ? dropHint.placement : null;
 
@@ -1053,31 +1023,43 @@ function CurriculumRow({
   return (
     <div
       className={rowClass}
-      style={{ paddingLeft: 12 + depth * 24 }}
-      onDragOver={(event) => {
-        const id = draggingIdRef.current ?? draggingId;
-        if (!id || id === node.id) return;
-        const placement = placementForDrag(event, units, id, node);
-        if (!placement) return;
-        event.preventDefault();
-        event.dataTransfer.dropEffect = 'move';
-        onDropHint({ id: node.id, placement });
-      }}
-      onDragLeave={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-          onDropHint(null);
-        }
-      }}
-      onDrop={(event) => {
-        event.preventDefault();
-        const id = draggingIdRef.current ?? draggingId;
-        if (!id || id === node.id) return;
-        const placement = placementForDrag(event, units, id, node);
-        if (placement) onDropRow(node.id, placement);
-      }}
+      style={{ paddingLeft: 17 + depth * 36 }}
+      onDragOver={
+        editing
+          ? (event) => {
+              const id = draggingIdRef.current ?? draggingId;
+              if (!id || id === node.id) return;
+              const placement = placementForDrag(event, units, id, node);
+              if (!placement) return;
+              event.preventDefault();
+              event.dataTransfer.dropEffect = 'move';
+              onDropHint({ id: node.id, placement });
+            }
+          : undefined
+      }
+      onDragLeave={
+        editing
+          ? (event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                onDropHint(null);
+              }
+            }
+          : undefined
+      }
+      onDrop={
+        editing
+          ? (event) => {
+              event.preventDefault();
+              const id = draggingIdRef.current ?? draggingId;
+              if (!id || id === node.id) return;
+              const placement = placementForDrag(event, units, id, node);
+              if (placement) onDropRow(node.id, placement);
+            }
+          : undefined
+      }
     >
       <div className="curriculum-row__main">
-        {node.status !== 'removed' ? (
+        {editing && node.status !== 'removed' ? (
           <button
             type="button"
             className="curriculum-drag"
@@ -1098,11 +1080,11 @@ function CurriculumRow({
             onKeyDown={(event) => {
               if (event.key === 'ArrowUp' && canMoveUp) {
                 event.preventDefault();
-                onMove('up');
+                onNudge('up');
               }
               if (event.key === 'ArrowDown' && canMoveDown) {
                 event.preventDefault();
-                onMove('down');
+                onNudge('down');
               }
             }}
           >
@@ -1110,9 +1092,7 @@ function CurriculumRow({
               <i /><i /><i /><i /><i /><i />
             </span>
           </button>
-        ) : (
-          <span className="curriculum-drag curriculum-drag--spacer" aria-hidden="true" />
-        )}
+        ) : null}
         {canExpand ? (
           <button
             type="button"
@@ -1122,9 +1102,8 @@ function CurriculumRow({
             onClick={onToggleExpand}
           >
             <img
-              src={chevronDownIcon}
+              src={chevronRightIcon}
               alt=""
-              aria-hidden="true"
               className={expanded ? 'curriculum-expand__icon is-open' : 'curriculum-expand__icon'}
             />
           </button>
@@ -1132,60 +1111,32 @@ function CurriculumRow({
           <span className="curriculum-expand curriculum-expand--spacer" aria-hidden="true" />
         )}
         <img className="material-icon" src={icon} alt="" aria-hidden="true" />
-        {node.type === 'page' ? (
+        {canExpand ? (
+          <button type="button" className="curriculum-title-button" onClick={onToggleExpand}>
+            <span className="curriculum-title">{node.title}</span>
+          </button>
+        ) : editing ? (
+          <span className="curriculum-title">{node.title}</span>
+        ) : (
           <button
             type="button"
             className="curriculum-title-button curriculum-title-button--link"
             onClick={onOpenPage}
-            aria-label={accessibleName}
+            aria-label={`Open ${node.title}`}
           >
-            <span className={node.status === 'removed' ? 'curriculum-title curriculum-title--removed' : 'curriculum-title'}>
-              {node.title}
-            </span>
-          </button>
-        ) : (
-          <button type="button" className="curriculum-title-button" onClick={onToggleExpand} aria-label={accessibleName}>
-            <span className={node.status === 'removed' ? 'curriculum-title curriculum-title--removed' : 'curriculum-title'}>
-              {node.title}
-            </span>
+            <span className="curriculum-title">{node.title}</span>
           </button>
         )}
-        {scoring ? (
-          <span className={`curriculum-scoring curriculum-scoring--${scoring}`}>
-            {scoring === 'scored' ? 'Scored' : 'Practice'}
-          </span>
-        ) : null}
-        {label ? (
-          <span className={`curriculum-status curriculum-status--${node.status}`}>{label}</span>
-        ) : (
-          <span className="visually-hidden">From original course</span>
-        )}
-        {node.hidden && node.status !== 'removed' ? (
-          <span className="curriculum-status curriculum-status--hidden">Hidden</span>
-        ) : null}
+        {removed ? <span className="curriculum-removed-tag">Removed</span> : null}
+        <span className="visually-hidden">{accessibleName}</span>
       </div>
 
+      {editing ? (
       <div className="curriculum-row__actions">
-          {node.type === 'page' && node.status !== 'removed' ? (
-            <button type="button" className="button button--secondary button--small" onClick={onOpenPage}>
-              <img src={editIcon} alt="" aria-hidden="true" />
-              Edit
-            </button>
-          ) : null}
-          {childTypes.map((childType) => (
-            <button
-              key={childType}
-              type="button"
-              className="button button--secondary button--small"
-              onClick={() => onAddChild(childType)}
-            >
-              Create {childType}
-            </button>
-          ))}
           <div className="curriculum-menu-wrap" data-curriculum-menu>
             <button
               type="button"
-              className="curriculum-more"
+              className={menuOpen ? 'curriculum-more is-open' : 'curriculum-more'}
               aria-haspopup="menu"
               aria-expanded={menuOpen}
               aria-label={`Actions for ${node.title}`}
@@ -1195,35 +1146,33 @@ function CurriculumRow({
             </button>
             {menuOpen ? (
               <div className="curriculum-menu" role="menu" aria-label={`Actions for ${node.title}`}>
-                {node.status !== 'removed' ? (
-                  <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onRename}>
-                    Rename
-                  </button>
-                ) : null}
-                {node.status !== 'removed' ? (
-                  <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onHide}>
-                    {node.hidden ? 'Show' : 'Hide'}
-                  </button>
-                ) : null}
-                {node.origin === 'canonical' ? (
-                  <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onViewOriginal}>
-                    View original version
-                  </button>
-                ) : null}
-                {node.status === 'modified' || node.status === 'removed' ? (
+                {removed ? (
                   <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onRestore}>
-                    Restore original
+                    Restore
                   </button>
-                ) : null}
-                {node.status !== 'removed' ? (
-                  <button type="button" role="menuitem" className="curriculum-menu__item curriculum-menu__item--danger" onClick={onRemove}>
-                    Remove from this course
-                  </button>
-                ) : null}
+                ) : (
+                  <>
+                    {node.type === 'page' ? (
+                      <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onOpenPage}>
+                        <img src={editMenuIcon} alt="" />
+                        Edit
+                      </button>
+                    ) : null}
+                      <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onMove}>
+                      <img className="curriculum-menu__raster" src={moveItemIcon} alt="" />
+                      Move
+                    </button>
+                    <button type="button" role="menuitem" className="curriculum-menu__item curriculum-menu__item--danger" onClick={onRemove}>
+                      <img src={deleteMenuIcon} alt="" />
+                      Remove from course
+                    </button>
+                  </>
+                )}
               </div>
             ) : null}
           </div>
         </div>
+      ) : null}
     </div>
   );
 }

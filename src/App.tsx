@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type DragEvent } from 'react';
-import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import {
   getIncludedQuestionCountForBank,
   loadAssessmentDraft,
@@ -761,8 +761,9 @@ const getPageObjectives = (assessmentTitle?: string, pageId?: string): PageObjec
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<ManageScreen />} />
-      <Route path="/customize" element={<CustomizeScreen />} />
+      <Route path="/" element={<OverviewScreen />} />
+      <Route path="/manage" element={<ManageScreen />} />
+      <Route path="/customize" element={<Navigate to="/" replace />} />
       <Route path="/assessment-default" element={<AssessmentScreen />} />
       <Route path="/inside-bank" element={<ActivityBankScreen bulkEdit={false} />} />
       <Route path="/bulk-edit" element={<ActivityBankScreen bulkEdit />} />
@@ -855,9 +856,13 @@ function computeObjectiveCoverage({
 function AppShell({
   children,
   compact = false,
+  courseName = 'Chemistry 101',
+  overview = false,
 }: {
   children: React.ReactNode;
   compact?: boolean;
+  courseName?: string;
+  overview?: boolean;
 }) {
   return (
     <div className="app-shell">
@@ -867,24 +872,42 @@ function AppShell({
           <span>OLI Torus</span>
         </div>
         <nav className="topbar__nav" aria-label="Primary">
-          <a href="/">Overview</a>
-          <a href="/">Insights</a>
-          <a className="is-active" href="/">Manage</a>
-          <a href="/">Discussion Activity</a>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'is-active' : undefined)}>
+            Overview
+          </NavLink>
+          <a
+            href="#insights"
+            onClick={(event) => {
+              event.preventDefault();
+            }}
+          >
+            Insights
+          </a>
+          <NavLink to="/manage" className={({ isActive }) => (isActive ? 'is-active' : undefined)}>
+            Manage
+          </NavLink>
+          <a
+            href="#discussion"
+            onClick={(event) => {
+              event.preventDefault();
+            }}
+          >
+            Discussion Activity
+          </a>
         </nav>
         <div className="topbar__actions">
-          <button className="icon-circle" aria-label="Notifications">
-            A
+          <button className="icon-circle" aria-label="Account menu for Jessica Fortunato">
+            JF
           </button>
           <button className="icon-ghost" aria-label="Help">
             ?
           </button>
         </div>
       </header>
-      <div className="hero">Chemistry 101</div>
-      <main className={compact ? 'page page--compact' : 'page'}>
-        {children}
-      </main>
+      <div className={overview ? 'hero hero--overview' : 'hero'}>
+        <div className="hero__title">{courseName}</div>
+      </div>
+      <main className={overview ? 'page page--overview' : compact ? 'page page--compact' : 'page'}>{children}</main>
     </div>
   );
 }
@@ -999,10 +1022,74 @@ function ManageScreen() {
   );
 }
 
-function CustomizeScreen() {
+const OVERVIEW_TABS = [
+  { id: 'content', label: 'Course Content' },
+  { id: 'students', label: 'Students' },
+  { id: 'scores', label: 'Assessment Scores' },
+  { id: 'actions', label: 'Recommended Actions' },
+] as const;
+
+type OverviewTab = (typeof OVERVIEW_TABS)[number]['id'];
+
+function OverviewScreen() {
+  const [tab, setTab] = useState<OverviewTab>('content');
+
+  const onTabKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const nextIndex =
+      event.key === 'ArrowRight' || event.key === 'ArrowDown'
+        ? (index + 1) % OVERVIEW_TABS.length
+        : event.key === 'ArrowLeft' || event.key === 'ArrowUp'
+          ? (index - 1 + OVERVIEW_TABS.length) % OVERVIEW_TABS.length
+          : event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? OVERVIEW_TABS.length - 1
+              : null;
+    if (nextIndex === null) return;
+    event.preventDefault();
+    const next = OVERVIEW_TABS[nextIndex];
+    setTab(next.id);
+    document.getElementById(`overview-tab-${next.id}`)?.focus();
+  };
+
   return (
-    <AppShell>
-      <ImportedCustomizeScreen breadcrumbs={<Breadcrumbs items={['Manage', 'Customize Content']} />} />
+    <AppShell overview courseName="Test Course">
+      <div className="overview-tabs" role="tablist" aria-label="Course overview">
+        {OVERVIEW_TABS.map((item, index) => {
+          const selected = tab === item.id;
+          return (
+            <button
+              key={item.id}
+              id={`overview-tab-${item.id}`}
+              type="button"
+              role="tab"
+              className={selected ? 'overview-tab is-active' : 'overview-tab'}
+              aria-selected={selected}
+              aria-controls={`overview-panel-${item.id}`}
+              tabIndex={selected ? 0 : -1}
+              onClick={() => setTab(item.id)}
+              onKeyDown={(event) => onTabKeyDown(event, index)}
+            >
+              {item.label}
+            </button>
+          );
+        })}
+      </div>
+      <div
+        id={`overview-panel-${tab}`}
+        role="tabpanel"
+        aria-labelledby={`overview-tab-${tab}`}
+        className="overview-panel"
+      >
+        {tab === 'content' ? (
+          <ImportedCustomizeScreen />
+        ) : (
+          <div className="overview-placeholder">
+            <h1>{OVERVIEW_TABS.find((item) => item.id === tab)?.label}</h1>
+            <p>This view is not part of the course content prototype.</p>
+          </div>
+        )}
+      </div>
     </AppShell>
   );
 }
@@ -1044,8 +1131,8 @@ function coursePageNavigationState(
     breadcrumbTrail: breadcrumbTrail
       ? [...breadcrumbTrail.slice(0, -1), { label: page.title }]
       : [
-          { label: 'Manage', to: '/' },
-          { label: 'Customize Content', to: '/customize' },
+          { label: 'Overview', to: '/' },
+          { label: 'Course Content', to: '/' },
           { label: page.title },
         ],
   };
@@ -1095,6 +1182,10 @@ function AssessmentScreen() {
     null,
   );
   const [viewMode, setViewMode] = useState<ViewMode>('instructor');
+
+  useEffect(() => {
+    setViewMode('instructor');
+  }, [assessmentTitle, pageId]);
   const [announcement, setAnnouncement] = useState('');
   const pageObjectives = useMemo(
     () => COURSE_LEARNING_OBJECTIVES.filter((objective) => attachedCodes.includes(objective.code)),
@@ -2763,8 +2854,8 @@ function AssessmentHeader({
               </div>
             ) : null}
           </div>
-          <Link to="/customize" className="instructor-bar__return">
-            Return to Customize Content
+          <Link to="/" className="instructor-bar__return">
+            Return to Course Content
           </Link>
         </div>
       </div>
@@ -3487,22 +3578,6 @@ export function MaterialRow({ material, onEdit }: { material: Material; onEdit: 
   );
 }
 
-function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
-  return (
-    <nav className="breadcrumbs" aria-label="Breadcrumb">
-      {items.map((item, index) => {
-        const resolved = typeof item === 'string' ? { label: item, to: index < items.length - 1 ? (index === 0 ? '/' : '#') : undefined } : item;
-
-        return (
-        <span key={`${resolved.label}-${index}`}>
-          {index < items.length - 1 && resolved.to ? <Link to={resolved.to}>{resolved.label}</Link> : <span>{resolved.label}</span>}
-          {index < items.length - 1 ? <span className="breadcrumbs__sep">›</span> : null}
-        </span>
-      )})}
-    </nav>
-  );
-}
-
 function SectionRow({
   title,
   description,
@@ -3551,7 +3626,7 @@ function LinkSet({ label, items, danger }: { label?: string; items: string[]; da
       {label ? <div className="field-label">{label}</div> : null}
       {items.map((item) => (
         item === 'Customize Content' ? (
-          <Link to="/customize" key={item}>
+          <Link to="/" key={item}>
             {item}
           </Link>
         ) : (
