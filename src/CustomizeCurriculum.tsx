@@ -361,9 +361,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
 
   const enterEditMode = () => {
     setEditing(true);
-    announce(
-      'Customizing is on. Drag a handle to change the order. Use the more menu to move an item, remove it, or edit a page. Add materials from a project you can access. Show removed content, then restore it.',
-    );
+    announce('Customizing is on.');
   };
 
   const leaveEditMode = (discard: boolean) => {
@@ -523,7 +521,10 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
             <div className="course-heading__top">
               <div>
                 <h1>Chemistry 101</h1>
-                <p>Browse the course as students will see it, or switch to Customize.</p>
+                <p>
+                  Browse course content as an instructor or student. Turn on Customize to rearrange, add, and remove
+                  content.
+                </p>
               </div>
               <div className="mode-toggle" role="group" aria-label="View or customize">
                 <button
@@ -561,9 +562,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
                 <p className="edit-status__copy">
                   <span className="edit-status__dot" aria-hidden="true" />
                   <span>
-                    <strong>Customizing is on.</strong> Drag a handle to change the order. Use the more menu to move
-                    an item, remove it, or edit a page. Add materials from a project you can access. Show removed
-                    content, then restore it.
+                    <strong>Customizing is on.</strong>
                   </span>
                 </p>
                 <div className="button-row">

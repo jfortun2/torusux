@@ -1038,7 +1038,7 @@ function InsightsScreen() {
           <section className="release-note" aria-labelledby="release-note-title">
             <div className="release-note__copy">
               <p className="release-note__eyebrow">What&apos;s new</p>
-              <h2 id="release-note-title">We&apos;ve updated course content</h2>
+              <h2 id="release-note-title">We&apos;ve updated your course content view</h2>
               <p>Customized content is now in a new location.</p>
             </div>
             <div className="release-note__actions">
