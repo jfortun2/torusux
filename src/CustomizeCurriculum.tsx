@@ -5,6 +5,7 @@ import containerIcon from './assets/icon-container.png';
 import deleteMenuIcon from './assets/icon-delete-menu.svg';
 import editMenuIcon from './assets/icon-edit-menu.svg';
 import expandAllIcon from './assets/icon-expand-all.svg';
+import hideIcon from './assets/icon-hide.png';
 import moveItemIcon from './assets/icon-move-item.png';
 import pageIcon from './assets/icon-page.png';
 import plusIcon from './assets/icon-plus.svg';
@@ -29,6 +30,7 @@ import {
   persistCurriculum,
   removeFromCourse,
   restoreOriginal,
+  setNodeHidden,
   statusDescription,
   type CurriculumNode,
   type DropPlacement,
@@ -326,6 +328,19 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
     );
   };
 
+  const handleHide = (id: string) => {
+    const node = findNode(units, id);
+    if (!node || node.status === 'removed') return;
+    setOpenMenuId(null);
+    const nextHidden = !node.hidden;
+    setUnits((current) => setNodeHidden(current, id, nextHidden));
+    announce(
+      nextHidden
+        ? `“${node.title}” hidden from students. You can still see and open it here.`
+        : `“${node.title}” shown to students again.`,
+    );
+  };
+
   const handleMove = (id: string, direction: 'up' | 'down') => {
     const node = findNode(units, id);
     setOpenMenuId(null);
@@ -453,6 +468,7 @@ export function CustomizeScreen({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
             setDialog({ type: 'move', id: node.id });
           }}
           onNudge={(direction) => handleMove(node.id, direction)}
+          onHide={() => handleHide(node.id)}
           onRemove={() => openRemove(node.id)}
           onRestore={() => handleRestore(node.id)}
           onDragStart={(id) => {
@@ -1013,6 +1029,7 @@ function CurriculumRow({
   onOpenMenu,
   onMove,
   onNudge,
+  onHide,
   onRemove,
   onRestore,
   onDragStart,
@@ -1037,6 +1054,7 @@ function CurriculumRow({
   onOpenMenu: (trigger: HTMLButtonElement) => void;
   onMove: () => void;
   onNudge: (direction: 'up' | 'down') => void;
+  onHide: () => void;
   onRemove: () => void;
   onRestore: () => void;
   onDragStart: (id: string) => void;
@@ -1195,6 +1213,14 @@ function CurriculumRow({
           </button>
         )}
         {removed ? <span className="curriculum-removed-tag">Removed</span> : null}
+        {!removed && node.hidden ? (
+          <span
+            className="curriculum-hidden-tag"
+            title="Students cannot see this. You can still open and edit it here, like an instructor resource."
+          >
+            Hidden from students
+          </span>
+        ) : null}
         <span className="visually-hidden">{accessibleName}</span>
       </div>
 
@@ -1225,9 +1251,23 @@ function CurriculumRow({
                         Edit
                       </button>
                     ) : null}
-                      <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onMove}>
+                    <button type="button" role="menuitem" className="curriculum-menu__item" onClick={onMove}>
                       <img className="curriculum-menu__raster" src={moveItemIcon} alt="" />
                       Move
+                    </button>
+                    <button
+                      type="button"
+                      role="menuitem"
+                      className="curriculum-menu__item"
+                      onClick={onHide}
+                      title={
+                        node.hidden
+                          ? 'Make this visible to students again'
+                          : 'Students will not see this. You can still open and edit it here.'
+                      }
+                    >
+                      <img className="curriculum-menu__raster" src={hideIcon} alt="" />
+                      {node.hidden ? 'Show to students' : 'Hide from students'}
                     </button>
                     <button type="button" role="menuitem" className="curriculum-menu__item curriculum-menu__item--danger" onClick={onRemove}>
                       <img src={deleteMenuIcon} alt="" />

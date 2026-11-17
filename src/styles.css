@@ -3683,15 +3683,25 @@ select:focus-visible,
   line-height: 24px;
 }
 
-.curriculum-removed-tag {
-  background: #feebed;
-  border: 1px solid #ff4040;
-  border-radius: 999px;
-  color: #b60202;
+.curriculum-removed-tag,
+.curriculum-hidden-tag {
   flex-shrink: 0;
   font-size: 16px;
   line-height: 16px;
   padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.curriculum-removed-tag {
+  background: #feebed;
+  border: 1px solid #ff4040;
+  color: #b60202;
+}
+
+.curriculum-hidden-tag {
+  background: #eef2f7;
+  border: 1px solid #c5d0dc;
+  color: #4b5563;
 }
 
 .curriculum-row--block .curriculum-title {
@@ -3787,9 +3797,15 @@ select:focus-visible,
   width: 100%;
 }
 
+.curriculum-menu__item > img,
 .curriculum-menu__raster {
+  flex-shrink: 0;
   height: 16px;
   width: 16px;
+}
+
+.curriculum-menu__item:not(.curriculum-menu__item--danger) > img {
+  filter: brightness(0);
 }
 
 .curriculum-menu__item:hover:not(:disabled) {

@@ -389,11 +389,18 @@ export function findNode(nodes: CurriculumNode[], id: string): CurriculumNode | 
   return undefined;
 }
 
-export function listCoursePages(nodes: CurriculumNode[]): CurriculumNode[] {
+export function listCoursePages(
+  nodes: CurriculumNode[],
+  options?: { includeHidden?: boolean },
+): CurriculumNode[] {
   const pages: CurriculumNode[] = [];
   const walk = (items: CurriculumNode[]) => {
     items.forEach((node) => {
       if (node.status === 'removed') return;
+      if (node.hidden && !options?.includeHidden) {
+        walk(node.children);
+        return;
+      }
       if (node.type === 'page') pages.push(node);
       walk(node.children);
     });
@@ -406,20 +413,33 @@ export function adjacentCoursePages(
   nodes: CurriculumNode[],
   current: { pageId?: string; assessmentTitle?: string },
 ): { current: CurriculumNode | null; previous: CurriculumNode | null; next: CurriculumNode | null } {
-  const pages = listCoursePages(nodes);
-  const index = pages.findIndex((page) => {
-    if (current.pageId && page.id === current.pageId) return true;
-    if (!current.pageId && current.assessmentTitle) {
-      return page.assessmentTitle === current.assessmentTitle || page.title === current.assessmentTitle;
-    }
-    return false;
-  });
-  if (index < 0) return { current: null, previous: null, next: null };
-  return {
-    current: pages[index],
-    previous: pages[index - 1] ?? null,
-    next: pages[index + 1] ?? null,
-  };
+  const studentPages = listCoursePages(nodes);
+  const allPages = listCoursePages(nodes, { includeHidden: true });
+  const matchIndex = (pages: CurriculumNode[]) =>
+    pages.findIndex((page) => {
+      if (current.pageId && page.id === current.pageId) return true;
+      if (!current.pageId && current.assessmentTitle) {
+        return page.assessmentTitle === current.assessmentTitle || page.title === current.assessmentTitle;
+      }
+      return false;
+    });
+  const studentIndex = matchIndex(studentPages);
+  const allIndex = matchIndex(allPages);
+  const currentPage = (studentIndex >= 0 ? studentPages[studentIndex] : null) ?? (allIndex >= 0 ? allPages[allIndex] : null);
+  if (!currentPage) return { current: null, previous: null, next: null };
+  // Instructors can open hidden pages; prev/next still follow the student-visible path around them.
+  if (studentIndex >= 0) {
+    return {
+      current: currentPage,
+      previous: studentPages[studentIndex - 1] ?? null,
+      next: studentPages[studentIndex + 1] ?? null,
+    };
+  }
+  const nearestStudentIndex = allIndex;
+  const previous =
+    [...allPages.slice(0, nearestStudentIndex)].reverse().find((page) => !page.hidden) ?? null;
+  const next = allPages.slice(nearestStudentIndex + 1).find((page) => !page.hidden) ?? null;
+  return { current: currentPage, previous, next };
 }
 
 export function updateNodeById(
@@ -642,7 +662,10 @@ export function statusLabel(status: CurriculumStatus): string | null {
 }
 
 export function statusDescription(node: CurriculumNode): string {
-  const visibility = node.hidden && node.status !== 'removed' ? ', hidden from students' : '';
+  const visibility =
+    node.hidden && node.status !== 'removed'
+      ? ', hidden from students (still visible to instructors)'
+      : '';
   if (node.status === 'added') return `added by you${visibility}`;
   if (node.status === 'modified') return `edited for this course${visibility}`;
   if (node.status === 'removed') return 'removed from this course';
