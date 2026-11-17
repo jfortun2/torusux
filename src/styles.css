@@ -268,6 +268,136 @@ button {
   margin: 0;
 }
 
+.insights {
+  display: grid;
+  gap: 20px;
+}
+
+.insights__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0;
+}
+
+.insights__lead {
+  color: #353740;
+  margin: -8px 0 0;
+}
+
+.release-note {
+  align-items: center;
+  background: #eaf3ff;
+  border: 1px solid #9bc7fb;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 18px 20px;
+}
+
+.release-note__eyebrow {
+  color: #084a96;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.release-note h2 {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 4px;
+}
+
+.release-note__copy p:last-child {
+  margin: 0;
+}
+
+.release-note__actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.insights-stats {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.insights-stat {
+  background: #fff;
+  border: 1px solid #e6e9f2;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.insights-stat span {
+  color: #4b5563;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.insights-stat strong {
+  display: block;
+  font-size: 28px;
+  line-height: 36px;
+  margin-top: 4px;
+}
+
+.insights-panel {
+  background: #fff;
+  border: 1px solid #e6e9f2;
+  border-radius: 12px;
+  padding: 16px 20px 8px;
+}
+
+.insights-panel h2 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 8px;
+}
+
+.insights-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.insights-table th,
+.insights-table td {
+  border-bottom: 1px solid #e6e9f2;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.insights-table th {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .release-note {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .insights-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .insights-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
 .instructor-page {
   margin: 0 auto;
   max-width: 1440px;
@@ -1017,6 +1147,117 @@ button {
 .view-switcher {
   display: inline-grid;
   position: relative;
+}
+
+.instructor-bar:has(.tour-note),
+.curriculum-row:has(.tour-note) {
+  position: relative;
+  z-index: 6;
+}
+
+.instructor-pill.is-tour-target,
+.curriculum-title-button.is-tour-target {
+  border-radius: 8px;
+  box-shadow: 0 0 0 3px #8ebaf0;
+}
+
+.curriculum-title-button.is-tour-target .curriculum-title {
+  color: #0057b8;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tour-anchor {
+  display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.tour-note {
+  align-items: center;
+  background: #222439;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+  color: #fff;
+  display: flex;
+  gap: 12px;
+  left: calc(100% + 14px);
+  max-width: min(420px, calc(100vw - 48px));
+  padding: 8px 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  z-index: 30;
+}
+
+.tour-note::before {
+  background: #222439;
+  content: '';
+  height: 12px;
+  left: -6px;
+  margin-top: -6px;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 12px;
+}
+
+.tour-note p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.tour-note__dismiss {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  flex-shrink: 0;
+  font-weight: 700;
+  min-height: 24px;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tour-note__dismiss:hover {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .tour-note {
+    left: 0;
+    top: calc(100% + 10px);
+    transform: none;
+    width: min(280px, calc(100vw - 32px));
+  }
+
+  .tour-note::before {
+    left: 18px;
+    margin-top: 0;
+    top: -6px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .instructor-pill.is-tour-target,
+  .curriculum-title-button.is-tour-target {
+    animation: tour-pulse 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes tour-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px #8ebaf0;
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 115, 229, 0.28);
+  }
 }
 
 .view-switcher__menu {
