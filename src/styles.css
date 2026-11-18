@@ -3374,7 +3374,16 @@ select:focus-visible,
 }
 
 .curriculum-row--removed {
-  background: #f7f7f9;
+  background: #f1f1f4;
+  box-shadow: inset 4px 0 0 #ff4040;
+}
+
+.curriculum-row--removed .curriculum-title {
+  color: #5c5f6a;
+}
+
+.curriculum-row--removed .material-icon {
+  opacity: 0.7;
 }
 
 .curriculum-row__main {

@@ -633,23 +633,41 @@ export function renameNode(nodes: CurriculumNode[], id: string, title: string): 
   });
 }
 
+function markRemovedDeep(node: CurriculumNode): CurriculumNode {
+  return {
+    ...node,
+    status: 'removed',
+    children: node.children.map((child) => (child.type === 'block' ? child : markRemovedDeep(child))),
+  };
+}
+
+/** Removes an item. Containers also mark every unit, module, section, and page inside as removed. */
 export function removeFromCourse(nodes: CurriculumNode[], id: string): CurriculumNode[] {
-  return updateNodeById(nodes, id, (node) => ({ ...node, status: 'removed' }));
+  return updateNodeById(nodes, id, markRemovedDeep);
 }
 
 export function setNodeHidden(nodes: CurriculumNode[], id: string, hidden: boolean): CurriculumNode[] {
   return updateNodeById(nodes, id, (node) => ({ ...node, hidden }));
 }
 
+/** Brings back a removed descendant without discarding any rename made before it was removed. */
+function restoreRemovedDeep(node: CurriculumNode): CurriculumNode {
+  const children = node.children.map((child) => (child.type === 'block' ? child : restoreRemovedDeep(child)));
+  if (node.status !== 'removed') return { ...node, children };
+  if (node.origin === 'instructor') return { ...node, status: 'added', children };
+  return { ...node, status: node.title === node.originalTitle ? 'original' : 'modified', children };
+}
+
+/** Restores an item. Restoring a container also restores every removed item inside it. */
 export function restoreOriginal(nodes: CurriculumNode[], id: string): CurriculumNode[] {
   return updateNodeById(nodes, id, (node) => {
-    if (node.origin === 'instructor') {
-      return { ...node, status: 'added' };
-    }
+    const restored =
+      node.origin === 'instructor'
+        ? { ...node, status: 'added' as const }
+        : { ...node, title: node.originalTitle, status: 'original' as const };
     return {
-      ...node,
-      title: node.originalTitle,
-      status: 'original',
+      ...restored,
+      children: restored.children.map((child) => (child.type === 'block' ? child : restoreRemovedDeep(child))),
     };
   });
 }
